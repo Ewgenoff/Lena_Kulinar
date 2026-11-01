@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Торт «Москва» с красной зеркальной глазурью — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Торт «Москва»: четыре хрустящих фундучных декуаза Ø20 см, крем на варёной сгущёнке с маслом и фундучной крошкой, красная зеркальная глазурь на желатине. Выпечка 160 °C 20 минут, глазурь рабочей 36 °C.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tort-moskva">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Торт «Москва» с красной зеркальной глазурью</h1>
+      <p class="recipe-lead">
+        Ореховый торт, придуманный в 2015 году специально для столицы: коржи здесь не бисквитные, а хрустящие декуазы — меренга с экстремально большим количеством жареного фундука. Крем — взбитое масло с варёной сгущёнкой и фундучной крошкой, с коньяком по желанию. Торт собирается из четырёх тонких коржей Ø20 см, замораживается на ночь и покрывается красной зеркальной глазурью, которую тоже готовят накануне. По вкусу он ближе всего к «эстерхази», киевскому и «графским развалинам».
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">40 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">2 часа</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">~18 ч (ночь на глазурь и заморозку торта)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~20 часов</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 торт Ø20 см, 4 коржа</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-moskva.jpg" alt="Торт «Москва» в красной зеркальной глазури с белым шоколадным орнаментом" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (10 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="10">10</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (кусков)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Все граммовки автоматически масштабируются. Базовая раскладка автора — четыре коржа Ø20 см и три прослойки крема по 150 г; готовый торт Ø20 см.
+          </p>
+        </div>
+
+        <!-- Переключатель источников -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">10</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: молочное и яйца -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С0</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span>
+                <span class="shopping-hint">Нужны только белки — 160 г. Желтки в рецепте не используются</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">В крем. Жирность принципиальна — автор настаивает на 82,5%. Мягкое, комнатной температуры</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Варёное сгущённое молоко</strong>:
+                <span class="shopping-qty" data-base-amount="380" data-unit="г">380 г</span>
+                <span class="shopping-hint">Одна стандартная банка. Можно сварить самим; должно быть комнатной температуры</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сгущённое молоко для глазури</strong>:
+                <span class="shopping-qty" data-base-amount="85" data-unit="г">85 г</span>
+                <span class="shopping-hint">Обычное, не варёное</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: орехи, бакалея, глазурь -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌰 Орехи, шоколад, глазурь</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Фундук обжаренный</strong>:
+                <span class="shopping-qty" data-base-amount="350" data-unit="г">350 г</span>
+                <span class="shopping-hint">200 г в коржи (можно с тонкой шелухой) + 150 г в крем (уже без шелухи). Можно заменить другими орехами или арахисом</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="285" data-unit="г">285 г</span>
+                <span class="shopping-hint">160 г в меренгу + 125 г в глазурь</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сироп глюкозы</strong>:
+                <span class="shopping-qty" data-base-amount="125" data-unit="г">125 г</span>
+                <span class="shopping-hint">Обязателен для зеркальной глазури</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Белый шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="125" data-unit="г">125 г</span>
+                <span class="shopping-hint">125 г в глазурь; ещё небольшая плитка 20–30 г — на надпись «Москва» и орнамент</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин быстрорастворимый порошковый</strong>:
+                <span class="shopping-qty" data-base-amount="8" data-unit="г">8 г</span>
+                <span class="shopping-hint">Сильный порошковый, например «Доктор Эткер». Листовой слабее — потребуется пересчёт</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Коньяк</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">(опционально) можно бренди или ром, а можно полностью отказаться</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Красный водорастворимый краситель</strong> — по вкусу
+                <span class="shopping-hint">Сухой, гелевый или жидкий — любой растворяющийся в воде</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Инвентарь</strong> — кольцо Ø20 см, ацетатная плёнка, пищевая плёнка, погружной блендер, термометр
+                <span class="shopping-hint">Без термометра глазурь доводят до температуры тела — на ощупь</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Коржи-декуазы</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Белок
+              <span class="ingredient-note">Это 4 яйца С0</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Сахар
+              <span class="ingredient-note">Весит столько же, сколько белок — отсюда очень мягкая меренга</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Жареный фундук
+              <span class="ingredient-note">Измельчить вместе с тонкой шелухой</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="380" data-unit="г">380 г</span> — Варёное сгущённое молоко
+              <span class="ingredient-note">Комнатной температуры, как и масло</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сливочное масло 82,5%
+              <span class="ingredient-note">Размягчённое</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Измельчённый обжаренный фундук
+              <span class="ingredient-note">Без шелухи, в самую мелкую крошку</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Коньяк
+              <span class="ingredient-note">Опционально; можно бренди или ром</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Красная зеркальная глазурь</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="65" data-unit="г">65 г</span> — Вода
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Сироп глюкозы
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="85" data-unit="г">85 г</span> — Сгущённое молоко
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="8" data-unit="г">8 г</span> — Желатин быстрорастворимый
+              <span class="ingredient-note">Порошковый, сильный — например, «Доктор Эткер»</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Вода для замачивания желатина
+              <span class="ingredient-note">Холодная</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Белый шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Красный водорастворимый краситель
+              <span class="ingredient-note">Сухой, гелевый или жидкий</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Белый шоколад или кондитерская глазурь
+              <span class="ingredient-note">Надпись «Москва» и орнамент</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Крошка от коржей или рубленый орех
+              <span class="ingredient-note">Альтернатива глазури: обсыпать бока</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка фундука</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Фундук обжарьте в духовке 10–15 минут при 160 °C и полностью остудите — только после этого его можно рубить. Толстую оболочку снимайте, а тонкую кожурку оставьте: в ней держится очень много вкуса фундука.
+                <span class="source-badge">⏱ 1: 00:15–01:07</span>
+              </p>
+              <p>
+                Измельчите орехи: помол может быть неоднородным, с крупными и мелкими вкраплениями — так корж интереснее хрустит.
+                <span class="source-badge">⏱ 1: 01:10–01:32</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> не пробивайте орех слишком долго — в какой-то момент он превратится в ореховую пасту. Для коржей нужна мелкая крошка, а не паста.
+                <span class="source-badge">⏱ 2: 02:39–02:51</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Обжарка: <strong>160 °C</strong></span>
+              <span class="param-pill">⏱ Время: <strong>10–15 минут</strong></span>
+              <span class="param-pill">🌰 Шелуха: <strong>тонкую оставить</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Меренга для декуаза</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Меренга здесь «неправильная»: белков и сахара по весу одинаково — 160 г на 160 г. Из-за этого она получается очень мягкой, пышной и просто тает во рту.
+                <span class="source-badge">⏱ 1: 01:34–01:52</span>
+              </p>
+              <p>
+                Обычным ручным миксером на максимальной скорости взбейте белки до пышной пены, чтобы на дне миски не оставалось жидкого невзбитого белка. Как только меренга начнёт держать рисунок, но пики ещё не стоят, начинайте понемногу добавлять сахар.
+                <span class="source-badge">⏱ 1: 01:53–02:43</span>
+              </p>
+              <p>
+                Взбивайте до жёсткого, плотного, блестящего состояния, пока не растворятся все крупинки сахара. Проверить можно, перевернув чашу над головой: если мыть голову не пришлось — меренга готова.
+                <span class="source-badge">⏱ 1: 03:15–04:27</span>
+              </p>
+              <div class="warning-box">
+                <strong>Наклоняющийся пик — не готово:</strong> пока «клювик» на венчике опускается, сахар ещё не растворился и меренга осядет при выпечке. Ждите, пока пик встанет.
+                <span class="source-badge">⏱ 1: 02:57–03:30</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Белок и сахар: <strong>1:1 по весу</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Ручной миксер</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Жёсткие блестящие пики, сахар растворён</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Соединение с орехами</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отправьте в меренгу сразу весь измельчённый фундук — в один приём. Перемешивайте только лопаткой, поднимающими движениями снизу вверх: миксер здесь выбьет весь воздух.
+                <span class="source-badge">⏱ 1: 04:31–05:17</span>
+              </p>
+              <div class="warning-box">
+                <strong>Тесто не ждёт:</strong> декуаз нужно выкладывать и отправлять в духовку сразу после приготовления. Оставить его на полчаса, пока вы занимаетесь другими делами, нельзя — масса осядет.
+                <span class="source-badge">⏱ 1: 04:41–04:57</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Инструмент: <strong>Лопатка</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Орехи распределены равномерно</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Формовка коржей</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Кольцо Ø20 см смажьте растительным маслом без запаха — оно нужно не для выпечки, а чтобы наметить форму коржей. Разровняйте массу в миске и разделите на четыре части.
+                <span class="source-badge">⏱ 1: 05:27–06:16</span>
+              </p>
+              <p>
+                Каждую четверть распределите внутри кольца на пергаменте, снимите кольцо и рядом наметьте следующий корж. Получится два противня — выпекать их нужно одновременно.
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Коржи: <strong>4 шт. Ø20 см</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Кольцо, пергамент, 2 противня</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Выпечка декуаза</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте в заранее разогретой духовке при 160 °C с конвекцией: 15 минут, затем проверьте — если коржи ещё мягковаты, добавьте ещё 5 минут. Итого около 20 минут.
+                <span class="source-badge">⏱ 1: 07:40–08:08</span>
+              </p>
+              <p>
+                Готовые коржи остудите. Хранить их можно в плёнке при комнатной температуре в тёмном месте до 10 дней, а можно остудить и сразу собирать торт.
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> ложки на пергаменте по углам — чтобы бумагу не сдувало конвекцией.
+                <span class="source-badge">⏱ 1: 07:50–07:53</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Режим: <strong>160 °C, конвекция</strong></span>
+              <span class="param-pill">⏱ Время: <strong>15 + 5 минут</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Корж плотный, толщина 7–8 мм</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Фундук для крема</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Для крема фундук нужен уже без шелухи: термической обработки здесь не будет, и кожурка в креме ни к чему. Измельчите его в мельчайшую крошку — почти в муку, но не в пасту.
+                <span class="source-badge">⏱ 2: 00:19–02:51</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> орехи в креме можно заменить любыми другими, даже арахисом, или ореховой пастой без сахара. Нельзя заменять только пралине — оно даст лишнюю сладость, а торт и так сладкий.
+                <span class="source-badge">⏱ 2: 01:07–01:45</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌰 Шелуха: <strong>полностью снять</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Комбайн, блендер</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Крем на варёной сгущёнке</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Размягчённое сливочное масло взбейте до побеления и увеличения в объёме. В 2–3 приёма введите варёное сгущённое молоко комнатной температуры — такой же температуры, как масло.
+                <span class="source-badge">⏱ 2: 02:52–03:41</span>
+              </p>
+              <p>
+                Всыпьте сразу всю фундучную крошку и перемешайте миксером — так крем получится насыщенного орехового вкуса. В конце добавьте коньяк, если используете.
+                <span class="source-badge">⏱ 2: 03:59–04:42</span>
+              </p>
+              <div class="warning-box">
+                <strong>Температуры должны совпасть:</strong> холодная сгущёнка в мягком масле даст крупинки и расслоение. И то, и другое — комнатной температуры.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сгущёнка и масло: <strong>комнатной температуры</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Пышный однородный крем</strong></span>
+              <span class="param-pill">⚖ Назначение: <strong>и прослойка, и выравнивание</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Сборка торта</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                У вас четыре коржа, значит нужны три прослойки — по 150 г крема в каждую. Выкладывайте крем по весам, чтобы слои были одинаковыми, и разравнивайте палеткой.
+                <span class="source-badge">⏱ 3_1: 00:00–02:33</span>
+              </p>
+              <p>
+                Когда дошли до последнего коржа, укладывайте его ровной стороной вверх. Закройте торт ацетатной плёнкой и наденьте кольцо, зажав клипсы, — так бока получатся ровными.
+                <span class="source-badge">⏱ 3_1: 02:34–03:12</span>
+              </p>
+              <p>
+                Отправьте торт в морозилку на 15 минут, чтобы он схватился: так его быстро и ровно выровнять. Без морозилки — в холодильник на 40 минут – час.
+                <span class="source-badge">⏱ 3_1: 04:16–04:48</span>
+              </p>
+              <div class="tip-box">
+                <strong>Крем для выравнивания держите при комнатной температуре:</strong> в холодильнике он схватится, и работать с ним будет невозможно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Прослойка: <strong>150 г крема</strong></span>
+              <span class="param-pill">❄️ Морозилка: <strong>15 минут</strong></span>
+              <span class="param-pill">🧊 Холодильник: <strong>40 мин – 1 час</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Выравнивание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Снимите кольцо и ацетатную плёнку и выравнивайте торт тем же кремом, что пошёл внутрь. Распределите крем по верхушке и бокам, затем пройдитесь скребком до чистоты.
+                <span class="source-badge">⏱ 3_1: 04:49–06:23</span>
+              </p>
+              <div class="warning-box">
+                <strong>Выравнивайте тщательно:</strong> сверху будет зеркальная глазурь, а она отражает поверхность под собой. Всё, что не выровнено, станет видно в отражении.
+                <span class="source-badge">⏱ 3_1: 05:14–05:37</span>
+              </div>
+              <p>
+                Готовый торт отправьте в морозилку на всю ночь, чтобы он замёрз «в камень».
+                <span class="source-badge">⏱ 3_1: 06:57–07:22</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Инструмент: <strong>Палета, скребок</strong></span>
+              <span class="param-pill">❄️ Заморозка: <strong>вся ночь</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Гладкая поверхность без бугров</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Красная зеркальная глазурь</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Желатин замочите в холодной воде — он превратится в желешку. В сотейник сложите воду, сахар и сироп глюкозы и доведите до активного кипения: не просто до первых пузырьков, а до бурного кипения по всей поверхности.
+                <span class="source-badge">⏱ 3_2: 00:32–02:10</span>
+              </p>
+              <p>
+                Снимите с огня, добавьте набухший желатин и перемешайте, затем введите сгущённое молоко. Вылейте горячую массу на белый шоколад — он растопится от температуры.
+                <span class="source-badge">⏱ 3_2: 02:10–02:43</span>
+              </p>
+              <p>
+                Пробейте массу погружным блендером с красным водорастворимым красителем. Пузыри на поверхности «ловите» работающим блендером, пока они не уйдут в вихрь. Затем накройте плёнкой в контакт и уберите в холодильник на ночь.
+                <span class="source-badge">⏱ 3_2: 02:44–05:47</span>
+              </p>
+              <div class="warning-box">
+                <strong>Желатин нужен сильный:</strong> порошковый быстрорастворимый, как «Доктор Эткер». Листовой слабее, его потребовалось бы больше и с пересчётом.
+                <span class="source-badge">⏱ 3_2: 00:42–01:07</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Кипение: <strong>активное</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Погружной блендер, сотейник</strong></span>
+              <span class="param-pill">🧊 Созревание: <strong>ночь в холодильнике</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 11 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Подготовка глазури и покрытие</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Созревшую глазурь нагрейте до 36 °C и пробейте погружным блендером. Если градусника нет — сначала дайте ей постоять около часа до комнатной температуры, затем грейте импульсами по 10 секунд в микроволновке, пока она не станет температуры тела: ни горячей, ни холодной.
+                <span class="source-badge">⏱ 4_1: 00:05–01:49</span>
+              </p>
+              <p>
+                При нагревании не мешайте глазурь лопаткой — иначе набьёте пузырей. Пробивайте блендером и вылавливайте пузыри; вынимайте ногу блендера под углом, чтобы внутрь зашёл воздух.
+                <span class="source-badge">⏱ 4_1: 01:49–02:29</span>
+              </p>
+              <p>
+                Замёрзший торт снимите с подложки, поставьте на кольцо или широкую чашку, противень затяните плёнкой. Полейте глазурью сверху, помогая палетой смахнуть лишнее, затем перенесите торт на подложку.
+                <span class="source-badge">⏱ 4_1: 02:33–04:10</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> глазурь в работе 32 °C уже подходит — при пробивании блендером она нагреется от механического воздействия.
+                <span class="source-badge">⏱ 4_1: 00:53–01:10</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Рабочая температура: <strong>36–38 °C</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Погружной блендер, палета, термометр</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Глазурь без пузырей, зеркальная</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 12 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Надпись и орнамент</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Белый шоколад растопите импульсами в микроволновке и переложите в кондитерский мешок. Подойдёт и готовая кондитерская глазурь.
+                <span class="source-badge">⏱ 4_1: 04:12–04:37</span>
+              </p>
+              <p>
+                Сделайте характерную надпись «Москва», а затем орнамент: выдавите капельку, проведите линию, снова капельку и линию в другую сторону — и так по всему торту.
+                <span class="source-badge">⏱ 4_1: 04:38–05:46</span>
+              </p>
+              <div class="tip-box">
+                <strong>Альтернатива глазури:</strong> если не хочется возиться с зеркальным покрытием, обсыпьте бока крошкой от коржей или рубленым орехом и отсадите сверху кремовые «бомбошки». Такой торт готов сразу.
+                <span class="source-badge">⏱ 3_1: 06:37–06:57</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Инструмент: <strong>Кондитерский мешок</strong></span>
+              <span class="param-pill">🍫 Материал: <strong>Белый шоколад или глазурь</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Меренга 1:1 — «неправильная»:</strong> сахара столько же, сколько белков, поэтому декуаз получается мягким и воздушным, а не сухим.</li>
+                <li><strong>Шелуха в коржах, но не в креме:</strong> в декуазе тонкая кожурка даёт вкус, в креме она лишняя — там нет термообработки.</li>
+                <li><strong>Декуаз не ждёт:</strong> замешали — сразу раскладывайте и в духовку, иначе масса осядет.</li>
+                <li><strong>Кольцо только для разметки:</strong> его смазывают маслом и снимают до выпечки.</li>
+                <li><strong>Коржи живут до 10 дней:</strong> в плёнке, при комнатной температуре, в тёмном месте.</li>
+                <li><strong>Заморозка перед глазурью обязательна:</strong> на тёплый торт глазурь не ляжет ровно и не заблестит.</li>
+                <li><strong>Выравнивание — залог зеркала:</strong> глазурь отражает всё, что под ней.</li>
+                <li><strong>Плёнка в контакт на глазури:</strong> так на поверхности не появится конденсат.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Недобитая меренга:</strong> наклоняющийся пик и не растворившийся сахар — корж осядет и будет хрустеть крупинками.</li>
+                <li><strong>Перемешивание декуаза миксером:</strong> масса теряет воздух и расползается.</li>
+                <li><strong>Тесто постояло:</strong> декуаз осел, коржи получатся плоскими и плотными.</li>
+                <li><strong>Холодная сгущёнка в креме:</strong> крем идёт крупинками и расслаивается.</li>
+                <li><strong>Глазурь не доварена до активного кипения:</strong> желатин работает хуже, покрытие может потечь.</li>
+                <li><strong>Листовой желатин без пересчёта:</strong> глазурь не застынет как надо.</li>
+                <li><strong>Размешивание глазури лопаткой при нагреве:</strong> в массе остаются пузыри, зеркала не будет.</li>
+                <li><strong>Глазурь на недомороженном торте:</strong> стечёт неровно, поверхность пойдёт волнами.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «Сериал по приготовлению торта Москва.docx» — рецептуры коржей, крема и глазури с граммовками; CSV-расшифровка «Расшифровка торт_Москва.csv» (1.mp4, 2.mp4, 3_1.mp4, 3_2.mp4, 4_1.mp4) — оттуда таймкоды.</li>
+              <li><strong>Расхождение по обжарке фундука:</strong> в DOCX — 160 °C 10–15 минут, в видео — 170 °C 10–15 минут. На странице взят вариант DOCX (160 °C).</li>
+              <li><strong>Расхождение по выпечке коржей:</strong> в DOCX — 160 °C 20 минут; в видео — 160 °C с конвекцией 15 минут, затем ещё 5. Итог совпадает, на странице показаны оба шага.</li>
+              <li><strong>Расхождение по температуре глазури:</strong> в DOCX рабочая температура 36–38 °C, в видео ориентир — 36 °C (и замечание, что 32 °C уже рабочие из-за нагрева блендером). На странице указан диапазон 36–38 °C.</li>
+              <li><strong>Пробелы по видео:</strong> в CSV есть строки только для файлов 1, 2, 3_1, 3_2 и 4_1. Файлы 4_2.mp4 и 4_3.mp4 расшифровки не имеют, поэтому таймкодов для финального переноса торта и орнамента нет — шаг описан по DOCX и 4_1.</li>
+              <li><strong>Пробелы по декору:</strong> количество белого шоколада для надписи и орнамента автор не называет — указано «небольшая плитка 20–30 г» ориентировочно.</li>
+              <li><strong>Пробелы по выходу:</strong> число порций в источниках не указано; 10 порций рассчитаны по торту Ø20 см из четырёх коржей и 450 г крема в прослойках.</li>
+              <li><strong>Фото:</strong> в DOCX только служебные иконки около 0,5 КБ, реального фото торта нет. Изображение сгенерировано по описанию из исходников (красная зеркальная глазурь, белый орнамент) — замените своим фото при возможности.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© CookBook — Автономная кулинарная библиотека.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

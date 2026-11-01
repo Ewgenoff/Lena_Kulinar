@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Торт «Ленинградский» — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Квадратный торт 20×20 см: четыре рассыпчатых песочных коржа с миндальной мукой, шоколадный крем шарлотт на заварной основе, сахарная помадка двух оттенков и глазурь гурмэ из молочного шоколада с орехами.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tort-leningradskiy">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Торт «Ленинградский»</h1>
+      <p class="recipe-lead">
+        Слоёный песочный торт квадратной формы: четыре тонких коржа с миндальной мукой, шоколадный крем шарлотт на заварной основе с яйцом и молоком, сверху — сахарная помадка двух оттенков и глазурь гурмэ из молочного шоколада с рубленым орехом. В креме есть коньяк, а часть его остаётся светлой и идёт на декор. Собирается торт 20×20 см или 15×25 см — как удобнее вырезать коржи.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">25 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">1 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Охлаждение теста и коржей, остывание крема, стабилизация помадки 4–6 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~6 часов</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">Торт 20×20 см (4 коржа)</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-leningradskiy.jpg" alt="Торт «Ленинградский» с шоколадной глазурью, кремовыми розетками по краю, орехами на боках и малиной" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (12 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="12">12</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (кусков)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Все граммовки автоматически масштабируются. База — один торт 20×20 см из четырёх коржей; тесто делится на 4 равные части, каждая раскатывается под квадрат 20×20 см или прямоугольник 15×25 см.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">12</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: молочное -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="410" data-unit="г">410 г</span>
+                <span class="shopping-hint">185 г в песочные коржи + 225 г в крем шарлотт</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">В заварную основу крема, вместе с яйцом и сахаром</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span>
+                <span class="shopping-hint">Одно (50 г) в песочные коржи, одно в крем. Отдельных белков и желтков в рецепте нет</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: бакалея, шоколад, декор -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Бакалея, шоколад, декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">В песочные коржи, вместе с миндальной мукой и разрыхлителем</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Миндальная мука</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Готовая или смолотая самостоятельно из миндаля — кожуру снимать не нужно, вкус будет ярче</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="125" data-unit="г">125 г</span>
+                <span class="shopping-hint">В песочное тесто, взбивается с маслом</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок (всего)</strong>:
+                <span class="shopping-qty" data-base-amount="450" data-unit="г">450 г</span>
+                <span class="shopping-hint">150 г в крем + 300 г в сахарную помадку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао</strong> — 15–20 г в крем и 1–2 ч. л. в помадку
+                <span class="shopping-hint">В крем какао добавляют в часть без светлого декора, в помадку — в одну из двух частей</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Разрыхлитель</strong>:
+                <span class="shopping-qty" data-base-amount="7" data-unit="г">7 г</span>
+                <span class="shopping-hint">В песочные коржи; плюс 1 г соли — обычно есть дома</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молочный шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Для глазури гурмэ, растапливается в микроволновке или на водяной бане</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Орехи рубленые</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">В глазурь гурмэ; также видны на боках торта на фото</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Растительное масло без запаха</strong>:
+                <span class="shopping-qty" data-base-amount="25" data-unit="г">25 г</span>
+                <span class="shopping-hint">В глазурь; подойдёт кукурузное, из виноградной косточки или любое рафинированное дезодорированное</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимонный сок</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="ч. л.">2 ч. л.</span>
+                <span class="shopping-hint">В сироп для помадки; можно выжать из половины лимона</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Коньяк</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="ст. л.">1 ст. л.</span>
+                <span class="shopping-hint">В крем шарлотт, добавляется в самом конце</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Песочные коржи (4 шт.)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="185" data-unit="г">185 г</span> — Сливочное масло 82,5%
+              <span class="ingredient-note">Размягчённое, взбивается с пудрой</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Яйцо (1 шт.)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Мука
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Миндальная мука
+              <span class="ingredient-note">Для макаронс нужна бланшированная, здесь подойдёт смолотая из обычного миндаля</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="г">1 г</span> — Соль
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Шоколадный крем шарлотт</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="225" data-unit="г">225 г</span> — Сливочное масло
+              <span class="ingredient-note">Комнатной температуры, взбивается перед введением сиропа</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Молоко
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span> — Яйцо С1
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Какао — 15–20 г
+              <span class="ingredient-note">Диапазон из источника; вводится в крем после отделения 150 г светлой части</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ст. л.">1 ст. л.</span> — Коньяк
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Сахарная помадка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Вода
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="ч. л.">2 ч. л.</span> — Лимонный сок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Какао — 1–2 ч. л.
+              <span class="ingredient-note">Диапазон из источника; смешивается с частью помадки</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Глазурь гурмэ</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Молочный шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Рубленый орех
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Растительное масло без запаха
+              <span class="ingredient-note">Кукурузное, из виноградной косточки или другое рафинированное дезодорированное</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Песочное тесто с миндальной мукой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Размягчённое масло взбейте с сахарной пудрой. Введите все сухие ингредиенты за один раз — муку, миндальную муку, разрыхлитель и соль, — затем добавьте яйцо. Перемешивайте недолго.
+              </p>
+              <p>
+                Сформируйте шар и разделите его на 4 равные части — из них получатся четыре коржа.
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> миндальную муку можно смолоть самостоятельно из обычного миндаля и не снимать кожуру — так вкус ореха будет ещё ярче. Для макаронс нужна бланшированная, здесь это не обязательно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Тесто: <strong>4 равные части</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Миксер</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Однородный шар, тесто не крутое</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Раскатка и стабилизация</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Раскатайте каждую часть так, чтобы можно было вырезать квадрат 20×20 см или прямоугольник 15×25 см.
+              </p>
+              <p>
+                Пласт теста перед выпечкой уберите в холодильник или морозилку на стабилизацию. Затем вырежьте коржи и отправьте в разогретую духовку.
+              </p>
+              <div class="warning-box">
+                <strong>Не выпекайте тёплый пласт:</strong> тесто должно пройти стабилизацию в холоде, иначе корж потеряет форму.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Формат: <strong>20×20 см или 15×25 см</strong></span>
+              <span class="param-pill">🧊 Стабилизация: <strong>холодильник или морозилка</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Выпечка коржей</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте при 165–170 °C с конвекцией по 15 минут — так можно поставить в духовку сразу два коржа или больше. Если конвекции нет, выпекайте по одному коржу при 170 °C, тоже 15 минут.
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 С конвекцией: <strong>165–170 °C, 15 минут</strong></span>
+              <span class="param-pill">🔥 Без конвекции: <strong>170 °C, по одному коржу, 15 минут</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Корж пропёкся и держит форму</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Заварная основа для крема</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Молоко, яйцо и сахар соедините в сотейнике и варите до кипения, а после кипения — ещё 3 минуты, до лёгкого загустения.
+              </p>
+              <p>
+                Сироп обязательно охладите: горячий нельзя вводить в взбитое масло.
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ После кипения: <strong>3 минуты</strong></span>
+              <span class="param-pill">🌡 Перед введением: <strong>охлаждённый</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Лёгкое загустение</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Крем шарлотт: светлая часть и шоколадная</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Взбейте сливочное масло и постепенно, тонкой струйкой, добавьте охлаждённый сироп. В самом конце введите коньяк.
+              </p>
+              <p>
+                От готового крема отделите 150 г — эта светлая часть пойдёт на декор. В оставшуюся часть добавьте какао: этот крем используется для сборки и для бортов.
+              </p>
+              <div class="warning-box">
+                <strong>Сначала отделите 150 г, потом добавляйте какао:</strong> иначе светлого крема для декора просто не останется.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Светлый крем: <strong>150 г на декор</strong></span>
+              <span class="param-pill">🍫 Какао: <strong>в оставшийся крем</strong></span>
+              <span class="param-pill">🌡 Сироп: <strong>только охлаждённый</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Сахарная помадка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Смешайте сахар и воду, варите сироп до 110 °C, добавьте лимонный сок и варите до 115 °C. Резко охладите, поставив сотейник в миску с ледяной водой.
+              </p>
+              <p>
+                Немного остудите сироп и взбейте на большой скорости миксера до состояния «помады». Часть помадки смешайте с какао — получится второй, шоколадный оттенок.
+              </p>
+              <p>
+                Помадку неплохо стабилизировать 4–6 часов в холодильнике, но можно использовать и сразу. Перед нанесением добавьте 1–2 чайные ложки воды и прогрейте в микроволновке.
+              </p>
+              <div class="tip-box">
+                <strong>Два оттенка из одной помадки:</strong> какао вводится только в часть массы, поэтому на торте можно сделать и светлые, и шоколадные элементы.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сироп: <strong>110 °C, затем 115 °C</strong></span>
+              <span class="param-pill">⏱ Стабилизация: <strong>4–6 часов в холодильнике</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Масса взбивается до состояния помады</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Глазурь гурмэ</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Молочный шоколад растопите в микроволновке или на водяной бане. Введите растительное масло без запаха и рубленый орех, перемешайте.
+              </p>
+              <p>
+                Полейте глазурью сверху охлаждённый торт.
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Шоколад: <strong>молочный, 100 г</strong></span>
+              <span class="param-pill">🌡 Подача: <strong>на охлаждённый торт</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Сборка и оформление</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Из источника известно распределение заготовок: четыре песочных коржа, шоколадный крем с какао — на прослойку и борта, 150 г светлого крема — на декор, помадка двух оттенков и глазурь гурмэ — наверх. Пошаговый порядок сборки автор в тексте не расписывает, поэтому слои собирайте по своему вкусу, ориентируясь на фото.
+              </p>
+              <p>
+                Готовый торт хранится 72 часа в холодильнике или 1 месяц в морозилке.
+              </p>
+              <div class="warning-box">
+                <strong>Пробел источника:</strong> точное количество крема в каждый слой и очерёдность коржей в тексте не указаны — на странице описано только то, что автор называет прямо.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Коржей: <strong>4</strong></span>
+              <span class="param-pill">🧊 Хранение: <strong>72 часа в холодильнике</strong></span>
+              <span class="param-pill">❄️ Заморозка: <strong>до 1 месяца</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Миндальную муку можно сделать самому:</strong> смолоть обычный миндаль и не снимать кожуру — вкус ореха будет ярче. Бланшированная нужна только для макаронс.</li>
+                <li><strong>Тесто не мешать долго:</strong> автор отдельно просит не перемешивать его долго — песочные коржи должны остаться рассыпчатыми.</li>
+                <li><strong>Стабилизация пласта:</strong> тесто перед выпечкой убирают в холодильник или морозилку, только потом вырезают коржи.</li>
+                <li><strong>Конвекция экономит время:</strong> при 165–170 °C с конвекцией можно выпекать два коржа и больше сразу, без конвекции — по одному при 170 °C.</li>
+                <li><strong>Сироп для крема — только остывший:</strong> иначе масло не соединится с ним в гладкий крем.</li>
+                <li><strong>150 г светлого крема отделяют заранее:</strong> это заготовка для декора, какао идёт в остальное.</li>
+                <li><strong>Помадку лучше стабилизировать:</strong> 4–6 часов в холодильнике, хотя можно использовать и сразу.</li>
+                <li><strong>Перед нанесением помадку размягчают:</strong> 1–2 чайные ложки воды и короткий прогрев в микроволновке.</li>
+                <li><strong>Масло в глазурь:</strong> подойдёт кукурузное, из виноградной косточки или любое рафинированное дезодорированное — без запаха.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Долгое вымешивание песочного теста:</strong> коржи теряют рассыпчатость, которых автор и добивается.</li>
+                <li><strong>Выпечка без стабилизации:</strong> тёплый пласт теряет форму — его нужно охладить до выпечки.</li>
+                <li><strong>Горячий сироп в масло:</strong> крем не получится гладким.</li>
+                <li><strong>Какао добавили раньше, чем отделили 150 г:</strong> светлого крема для декора не останется.</li>
+                <li><strong>Помадка без стабилизации:</strong> работать с ней сложнее — автор советует дать ей постоять 4–6 часов.</li>
+                <li><strong>Густая холодная помадка:</strong> её не нанести без 1–2 чайных ложек воды и прогрева.</li>
+                <li><strong>Растительное масло с запахом в глазури:</strong> оно перебивает вкус шоколада — нужно рафинированное дезодорированное.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источник:</strong> DOCX «Ленинградский_комментарии.docx» — рецептура и пояснения автора. Видео и расшифровки к этому торту нет, поэтому таймкодов и плашек с временем на странице тоже нет.</li>
+              <li><strong>Фото:</strong> в DOCX лежит настоящий снимок готового торта (скриншот видео 1366×768). Из него вырезано изображение без интерфейса и сохранено в 1100 px по ширине.</li>
+              <li><strong>Пропорции:</strong> все граммовки перенесены без изменений. Диапазоны из источника (какао 15–20 г в крем и 1–2 ч. л. в помадку) оставлены диапазонами и не масштабируются калькулятором.</li>
+              <li><strong>Пробел — сборка:</strong> порядок сборки торта в источнике не описан: сказано только, что светлый крем (150 г) идёт на декор, а крем с какао — на сборку и борта, помадка двух оттенков и глазурь — наверх. Число крема в слое не указано.</li>
+              <li><strong>Пробел — декор на фото:</strong> на снимке видны кремовые розетки по краю, малина и шоколадная надпись. В тексте эти элементы не описаны, поэтому в шагах они не расписаны.</li>
+              <li><strong>Пробел — число порций:</strong> автор называет только формат коржей (20×20 или 15×25 см), но не порции; 12 порций — расчёт по четырём коржам.</li>
+              <li><strong>Пробел — время:</strong> активное и общее время в источнике не указаны; они рассчитаны по операциям (замес, стабилизация теста, 4 коржа по 15 минут, варка сиропа, охлаждение, стабилизация помадки 4–6 часов).</li>
+              <li><strong>Яйца:</strong> в рецепте два яйца — одно (50 г) в песочные коржи и одно в крем шарлотт. Белки и желтки отдельно нигде не используются, поэтому в списке покупок только целые яйца.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© CookBook — Автономная кулинарная библиотека.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

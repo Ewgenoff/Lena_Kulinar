@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Торт «Можно всем» без сахара и глютена — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Шоколадный торт без сахара и белой муки на ореховой муке: коржи на сахарозаменителе, шоколадный ганаш на шоколаде без сахара, клубничная пропитка-компот и подтёки. Кольца Ø16 см, выпечка 20 минут при 170 °C с конвекцией.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tort-mozhno-vsem">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Торт «Можно всем» без сахара и глютена</h1>
+      <p class="recipe-lead">
+        Шоколадный торт, в котором нет ни грамма белой муки и сахара: коржи держатся на взбитых яйцах, миндальной и фундучной муке, а сладость даёт рассыпной сахарозаменитель. Крем — шоколадный ганаш на молочном шоколаде без сахара, им же торт выравнивают. Влаги от ганаша коржи не получают, поэтому между слоями идёт клубничный «компот»: сок ягод пропитывает коржи, а загустевшие ягоды с крахмалом становятся начинкой. Финал — шоколадные подтёки и свежая клубника. Торт не низкокалорийный, но без сахара и без глютена.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">1 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">~12 ч (ночь на коржи, 2 + 1 ч на ганаш, 4 ч на сборку)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~14 часов</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 торт Ø16 см, 4 слоя</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-mozhno-vsem.jpg" alt="Шоколадный торт без сахара с шоколадными подтёками и свежей клубникой сверху" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (8 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="8">8</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (кусков)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Все граммовки автоматически масштабируются. Базовая раскладка — торт Ø16 см из двух коржей, каждый разрезан пополам, итого 4 слоя. Пропорции автора рассчитаны на два невысоких кольца 16 см.
+          </p>
+        </div>
+
+        <!-- Переключатель источников -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">8</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: молочное -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span>
+                <span class="shopping-hint">Все три — целые, в тесто для коржей; комнатной температуры</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">120 г в коржи (растопить с шоколадом) + 80 г в ганаш, размягчённым</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 30% и выше</strong>:
+                <span class="shopping-qty" data-base-amount="280" data-unit="г">280 г</span>
+                <span class="shopping-hint">250 г в ганаш для сборки и выравнивания + 30 г в ганаш для подтёков</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: шоколад, орехи, ягоды -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Шоколад, орехи, ягоды</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шоколад молочный без сахара</strong>:
+                <span class="shopping-qty" data-base-amount="325" data-unit="г">325 г</span>
+                <span class="shopping-hint">50 г в коржи + 250 г в ганаш + 25 г на подтёки. Можно заменить тёмным без сахара</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Миндаль дробленый или миндальная мука</strong>:
+                <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+                <span class="shopping-hint">Можно взять фундук на весь объём — тогда 110 г орехов всего</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Фундук жареный</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Обязательно обжаренный; смолоть вместе с тонкой шелухой — она даёт вкус</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Самое лучшее, какое найдёте: торт мега-шоколадный</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарозаменитель рассыпной (фитпарад)</strong>:
+                <span class="shopping-qty" data-base-amount="130" data-unit="г">130 г</span>
+                <span class="shopping-hint">130 г в коржи + 1 мерная ложка в клубничную начинку. Подойдёт любой рассыпной сахзам</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Разрыхлитель</strong>:
+                <span class="shopping-qty" data-base-amount="6" data-unit="г">6 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кукурузный крахмал</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span>
+                <span class="shopping-hint">В клубничную начинку, чтобы она держала форму</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимонная кислота</strong>:
+                <span class="shopping-qty" data-base-amount="0.17" data-unit="ч. л.">0,17 ч. л. (1/6 ч. л.)</span>
+                <span class="shopping-hint">Закрепляет яркий цвет клубники</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Клубника замороженная</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">Сок ягод идёт на пропитку, сами ягоды — в начинку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Клубника свежая для декора</strong> — по вкусу
+                <span class="shopping-hint">Целые и разрезанные ягоды, укладывать по кругу в одном направлении</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Инвентарь</strong> — два кольца Ø16 см, пищевая плёнка, пергамент, фольга
+                <span class="shopping-hint">Покупать не нужно, если уже есть</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Коржи</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span> — Яйца С1
+              <span class="ingredient-note">Комнатной температуры, взбиваются 7 минут</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="130" data-unit="г">130 г</span> — Сахарозаменитель рассыпной
+              <span class="ingredient-note">Фитпарад или любой другой, по весу</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Какао
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Дробленый миндаль или миндальная мука
+              <span class="ingredient-note">Можно заменить фундуком полностью</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Дробленый жареный фундук
+              <span class="ingredient-note">Молоть вместе с тонкой шелухой</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="6" data-unit="г">6 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Сливочное масло
+              <span class="ingredient-note">Растопить вместе с шоколадом, остудить до комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Шоколад без сахара
+              <span class="ingredient-note">Молочный (у автора) или тёмный</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Шоколадный ганаш — крем и выравнивание</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Молочный шоколад без сахара
+              <span class="ingredient-note">У автора Callebaut; рубится в кусочки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Сливочное масло
+              <span class="ingredient-note">Размягчённое, комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Сливки 30% и выше
+              <span class="ingredient-note">Нагреть до кипения, но не кипятить</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Клубничная пропитка и начинка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Клубника замороженная
+              <span class="ingredient-note">Можно вишню, смородину или чернику</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="мерн. л.">1 мерн. л.</span> — Сахарозаменитель
+              <span class="ingredient-note">Начинка должна быть скорее кисленькой, чем сладкой</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="0.17" data-unit="ч. л.">0,17 ч. л.</span> — Лимонная кислота
+              <span class="ingredient-note">1/6 ч. л., закрепляет цвет</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Кукурузный крахмал
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Подтёки и декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Молочный шоколад без сахара
+              <span class="ingredient-note">Остатки шоколада без сахара</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Сливки 30% и выше
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Свежая клубника
+              <span class="ingredient-note">Целые ягоды и половинки</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Ореховая мука и сухие ингредиенты</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Фундук и миндаль обжарьте и смелите в муку. У фундука тонкую шелуху не снимайте — именно в ней держится яркий ореховый вкус; очищать нужно только толстую оболочку. Можно взять любые орехи, даже арахис, но обжарка обязательна.
+                <span class="source-badge">⏱ Серия 1: 00:51–01:13</span>
+              </p>
+              <p>
+                Соедините два вида ореховой муки с разрыхлителем, тщательно перемешайте, затем добавьте какао и снова перемешайте. Муки из пшеницы в этом торте нет вообще.
+                <span class="source-badge">⏱ Серия 1: 02:16–03:10</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> можно взять орехи одного вида — либо полностью фундучную, либо полностью миндальную муку. Помол делайте неоднородным: и крупные вкрапления, и мелкая крошка дают более интересную текстуру.
+                <span class="source-badge">⏱ Серия 1: 01:06–01:13</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>Блендер или кофемолка, миска</strong></span>
+              <span class="param-pill">🌰 Орехи: <strong>обязательно обжаренные</strong></span>
+              <span class="param-pill">⚖ Ореховой муки всего: <strong>110 г</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Масляно-шоколадная смесь</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Шоколад без сахара растопите в микроволновке импульсами. Пока он тёплый, вмешайте сливочное масло; если температуры шоколада не хватает, верните массу в микроволновку короткими импульсами.
+                <span class="source-badge">⏱ Серия 1: 03:18–03:50</span>
+              </p>
+              <p>
+                Нужна однородная масляно-шоколадная смесь. Оставьте её остывать до комнатной температуры — горячую в тесто добавлять нельзя.
+              </p>
+              <div class="warning-box">
+                <strong>Горячую смесь не вводить:</strong> она схватит взбитые яйца, и корж потеряет воздух. Смесь должна быть комнатной температуры — её удобно готовить первой, пока идёт взбивание.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Смеси перед вводом: <strong>комнатная температура</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Микроволновка, лопатка</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Яйца с сахарозаменителем</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Яйца взбивайте 7 минут сразу на высокой скорости миксера — до пышного состояния, когда от венчика остаётся след, а объём увеличивается больше чем втрое.
+                <span class="source-badge">⏱ Серия 1: 03:52–04:52</span>
+              </p>
+              <p>
+                Введите сахарозаменитель по весу и взбейте всё вместе до однородности.
+                <span class="source-badge">⏱ Серия 1: 04:57–05:08</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Взбивание: <strong>7 минут</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>След от венчика, объём вырос втрое</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Соединение теста</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сухие ингредиенты добавьте за один приём и перемешайте лопаткой поднимающими движениями снизу вверх. Перемешивайте недолго, иначе яйца потеряют весь воздух, который в них попал.
+                <span class="source-badge">⏱ Серия 1: 05:08–05:37</span>
+              </p>
+              <p>
+                Затем так же, лопаткой, введите масляно-шоколадную смесь комнатной температуры — снова коротко и аккуратно.
+                <span class="source-badge">⏱ Серия 1: 05:43–06:09</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Инструмент: <strong>Лопатка, не миксер</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Однородное тесто без сухих комков</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Выпечка коржей</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Два невысоких кольца Ø16 см затяните снаружи фольгой, на дно положите пергамент, чтобы фольга не попала в тесто. Тесто разделите на глаз пополам, распределите по кольцам и разровняйте поверхность.
+                <span class="source-badge">⏱ Серия 1: 06:17–06:49</span>
+              </p>
+              <p>
+                Выпекайте в заранее разогретой духовке при 170 °C с конвекцией или 180 °C режимом верх-низ — 20 минут, до сухой зубочистки.
+                <span class="source-badge">⏱ Серия 1: 06:51–07:22</span>
+              </p>
+              <p>
+                Остудите до комнатной температуры, заверните каждый корж в пищевую плёнку и уберите в холодильник на ночь.
+                <span class="source-badge">⏱ Серия 1: 07:23–07:29</span>
+              </p>
+              <div class="warning-box">
+                <strong>Только после холодильника:</strong> свежий корж слишком хрупкий, разрезать его пополам не получится — он будет крошиться. За ночь в холодильнике коржи заметно плотнеют.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Режим: <strong>170 °C с конвекцией или 180 °C верх-низ</strong></span>
+              <span class="param-pill">⏱ Время: <strong>20 минут</strong></span>
+              <span class="param-pill">📏 Форма: <strong>2 кольца Ø16 см</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>Сухая зубочистка</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Шоколадный ганаш</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сливки нагрейте до кипения, но не кипятите. Залейте ими рубленый шоколад и дайте постоять минуту, чтобы шоколад не «шокнулся» от резкой температуры, затем начинайте мешать из самого центра — так масса объединяется быстрее.
+                <span class="source-badge">⏱ Серия 2: 00:33–02:04</span>
+              </p>
+              <p>
+                Если шоколад не растворился полностью, прогрейте массу импульсами в микроволновке. В однородную блестящую смесь введите размягчённое сливочное масло, не подогревая; при необходимости снова короткие импульсы по 5 секунд.
+                <span class="source-badge">⏱ Серия 2: 02:29–03:31</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> если масса получилась не совсем однородной, пробейте её погружным блендером — ганаш станет гладким и глянцевым.
+                <span class="source-badge">⏱ Серия 2: 00:54–01:00</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сливки: <strong>до кипения, не кипятить</strong></span>
+              <span class="param-pill">🌡 Масло: <strong>размягчённое</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Однородная блестящая текучая масса</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Стабилизация ганаша</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Накройте ганаш плёнкой в контакт: плёнка должна коснуться поверхности, но не утапливаться в массу. Так на креме не образуется конденсат и корочка.
+                <span class="source-badge">⏱ Серия 2: 04:19–04:31</span>
+              </p>
+              <p>
+                Если в помещении 18–19 °C, оставьте ганаш при комнатной температуре минимум на 2 часа, лучше на ночь. Если теплее 21 °C — 2 часа при комнатной температуре, затем в холодильник минимум на 1 час, максимум на ночь.
+                <span class="source-badge">⏱ Серия 2: 03:33–04:12</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Комнатная температура: <strong>минимум 2 часа</strong></span>
+              <span class="param-pill">🧊 Холодильник: <strong>от 1 часа до ночи</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Ганаш плотнее, но проминается рукой</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Клубничная пропитка и начинка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Замороженную клубнику прогрейте на самом маленьком огне, чтобы она дала как можно больше сока. Сок слейте в отдельную ёмкость и сохраните — это и есть пропитка.
+                <span class="source-badge">⏱ Серия 3: 00:47–02:02</span>
+              </p>
+              <p>
+                Ягоды верните на нагрев, добавьте 1 мерную ложку сахарозаменителя и лимонную кислоту — она закрепляет яркий цвет. Доведите до кипения, всыпьте кукурузный крахмал и активно перемешайте.
+                <span class="source-badge">⏱ Серия 3: 02:24–03:02</span>
+              </p>
+              <p>
+                Варите, пока начинка из матовой снова не станет прозрачной, — это значит, что крахмал заработал. Остудите до комнатной температуры и используйте сразу.
+                <span class="source-badge">⏱ Серия 3: 03:07–04:29</span>
+              </p>
+              <div class="warning-box">
+                <strong>Начинку не замораживать:</strong> при разморозке вся крепость от крахмала уйдёт, и начинка снова станет очень жидкой. Её место — в торте сразу после остывания.
+                <span class="source-badge">⏱ Серия 3: 03:40–03:57</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Огонь: <strong>маленький</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>Начинка прозрачная, ягоды «в соусе»</strong></span>
+              <span class="param-pill">🥣 Выход: <strong>пропитка + густая начинка</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Взбивание ганаша и подготовка коржей</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Снимите плёнку с ганаша движением в сторону, а не вверх, чтобы меньше шоколада осталось на плёнке. Взбейте ганаш сразу на большой скорости миксера: сначала он разжижится, затем начнёт загустевать.
+                <span class="source-badge">⏱ Серия 4: 00:02–01:24</span>
+              </p>
+              <p>
+                Каждый корж после ночи в холодильнике разрежьте пополам струной или ножом: пилите мелкими движениями, продвигаясь в нужную сторону, и обязательно встречайте струну рукой.
+                <span class="source-badge">⏱ Серия 4: 01:32–02:45</span>
+              </p>
+              <div class="warning-box">
+                <strong>Ганаш легко перебить:</strong> как только пойдёт крупка и начнёт отсекаться жидкость, крем испорчен. Останавливайтесь, когда масса стала плотной и держит форму.
+                <span class="source-badge">⏱ Серия 4: 00:58–01:11</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Взбивание: <strong>до плотного крема</strong></span>
+              <span class="param-pill">⚖ На сборку: <strong>380 г взбитого ганаша</strong></span>
+              <span class="param-pill">⚖ На выравнивание: <strong>200 г взбитого ганаша</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Сборка торта</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                На дно кольца отсадите немного крема, чтобы корж прилип. Выложите первый корж и пропитайте клубничным соком кисточкой: один раз — для умеренно пропитанного торта, дважды по одному и тому же месту — для влажного и сочного.
+                <span class="source-badge">⏱ Серия 4: 02:45–04:20</span>
+              </p>
+              <p>
+                Выложите крем по весам и разровняйте. Уложите второй корж, пропитайте, выложите половину крема этого слоя, по ободку внутрь распределите клубничную начинку и накройте её оставшимся кремом — начинка не должна доходить до внешнего края, иначе будет сложно выравнивать.
+                <span class="source-badge">⏱ Серия 4: 05:22–07:14</span>
+              </p>
+              <p>
+                Третий корж пропитайте и покройте кремом. Последний корж пропитайте на руке и уложите пропитанной стороной вниз. Придавите кольцом, затяните пищевой плёнкой и уберите в холодильник минимум на 4 часа, лучше на ночь.
+                <span class="source-badge">⏱ Серия 4: 07:33–09:43</span>
+              </p>
+              <div class="tip-box">
+                <strong>Куда девать клубнику:</strong> начинку выкладывайте только в середину слоя. Если она выйдет к боку, при выравнивании крем пойдёт волнами и пятнами.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Слоёв: <strong>4 коржа, 3 прослойки</strong></span>
+              <span class="param-pill">🧊 Холодильник: <strong>минимум 4 часа</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Кольцо, кисточка, кондитерский мешок</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 11 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Выравнивание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Снимите клипсы и аккуратно обведите торт палетой вдоль кольца, чтобы ни грамма крема не осталось на форме. Сначала нанесите тонкий слой ганаша со всех сторон — он спрячет крошки, — и только потом выравнивайте.
+                <span class="source-badge">⏱ Серия 5: 00:00–01:51</span>
+              </p>
+              <p>
+                Бока выравнивайте палетой и скребком «волной», стараясь не поднимать крем на верхнюю часть палеты. Верх — строго горизонтальными движениями, скребок каждый раз вытирайте начисто.
+                <span class="source-badge">⏱ Серия 5: 02:08–05:10</span>
+              </p>
+              <div class="warning-box">
+                <strong>Ганаш на шоколаде без сахара ведёт себя иначе:</strong> возможны пузырьки и небольшие неровности по консистенции — это нормально и на вкус не влияет. Идеально гладкой, как на обычном шоколаде, поверхность не будет.
+                <span class="source-badge">⏱ Серия 5: 04:09–04:39</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Крема на выравнивание: <strong>200 г</strong></span>
+              <span class="param-pill">🥣 Инструмент: <strong>Палета, скребок</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Крошек не видно, бока ровные</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 12 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Подтёки и декор клубникой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Для подтёков сливки доведите до кипения, но не кипятите, залейте ими рубленый шоколад, дайте постоять и перемешайте до блестящего ганаша.
+                <span class="source-badge">⏱ Серия 5: 05:16–05:56</span>
+              </p>
+              <p>
+                Вылейте ганаш на торт сразу после приготовления, пока он тёплый, и разровняйте палетой: дайте ему потечь там, где хочется, и не давайте там, где не нужно.
+                <span class="source-badge">⏱ Серия 5: 06:29–07:27</span>
+              </p>
+              <p>
+                Сверху выложите свежую клубнику — целые ягоды и половинки, в хаотичном порядке, но с одним направлением: ягоды как будто закручиваются по кругу.
+                <span class="source-badge">⏱ Серия 5: 07:34–08:53</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> если ганаш для подтёков получился слишком густым, добавьте в него несколько чайных ложек тёплых сливок и перемешайте.
+                <span class="source-badge">⏱ Серия 5: 05:56–06:13</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Ганаш: <strong>тёплый, только что приготовленный</strong></span>
+              <span class="param-pill">⚖ Подтёки: <strong>25 г шоколада + 30 г сливок</strong></span>
+              <span class="param-pill">🥣 Инструмент: <strong>Палета, кондитерский мешок</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Шелуха фундука — это вкус:</strong> снимайте только толстую оболочку, тонкую оставляйте при измельчении.</li>
+                <li><strong>Корж держится на яйцах:</strong> 7 минут взбивания и увеличение объёма втрое — вместо муки и разрыхлителя в одиночку.</li>
+                <li><strong>Плёнка в контакт:</strong> и для ганаша, и для глазури — так не образуется конденсат и корочка.</li>
+                <li><strong>Влагу даёт только клубника:</strong> от шоколадного ганаша коржи не пропитываются, поэтому клубничный «компот» здесь не декор, а необходимость.</li>
+                <li><strong>Разбавьте пропитку:</strong> если сок получился густым, разведите его пополам с кипячёной водой — так он ляжет ровнее.</li>
+                <li><strong>Коржи хранятся в плёнке:</strong> заверните и держите в холодильнике, плотными они становятся именно за ночь.</li>
+                <li><strong>Скребок решает:</strong> угол 90° удобнее, но подойдёт любой — даже треугольник.</li>
+                <li><strong>Торт не низкокалорийный:</strong> он без сахара и глютена, но жиров в нём много.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Горячая масляно-шоколадная смесь:</strong> тесто осядет, корж получится плотным.</li>
+                <li><strong>Долгое перемешивание лопаткой:</strong> яйца теряют воздух, и корж не поднимается.</li>
+                <li><strong>Резка свежего коржа:</strong> только что испечённый корж крошится — нужна ночь в холодильнике.</li>
+                <li><strong>Перебитый ганаш:</strong> появляется крупка и отсекается жидкость, крем уже не спасти.</li>
+                <li><strong>Ганаш сразу в холодильник:</strong> без стабилизации при комнатной температуре масса может расслоиться.</li>
+                <li><strong>Клубника у самого края:</strong> крем при выравнивании «поедет», а срез будет неаккуратным.</li>
+                <li><strong>Холодный ганаш для подтёков:</strong> он не потечёт, а ляжет плотной лепёшкой.</li>
+                <li><strong>Заморозка начинки с крахмалом:</strong> после разморозки она снова становится жидкой.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «Можно_всем_комментарии.docx» — рецептуры всех пяти серий с точными граммовками; CSV-расшифровка «Расшифровка Торт Можно Всем.csv» (Серия1–Серия5.mp4) — оттуда взяты все таймкоды.</li>
+              <li><strong>Расхождения по времени выпечки:</strong> в начале Серии 1 автор говорит «выпекать буду 15 минут», а через несколько минут уточняет, что коржи пеклись 20 минут. На странице — 20 минут, как по факту.</li>
+              <li><strong>Расхождения по лимонной кислоте:</strong> в DOCX указано 1/6 ч. л., в расшифровке распознано «1,6 чайной ложки». Взят вариант DOCX — 1/6 ч. л., иначе начинка была бы кислой.</li>
+              <li><strong>Расхождения по орехам:</strong> в DOCX два веса — 60 г миндаля и 50 г фундука, в видео говорится про «два вида ореховой муки» и возможность взять один вид. На странице — веса DOCX с пометкой о замене.</li>
+              <li><strong>Пробелы по выходу:</strong> число порций и диаметр готового торта в источниках не указаны. 8 порций и Ø16 см рассчитаны по кольцам для выпечки и четырём слоям.</li>
+              <li><strong>Пробелы по крему:</strong> точный вес крема на каждую прослойку в Серии 4 не назван — есть только общий расклад: 380 г на сборку и 200 г на выравнивание.</li>
+              <li><strong>Пробелы по начинке:</strong> вес сахарозаменителя в «одной мерной ложке» и объём клубничного сока, который останется на пропитку, автор не называет — это зависит от ягоды.</li>
+              <li><strong>Фото:</strong> в DOCX только служебные иконки около 0,5 КБ, реального фото блюда нет. Изображение на странице сгенерировано по описанию торта из исходников — при возможности замените своим фото.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© CookBook — Автономная кулинарная библиотека.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

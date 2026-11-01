@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Самый лучший торт с меренгой и заварным кремом — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Прямоугольный торт 13×28 см: тонкий масляный корж, хрустящая меренга с орехами, нежный заварной крем на желтках и кукурузном крахмале со взбитыми сливками. Выпечка 170 °C с конвекцией 20–25 минут.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="samyy-luchshiy-tort">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Самый лучший торт с меренгой и заварным кремом</h1>
+      <p class="recipe-lead">
+        Прямоугольный торт на противне: тонкий масляный корж заливается меренгой и уходит в духовку одним пластом. Пока он печётся, варится заварной крем на желтках и кукурузном крахмале, а после остывания в него вводятся взбитые сливки. Пласт режется по широкой стороне на три полосы, и торт собирается слоями — корж, крем, корж. Хрустящая меренга сверху, нежная середина и лёгкая кислинка ягод — на всё уходит около четырёх часов, из которых большая часть — ожидание.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">25 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">1 час</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">2,5–3 часа (остывание коржа и крема)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~4 часа</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 торт 13×28 см (3 слоя)</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/samyy-luchshiy-tort.jpg" alt="Прямоугольный торт с меренгой, заварным кремом и ягодами" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (10 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="10">10</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (кусков)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Все граммовки автоматически масштабируются. Базовая раскладка — пласт на противень 30×40 см, который после выпечки режется на три полосы; готовый торт получается около 13×28 см.
+          </p>
+        </div>
+
+        <!-- Переключатель источников -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Основной контент: Ингредиенты + Технология -->
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">10</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: молочное -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко</strong>:
+                <span class="shopping-qty" data-base-amount="570" data-unit="г">570 г</span>
+                <span class="shopping-hint">70 г в корж + 500 г в крем. В корж и в крем — комнатной температуры и холодное соответственно</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="160" data-unit="г">160 г</span>
+                <span class="shopping-hint">100 г мягкого в корж + 60 г в крем</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 33%</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Холодные, взбиваются в самом конце</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="8" data-unit="шт." data-piece="true">8 шт.</span>
+                <span class="shopping-hint">2 целых в корж, 5 желтков (90 г) в крем, 6 белков (200 г) в меренгу; остаётся 1 желток</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: бакалея и декор -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Бакалея и декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">В корж, вместе с разрыхлителем и солью</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок (всего)</strong>:
+                <span class="shopping-qty" data-base-amount="450" data-unit="г">450 г</span>
+                <span class="shopping-hint">100 г в корж + 250 г в меренгу + 100 г в крем</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Крахмал кукурузный</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Для заморозки его меняют на модифицированный крахмал 1:1</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Разрыхлитель и соль</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="г">4 г</span> разрыхлителя
+                <span class="shopping-hint">Плюс щепотка соли — есть на любой кухне</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимонная кислота</strong>:
+                <span class="shopping-qty" data-base-amount="0.125" data-unit="ч. л.">0,125 ч. л.</span>
+                <span class="shopping-hint">1/8 чайной ложки — для стабильной меренги</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Миндальные лепестки или рубленые орехи</strong> — по желанию, для посыпки меренги
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ваниль</strong> — по желанию
+                <span class="shopping-hint">В корж и в крем</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Корж</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span> — Яйца С1
+              <span class="ingredient-note">Комнатной температуры, вводятся постепенно</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Молоко
+              <span class="ingredient-note">Комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сливочное масло
+              <span class="ingredient-note">Мягкое, взбивается с сахаром</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Мука
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="г">4 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Щепотка — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По желанию — Ваниль
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Меренга</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Белок
+              <span class="ingredient-note">Взбивается до мягких пиков, затем с сахаром</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="0.125" data-unit="ч. л.">0,125 ч. л.</span> — Лимонная кислота
+              <span class="ingredient-note">1/8 ч. л., добавляется до сахара</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По желанию — Миндальные лепестки или рубленые орехи
+              <span class="ingredient-note">Посыпать меренгу перед выпечкой</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="500" data-unit="г">500 г</span> — Молоко
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="90" data-unit="г">90 г</span> — Желтки
+              <span class="ingredient-note">Около 5 желтков</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Крахмал кукурузный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сливочное масло
+              <span class="ingredient-note">Вводится в горячий крем</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сливки 33%
+              <span class="ingredient-note">Взбить и ввести в остывший крем</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По желанию — Ваниль
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Тесто для коржа</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Мягкое сливочное масло взбейте с сахаром. Постепенно добавьте яйца комнатной температуры, затем молоко — тоже комнатной температуры, чтобы масса не расслоилась.
+              </p>
+              <p>
+                Введите просеянную муку с разрыхлителем и солью. Если любите, добавьте ваниль. Тесто должно быть однородным и достаточно мягким, чтобы распределяться по пергаменту.
+              </p>
+              <p>
+                Распределите тесто по пергаменту ровным слоем — размер пласта 30×40 см, как у стандартного противня.
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Размер пласта: <strong>30×40 см</strong></span>
+              <span class="param-pill">🌡 Компоненты: <strong>комнатной температуры</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Миксер, противень, пергамент</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Меренга поверх теста</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Белки взбейте до мягких пиков. Добавьте лимонную кислоту и постепенно, по ложке, введите сахар.
+              </p>
+              <p>
+                Взбивайте 10 минут — до пиков и блестящей белой меренги. Распределите её ровным слоем поверх теста для коржа.
+              </p>
+              <p>
+                Сверху можно посыпать миндальными лепестками или любыми рублеными орехами — это добавит хруста и аромата.
+              </p>
+              <div class="tip-box">
+                <strong>Лимонная кислота — до сахара:</strong> она стабилизирует белок, и меренга лучше держит форму, а при выпечке остаётся хрустящей сверху и мягкой внутри.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Взбивание: <strong>10 минут</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Блестящая белая меренга с пиками</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Выпечка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте 20–25 минут при 170 °C с конвекцией. Меренга должна зарумяниться, а корж — пропечься под ней.
+              </p>
+              <div class="warning-box">
+                <strong>Не пересушите меренгу:</strong> она должна остаться хрустящей снаружи, но не превратиться в сухую корку — иначе торт будет сложно нарезать. Ориентируйтесь на золотистый оттенок.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Режим: <strong>170 °C, конвекция</strong></span>
+              <span class="param-pill">⏱ Время: <strong>20–25 минут</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Заварная основа крема</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Молоко с ванилью доведите до кипения. Желтки перемешайте с крахмалом и сахаром до однородности.
+              </p>
+              <p>
+                Вылейте в желтки половину горячего молока и перемешайте до растворения сахара. Верните массу к оставшемуся молоку и варите на медленном огне, постоянно помешивая, до кипения и ещё 1–2 минуты — чтобы раскрылся крахмал.
+              </p>
+              <p>
+                Снимите с огня, введите сливочное масло, перемешайте и остудите. Крем должен стать гладким и плотным.
+              </p>
+              <div class="warning-box">
+                <strong>Не спешите:</strong> если варить на сильном огне или мешать недостаточно, желтки свернутся и крем пойдёт крупинками. Огонь — только медленный, лопатка — постоянно у дна.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Доваривание: <strong>1–2 минуты после кипения</strong></span>
+              <span class="param-pill">🌡 Огонь: <strong>медленный</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Гладкий плотный крем без комков</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Сливки и сборка крема</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Охлаждённые сливки 33% взбейте до устойчивых пиков.
+              </p>
+              <p>
+                Остывший заварной крем перемешайте до гладкости, затем введите взбитые сливки и аккуратно взбейте до однородности — крем должен получиться воздушным, но держать форму.
+              </p>
+              <div class="tip-box">
+                <strong>Температуры должны совпасть:</strong> сливки и крем вводите холодными. Тёплый крем «посадит» взбитые сливки, и масса станет жидкой.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>5–7 минут</strong></span>
+              <span class="param-pill">🌡 Сливки: <strong>холодные</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Воздушный крем, держит форму</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+      <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Сборка торта</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Остывший пласт разделите по широкой стороне на три части — получатся коржи примерно 13×28 см. Режьте аккуратно, чтобы меренга не осыпалась.
+              </p>
+              <p>
+                Собирайте торт, чередуя слои: корж → 1/3 крема → корж → 1/3 крема и так далее, пока не закончатся коржи и крем. Верхний слой — крем.
+              </p>
+              <p>
+                Автор отсаживает крем насадкой «закрытая звезда» — получается ровный рельефный слой.
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Коржи: <strong>3 шт. по ~13×28 см</strong></span>
+              <span class="param-pill">⚖ Крем: <strong>по 1/3 на слой</strong></span>
+              <span class="param-pill">🥣 Инструмент: <strong>Кондитерский мешок, насадка «закрытая звезда»</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Хранение и заморозка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Срок годности торта — 72 часа, хранить в холодильнике.
+              </p>
+              <p>
+                Замораживать автор не рекомендует. Если заморозка всё-таки нужна, замените кукурузный крахмал на модифицированный в пропорции 1:1 — тогда торт перенесёт заморозку без потери качества.
+              </p>
+              <div class="warning-box">
+                <strong>Меренга и холод:</strong> нарезайте торт хорошо охлаждённым и сухим ножом — так меренга не крошится, а крем не вытекает.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Хранение: <strong>до 72 часов в холодильнике</strong></span>
+              <span class="param-pill">❄️ Заморозка: <strong>только с модифицированным крахмалом 1:1</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Одна противень-заготовка:</strong> корж и меренга выпекаются вместе, одним пластом 30×40 см — это быстро и не требует разрезки на коржи до выпечки.</li>
+                <li><strong>Всё комнатной температуры:</strong> масло мягкое, яйца и молоко — не из холодильника, иначе тесто расслоится.</li>
+                <li><strong>Лимонная кислота до сахара:</strong> стабилизирует белок, меренга получается блестящей и устойчивой.</li>
+                <li><strong>Крахмал раскрывается:</strong> после закипания крем варят ещё 1–2 минуты — иначе останется привкус крахмала и крем будет жидким.</li>
+                <li><strong>Сливки в холодный крем:</strong> только так масса остаётся воздушной.</li>
+                <li><strong>Насадка «закрытая звезда»:</strong> даёт ровный рельефный слой крема между коржами.</li>
+                <li><strong>Заморозка:</strong> обычный кукурузный крахмал её не переносит — нужен модифицированный 1:1.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Холодные яйца и молоко в тесте:</strong> масляная масса расслаивается, корж получается плотным.</li>
+                <li><strong>Меренга без лимонной кислоты:</strong> хуже держит форму и может осесть.</li>
+                <li><strong>Недоваренный крем:</strong> жидкий, с привкусом крахмала.</li>
+                <li><strong>Переваренные желтки:</strong> крем идёт крупинками — спасает только медленный огонь и постоянное помешивание.</li>
+                <li><strong>Тёплый крем со сливками:</strong> взбитые сливки оседают, крем становится жидким.</li>
+                <li><strong>Сборка на тёплых коржах:</strong> крем тает и вытекает.</li>
+                <li><strong>Заморозка с обычным крахмалом:</strong> после разморозки крем расслаивается.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источник:</strong> DOCX «Самф лучшего торта.docx» — технологическая карта с полной рецептурой и пошаговым описанием. Видео и расшифровки нет, поэтому таймкодов на странице тоже нет.</li>
+              <li><strong>Фото:</strong> в DOCX лежат два скриншота страницы VK с фотографиями торта; из них вырезано фото готового торта и использовано на странице.</li>
+              <li><strong>Пропорции:</strong> все граммовки перенесены без изменений.</li>
+              <li><strong>Декор:</strong> в источнике описана только посыпка меренги миндальными лепестками или орехами. Ягоды и шоколадные подтёки, которые видны на фото, в тексте не упоминаются — на странице они не описаны как обязательный шаг.</li>
+              <li><strong>Выход:</strong> автор указывает размеры коржей (13×28 см) и три слоя, но не число порций; 10 порций — расчёт по готовому торту.</li>
+              <li><strong>Время:</strong> активное время и общее время в источнике не указаны — рассчитаны по операциям (замес, 10 минут взбивания меренги, 20–25 минут выпечки, варка и остывание крема).</li>
+              <li><strong>Яйца:</strong> в рецептуре 2 яйца в корж, 90 г желтков в крем и 200 г белка в меренгу. В списке покупок это сведено к 8 яйцам С1: 2 целых, 5 желтков и 6 белков (5 от тех же яиц и 1 дополнительное), лишним остаётся один желток. Отдельной покупки белка не нужно.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© CookBook — Автономная кулинарная библиотека.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

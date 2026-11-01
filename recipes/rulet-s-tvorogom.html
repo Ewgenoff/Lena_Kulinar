@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рулет-вертута с творогом — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Дрожжевое тесто со сметаной на 500 г, тонкий пласт 40×50 см, творожная начинка с ванилью и улитка, испечённая в кольце: домашняя вертута с хрустящей корочкой.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="rulet-s-tvorogom">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- 1. Общая информация -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Рулет-вертута с творогом</h1>
+      <p class="recipe-lead">
+        Дрожжевое безопарное тесто со сметаной: молочная кислота делает его похожим на сдобное песочное — появляется лёгкая слоистость. Тонкий пласт 40×50 см смазывается яйцом, поверх ложится творог с сахаром и ванилью, рулет сворачивается плотной улиткой и печётся в кольце. Тесто в карточке автора рассчитано так, чтобы на один рулет уходило 500 г.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">15 мин: продукты комнатной температуры</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~40 мин замеса и сборки</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">~1,5 ч расстойки + выпечка</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~3 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 рулет-улитка (~950 г, 8 порций)</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/rulet-s-tvorogom.jpg" alt="Рулет-улитка с творогом из дрожжевого теста со сметаной на тарелке, с золотистой корочкой" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (8 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="8">8</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (кусков)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Базовая раскладка — один рулет на 500 г теста и 400 г творога. Число порций автор не называет: 8 посчитаны по готовому рулету весом около 950 г.
+          </p>
+        </div>
+
+        <!-- Переключатель источников -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Раздел: Купить в магазине -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">8</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: молочное -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творог 5–9%</strong>:
+                <span class="shopping-qty" data-base-amount="400" data-unit="г">400 г</span>
+                <span class="shopping-hint">На начинку. Берите сухой и однородный, без крупинок</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко</strong>:
+                <span class="shopping-qty" data-base-amount="106" data-unit="г">106 г</span>
+                <span class="shopping-hint">В тесто; комнатной температуры</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сметана 15–25%</strong>:
+                <span class="shopping-qty" data-base-amount="27" data-unit="г">27 г</span>
+                <span class="shopping-hint">Именно она даёт тесту слоистость и сдобный вкус</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло</strong>:
+                <span class="shopping-qty" data-base-amount="32" data-unit="г">32 г</span>
+                <span class="shopping-hint">Комнатной температуры, вводится последним</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span>
+                <span class="shopping-hint">40 г в тесто и одно яйцо на смазывание</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: бакалея -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Мука, сахар, дрожжи</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная</strong>:
+                <span class="shopping-qty" data-base-amount="246" data-unit="г">246 г</span>
+                <span class="shopping-hint">Просейте обязательно. У автора — «Макфа» 12% белка</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+                <span class="shopping-hint">35 г в тесто + 2 ст. л. на присыпку творога</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Дрожжи</strong>:
+                <span class="shopping-qty" data-base-amount="11" data-unit="г">11 г</span>
+                <span class="shopping-hint">Тип дрожжей в источнике не указан — смотрите норму на своей упаковке</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="г">4 г</span>
+                <span class="shopping-hint">В тесто, вместе с мукой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ванильный сахар</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">В начинку; можно заменить семенами ванили</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло растительное</strong>:
+                <span class="shopping-hint">Для щедрого смазывания кольца</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Ингредиенты и технология -->
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Тесто (выход 500 г)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="246" data-unit="г">246 г</span> — Мука пшеничная
+              <span class="ingredient-note">Расчёт из общей раскладки автора на 900–950 г муки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="106" data-unit="г">106 г</span> — Молоко
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Яйца
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="35" data-unit="г">35 г</span> — Сахар-песок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="г">4 г</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="11" data-unit="г">11 г</span> — Дрожжи
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="27" data-unit="г">27 г</span> — Сметана 15–25%
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="32" data-unit="г">32 г</span> — Масло сливочное комнатной температуры
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка и смазывание</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="400" data-unit="г">400 г</span> — Творог 5–9%
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              2 ст. л. — Сахар на присыпку
+              <span class="ingredient-note">В источнике — ложками, без веса</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Ванильный сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Яйцо — для смазывания пласта и верха
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Растительное масло — для кольца
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Сухие ингредиенты</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В миску просейте муку, добавьте соль, сахар и дрожжи. Перемешайте сухие ингредиенты руками — так дрожжи распределятся равномерно.
+                <span class="source-badge">⏱ Урок_01: 00:40–01:01</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> тесто замешивается руками, безопарным способом — без предварительной опары.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>миска, рука или лопатка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Молоко, яйца, сметана</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Введите молоко и яйца, начните замес в миске. Когда сухие ингредиенты соберутся в комок, добавьте сметану — в два приёма, вмешивая каждую часть до однородности.
+                <span class="source-badge">⏱ Урок_01: 01:03–02:24</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сметана разжижает тесто:</strong> это нормально. Не подсыпайте муку — по автору, тесто должно быть некрутым и слегка липким.
+                <span class="source-badge">⏱ Урок_01: 01:54–01:56</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> сметана содержит молочную кислоту — тесто ведёт себя как сдобное песочное, появляется лёгкая слоистость.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак: <strong>тесто собралось в комок, но липнет</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Сливочное масло и вымешивание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Постепенно вводите масло комнатной температуры небольшими порциями — каждую следующую только после того, как предыдущая вошла в тесто. Вымешивайте на столе 15–20 минут до однородности.
+                <span class="source-badge">⏱ Урок_01: 02:26–03:05</span>
+              </p>
+              <div class="warning-box">
+                <strong>Муку не добавлять:</strong> если тесто кажется мягким, это его рабочая консистенция. С хорошей мукой (12% белка) оно перестаёт липнуть к рукам само.
+                <span class="source-badge">⏱ Урок_01: 03:14–03:24</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>15–20 мин</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>тесто однородное и отстаёт от рук</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Расстойка теста</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Верните тесто в миску, накройте полотенцем и оставьте подходить.
+                <span class="source-badge">⏱ Урок_01: 03:25–03:34</span>
+              </p>
+              <div class="tip-box">
+                <strong>Внимание:</strong> точное время расстойки в источниках не названо — ориентируйтесь на увеличение объёма примерно вдвое.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>до увеличения объёма</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Раскатка пласта 40×50 см</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Возьмите 500 г подошедшего теста и раскатайте тонко — в прямоугольник примерно 40×50 см.
+                <span class="source-badge">⏱ Урок_02: 00:05–00:10</span>
+              </p>
+              <div class="warning-box">
+                <strong>Края под склейку:</strong> с каждого края оставьте 3–5 см без начинки и смазки, иначе рулет не склеится.
+                <span class="source-badge">⏱ Урок_02: 00:16–00:22</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Тесто: <strong>500 г</strong></span>
+              <span class="param-pill">📐 Размер: <strong>40×50 см</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Яйцо и творожная начинка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Смажьте пласт яйцом тонким слоем. Распределите творог (400 г), присыпьте его сахаром с ванилью и добавьте сверху ещё пару столовых ложек сахара.
+                <span class="source-badge">⏱ Урок_02: 00:30–01:06</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> вместо растительного масла, как в других вертутах, здесь пласт смазывается яйцом — оно и склеивает рулет, и даёт корочку.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Творог: <strong>400 г</strong></span>
+              <span class="param-pill">🍬 Сахар: <strong>2 ст. л. + ванильный сахар</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Свернуть рулет</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сверните пласт аккуратно и плотно, подтягивая рулет к себе.
+                <span class="source-badge">⏱ Урок_02: 01:11–01:30</span>
+              </p>
+              <div class="warning-box">
+                <strong>Чем плотнее, тем красивее:</strong> слабая скрутка даёт пустоты и расползающиеся витки при выпечке.
+                <span class="source-badge">⏱ Урок_02: 01:25–01:30</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак: <strong>рулет плотный, шов снизу</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Улитка в кольце</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Кольцо щедро смажьте растительным маслом. Сверните рулет улиткой, уложите в кольцо и смажьте верх яйцом.
+                <span class="source-badge">⏱ Урок_02: 02:06–02:49</span>
+              </p>
+              <div class="warning-box">
+                <strong>Кольцо не затягивайте:</strong> оставьте зазор, иначе вертуте некуда расти и она поползёт вверх.
+                <span class="source-badge">⏱ Урок_02: 02:41–02:46</span>
+              </div>
+              <div class="tip-box">
+                <strong>Внимание:</strong> диаметр кольца в источниках не назван — подойдёт кольцо под ваш рулет, свободно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>кольцо, растительное масло</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Расстойка перед выпечкой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Дайте вертуте расстояться 30–40 минут, чтобы она увеличилась в объёме. Если времени нет — можно отправлять в духовку почти сразу.
+                <span class="source-badge">⏱ Урок_02: 02:24–02:40</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>30–40 мин</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Выпечка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте в разогретой духовке: по технологической карте автора — 40–45 минут.
+                <span class="source-badge">⏱ Урок_02: 03:00–03:04</span>
+              </p>
+              <div class="warning-box">
+                <strong>Температура не указана:</strong> ни в карточке, ни в видео автор не называет градусы — только «разогретая духовка». Ориентируйтесь на свою духовку и проверяйте готовность по румяной корочке и сухой шпажке.
+              </div>
+              <div class="tip-box">
+                <strong>Расхождение:</strong> в видео автор говорит «минут ещё по 20», в карточке — 40–45 минут. На странице оставлено время карточки.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>40–45 мин</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>в источниках не указана</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>румяная корочка, сухая шпажка</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Сметана в тесте:</strong> молочная кислота даёт слоистость и сдобный вкус — тесто напоминает песочное.</li>
+                <li><strong>Порядок ввода:</strong> сметана идёт вместе с молоком и яйцами, масло — последним, порциями.</li>
+                <li><strong>Мука «Макфа» 12% белка:</strong> на ней тесто отстаёт от рук без подсыпания.</li>
+                <li><strong>Яйцо вместо масла:</strong> пласт смазывают яйцом, а не растительным маслом, как в других вертутах, — для склейки и корочки.</li>
+                <li><strong>Свободное кольцо:</strong> зазор нужен для подъёма, иначе улитка деформируется.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Подсыпать муку в липкое тесто:</strong> тесто становится крутым, вертута — плотной.</li>
+                <li><strong>Ввести масло сразу:</strong> оно не вмешается, и тесто будет слоиться комками.</li>
+                <li><strong>Начинка до самых краёв:</strong> рулет не склеится и развалится при сворачивании.</li>
+                <li><strong>Слабая скрутка:</strong> пустоты и неровные витки после выпечки.</li>
+                <li><strong>Затянутое кольцо:</strong> вертуте некуда расти, верх трескается.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «Рулет с творогом.docx» с раскладкой и описанием процессов; расшифровка двух уроков («Урок_01» — тесто, «Урок_02» — сборка и выпечка), сделанная по видео из этой папки.</li>
+              <li><strong>Пересчёт теста:</strong> автор даёт общую раскладку на 900–950 г муки и просит пересчитать её так, чтобы выход теста был 500 г. Пересчёт сделан по средней величине 925 г муки: коэффициенты сохранены, сумма ингредиентов — 501 г.</li>
+              <li><strong>Расхождение по весу теста:</strong> в карточке на рулет идёт 500 г теста, в видео автор берёт 400 г. На странице — 500 г по карточке.</li>
+              <li><strong>Расхождение по времени:</strong> карточка — 40–45 минут выпечки, видео — «минут ещё по 20». Взято время карточки.</li>
+              <li><strong>Пробелы:</strong> не указаны температура выпечки, время первой расстойки теста, диаметр кольца, тип дрожжей (свежие или сухие) и вес сахара на присыпку — только «2 ст. л.».</li>
+              <li><strong>Порции:</strong> автор их не называет; 8 порций посчитаны по весу рулета около 950 г.</li>
+              <li><strong>Фото:</strong> в папке с материалами снимков нет, изображение сгенерировано по описанию из источников. Замените своим фото при возможности.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© CookBook — Автономная кулинарная библиотека.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

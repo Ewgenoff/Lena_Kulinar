@@ -319,6 +319,280 @@ window.RECIPES_FALLBACK = [
       "желатин",
       "лимонная кислота"
     ]
+  },
+  {
+    "id": "samyy-luchshiy-tort",
+    "title": "Самый лучший торт с меренгой",
+    "category": "Торты и десерты",
+    "description": "Прямоугольный торт 13×28 см: тонкий масляный корж, хрустящая меренга с орехами, нежный заварной крем на желтках и кукурузном крахмале со взбитыми сливками.",
+    "time": "~4 ч (активное 1 ч)",
+    "timeMinutes": 240,
+    "servings": "10 порций (торт 13×28 см)",
+    "difficulty": "Средняя",
+    "image": "assets/images/samyy-luchshiy-tort.jpg",
+    "url": "recipes/samyy-luchshiy-tort.html",
+    "ingredients": [
+      "торт",
+      "корж",
+      "яйца",
+      "молоко",
+      "сливочное масло",
+      "масло",
+      "сахар",
+      "мука",
+      "разрыхлитель",
+      "меренга",
+      "белок",
+      "белки",
+      "лимонная кислота",
+      "крем",
+      "желтки",
+      "крахмал",
+      "кукурузный крахмал",
+      "сливки",
+      "ваниль",
+      "миндальные лепестки",
+      "орехи"
+    ]
+  },
+  {
+    "id": "tort-assorti",
+    "title": "Торт «Ассорти»",
+    "category": "Торты и десерты",
+    "description": "Три разных коржа в одном срезе: ореховое безе с фундуком, песочный корж и шоколадный бисквит. Между ними крем шарлотт на сгущёнке и заварных желтках, сверху сливовая начинка на пектине, бока — в крошке безе.",
+    "time": "~16 ч (активное 2 ч 30 мин)",
+    "timeMinutes": 960,
+    "servings": "10 порций (торт Ø18 см, ~2 кг)",
+    "difficulty": "Сложная",
+    "image": "assets/images/tort-assorti.jpg",
+    "url": "recipes/tort-assorti.html",
+    "ingredients": [
+      "торт",
+      "безе",
+      "фундук",
+      "орехи",
+      "песочное тесто",
+      "крем шарлотт",
+      "сгущёнка",
+      "слива",
+      "шоколадный бисквит"
+    ]
+  },
+  {
+    "id": "tort-kreshchatyi-yar",
+    "title": "Торт «Крещатый Яр»",
+    "category": "Торты и десерты",
+    "description": "Высокий торт Ø20 см с двумя кремами: сметанным и масло-сгущёнкой. Шоколадный бисквит и шесть песочных коржей с меренгой и грецким орехом, чернослив в прослойке, разлом с M&M и золотой кандурин.",
+    "time": "~20 ч (активное 3 ч)",
+    "timeMinutes": 1200,
+    "servings": "12 порций (торт Ø20 см, 3,5 кг)",
+    "difficulty": "Сложная",
+    "image": "assets/images/tort-kreshchatyi-yar.jpg",
+    "url": "recipes/tort-kreshchatyi-yar.html",
+    "ingredients": [
+      "торт",
+      "шоколадный бисквит",
+      "меренга",
+      "песочные коржи",
+      "сметанный крем",
+      "сгущёнка",
+      "чернослив",
+      "грецкий орех"
+    ]
+  },
+  {
+    "id": "tort-leningradskiy",
+    "title": "Торт «Ленинградский»",
+    "category": "Торты и десерты",
+    "description": "Квадратный песочный торт 20×20 см из четырёх коржей с миндальной мукой, шоколадный крем шарлотт на заварной основе с коньяком, сахарная помадка двух оттенков и глазурь гурмэ из молочного шоколада с орехами.",
+    "time": "~6 ч (активное 1 ч 30 мин)",
+    "timeMinutes": 360,
+    "servings": "12 порций (торт 20×20 см)",
+    "difficulty": "Средняя",
+    "image": "assets/images/tort-leningradskiy.jpg",
+    "url": "recipes/tort-leningradskiy.html",
+    "ingredients": [
+      "торт",
+      "песочный торт",
+      "миндальная мука",
+      "крем шарлотт",
+      "сахарная помадка",
+      "молочный шоколад",
+      "коньяк"
+    ]
+  },
+  {
+    "id": "tort-mozhno-vsem",
+    "title": "Торт «Можно всем» без сахара и глютена",
+    "category": "Торты и десерты",
+    "description": "Шоколадный торт без сахара и белой муки: коржи на миндальной и фундучной муке, крем и выравнивание — шоколадный ганаш на шоколаде без сахара, между слоями клубничная пропитка и начинка. Сверху шоколадные подтёки и свежая клубника.",
+    "time": "~14 ч (активное 1 ч 30 мин)",
+    "timeMinutes": 840,
+    "servings": "8 порций (торт Ø16 см)",
+    "difficulty": "Средняя",
+    "image": "assets/images/tort-mozhno-vsem.jpg",
+    "url": "recipes/tort-mozhno-vsem.html",
+    "ingredients": [
+      "торт",
+      "без сахара",
+      "без глютена",
+      "шоколад",
+      "ганаш",
+      "клубника",
+      "миндальная мука",
+      "фундук"
+    ]
+  },
+  {
+    "id": "tort-moskva",
+    "title": "Торт «Москва» с красной зеркальной глазурью",
+    "category": "Торты и десерты",
+    "description": "Ореховый торт с четырьмя хрустящими декуазами Ø20 см на меренге 1:1 и жареном фундуке, кремом из варёной сгущёнки с маслом и ореховой крошкой и красной зеркальной глазурью на желатине. По вкусу ближе всего к «эстерхази».",
+    "time": "~20 ч (активное 2 ч)",
+    "timeMinutes": 1200,
+    "servings": "10 порций (торт Ø20 см)",
+    "difficulty": "Сложная",
+    "image": "assets/images/tort-moskva.jpg",
+    "url": "recipes/tort-moskva.html",
+    "ingredients": [
+      "торт",
+      "фундук",
+      "декуаз",
+      "меренга",
+      "сгущёнка",
+      "зеркальная глазурь",
+      "коньяк",
+      "орехи"
+    ]
+  },
+  {
+    "id": "tort-novogodnee-chudo",
+    "title": "Торт «Новогоднее чудо» в виде ёлки",
+    "category": "Торты и десерты",
+    "description": "Торт-конструктор из четырёх рулетов: тонкие карамельные коржи, сметанный крем с белым шоколадом, начинка из чернослива, кураги и грецкого ореха. Ярусы складываются пирамидой без внутренней опоры и декорируются зелёными «иголками» насадкой №70.",
+    "time": "~12 ч (активное 2 ч)",
+    "timeMinutes": 720,
+    "servings": "12 порций (4 яруса Ø17–8 см)",
+    "difficulty": "Сложная",
+    "image": "assets/images/tort-novogodnee-chudo.jpg",
+    "url": "recipes/tort-novogodnee-chudo.html",
+    "ingredients": [
+      "торт",
+      "рулет",
+      "карамель",
+      "сметана",
+      "чернослив",
+      "курага",
+      "грецкий орех",
+      "творожный сыр"
+    ]
+  },
+  {
+    "id": "tort-polet",
+    "title": "Торт «Полёт»",
+    "category": "Торты и десерты",
+    "description": "Три хрустящих коржа-безе на арахисе, крем «Шарлот» на масле 82,5% и пирожные-полусферы с грецким орехом и черносливом. Кукурузный крахмал в меренге помогает коржам пропечься в домашней духовке.",
+    "time": "~6 ч (активное 1 ч 30 мин)",
+    "timeMinutes": 360,
+    "servings": "10 порций (торт Ø18 см из 3 коржей + пирожные)",
+    "difficulty": "Средняя",
+    "image": "assets/images/tort-polet.jpg",
+    "url": "recipes/tort-polet.html",
+    "ingredients": [
+      "торт",
+      "безе",
+      "меренга",
+      "арахис",
+      "орехи",
+      "шарлот",
+      "грецкий орех",
+      "чернослив"
+    ]
+  },
+  {
+    "id": "tort-tsvetaevskiy-pirog",
+    "title": "Цветаевский пирог с яблоками",
+    "category": "Выпечка",
+    "description": "Песочная основа из холодного масла и холодной сметаны, слой яблок и сметанная заливка с кукурузным крахмалом. Тесто не вымешивают — только собирают крошку в комок, поэтому основа получается слоистой.",
+    "time": "~2 ч (активное 40 мин)",
+    "timeMinutes": 120,
+    "servings": "8 порций (пирог Ø20 см)",
+    "difficulty": "Легкая",
+    "image": "assets/images/tort-tsvetaevskiy-pirog.jpg",
+    "url": "recipes/tort-tsvetaevskiy-pirog.html",
+    "ingredients": [
+      "пирог",
+      "цветаевский",
+      "яблоки",
+      "сметана",
+      "песочное тесто",
+      "заливка"
+    ]
+  },
+  {
+    "id": "tort-chernichnyy",
+    "title": "Черничный торт-рулет с маскарпоне",
+    "category": "Торты и десерты",
+    "description": "Миндальный бисквит без муки, свёрнутый рулетом с черничным соусом и кремом на маскарпоне; в разрезе видна ягодная спираль. Из этой же базы отдельно собирается рулет с черничным муссом.",
+    "time": "~8 ч (активное 1 ч 40 мин)",
+    "timeMinutes": 480,
+    "servings": "12 порций (торт-рулет высотой ~10 см)",
+    "difficulty": "Сложная",
+    "image": "assets/images/tort-chernichnyy.jpg",
+    "url": "recipes/tort-chernichnyy.html",
+    "ingredients": [
+      "торт",
+      "рулет",
+      "черника",
+      "маскарпоне",
+      "бисквит",
+      "миндальная мука",
+      "желатин"
+    ]
+  },
+  {
+    "id": "tort-migel",
+    "title": "Торт «Мигель» песочный",
+    "category": "Торты и десерты",
+    "description": "Высокий песочный торт Ø18 см: семь светлых и шоколадных коржей, плотный творожно-сметанный крем, сливово-ежевичный соус. Снаружи крем-чиз, сиреневые мазки, рисовые слайсы с золотом и свежий инжир.",
+    "time": "2 дня (активное ~4 ч)",
+    "timeMinutes": 2880,
+    "servings": "12 порций (торт Ø18 см, ~3 кг)",
+    "difficulty": "Сложная",
+    "image": "assets/images/tort-migel.jpg",
+    "url": "recipes/tort-migel.html",
+    "ingredients": [
+      "торт",
+      "песочный торт",
+      "творог",
+      "маскарпоне",
+      "сметана",
+      "слива",
+      "ежевика",
+      "рисовая бумага",
+      "инжир"
+    ]
+  },
+  {
+    "id": "rulet-s-tvorogom",
+    "title": "Рулет-вертута с творогом",
+    "category": "Выпечка",
+    "description": "Дрожжевое тесто со сметаной, тонкий пласт 40×50 см, творожная начинка с ванилью и улитка, испечённая в кольце. Тесто рассчитано так, чтобы на один рулет уходило 500 г.",
+    "time": "~3 ч (активное 40 мин)",
+    "timeMinutes": 180,
+    "servings": "8 порций (1 рулет ~950 г)",
+    "difficulty": "Средняя",
+    "image": "assets/images/rulet-s-tvorogom.jpg",
+    "url": "recipes/rulet-s-tvorogom.html",
+    "ingredients": [
+      "рулет",
+      "вертута",
+      "творог",
+      "дрожжевое тесто",
+      "сметана",
+      "выпечка",
+      "улитка"
+    ]
   }
 ];
 
@@ -346,6 +620,7 @@ async function initSearch() {
     allRecipes = window.RECIPES_FALLBACK || [];
   }
 
+  renderChipCounts();
   renderRecipes();
 
   // Search input event
@@ -385,6 +660,33 @@ async function initSearch() {
       renderRecipes();
     });
   }
+}
+
+// Счётчики карточек на чипах категорий
+function renderChipCounts() {
+  document.querySelectorAll('.chip[data-category]').forEach(chip => {
+    const category = chip.dataset.category;
+    const count = category === 'all'
+      ? allRecipes.length
+      : allRecipes.filter(r => r.category === category).length;
+
+    let badge = chip.querySelector('.chip-count');
+    if (!badge) {
+      badge = document.createElement('span');
+      badge.className = 'chip-count';
+      chip.appendChild(badge);
+    }
+    badge.textContent = count;
+  });
+}
+
+// Вес сложности для сортировки
+function difficultyWeight(recipe) {
+  const value = (recipe.difficulty || '').toLowerCase();
+  if (value.startsWith('легк')) return 1;
+  if (value.startsWith('средн')) return 2;
+  if (value.startsWith('сложн')) return 3;
+  return 4;
 }
 
 // Light Russian Stemmer / Normalizer
@@ -448,6 +750,10 @@ function filterRecipes() {
     filtered.sort((a, b) => b.title.localeCompare(a.title, 'ru'));
   } else if (currentSort === 'time-asc') {
     filtered.sort((a, b) => (a.timeMinutes || 9999) - (b.timeMinutes || 9999));
+  } else if (currentSort === 'difficulty-asc') {
+    filtered.sort((a, b) => difficultyWeight(a) - difficultyWeight(b) || a.title.localeCompare(b.title, 'ru'));
+  } else if (currentSort === 'difficulty-desc') {
+    filtered.sort((a, b) => difficultyWeight(b) - difficultyWeight(a) || a.title.localeCompare(b.title, 'ru'));
   }
 
   return filtered;

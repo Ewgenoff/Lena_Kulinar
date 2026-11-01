@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Торт «Крещатый Яр» — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Высокий торт Ø20 см: шоколадный бисквит и хрустящие песочные коржи с меренгой и грецким орехом, два крема — сметанный и масло-сгущёнка, чернослив в прослойке, разлом с M&M и золотой кандурин.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tort-kreshchatyi-yar">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Торт «Крещатый Яр»</h1>
+      <p class="recipe-lead">
+        Очень высокий торт Ø20 см с непростой, но продуманной сборкой: шоколадный бисквит, шесть тонких песочных коржей, запечённых вместе с меренгой и грецким орехом, два крема — сметанный и масло-сгущёнка — и чернослив в прослойке. Песочная часть всегда касается сметанного крема, а безе — масляного, поэтому хруст не размокает. Сверху крем окрашивается в тёплый оттенок, торт получает разлом с драже M&M и золотой ободок.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">3 часа</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Охлаждение теста, ночь в холодильнике с грузом, ночь до декора</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~20 часов (два дня)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">Торт Ø20 см, ~3,5 кг</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-kreshchatyi-yar.jpg" alt="Торт «Крещатый Яр» в светло-зелёном креме с разломом, заполненным разноцветными M&M, и золотым ободком" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (12 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="12">12</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (кусков)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — один торт Ø20 см весом около 3,5 кг. Масштабируются те позиции, вес которых автор называет; для песочных коржей, меренги и сметанного крема граммовки в исходниках не указаны, поэтому они не пересчитываются. Для торта Ø16 см автор советует просто уменьшить все ингредиенты вдвое.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">12</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: молочное -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="630" data-unit="г">630 г</span>
+                <span class="shopping-hint">130 г в бисквит + 180 г во внутренний крем + 320 г в крем для выравнивания. Плюс масло в песочное тесто — вес автор не называет</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сгущённое молоко</strong>:
+                <span class="shopping-qty" data-base-amount="590" data-unit="г">590 г</span>
+                <span class="shopping-hint">210 г во внутренний крем + 380 г в крем для выравнивания. Берите проверенное, вкус крема зависит от него напрямую</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="шт." data-piece="true">5 шт.</span>
+                <span class="shopping-hint">2 целых в бисквит, 1 целое в песочное тесто, 2 белка (≈80 г) в меренгу — от них остаются 2 желтка</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сметана 20–30%</strong> — для песочного теста и сметанного крема
+                <span class="shopping-hint">Точный вес автор не называет. Для крема: 30% и выше взбивается без подготовки; если жирность ниже, берите с запасом — около 700 г на отвешивание на марле 6–8 часов</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: бакалея, декор -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Бакалея, орехи, декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная</strong> — в бисквит и в песочные коржи
+                <span class="shopping-hint">В бисквит идёт 110 г; вес песочной части автор не называет, поэтому берите с запасом</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span> в бисквит
+                <span class="shopping-hint">Плюс 40 г в сироп и сахар для меренги — его вес автор не называет</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong> — в сметанный крем
+                <span class="shopping-hint">Вес автор не называет: пудра идёт по вкусу, сметана должна держать форму</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао алкализованное</strong>:
+                <span class="shopping-qty" data-base-amount="17" data-unit="г">17 г</span>
+                <span class="shopping-hint">Если какао «Золотой ярлык», автор берёт 20 г. Смешать с мукой и разрыхлителем и просеять</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Разрыхлитель</strong>:
+                <span class="shopping-qty" data-base-amount="7" data-unit="г">7 г</span>
+                <span class="shopping-hint">В бисквит. Плюс щепотка соли в бисквит и в песочное тесто — обычно есть дома</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Загуститель для сливок</strong> — 1 пакетик
+                <span class="shopping-hint">Нужен, если сметана жирностью 20–25% и вы не хотите её отвешивать. Можно смешать с пудрой, чтобы не закомковался</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Чернослив без косточки</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Порезать брусочками. Можно исключить или заменить курагой, инжиром</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Грецкие орехи</strong> — для посыпки меренги
+                <span class="shopping-hint">Вес не назван, и орехи опциональны: подойдут любые — арахис, миндаль, фундук, кешью. Обязательно обжарить или подсушить</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Коньяк</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="ст. л.">1 ст. л.</span> во внутренний крем
+                <span class="shopping-hint">По желанию; в пересчёте на вес торта алкоголя ничтожно мало</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Драже M&M's</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="пачки" data-piece="true">4 пачки</span>
+                <span class="shopping-hint">Маленькие пачки; столько ушло у автора. Идут в разлом на торте, не в крем</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Гелевый водорастворимый краситель</strong> — для окраски крема
+                <span class="shopping-hint">Только тёплые оттенки: жёлтый, оранжевый, красный, тёплый зелёный</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Золотой кандурин</strong> — для ободка разлома
+                <span class="shopping-hint">Разводится водкой до консистенции гуаши</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Нейтральный гель</strong> — для покрытия M&M's
+                <span class="shopping-hint">Без него драже в холодильнике помутнеют и станут одинаковыми по цвету</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Шоколадный бисквит (форма Ø20 см)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="110" data-unit="г">110 г</span> — Мука
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="17" data-unit="г">17 г</span> — Какао алкализованное
+              <span class="ingredient-note">Если какао «Золотой ярлык» — 20 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="130" data-unit="г">130 г</span> — Сливочное масло
+              <span class="ingredient-note">Размягчённое</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span> — Яйца С1
+              <span class="ingredient-note">Только комнатной температуры и строго по одному</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сметана любой жирности
+              <span class="ingredient-note">Комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Щепотка — Соль
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Песочные коржи (6 шт. Ø20 см)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По весу автора — Сливочное масло размягчённое
+              <span class="ingredient-note">Граммовку в исходниках автор не называет</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По весу автора — Мука
+              <span class="ingredient-note">Просеивается прямо в масло</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По весу автора — Сметана
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span> — Яйцо
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Щепотка — Соль
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Меренга и орехи</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span> — Белки (≈80 г)
+              <span class="ingredient-note">Ни грамма желтка, посуда сухая</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По весу автора — Сахар для меренги
+              <span class="ingredient-note">Вводится в два приёма, вес в исходниках не назван</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Грецкие орехи или любые другие
+              <span class="ingredient-note">Обязательно обжаренные; можно не посыпать вовсе</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Сметанный крем</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По весу автора — Сметана 20–30%
+              <span class="ingredient-note">30% и выше взбивается сама; 20–25% нужно отвесить или загустить</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По весу автора — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              1 пакетик — Загуститель для сливок
+              <span class="ingredient-note">Только если сметана не держит форму сама</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем масло-сгущёнка (внутрь)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="180" data-unit="г">180 г</span> — Сливочное масло
+              <span class="ingredient-note">Хорошо размягчённое, комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="210" data-unit="г">210 г</span> — Сгущённое молоко
+              <span class="ingredient-note">Только комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ст. л.">1 ст. л.</span> — Коньяк
+              <span class="ingredient-note">По желанию</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем масло-сгущёнка (выравнивание)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="320" data-unit="г">320 г</span> — Сливочное масло
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="380" data-unit="г">380 г</span> — Сгущённое молоко
+              <span class="ingredient-note">На выходе около 700 г крема; на торт может понадобиться и 800 г</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Пропитка и прослойка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Вода
+              <span class="ingredient-note">После уваривания 2–3 минуты остаётся около 100 г сиропа</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Чернослив без косточки
+              <span class="ingredient-note">Брусочками; можно исключить или заменить курагой, инжиром</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="пачки" data-piece="true">4 пачки</span> — Драже M&M's
+              <span class="ingredient-note">Маленькие пачки, для разлома</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Гелевый водорастворимый краситель
+              <span class="ingredient-note">Тёплые оттенки в масляном креме работают лучше всего</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Золотой кандурин
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Немного — Нейтральный гель
+              <span class="ingredient-note">Тонким слоем на M&M's, чтобы они не помутнели</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Шоколадный бисквит</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Муку, разрыхлитель и какао перемешайте и просейте вместе — иначе комочки какао в тесте не разойдутся. Размягчённое масло взбейте с сахаром: начните на небольшой скорости, чтобы сахар не летел, затем поднимите до максимальной.
+                <span class="source-badge">⏱ Серия 1: 00:12–00:31</span>
+              </p>
+              <p>
+                По одному введите яйца комнатной температуры — каждое следующее только после того, как предыдущее полностью вошло в массу и на дне не осталось жидкости. Затем так же введите сметану комнатной температуры и добавьте щепотку соли.
+                <span class="source-badge">⏱ Серия 1: 00:54–02:11</span>
+              </p>
+              <p>
+                Отправьте все сухие ингредиенты сразу и перемешайте миксером на небольшой скорости, пока мука не войдёт в тесто. Форму 20 см затяните фольгой, сверху положите пергамент и выложите тесто, разровняв так, чтобы высота была одинаковой по всей площади.
+                <span class="source-badge">⏱ Серия 1: 02:29–03:51</span>
+              </p>
+              <p>
+                Выпекайте при 170 °C без конвекции, режим «верх-низ», 25–27 минут по карточке автора; в видео ориентир — около 20 минут с проверкой шпажкой. Готовый бисквит пружинит и не оставляет следов от пальцев. Остудите, заверните в плёнку и уберите в холодильник на ночь.
+                <span class="source-badge">⏱ Серия 1: 04:01–04:34</span>
+              </p>
+              <div class="warning-box">
+                <strong>Яйца строго по одному и комнатной температуры:</strong> если это условие не соблюдать, бисквит не получится.
+                <span class="source-badge">⏱ Серия 1: 00:55–01:05</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Режим: <strong>170 °C, верх-низ, без конвекции</strong></span>
+              <span class="param-pill">⏱ Выпечка: <strong>25–27 минут</strong></span>
+              <span class="param-pill">🥣 Форма: <strong>Ø20 см, фольга + пергамент</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Пружинит, шпажка сухая</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Песочное тесто</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В хорошо размягчённое сливочное масло просейте муку и разбейте всё миксером на довольно низкой скорости до состояния крошки — на большой скорости мука будет лететь в стороны.
+                <span class="source-badge">⏱ Серия 2: 00:15–00:49</span>
+              </p>
+              <p>
+                Добавьте сметану, яйцо и щепотку соли, перемешайте миксером. Однородное тесто здесь не нужно: крошка должна просто укрупниться. Соберите её в комок прямо на плёнке, заверните и уберите в холодильник не менее чем на час — раскатывать можно только охлаждённое тесто.
+                <span class="source-badge">⏱ Серия 2: 00:57–02:26</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> масло для этого теста должно быть размягчено очень хорошо — тогда крошка получается рассыпчатой, а тесто нежным и приятным на ощупь.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Охлаждение теста: <strong>не менее 1 часа</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Миксер, пищевая плёнка</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Укрупнившаяся крошка, не однородное тесто</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Раскатка и первая выпечка песочных коржей</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Каждый кусочек раскатайте между двумя листами пергамента до диаметра не менее 20 см — ориентир по шоколадному коржу. Толщина примерно полтора миллиметра. Периодически приподнимайте бумагу с обеих сторон, чтобы тесто было подвижным.
+                <span class="source-badge">⏱ Серия 2: 02:37–03:28</span>
+              </p>
+              <p>
+                Раскатанные пласты охладите, затем наколите вилкой, чтобы при выпечке они не расслоились. Выпекайте по 5 минут при 180 °C с конвекцией — коржи должны только подпечься, до конца их не выпекают: допекать будете вместе с меренгой.
+                <span class="source-badge">⏱ Серия 2: 03:57–04:39</span>
+              </p>
+              <p>
+                Пока коржи горячие, обрежьте их кольцом 20 см. Делать это нужно именно после выпечки, а не до: обрезанные заранее коржи в духовке сожмутся и ровный торт собрать не получится.
+                <span class="source-badge">⏱ Серия 2: 04:44–05:24</span>
+              </p>
+              <div class="warning-box">
+                <strong>Обрезка только по горячим коржам и только после духовки:</strong> в противном случае часть коржей «уйдёт» в размере и не совпадёт с бисквитом.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Диаметр: <strong>не менее 20 см</strong></span>
+              <span class="param-pill">📐 Толщина: <strong>~1,5 мм</strong></span>
+              <span class="param-pill">🔥 Режим: <strong>180 °C, конвекция</strong></span>
+              <span class="param-pill">⏱ Выпечка: <strong>5 минут каждый корж</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Меренга</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Белки взбивайте сначала минуту на первой скорости, затем на максимальной — до состояния, когда на дне не остаётся жидкости и белок держит форму. Только после этого введите сахар в два приёма, продолжая взбивать.
+                <span class="source-badge">⏱ Серия 2: 05:49–07:29</span>
+              </p>
+              <p>
+                Меренга должна стать блестящей, гладкой и плотной. Растворять сахар до конца не нужно: эту меренгу будут выпекать, и чем более хрустящей и карамельной она получится, тем лучше.
+                <span class="source-badge">⏱ Серия 2: 07:17–07:48</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не взбивайте «в камень»:</strong> очень плотную меренгу будет сложно распределить по коржам тонким слоем. Главное — чтобы она плюс-минус держала форму.
+                <span class="source-badge">⏱ Серия 2: 06:14–06:24</span>
+              </div>
+              <div class="tip-box">
+                <strong>Меренги немного:</strong> её вполне можно взбить погружным блендером с насадкой-венчиком — автор специально показывает ручной миксер, чтобы было понятно, что в домашних условиях получится так же.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Белки: <strong>2 шт., ≈80 г</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Миксер или блендер с венчиком</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Блестящая гладкая масса, держит форму</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Коржи с меренгой, орехами и вторая выпечка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Распределите меренгу тонким слоем по всем коржам — толстый слой здесь не нужен. Коржей должно быть чётное количество, иначе торт не собрать.
+                <span class="source-badge">⏱ Серия 2: 07:49–08:35</span>
+              </p>
+              <p>
+                Посыпьте меренгу обжаренными рублеными орехами — у автора грецкие, но подойдут любые. Затем постучите лопаткой по орехам, чтобы они вошли в меренгу и не торчали: так коржи будут ровнее по толщине.
+                <span class="source-badge">⏱ Серия 2: 09:05–10:19</span>
+              </p>
+              <p>
+                Выпекайте коржи по 10–15 минут при 180 °C. Два противня сразу можно ставить только с конвекцией, иначе выпекайте по очереди.
+                <span class="source-badge">⏱ Серия 2: 10:27–10:42</span>
+              </p>
+              <div class="tip-box">
+                <strong>Орехи — по желанию:</strong> без них торт тоже получится очень вкусным. Если посыпаете, орехи должны быть предварительно обжарены или подсушены в духовке.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Режим: <strong>180 °C</strong></span>
+              <span class="param-pill">⏱ Выпечка: <strong>10–15 минут</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Меренга схватилась, орехи вдавлены</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Сметанный крем</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Если сметана жирностью 30% и выше, она прекрасно взбивается с пудрой — ничего дополнительно делать не нужно. Сметану 20–25% можно отвесить на двойном слое марли 6–8 часов; для этого берут примерно 700 г, чтобы на выходе получить нужный вес, и тогда загуститель не понадобится.
+                <span class="source-badge">⏱ Серия 3: 00:09–00:36</span>
+              </p>
+              <p>
+                Второй путь — взять сметану 20–25% и пакетик загустителя для сливок. Автор отправляет всю пудру в сметану сразу, взбивает на небольшой скорости, чтобы пудра не летела, затем на максимальной; если густоты не хватает, добавляет весь загуститель и взбивает ещё раз. Загуститель можно заранее смешать с пудрой — тогда он не закомкуется.
+                <span class="source-badge">⏱ Серия 3: 00:54–01:48</span>
+              </p>
+              <div class="warning-box">
+                <strong>Текущий крем не подходит:</strong> сметана ниже 30% без отвешивания или загустителя даёт крем, который течёт, — такой торт не собрать.
+              </div>
+              <div class="tip-box">
+                <strong>Признак готовности:</strong> крем держит форму и не сползает с лопатки — именно такой нужен для прослоек.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сметана: <strong>20–30%, лучше 30%+</strong></span>
+              <span class="param-pill">⏱ Отвешивание: <strong>6–8 часов на марле</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Густой крем, держит форму</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Крем масло-сгущёнка для внутренних слоёв</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Масло должно быть хорошо размягчено, а сгущённое молоко — комнатной температуры: главная причина неудач с этим кремом именно разность температур. Взбейте масло до бела и только после этого начните вводить сгущёнку в несколько приёмов, каждый раз взбивая до полного объединения.
+                <span class="source-badge">⏱ Серия 4: 00:05–02:03</span>
+              </p>
+              <p>
+                В самом конце добавьте столовую ложку коньяка и взбейте ещё раз — он добавит пикантности. Крем лучше готовить непосредственно перед сборкой: срок годности 72 часа в холодильнике или месяц в морозилке.
+                <span class="source-badge">⏱ Серия 4: 02:10–02:33</span>
+              </p>
+              <div class="warning-box">
+                <strong>Одинаковая температура — главное условие:</strong> холодная сгущёнка в тёплом масле или наоборот даёт расслоившийся, «крупинчатый» крем вместо гладкой массы.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Обе части: <strong>комнатной температуры</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Миксер</strong></span>
+              <span class="param-pill">🧊 Хранение: <strong>72 часа в холодильнике</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Сироп для пропитки и чернослив</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сахар с водой доведите до кипения и проварите 2–3 минуты — на выходе получится около 100 г сиропа. Использовать только охлаждённым.
+              </p>
+              <p>
+                Чернослив порежьте брусочками. В лёгкую его можно исключить или заменить курагой либо инжиром.
+                <span class="source-badge">⏱ Серия 5: 01:32–01:37</span>
+              </p>
+              <div class="tip-box">
+                <strong>Пропитка — по желанию:</strong> шоколадный корж пропитается и от сметанного крема, но автор пропитывает дополнительно, чтобы коржи были влажнее.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Варка: <strong>2–3 минуты после кипения</strong></span>
+              <span class="param-pill">🌡 Подача: <strong>охлаждённым</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Подготовка коржей к сборке</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Бисквит после ночи в холодильнике уплотнился — это то, что нужно: он почти ровный сверху и снизу, обрезать и выбрасывать ничего не придётся. Разрежьте его пополам ножом или струной и ведите струну так, чтобы в конце её встретить рукой: иначе она вырвет кусочки бисквита.
+                <span class="source-badge">⏱ Серия 5: 00:00–01:13</span>
+              </p>
+              <div class="tip-box">
+                <strong>Струна или нож:</strong> у струны можно выставить нужную высоту, поэтому распил получается ровнее — но и ножом вполне можно справиться.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Коржей из бисквита: <strong>2</strong></span>
+              <span class="param-pill">🥣 Инструмент: <strong>Струна или длинный нож</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Сборка: два крема и правило чередования</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разделите кремы заранее: весь сметанный крем — на 4 равные части, весь крем масло-сгущёнка — на 3 равные части. Это и есть «равные части крема» из пояснений автора.
+                <span class="source-badge">⏱ Серия 5: 01:24–01:40</span>
+              </p>
+              <p>
+                Главное правило: песочные коржи всегда касаются сметанного крема, а безе — масляного. Если положить безе в сметану, оно размокнет и перестанет хрустеть; песочная же часть на сметанном креме, наоборот, пропитается и станет сочнее.
+                <span class="source-badge">⏱ Серия 5: 03:41–04:12</span>
+              </p>
+              <p>
+                На дно отсадите немного сметанного крема и уложите первый корж. Собирайте на весах, чтобы в каждой прослойке было одинаковое количество крема: сметанный крем, песочный корж безешкой вверх, масляный крем, чернослив с хрустяшками, следующий корж — перевёрнутый, безешкой к безешке.
+                <span class="source-badge">⏱ Серия 5: 01:40–03:25</span>
+              </p>
+              <p>
+                После второго коржа поставьте кольцо 20 см и продолжите сборку в нём. Чернослив и оставшиеся обломки безе каждый раз пристукивайте лопаткой, чтобы они ушли в крем. Завершающий слой — сметанный крем, на него укладывается пропитанный с внутренней стороны шоколадный корж.
+                <span class="source-badge">⏱ Серия 5: 06:23–11:25</span>
+              </p>
+              <div class="warning-box">
+                <strong>Песочный корж переворачивают:</strong> если положить его песочной стороной на масляный крем, он не пропитается и торт будет трудно резать. Меренга всегда смотрит в масляный крем.
+                <span class="source-badge">⏱ Серия 5: 06:01–06:19</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Сметанный крем: <strong>4 равные части</strong></span>
+              <span class="param-pill">⚖ Масляный крем: <strong>3 равные части</strong></span>
+              <span class="param-pill">📏 Кольцо: <strong>Ø20 см</strong></span>
+              <span class="param-pill">🥣 Инструмент: <strong>Весы, две лопатки, мешок</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 11 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Груз на ночь</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Закройте верх торта пищевой плёнкой в контакт, сверху положите простую подложку и небольшой груз — например, банку сметаны на 350 г или две. Гиря на 10 кг не нужна: задача груза в том, чтобы торт превратился в единое целое.
+                <span class="source-badge">⏱ Серия 5: 11:37–12:17</span>
+              </p>
+              <div class="tip-box">
+                <strong>Почему в контакт:</strong> плёнка, положенная прямо на крем, не даёт поверхности заветриться, а груз равномерно прижимает все слои.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Груз: <strong>350–700 г</strong></span>
+              <span class="param-pill">🧊 Холодильник: <strong>ночь</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 12 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Черновое покрытие и разлом с M&M's</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выравнивать и декорировать торт автор будет масляным кремом — тем же маслом со сгущёнкой, что и внутри. Это принципиально: крем-чиз или другой более влажный крем заставит драже отдавать цвет, и разлом будет выглядеть некрасиво. Альтернатива — ганаш на белом шоколаде.
+                <span class="source-badge">⏱ Серия 6: 00:09–00:52</span>
+              </p>
+              <p>
+                Нанесите тонкий ровный слой крема по всей поверхности — это не выравнивание, а покрытие, на которое «сядут» драже. Затем выложите M&M's в разлом: сам разлом можно вести ровно, а его края потом скорректировать кремом.
+                <span class="source-badge">⏱ Серия 6: 01:05–03:01</span>
+              </p>
+              <div class="warning-box">
+                <strong>Только масляный крем под M&M's:</strong> влагосодержащий крем вытянет из драже краситель, и они поплывут.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Крем: <strong>масло-сгущёнка или ганаш на белом шоколаде</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Тонкое ровное покрытие без просветов</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 13 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Окрашивание и выравнивание крема</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В масляный крем подходят только тёплые оттенки — жёлтый, оранжевый, красный, тёплый зелёный. Фиолетовый, голубой и нежно-розовый не получатся: сам крем имеет ощутимый жёлтый оттенок. Краситель — водорастворимый гелевый, его добавляют в крем и перемешивают миксером до нужного оттенка.
+                <span class="source-badge">⏱ Серия 6: 03:04–04:08</span>
+              </p>
+              <p>
+                Переложите крем в мешок и отрежьте кончик не толще сантиметра — иначе крем будет выходить толстой колбаской. Наносите его и горизонтально, и вертикально, обязательно на поворотном столе.
+                <span class="source-badge">⏱ Серия 6: 04:23–05:41</span>
+              </p>
+              <p>
+                Сделайте ободок крема выше верха торта — он поможет вывести ровный угол 90 градусов. Скребком с прямым углом сначала выровняйте низ, затем верх: движения строго горизонтальные, по направлению к центру, и после каждого движения скребок вытирают дочиста. Там, где видно впадинки, крем добавляют точечно из мешка.
+                <span class="source-badge">⏱ Серия 6: 06:00–09:26</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> не поднимайте слой с крошками — движения должны быть «закапывающие», а не вытирающие.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🎨 Краситель: <strong>гелевый водорастворимый, тёплые оттенки</strong></span>
+              <span class="param-pill">📏 Кончик мешка: <strong>не более 1 см</strong></span>
+              <span class="param-pill">🥣 Инструмент: <strong>Скребок 90°, поворотный стол</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 14 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Нейтральный гель, золото и финальный декор</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Покройте M&M's тонким слоем нейтрального геля — автор его не нагревает. Без этого через несколько часов в холодильнике драже станут матовыми и почти одинаковыми по цвету. После геля уберите торт в холодильник, чтобы он хорошенько схватился.
+                <span class="source-badge">⏱ Серия 6: 10:05–10:30</span>
+              </p>
+              <p>
+                Золотой кандурин разведите водкой до консистенции гуаши и тонкой кистью пройдитесь по краю крема сверху и снизу, выделяя разлом. Ягоды и фигурки добавляйте по своему вкусу.
+                <span class="source-badge">⏱ Серия 6: 10:38–11:51</span>
+              </p>
+              <div class="tip-box">
+                <strong>Срок годности готового торта:</strong> 72 часа в холодильнике.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🖌 Гель: <strong>нейтральный, без нагрева</strong></span>
+              <span class="param-pill">✨ Кандурин: <strong>разведён водкой до гуаши</strong></span>
+              <span class="param-pill">🧊 Хранение: <strong>до 72 часов</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Яйца и сметана комнатной температуры, по одному:</strong> только так бисквит получается; каждое яйцо вводят после того, как предыдущее полностью вошло.</li>
+                <li><strong>Сухие ингредиенты просеять вместе:</strong> какао с мукой и разрыхлителем — иначе комочки какао не разойдутся.</li>
+                <li><strong>Тесто в форму — одинаковой высотой:</strong> ровный пласт потом проще разрезать на два коржа.</li>
+                <li><strong>Коржи обрезать кольцом после выпечки и пока горячие:</strong> обрезанные заранее коржи сжимаются в духовке.</li>
+                <li><strong>Коржей чётное количество:</strong> иначе торт не собрать правильно.</li>
+                <li><strong>Меренга «плюс-минус держит форму»:</strong> слишком плотную трудно распределить тонким слоем.</li>
+                <li><strong>Орехи вдавить лопаткой:</strong> они не должны торчать, иначе коржи получаются неровными по толщине.</li>
+                <li><strong>Песочное — к сметанному, безе — к масляному:</strong> так безе остаётся хрустящим, а песочный корж пропитывается.</li>
+                <li><strong>Постучать по черносливу и хрустяшкам:</strong> они уходят в крем, и слои не «гуляют».</li>
+                <li><strong>Груз на ночь:</strong> банка сметаны на 350 г превращает все слои в единое целое.</li>
+                <li><strong>Под M&M's — только масляный крем:</strong> крем-чиз и другие влажные кремы заставят драже отдавать цвет.</li>
+                <li><strong>Нейтральный гель на драже:</strong> иначе через несколько часов в холодильнике M&M's помутнеют и станут одного цвета.</li>
+                <li><strong>Тёплые оттенки красителя:</strong> жёлтый крем «не примет» фиолетовый, голубой и нежно-розовый.</li>
+                <li><strong>Для торта Ø16 см:</strong> просто уменьшите все ингредиенты в два раза.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Холодные яйца или сметана в бисквите:</strong> бисквит не получится — это условие автор называет обязательным.</li>
+                <li><strong>Все яйца сразу:</strong> масса расслаивается, вместо пышного теста получается жидкая.</li>
+                <li><strong>Обрезка коржей до выпечки:</strong> коржи сжимаются, и ровный торт собрать не удаётся.</li>
+                <li><strong>Толстый слой меренги:</strong> коржи становятся слишком высокими и неровными.</li>
+                <li><strong>Слишком густая меренга:</strong> её почти невозможно распределить по коржам.</li>
+                <li><strong>Сметана ниже 30% без отвешивания и без загустителя:</strong> крем течёт.</li>
+                <li><strong>Разная температура масла и сгущёнки:</strong> крем масло-сгущёнка не соединяется.</li>
+                <li><strong>Песочный корж безешкой в сметанный крем:</strong> безе размокает и перестаёт хрустеть.</li>
+                <li><strong>Влагосодержащий крем под M&M's:</strong> драже отдают цвет и выглядят некрасиво.</li>
+                <li><strong>M&M's без нейтрального геля:</strong> в холодильнике они мутнеют и теряют цвет.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «Комментарии.docx» — текстовые пояснения к шести сериям; CSV-расшифровка «Расшифровка Торт Крещатый Яр.csv» (серии 1–6) — порядок операций и таймкоды; скриншот в DOCX с рецептурой шоколадного бисквита (веса муки, какао, масла, сахара, яиц и сметаны взяты оттуда).</li>
+              <li><strong>Расхождение по времени выпечки бисквита:</strong> в видео автор говорит «около 20 минут», в карточке-скриншоте указано 25–27 минут при 170 °C. На странице приведены оба значения, ориентир — сухая шпажка.</li>
+              <li><strong>Расхождение по количеству крема:</strong> в комментариях для выравнивания указано 700 г крема (320 г масла + 380 г сгущёнки) с оговоркой, что может понадобиться 800 г. В раскладке оставлено 700 г.</li>
+              <li><strong>Пробелы — веса:</strong> песочные коржи, сахар для меренги и сметанный крем автор в документах не взвешивает: в видео перечислены только продукты («масло, сметана, яйцо, мука, соль», «сметана и сахарная пудра»). Эти позиции на странице даны без количества и не масштабируются — для точных граммовок нужен оригинал видео (серии 2–3).</li>
+              <li><strong>Пробелы — орехи:</strong> количество грецких орехов не названо, посыпка опциональна.</li>
+              <li><strong>Пробелы — число порций:</strong> автор называет только вес готового торта (3,5 кг) и диаметр (20 см), но не число порций. 12 порций — расчёт по весу.</li>
+              <li><strong>Пробелы — время:</strong> активное и общее время в источниках не указаны, они рассчитаны по операциям (замесы, охлаждение теста 1 час, ночь в холодильнике, ночь с грузом, выравнивание и декор на второй день).</li>
+              <li><strong>Пробелы — порядок слоёв:</strong> автор описывает правило (песочные коржи касаются сметанного крема, безе — масляного), делит сметанный крем на 4 части и масляный на 3, но не перечисляет слои по номерам. На странице описан принцип сборки, а не поимённый список слоёв.</li>
+              <li><strong>Фото:</strong> в DOCX лежит только скриншот переписки с текстом рецептуры, снимка готового торта нет. На странице — изображение, присланное владельцем сайта: светлый крем, разлом с разноцветными M&M и золотой ободок.</li>
+              <li><strong>Яйца в списке покупок:</strong> 2 целых в бисквит, 1 в песочное тесто и 2 яйца на 80 г белка для меренги — итого 5 штук; два желтка от меренги остаются лишними. Отдельной строки «белок» в покупках нет.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© CookBook — Автономная кулинарная библиотека.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

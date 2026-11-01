@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Торт «Полёт» — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Торт «Полёт»: хрустящие коржи-безе на арахисе, крем «Шарлот» на сиропе из желтков и масла 82,5%, шоколадные «круголи» и пирожные-полусферы с грецким орехом и черносливом. Выпечка коржей при 100 °C с конвекцией 2 часа.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tort-polet">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Торт «Полёт»</h1>
+      <p class="recipe-lead">
+        Торт, в котором почти всё — хруст: три коржа-безе на арахисе, прослоенные кремом «Шарлот», обсыпанные крошкой безе и украшенные пирожными-полусферами. Меренга делается французская, с кукурузным крахмалом — он приближает её свойства к бисквиту, чтобы коржи гарантированно пропеклись в домашней духовке, а не только в конвектомате на производстве. Крем варится на сиропе из желтков с молоком и сахаром и взбивается с маслом 82,5%: половина остаётся ванильной, часть уходит в шоколадную. Сборка простая — кольцо, ацетатная лента и тонкий слой крема под обсыпку.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">40 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">1 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">~4 ч 30 мин (выпечка коржей 2 ч, остывание крема, стабилизация 2 ч)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~6 часов</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">Торт Ø18 см из 3 коржей + пирожные для декора</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-polet.jpg" alt="Торт «Полёт», обсыпанный крошкой безе, с шоколадными завитками и пирожными-полусферами сверху" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (10 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="10">10</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (кусков)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Все граммовки масштабируются. Базовая раскладка — торт Ø18 см из трёх коржей-безе и крем, которого получается около 900 г: часть уходит в слои, часть на обмазку и декор. Крем для пирожных в это количество не входит и делается дополнительно.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Раздел: Купить в магазине -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">10</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко</strong>:
+                <span class="shopping-qty" data-base-amount="320" data-unit="г">320 г</span>
+                <span class="shopping-hint">250 г в крем для торта + 70 г в отдельную порцию крема для пирожных</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="385" data-unit="г">385 г</span>
+                <span class="shopping-hint">300 г в крем для торта + 85 г в крем для пирожных. Масло жирностью 72,5% не подойдёт — крем может не собраться</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="6" data-unit="шт." data-piece="true">6 шт.</span>
+                <span class="shopping-hint">Белки всех 6 яиц (228 г) идут в коржи, желтки нужны только 3 — по 2 в крем торта и 1 в крем для пирожных; 3 желтка останутся</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сгущённое молоко</strong> — (опционально, вместо крема «Шарлот»):
+                <span class="shopping-qty" data-base-amount="125" data-unit="г">125 г</span>
+                <span class="shopping-hint">Крем масло-сгущёнка 1:1 как упрощённая замена; тогда молоко, сахар и часть масла для крема не нужны</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Бакалея, орехи, сухофрукты</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок (всего)</strong>:
+                <span class="shopping-qty" data-base-amount="845" data-unit="г">845 г</span>
+                <span class="shopping-hint">460 г в меренгу + 300 г в сироп для крема торта + 85 г в сироп для пирожных</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Крахмал кукурузный</strong>:
+                <span class="shopping-qty" data-base-amount="40" data-unit="г">40 г</span>
+                <span class="shopping-hint">В меренгу: помогает коржам пропечься в домашней духовке</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Арахис обжаренный дроблёный</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Можно обжарить и порубить самим; солёный тоже подойдёт</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Грецкие орехи</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Для начинки пирожных: подсушить и порубить</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Чернослив</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Промыть и нарезать брусочками — в начинку пирожных</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="ч. л.">2 ч. л.</span>
+                <span class="shopping-hint">На 300 г крема, чтобы сделать шоколадную часть</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Коньяк</strong>:
+                <span class="shopping-qty" data-base-amount="2.5" data-unit="ст. л.">2,5 ст. л.</span>
+                <span class="shopping-hint">2 ст. л. в крем торта + 0,5 ст. л. в крем для пирожных</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ванильный сахар, ванилин или ваниль</strong> — по вкусу
+                <span class="shopping-hint">В меренгу; автор добавляет примерно половину пачки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники:</strong> 3 кольца Ø18 см, силиконовые полусферы, ацетатная лента, пергамент
+                <span class="shopping-hint">Насадки: №12 (трубка 7 мм) и закрытая звезда №25</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Хрустящие коржи-безе</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="6" data-unit="шт." data-piece="true">6 шт.</span> — Белки яиц категории С1
+              <span class="ingredient-note">По весу 228 г, комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="460" data-unit="г">460 г</span> — Сахар
+              <span class="ingredient-note">Вводится тонкой струйкой в уже взбитый белок</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Крахмал кукурузный
+              <span class="ingredient-note">Приближает меренгу к бисквиту для лучшей пропекаемости</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Арахис обжаренный дроблёный
+              <span class="ingredient-note">Подойдёт и солёный; можно заменить другими орехами</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Ванильный сахар, ванилин или ваниль
+              <span class="ingredient-note">На выбор; автор берёт около половины пачки ванильного сахара</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем «Шарлот» для торта</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span> — Желтки
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Молоко
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Сливочное масло 82,5%
+              <span class="ingredient-note">Размягчённое, комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="ст. л.">2 ст. л.</span> — Коньяк
+              <span class="ingredient-note">Для любителей; больше — не значит лучше</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="ч. л.">2 ч. л.</span> — Какао
+              <span class="ingredient-note">На 300 г крема, которые отделяются для шоколадной части</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Пирожные для декора (крем делается дополнительно)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span> — Желток
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Молоко
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="85" data-unit="г">85 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="85" data-unit="г">85 г</span> — Сливочное масло
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="0.5" data-unit="ст. л.">0,5 ст. л.</span> — Коньяк
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Грецкие орехи
+              <span class="ingredient-note">Обжаренные и порубленные</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Чернослив
+              <span class="ingredient-note">Нарезанный брусочками</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Вместо крема «Шарлот» (на выбор, 1:1)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Сгущённое молоко
+              <span class="ingredient-note">Упрощённый крем масло-сгущёнка</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Сливочное масло
+              <span class="ingredient-note">Обязательно той же комнатной температуры, что и сгущёнка</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="0.5" data-unit="ст. л.">0,5 ст. л.</span> — Коньяк
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка белков к взбиванию</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Белки комнатной температуры отправьте в дежу миксера и начните взбивать на низкой скорости примерно минуту.
+                <span class="source-badge">⏱ серия1: 03:05–03:10</span>
+              </p>
+              <p>
+                Затем поднимите скорость до рабочей и дождитесь, пока белок взобьётся почти полностью: пузыри станут мелкими, появится рельеф, а на дне не останется жидкости. Только после этого вводите сахар.
+                <span class="source-badge">⏱ серия1: 03:35–03:55</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сахар — не раньше взбитого белка:</strong> если на дне дежи осталась жидкость, сахар начнёт в ней растворяться и разжижит массу. Взбитую до нужного состояния меренгу набирают и переворачивают над головой — она не двигается. Ручным миксером получится так же, просто дольше.
+                <span class="source-badge">⏱ серия1: 03:47–03:51, 05:43–06:08</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> французская меренга — самая вкусная именно в большом объёме, а в «Полёте» безе больше, чем любых других прослоек.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Низкая скорость: <strong>~1 минута</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Планетарный или ручной миксер</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Мелкие пузыри, рельеф, нет жидкости на дне</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Сахар и семь минут взбивания</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Введите весь сахар тонкой струйкой, не прекращая взбивания. Масса при этом не должна разжижаться — она остаётся плотной и рельефной.
+                <span class="source-badge">⏱ серия1: 04:15–04:45</span>
+              </p>
+              <p>
+                После того как весь сахар добавлен, взбивайте ещё 7 минут. Готовность проверьте «клювом»: венчик вынимается, и пик не стекает.
+                <span class="source-badge">⏱ серия1: 04:56–05:31</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> отдельные крупинки сахара в меренге — не брак: это коржи, а не безе для украшения.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Взбивание: <strong>7 минут после сахара</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Устойчивый «клюв» не стекает с венчика</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Крахмал, ваниль и арахис</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отложите 100 г меренги в кондитерский мешок с насадкой №12 — это трубка с отверстием 7 мм, из неё будут полусферы для декора.
+                <span class="source-badge">⏱ серия1: 06:09–06:26, 12:00–12:02</span>
+              </p>
+              <p>
+                В оставшуюся меренгу добавьте ванильный сахар, просеянный крахмал и арахис. Вводите на низкой скорости буквально за несколько оборотов миксера — чем быстрее это произойдёт, тем лучше.
+                <span class="source-badge">⏱ серия1: 06:42–08:20</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не вымешивайте долго:</strong> задача — только соединить компоненты, иначе меренга потеряет объём и осядет. Крахмал нужен не для вкуса, а чтобы приблизить свойства меренги к бисквиту: производственные коржи пропекаются в конвектоматах, а в домашней духовке без крахмала они могут темнеть и не пропекаться.
+                <span class="source-badge">⏱ серия1: 08:44–09:34</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Отложить в мешок: <strong>100 г меренги</strong></span>
+              <span class="param-pill">🥣 Насадка: <strong>№12, отверстие 7 мм</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Масса не разжижилась, держит форму</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Формовка коржей и полусфер</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Кольца Ø18 см тонко смажьте растительным маслом (подойдёт и сливочное, и спрей) — тогда коржи выйдут из них без потерь.
+                <span class="source-badge">⏱ серия1: 09:37–10:03</span>
+              </p>
+              <p>
+                Меренгу раскладывайте по кольцам по весу, чтобы в каждом оказалось одинаковое количество, и разравнивайте палеткой: ровные коржи потом легко собираются. Если колец нет, нарисуйте круги на пергаменте и выложите массу в их пределах.
+                <span class="source-badge">⏱ серия1: 08:26–08:42, 10:04–11:06</span>
+              </p>
+              <p>
+                Меренгу из мешка отсадите на силиконовые полусферы, двигаясь снизу вверх. Часть ячеек оставляйте пустыми — при выпечке масса разбухает и соседние полусферы слипнутся.
+                <span class="source-badge">⏱ серия1: 12:43–13:01</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Кольца: <strong>3 шт. Ø18 см</strong></span>
+              <span class="param-pill">🥣 Формы: <strong>Кольца, силиконовые полусферы, палетка</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Выпечка при 100 °C</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте при 100 °C с конвекцией, дверца духовки приоткрыта (автор подпирает её ложкой). Коржи — 2 часа, полусферы — около часа.
+                <span class="source-badge">⏱ серия1: 11:06–11:30</span>
+                <span class="source-badge">⏱ серия1: 13:15–13:35</span>
+              </p>
+              <p>
+                Готовность проверяйте нажатием на верхнюю корочку: если она не продавливается — корж готов. Внутри останется лёгкая тянучка; если нужен полностью сухой корж, выпекайте 2,5 часа. Светлый оттенок «шампань» — норма; для белоснежных коржей нужна ещё более низкая температура и больше времени.
+                <span class="source-badge">⏱ серия4: 00:24–00:34, 01:13–01:39</span>
+              </p>
+              <div class="warning-box">
+                <strong>Время зависит от духовки:</strong> у кого-то коржи готовы за час, у кого-то за два с половиной — ориентируйтесь на нажатие, а не на таймер. Приоткрытая дверца не критична: коржи всё равно уйдут внутрь торта, даже трещины не будут видны.
+                <span class="source-badge">⏱ серия1: 11:33–11:42</span>
+                <span class="source-badge">⏱ серия4: 00:10–00:24</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Режим: <strong>100 °C, конвекция, дверца приоткрыта</strong></span>
+              <span class="param-pill">⏱ Время: <strong>2 ч коржи, ~1 ч полусферы</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Корочка не продавливается при нажатии</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Сироп для крема «Шарлот»</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сначала соедините молоко с желтками и перемешайте венчиком до однородности — и только потом добавляйте сахар.
+                <span class="source-badge">⏱ серия2: 00:52–01:52</span>
+              </p>
+              <p>
+                Доведите смесь до кипения и варите 2–3 минуты на минимальном огне при постоянном интенсивном помешивании. Масса загустеет до консистенции сгущённого молока — густого заварного крема здесь не будет.
+                <span class="source-badge">⏱ серия2: 02:06–03:21</span>
+              </p>
+              <p>
+                Перелейте сироп в другую ёмкость, чтобы он остыл быстрее, и остудите до комнатной температуры: соединять его с маслом можно только при одинаковой температуре.
+                <span class="source-badge">⏱ серия2: 03:25–03:41</span>
+              </p>
+              <div class="warning-box">
+                <strong>Порядок важен:</strong> если сначала соединить желтки с сахаром, они начнут «гореть» и свернутся, а крем придётся спасать. И мешайте непрерывно у дна — масса с желтками пригорает мгновенно и при кипении плюётся.
+                <span class="source-badge">⏱ серия2: 01:07–01:23, 02:21–03:07</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Кипячение: <strong>2–3 минуты</strong></span>
+              <span class="param-pill">🌡 Огонь: <strong>минимальный</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Густота сгущённого молока</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Взбивание масла и шоколадная часть</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Размягчённое масло 82,5% взбейте до бела. Затем вводите остывший сироп порциями по 1–2 столовые ложки: следующую добавляйте только после того, как предыдущая полностью вошла в крем.
+                <span class="source-badge">⏱ серия2: 03:46–03:57, 04:55–05:31</span>
+              </p>
+              <p>
+                В конце добавьте 2 столовые ложки коньяка и пробейте миксером. Крем должен получиться гладким, плотным и не расслоившимся.
+                <span class="source-badge">⏱ серия2: 06:04–06:28</span>
+              </p>
+              <p>
+                Отделите 300 г крема, добавьте какао и пробейте миксером — это шоколадная часть для одного слоя, крошки и «круголей».
+                <span class="source-badge">⏱ серия2: 06:30–06:53</span>
+              </p>
+              <div class="warning-box">
+                <strong>Только масло 82,5%:</strong> крем — это эмульсия, в 72,5% больше жидкости, и масса может просто не соединиться. Масло должно быть размягчённым и нравиться вам на вкус.
+                <span class="source-badge">⏱ серия2: 00:24–00:52</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>сироп и масло — комнатной</strong></span>
+              <span class="param-pill">⚖ Всего крема: <strong>~900 г, из них 300 г шоколадного</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Гладкая текстура, держит форму</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Пирожные: начинка и шапочки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Для пирожных нужна отдельная порция крема — 1 желток, 70 г молока, 85 г сахара, 85 г масла и 0,5 ст. л. коньяка; варят и взбивают её так же, как основной. В общее количество крема для торта она не входит и делается дополнительно.
+              </p>
+              <p>
+                Смешайте 100 г крема с обжаренными грецкими орехами и черносливом и заполните этой массой полость в каждой полусфере.
+                <span class="source-badge">⏱ серия3 Пирожные: 00:20–01:15</span>
+              </p>
+              <p>
+                Оставшимися 150 г крема отсадите шапочки насадкой «закрытая звезда»: начинайте из центра и уводите насадку в сторону, а не вверх.
+                <span class="source-badge">⏱ серия3 Пирожные: 01:18–02:06</span>
+              </p>
+              <div class="tip-box">
+                <strong>Упрощённый вариант:</strong> крем «Шарлот» можно заменить кремом масло-сгущёнка 1:1 — 125 г сгущённого молока, 125 г масла и 0,5 ст. л. коньяка. Ингредиенты обязательно одной комнатной температуры: взбейте масло и постепенно добавьте сгущёнку.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Крем: <strong>100 г в начинку + 150 г на декор</strong></span>
+              <span class="param-pill">🥣 Насадка: <strong>Закрытая звезда</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Сборка торта</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                На подложку или тарелку отсадите немного крема, прижмите первый корж и покройте его 200 г шоколадного крема — весь этот крем должен уйти в слой. Разровняйте.
+                <span class="source-badge">⏱ серия4: 02:12–02:54</span>
+              </p>
+              <p>
+                Наденьте ацетатную ленту на первый слой (так удобнее, чем выкладывать торт внутрь высокой ленты) и зажмите кольцом — конструкция станет жёстче.
+                <span class="source-badge">⏱ серия4: 03:15–03:38</span>
+              </p>
+              <p>
+                Второй корж, 200 г простого крема, разровнять. Третий корж уложите гладкой стороной вверх и прижмите аккуратно — меренга очень хрупкая.
+                <span class="source-badge">⏱ серия4: 03:39–04:37</span>
+              </p>
+              <p>
+                Уберите торт в холодильник на 2 часа.
+                <span class="source-badge">⏱ серия4: 04:40–04:44</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Крем в слои: <strong>200 г шоколадного + 200 г простого</strong></span>
+              <span class="param-pill">🧊 Стабилизация: <strong>2 часа в холодильнике</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Крошка, выравнивание и декор</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Снимите кольцо и ацетатную ленту. Покройте торт тонким слоем простого крема (около 400 г), но везде — чтобы крошке было к чему прилипать.
+                <span class="source-badge">⏱ серия4: 04:45–05:24</span>
+              </p>
+              <p>
+                Обсыпьте торт крошкой безе по всей поверхности — подойдёт брак коржей и полусфер, если целых крошек не осталось. Затем пройдитесь скребком, чтобы слой стал глаже, и очистите подложку.
+                <span class="source-badge">⏱ серия4: 05:28–06:03</span>
+              </p>
+              <p>
+                «Круголи» делайте шоколадным кремом через насадку «закрытая звезда» №25: описывайте насадкой окружность за окружностью по периметру. Прерываться можно только внизу, если нужно поддавить крем, но не вверху.
+                <span class="source-badge">⏱ серия4: 06:04–06:49</span>
+              </p>
+              <p>
+                Сверху выложите пирожные — сначала крупные, потом те, что поменьше.
+                <span class="source-badge">⏱ серия4: 07:08–07:22</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Крем на обмазку: <strong>~400 г</strong></span>
+              <span class="param-pill">⚖ Крем на «круголи»: <strong>100 г шоколадного</strong></span>
+              <span class="param-pill">🥣 Инструмент: <strong>Скребок, насадка №25</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Французская меренга:</strong> в большом объёме она вкуснее других, а в «Полёте» безе больше, чем крема.</li>
+                <li><strong>Крахмал в меренге:</strong> приближает её к бисквиту, чтобы коржи пропеклись в домашней духовке, а не только в конвектомате.</li>
+                <li><strong>Сахар — только в готовый белок:</strong> иначе он растворяется в жидкости на дне и разжижает массу.</li>
+                <li><strong>Крахмал и орехи — за несколько оборотов:</strong> долгое вымешивание убивает объём.</li>
+                <li><strong>Формы по весу:</strong> одинаковое количество массы в каждом кольце даёт ровные коржи, а ровные коржи легко собираются.</li>
+                <li><strong>Масло 82,5%:</strong> с 72,5% крем-эмульсия может не собраться.</li>
+                <li><strong>Молоко с желтками, потом сахар:</strong> так желтки не сворачиваются.</li>
+                <li><strong>Одинаковая температура сиропа и масла:</strong> только тогда крем будет гладким.</li>
+                <li><strong>Ацетатная лента на первый слой:</strong> с высокой лентой неудобно выкладывать торт внутри.</li>
+                <li><strong>Третий корж гладкой стороной вверх:</strong> с ровной поверхностью проще работать дальше.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Сахар в ещё жидкий белок:</strong> меренга разжижается и плохо держит форму.</li>
+                <li><strong>Долгое вымешивание крахмала и орехов:</strong> масса оседает, коржи получаются плоскими.</li>
+                <li><strong>Масло 72,5%:</strong> крем расслаивается или не соединяется вовсе.</li>
+                <li><strong>Желтки, сразу смешанные с сахаром:</strong> сворачиваются, крем идёт крупинками.</li>
+                <li><strong>Сильный огонь при варке сиропа:</strong> пригорает и плюётся — мешать нужно непрерывно у дна.</li>
+                <li><strong>Холодный сироп в тёплое масло:</strong> крем получается крупинками.</li>
+                <li><strong>Сильное давление на третий корж:</strong> меренга ломается, торт теряет форму.</li>
+                <li><strong>Не смазанные кольца:</strong> коржи не выходят из формы целиком.</li>
+                <li><strong>Пустые ячейки не оставлены в полусферах:</strong> при выпечке они разбухают и слипаются.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «торт_Полет.docx» — технологическая карта по четырём сериям (коржи-безе, крем «Шарлот», пирожные, сборка); CSV «Расшифровка Торт Полет large-v2.csv» — серия1, серия2, «серия3 Пирожные» и серия4, по ним расставлены таймкоды.</li>
+              <li><strong>Фото:</strong> реальное фото торта из DOCX (кадр из публикации автора); вырезано и сконвертировано в JPG.</li>
+              <li><strong>Расхождение по времени выпечки:</strong> в DOCX — 2 часа коржи и 1 час полусферы, в видео автор говорит, что в разных духовках это от часа до двух с половиной. Взят вариант 2 часа с пометкой о проверке нажатием.</li>
+              <li><strong>Расхождение по числу коржей:</strong> в DOCX «выпекала в 3 кольцах Ø18 см», в видео в духовку одновременно ставятся два коржа. На странице — три коржа, как в сборке.</li>
+              <li><strong>Расхождение по крему для пирожных:</strong> в DOCX коньяк указан как «1/2 ст.л.», в видео — те же пол-ложки, но без уточнения объёма ложки. Взят вариант DOCX.</li>
+              <li><strong>Пропорции крема:</strong> всего около 900 г; в DOCX распределение такое: 200 г шоколадного в первый слой, 200 г простого во второй, 100 г шоколадного на «круголи», 400 г простого на обмазку. Все граммовки перенесены без изменений.</li>
+              <li><strong>Пробелы:</strong> автор не называет число порций, срок хранения и температуру выпечки полусфер отдельно от коржей (используется тот же режим 100 °C). Число порций (10) и время определены по составу торта и последовательности операций.</li>
+              <li><strong>Яйца:</strong> в рецептуре 6 белков (228 г) в коржи, 2 желтка в крем торта и 1 желток в крем для пирожных. В списке покупок это 6 яиц С1: белки всех шести идут в меренгу, желтки нужны только трёх, поэтому три желтка останутся лишними. Отдельно покупать белки или желтки не нужно.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© CookBook — Автономная кулинарная библиотека.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

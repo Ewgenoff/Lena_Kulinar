@@ -133,26 +133,9 @@ a {
   padding: 32px 24px 64px;
 }
 
-/* Hero Section (Catalog) */
-.hero-catalog {
-  text-align: center;
-  padding: 40px 16px 32px;
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-.hero-catalog h2 {
-  font-family: var(--font-serif);
-  font-size: 38px;
-  font-weight: 700;
-  color: var(--text-main);
-  margin-bottom: 12px;
-  line-height: 1.25;
-}
-
-.hero-catalog p {
-  color: var(--text-muted);
-  font-size: 17px;
+/* Каталог: без заголовка-героя поиск поднимается выше */
+body:not([data-recipe-id]) .container {
+  padding-top: 20px;
 }
 
 /* Search & Filters Bar */
@@ -246,6 +229,23 @@ a {
   background: var(--accent-olive);
   color: #FFF;
   border-color: var(--accent-olive);
+}
+
+.chip-count {
+  display: inline-block;
+  min-width: 18px;
+  margin-left: 6px;
+  padding: 0 5px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.07);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 17px;
+  text-align: center;
+}
+
+.chip.active .chip-count {
+  background: rgba(255, 255, 255, 0.28);
 }
 
 .sort-select-wrapper {
@@ -1261,17 +1261,6 @@ body.show-sources .source-badge {
   }
   .brand-text h1 {
     font-size: 18px;
-  }
-  .hero-catalog {
-    padding: 18px 8px 12px;
-  }
-  .hero-catalog h2 {
-    font-size: 24px;
-    margin-bottom: 6px;
-  }
-  .hero-catalog p {
-    font-size: 13.5px;
-    line-height: 1.45;
   }
 
   /* Поиск и фильтры */

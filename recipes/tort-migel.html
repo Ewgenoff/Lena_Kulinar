@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Торт «Мигель» песочный — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Высокий песочный торт Ø18 см с семью светлыми и шоколадными коржами, творожно-сметанным кремом, сливо-ежевичным соусом, сиреневыми мазками и слайсами из рисовой бумаги с золотом.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tort-migel">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- 1. Общая информация -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Торт «Мигель» песочный</h1>
+      <p class="recipe-lead">
+        Семь тонких песочных коржей — четыре светлых и три шоколадных — с плотным творожно-сметанным кремом на заварной основе и сливово-ежевичным соусом. Снаружи торт выровнен крем-чизом на масле, расписан сиреневыми мазками и украшен слайсами из рисовой бумаги с золотым кандурином и свежим инжиром. Собирается за три подхода: заготовки вечером, сборка утром, выравнивание и декор вечером.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">1 ч на размягчение масла + 30 мин на охлаждение теста</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~4 ч в три подхода</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">~1 сутки: крем и соус в холодильнике, слайсы сохнут за ночь</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">2 дня (вечер + утро + вечер)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 торт Ø18 см, высота 10 см, ~3 кг</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-migel.jpg" alt="Высокий песочный торт с кремовым покрытием, сиреневыми мазками, рисовыми слайсами с золотом и половинками инжира" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (12 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="12">12</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (кусков)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Все граммовки масштабируются от базовой раскладки автора: торт Ø18 см высотой 10 см, семь коржей по ~163 г, шесть прослоев. Число порций автор не указывает — 12 посчитаны по готовому торту весом около 3 кг.
+          </p>
+        </div>
+
+        <!-- Переключатель источников -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Раздел: Купить в магазине -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">12</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: молочное -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="440" data-unit="г">440 г</span>
+                <span class="shopping-hint">290 г в коржи + 150 г в крем-чиз для выравнивания</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сметана 20–30%</strong>:
+                <span class="shopping-qty" data-base-amount="350" data-unit="г">350 г</span>
+                <span class="shopping-hint">Заваривается с яйцом и крахмалом — это основа крема</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творог 9%</strong>:
+                <span class="shopping-qty" data-base-amount="280" data-unit="г">280 г</span>
+                <span class="shopping-hint">Некислый, рассыпчатый: его протирают через сито, а не пробивают блендером</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Маскарпоне</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Только в крем между коржами — для выравнивания он не подходит</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творожный сыр</strong>:
+                <span class="shopping-qty" data-base-amount="350" data-unit="г">350 г</span>
+                <span class="shopping-hint">Для крема-чиза: «Виолетт», Cremette, «Альмета» сливочный. Не плавленый и без наполнителей</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сгущённое молоко</strong>:
+                <span class="shopping-qty" data-base-amount="90" data-unit="г">90 г</span>
+                <span class="shopping-hint">Настоящее, без растительных жиров: заменяет сахар в креме</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span>
+                <span class="shopping-hint">Всего 206 г по рецепту: 76 г в коржи и 130 г в заварную сметану; белки и желтки идут целиком</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: бакалея, пюре, декор -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍑 Пюре, бакалея, декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="565" data-unit="г">565 г</span>
+                <span class="shopping-hint">340 г в классические коржи + 225 г в шоколадные</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="275" data-unit="г">275 г</span>
+                <span class="shopping-hint">175 г в коржи + 100 г в крем-чиз. Просеивать</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="220" data-unit="г">220 г</span>
+                <span class="shopping-hint">120 г в заварную сметану + 100 г в соус</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Крахмал кукурузный</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">В заварную сметану, вместе с сахаром</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Разрыхлитель</strong>:
+                <span class="shopping-qty" data-base-amount="14" data-unit="г">14 г</span>
+                <span class="shopping-hint">8 г в классическое тесто + 6 г в шоколадное</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао алкализованное</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Насыщенное, тёмное — от него зависит цвет шоколадных коржей</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль и ванильный сахар</strong>:
+                <span class="shopping-hint">Соль — щепотка в каждый вид теста; ванильного сахара 10 г в крем</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре сливы</strong>:
+                <span class="shopping-qty" data-base-amount="270" data-unit="г">270 г</span>
+                <span class="shopping-hint">Замороженное пюре без сахара; слива — высокопектиновый фрукт</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре ежевики</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Можно заменить черникой или вишней — вкус соуса изменится</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пектин</strong>:
+                <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+                <span class="shopping-hint">Яблочный; пектина NH нужно 4 г. Вводится в холодное пюре</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимонная кислота</strong>:
+                <span class="shopping-hint">Щепотка в соус после закипания</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Инжир</strong>:
+                <span class="shopping-hint">Свежий, спелый — 4–6 плодов на декор, точного веса в источнике нет</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Рисовая бумага и кандурин</strong>:
+                <span class="shopping-hint">Листы для роллов — на слайсы; кандурин золотой, водка для разведения, кисточка</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Краситель и нейтральный гель</strong>:
+                <span class="shopping-hint">Водорастворимый гелевый краситель (в вебинаре — Electric Purple) и гель для ягод, если торт подают на следующий день</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Ингредиенты и технология -->
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Классические коржи (4 шт.)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="340" data-unit="г">340 г</span> — Мука пшеничная в/с
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="165" data-unit="г">165 г</span> — Масло сливочное 82,5%
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="43" data-unit="г">43 г</span> — Яйцо
+              <span class="ingredient-note">Взвешивать без скорлупы, комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="8" data-unit="г">8 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Соль — щепотка
+              <span class="ingredient-note">Без data-base-amount: не пересчитывается</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Шоколадные коржи (3 шт.)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="225" data-unit="г">225 г</span> — Мука пшеничная в/с
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="75" data-unit="г">75 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Масло сливочное 82,5%
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="33" data-unit="г">33 г</span> — Яйцо
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="6" data-unit="г">6 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Какао алкализованное
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Соль — щепотка
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="350" data-unit="г">350 г</span> — Сметана 20–30%
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="130" data-unit="г">130 г</span> — Яйцо
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Сахар-песок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Крахмал кукурузный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Ванильный сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="280" data-unit="г">280 г</span> — Творог 9%
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Маскарпоне
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="90" data-unit="г">90 г</span> — Сгущённое молоко
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Соус слива-ежевика</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар-песок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Пектин яблочный
+              <span class="ingredient-note">Или 4 г пектина NH</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="270" data-unit="г">270 г</span> — Пюре сливы
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Пюре ежевики
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Лимонная кислота — щепотка
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем-чиз для выравнивания</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Масло сливочное 82,5%
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="350" data-unit="г">350 г</span> — Творожный сыр
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Рисовая бумага (листы для роллов)
+              <span class="ingredient-note">Количество не нормировано: 4–6 слайсов на торт</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Краситель водорастворимый гелевый — для слайсов и мазков
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Кандурин золотой + водка
+              <span class="ingredient-note">Развести до состояния гуаши</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Инжир свежий — 4–6 плодов
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Нейтральный гель — по желанию, если торт стоит до следующего дня
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка масла и яиц</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Масло достаньте заранее: часа при комнатной температуре достаточно, чтобы оно стало мягким. Яйца тоже выньте из холодильника — они должны быть тёплыми. Муку просейте отдельно для классического и для шоколадного теста, приготовьте кольцо Ø18 см — по нему будете раскатывать и вырезать коржи.
+                <span class="source-badge">⏱ урок1_часть1: 11:26–11:35</span>
+              </p>
+              <div class="warning-box">
+                <strong>Холодные яйца:</strong> если вводить их в взбитое масло холодными, масло схватится комками и масса не объединится. Меланж тоже подойдёт, но только комнатной температуры или подогретый.
+                <span class="source-badge">⏱ урок1_часть1: 18:31–18:46</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>~1 ч на размягчение</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>комнатная</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Взбить масло с пудрой и яйцом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Масло (290 г) взбейте с просеянной пудрой (175 г): сначала на низкой скорости, чтобы пудра не летела, затем на максимальной — до побеления и увеличения объёма. Добавьте яйцо (76 г) и взбивайте до полного объединения, счищая массу со стенок.
+                <span class="source-badge">⏱ урок1_часть1: 11:55–20:05</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сухие ингредиенты — только после объединения:</strong> пока масса расслаивается, муку добавлять нельзя. Дождитесь, пока масло, пудра и яйцо не станут единым целым.
+                <span class="source-badge">⏱ урок1_часть1: 20:24–20:38</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> масло только 82,5% жирности и свежее — на нём тесто получается рассыпчатым, но не хрустящим. Готовую массу разделите на 230 г (пойдёт в шоколадное тесто) и 310 г (в классическое).
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>~8 мин взбивания</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>миксер, весы</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>масса побелела и стала пышной</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Два вида песочного теста</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В 230 г масляной массы просейте муку (225 г), какао (30 г), разрыхлитель (6 г) и соль. В 310 г — муку (340 г), разрыхлитель (8 г) и соль. Перемешивайте на средней скорости до крупной крошки, затем соберите тесто в комок руками.
+                <span class="source-badge">⏱ урок1_часть1: 23:44–30:05</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не вымешивайте до гладкости:</strong> масса должна остаться крошкой и лишь начать укрупняться. Если долго мешать, коржи станут слишком хрупкими и не впитают крем.
+                <span class="source-badge">⏱ урок1_часть1: 30:32–31:06</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> жидкость вводится сначала в масло, а мука — в конце: так тесто получается мягче и даёт рассыпчатость без активного хруста.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак готовности: <strong>крошка размером с крупный рис</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>миксер с лопатой или венчиками</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Семь шариков по ~163 г</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Классическое тесто разделите на 4 части, шоколадное — на 3. Ориентир по весу — 163–164 г на корж: всего получается 7 коржей.
+                <span class="source-badge">⏱ урок1_часть1: 37:34–39:40</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> шоколадное тесто плотнее классического — это нормально: часть муки в нём заменена какао.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Выход: <strong>7 коржей по ~163 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Раскатка и охлаждение</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Каждый шарик раскатайте между двумя листами пергамента, ориентируясь на кольцо Ø18 см. Заготовки уберите в холодильник или морозилку минимум на 30 минут.
+                <span class="source-badge">⏱ урок1_часть1: 40:19–42:04</span>
+              </p>
+              <div class="warning-box">
+                <strong>Зачем холод:</strong> он стабилизирует масло — при выпечке оно не вытает на бумагу и корж не потеряет структуру.
+                <span class="source-badge">⏱ урок1_часть1: 36:41–37:00</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> тесту не нужно отдыхать до раскатки — иначе его придётся снова размягчать. В холод отправляйте уже раскатанные пласты.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>минимум 30 мин в холоде</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>пергамент, скалка, кольцо Ø18 см</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Выпечка коржей</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте при 190 °C с конвекцией или при 200 °C в режиме «верх-низ» — по 8 минут. Горячие коржи сразу вырежьте по кольцу Ø18 см: после остывания они станут хрупкими и будут ломаться.
+              </p>
+              <div class="warning-box">
+                <strong>Вырезать по горячему:</strong> остывший песочный корж крошится по краю. Лишнее тесто просто снимите — обрезки в торт не идут.
+              </div>
+              <div class="tip-box">
+                <strong>Внимание:</strong> этот шаг есть только в технологической карте автора — расшифровка первого урока обрывается раньше, поэтому таймкода у него нет.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>8 мин</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>190 °C конвекция / 200 °C верх-низ</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>корж пропёкся, но остался светлым</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Заварная основа крема</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сметану (350 г) смешайте с яйцами (130 г) и ванильным сахаром (10 г). Сахар (120 г) соедините с крахмалом (30 г) и всыпьте в сметанно-яичную смесь, постоянно помешивая. Проварите на медленном огне до загустения, переложите в миску, накройте плёнкой в контакт и уберите в холодильник.
+              </p>
+              <div class="warning-box">
+                <strong>Только медленный огонь и постоянное помешивание:</strong> иначе яйца свернутся и крем пойдёт крупинками.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> плёнка должна лежать прямо на поверхности — так на креме не образуется плёнка и он не заветрится.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>~10 мин варки + остывание</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>медленный огонь</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>масса густая, без комков</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Соус слива-ежевика</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Пектин (10 г) смешайте с сахаром (100 г) и введите дождиком в холодное пюре сливы (270 г) и ежевики (150 г), постоянно подмешивая. Нагрейте до кипения, добавьте лимонную кислоту и варите до «нестекающей капли». Остудите в холодильнике.
+              </p>
+              <div class="warning-box">
+                <strong>Пектин — только в холодное пюре и при помешивании:</strong> иначе он схватится комками, и соус придётся процеживать.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> слива — высокопектиновый фрукт, поэтому пектина нужно немного. При замене на клубнику или чернику его количество увеличивают. Ежевику можно заменить черникой или вишней.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Выход: <strong>~510 г соуса</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>капля не стекает с лопатки</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Крем: творог, маскарпоне, сгущёнка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Творог (280 г) протрите через сито. Добавьте маскарпоне (200 г), сгущённое молоко (90 г) и заваренную сметану. Взбейте на большой скорости несколько минут — до пышной, плотной массы, затем взвесьте.
+                <span class="source-badge">⏱ Урок2_сборка: 02:04–12:39</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не блендером:</strong> погружной блендер сделает творог жидким. Нужен именно протёртый через сито творог — иначе крем не будет держать форму.
+                <span class="source-badge">⏱ Урок2_сборка: 03:02–03:20</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> сгущёнка заменяет сахар и даёт сливочный вкус, а маскарпоне стабилизирует крем. У автора крема выходит 1164 г — точный вес зависит от того, сколько испарилось при варке сметаны.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Выход: <strong>~1164 г крема</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>масса густая, пышная, без комков</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Сборка в кольце</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                На дно кольца высотой 10 см уложите ацетатную плёнку, нанесите немного крема и положите первый — светлый — корж. На каждый корж идёт 85 г соуса (не доходя 0,5–1 см до края) и 190 г крема: соус размазывайте лопаткой, крем отсаживайте мешком по бортику. Коржи чередуйте светлый — тёмный. Верх смажьте кремом.
+                <span class="source-badge">⏱ Урок2_сборка: 20:35–42:00</span>
+              </p>
+              <div class="warning-box">
+                <strong>Собирать только в кольце:</strong> соус жидкий, без кольца он вытечет. Соус и крем не смешивайте — слоистость и есть задумка торта.
+                <span class="source-badge">⏱ Урок2_сборка: 27:36–28:34</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> крем на такой высоте ровнее ложится из мешка. Верхний корж обязательно смажьте кремом: иначе при выравнивании он впитает крем-чиз и покрытие потрескается.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ На прослойку: <strong>85 г соуса + 190 г крема</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>кольцо 10 см, ацетатная плёнка, мешок</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Отдых в холодильнике</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Затяните торт плёнкой и уберите в холодильник минимум на 5–6 часов: у автора он стоит с 11 утра до 5 вечера. Если собираете поздно вечером — оставьте на ночь.
+                <span class="source-badge">⏱ Урок2_сборка: 42:26–42:57</span>
+              </p>
+              <div class="warning-box">
+                <strong>Нестабильный торт не выравнивают:</strong> пока соус не схватился, снимать кольцо нельзя — торт потеряет форму.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>5–6 ч и больше</strong></span>
+              <span class="param-pill">⚖ Вес: <strong>~3 кг</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Крем-чиз и выравнивание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Масло (150 г) взбейте с пудрой (100 г) до бела, затем по 1–2 столовые ложки введите холодный творожный сыр (350 г) — до объединения. Снимите кольцо и плёнку, протрите подложку от соуса. Нанесите тонкий черновой слой, чтобы спрятать крошку, затем покройте торт кремом из мешка и выровняйте скребком под 45°: бока — вертикальными проходами, верх — горизонтальными к центру.
+                <span class="source-badge">⏱ Урок3_оформление_декорирование: 02:28–04:54</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сыр только холодный, масло мягкое:</strong> и сыр вводите порциями — иначе в креме останутся комочки, которые испортят выравнивание.
+                <span class="source-badge">⏱ Урок3_оформление_декорирование: 10:22–10:33</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> крем-чиз на сливках для этого торта не подойдёт — он слишком нежный, а торт плотный. Нужен масляный: он хорошо держит форму.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Выход: <strong>600 г крема-чиза</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>поворотный стол, скребок, палета</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Окрашивание и мазки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Неполную столовую ложку крема окрасьте водорастворимым гелевым красителем. Мазки наносите палетой, как ручкой: приложите к боку торта, ведите вбок и одновременно чуть поворачивайте стол. Часть мазков сделайте белым, часть — более тёмными: строгих требований здесь нет.
+                <span class="source-badge">⏱ Урок3_оформление_декорирование: 34:39–39:35</span>
+              </p>
+              <div class="warning-box">
+                <strong>Красителя — минимум:</strong> гелевый краситель перебивает вкус и цвет, добавляйте по капле. В вебинаре использован Electric Purple.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> если мазки не вышли, пройдитесь скребком — получится плавный градиент от сиреневого к кремовому.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>палета или лопатка, поворотный стол</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Декор: слайсы, золото, инжир</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Слайсы из рисовой бумаги, окрашенные заранее и высохшие за ночь, разложите на торте: часть оставьте целыми, часть сломайте пополам. Кандурин разведите водкой до состояния гуаши и прокрасьте края слайсов и «рёбра жёсткости». Инжир разрежьте и выложите половинками по верху.
+                <span class="source-badge">⏱ Урок3_оформление_декорирование: 41:47–52:17</span>
+              </p>
+              <div class="warning-box">
+                <strong>Слайсы ставят на схватившееся покрытие:</strong> на свежем креме они поплывут. И не размякнут в холодильнике — рисовая бумага держит форму.
+                <span class="source-badge">⏱ Урок3_оформление_декорирование: 54:18–54:44</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> если торт будет стоять до следующего дня, пройдитесь по инжиру нейтральным гелем — он не даст фрукту заветриться.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>кисточка, кандурин, водка</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>покрытие схватилось, декор держится</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Порядок в песочном тесте:</strong> сначала масло с пудрой и яйцом, потом мука — так тесто выходит мягким и рассыпчатым, а не хрустящим.</li>
+                <li><strong>Много разрыхлителя — намеренно:</strong> коржи должны быть воздушными, иначе семь слоёв получатся тяжёлыми.</li>
+                <li><strong>Заварная сметана:</strong> именно она делает крем плотным и убирает «жидкий творожный» вкус.</li>
+                <li><strong>Алкализованное какао:</strong> даёт насыщенный цвет и вкус; с обычным «Золотым ярлыком» коржи будут бледнее.</li>
+                <li><strong>Соус по сезону:</strong> слива и ежевика — осенняя пара; при замене фрукта на менее пектиновый пектина нужно больше.</li>
+                <li><strong>Отдых перед выравниванием:</strong> плотный песочный торт должен стабилизироваться, иначе покрытие «поедет».</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Холодные яйца в масло:</strong> масса расслаивается, тесто получается плотным.</li>
+                <li><strong>Долгое вымешивание:</strong> коржи крошатся при сборке и не впитывают крем.</li>
+                <li><strong>Творог блендером:</strong> крем становится жидким и не держит прослойку.</li>
+                <li><strong>Пектин в горячее пюре:</strong> схватывается комками, соус приходится процеживать.</li>
+                <li><strong>Сборка без кольца:</strong> соус вытекает, торт теряет форму.</li>
+                <li><strong>Раннее выравнивание:</strong> нестабильный торт деформируется, а крошка шоколадных коржей выходит в покрытие.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «описание.docx» с раскладкой и описанием процессов; расшифровка вебинара «Тортомафия» из трёх уроков — «урок1_часть1» (коржи и кремы), «Урок2_сборка» (сборка), «Урок3_оформление_декорирование» (выравнивание и декор).</li>
+              <li><strong>Яйца:</strong> в списке продуктов DOCX стоит 80 г, а по компонентам 33 г + 43 г = 76 г; в видео автор взвешивает 76 г. На странице — 76 г.</li>
+              <li><strong>Разрыхлитель:</strong> в шапке DOCX указано 12 г, но по частям 6 г + 8 г = 14 г, и в видео автор подтверждает 6 и 8. На странице — 14 г.</li>
+              <li><strong>Обрыв расшифровки:</strong> первый урок обрывается на начале соуса (56:47), поэтому варка соуса, заварной сметаны и выпечка коржей есть только в DOCX — таймкодов у этих шагов нет.</li>
+              <li><strong>Веса:</strong> крем (1164 г) и соус (510 г) автор взвешивает уже готовыми — они зависят от выпаривания; деление на прослойки (85 г соуса + 190 г крема) дано по этим фактическим весам.</li>
+              <li><strong>Порции:</strong> автор их не называет; 12 порций посчитаны по готовому торту Ø18 см высотой 10 см и весом около 3 кг.</li>
+              <li><strong>Декор:</strong> количество рисовой бумаги, красителя, кандурина и инжира в источнике не нормировано — на странице даны ориентиры, а не точные граммы.</li>
+              <li><strong>Фото:</strong> в папке с материалами снимков торта нет, изображение сгенерировано по описанию из источников. Замените своим фото при возможности.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© CookBook — Автономная кулинарная библиотека.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

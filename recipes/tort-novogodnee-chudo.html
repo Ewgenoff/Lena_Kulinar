@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Торт «Новогоднее чудо» в виде ёлки — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Торт-ёлка из четырёх рулетов: карамельные коржи на карамели со сгущёнкой, сметанный крем с белым шоколадом, начинка из чернослива, кураги и грецкого ореха, крем-чиз и зелёные «иголки» насадкой №70. Выпечка 170 °C 5 минут.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tort-novogodnee-chudo">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Торт «Новогоднее чудо» в виде ёлки</h1>
+      <p class="recipe-lead">
+        Торт-конструктор: тонкие карамельные коржи пекутся по 5 минут, смазываются сметанным кремом с белым шоколадом, присыпаются черносливом, курагой и грецким орехом и сворачиваются в рулеты. Из четырёх рулетов разного диаметра складывается пирамида — и получается ёлка без единой внутренней опоры, только с палочкой для суши в центре. Снаружи торт покрывается кремом-чизом, а зелёные «иголки» отсаживаются насадкой-листом. Вся конструкция весит около 3 кг до декора.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">1 час</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">2 часа</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">~9 ч (2–4 ч тесто в холодильнике, 5–6 ч рулеты)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~12 часов</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">4 яруса Ø17 / 14 / 11 / 8 см</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-novogodnee-chudo.jpg" alt="Новогодний торт-ёлка из четырёх ярусов-рулетов с зелёным кремом, «снегом» из пудры и шоколадными украшениями" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (12 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="12">12</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (кусков)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Все граммовки автоматически масштабируются. Базовая раскладка автора — четыре рулета Ø17, 14, 11 и 8 см; можно свернуть и один большой торт, тогда полосы коржей режутся шириной 10 см вместо 7 см.
+          </p>
+        </div>
+
+        <!-- Переключатель источников -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">12</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: молочное и яйца -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масла</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span>
+                <span class="shopping-hint">180 г без скорлупы — примерно 3–4 яйца С1. Вводятся по одному в остывшую карамель</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="470" data-unit="г">470 г</span>
+                <span class="shopping-hint">110 г в коржи + 360 г в крем для оформления. Всё мягкое, комнатной температуры</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сметана</strong>:
+                <span class="shopping-qty" data-base-amount="630" data-unit="г">630 г</span>
+                <span class="shopping-hint">Нужна самая жирная, около 30%. Из 20% сначала отвесить на марле за ночь</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 33%</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Взбиваются вместе со сметаной</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творожный сыр</strong>:
+                <span class="shopping-qty" data-base-amount="400" data-unit="г">400 г</span>
+                <span class="shopping-hint">Холодный, вводится в крем для оформления по 2 ст. л.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: бакалея, сухофрукты, декор -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Бакалея, сухофрукты, декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная</strong>:
+                <span class="shopping-qty" data-base-amount="430" data-unit="г">430 г</span>
+                <span class="shopping-hint">С разрыхлителем и щепоткой соли</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="120" data-unit="г">120 г</span>
+                <span class="shopping-hint">На сухую карамель</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сгущённое молоко</strong>:
+                <span class="shopping-qty" data-base-amount="120" data-unit="г">120 г</span>
+                <span class="shopping-hint">Комнатной температуры, деглазирует карамель</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="390" data-unit="г">390 г</span>
+                <span class="shopping-hint">150 г в сметанный крем + 240 г в крем для оформления. Просейте</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Белый шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">В сметанный крем, растапливается</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Разрыхлитель</strong>:
+                <span class="shopping-qty" data-base-amount="8" data-unit="г">8 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Чернослив</strong>:
+                <span class="shopping-qty" data-base-amount="120" data-unit="г">120 г</span>
+                <span class="shopping-hint">Промыть, обсушить, нарезать. Можно заменить другими сухофруктами по весу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Курага</strong>:
+                <span class="shopping-qty" data-base-amount="120" data-unit="г">120 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Грецкий орех</strong>:
+                <span class="shopping-qty" data-base-amount="120" data-unit="г">120 г</span>
+                <span class="shopping-hint">Обжарить и порубить</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пищевые красители для крема</strong> — по вкусу
+                <span class="shopping-hint">Водорастворимые: зелёный, чёрный, синий. Хватит и одного зелёного</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Нетающая пудра</strong> — по вкусу
+                <span class="shopping-hint">«Снег» на ёлку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шоколадные фигурки, леденцы, посыпка</strong> — по вкусу
+                <span class="shopping-hint">«Игрушки»; орехи и конфеты тоже подойдут</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Инвентарь</strong> — насадка №70 «лист», кондитерские мешки, кольца, пищевая плёнка, палочка для суши
+                <span class="shopping-hint">Палочка нужна одна — чтобы ярусы не съехали</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Карамельные коржи</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="110" data-unit="г">110 г</span> — Сливочное масло 82,5%
+              <span class="ingredient-note">Размягчённое, деглазирует карамель</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Сахар
+              <span class="ingredient-note">Плавится порциями до янтарной карамели</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Сгущённое молоко
+              <span class="ingredient-note">Комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="8" data-unit="г">8 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Хорошая щепотка — Соль
+              <span class="ingredient-note">В муку вместе с разрыхлителем</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="180" data-unit="г">180 г</span> — Яйца
+              <span class="ingredient-note">Около 3–4 яиц, вводятся по одному</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="430" data-unit="г">430 г</span> — Мука
+              <span class="ingredient-note">С разрыхлителем и солью</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Сметанный крем</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="630" data-unit="г">630 г</span> — Сметана 30%
+              <span class="ingredient-note">Если жирной нет — отвесить 20% на марле за ночь</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Белый шоколад
+              <span class="ingredient-note">Растопить и ввести через 2 ст. л. готового крема</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Сливки 33%
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сахарная пудра
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка при сборке</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Чернослив
+              <span class="ingredient-note">Промыть, обсушить, нарезать</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Курага
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Грецкий орех
+              <span class="ingredient-note">Обжарить, порубить</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем для оформления</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="360" data-unit="г">360 г</span> — Сливочное масло 82,5%
+              <span class="ingredient-note">Размягчённое, комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="400" data-unit="г">400 г</span> — Творожный сыр
+              <span class="ingredient-note">Холодный, вводится понемногу</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="240" data-unit="г">240 г</span> — Сахарная пудра
+              <span class="ingredient-note">Просейте, чтобы не было комков</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Водорастворимые красители
+              <span class="ingredient-note">Зелёный, чёрный и синий — или только зелёный</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Нетающая пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Шоколадные фигурки, леденцы, посыпка, орехи
+              <span class="ingredient-note">Свежие ягоды не подойдут — потекут</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Карамель</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сахар порциями растопите в сотейнике на среднем нагреве до янтарной карамели. Подсыпайте тонкими слоями, дожидаясь, пока предыдущий слой расплавится, и двигайте сотейник, чтобы ничего не пригорело. Лопаткой карамель лучше не перемешивать.
+                <span class="source-badge">⏱ серия1: 01:17–02:34</span>
+              </p>
+              <p>
+                Снимите с огня, добавьте размягчённое сливочное масло и активно перемешайте, пока оно не растопится. Затем введите сгущённое молоко комнатной температуры и перемешайте до однородности — сильно прогревать уже не нужно.
+                <span class="source-badge">⏱ серия1: 02:31–03:29</span>
+              </p>
+              <p>
+                Перелейте карамель в другую ёмкость, чтобы она быстрее остыла, и остудите до 40–45 °C.
+                <span class="source-badge">⏱ серия1: 03:30–04:03</span>
+              </p>
+              <div class="warning-box">
+                <strong>Яйца — только в остывшую карамель:</strong> масса должна быть холоднее 50 °C, иначе яйца свернутся. Проверяйте рукой — карамель должна быть чуть тёплой.
+                <span class="source-badge">⏱ серия1: 04:10–04:17</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> эта карамель почти не кристаллизуется — в составе сгущёнка. А если её посолить, получится готовая солёная карамель, отдельный рабочий рецепт.
+                <span class="source-badge">⏱ серия1: 03:42–03:55</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура перед яйцами: <strong>40–45 °C</strong></span>
+              <span class="param-pill">🔥 Огонь: <strong>средний, не торопиться</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Глубокий янтарный цвет, ничего не горит</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Тесто</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В остывшую карамель вводите яйца по одному, перемешивая после каждого. Масса будет жидкой — так и должно быть; взбивать и ждать увеличения объёма не нужно.
+                <span class="source-badge">⏱ серия1: 04:04–04:45</span>
+              </p>
+              <p>
+                Добавьте муку, перемешанную с разрыхлителем и щепоткой соли. Мешайте лопаткой, а если станет слишком густо — рукой. Больше муки не добавляйте.
+                <span class="source-badge">⏱ серия1: 04:48–05:04</span>
+              </p>
+              <div class="warning-box">
+                <strong>Тесто не должно быть крутым:</strong> добавленная мука войдёт в тесто и загустеет сама, когда тесто постоит в холодильнике. Сейчас оно жидковатое, и раскатать его невозможно.
+                <span class="source-badge">⏱ серия1: 05:21–05:31</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Инструмент: <strong>Лопатка</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Жидкое, однородное тесто без комков</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Охлаждение теста</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Закройте чашу плёнкой и уберите в холодильник минимум на 2–4 часа, а лучше на ночь. Тесто перестанет липнуть и станет гуще.
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> тесто всё равно останется жидковатым, и при сильном сжатии в руках начнёт прилипать — это нормально, раскатывать его нужно через пергамент.
+                <span class="source-badge">⏱ серия1: 05:31–06:01</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Холодильник: <strong>2–4 часа, лучше ночь</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Раскатка коржей</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разделите тесто на четыре части. Каждую раскатывайте между двумя листами пергамента: так не нужно забивать тесто мукой, а выпекать можно прямо на нижнем листе. Чуть-чуть муки для припыления всё же возьмите.
+                <span class="source-badge">⏱ серия1: 05:54–06:55</span>
+              </p>
+              <p>
+                Периодически поднимайте пергамент, чтобы убрать складки и дать тесту отлипнуть. Раскатывайте очень тонко — тоньше миллиметра, тесто должно почти просвечивать; единственное ограничение — размер противня.
+                <span class="source-badge">⏱ серия1: 06:59–07:58</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> противень переверните дном вверх, иначе тесто примет форму чаши.
+                <span class="source-badge">⏱ серия1: 08:11–08:16</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Толщина: <strong>тоньше 1 мм</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Скалка, 2 листа пергамента</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Выпечка и нарезка коржей</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте в заранее разогретой духовке при 170 °C с конвекцией не дольше 5 минут, следя за готовностью. При конвекции можно печь сразу два коржа.
+                <span class="source-badge">⏱ серия1: 08:17–08:29</span>
+              </p>
+              <p>
+                Горячие коржи сразу нарежьте по линейке на полосы шириной 7 см — это будет высота каждого яруса. Для традиционного цилиндрического торта режьте по 10 см.
+                <span class="source-badge">⏱ серия1: 08:30–09:06</span>
+              </p>
+              <div class="warning-box">
+                <strong>Резать только горячими:</strong> остывшие коржи становятся твёрдыми и просто ломаются. Нарезали — и сразу к следующему коржу, как только он выйдет из духовки.
+                <span class="source-badge">⏱ серия1: 09:01–09:06</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Режим: <strong>170 °C, конвекция</strong></span>
+              <span class="param-pill">⏱ Время: <strong>не дольше 5 минут</strong></span>
+              <span class="param-pill">📏 Полосы: <strong>7 см (или 10 см)</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Корж вырос примерно втрое</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Сметанный крем</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сметану и сливки взбейте на максимальной скорости до состояния крема. Затем добавьте сахарную пудру и продолжайте взбивать.
+                <span class="source-badge">⏱ серия2: 00:54–01:35</span>
+              </p>
+              <p>
+                Белый шоколад растопите. В него добавьте пару столовых ложек готового крема и перемешайте — так шоколад не застынет комом. Полученную массу введите в основной крем и перемешайте миксером.
+                <span class="source-badge">⏱ серия2: 01:54–02:38</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> если жирной сметаны в магазинах нет, купите самую жирную из имеющихся (например, 20%) и отвесьте её: дуршлаг, два слоя марли или хлопковая ткань, сметана стекает ночь — лишняя влага уйдёт, и густую сметану можно взбить.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>Миксер</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Густая масса в состоянии крема</strong></span>
+              <span class="param-pill">🧊 Хранение: <strong>72 часа в холодильнике</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Сборка коржей с начинкой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сухофрукты промойте водой, обсушите и нарежьте. Грецкий орех обжарьте и порубите. Заменять сухофрукты можно любыми другими, взяв их по весу как в рецептуре; орехи — тоже любыми, вплоть до арахиса.
+                <span class="source-badge">⏱ серия3: 00:21–00:35</span>
+              </p>
+              <p>
+                Разложите коржи на столе, затянутом плёнкой, и распределите по ним весь крем — равномерно, чтобы не осталось непокрытых участков коржа. Затем дорожками выложите чернослив, курагу и орехи: дорожка показывает, в каком направлении крутить рулет. Близко к краю не сыпьте — будет сложно сворачивать.
+                <span class="source-badge">⏱ серия3: 00:46–03:22</span>
+              </p>
+              <p>
+                Оставьте на 20–30 минут: коржи должны снова стать эластичными, напитавшись кремом.
+                <span class="source-badge">⏱ серия3: 03:47–04:02</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> сухофрукты можно не запаривать — крем сметанный, и всё станет влажным и сочным само.
+                <span class="source-badge">⏱ серия3: 03:01–03:15</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Отдых коржей: <strong>20–30 минут</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Коржи снова эластичные</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Сворачивание рулетов</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сворачивайте плотно, но без фанатизма — сметанный крем не должен проситься наружу. Окончание первого рулета прикладывайте к началу следующего и продолжайте крутить дальше: чем длиннее рулет, тем легче он идёт.
+                <span class="source-badge">⏱ серия3: 04:28–06:23</span>
+              </p>
+              <p>
+                Автор свернула четыре торта диаметрами 17, 14, 11 и 8 см — каждый следующий на 3 см меньше. Можно свернуть и один большой: тогда полосы коржей должны быть высотой 10 см, а не 7.
+                <span class="source-badge">⏱ серия3: 09:21–09:38</span>
+              </p>
+              <p>
+                Крем, выступивший сверху, размажьте лопаткой — он приклеит крошки и сделает верх плоским. Затяните плёнкой и уберите в холодильник минимум на 5–6 часов, лучше на ночь.
+                <span class="source-badge">⏱ серия3: 07:29–09:55</span>
+              </p>
+              <div class="warning-box">
+                <strong>Первые витки ломаются:</strong> это нормально и не страшно — по мере скручивания корж ведёт себя всё покладистее. Главное, что коржи хорошо выстоялись.
+                <span class="source-badge">⏱ серия3: 04:31–04:51</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Ярусы: <strong>Ø17, 14, 11, 8 см</strong></span>
+              <span class="param-pill">🧊 Холодильник: <strong>5–6 часов, лучше ночь</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Крем для оформления</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Размягчённое сливочное масло доведите до комнатной температуры и взбейте с просеянной сахарной пудрой до бела: сначала на маленькой скорости, чтобы пудра не летела, затем на максимальной.
+                <span class="source-badge">⏱ серия4: 00:36–00:58</span>
+              </p>
+              <p>
+                Холодный творожный сыр вводите понемногу — примерно по 2 столовые ложки, — взбивая после каждой порции, пока сыр не закончится.
+                <span class="source-badge">⏱ серия4: 01:35–02:24</span>
+              </p>
+              <div class="tip-box">
+                <strong>Сколько нужно крема:</strong> по рецепту выход 1000 г — этого хватает на четыре яруса. Для обычного одноярусного торта, который нужно просто выровнять, делайте 600 г.
+                <span class="source-badge">⏱ серия4: 00:09–00:23</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Выход: <strong>1000 г</strong></span>
+              <span class="param-pill">🌡 Сыр: <strong>холодный</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Густой стабильный крем</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Сборка ярусов</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Освободите рулеты от плёнки и колец. На верх самого большого яруса нанесите тонкий слой крема — «цемент» — и поставьте следующий ярус, разровняв крем. И так до самого верха.
+                <span class="source-badge">⏱ серия5: 00:43–03:15</span>
+              </p>
+              <p>
+                В центр вставьте одну палочку для суши: она не даст ярусам съехать, если вы будете нести торт и наклонять его.
+                <span class="source-badge">⏱ серия5: 02:35–03:05</span>
+              </p>
+              <p>
+                Нанесите крем на внешнюю часть торта — чтобы спрятать крошки, стабилизировать конструкцию и подготовить поверхность к декору. Скребком не выравнивайте до идеала, а просто сделайте аккуратнее.
+                <span class="source-badge">⏱ серия5: 04:08–05:55</span>
+              </p>
+              <div class="tip-box">
+                <strong>Главный плюс конструкции:</strong> никакой внутренней опоры и подложек — торт можно разрезать насквозь.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>Скребок, палета, палочка для суши</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Крошек не видно, ярусы стоят ровно</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 11 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Окрашивание крема</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Оставшийся крем окрасьте водорастворимыми красителями в зелёный цвет. Автор добавляет зелёный, чёрный и капельку синего — так цвет богаче; можно обойтись одним зелёным, сделать голубую ель или белую, заснеженную.
+                <span class="source-badge">⏱ серия6: 00:06–01:26</span>
+              </p>
+              <p>
+                Перемешайте миксером до однородного цвета, регулируя оттенок чёрным и синим.
+                <span class="source-badge">⏱ серия6: 00:41–02:06</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🎨 Красители: <strong>водорастворимые, гелевые или жидкие</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Миксер</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 12 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">«Иголки» насадкой №70</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Возьмите насадку №70 «лист»; похожий рисунок получается и насадкой «закрытая звезда». Кладите в мешок по 3 столовые ложки крема: в маленьком мешке крем меньше нагревается, а крем-чиз греется быстро.
+                <span class="source-badge">⏱ серия6: 02:08–03:37</span>
+              </p>
+              <p>
+                Держите насадку горизонтально и отсаживайте листики, прижимая её к торту — чуть-чуть вдавливая. Первый ряд — отступив от края примерно сантиметр, вокруг всего торта.
+                <span class="source-badge">⏱ серия6: 03:54–04:36</span>
+              </p>
+              <p>
+                Каждый следующий слой — отступ 5 мм от предыдущего и в шахматном порядке. Ступеньки между ярусами просто закрывайте кремом, чтобы белого не было видно.
+                <span class="source-badge">⏱ серия6: 04:38–07:47</span>
+              </p>
+              <div class="warning-box">
+                <strong>Прижимайте насадку к торту:</strong> иначе иголки не будут держаться и получатся «соплюшки» вместо листочков. И не делайте листья длинными — они отваливаются.
+                <span class="source-badge">⏱ серия6: 06:15–06:41</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Насадка: <strong>№70 «лист»</strong></span>
+              <span class="param-pill">📏 Шаг слоёв: <strong>5 мм, в шахматном порядке</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Белого крема не видно</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 13 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">«Снег» и игрушки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сначала посыпьте ёлку нетающей пудрой — снег получится почти настоящим. Затем украсьте шоколадными фигурками, леденцами, посыпкой, орехами, конфетами: подойдёт всё новогоднее и съедобное. Шишки из леса не берите.
+                <span class="source-badge">⏱ серия6: 08:13–09:41</span>
+              </p>
+              <p>
+                Свежие и замороженные ягоды не используйте — они потекут и испортят декор.
+                <span class="source-badge">⏱ серия6: 08:27–08:33</span>
+              </p>
+              <div class="tip-box">
+                <strong>Украшайте сразу:</strong> игрушки ставьте на ещё мягкие иголки. Когда крем застынет, листочки будут ломаться.
+                <span class="source-badge">⏱ серия6: 09:47–10:06</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍬 Декор: <strong>фигурки, леденцы, посыпка, орехи</strong></span>
+              <span class="param-pill">🧊 Хранение: <strong>72 часа в холодильнике</strong></span>
+              <span class="param-pill">❄️ Заморозка: <strong>до 1 месяца</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Карамель без спешки:</strong> тонкие слои сахара и средний огонь. Спешка и высокая температура — единственные причины горелой карамели.</li>
+                <li><strong>Карамель стойкая:</strong> сгущёнка в составе не даёт ей кристаллизоваться; из этой же массы получится отличная солёная карамель.</li>
+                <li><strong>Тесто только в холодильник:</strong> оно густеет не от муки, а от холода — досыпать муку бессмысленно.</li>
+                <li><strong>Раскатка через пергамент:</strong> и муки меньше, и выпекать можно прямо на этом листе.</li>
+                <li><strong>Резать горячими:</strong> корж режется по линейке только пока тёплый.</li>
+                <li><strong>Шоколад через крем:</strong> две ложки крема в растопленный шоколад спасают от комков.</li>
+                <li><strong>Отдых перед скруткой:</strong> 20–30 минут, чтобы коржи стали эластичными.</li>
+                <li><strong>Палочка для суши:</strong> дешёвая страховка от того, что ярусы съедут.</li>
+                <li><strong>Весит немного:</strong> до декора торт весит около 2,3 кг, после — около 3 кг.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Перегретый сахар:</strong> карамель начинает гореть и горчит — отвлекаться нельзя ни на минуту.</li>
+                <li><strong>Яйца в горячую карамель:</strong> они сворачиваются, и тесто идёт комками.</li>
+                <li><strong>Досыпание муки «до крутого теста»:</strong> коржи получатся толстыми и жёсткими.</li>
+                <li><strong>Нарезка остывших коржей:</strong> они ломаются вместо ровных полос.</li>
+                <li><strong>Шоколад сразу в крем:</strong> застывает комом; нужен «мостик» из двух ложек крема.</li>
+                <li><strong>Скрутка без отдыха:</strong> коржи трескаются и рвутся.</li>
+                <li><strong>Крем-чиз в большом мешке:</strong> быстро нагревается и течёт.</li>
+                <li><strong>Насадка не прижата к торту:</strong> иголки не держатся.</li>
+                <li><strong>Ягоды в декоре:</strong> текут и портят «ёлку».</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «описание.docx» — рецептуры всех шести серий с граммовками; CSV-расшифровка «Расшифровка Торт_Новогоднее чудо.csv» (серия1–серия6.mp4) — оттуда таймкоды.</li>
+              <li><strong>Расхождение по охлаждению теста:</strong> в DOCX — «на 2–4 часа, а лучше на ночь», в видео — «минимум на 2–3 часа». На странице указан диапазон 2–4 часа.</li>
+              <li><strong>Расхождение по отдыху коржей:</strong> в DOCX — 30 минут, в видео — 20–30 минут. На странице 20–30 минут.</li>
+              <li><strong>Расхождение по красителям:</strong> в DOCX упомянуты зелёный и чёрный гелевый краситель, в видео добавляется ещё и синий. На странице перечислены все три с пометкой, что хватит одного зелёного.</li>
+              <li><strong>Пробелы по массе яиц:</strong> в рецептуре 180 г яиц без указания штук; в списке покупок это 3–4 яйца С1 по весу.</li>
+              <li><strong>Пробелы по выходу:</strong> число порций в источниках не указано. 12 порций — расчёт по четырём ярусам и весу торта около 3 кг после декора.</li>
+              <li><strong>Пробелы по декору:</strong> количество нетающей пудры, красителей и фигурок автор не называет — всё указано «по вкусу».</li>
+              <li><strong>Пробелы по сборке нескольких ярусов:</strong> в видео торт собирается без колец, но в DOCX упоминаются кольца для фиксации формы рулетов; на странице оба варианта допустимы.</li>
+              <li><strong>Фото:</strong> в DOCX только служебные иконки около 0,5 КБ, снимка торта в исходниках нет. На странице — изображение, присланное владельцем сайта: торт-ёлка с зелёными «иголками», пудрой и украшениями. Оно не из папки с вебинаром.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© CookBook — Автономная кулинарная библиотека.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

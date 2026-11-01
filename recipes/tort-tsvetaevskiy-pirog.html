@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Цветаевский пирог с яблоками — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Цветаевский пирог: песочная основа из холодного масла и сметаны, 560 г яблок и сметанная заливка с кукурузным крахмалом. Форма Ø20 см, выпечка 170 °C с конвекцией около 50 минут.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tort-tsvetaevskiy-pirog">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Легкая</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Цветаевский пирог с яблоками</h1>
+      <p class="recipe-lead">
+        Открытый яблочный пирог на песочной основе: холодное масло и холодная сметана растираются в крошку, тесто раскатывается между двумя листами пергамента и стабилизируется в морозилке. Внутрь — слой яблок и сметанная заливка с кукурузным крахмалом, которая схватывается в нежный крем. Пирог собирается просто, из продуктов, которые обычно есть дома, и почти не требует активных действий: главное — не вымешивать тесто и не мешать заливку миксером.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">40 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">1 ч 20 мин (стабилизация теста, выпечка, остывание)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~2 часа</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">Пирог Ø20 см</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-tsvetaevskiy-pirog.jpg" alt="Цветаевский пирог с яблоками, посыпанный сахарной пудрой, с клубникой и мятой" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (8 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="8">8</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (кусков)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Все граммовки масштабируются. Базовая раскладка — пирог Ø20 см из раздвижной формы: одна песочная основа, 560 г очищенных яблок и сметанная заливка. Восемь порций — расчёт по готовому пирогу, автор точное число не называет.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">8</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сметана 20–30%</strong>:
+                <span class="shopping-qty" data-base-amount="330" data-unit="г">330 г</span>
+                <span class="shopping-hint">100 г холодной в тесто + 230 г в заливку. Чем жирнее, тем вкуснее: у автора 25%</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Холодное, из холодильника, но не из морозилки. Плюс немного на смазку формы</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span>
+                <span class="shopping-hint">В сметанную заливку</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Мука, сахар, яблоки</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">В песочную крошку, вместе с солью и разрыхлителем</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="180" data-unit="г">180 г</span>
+                <span class="shopping-hint">Половина в заливку сразу, половину смешать с крахмалом</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яблоки</strong>:
+                <span class="shopping-qty" data-base-amount="560" data-unit="г">560 г</span>
+                <span class="shopping-hint">Вес уже очищенных; хороша антоновка, подойдут и другие сорта. Берите с запасом на кожуру и сердцевину</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Крахмал кукурузный</strong>:
+                <span class="shopping-qty" data-base-amount="20" data-unit="г">20 г</span>
+                <span class="shopping-hint">Можно заменить таким же количеством муки по весу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ванильный сахар</strong>:
+                <span class="shopping-qty" data-base-amount="7" data-unit="г">7 г</span>
+                <span class="shopping-hint">Можно взять половину пакетика, ванилин или пасту ванили</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Разрыхлитель</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="г">5 г</span>
+                <span class="shopping-hint">Чайная ложка; соль — щепотка, есть на любой кухне</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра для подачи</strong> — по вкусу
+                <span class="shopping-hint">Свежие ягоды и шарик мороженого — по желанию</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Песочное тесто</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сливочное масло 82,5%
+              <span class="ingredient-note">Холодное, из холодильника, не из морозилки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="г">5 г</span> — Разрыхлитель
+              <span class="ingredient-note">Одна чайная ложка, вместе с мукой и солью</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Щепотка — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сметана
+              <span class="ingredient-note">Холодная, из холодильника</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Сметанная заливка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="230" data-unit="г">230 г</span> — Сметана
+              <span class="ingredient-note">Лучше пожирнее: 20% минимум, 25–30% — идеально</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span> — Яйца С1
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="180" data-unit="г">180 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Ванильный сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Крахмал кукурузный
+              <span class="ingredient-note">Замена — столько же муки по весу</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка и подача</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="560" data-unit="г">560 г</span> — Яблоки очищенные
+              <span class="ingredient-note">Антоновка или любые другие; кожуру можно не снимать</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Сахарная пудра
+              <span class="ingredient-note">Для подачи, после остывания</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По желанию — Свежие ягоды, шарик мороженого
+              <span class="ingredient-note">На порции при подаче</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка формы</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Возьмите обычную раздвижную форму Ø20 см. Дно переверните, положите сверху пергамент и продавите форму — бортик поднимется выше, и на дне не отпечатается полоска от замка.
+                <span class="source-badge">⏱ серия1: 00:42–01:16</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> стенки формы можно смазать сливочным маслом, а можно не делать этого — автор в итоге смазывает, чтобы пирог точно вышел.
+                <span class="source-badge">⏱ серия1: 08:15–08:29</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Форма: <strong>раздвижная, Ø20 см</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Пергамент, форма</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Песочная крошка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В миску отправьте холодное масло и муку, смешанную с солью и разрыхлителем. Миксером превратите всё в крошку, похожую на манную крупу или миндальную муку.
+                <span class="source-badge">⏱ серия1: 01:17–01:45, 02:37–03:12</span>
+              </p>
+              <p>
+                Начинайте на небольшой скорости, чтобы мука не разлеталась, и увеличивайте её, когда масло измельчится. Крупные части ещё остаются — продолжайте, пока крошка не станет равномерной.
+                <span class="source-badge">⏱ серия1: 03:03–03:41</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не собирайте тесто миксером:</strong> масса не должна объединяться в ком и напоминать кусок теста — тесто вы делаете, а вроде бы и нет. Лучший враг хорошего: как только крошка стала равномерной, останавливайтесь.
+                <span class="source-badge">⏱ серия1: 02:53–03:01</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> с планетарным миксером работайте насадкой «лопата» (весло, К-образная) — она не рубит тесто, а перемешивает.
+                <span class="source-badge">⏱ серия1: 02:08–02:23</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Компоненты: <strong>холодные</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Крошка как манная крупа, без комка</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Сметана и сборка комка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В крошку добавьте холодную сметану и перемешивайте миксером ещё меньше по времени — до крупной крошки. Комок теста соберите руками: не вымешивайте и не месите, просто соедините крошки в один шар.
+                <span class="source-badge">⏱ серия1: 03:47–05:04</span>
+              </p>
+              <p>
+                Неоднородность — норма: невымешанные кусочки масла дадут слоение при выпечке. Тесто должно быть холодным на ощупь.
+                <span class="source-badge">⏱ серия1: 05:12–05:38</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Перемешивание: <strong>около минуты</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Крупная крошка, собранная в комок</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Раскатка и стабилизация</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Положите комок на лист пергамента, накройте вторым листом и раскатайте до толщины 4–5 мм. Бумагу с двух сторон можно приподнимать — так тесто раскатывается ровнее.
+                <span class="source-badge">⏱ серия1: 05:38–06:37</span>
+              </p>
+              <p>
+                Если толщина где-то больше, выгладьте тесто в одну и другую сторону и уберите излишки — они пойдут на середину.
+                <span class="source-badge">⏱ серия1: 07:08–07:36</span>
+              </p>
+              <p>
+                Уберите тесто в морозилку на 15 минут или в холодильник на 30–40 минут. Такое тесто можно приготовить накануне и держать в холодильнике ночь.
+                <span class="source-badge">⏱ серия1: 07:52–08:01, 05:50–06:01</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> раскатывайте тесто в минимальное время — оно не любит, когда его мучают, и любит, когда оно стабильное.
+                <span class="source-badge">⏱ серия1: 09:56–10:06</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Толщина: <strong>4–5 мм</strong></span>
+              <span class="param-pill">🧊 Стабилизация: <strong>15 мин в морозилке / 30–40 мин в холодильнике</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Формовка основы</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Снимите пергамент с обеих сторон теста. Сформируйте бортики из полосок теста, укладывая их стык в стык, не прижимая сильно к стенкам: толщина должна быть примерно одинаковой. Затем чуть придавите полоски вниз, чтобы они соединились с дном.
+                <span class="source-badge">⏱ серия1: 08:36–08:52, 12:06–12:46</span>
+              </p>
+              <p>
+                Центральную часть раскатайте из остатков, уложите в форму и обрежьте лишнее по бортику.
+                <span class="source-badge">⏱ серия1: 09:13–11:19</span>
+              </p>
+              <div class="tip-box">
+                <strong>Заготовка впрок:</strong> форму с тестом можно убрать в морозилку (предварительно сняв пакет) и хранить до месяца — а потом сразу использовать под начинку.
+                <span class="source-badge">⏱ серия1: 12:47–12:58</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Бортики: <strong>одинаковой толщины, стык в стык</strong></span>
+              <span class="param-pill">❄️ Запас: <strong>до месяца в морозилке</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Сметанная заливка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В сметану добавьте яйца и ванильный сахар. Половину сахара всыпьте сразу, а в оставшийся сахар добавьте крахмал, перемешайте и только потом введите в сметанно-яичную смесь.
+                <span class="source-badge">⏱ серия2: 01:14–02:16</span>
+              </p>
+              <p>
+                Взбивать ничего не нужно — просто тщательно перемешайте венчиком. Пока вы занимаетесь тестом, сахар успеет раствориться; перед заливкой перемешайте ещё раз.
+                <span class="source-badge">⏱ серия2: 02:16–02:36</span>
+              </p>
+              <div class="warning-box">
+                <strong>Крахмал — через сахар:</strong> так он не собьётся в комок и распределится по массе равномерно. Если кукурузного крахмала нет, автор советует заменить его таким же количеством муки по весу, а не картофельным крахмалом.
+                <span class="source-badge">⏱ серия2: 01:58–02:06, 01:00–01:11</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Инструмент: <strong>Венчик, миксер не нужен</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Сахар полностью растворился</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Яблоки в форме</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                На дно формы налейте немного заливки — ровно столько, чтобы скрыть дно. Затем выложите очищенные и порезанные яблоки, укладывая их горизонтально, а не вертикально: так их войдёт больше.
+                <span class="source-badge">⏱ серия2: 02:59–04:11</span>
+              </p>
+              <p>
+                По технологической карте — 560 г очищенных яблок; в видео автор называет 550 г. Кожуру можно не снимать.
+                <span class="source-badge">⏱ серия2: 03:28–03:37</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не половинками и не грушей:</strong> целые половинки не пропекутся как нужно, а груша при такой выпечке может стать жёсткой. Яблоко получается мягким, нежным и ароматным.
+                <span class="source-badge">⏱ серия2: 03:38–03:57</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Яблоки: <strong>560 г очищенных</strong></span>
+              <span class="param-pill">📏 Укладка: <strong>горизонтально, слоем</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Заливка и декор вилкой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Залейте яблоки заливкой по кругу, чтобы она проникла везде и объединила начинку.
+                <span class="source-badge">⏱ серия2: 04:19–04:40</span>
+              </p>
+              <p>
+                Верхушки теста прижмите вилкой — получится простой рельефный бортик.
+                <span class="source-badge">⏱ серия2: 04:47–05:15</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Инструмент: <strong>Вилка для декора</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Выпечка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте при 170 °C с конвекцией примерно 50 минут. В DOCX диапазон шире — 170–180 °C при том же времени.
+                <span class="source-badge">⏱ серия2: 05:40–05:50</span>
+              </p>
+              <div class="warning-box">
+                <strong>Следите за пирогом:</strong> заливка при выпечке поднимается, и автор предупреждает — «вдруг он убежит». Ориентируйтесь на золотистый бортик и схватившуюся заливку.
+                <span class="source-badge">⏱ серия2: 05:48–05:50</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Режим: <strong>170 °C, конвекция</strong></span>
+              <span class="param-pill">⏱ Время: <strong>~50 минут</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Заливка схватилась, бортик золотистый</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Остывание и подача</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Дайте пирогу полностью остыть, расстегните форму и выньте его. Автор смазывала форму маслом в последний момент — и пирог вышел без потерь.
+                <span class="source-badge">⏱ серия2: 05:53–06:39</span>
+              </p>
+              <p>
+                Посыпьте сахарной пудрой. При подаче можно добавить свежие ягоды и шарик мороженого — всё это хорошо сочетается.
+                <span class="source-badge">⏱ серия2: 06:00–06:10</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍽 Подача: <strong>Пудра, ягоды, мороженое</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Полностью остыл, легко вышел из формы</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Холодное, но не мороженое:</strong> масло и сметана — из холодильника, не из морозилки, иначе сметана отсечёт воду.</li>
+                <li><strong>Крошка, а не тесто:</strong> миксером доводим до состояния манной крупы, комок собираем руками.</li>
+                <li><strong>Кусочки масла — это хорошо:</strong> они дают слоение при выпечке.</li>
+                <li><strong>Тесто впрок:</strong> можно сделать вечером, а печь на следующий день; заготовка в форме хранится в морозилке до месяца.</li>
+                <li><strong>Сметана жирнее — вкуснее:</strong> 20% — хорошо, 25% — отлично, 30% — идеально.</li>
+                <li><strong>Крахмал через сахар:</strong> без комков, и вся заливка получается однородной.</li>
+                <li><strong>Яблоки горизонтально:</strong> так в форму входит больше начинки.</li>
+                <li><strong>Декор вилкой:</strong> простой способ сделать бортик аккуратным.</li>
+                <li><strong>Перевёрнутое дно формы:</strong> на пироге не отпечатывается полоска от замка.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Тёплое масло или сметана:</strong> крошка не получается, тесто выходит плотным.</li>
+                <li><strong>Вымешивание до гладкого комка:</strong> основа теряет слоистость и становится жёсткой.</li>
+                <li><strong>Долгая раскатка:</strong> тесто нагревается и липнет к пергаменту.</li>
+                <li><strong>Яблоки половинками или груша:</strong> начинка остаётся жёсткой.</li>
+                <li><strong>Крахмал всыпан в заливку без сахара:</strong> остаются комки.</li>
+                <li><strong>Взбивание заливки миксером:</strong> появляется пена, которая мешает заливке схватиться ровно.</li>
+                <li><strong>Несмазанная форма:</strong> пирог может не выйти из бортика.</li>
+                <li><strong>Нарезка горячим:</strong> заливка ещё не схватилась, куски ломаются.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «Комментарии.docx» — рецептура с точными граммовками; CSV «Расшифровка Торт_Цветаевский_пирог.csv» — серия1 (тесто и форма), серия2 (заливка, сборка, выпечка). Таймкоды взяты из CSV.</li>
+              <li><strong>Фото:</strong> реальное фото пирога из DOCX (кадр из публикации автора); вырезано и сконвертировано в JPG.</li>
+              <li><strong>Расхождение по яблокам:</strong> в DOCX — 560 г очищенных яблок, в видео автор называет 550 г. На странице 560 г, как в технологической карте.</li>
+              <li><strong>Расхождение по температуре:</strong> в DOCX «170–180 градусов, 50 минут», в видео — 170 °C с конвекцией и те же 50 минут. Взят вариант видео, диапазон DOCX упомянут в шаге.</li>
+              <li><strong>Расхождение по толщине теста:</strong> в DOCX 4–5 мм, в видео «примерно 5 миллиметров». Взят диапазон 4–5 мм.</li>
+              <li><strong>Расхождение по разрыхлителю:</strong> в DOCX 5 г, в видео — «самая обыкновенная чайная ложка». Взято 5 г.</li>
+              <li><strong>Дополнение из видео:</strong> немного заливки наливается на дно до яблок — в DOCX этого шага нет, но он показан и проговорён в серии2.</li>
+              <li><strong>Категория:</strong> пирог отнесён к «Выпечке», а не к «Тортам и десертам»: это открытый пирог на песочной основе с заливкой, он не собирается слоями и не требует крема.</li>
+              <li><strong>Пробелы:</strong> автор не называет число порций и срок хранения; 8 порций — расчёт по пирогу Ø20 см. Время подготовки и общее время в источниках не указаны и рассчитаны по операциям.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© CookBook — Автономная кулинарная библиотека.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>
