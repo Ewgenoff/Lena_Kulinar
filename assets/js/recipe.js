@@ -1,12 +1,15 @@
 /**
  * CookBook - Interactive Recipe Module
- * Features: Portion recalculator, interactive checklists, source timestamps toggle.
+ * Features: Portion recalculator, interactive checklists, sources toggle,
+ * collapsible shopping list, and auto-hide header on scroll.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   initPortionScaler();
   initChecklists();
   initSourcesToggle();
+  initShoppingCollapse();
+  initAutoHideHeader();
 });
 
 // 1. Portion Scaler
@@ -40,7 +43,6 @@ function initPortionScaler() {
       const calculated = baseAmount * ratio;
 
       if (isPiece) {
-        // Handle whole piece ingredients like eggs, berries
         if (Number.isInteger(calculated)) {
           el.textContent = `${calculated} ${unit}`;
         } else {
@@ -50,12 +52,10 @@ function initPortionScaler() {
           el.textContent = `${formatted} ${unit} (≈ ${lower}–${upper} шт.)`;
         }
       } else {
-        // Grams, ml, tsp
         let displayVal;
         if (calculated >= 25) {
           displayVal = Math.round(calculated);
         } else {
-          // Keep 1 decimal for small amounts (e.g. tsp of cocoa)
           displayVal = Math.round(calculated * 10) / 10;
           displayVal = displayVal.toString().replace('.', ',');
         }
@@ -87,11 +87,10 @@ function initPortionScaler() {
   }
 }
 
-// 2. Interactive Checklists (Ingredients, Shopping List & Steps)
+// 2. Interactive Checklists (Ingredients & Shopping List)
 function initChecklists() {
-  const recipeId = document.body.dataset.recipeId || 'kiev-cake';
+  const recipeId = document.body.dataset.recipeId || 'recipe';
 
-  // Recipe Ingredients & Shopping List Checkboxes
   const listCheckboxes = document.querySelectorAll('.ingredient-checkbox, .shopping-checkbox');
   listCheckboxes.forEach((cb, index) => {
     const storageKey = `cb_chk_${recipeId}_${index}`;
@@ -112,31 +111,9 @@ function initChecklists() {
       }
     });
   });
-
-  // Steps Complete Toggle
-  const stepCheckboxes = document.querySelectorAll('.step-checkbox');
-  stepCheckboxes.forEach((cb, index) => {
-    const storageKey = `cb_step_${recipeId}_${index}`;
-    const stepCard = cb.closest('.step-card');
-
-    if (sessionStorage.getItem(storageKey) === 'true') {
-      cb.checked = true;
-      stepCard.classList.add('completed');
-    }
-
-    cb.addEventListener('change', () => {
-      if (cb.checked) {
-        stepCard.classList.add('completed');
-        sessionStorage.setItem(storageKey, 'true');
-      } else {
-        stepCard.classList.remove('completed');
-        sessionStorage.removeItem(storageKey);
-      }
-    });
-  });
 }
 
-// 3. Timestamps Toggle ("Показать источники")
+// 3. Timestamps Toggle ("Таймкоды")
 function initSourcesToggle() {
   const toggle = document.getElementById('toggleSources');
   if (!toggle) return;
@@ -156,4 +133,72 @@ function initSourcesToggle() {
       localStorage.setItem('cookbook_show_sources', 'false');
     }
   });
+}
+
+// 4. Collapsible Shopping List ("Купить в магазине" свёрнут по умолчанию)
+function initShoppingCollapse() {
+  const section = document.getElementById('shoppingSection');
+  if (!section) return;
+
+  const header = section.querySelector('.shopping-header');
+  const toggleBtn = section.querySelector('.shopping-toggle-btn');
+  const toggleText = section.querySelector('.shopping-toggle-btn .toggle-text');
+  if (!header) return;
+
+  header.style.cursor = 'pointer';
+  header.setAttribute('role', 'button');
+  header.setAttribute('tabindex', '0');
+  header.setAttribute('aria-expanded', 'false');
+
+  const toggle = (e) => {
+    // Не реагировать, если клик по чекбоксу или инпуту
+    if (e.target.closest('input, label.shopping-item-content')) return;
+
+    const isOpen = section.classList.toggle('is-open');
+    header.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    if (toggleBtn) {
+      toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+    if (toggleText) {
+      toggleText.textContent = isOpen ? 'Свернуть' : 'Развернуть';
+    }
+  };
+
+  header.addEventListener('click', toggle);
+  header.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle(e);
+    }
+  });
+}
+
+// 5. Auto-hide Header on Scroll (скрытие шапки при прокрутке контента)
+function initAutoHideHeader() {
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+
+  let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+  let ticking = false;
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+        const delta = currentScrollY - lastScrollY;
+
+        // При скролле вниз (пролистывание страницы вверх) шапка скрывается
+        // При скролле вверх или в самом начале страницы шапка возвращается
+        if (currentScrollY > 70 && delta > 4) {
+          header.classList.add('header-hidden');
+        } else if (delta < -4 || currentScrollY <= 20) {
+          header.classList.remove('header-hidden');
+        }
+
+        lastScrollY = Math.max(0, currentScrollY);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
 }

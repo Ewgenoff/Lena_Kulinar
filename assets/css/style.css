@@ -29,6 +29,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-sans);
   background-color: var(--bg-main);
@@ -36,6 +40,8 @@ body {
   line-height: 1.65;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 a {
@@ -52,6 +58,12 @@ a {
   z-index: 100;
   backdrop-filter: blur(8px);
   background-color: rgba(255, 255, 255, 0.95);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.site-header.header-hidden {
+  transform: translateY(-100%);
 }
 
 .header-container {
@@ -340,20 +352,62 @@ a {
   overflow: hidden;
 }
 
+/* Card Meta: построчный вывод (время сверху, порции и сложность снизу) */
 .card-meta {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 14px;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 12px;
+  margin-top: auto;
   border-top: 1px solid var(--border-light);
-  font-size: 13px;
+  background: var(--bg-card-subtle);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  line-height: 1.35;
   color: var(--text-muted);
 }
 
-.meta-item {
+.meta-row {
   display: flex;
   align-items: center;
+  width: 100%;
+}
+
+.meta-row-time {
+  gap: 6px;
+  font-weight: 500;
+}
+
+.meta-row-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: inline-flex;
+  align-items: center;
   gap: 5px;
+  min-width: 0;
+}
+
+.meta-item.meta-difficulty {
+  margin-left: auto;
+  font-weight: 600;
+  color: var(--text-main);
+  white-space: nowrap;
+}
+
+.meta-icon {
+  font-size: 13px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.meta-text {
+  overflow-wrap: break-word;
 }
 
 /* Empty State */
@@ -431,7 +485,6 @@ a {
   margin-bottom: 24px;
 }
 
-/* Recipe Summary Quick Facts Grid */
 .facts-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -461,7 +514,6 @@ a {
   color: var(--text-main);
 }
 
-/* Recipe Main Hero Grid (Image + Controls) */
 .recipe-hero-split {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -492,7 +544,6 @@ a {
   justify-content: center;
 }
 
-/* Portion Scaler Box */
 .portion-box {
   background: var(--bg-card);
   border: 1px solid var(--border-light);
@@ -564,7 +615,6 @@ a {
   padding: 0;
 }
 
-/* Tools bar (Sources toggle, Print, Share) */
 .recipe-toolbar {
   display: flex;
   align-items: center;
@@ -634,7 +684,6 @@ input:checked + .slider:before {
   color: var(--text-main);
 }
 
-/* Recipe Content Layout */
 .recipe-content-grid {
   display: grid;
   grid-template-columns: 340px 1fr;
@@ -650,8 +699,22 @@ input:checked + .slider:before {
   padding: 28px 24px;
   box-shadow: var(--shadow-sm);
   position: sticky;
-  top: 90px;
+  top: 80px;
   align-self: start;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.ingredients-card::-webkit-scrollbar {
+  width: 5px;
+}
+.ingredients-card::-webkit-scrollbar-track {
+  background: transparent;
+}
+.ingredients-card::-webkit-scrollbar-thumb {
+  background: var(--border-accent);
+  border-radius: 4px;
 }
 
 .section-heading {
@@ -732,7 +795,6 @@ input:checked + .slider:before {
   margin-top: 2px;
 }
 
-/* Instructions / Steps */
 .instructions-column {
   display: flex;
   flex-direction: column;
@@ -759,12 +821,6 @@ input:checked + .slider:before {
 
 .step-card:last-child {
   margin-bottom: 0;
-}
-
-.step-card.completed {
-  background: var(--bg-card-subtle);
-  border-color: var(--border-light);
-  opacity: 0.75;
 }
 
 .step-header {
@@ -801,13 +857,9 @@ input:checked + .slider:before {
   color: var(--text-main);
 }
 
+/* Полное скрытие галочки «Выполнено» */
 .step-complete-toggle {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 13px;
-  color: var(--text-muted);
-  cursor: pointer;
+  display: none !important;
 }
 
 .step-body {
@@ -848,9 +900,8 @@ input:checked + .slider:before {
   color: var(--text-main);
 }
 
-/* Source Timestamps Badge */
 .source-badge {
-  display: none; /* Hidden by default */
+  display: none;
   align-items: center;
   gap: 4px;
   font-size: 11px;
@@ -864,24 +915,18 @@ input:checked + .slider:before {
   vertical-align: middle;
 }
 
-/* When toggle is active */
 body.show-sources .source-badge {
   display: inline-flex;
 }
 
-/* Special Note & Tips Boxes */
 .tip-box {
   background: #FDF9EE;
-  border-left: 4px solid var(--gold);
+  border-left: 4px solid var(--accent-olive);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   padding: 16px 20px;
   margin: 18px 0;
   font-size: 14px;
   line-height: 1.6;
-}
-
-.tip-box strong {
-  color: #8C6220;
 }
 
 .warning-box {
@@ -894,11 +939,6 @@ body.show-sources .source-badge {
   line-height: 1.6;
 }
 
-.warning-box strong {
-  color: var(--accent-terracotta);
-}
-
-/* Additional Sections Card (Author Tips, Errors, Discrepancies) */
 .info-section-card {
   background: var(--bg-card);
   border: 1px solid var(--border-light);
@@ -932,7 +972,6 @@ body.show-sources .source-badge {
   margin-bottom: 8px;
 }
 
-/* Footer */
 .site-footer {
   border-top: 1px solid var(--border-light);
   background: #FFF;
@@ -942,7 +981,6 @@ body.show-sources .source-badge {
   color: var(--text-light);
 }
 
-/* Back Link */
 .back-link {
   display: inline-flex;
   align-items: center;
@@ -958,7 +996,6 @@ body.show-sources .source-badge {
   color: var(--accent-terracotta);
 }
 
-/* Collapsible info card (sources, discrepancies, notes) */
 .collapsible-card > .section-heading {
   cursor: pointer;
   user-select: none;
@@ -993,92 +1030,8 @@ body.show-sources .source-badge {
   display: block;
 }
 
-/* Responsive adjustments */
-@media (max-width: 900px) {
-  .recipe-hero-split {
-    grid-template-columns: 1fr;
-  }
-  .recipe-content-grid {
-    grid-template-columns: 1fr;
-  }
-  .ingredients-card {
-    position: static;
-  }
-  .info-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-  .hero-catalog h2 {
-    font-size: 28px;
-  }
-  .recipe-title {
-    font-size: 28px;
-  }
-  .recipe-header-card, .instructions-card, .ingredients-card, .info-section-card {
-    padding: 20px;
-  }
-}
-
 /* ================================================= */
-/* PRINT STYLESHEET                                  */
-/* ================================================= */
-@media print {
-  body {
-    background: #FFF !important;
-    color: #000 !important;
-    font-size: 12pt;
-  }
-  .site-header,
-  .recipe-toolbar,
-  .portion-controls,
-  .portion-reset-btn,
-  .step-complete-toggle,
-  .ingredient-checkbox,
-  .back-link,
-  .site-footer {
-    display: none !important;
-  }
-  .container {
-    max-width: 100% !important;
-    padding: 0 !important;
-  }
-  .recipe-header-card,
-  .instructions-card,
-  .ingredients-card,
-  .info-section-card,
-  .step-card {
-    border: none !important;
-    box-shadow: none !important;
-    padding: 10px 0 !important;
-  }
-  .recipe-content-grid {
-    display: block !important;
-  }
-  .ingredients-card {
-    position: static !important;
-    border-bottom: 1px solid #ccc !important;
-    margin-bottom: 20px !important;
-  }
-  .step-card {
-    page-break-inside: avoid;
-    border-bottom: 1px solid #eee !important;
-  }
-  .source-badge {
-    display: none !important;
-  }
-  .collapsible-body {
-    display: block !important;
-  }
-  .collapsible-card > .section-heading::after {
-    display: none !important;
-  }
-}
-
-
-/* ================================================= */
-/* SHOPPING LIST COMPONENT ("Купить в магазине")     */
+/* SHOPPING LIST COMPONENT («Купить в магазине»)     */
 /* ================================================= */
 
 .shopping-list-card {
@@ -1086,8 +1039,8 @@ body.show-sources .source-badge {
   border: 1px solid var(--border-light);
   border-left: 5px solid var(--accent-olive);
   border-radius: var(--radius-lg);
-  padding: 28px 32px;
-  margin-bottom: 36px;
+  padding: 24px 28px;
+  margin-bottom: 32px;
   box-shadow: var(--shadow-sm);
 }
 
@@ -1097,18 +1050,20 @@ body.show-sources .source-badge {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 6px;
+  cursor: pointer;
+  user-select: none;
 }
 
 .shopping-title-wrap {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-wrap: wrap;
 }
 
 .shopping-title {
   font-family: var(--font-serif);
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   color: var(--text-main);
   display: flex;
@@ -1126,24 +1081,64 @@ body.show-sources .source-badge {
   border: 1px solid rgba(91, 107, 72, 0.2);
 }
 
+.shopping-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-card-subtle);
+  border: 1px solid var(--border-light);
+  color: var(--accent-olive);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.shopping-toggle-btn:hover {
+  background: var(--accent-olive-light);
+  border-color: var(--accent-olive);
+}
+
+.shopping-toggle-btn .toggle-icon {
+  font-size: 10px;
+  transition: transform 0.25s ease;
+}
+
+.shopping-list-card.is-open .shopping-toggle-btn .toggle-icon {
+  transform: rotate(180deg);
+}
+
+.shopping-collapsible-body {
+  display: none;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-light);
+}
+
+.shopping-list-card.is-open .shopping-collapsible-body {
+  display: block;
+}
+
 .shopping-subtitle {
   font-size: 14px;
   color: var(--text-muted);
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   line-height: 1.5;
 }
 
 .shopping-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: 20px;
 }
 
 .shopping-col {
   background: var(--bg-card-subtle);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
-  padding: 20px;
+  padding: 18px;
 }
 
 .shopping-col-title {
@@ -1152,7 +1147,7 @@ body.show-sources .source-badge {
   text-transform: uppercase;
   letter-spacing: 0.6px;
   color: var(--accent-terracotta);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -1162,7 +1157,7 @@ body.show-sources .source-badge {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .shopping-item {
@@ -1220,12 +1215,302 @@ body.show-sources .source-badge {
   margin-top: 2px;
 }
 
-@media (max-width: 800px) {
+/* ================================================= */
+/* МОБИЛЬНАЯ АДАПТАЦИЯ (ПЛОТНОСТЬ И БЫСТРОДЕЙСТВИЕ)  */
+/* ================================================= */
+
+@media (max-width: 900px) {
+  .recipe-hero-split {
+    grid-template-columns: 1fr;
+  }
+  .recipe-content-grid {
+    grid-template-columns: 1fr;
+  }
+  .ingredients-card {
+    position: static;
+    max-height: none;
+    overflow: visible;
+  }
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .container {
+    padding: 14px 12px 36px;
+  }
+  .header-container {
+    padding: 10px 14px;
+  }
+  .brand-logo {
+    font-size: 22px;
+  }
+  .brand-text h1 {
+    font-size: 18px;
+  }
+  .hero-catalog {
+    padding: 18px 8px 12px;
+  }
+  .hero-catalog h2 {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+  .hero-catalog p {
+    font-size: 13.5px;
+    line-height: 1.45;
+  }
+
+  /* Поиск и фильтры */
+  .search-filter-section {
+    padding: 14px 12px;
+    margin-bottom: 18px;
+    border-radius: var(--radius-md);
+  }
+  .search-bar-wrapper {
+    margin-bottom: 12px;
+  }
+  .search-input {
+    padding: 10px 38px 10px 40px;
+    font-size: 14px;
+    border-radius: var(--radius-sm);
+  }
+  .chip {
+    padding: 5px 11px;
+    font-size: 12px;
+  }
+
+  /* Сетка рецептов на главной */
+  .recipes-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .recipe-card {
+    border-radius: var(--radius-md);
+  }
+  .card-image-box {
+    height: 180px;
+  }
+  .card-body {
+    padding: 14px 12px;
+  }
+  .card-title {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+  .card-desc {
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    -webkit-line-clamp: 2;
+  }
+  .card-meta {
+    padding: 8px 8px;
+    font-size: 11px;
+    gap: 4px;
+  }
+  .meta-icon {
+    font-size: 13px;
+  }
+  
+
+  /* Карточки детальной страницы */
+  .recipe-header-card,
+  .instructions-card,
+  .ingredients-card,
+  .info-section-card,
+  .shopping-list-card {
+    padding: 16px 14px;
+    margin-bottom: 14px;
+    border-radius: var(--radius-md);
+  }
+
+  .recipe-title {
+    font-size: 22px;
+    line-height: 1.25;
+    margin-bottom: 8px;
+  }
+  .recipe-lead {
+    font-size: 13.5px;
+    line-height: 1.45;
+    margin-bottom: 14px;
+  }
+
+  /* Сводные плашки */
+  .facts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    padding: 8px 10px;
+    border-radius: var(--radius-sm);
+  }
+  .fact-label {
+    font-size: 10px;
+    margin-bottom: 2px;
+  }
+  .fact-value {
+    font-size: 13.5px;
+  }
+
+  /* Медиа и калькулятор */
+  .recipe-hero-split {
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+  .recipe-main-image-box {
+    max-height: 230px;
+    border-radius: var(--radius-md);
+  }
+  .portion-box {
+    padding: 12px 14px;
+    border-radius: var(--radius-md);
+  }
+  .portion-title {
+    font-size: 12.5px;
+    margin-bottom: 8px;
+  }
+  .portion-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 16px;
+  }
+  .portion-input-val {
+    font-size: 22px;
+    min-width: 44px;
+  }
+  .recipe-toolbar {
+    padding: 10px 12px;
+    border-radius: var(--radius-md);
+  }
+
+  /* Список покупок */
   .shopping-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 10px;
   }
-  .shopping-list-card {
-    padding: 20px;
+  .shopping-col {
+    padding: 10px 12px;
+  }
+  .shopping-item {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+
+  /* Шаги приготовления */
+  .step-card {
+    padding: 12px 10px;
+    margin-bottom: 10px;
+    border-radius: var(--radius-sm);
+  }
+  .step-header {
+    margin-bottom: 8px;
+  }
+  .step-badge {
+    width: 22px;
+    height: 22px;
+    font-size: 11px;
+  }
+  .step-title {
+    font-size: 15px;
+  }
+  .step-body {
+    font-size: 13.5px;
+    line-height: 1.45;
+  }
+  .step-body p {
+    margin-bottom: 8px;
+  }
+  .tip-box, .warning-box {
+    padding: 10px 12px;
+    margin: 10px 0;
+    font-size: 12.5px;
+    line-height: 1.4;
+  }
+  .step-parameters {
+    gap: 6px;
+    margin-top: 8px;
+    padding-top: 8px;
+  }
+  .param-pill {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+
+  /* Ингредиенты */
+  .section-heading {
+    font-size: 18px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+  }
+  .ingredient-group-title {
+    font-size: 12px;
+    margin: 12px 0 6px;
+  }
+  .ingredients-list {
+    gap: 6px;
+  }
+  .ingredient-item {
+    font-size: 13.5px;
+    padding: 4px 2px;
+  }
+  .site-footer {
+    padding: 20px 14px;
+    font-size: 12px;
+  }
+}
+
+/* ================================================= */
+/* PRINT STYLESHEET                                  */
+/* ================================================= */
+@media print {
+  body {
+    background: #FFF !important;
+    color: #000 !important;
+    font-size: 12pt;
+  }
+  .site-header,
+  .recipe-toolbar,
+  .portion-controls,
+  .portion-reset-btn,
+  .step-complete-toggle,
+  .ingredient-checkbox,
+  .back-link,
+  .site-footer {
+    display: none !important;
+  }
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  .recipe-header-card,
+  .instructions-card,
+  .ingredients-card,
+  .info-section-card,
+  .step-card {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 10px 0 !important;
+  }
+  .recipe-content-grid {
+    display: block !important;
+  }
+  .ingredients-card {
+    position: static !important;
+    border-bottom: 1px solid #ccc !important;
+    margin-bottom: 20px !important;
+  }
+  .step-card {
+    page-break-inside: avoid;
+    border-bottom: 1px solid #eee !important;
+  }
+  .source-badge {
+    display: none !important;
+  }
+  .collapsible-body,
+  .shopping-collapsible-body {
+    display: block !important;
+  }
+  .collapsible-card > .section-heading::after,
+  .shopping-toggle-btn {
+    display: none !important;
   }
 }

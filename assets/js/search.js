@@ -272,9 +272,20 @@ function renderRecipes() {
         </h3>
         <p class="card-desc">${recipe.description}</p>
         <div class="card-meta">
-          <span class="meta-item">⏱ ${recipe.time}</span>
-          <span class="meta-item">🍽 ${recipe.servings}</span>
-          <span class="meta-item">📊 ${recipe.difficulty}</span>
+          <div class="meta-row meta-row-time">
+            <span class="meta-icon">⏱</span>
+            <span class="meta-text">${recipe.time}</span>
+          </div>
+          <div class="meta-row meta-row-bottom">
+            <div class="meta-item meta-servings">
+              <span class="meta-icon">🍽</span>
+              <span class="meta-text">${recipe.servings}</span>
+            </div>
+            <div class="meta-item meta-difficulty">
+              <span class="meta-icon">📊</span>
+              <span class="meta-text">${recipe.difficulty}</span>
+            </div>
+          </div>
         </div>
       </div>
     </article>

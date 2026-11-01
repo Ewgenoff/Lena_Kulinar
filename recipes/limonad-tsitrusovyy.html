@@ -94,7 +94,7 @@
               <input type="checkbox" id="toggleSources">
               <span class="slider"></span>
             </div>
-            <span class="toggle-label">Показать источники (видео-таймкоды)</span>
+            <span class="toggle-label">Таймкоды</span>
           </label>
         </div>
       </div>
@@ -107,8 +107,13 @@
           <h2 class="shopping-title">🛒 Купить в магазине</h2>
           <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">10</span> порций</span>
         </div>
-      </div>
-      <p class="shopping-subtitle">
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
         Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Отмечайте купленные позиции галочками прямо в магазине.
       </p>
 
@@ -198,6 +203,7 @@
             </li>
           </ul>
         </div>
+      </div>
       </div>
     </section>
 
@@ -318,9 +324,6 @@
                 <span class="step-badge">1</span>
                 <h3 class="step-title">Приготовление сахарного сиропа</h3>
               </div>
-              <label class="step-complete-toggle">
-                <input type="checkbox" class="step-checkbox"> выполнено
-              </label>
             </div>
             <div class="step-body">
               <p>
@@ -345,9 +348,6 @@
                 <span class="step-badge">2</span>
                 <h3 class="step-title">Подготовка цитрусовых и снятие цедры</h3>
               </div>
-              <label class="step-complete-toggle">
-                <input type="checkbox" class="step-checkbox"> выполнено
-              </label>
             </div>
             <div class="step-body">
               <p>
@@ -373,9 +373,6 @@
                 <span class="step-badge">3</span>
                 <h3 class="step-title">Отжим свежего цитрусового сока (фреша)</h3>
               </div>
-              <label class="step-complete-toggle">
-                <input type="checkbox" class="step-checkbox"> выполнено
-              </label>
             </div>
             <div class="step-body">
               <p>
@@ -405,9 +402,6 @@
                 <span class="step-badge">4</span>
                 <h3 class="step-title">Двухэтапная экстракция цедры блендером</h3>
               </div>
-              <label class="step-complete-toggle">
-                <input type="checkbox" class="step-checkbox"> выполнено
-              </label>
             </div>
             <div class="step-body">
               <p>
@@ -441,9 +435,6 @@
                 <span class="step-badge">5</span>
                 <h3 class="step-title">Купажирование концентрата и доведение до 5 литров</h3>
               </div>
-              <label class="step-complete-toggle">
-                <input type="checkbox" class="step-checkbox"> выполнено
-              </label>
             </div>
             <div class="step-body">
               <p>
@@ -468,9 +459,6 @@
                 <span class="step-badge">6</span>
                 <h3 class="step-title">Охлаждение, подача и тропические вариации</h3>
               </div>
-              <label class="step-complete-toggle">
-                <input type="checkbox" class="step-checkbox"> выполнено
-              </label>
             </div>
             <div class="step-body">
               <p>
