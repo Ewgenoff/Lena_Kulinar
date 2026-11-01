@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кулинарная библиотека | CookBook</title>
+  <meta name="description" content="Автономная кулинарная библиотека проверенных домашних и ресторанных рецептов">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <span class="btn-secondary" style="cursor: default;">✨ 100% точность технологий</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero-catalog">
+      <h2>Коллекция кулинарных рецептов</h2>
+      <p>Выверенные пошаговые технологии, масштабируемые раскладки и аутентичные секреты кондитеров и шефов</p>
+    </section>
+
+    <!-- Поиск и фильтры -->
+    <section class="search-filter-section">
+      <div class="search-bar-wrapper">
+        <span class="search-icon">🔍</span>
+        <input 
+          type="text" 
+          id="recipeSearchInput" 
+          class="search-input" 
+          placeholder="Поиск по названию или ингредиентам (например: орехи какао, сгущенка, белки)..."
+          autocomplete="off"
+        >
+        <button id="searchClearBtn" class="search-clear" title="Очистить поиск">✕</button>
+      </div>
+
+      <div class="filter-row">
+        <div class="category-chips">
+          <button class="chip active" data-category="all">Все рецепты</button>
+          <button class="chip" data-category="Торты и десерты">Торты и десерты</button>
+          <button class="chip" data-category="Выпечка">Выпечка</button>
+          <button class="chip" data-category="Основные блюда">Основные блюда</button>
+        </div>
+
+        <div class="sort-select-wrapper">
+          <label for="sortSelect">Сортировка:</label>
+          <select id="sortSelect" class="sort-select">
+            <option value="default">По умолчанию</option>
+            <option value="name-asc">По названию (А–Я)</option>
+            <option value="name-desc">По названию (Я–А)</option>
+            <option value="time-asc">По времени (быстрее)</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Сетка рецептов -->
+    <section id="recipesGrid" class="recipes-grid">
+      <!-- Карточки наполняются динамически через search.js -->
+    </section>
+
+    <!-- Заглушка при отсутствии совпадений -->
+    <div id="emptyState" class="empty-state">
+      <div class="empty-state-icon">🥣</div>
+      <h3>Ничего не нашлось</h3>
+      <p class="text-muted">Попробуйте изменить формулировку запроса или очистить фильтр ингредиентов.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© CookBook — Автономная кулинарная библиотека. Подготовлено для размещения на GitHub Pages.</p>
+  </footer>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/search.js"></script>
+</body>
+</html>
