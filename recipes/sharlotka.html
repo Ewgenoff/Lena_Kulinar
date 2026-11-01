@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Шарлотка с яблоками — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Классическая домашняя шарлотка: белки в крепкую меренгу, желтки с сахаром и ванилью, минимум муки и много яблок дольками с кожурой. Выпекается 40 минут при 180 °C в кольце без дна.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="sharlotka">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Легкая</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Шарлотка с яблоками (высокая, на меренге)</h1>
+      <p class="recipe-lead">
+        Четыре обязательных ингредиента и пятый — ванильный сахар: сахар, яйца С1, мука и яблоки. Белки взбиваются в крепкую меренгу, желтки — с сахаром и ванилью, всё соединяется лопаткой за 30–40 секунд, а муки здесь всего 100 г на 6 яиц. Яблоки идут дольками прямо с кожурой, поэтому пирог получается высоким, влажным внутри и с хрустящей румяной корочкой.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">15 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">25 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">1,5–2 часа (остывание)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~2–2,5 часа</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 пирог Ø20 см (кольцо 8,5 см)</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/sharlotka.jpg" alt="Высокая яблочная шарлотка, посыпанная сахарной пудрой" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (8 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="8">8</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (кусков)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Все граммовки автоматически масштабируются. Базовая раскладка — высокая шарлотка в кольце Ø20 см высотой 8,5 см на 8 порций; в форме 20–24 см пирог получится ниже.
+          </p>
+        </div>
+
+        <!-- Переключатель источников и таймкодов видео -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Основной контент: Ингредиенты + Технология -->
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">8</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: основные продукты -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍎 Основные продукты</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яблоки средние</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="шт." data-piece="true">5 шт.</span>
+                <span class="shopping-hint">Около 1 кг. Плотные, кисло-сладкие сорта; кожуру не снимаем</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="6" data-unit="шт." data-piece="true">6 шт.</span>
+                <span class="shopping-hint">Обязательно комнатной температуры: разделить на белки и желтки нужно чисто</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Просеять заранее. Для безглютеновой версии — столько же безглютеновой смеси</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Половина идёт в белки, половина — в желтки</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: добавки и подача -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧁 Добавки и подача</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ванильный сахар с натуральной ванилью</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="пакетик">1 пакетик</span>
+                <span class="shopping-hint">Необязательный, но желательный пятый ингредиент</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong> — для подачи
+                <span class="shopping-hint">По вкусу, чтобы посыпать остывший пирог</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Корица (опционально)</strong> — по вкусу
+                <span class="shopping-hint">Добавляется в желтковую массу, если любите</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Безглютеновая мука (опционально)</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Только смесь для выпечки: рисовую или кукурузную муку в чистом виде автор не рекомендует</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пергамент</strong> — под кольцо без дна
+                <span class="shopping-hint">Кольцо Ø20 см высотой 8,5 см ничем не смазывается</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Тесто</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="6" data-unit="шт." data-piece="true">6 шт.</span> — Яйца категории С1
+              <span class="ingredient-note">Комнатной температуры; белки и желтки разделить очень чисто</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сахар
+              <span class="ingredient-note">75 г в белки, 75 г в желтки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Мука пшеничная
+              <span class="ingredient-note">Просеянная; вводится последней и вмешивается быстрее всего</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="пакетик">1 пакетик</span> — Ванильный сахар с семенами ванили
+              <span class="ingredient-note">Пятый, необязательный ингредиент</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По желанию — Корица
+              <span class="ingredient-note">Добавляется в желтковую массу вместе с ванильным сахаром</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="шт." data-piece="true">5 шт.</span> — Яблоки средние
+              <span class="ingredient-note">Сердцевину удалить, нарезать дольками; кожуру оставить</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Подача</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Сахарная пудра
+              <span class="ingredient-note">Посыпать полностью остывший пирог</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка яблок и формы</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Яблоки помойте, удалите сердцевину и нарежьте дольками. Кожуру не снимайте — автору нравится, как она звучит в готовом пироге, но если не любите, можно очистить.
+                <span class="source-badge">⏱ Шарлотка: 01:29–01:32</span>
+              </p>
+              <p>
+                Разъёмное кольцо Ø20 см высотой 8,5 см поставьте на пергамент. Дна у кольца нет и ничем не смазывается — вся подготовка формы состоит в этом.
+                <span class="source-badge">⏱ Шарлотка: 05:19–05:51</span>
+              </p>
+              <p>
+                Яйца заранее достаньте из холодильника: они должны быть комнатной температуры, иначе белок не взобьётся в крепкую меренгу.
+                <span class="source-badge">⏱ Шарлотка: 01:04–01:18</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>10–15 мин</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Кольцо Ø20 см, пергамент</strong></span>
+              <span class="param-pill">🍎 Яблоки: <strong>Дольки с кожурой</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Белки в крепкую меренгу</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разделите яйца на белки и желтки. Разделять нужно очень чисто: даже капля желтка или жира не даст взбить устойчивую пену. Желтки пока отставьте — ими займётесь вторыми, чтобы не мыть венчики.
+                <span class="source-badge">⏱ Шарлотка: 00:53–01:08</span>
+              </p>
+              <p>
+                Начните взбивать белки. Когда появится мелкая сетка пузырьков и рельеф, введите половину сахара — 75 г — и взбивайте до готовности.
+                <span class="source-badge">⏱ Шарлотка: 01:32–02:14</span>
+              </p>
+              <div class="warning-box">
+                <strong>Тест готовности:</strong> переверните миску вверх дном — меренга должна остаться на месте. Она блестит, а пики острые, неподвижные и не опадают. Если сомневаетесь, что взбили хорошо, — повзбивайте ещё немного.
+                <span class="source-badge">⏱ Шарлотка: 02:24–02:46</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>4–5 мин</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Миксер, обезжиренная чаша</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Блестящая меренга с острыми пиками</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Желтки с сахаром и ванилью</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                К желткам добавьте вторую половину сахара — 75 г — и взбейте до пышного светлого состояния. Сахар в желтки заранее не кладите: они начнут «гореть» крупинками.
+                <span class="source-badge">⏱ Шарлотка: 02:46–03:02</span>
+              </p>
+              <p>
+                Добавьте ванильный сахар с натуральной ванилью и, если любите, корицу. Взбейте ещё минуту.
+                <span class="source-badge">⏱ Шарлотка: 03:06–03:21</span>
+              </p>
+              <div class="tip-box">
+                <strong>Ориентир:</strong> желточная масса должна увеличиться примерно вдвое и посветлеть. Растворять сахар до последней крупинки не нужно — этой задачи не стоит.
+                <span class="source-badge">⏱ Шарлотка: 03:48–04:01</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>2–3 мин</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Пышная светлая масса, вдвое больше</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Объединение масс лопаткой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите желточную массу к взбитым белкам и объедините поднимающими движениями лопаткой снизу вверх — так, чтобы сохранить воздух в меренге.
+                <span class="source-badge">⏱ Шарлотка: 03:38–04:06</span>
+              </p>
+              <div class="warning-box">
+                <strong>Таймер:</strong> мешайте не дольше 30–40 секунд. Не делайте прихлопывающих движений — от них воздух выходит, и пирог получается низким. Небольшие кусочки непромешанного белка в массе — это нормально и не страшно.
+                <span class="source-badge">⏱ Шарлотка: 04:06–04:32</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>30–40 секунд</strong></span>
+              <span class="param-pill">🥣 Инструмент: <strong>Силиконовая лопатка</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Введение муки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Просейте муку и добавьте сразу всю — не порциями. Перемешивайте быстрее, чем желтки: мука — сухой ингредиент, и долгое вымешивание убивает пышность.
+                <span class="source-badge">⏱ Шарлотка: 04:33–04:56</span>
+              </p>
+              <p>
+                Как только вся мука стала влажной — перемешивание прекращайте. Тесто густое, оно не течёт и остаётся на венчике и лопатке.
+                <span class="source-badge">⏱ Шарлотка: 05:01–05:14</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>10–20 секунд</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Мука увлажнена, тесто густое</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Яблоки в тесте и выкладка в кольцо</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отложите 2 столовые ложки с горкой теста и распределите по дну кольца — это необязательный, но приятный штрих: верхушка пирога получится ровнее и красивее.
+                <span class="source-badge">⏱ Шарлотка: 05:52–06:21</span>
+              </p>
+              <p>
+                Остальные яблоки отправьте в тесто и несколькими движениями погрузите их, как в кляр. Теста и яблок должно быть примерно поровну.
+                <span class="source-badge">⏱ Шарлотка: 06:21–06:54</span>
+              </p>
+              <p>
+                Переложите массу в кольцо и придавливающими движениями лопатки выровняйте поверхность. Пирог вырастет, но не так сильно, как обычный бисквит, поэтому наполнять кольцо можно смело — автор заполняет больше половины, чтобы шарлотка была высокой.
+                <span class="source-badge">⏱ Шарлотка: 06:51–07:35</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Пропорция: <strong>Теста и яблок примерно поровну</strong></span>
+              <span class="param-pill">📏 Кольцо: <strong>Ø20 см, высота 8,5 см</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Ровная поверхность, тесто не течёт</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Выпекание, остывание и подача</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте 40 минут при 180 °C, режим «верх-низ» и лучше без конвекции. Если без конвекции духовка не работает — ставьте 170 °C. В форме 20–24 см автор даёт 40–50 минут.
+                <span class="source-badge">⏱ Шарлотка: 07:36–08:13</span>
+              </p>
+              <div class="warning-box">
+                <strong>Если тесто вытекает:</strong> небольшое количество — нормально. Если течёт сильно, значит белок недовзбит или массы перемешивались слишком долго.
+                <span class="source-badge">⏱ Шарлотка: 07:51–08:03</span>
+              </div>
+              <div class="warning-box">
+                <strong>Не спешите вынимать:</strong> доставать шарлотку из кольца можно только когда она полностью остыла — иначе пирог осядет и развалится.
+                <span class="source-badge">⏱ Шарлотка: 08:34–08:44</span>
+              </div>
+              <p>
+                Остывший пирог посыпьте сахарной пудрой и подавайте с чаем.
+                <span class="source-badge">⏱ Шарлотка: 08:19–08:31</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Температура: <strong>180 °C без конвекции / 170 °C с ней</strong></span>
+              <span class="param-pill">⏱ Время: <strong>40 минут (40–50 в форме 20–24 см)</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Румяная корочка, сухая шпажка</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Всего четыре обязательных ингредиента:</strong> сахар, яйца С1, мука и яблоки. Ванильный сахар — пятый, желательный.</li>
+                <li><strong>Меренгу лучше перевзбить, чем недовзбить:</strong> если кажется, что белок взбит идеально, повзбивайте ещё немного — от этого зависит, вытечет ли тесто.</li>
+                <li><strong>Желтки — вторыми:</strong> так венчики не нужно мыть между этапами.</li>
+                <li><strong>Кожура яблок:</strong> автор специально её не снимает — она даёт вкус и текстуру. Корицу добавляет по желанию, в желтковую массу.</li>
+                <li><strong>Высокий пирог:</strong> теста в кольцо можно класть больше половины — шарлотка поднимается умеренно, зато получается высокой.</li>
+                <li><strong>Безглютеновая версия:</strong> муки нужно столько же по весу, но рецепт лучше делить пополам и печь в форме 16 см. Рисовую или кукурузную муку в чистом виде автор не рекомендует — только готовую смесь.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Капля желтка в белке:</strong> меренга не взобьётся до крепких пиков.</li>
+                <li><strong>Холодные яйца:</strong> белок взбивается хуже и нестабильно — яйца должны быть комнатной температуры.</li>
+                <li><strong>Сахар в желтках заранее:</strong> желтки «горят» крупинками и сворачиваются.</li>
+                <li><strong>Долгое перемешивание:</strong> воздух выходит, пирог получается плотным, а тесто вытекает из кольца.</li>
+                <li><strong>Порционный ввод муки:</strong> муку добавляют сразу всю и мешают максимально быстро.</li>
+                <li><strong>Раннее извлечение из кольца:</strong> горячая шарлотка оседает — ждать полного остывания обязательно.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> видео «Шарлотка» (расшифровка с таймкодами, 115 реплик) и DOCX с точной рецептурой автора.</li>
+              <li><strong>Время выпечки:</strong> в видео — 40 минут при 180 °C, в DOCX — 40–50 минут и форма 20–24 см. На странице указано 40 минут для кольца Ø20 см и 40–50 минут для формы 20–24 см.</li>
+              <li><strong>Сахар:</strong> в рецептуре 150 г; автор делит его пополам — 75 г в белки и 75 г в желтки. В видео проговаривается «половина сахара», точные граммовки — из DOCX.</li>
+              <li><strong>Ванильный сахар:</strong> количество в источниках не указано — взят 1 пакетик.</li>
+              <li><strong>Форма:</strong> в видео — разъёмное кольцо без дна Ø20 см высотой 8,5 см; в DOCX — «форма 20–24 см». На странице описано кольцо, форма 20–24 см указана как альтернатива.</li>
+              <li><strong>Фото:</strong> в DOCX лежит скриншот страницы VK с чужим фото пирога — на странице стоит сгенерированное изображение-заглушка, его стоит заменить настоящим.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© CookBook — Автономная кулинарная библиотека.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

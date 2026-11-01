@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Яблочный штрудель из вытяжного теста — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Домашний яблочный штрудель на вытяжном тесте: мука, яйцо, мёд, уксус и кипяток, отдых теста, растягивание на ткани до 80×45 см, начинка из антоновки с клюквой и грецкими орехами. Выпечка 30 минут при 180 °C.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="yablochnyy-shtrudel">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Яблочный штрудель на вытяжном тесте</h1>
+      <p class="recipe-lead">
+        Тончайшее вытяжное тесто на слабой муке, яйце, мёде и яблочном уксусе: его не вымешивают, а собирают, дают отдохнуть и растягивают на полотенце до 80×45 см, пока сквозь него не начнёт просвечивать ткань. Внутрь — антоновка дольками с кожурой, клюква, обжаренные грецкие орехи и немного сахара, а между тестом и начинкой тонкий слой бисквитной крошки, чтобы сок не вытекал. Выпекается 30 минут при 180 °C с конвекцией.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">40 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">1,5–2 часа (отдых) + 30 мин (выпечка)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~3 часа</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 большой штрудель (~8 порций)</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/yablochnyy-shtrudel.jpg" alt="Румяный яблочный штрудель, посыпанный сахарной пудрой, с разрезом" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (8 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="8">8</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (кусков)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Все граммовки автоматически масштабируются. Тесто из этой раскладки весит около 420 г и растягивается в пласт 80×45 см на один большой штрудель. Тесто можно разделить пополам и растянуть два штруделя поменьше.
+          </p>
+        </div>
+
+        <!-- Переключатель источников и таймкодов видео -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Основной контент: Ингредиенты + Технология -->
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">8</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: тесто и смазывание -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Тесто и смазывание</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная (слабая)</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Нужна мука с невысоким содержанием белка — чем слабее, тем лучше тянется тесто</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйцо куриное</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">Нужно 50 г яичной массы: взбить и отвесить</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мёд</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">Можно инвертный сахар или обычный сахар. Засахаренный тоже подойдёт</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Уксус яблочный 6%</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="г">5 г</span>
+                <span class="shopping-hint">Можно 9% столовый, но не эссенцию — яйцо свернётся</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло растительное</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Самое обыкновенное, рафинированное и дезодорированное</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5%</strong> — для смазывания пласта и верха
+                <span class="shopping-hint">Точного веса автор не называет: нужно растопить и смазать весь пласт кисточкой, затем поверхность перед выпечкой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="г">5 г</span>
+                <span class="shopping-hint">В муку, вместе с просеиванием</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: начинка и подача -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍎 Начинка и подача</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яблоки (Антоновка)</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span>
+                <span class="shopping-hint">Крупные, кислые; кожуру не снимаем, режем мелко и сбрызгиваем лимонным соком</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимон</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">Сок, чтобы яблоки не темнели</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Клюква</strong> — по вкусу
+                <span class="shopping-hint">Можно замороженную, можно заменить изюмом или брусникой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Грецкие орехи</strong>:
+                <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+                <span class="shopping-hint">50–70 г, обязательно заранее обжаренные. Ломать чуть мельче яблочных долек</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Можно 100 г, если любите слаще. Коричневый тоже подойдёт</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Бисквитная крошка</strong> — немного
+                <span class="shopping-hint">Её можно заменить печеньем: крошка впитывает сок и не даёт штруделю размокнуть</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Корица</strong> — по желанию
+                <span class="shopping-hint">Добавляется вместе с сахаром в самом конце</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong> — для подачи
+                <span class="shopping-hint">Посыпать готовый штрудель, можно подать с мороженым</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Вытяжное тесто</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Мука пшеничная (слабая)
+              <span class="ingredient-note">Просеять вместе с солью. Слабая мука — залог того, что тесто не будет сжиматься</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="г">5 г</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Яйцо (яичная масса)
+              <span class="ingredient-note">Одно яйцо взбить и отвесить 50 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Мёд
+              <span class="ingredient-note">Или инвертный сахар, в крайнем случае — обычный сахар. Даёт эластичность и срок годности</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="г">5 г</span> — Уксус яблочный 6%
+              <span class="ingredient-note">9% столовый можно, эссенцию — нельзя: яйцо свернётся</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Масло растительное
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Вода (крутой кипяток)
+              <span class="ingredient-note">Именно кипяток: им заваривается часть муки</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span> — Яблоки крупные (Антоновка)
+              <span class="ingredient-note">Кожуру оставить, нарезать мелко, сбрызнуть лимонным соком</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Грецкие орехи
+              <span class="ingredient-note">50–70 г, обжаренные заранее, поломать чуть мельче яблок</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сахар
+              <span class="ingredient-note">Можно до 100 г; сыплется в самом конце вместе с корицей</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Клюква
+              <span class="ingredient-note">Или изюм, брусника, смородина; можно обойтись только яблоками и крошкой</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Немного — Бисквитная крошка
+              <span class="ingredient-note">Можно заменить печеньем. Слой между тестом и начинкой</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По желанию — Корица
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Смазывание и подача</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По потребности — Сливочное масло
+              <span class="ingredient-note">Растопить и смазать весь пласт, затем верх штруделя перед выпечкой</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Сахарная пудра
+              <span class="ingredient-note">Посыпать готовый штрудель</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Замес вытяжного теста</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Муку просейте с солью горкой и сделайте в центре углубление. Отдельно смешайте 50 г яйца с мёдом, затем добавьте уксус и растительное масло и перемешайте — уксус помогает соединиться водной и жировой части.
+                <span class="source-badge">⏱ Вебинар: 14:35–17:10</span>
+              </p>
+              <p>
+                Вылейте смесь в углубление и влейте 70 г крутого кипятка. Быстро начните замешивать лопаткой: рукой вначале будет слишком горячо. Так заваривается часть муки, и тесто перестаёт быть упругим.
+                <span class="source-badge">⏱ Вебинар: 19:41–20:07</span>
+              </p>
+              <p>
+                Когда масса станет тёплой, соберите её рукой в тесто — именно соберите, а не вымешивайте долго и мучительно. Мешайте только до тех пор, пока вся сухая мука не окажется внутри. Тесто должно получиться рваным на вид, но не липким.
+                <span class="source-badge">⏱ Вебинар: 20:07–22:05</span>
+              </p>
+              <div class="warning-box">
+                <strong>Если тесто липнет к рукам</strong> — отвес был неверный: слишком много воды или мало яйца. Проверяйте по весам, а не «на глаз».
+                <span class="source-badge">⏱ Вебинар: 22:05–22:14</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Выход теста: <strong>около 420 г</strong></span>
+              <span class="param-pill">🌡 Кипяток: <strong>крутой, только что закипевший</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Весы, лопатка, миска</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Отдых теста</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Заверните тесто в пакет или плёнку и оставьте при комнатной температуре на 1–2 часа, чтобы оно расслабилось. Это обязательный шаг: без отдыха штрудель не сделать.
+                <span class="source-badge">⏱ Вебинар: 22:32–22:57</span>
+              </p>
+              <p>
+                Если нужно дольше — тесто может храниться в холодильнике до 24 часов. Перед работой обязательно доведите его до комнатной температуры: холодное тесто не тянется.
+                <span class="source-badge">⏱ Вебинар: 23:56–24:14</span>
+              </p>
+              <div class="tip-box">
+                <strong>Заготовка впрок:</strong> уже растянутое тесто можно свернуть вместе с тканью, убрать в пакет и держать в холодильнике до двух суток. Замораживать растянутое тесто автор не советует.
+                <span class="source-badge">⏱ Вебинар: 01:17:49–01:18:56</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Отдых: <strong>1–2 часа при комнатной температуре</strong></span>
+              <span class="param-pill">🧊 В холодильнике: <strong>до 24 часов</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Растягивание на ткани</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Постелите на стол натуральное полотенце — вафельное или льняное. Оно нужно не для растягивания, а чтобы потом свернуть штрудель, не порвав тесто.
+                <span class="source-badge">⏱ Вебинар: 45:39–46:13</span>
+              </p>
+              <p>
+                Раскатайте тесто скалкой на столе, сколько получится, затем переложите на ткань и продолжайте руками: поднимайте пласт тыльной стороной ладоней и тяните от центра к краям. Ориентир автора — пласт 80×45 см, сквозь который просвечивает ткань.
+                <span class="source-badge">⏱ Вебинар: 59:27–01:00:44</span>
+              </p>
+              <div class="warning-box">
+                <strong>Снимите кольца и часы:</strong> тесто нежнейшее и рвётся от любого выступа. Длинные ногти — тоже проблема. Мелкие дырочки не страшны: при сворачивании они окажутся внутри.
+                <span class="source-badge">⏱ Вебинар: 21:01–21:22</span>
+              </div>
+              <div class="tip-box">
+                <strong>Боитесь растягивать:</strong> раскатайте тесто тонко скалкой — тоже получится вкусно. Разделив тесто пополам, вы растянете его ещё тоньше и сделаете два штруделя.
+                <span class="source-badge">⏱ Вебинар: 01:10:19–01:10:30</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Размер пласта: <strong>80×45 см</strong></span>
+              <span class="param-pill">🧵 Ткань: <strong>Натуральная, сухая</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Ткань просвечивает сквозь тесто</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Масло и бисквитная крошка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Растопите сливочное масло и смажьте кисточкой весь пласт — и те места, которые потом будете подворачивать, тоже. Масло даёт хрустящесть, сливочный вкус и аромат.
+                <span class="source-badge">⏱ Вебинар: 01:01:24–01:02:41</span>
+              </p>
+              <p>
+                Посыпьте пласт бисквитной крошкой — немного, тонким слоем. Крошка впитывает яблочный и ягодный сок, поэтому штрудель остаётся целым и не размокает.
+                <span class="source-badge">⏱ Вебинар: 01:03:26–01:04:12</span>
+              </p>
+              <div class="tip-box">
+                <strong>Диетический вариант:</strong> маслом можно не смазывать — штрудель получится, но вкус будет беднее. Крошку при этом лучше оставить.
+                <span class="source-badge">⏱ Вебинар: 01:01:44–01:02:11</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Масло: <strong>Растопленное, тёплое</strong></span>
+              <span class="param-pill">🍪 Крошка: <strong>Тонким слоем, можно печенье</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Начинка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Яблоки нарежьте мелко, кожуру оставьте — она даёт другую текстуру и вкус. Сбрызните лимонным соком, чтобы не темнели, и распределите по пласту, отступив от одного края около 10 см, а от боков — по 5 см.
+                <span class="source-badge">⏱ Вебинар: 01:04:26–01:05:12</span>
+              </p>
+              <p>
+                Добавьте клюкву — можно прямо из морозилки, немного, чтобы не перебить вкус яблок. Затем обжаренные грецкие орехи, поломанные чуть мельче яблок, и сахар.
+                <span class="source-badge">⏱ Вебинар: 01:05:44–01:06:59</span>
+              </p>
+              <p>
+                Сахар сыплется в самом конце — 50 г, при желании до 100 г. Тогда же добавляется корица, если вы её любите.
+                <span class="source-badge">⏱ Вебинар: 01:07:47–01:08:28</span>
+              </p>
+              <div class="tip-box">
+                <strong>Орехи обязательно обжарить:</strong> только так они дают аромат. Автор обжаривает их в духовке примерно 20 минут.
+                <span class="source-badge">⏱ Вебинар: 01:09:07–01:09:24</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📐 Отступы: <strong>10 см с одного края, по 5 см с боков</strong></span>
+              <span class="param-pill">🍬 Сахар: <strong>50 г (до 100 г)</strong></span>
+              <span class="param-pill">🌰 Орехи: <strong>50–70 г, обжаренные</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Сворачивание штруделя</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Загните внутрь те полосы по 5 см, которые остались без начинки, — так сок не вытечет с боков. Смажьте эти края сливочным маслом.
+                <span class="source-badge">⏱ Вебинар: 01:10:34–01:11:23</span>
+              </p>
+              <p>
+                Поднимая край ткани, сверните пласт в рулет. Ткань не даёт тесту порваться и помогает подкручивать: даже если где-то лопнет, всё останется внутри.
+                <span class="source-badge">⏱ Вебинар: 01:11:36–01:12:30</span>
+              </p>
+              <p>
+                Подложите под ткань пергамент и переверните штрудель швом вниз прямо на противень.
+                <span class="source-badge">⏱ Вебинар: 01:12:38–01:13:35</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧵 Инструмент: <strong>Ткань, пергамент</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Ровный рулет швом вниз</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Наколы и смазывание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Зубочисткой или острой палочкой сделайте много проколов по всей поверхности — примерно до половины глубины. Так напряжение теста спадает, и штрудель не трескается при выпечке.
+                <span class="source-badge">⏱ Вебинар: 01:14:11–01:15:08</span>
+              </p>
+              <p>
+                Смажьте верх сливочным маслом — для хрустящей корочки. Духовку разогрейте заранее до 180 °C с конвекцией.
+                <span class="source-badge">⏱ Вебинар: 01:15:12–01:15:34</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔪 Проколы: <strong>Частые, на половину глубины</strong></span>
+              <span class="param-pill">🔥 Духовка: <strong>180 °C, конвекция</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Выпекание и подача</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте на среднем уровне 30 минут при 180 °C с конвекцией. Большой штрудель, как у автора, печётся 30–35 минут; тонкий хватит и 25; если начинка сырая или рулет очень толстый — понадобится 40–45 минут, а иногда до часа.
+                <span class="source-badge">⏱ Вебинар: 01:16:06–01:16:35</span>
+              </p>
+              <p>
+                В газовой духовке ставьте противень максимально вверх — там штрудель будет печься дольше, чем в электрической.
+                <span class="source-badge">⏱ Вебинар: 01:16:30–01:16:35</span>
+              </p>
+              <div class="warning-box">
+                <strong>Готовность:</strong> штрудель должен быть румяным и на вид хрустящим. Ориентир — полчаса при 180 °C, но свою духовку лучше проверить.
+                <span class="source-badge">⏱ Вебинар: 01:22:14–01:22:41</span>
+              </div>
+              <p>
+                Готовый штрудель посыпьте сахарной пудрой и сразу подавайте — можно с мороженым. Если дать ему остыть, куски получатся ровнее.
+                <span class="source-badge">⏱ Вебинар: 01:19:35–01:19:57</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Режим: <strong>180 °C, конвекция</strong></span>
+              <span class="param-pill">⏱ Время: <strong>30–35 минут (до 45–60 для толстого)</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Румяная хрустящая корочка</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Слабая мука — основа:</strong> упругость тесту даёт белок муки. Чем слабее мука и меньше механического воздействия, тем лучше тесто тянется.</li>
+                <li><strong>Кипяток и уксус:</strong> кипяток заваривает часть муки, а уксус помогает соединить водную и жировую составляющие.</li>
+                <li><strong>Не вымешивать:</strong> тесто именно собирают, пока не уйдёт вся сухая мука. Долгое вымешивание развивает глютен и превращает тесто в «резину».</li>
+                <li><strong>Мёд:</strong> даёт эластичность и увеличивает срок годности; заменяется инвертным сахаром или обычным сахаром.</li>
+                <li><strong>Крошка против сока:</strong> бисквитная крошка (или печенье) впитывает сок яблок и ягод — штрудель остаётся целым.</li>
+                <li><strong>Тесто впрок:</strong> растянутое тесто хранится в ткани и пакете в холодильнике до двух суток — из него можно сделать ещё штрудель, бертуту или хачапури.</li>
+                <li><strong>Универсальность:</strong> из этого теста автор советует лазанью, пахлаву, бертуту, пирог с фаршем, самсу, хачапури и даже Наполеон. А вот пельмени, вареники и чебуреки — нет: заклеиваемость не та.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Неверный отвес:</strong> много воды или мало яйца — тесто липнет к рукам.</li>
+                <li><strong>Долгое вымешивание:</strong> глютен развивается, тесто перестаёт тянуться и сжимается обратно.</li>
+                <li><strong>Работа с холодным тестом:</strong> после холодильника его нужно согреть, иначе растянуть невозможно.</li>
+                <li><strong>Кольца и часы на руках:</strong> рвут тонкое тесто при растягивании.</li>
+                <li><strong>Нет проколов:</strong> без насечек поверхность трескается при выпечке.</li>
+                <li><strong>Нет крошки:</strong> яблочный сок размачивает тесто, и штрудель разваливается.</li>
+                <li><strong>Передержали или недодержали:</strong> недопечённый штрудель сырой внутри, перепечённый — сухой. Ориентируйтесь на цвет и хруст.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источник:</strong> вебинар «Яблочный штрудель» Надежды Зубовой — расшифровка записи (1 ч 34 мин). DOCX с техкартой и фото в папке нет, граммовки взяты из речи автора.</li>
+              <li><strong>Сливочное масло:</strong> точный вес для смазывания пласта и верха в записи не назван — на странице количество не фиксируется, указано «по потребности».</li>
+              <li><strong>Бисквитная крошка:</strong> количество не названо («её не надо очень много»), вес не фиксируется.</li>
+              <li><strong>Клюква:</strong> добавляется по вкусу, без веса; автор допускает изюм, бруснику, смородину.</li>
+              <li><strong>Орехи:</strong> «грамм 50–70», на странице взято 60 г. Температура обжарки в расшифровке распознана нечётко («40 градусов»), поэтому на странице указано только время — около 20 минут.</li>
+              <li><strong>Сахар:</strong> 50 г, автор допускает до 100 г и коричневый сахар.</li>
+              <li><strong>Время отдыха теста:</strong> в записи «час-полтора-два»; на странице — 1–2 часа.</li>
+              <li><strong>Хранение:</strong> в записи упоминаются и 24 часа для замешанного теста, и до двух суток для уже растянутого — оба варианта сохранены.</li>
+              <li><strong>Выход:</strong> точное число порций автор не называет; 8 порций — расчёт по одному большому штруделю.</li>
+              <li><strong>Фото:</strong> в папке только видео, готового фото нет — на странице стоит сгенерированное изображение-заглушка, его стоит заменить настоящим.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© CookBook — Автономная кулинарная библиотека.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

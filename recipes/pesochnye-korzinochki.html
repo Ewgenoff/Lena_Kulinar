@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Песочные корзиночки с зефирным кремом и клубникой — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Песочные корзиночки с зефирным кремом на агаре и клубничным конфи: хрустящее рубленое тесто, лёгкий розовый крем из джема и взбитых белков, желе из клубники внутри.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="pesochnye-korzinochki">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Песочные корзиночки с зефирным кремом и клубничной начинкой</h1>
+      <p class="recipe-lead">
+        Хрустящая песочная корзиночка, внутри — клубничное конфи на желатине, сверху — зефирный крем на агаре, взбитый с протёртым джемом. Тесто собирается за пять минут и отдыхает в холоде, крем варится быстро и разливается по мешкам сразу: агар схватывается стремительно. На выходе — 16 аккуратных корзиночек по 50 граммов, которые спокойно стоят в холодильнике до пяти суток.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">25 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">50 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">1,5 часа (охлаждение и остывание)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~2,5 часа</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">16 корзиночек по 50 г</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/pesochnye-korzinochki.jpg" alt="Песочные корзиночки с розовым зефирным кремом и клубникой" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (16 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="16">16</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">корзиночек</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Все граммовки автоматически масштабируются. Рецептура рассчитана на 16 корзиночек по 50 г каждая; для другого количества понадобится столько же формочек.
+          </p>
+        </div>
+
+        <!-- Переключатель источников -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Основной контент: Ингредиенты + Технология -->
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">16</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: тесто и крем -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧈 Тесто и крем</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная</strong>:
+                <span class="shopping-qty" data-base-amount="400" data-unit="г">400 г</span>
+                <span class="shopping-hint">Для песочного теста, добавляется вместе с разрыхлителем и солью</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Размягчённое, комнатной температуры</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="140" data-unit="г">140 г</span>
+                <span class="shopping-hint">Взбивается с маслом до посветления</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span>
+                <span class="shopping-hint">1 яйцо (50 г) в тесто + 3 белка (100 г) в зефирный крем</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сметана</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Любой жирности, комнатной температуры</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок (всего)</strong>:
+                <span class="shopping-qty" data-base-amount="160" data-unit="г">160 г</span>
+                <span class="shopping-hint">100 г в зефирный крем + 60 г в клубничное конфи</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Агар-агар сила 900</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="г">3 г</span>
+                <span class="shopping-hint">Агара КОТАНИ нужно 9 г — он слабее. Замачивается в холодной воде</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Разрыхлитель и соль</strong>:
+                <span class="shopping-qty" data-base-amount="6" data-unit="г">6 г</span> разрыхлителя и <span class="shopping-qty" data-base-amount="8" data-unit="г">8 г</span> соли
+                <span class="shopping-hint">Добавляются к муке в один приём</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: начинка и декор -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍓 Начинка и декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Клубника</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">Свежая или замороженная — для конфи</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Джем или варенье</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Протирается через сито и идёт в зефирный крем — от него зависит цвет и вкус</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин</strong>:
+                <span class="shopping-qty" data-base-amount="8" data-unit="г">8 г</span>
+                <span class="shopping-hint">Залить 40 г холодной воды заранее</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимонная кислота</strong>:
+                <span class="shopping-qty" data-base-amount="0.25" data-unit="ч. л.">0,25 ч. л.</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Свежая клубника для декора</strong> — по вкусу
+                <span class="shopping-hint">Половина ягоды на каждую корзиночку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Металлические формочки для корзиночек</strong> — 16 шт.
+                <span class="shopping-hint">Тесто формуется в формочках и охлаждается прямо в них</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Песочное тесто</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="400" data-unit="г">400 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сливочное масло размягчённое
+              <span class="ingredient-note">Взбивается с пудрой до посветления</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="140" data-unit="г">140 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Яйцо С1 (1 шт.)
+              <span class="ingredient-note">Комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Сметана
+              <span class="ingredient-note">Любой жирности, комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="6" data-unit="г">6 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="8" data-unit="г">8 г</span> — Соль
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Зефирный крем</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Джем или варенье
+              <span class="ingredient-note">Протереть через сито</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Белок (от 3 яиц С1)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Агар сила 900
+              <span class="ingredient-note">Агара КОТАНИ — 9 г. Замочить в холодной воде</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Вода (для агара)
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Клубничное конфи</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Клубника
+              <span class="ingredient-note">Свежая или замороженная</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="8" data-unit="г">8 г</span> — Желатин
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Вода (для желатина)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="0.25" data-unit="ч. л.">0,25 ч. л.</span> — Лимонная кислота
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Свежая клубника
+              <span class="ingredient-note">Половина ягоды на корзиночку, сверху на крем</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Песочное тесто</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сахарную пудру с размягчённым сливочным маслом взбивайте до посветления. Масло должно быть мягким, но не растопленным.
+              </p>
+              <p>
+                Введите яйцо и сметану комнатной температуры, перемешайте. Затем добавьте муку, разрыхлитель и соль — сразу в один приём — и замесите тесто до однородности. Долго вымешивать не нужно.
+              </p>
+              <div class="tip-box">
+                <strong>Почему пудра, а не сахар:</strong> на пудре тесто получается гладким и нежным, а кристаллы сахара дали бы крупинки и грубую структуру.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>10–15 мин</strong></span>
+              <span class="param-pill">🌡 Все компоненты: <strong>комнатной температуры</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Миксер, миска, весы</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Формовка корзиночек и охлаждение</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разделите тесто на 16 частей примерно по 50 г и распределите по металлическим формочкам, поднимая бортики и прижимая тесто к стенкам.
+              </p>
+              <p>
+                Уберите формочки с тестом в холодильник или морозилку на 30–60 минут. Охлаждённое тесто не осядет при выпечке и сохранит форму.
+              </p>
+              <div class="warning-box">
+                <strong>Без охлаждения корзиночки «поплывут»:</strong> масло в песочном тесте должно застыть, иначе бортики опустятся, и начинка не поместится.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Порция: <strong>16 шт. по 50 г</strong></span>
+              <span class="param-pill">🧊 Охлаждение: <strong>30–60 мин</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Выпечка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте в заранее разогретой до 200 °C духовке 12–15 минут — до золотистого цвета. Корзиночки должны остыть прямо в формочках, прежде чем вы достанете их.
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Температура: <strong>200 °C</strong></span>
+              <span class="param-pill">⏱ Время: <strong>12–15 минут</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Золотистый цвет, сухие бортики</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Клубничное конфи</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Желатин залейте холодной водой и оставьте набухать. Клубнику с сахаром доведите до кипения, добавьте лимонную кислоту и перемешайте.
+              </p>
+              <p>
+                Снимите с огня, введите набухший желатин и тщательно перемешайте до полного растворения. Конфи можно остудить и убрать в кондитерский мешок или залить в корзиночки ложкой.
+              </p>
+              <div class="tip-box">
+                <strong>Порядок важен:</strong> лимонная кислота идёт до желатина, а желатин вводится уже в горячую массу — так он растворится без комков.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>15 минут + остывание</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Однородная, без крупинок желатина</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Зефирный крем на агаре</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Агар замочите в холодной воде. Джем протрите через сито, соедините с агаром и поставьте нагреваться, постоянно помешивая.
+              </p>
+              <p>
+                Параллельно взбейте белки с сахаром. Влейте горячий сироп с джемом в белки и взбивайте до пышной, стабильной массы.
+              </p>
+              <div class="warning-box">
+                <strong>Работайте быстро:</strong> агар схватывается стремительно. Крем сразу переложите в кондитерский мешок с насадкой и используйте немедленно — ждать он не будет.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Агар: <strong>3 г сила 900 (9 г КОТАНИ)</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Миксер, сотейник, мешок с насадкой</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Пышная масса, держит форму</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Сборка корзиночек</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В остывшую корзиночку положите клубничное конфи — примерно до половины высоты, оставив место под крем.
+              </p>
+              <p>
+                Сверху отсадите зефирный крем из мешка «розеткой» с насадкой. Сразу поставьте корзиночку в холодильник, чтобы крем стабилизировался.
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍓 Конфи: <strong>До половины высоты</strong></span>
+              <span class="param-pill">🍥 Крем: <strong>Отсадка из мешка сразу</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Декор и хранение</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Украсьте каждую корзиночку половиной свежей клубники — срезом наружу, как на фото.
+              </p>
+              <p>
+                Храните десерт в холодильнике до 5 суток. Подавайте охлаждённым: на тепле зефирный крем начнёт оседать.
+              </p>
+              <div class="tip-box">
+                <strong>Почему они стоят пять дней:</strong> агар и желатин держат и крем, и конфи, а песочная основа не размокает, потому что клубничный слой закрыт кремом.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Хранение: <strong>До 5 суток в холодильнике</strong></span>
+              <span class="param-pill">🍓 Декор: <strong>Половина клубники сверху</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Пудра вместо сахара:</strong> тесто получается гладким, без крупинок.</li>
+                <li><strong>Всё комнатной температуры:</strong> масло размягчённое, яйцо и сметана — не из холодильника, иначе масса расслоится.</li>
+                <li><strong>Сухие ингредиенты в один приём:</strong> мука, разрыхлитель и соль вводятся сразу, без порционного подсыпания.</li>
+                <li><strong>Отдых в холоде:</strong> 30–60 минут в холодильнике или морозилке — корзиночки держат форму.</li>
+                <li><strong>Агар вместо желатина в креме:</strong> зефирная масса на агаре держит форму при комнатной температуре. Сила агара важна: 3 г силой 900 равны 9 г агара КОТАНИ.</li>
+                <li><strong>Джем через сито:</strong> от этого зависит и цвет, и гладкость крема.</li>
+                <li><strong>Хранение до 5 суток:</strong> десерт спокойно стоит в холодильнике — удобно готовить заранее.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Холодные яйца и сметана:</strong> масляная масса расслаивается и «крупится».</li>
+                <li><strong>Тесто не охладили:</strong> бортики оседают, корзиночки получаются плоскими.</li>
+                <li><strong>Долгое вымешивание:</strong> песочное тесто становится плотным и жёстким.</li>
+                <li><strong>Агар не замочили:</strong> крупинки не растворятся и останутся в креме.</li>
+                <li><strong>Крем ждал:</strong> масса на агаре схватывается за минуты, отсаживать нужно сразу.</li>
+                <li><strong>Клубника на тёплом креме:</strong> ягода даёт сок, и декор «плывёт». Собирайте и храните в холоде.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источник:</strong> DOCX «Песочные корзиночки с зефирным кремом и клубничной начинкой» — только текст с рецептурой и одна фотография готового десерта. Видео и расшифровки в папке нет, поэтому таймкодов на странице тоже нет.</li>
+              <li><strong>Фото:</strong> взято настоящее фото из DOCX, заглушка не использовалась.</li>
+              <li><strong>Пропорции:</strong> все граммовки перенесены из источника без изменений; выход — 16 корзиночек по 50 г.</li>
+              <li><strong>Технология:</strong> в источнике шаги описаны сжато (замес, охлаждение, выпечка, крем, конфи, хранение). Последовательность и порядок операций восстановлены по тексту, дополнительных приёмов не добавлено.</li>
+              <li><strong>Декор:</strong> в источнике указан только готовый вид; количество свежей клубники не названо — на странице «по вкусу».</li>
+              <li><strong>Формочки:</strong> конкретный размер не указан, важна только общая масса порции — 50 г теста на корзиночку.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© CookBook — Автономная кулинарная библиотека.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

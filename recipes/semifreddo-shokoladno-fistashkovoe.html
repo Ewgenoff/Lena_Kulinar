@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Семифредо шоколадно-фисташковое с вишней — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Итальянский десерт семифредо без варки: взбитые с сахаром яйца, тёмный шоколад, сливки до мягких пик, фисташки и сублимированная вишня. Замораживается в контейнере 6 часов.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="semifreddo-shokoladno-fistashkovoe">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Легкая</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Семифредо шоколадно-фисташковое с вишней</h1>
+      <p class="recipe-lead">
+        Итальянское мороженое, которое не варят и не вымешивают: яйца с сахаром взбиваются втрое, шоколад вводится именно в яичную массу, а холодные сливки — в самом конце и только лопаткой. Фисташки и сублимированная вишня дают хруст и кислинку, а контейнер, выстеленный плёнкой, превращает десерт в аккуратный брикет, который легко нарезать. Семифредо вдвое воздушнее обычного мороженого и тает буквально в руках.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">10 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">3–6 часов (заморозка)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~3,5–6,5 часов</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">~1 л (8 порций)</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/semifreddo.jpg" alt="Нарезанное ломтиками шоколадное семифредо с фисташками и вишней" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (8 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="8">8</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Все граммовки автоматически масштабируются. Базовая раскладка даёт около литра готового десерта — как раз под литровый контейнер.
+          </p>
+        </div>
+
+        <!-- Переключатель источников и таймкодов видео -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Основной контент: Ингредиенты + Технология -->
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">8</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: основа -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥚 Основа и шоколад</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные (или меланж)</strong>:
+                <span class="shopping-qty" data-base-amount="240" data-unit="г">240 г</span>
+                <span class="shopping-hint">4 яйца по весу. Автор берёт пастеризованный меланж: яйцо не проходит термическую обработку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">В яичную массу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шоколад тёмный 54,5%</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Тёмный, но не горький: с горьким шоколадом будет жёстко</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 30% и выше</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Холодные, прямо из холодильника; взбиваются только до мягких пик</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: наполнители и не только -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥜 Наполнители и подача</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Фисташки очищенные</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Добавляются в шоколадную часть до сливок</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сублимированная вишня</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="ст. л.">1 ст. л.</span>
+                <span class="shopping-hint">Можно 2 ложки, если любите кислинку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Фисташковая мука</strong> — для декора
+                <span class="shopping-hint">Посыпать готовый брикет, можно смолоть часть фисташек</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Контейнер ~1 л и пищевая плёнка</strong>
+                <span class="shopping-hint">Форма прямоугольная или квадратная — так удобнее нарезать. Плёнка должна заходить за края</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Яичная основа</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="240" data-unit="г">240 г</span> — Яйца (или меланж)
+              <span class="ingredient-note">4 яйца по весу. Меланж — уже перемешанные белок и желток, пастеризованные</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Шоколад и сливки</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Шоколад тёмный 54,5%
+              <span class="ingredient-note">Растопить пульсами в микроволновке заранее</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Сливки 30% и выше
+              <span class="ingredient-note">Холодные; взбивать в холодной миске</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Наполнители и декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Фисташки очищенные
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ст. л.">1 ст. л.</span> — Сублимированная вишня
+              <span class="ingredient-note">Можно 2 ст. л., если любите кислинку</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Фисташковая мука
+              <span class="ingredient-note">Для посыпки готового семифредо</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка продуктов и формы</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Шоколад растопите в микроволновке импульсами и оставьте дожидаться своего часа. Сливки держите в холодильнике, миску для взбивания тоже охладите.
+                <span class="source-badge">⏱ Семифредо: 02:38–02:53</span>
+              </p>
+              <p>
+                Контейнер примерно на литр выстелите пищевой плёнкой так, чтобы она заходила за края. Форма должна быть прямоугольной или квадратной — так десерт удобнее нарезать. Все ингредиенты заранее отвесьте по разным ёмкостям.
+                <span class="source-badge">⏱ Семифредо: 07:49–08:31</span>
+              </p>
+              <div class="tip-box">
+                <strong>Почему меланж:</strong> яйцо в этом десерте не проходит термическую обработку, а пастеризованный меланж уже обеззаражен. Если берёте обычные яйца, выбирайте максимально свежие.
+                <span class="source-badge">⏱ Семифредо: 00:57–01:25</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Шоколад: <strong>тёмный 54,5%, не горький</strong></span>
+              <span class="param-pill">🧊 Сливки: <strong>холодные, 30%+</strong></span>
+              <span class="param-pill">📦 Форма: <strong>Контейнер ~1 л + плёнка</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Взбивание яиц с сахаром</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Добавьте сахар к яйцам и взбивайте на большой скорости примерно 5–7 минут — до увеличения объёма примерно втрое и появления рисунка на поверхности.
+                <span class="source-badge">⏱ Семифредо: 02:53–04:07</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не недовзбейте:</strong> именно эта пышная текстура даёт семифредо воздушность. Слабо взбитая масса потом не удержит воздух, и десерт получится плотным.
+                <span class="source-badge">⏱ Семифредо: 03:50–04:03</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>5–7 минут</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Объём втрое, рисунок на поверхности</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Взбивание сливок</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сливки взбивайте сразу на большой скорости, но только до мягких пик: они держат форму, но оседают. Жестких пик ждать не нужно.
+                <span class="source-badge">⏱ Семифредо: 04:07–04:37</span>
+              </p>
+              <div class="warning-box">
+                <strong>Риск перебить:</strong> перебитые сливки пойдут крупинками, и десерт потеряет нежность. Лучше остановиться чуть раньше.
+                <span class="source-badge">⏱ Семифредо: 04:16–04:21</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Миска: <strong>Охлаждённая</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Мягкие пики, оседают</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Шоколад в яичную массу</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отправьте весь растопленный шоколад в взбитые яйца — не в сливки. Тёплый шоколад в сливках мгновенно осядет вместе со всем накопленным воздухом.
+                <span class="source-badge">⏱ Семифредо: 04:43–05:11</span>
+              </p>
+              <p>
+                Соедините массу миксером до однородного крема. Аромат и вкус будут насыщенными.
+                <span class="source-badge">⏱ Семифредо: 05:19–05:30</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Порядок: <strong>Шоколад только в яйца</strong></span>
+              <span class="param-pill">🥣 Инструмент: <strong>Миксер</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Фисташки и вишня</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В шоколадно-яичную смесь добавьте фисташки по весу и 1–2 столовые ложки сублимированной вишни. Перемешайте.
+                <span class="source-badge">⏱ Семифредо: 05:50–06:40</span>
+              </p>
+              <div class="tip-box">
+                <strong>Почему наполнители до сливок:</strong> кусочки фисташек крупные, и если вводить их после сливок, весь воздух из сливочной массы выйдет. Сначала наполнители, потом сливки — и только лопаткой.
+                <span class="source-badge">⏱ Семифредо: 05:56–06:12</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥜 Фисташки: <strong>100 г</strong></span>
+              <span class="param-pill">🍒 Вишня: <strong>1–2 ст. л.</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Сливки лопаткой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Введите взбитые сливки в массу лопаткой, поднимающими движениями снизу вверх. Никаких прихлопывающих и размешивающих движений — они убивают воздушность.
+                <span class="source-badge">⏱ Семифредо: 06:58–07:35</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не миксером:</strong> миксер перемешает слишком интенсивно, и семифредо перестанет таять во рту. Именно лопатка сохраняет воздух в сливках.
+                <span class="source-badge">⏱ Семифредо: 06:58–07:18</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥄 Инструмент: <strong>Силиконовая лопатка</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Однородная воздушная масса</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Заморозка, извлечение и подача</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Заполните контейнер массой почти до верха, чтобы только крышка закрылась, разровняйте. Накройте плёнкой — прижимать её не нужно — и закройте крышкой.
+                <span class="source-badge">⏱ Семифредо: 08:31–09:13</span>
+              </p>
+              <p>
+                Уберите в морозилку минимум на 6 часов. Очень хорошая морозилка справится за 3 часа.
+                <span class="source-badge">⏱ Семифредо: 09:13–09:37</span>
+              </p>
+              <p>
+                Готовый брикет вытяните за края плёнки, посыпьте фисташковой мукой и нарежьте ломтиками — в срезе видны орешки и вишня.
+                <span class="source-badge">⏱ Семифредо: 09:44–10:16</span>
+              </p>
+              <div class="tip-box">
+                <strong>Плёнка решает всё:</strong> без неё брикет не достать из контейнера целиком. Плёнка должна заходить за края — тогда десерт вынимается за пару секунд.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Заморозка: <strong>6 часов (от 3 в мощной морозилке)</strong></span>
+              <span class="param-pill">📦 Выход: <strong>~1 л</strong></span>
+              <span class="param-pill">🍽 Подача: <strong>Ломтиками, с фисташковой мукой</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Только тёмный, но не горький шоколад:</strong> автор берёт 54,5%. С горьким вкус получается слишком жёстким.</li>
+                <li><strong>Пастеризованный меланж:</strong> яйцо здесь не обрабатывается термически, поэтому безопаснее брать готовый меланж — 4 яйца по весу, 240 г.</li>
+                <li><strong>Порядок важнее скорости:</strong> шоколад — в яйца, наполнители — до сливок, сливки — в самом конце и лопаткой.</li>
+                <li><strong>Мягкие пики, не жесткие:</strong> сливки должны держать форму, но оседать.</li>
+                <li><strong>Семифредо вдвое воздушнее мороженого:</strong> поэтому тает быстрее и кажется нежнее.</li>
+                <li><strong>Прямоугольная форма:</strong> брикет из квадратного или прямоугольного контейнера нарезается ровными красивыми ломтиками.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Шоколад в сливки:</strong> тёплая масса моментально осаживает сливки вместе с воздухом.</li>
+                <li><strong>Сливки взбиты в жёсткие пики:</strong> десерт получается плотным, а при перемешивании идёт крупинками.</li>
+                <li><strong>Наполнители после сливок:</strong> крупные фисташки «выбивают» воздух из сливочной массы.</li>
+                <li><strong>Перемешивание миксером в конце:</strong> убивает всю воздушность.</li>
+                <li><strong>Форма без плёнки:</strong> брикет не извлечь целиком и не нарезать красиво.</li>
+                <li><strong>Мало времени в морозилке:</strong> недомерзший десерт растекается на тарелке.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> видео «Семифредо» (расшифровка, 14 минут чистого рецепта) и DOCX «10 июня день мороженого» с составом.</li>
+              <li><strong>Яйца:</strong> в DOCX «яйца — 4 шт или меланж 240 г»; автор в видео использует меланж. На странице 240 г с пометкой «4 яйца по весу».</li>
+              <li><strong>Шоколад:</strong> в DOCX просто «тёмный, 200 г», в видео уточняется 54,5% и предупреждение не брать горький.</li>
+              <li><strong>Вишня:</strong> «1–2 столовые ложки», на странице базово 1 ст. л. с пометкой, что можно две.</li>
+              <li><strong>Время заморозки:</strong> «минимум 6 часов», при очень хорошей морозилке — 3 часа. На странице указаны оба варианта.</li>
+              <li><strong>Выход:</strong> автор говорит «как раз на литр получилось»; 8 порций — расчёт по литровому брикету.</li>
+              <li><strong>Фисташковая мука:</strong> количество для декора не названо.</li>
+              <li><strong>Фото:</strong> в папке только видео, готового фото нет — на странице стоит сгенерированное изображение-заглушка, его стоит заменить настоящим.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© CookBook — Автономная кулинарная библиотека.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>
