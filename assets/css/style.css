@@ -1037,11 +1037,11 @@ body.show-sources .source-badge {
 .shopping-list-card {
   background: var(--bg-card);
   border: 1px solid var(--border-light);
-  border-left: 5px solid var(--accent-olive);
   border-radius: var(--radius-lg);
   padding: 24px 28px;
   margin-bottom: 32px;
   box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
 }
 
 .shopping-header {
@@ -1124,30 +1124,32 @@ body.show-sources .source-badge {
 .shopping-subtitle {
   font-size: 14px;
   color: var(--text-muted);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   line-height: 1.5;
 }
 
+/* Сетка колонок без лишних капсул и рамок */
 .shopping-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 36px;
 }
 
 .shopping-col {
-  background: var(--bg-card-subtle);
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-md);
-  padding: 18px;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
 .shopping-col-title {
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.8px;
   color: var(--accent-terracotta);
   margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--bg-card-subtle);
   display: flex;
   align-items: center;
   gap: 6px;
@@ -1157,62 +1159,73 @@ body.show-sources .source-badge {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 8px;
 }
 
+/* Элегантные строки списка без карточек, фонов и чекбоксов */
 .shopping-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 14px;
-  padding: 8px 12px;
-  border-radius: var(--radius-sm);
-  background: #FFF;
-  border: 1px solid var(--border-light);
-  transition: all 0.15s ease;
-  user-select: none;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(232, 224, 213, 0.7);
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14.5px;
+  line-height: 1.5;
 }
 
-.shopping-item:hover {
-  border-color: var(--border-accent);
-  box-shadow: 0 1px 4px rgba(45, 39, 35, 0.05);
-}
-
-.shopping-checkbox {
-  margin-top: 2px;
-  cursor: pointer;
-  accent-color: var(--accent-olive);
-  width: 17px;
-  height: 17px;
-  flex-shrink: 0;
+.shopping-item:last-child {
+  border-bottom: none;
 }
 
 .shopping-item-content {
-  flex-grow: 1;
-  cursor: pointer;
-  line-height: 1.45;
+  position: relative;
+  padding-left: 18px;
+  color: var(--text-main);
 }
 
-.shopping-item.checked {
-  background: #FAF7F2;
-  opacity: 0.65;
+.shopping-item-content::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  top: -1px;
+  color: var(--accent-olive);
+  font-size: 18px;
+  line-height: 1.4;
 }
 
-.shopping-item.checked .shopping-item-content {
-  text-decoration: line-through;
-  color: var(--text-light);
+.shopping-item-content strong {
+  font-weight: 600;
+  color: var(--text-main);
 }
 
 .shopping-qty {
   font-weight: 700;
-  color: var(--text-main);
+  color: var(--accent-terracotta);
 }
 
 .shopping-hint {
   display: block;
-  font-size: 12px;
+  font-size: 12.5px;
   color: var(--text-muted);
-  margin-top: 2px;
+  line-height: 1.4;
+  margin-top: 3px;
+}
+
+.shopping-item-note .shopping-item-content {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.shopping-item-note .shopping-item-content::before {
+  content: "✓";
+  color: var(--accent-olive);
+  font-size: 13px;
+  font-style: normal;
+  top: 2px;
+}
+
+.shopping-item-opt .shopping-item-content::before {
+  content: "◦";
+  color: var(--text-light);
 }
 
 /* ================================================= */
@@ -1383,16 +1396,24 @@ body.show-sources .source-badge {
   }
 
   /* Список покупок */
+  .shopping-list-card {
+    padding: 16px 14px;
+    margin-bottom: 14px;
+    border-radius: var(--radius-md);
+  }
   .shopping-grid {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 20px;
   }
   .shopping-col {
-    padding: 10px 12px;
+    padding: 0;
   }
   .shopping-item {
-    padding: 6px 8px;
-    font-size: 13px;
+    padding: 8px 0;
+    font-size: 13.5px;
+  }
+  .shopping-hint {
+    font-size: 12px;
   }
 
   /* Шаги приготовления */

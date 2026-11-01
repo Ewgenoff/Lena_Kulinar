@@ -91,7 +91,7 @@ function initPortionScaler() {
 function initChecklists() {
   const recipeId = document.body.dataset.recipeId || 'recipe';
 
-  const listCheckboxes = document.querySelectorAll('.ingredient-checkbox, .shopping-checkbox');
+  const listCheckboxes = document.querySelectorAll('.ingredient-checkbox');
   listCheckboxes.forEach((cb, index) => {
     const storageKey = `cb_chk_${recipeId}_${index}`;
     const itemEl = cb.closest('.ingredient-item, .shopping-item');
@@ -152,7 +152,7 @@ function initShoppingCollapse() {
 
   const toggle = (e) => {
     // Не реагировать, если клик по чекбоксу или инпуту
-    if (e.target.closest('input, label.shopping-item-content')) return;
+    if (e.target.closest('input, button') && !e.target.closest('.shopping-toggle-btn')) return;
 
     const isOpen = section.classList.toggle('is-open');
     header.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
