@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Шоколадные конфеты с солёной карамелью — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Домашние шоколадные конфеты с жидкой солёной карамелью по технологии Надежды Зубовой: шоколадно-песочная масса с орехами, карамель мокрым способом, формовка без поликарбонатных форм.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="konfety-solenaya-karamel">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Конфеты и сладости</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Шоколадные конфеты с солёной карамелью</h1>
+      <p class="recipe-lead">
+        Домашние конфеты с жидким карамельным центром: шоколадно-песочная масса с рублеными орехами, тонкая обвалка и солёная карамель, сваренная мокрым способом. Без поликарбонатных форм, темперирования шоколада и дорогого оборудования — только сотейник, миска и округлый предмет под рукой.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">45 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">20–30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~1 ч 10 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">12 конфет по 20 г (~240 г)</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/konfety-karamel.jpg" alt="Шоколадные конфеты с солёной карамелью, обваленные в орехах" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (12 конфет)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="12">12</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">конфет</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Пересчитываются граммовки конфетной массы и карамели. Базовая раскладка — 12 конфет по 20 г, как в авторском вебинаре; фактически у автора получилось 11 штук, потому что часть шариков она сделала крупнее.
+          </p>
+        </div>
+
+        <!-- Переключатель источников и таймкодов видео -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Показать источники (видео-таймкоды)</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">12</span> конфет</span>
+        </div>
+      </div>
+      <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Отмечайте купленные позиции галочками прямо в магазине.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Шоколад, орехи и печенье</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item">
+              <input type="checkbox" class="shopping-checkbox" id="shop_chocolate">
+              <label class="shopping-item-content" for="shop_chocolate">
+                <strong>Шоколад молочный</strong>: 
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">100 г в конфетную массу + около 100 г на заливку. Точное количество шоколада для заливки автор не называет — берите с запасом, 2 плитки</span>
+              </label>
+            </li>
+            <li class="shopping-item">
+              <input type="checkbox" class="shopping-checkbox" id="shop_nuts">
+              <label class="shopping-item-content" for="shop_nuts">
+                <strong>Орехи обжаренные (грецкие, арахис, фундук или миндаль)</strong>: 
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">50 г в массу + примерно 50 г на обвалку. Обвалку автор не взвешивает, количество в источнике не указано</span>
+              </label>
+            </li>
+            <li class="shopping-item">
+              <input type="checkbox" class="shopping-checkbox" id="shop_cookies">
+              <label class="shopping-item-content" for="shop_cookies">
+                <strong>Печенье песочное</strong>: 
+                <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                <span class="shopping-hint">«Юбилейное», «Курабье», «Топлёное молоко», детское — одна небольшая упаковка</span>
+              </label>
+            </li>
+            <li class="shopping-item">
+              <input type="checkbox" class="shopping-checkbox" id="shop_butter">
+              <label class="shopping-item-content" for="shop_butter">
+                <strong>Сливочное масло 82,5%</strong>: 
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">30 г в массу + 20 г в карамель. Жирность важна в том числе для срока годности</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍯 Карамель и декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item">
+              <input type="checkbox" class="shopping-checkbox" id="shop_sugar">
+              <label class="shopping-item-content" for="shop_sugar">
+                <strong>Сахар-песок</strong>: 
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Обычный кристаллический сахар для карамели</span>
+              </label>
+            </li>
+            <li class="shopping-item">
+              <input type="checkbox" class="shopping-checkbox" id="shop_cream">
+              <label class="shopping-item-content" for="shop_cream">
+                <strong>Сливки 33%</strong>: 
+                <span class="shopping-qty" data-base-amount="110" data-unit="г">110 г</span>
+                <span class="shopping-hint">Одна упаковка 200 мл; подойдут и 20%, но карамель придётся варить чуть дольше</span>
+              </label>
+            </li>
+            <li class="shopping-item">
+              <input type="checkbox" class="shopping-checkbox" id="shop_salt">
+              <label class="shopping-item-content" for="shop_salt">
+                <strong>Соль</strong>: 
+                по вкусу
+                <span class="shopping-hint">Ориентир автора — треть чайной ложки; граммы она не называет. Можно крупнокристаллическую — тогда карамель будет похрустывать</span>
+              </label>
+            </li>
+            <li class="shopping-item" style="border-style: dashed;">
+              <input type="checkbox" class="shopping-checkbox" id="shop_decor">
+              <label class="shopping-item-content" for="shop_decor">
+                <strong>Вафельная крошка, кокосовая стружка, кунжут, сублимированные ягоды (опционально)</strong>: 
+                по вкусу
+                <span class="shopping-hint">Для обвалки и верха конфет, если не хотите использовать только орехи</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Основной контент: Ингредиенты + Технология -->
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Шоколадная масса</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Крошка песочного печенья
+              <span class="ingredient-note">«Юбилейное», «Курабье», «Топлёное молоко», детское или домашнее сабле</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Орехи обжаренные рубленые
+              <span class="ingredient-note">Любые: грецкие, арахис, фундук, миндаль, кешью, макадамия, солёные фисташки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Сливочное масло 82,5%
+              <span class="ingredient-note">Размягчённое, комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Молочный шоколад
+              <span class="ingredient-note">Автор берёт Callebaut 33%; из магазинного подойдёт Milka. Замена: 50 г молочного + 50 г тёмного</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Солёная карамель</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар
+              <span class="ingredient-note">Обычный кристаллический</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Вода
+              <span class="ingredient-note">Для мокрого способа варки карамели</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Сливочное масло 82,5%
+              <span class="ingredient-note">Размягчённое; вводится сразу после набора цвета</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="110" data-unit="г">110 г</span> — Сливки 33%
+              <span class="ingredient-note">Нагреть почти до кипения. Можно 20% — тогда варить дольше</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Соль
+              <span class="ingredient-note">Ориентир — треть чайной ложки; точных граммов автор не называет</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Обвалка, заливка и декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Сколько уйдёт — Орехи рубленые для обвалки
+              <span class="ingredient-note">Количество в источнике не указано, ориентир — около 50 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Сколько уйдёт — Молочный шоколад для заливки
+              <span class="ingredient-note">Количество не названо, ориентир — около 100 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Вафельная крошка, кокосовая стружка, кунжут или сублимированные ягоды
+              <span class="ingredient-note">Опционально: для обвалки и украшения верха</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка орехов и печенья</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Орехи промойте водой, обсушите и обжарьте в духовке (или подсушите на сухой сковороде) до яркого орехового аромата. Автор принципиально моет орехи перед обжаркой: так видно повреждённые плоды и личинки, которые иначе попадут в конфеты.
+                <span class="source-badge">⏱ Видео: 11:49–12:16</span>
+              </p>
+              <p>
+                Печенье измельчите в блендере до мелкой крошки. Орехи порубите крупно ножом или короткими импульсами блендера — нужна именно крошка с ощутимыми кусочками, а не мука.
+                <span class="source-badge">⏱ Видео: 08:42–09:30</span>
+              </p>
+              <div class="tip-box">
+                <strong>Выбор орехов:</strong> вкус конфет зависит от ореха. Грецкий даёт яркий «брутальный» вкус, арахис и фундук — мягче, кешью хрустит, но почти не даёт орехового вкуса, фисташка — самый дорогой и нарядный вариант, особенно если обвалять конфеты в ней и положить фисташку сверху.
+                <span class="source-badge">⏱ Видео: 16:22–17:47</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>10–15 мин</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Духовка или сковорода, блендер, нож</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Яркий аромат, крупная крошка</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Растапливание шоколада</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Молочный шоколад растопите в микроволновке короткими импульсами или на водяной бане — разницы нет. Шоколад не темперируется: для этих конфет достаточно просто растопленной массы.
+                <span class="source-badge">⏱ Видео: 12:51–13:22</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не перегревайте:</strong> шоколад нужно именно «подтопить», а дальше больше перемешивать, чем нагревать. Перегретый шоколад будет очень долго застывать, и формовать конфеты придётся дольше ждать.
+                <span class="source-badge">⏱ Видео: 13:22–13:47</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>СВЧ или водяная баня, лопатка</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Гладкая текучая масса, чуть тёплая</strong></span>
+              <span class="param-pill">🌡 Темперирование: <strong>Не требуется</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Замес конфетной массы</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Соедините растопленный шоколад (100 г), размягчённое масло (30 г), крошку печенья (70 г) и рубленые орехи (50 г). Перетрите всё лопаткой до однородности — или перемешайте рукой в перчатке.
+                <span class="source-badge">⏱ Видео: 14:00–15:06</span>
+              </p>
+              <p>
+                Оставьте массу постоять, чтобы шоколад «унялся» и она стала прохладнее. С тёплой массой лепить неудобно, а остывшая спокойно держит форму шарика.
+                <span class="source-badge">⏱ Видео: 15:21–15:37</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Замес: <strong>3–5 мин</strong></span>
+              <span class="param-pill">⏱ Отдых массы: <strong>10–15 мин</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Пластичная масса, держит форму</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Нагрев сливок для карамели</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Сливки (110 г) нагрейте почти до кипения — в микроволновке или в сотейнике. Делать это нужно заранее, до начала варки сахара: холодные сливки нельзя вливать в карамель.
+                <span class="source-badge">⏱ Видео: 19:43–20:05</span>
+              </p>
+              <div class="warning-box">
+                <strong>Почему только горячие:</strong> при вливании холодных сливок карамель начнёт «плеваться» горячими брызгами. Это опасно и портит текстуру.
+                <span class="source-badge">⏱ Видео: 26:52–26:58</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥛 Жирность: <strong>33% или 20%</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>Почти кипение</strong></span>
+              <span class="param-pill">📌 Нюанс: <strong>20% — варить карамель дольше</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Варка карамели мокрым способом</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                В сотейник налейте 20 г воды и всыпьте 100 г сахара. Поставьте на огонь выше среднего (у автора индукция на 8 из 9) и оставьте вариться. Это мокрый способ: вода даёт время, которого обычно не хватает, — сахар не горит и не комкуется.
+                <span class="source-badge">⏱ Видео: 22:11–22:54</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не перемешивайте:</strong> пока сахар не расплавился и не добавлено молочное, карамель мешать нельзя. Кристаллы при перемешивании цепляются друг за друга и собираются в комья. Сверху может появиться сухая корочка — это нормально, её не трогают.
+                <span class="source-badge">⏱ Видео: 23:24–24:53</span>
+              </div>
+              <p>
+                Ждите янтарного цвета — как у «Золотого ключика»: светлого, тёплого, тягучего. Тёмная карамель с горчинкой — европейский вкус; для этих конфет автор её не переваривает.
+                <span class="source-badge">⏱ Видео: 25:02–26:23</span>
+              </p>
+              <div class="warning-box">
+                <strong>Момент невозврата:</strong> если влить сливки или добавить масло до того, как сахар набрал цвет, карамель останется светлой, как сгущённое молоко, и исправить это уже нельзя.
+                <span class="source-badge">⏱ Видео: 26:03–26:19</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Огонь: <strong>Выше среднего</strong></span>
+              <span class="param-pill">⏱ Время: <strong>До янтарного цвета (точное время автор не называет)</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Светло-янтарный цвет, тянется</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Масло, сливки и соль</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Как только карамель набрала цвет, добавьте 20 г размягчённого масла и перемешайте. С этого момента мешать можно и нужно: молочный жир останавливает кристаллизацию.
+                <span class="source-badge">⏱ Видео: 26:24–26:39</span>
+              </p>
+              <p>
+                Затем тонкой струйкой влейте горячие сливки (110 г), непрерывно помешивая. Для жидкого карамельного центра сразу снимайте с огня — так карамель останется тягучей; если хотите гуще, поварите ещё 1–2 минуты.
+                <span class="source-badge">⏱ Видео: 26:47–27:38</span>
+              </p>
+              <p>
+                Снимите с огня и добавьте соль — около трети чайной ложки, дальше по вкусу. Крупнокристаллическая соль даст приятный хруст. Соль делает вкус ярче, и именно из-за неё солёную карамель хочется есть ложками.
+                <span class="source-badge">⏱ Видео: 27:39–28:33</span>
+              </p>
+              <p>
+                Полностью остудите карамель до комнатной температуры — только холодная она пойдёт в конфеты.
+                <span class="source-badge">⏱ Видео: 28:34–28:40</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧂 Соль: <strong>1/3 ч. л., далее по вкусу</strong></span>
+              <span class="param-pill">⏱ Доваривание: <strong>1–2 мин для густой</strong></span>
+              <span class="param-pill">🌡 Перед формовкой: <strong>Комнатная температура</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Шарики, обвалка и углубления</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Скатайте шарики по 20 г — каждый лучше взвесить на весах, чтобы конфеты были одинаковыми. Обваляйте их в рубленых орехах (или в вафельной крошке, кокосовой стружке, кунжуте).
+                <span class="source-badge">⏱ Видео: 32:55–33:27</span>
+              </p>
+              <p>
+                Уберите шарики в холодильник на несколько минут, чтобы они стабилизировались и стали твёрже — так проще делать углубление.
+                <span class="source-badge">⏱ Видео: 37:26–40:21</span>
+              </p>
+              <p>
+                Возьмите предмет с округлым окончанием: овощечистку, шарик для мастики или вырубку для печенья диаметром около 4,5 см. Поставьте шарик в выемку и продавите углубление почти до дна.
+                <span class="source-badge">⏱ Видео: 53:41–55:12</span>
+              </p>
+              <div class="warning-box">
+                <strong>Проверьте дно:</strong> в донышке не должно остаться проколов и тонких мест, иначе карамель вытечет и конфета развалится. Стенки должны быть плотными, а углубление — глубоким, но закрытым.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Вес шарика: <strong>20 г</strong></span>
+              <span class="param-pill">📏 Диаметр выемки: <strong>~4,5 см</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Плотные стенки, целое дно</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Наполнение, заливка и декор</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Заполните чашечки остывшей карамелью, оставив немного места под шоколад. Карамель удобно отсаживать ложкой или из пакета.
+                <span class="source-badge">⏱ Видео: 57:54–59:21</span>
+              </p>
+              <p>
+                Растопите молочный шоколад для заливки (снова без темперирования) и закройте им карамель. Постучите формой по столу, чтобы шоколад разровнялся. Сверху положите орешек, посыпьте вафельной крошкой или сублимированными ягодами — так конфеты будут выглядеть по-разному.
+                <span class="source-badge">⏱ Видео: 58:19–01:01:04</span>
+              </p>
+              <p>
+                Уберите конфеты в холодильник до полного застывания шоколада. Дальше их можно хранить в коробке и дарить.
+                <span class="source-badge">⏱ Видео: 01:01:22</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Заливка: <strong>Молочный шоколад, без темперирования</strong></span>
+              <span class="param-pill">⏱ Застывание: <strong>В холодильнике (время не названо)</strong></span>
+              <span class="param-pill">🎁 Хранение: <strong>3 недели в холодильнике</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Мокрый способ вместо сухого:</strong> вода в начале варки даёт фору — сахар успевает прогреться равномерно, пока влага испаряется. Именно поэтому карамель не горит и не комкуется.</li>
+                <li><strong>Цвет — дело менталитета:</strong> в Европе любят тёмную карамель с горчинкой, у нас — светлую, янтарную, тягучую. Переваривать её не нужно.</li>
+                <li><strong>Порядок ввода:</strong> при мокром способе сначала масло (оно лучше расходится), потом сливки. При сухом — наоборот: сначала сливки, чтобы деглазировать карамель.</li>
+                <li><strong>Никакого темперирования:</strong> ни шоколад для массы, ни шоколад для заливки не темперируют — конфеты всё равно получаются стабильными и не тают в руках.</li>
+                <li><strong>Орехи моем:</strong> вода помогает увидеть повреждённые орехи и личинки, которые в сухой горсти не заметны.</li>
+                <li><strong>Шоколад для массы:</strong> молочный Callebaut 33% идеален, но Milka и «Алёнка» тоже подойдут — в домашних конфетах это работает.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Мешать сахар при варке:</strong> главная причина комков и кристаллизации. Мешать можно только после ввода масла.</li>
+                <li><strong>Влить молочное раньше цвета:</strong> карамель останется бледной, как сгущёнка, и исправить это невозможно.</li>
+                <li><strong>Холодные сливки:</strong> карамель начнёт плеваться брызгами.</li>
+                <li><strong>Перегреть шоколад:</strong> он будет очень долго застывать, и конфеты придётся долго ждать.</li>
+                <li><strong>Взять шоколад 70%:</strong> он быстро застывает и делает конфету жёсткой. Нужен тёмный 50–55% какао.</li>
+                <li><strong>Проколоть дно чашечки:</strong> карамель вытечет, конфета потеряет форму.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Замены, хранение и подача</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Замены и вариации</h4>
+              <ul>
+                <li><strong>Шоколад:</strong> 100 г молочного можно заменить на 50 г молочного + 50 г тёмного (50–55% какао) или полностью на тёмный.</li>
+                <li><strong>Сливки:</strong> 33% или 20%; с менее жирными карамель варят чуть дольше.</li>
+                <li><strong>Орехи:</strong> любые — от арахиса до макадамии. Солёные фисташки уже обжарены, их достаточно почистить и порубить.</li>
+                <li><strong>Аллергия на орехи:</strong> 50 г орехов в массе замените печеньем, а для обвалки используйте вафельную крошку — конфеты не станут хуже.</li>
+                <li><strong>Обвалка:</strong> кокосовая стружка, кунжут, вафельная крошка.</li>
+                <li><strong>Карамель отдельно:</strong> её же можно подать к сырникам, запеканкам и блинам. Ягодная, шоколадная и взбитая карамель — другие рецептуры, там меняются пропорции.</li>
+                <li><strong>Против кристаллизации:</strong> чайная ложка с горкой глюкозного сиропа или инвертного сахара на эту раскладку — граммовки при этом не меняются.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и подача</h4>
+              <ul>
+                <li><strong>Конфеты:</strong> 3 недели в холодильнике. При комнатной температуре не текут и не тают в руках — их можно брать на детские праздники и дарить.</li>
+                <li><strong>Карамель отдельно:</strong> 3 недели в банке в холодильнике. Если закристаллизовалась — это нормально, достаточно подогреть.</li>
+                <li><strong>Подача:</strong> в коробочках, порционно — хороший подарок учителям и преподавателям к выпускным.</li>
+                <li><strong>С детьми:</strong> автор специально отмечает, что конфеты удобно делать вместе с детьми — работа простая и наглядная.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+          <div class="warning-box">
+            <strong>Расхождения между расшифровкой и DOCX:</strong>
+          </div>
+          <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+            <li>DOCX даёт список продуктов в минимальной магазинной фасовке (150 г печенья, 200 г шоколада, 180 г масла, 250 г сливок, 500 г сахара) и прямо оговаривает, что это <em>не рецептура</em>. На странице использованы граммовки, названные на вебинаре: 70 г печенья, 100 г шоколада, 30 г масла, 100 г сахара, 110 г сливок, 20 г масла в карамель, 20 г воды.</li>
+            <li>В расшифровке один раз звучит «печенье 75 грамм» (14:11), но во всех остальных упоминаниях — 70 г. На странице 70 г.</li>
+            <li>Сахар: в одном месте расшифровки «110 грамм сахар», в остальных — 100 г. На странице 100 г.</li>
+            <li>Количество конфет: автор называет 12 штук по 20 г, но фактически у неё вышло 11 — часть шариков была крупнее.</li>
+            <li>Не названы: точное количество шоколада на заливку, количество орехов на обвалку, температура и время варки карамели (только по цвету), время застывания в холодильнике. Эти величины на странице помечены как ориентировочные.</li>
+            <li>Соль: «треть чайной ложки» и «по вкусу», в граммах не указана.</li>
+          </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© CookBook — Автономная кулинарная библиотека.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

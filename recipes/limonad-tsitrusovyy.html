@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Цитрусовый лимонад — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Освежающий натуральный домашний цитрусовый лимонад на 5 литров: лимоны, апельсины, грейпфрут, лайм, сахарный сироп и экстракт цитрусовой цедры.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="limonad-tsitrusovyy">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Напитки</span>
+        <span class="recipe-difficulty">Сложность: <strong>Легкая</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Освежающий цитрусовый лимонад (на 5 литров)</h1>
+      <p class="recipe-lead">
+        Идеально сбалансированный, насыщенный прохладительный напиток из четырех видов цитрусовых: сочных лимонов, сладких апельсинов, крупного грейпфрута и ароматного лайма. Секрет глубокого вкуса — двойная горячая экстракция эфирных масел из цедры блендером без горечи и деликатный сахарный сироп.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">15 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">15–20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~35–40 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">5 литров (10 порций по 500 мл)</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/limonad.jpg" alt="Освежающий цитрусовый лимонад со льдом" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (10 порций / 5 л)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="10">10</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (по 500 мл)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Все граммовки и штучные ингредиенты автоматически масштабируются. Базовая раскладка рассчитана на 5 литров готового напитка (10 бокалов по 500 мл или 20 стаканов по 250 мл).
+          </p>
+        </div>
+
+        <!-- Переключатель источников и таймкодов видео -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Показать источники (видео-таймкоды)</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">10</span> порций</span>
+        </div>
+      </div>
+      <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Отмечайте купленные позиции галочками прямо в магазине.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: Цитрусовая корзина -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍊 Свежие цитрусовые</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item">
+              <input type="checkbox" class="shopping-checkbox" id="shop_lemon">
+              <label class="shopping-item-content" for="shop_lemon">
+                <strong>Лимоны свежие</strong>: 
+                <span class="shopping-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span>
+                <span class="shopping-hint">Крупные, сочные, с упругой и гладкой кожурой</span>
+              </label>
+            </li>
+            <li class="shopping-item">
+              <input type="checkbox" class="shopping-checkbox" id="shop_orange">
+              <label class="shopping-item-content" for="shop_orange">
+                <strong>Апельсины сочные</strong>: 
+                <span class="shopping-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span>
+                <span class="shopping-hint">Сладкие, с выраженным цитрусовым ароматом</span>
+              </label>
+            </li>
+            <li class="shopping-item">
+              <input type="checkbox" class="shopping-checkbox" id="shop_grapefruit">
+              <label class="shopping-item-content" for="shop_grapefruit">
+                <strong>Грейпфрут свежий</strong>: 
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">Один большой плод (дает благородную легкую горчинку и рубиновый оттенок)</span>
+              </label>
+            </li>
+            <li class="shopping-item">
+              <input type="checkbox" class="shopping-checkbox" id="shop_lime">
+              <label class="shopping-item-content" for="shop_lime">
+                <strong>Лайм свежий</strong>: 
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">Можно заменить на 1/2 лимона или 1/2 апельсина</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: Бакалея, вода и опции -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧊 Сироп, вода и подача</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item">
+              <input type="checkbox" class="shopping-checkbox" id="shop_sugar">
+              <label class="shopping-item-content" for="shop_sugar">
+                <strong>Сахар-песок (белый)</strong>: 
+                <span class="shopping-qty" data-base-amount="500" data-unit="г">500 г</span>
+                <span class="shopping-hint">Для варки сладкого базового сиропа (1 пачка 0.5–1 кг)</span>
+              </label>
+            </li>
+            <li class="shopping-item">
+              <input type="checkbox" class="shopping-checkbox" id="shop_water">
+              <label class="shopping-item-content" for="shop_water">
+                <strong>Вода питьевая (бутилированная или фильтрованная)</strong>: 
+                <span class="shopping-qty" data-base-amount="4.5" data-unit="л">4,5 л</span>
+                <span class="shopping-hint">500 мл в сироп + 500 мл кипятка на экстракцию цедры + ~3.5 л для разведения концентрата</span>
+              </label>
+            </li>
+            <li class="shopping-item">
+              <input type="checkbox" class="shopping-checkbox" id="shop_ice">
+              <label class="shopping-item-content" for="shop_ice">
+                <strong>Пищевой лёд (кубики)</strong>: 
+                <span class="shopping-qty" data-base-amount="1" data-unit="пакет">1 пакет</span>
+                <span class="shopping-hint">Для охлаждения при подаче в бокалы</span>
+              </label>
+            </li>
+            <li class="shopping-item" style="border-style: dashed;">
+              <input type="checkbox" class="shopping-checkbox" id="shop_passionfruit">
+              <label class="shopping-item-content" for="shop_passionfruit">
+                <strong>Пюре маракуйи (опционально)</strong>: 
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Из расчета 50 г на 1 л лимонада для получения экзотического вкуса</span>
+              </label>
+            </li>
+            <li class="shopping-item" style="border-style: dashed;">
+              <input type="checkbox" class="shopping-checkbox" id="shop_limoncello">
+              <label class="shopping-item-content" for="shop_limoncello">
+                <strong>Ликёр Лимончелло (опционально)</strong>: 
+                <span class="shopping-qty" data-base-amount="300" data-unit="мл">300 мл</span>
+                <span class="shopping-hint">~30 мл на порцию со льдом для создания банкетного коктейля для взрослых</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Основной контент: Ингредиенты + Технология -->
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Цитрусовая основа</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span> — Лимоны сочные
+              <span class="ingredient-note">Цедра и свежевыжатый сок</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span> — Апельсины
+              <span class="ingredient-note">Цедра и свежевыжатый сок</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span> — Большой грейпфрут
+              <span class="ingredient-note">Цедра и свежевыжатый сок</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span> — Лайм
+              <span class="ingredient-note">Замена: 1/2 лимона или 1/2 апельсина</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Сахарный сироп</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="500" data-unit="г">500 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="500" data-unit="мл">500 мл</span> — Вода
+              <span class="ingredient-note">Для варки сиропа в пропорции 1:1</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Экстракция цедры и объем</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="500" data-unit="мл">500 мл</span> — Кипяток №1
+              <span class="ingredient-note">Для ошпаривания цедры на 2–3 мин (сливается)</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="500" data-unit="мл">500 мл</span> — Кипяток №2
+              <span class="ingredient-note">Для измельчения цедры в блендере (идет в лимонад)</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3.5" data-unit="л">~3,5 л</span> — Вода питьевая холодная
+              <span class="ingredient-note">Бутилированная или кипяченая (доводка до общего объема 5 л)</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Подача и вкусовые вариации</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Кубики пищевого льда
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Пюре маракуйи (на 1 л лимонада)
+              <span class="ingredient-note">Опционально: тропическая версия без косточек</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Ликер Лимончелло (на стакан)
+              <span class="ingredient-note">Опционально: авторская идея для банкетов</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Приготовление сахарного сиропа</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                В небольшом сотейнике соедините 500 г сахара и 500 г (500 мл) чистой воды. Поставьте на средний огонь и доведите смесь до активного кипения, периодически помешивая до полного растворения кристаллов сахара.
+                <span class="source-badge">⏱ Видео: 03:40–03:49</span>
+              </p>
+              <p>
+                Варите сироп при слабом кипении ровно <strong>3 минуты</strong>. Снимите сотейник с огня и охладите сироп до комнатной температуры перед смешиванием с цитрусовой основой.
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Варка: <strong>3 минуты</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Сотейник, лопатка</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>Охладить до комнатной</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Подготовка цитрусовых и снятие цедры</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Тщательно промойте все цитрусовые (2 лимона, 2 апельсина, 1 большой грейпфрут и 1 лайм) проточной теплой водой с щеткой, чтобы смыть восковой налет и поверхностные консерванты. Обсушите полотенцем.
+                <span class="source-badge">⏱ Видео: 00:19–00:41</span>
+              </p>
+              <div class="warning-box">
+                <strong>Важнейшее кулинарное правило:</strong> Снимайте цедру овощечисткой или специальным ножом предельно тонко! Ни в коем случае не захватывайте белый подкорковый слой (альбедо) — именно он дает грубую неприятную горечь.
+                <span class="source-badge">⏱ Видео: 00:41–01:08</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>5–7 мин</strong></span>
+              <span class="param-pill">🥣 Инструмент: <strong>Экономка (овощечистка)</strong></span>
+              <span class="param-pill">🔍 Качество: <strong>Только цветной слой без белой мякоти</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Отжим свежего цитрусового сока (фреша)</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Разрежьте очищенные от цедры цитрусовые пополам. Отожмите сок из всех фруктов в большую кастрюлю или мерную емкость.
+                <span class="source-badge">⏱ Видео: 01:11–01:39</span>
+              </p>
+              <div class="tip-box">
+                <strong>Лайфхак автора:</strong> Если под рукой нет специальной соковыжималки для цитрусовых, используйте обычную столовую вилку. Вставьте зубья вилки в мякоть половинки цитруса и вращайте ее, сжимая фрукт рукой над кастрюлей — так сок отдается полностью до последней капли.
+                <span class="source-badge">⏱ Видео: 01:18–01:33</span>
+              </div>
+              <p>
+                В результате отжима со всех указанных фруктов получается ориентировочно <strong>500 мл чистого концентрированного цитрусового фреша</strong>.
+                <span class="source-badge">⏱ Видео: 01:55–02:01</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>5–8 мин</strong></span>
+              <span class="param-pill">🥣 Объем фреша: <strong>~500 мл</strong></span>
+              <span class="param-pill">🍋 Приспособление: <strong>Соковыжималка или столовая вилка</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Двухэтапная экстракция цедры блендером</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите всю снятую цедру в чашу вертикального стационарного блендера и залейте 500 мл крутого кипятка. Оставьте постоять буквально <strong>2–3 минуты</strong>.
+                <span class="source-badge">⏱ Видео: 02:02–02:29</span>
+              </p>
+              <p>
+                Откиньте цедру на дуршлаг или сито и <strong>полностью слейте эту первую воду</strong> — она уносит остаточную резкую эфирную горечь и больше не потребуется.
+                <span class="source-badge">⏱ Видео: 02:30–02:35</span>
+              </p>
+              <p>
+                Верните пропаренную цедру обратно в чашу блендера, снова залейте <strong>второй порцией крутого кипятка (500 мл)</strong>, плотно закройте крышку и тщательно пробейте блендером на максимальной скорости до мелкой однородной взвеси.
+                <span class="source-badge">⏱ Видео: 02:36–03:06</span>
+              </p>
+              <p>
+                Готовую горячую смесь процедите через мелкое металлическое сито прямо в емкость со свежевыжатым фрешем, тщательно отжимая гущу лопаткой. Оставшиеся на сите крупные частицы цедры удалите — в напиток они не идут.
+                <span class="source-badge">⏱ Видео: 03:14–03:31</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>7–8 мин</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Вертикальный блендер, сито</strong></span>
+              <span class="param-pill">💧 Вода: <strong>500 мл (слить) + 500 мл (в напиток)</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Купажирование концентрата и доведение до 5 литров</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                К объединенному цитрусовому соку и ароматному настою цедры добавьте полностью остывший сахарный сироп. Тщательно перемешайте лопаткой или половником — получилась ароматная концентрированная база лимонада.
+                <span class="source-badge">⏱ Видео: 03:49–03:59</span>
+              </p>
+              <p>
+                Влейте в концентрат чистую холодную воду (бутилированную или предварительно кипяченую охлажденную), доведя общий объем содержимого ровно до <strong>5 литров</strong> (потребуется ориентировочно 3.2–3.5 литра воды в зависимости от объема полученного фреша). Размешайте до идеальной однородности.
+                <span class="source-badge">⏱ Видео: 04:02–04:27</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Финальный объем: <strong>5.0 литров</strong></span>
+              <span class="param-pill">💧 Тип воды: <strong>Бутилированная негазированная или фильтрованная</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Охлаждение, подача и тропические вариации</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                <strong>Классическая подача:</strong> В высокий бокал положите щедрую порцию кубиков пищевого льда, налейте свежий лимонад, по желанию украсьте долькой апельсина или веточкой мяты.
+                <span class="source-badge">⏱ Видео: 04:41–04:53</span>
+              </p>
+              <p>
+                <strong>Тропический вариант с маракуйей:</strong> На каждый 1 литр готового охлажденного лимонада добавьте 50 г натурального замороженного или свежего пюре маракуйи (без косточек). Перемешайте венчиком или ложкой до полного растворения пюре. Напиток приобретает экзотический тропический аромат и легкую бархатистую текстуру.
+                <span class="source-badge">⏱ Видео: 04:54–05:27</span>
+              </p>
+              <p>
+                <strong>Банкетная версия (Adults only):</strong> В бокал с кубиками льда и лимонадом добавьте 30 мл итальянского ликера Лимончелло. Прекрасная легкая освежающая идея для летней коктейльной вечеринки.
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Подача: <strong>В бокал со льдом</strong></span>
+              <span class="param-pill">🧉 Вариация: <strong>+50 г пюре маракуйи на 1 л</strong></span>
+              <span class="param-pill">🍸 Банкетная опция: <strong>+30 мл лимончелло на порцию</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Двойное ошпаривание цедры:</strong> Первая трехминутная ванна с кипятком забирает лишнюю резкую горечь, а второе взбивание кипятком в блендере максимально экстрагирует натуральные эфирные масла (лимонен) в жидкость.</li>
+                <li><strong>Варка сиропа:</strong> Растворение сахара в воде кипячением в течение 3 минут стабилизирует сироп. Если просто всыпать сахар в холодную воду, он будет долго и неравномерно растворяться на дне кувшина.</li>
+                <li><strong>Замена лайма:</strong> Если лайма нет в наличии, автор рекомендует заменить его на 1/2 лимона или 1/2 апельсина без потери вкусового баланса.</li>
+                <li><strong>Универсальность маракуйи:</strong> Пюре маракуйи можно добавлять не только в лимонад, но и в ягодные начинки (например, 5–10% в начинку из крыжовника дает неожиданный эффект тропического курорта).</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Снятие белого слоя кожуры (альбедо):</strong> Попадание белой губчатой части цитрусов приведет к сильной неисправимой горечи готового напитка.</li>
+                <li><strong>Не слить первую воду от цедры:</strong> Если пренебречь сливом первой горячей воды, лимонад приобретет терпкий аптечный привкус.</li>
+                <li><strong>Ввод горячего сиропа во фреш:</strong> Добавление кипящего сиропа в свежевыжатый сок разрушает витамин С и ухудшает свежий вкус фреша. Сироп обязательно остужают.</li>
+                <li><strong>Использование нефильтрованной водопроводной воды:</strong> Хлор и примеси водопроводной воды напрочь заглушают тонкие цитрусовые эфиры. Используйте бутилированную воду.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© CookBook — Автономная кулинарная библиотека.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>
