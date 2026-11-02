@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Веррин лесные ягоды — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Веррин с лесными ягодами: хрустящий ореховый слой, ягодное конфи на яблочном пектине и крем-мусс с семенами чиа. Выход 10 стаканчиков по 230–250 г.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="verrin-lesnye-yagody">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Веррин лесные ягоды</h1>
+      <p class="recipe-lead">
+        Десерт в стаканчике из трёх слоёв: хрустящая ореховая крошка с апельсиновой цедрой, яркое ягодное конфи на яблочном пектине и сливочный мусс на заварной основе с семенами чиа. Слои повторяются дважды и видны через стенку — в этом вся суть веррина.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">настаивание чиа 2 ч (лучше ночь)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">выпечка 10–15 мин, остывание слоёв</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~4 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">10 стаканчиков по 230–250 г</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/verrin-lesnye-yagody.jpg" alt="Веррин с лесными ягодами в стеклянной банке: слои крошки, ягодного конфи и крема с семенами чиа" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (10 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="10">10</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (стаканчиков)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Базовая раскладка автора — 10 стаканчиков по 230–250 г. Все граммовки масштабируются пропорционально.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">10</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Холодное, для хрустящего слоя</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">В заварную основу крема</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 30% и выше</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">Холодные, взбиваются до крепких пиков</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span>
+                <span class="shopping-hint">Целые, в заварную основу</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍓 Ягоды, бакалея, декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ягоды замороженные</strong>:
+                <span class="shopping-qty" data-base-amount="900" data-unit="г">900 г</span>
+                <span class="shopping-hint">Любые два вида: смородина, малина, черника, ежевика</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Миндальная мука</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Или обжаренные орехи, рубленные в блендере</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">В хрустящий слой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="500" data-unit="г">500 г</span>
+                <span class="shopping-hint">100 г крошка + 200 г конфи + 200 г крем</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пектин яблочный</strong>:
+                <span class="shopping-qty" data-base-amount="25" data-unit="г">25 г</span>
+                <span class="shopping-hint">Пектина NH нужно вдвое меньше</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Семена чиа</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Замачиваются кипятком; можно заменить маком</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Белый шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">В горячую заварную массу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="г">4 г</span>
+                <span class="shopping-hint">Быстрорастворимый, залить 20 г холодной воды</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Крахмал кукурузный</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="г">5 г</span>
+                <span class="shopping-hint">В заварную основу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Апельсин</strong>:
+                <span class="shopping-hint">1 шт. — цедра в крошку и в крем</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пудра йогурта</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="г">5 г</span>
+                <span class="shopping-hint">Опционально — даёт йогуртовый вкус</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимонная кислота</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="г">2 г</span>
+                <span class="shopping-hint">В конце варки конфи</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Свежие ягоды и розмарин</strong>:
+                <span class="shopping-hint">Для украшения верринов</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Хрустящий слой</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Миндальная мука или орехи
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар-песок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Мука
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Масло сливочное холодное
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Цедра 1/2 апельсина и щепотка соли
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Ягодное конфи</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="900" data-unit="г">900 г</span> — Ягоды замороженные
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сахар-песок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Пектин яблочный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Лимонная кислота
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Сливочный крем-мусс</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Семена чиа
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="170" data-unit="г">170 г</span> — Кипящая вода (для чиа)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Молоко
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span> — Яйца С1
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="г">5 г</span> — Крахмал кукурузный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сахар-песок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Белый шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="г">5 г</span> — Пудра йогурта
+              <span class="ingredient-note">Можно исключить</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="г">4 г</span> — Желатин
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Холодная вода (для желатина)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Сливки 30% и выше
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Цедра 1/2 апельсина — по желанию
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Хрустящий слой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Муку, сахар, миндальную муку и холодное масло нарубите в комбайне (или ножом на доске) до крупной крошки, добавьте цедру и щепотку соли. Соберите в комок, раскатайте между двумя листами пергамента до толщины 2–3 мм и выпекайте при 170 °C до золотистого цвета. Остудите.
+                <span class="source-badge">⏱ Урок_01: 01:02–04:22</span>
+              </p>
+              <div class="warning-box">
+                <strong>Толщина 2–3 мм:</strong> толще — не пропечётся и будет трудно ломать на кусочки.
+                <span class="source-badge">⏱ Урок_01: 03:42–04:02</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> вместо миндальной муки подойдут обжаренные орехи, рубленные в блендере — не в самую мелкую крошку.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>10–15 мин</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>170 °C, конвекция</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>золотистый цвет</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Ягодное конфи</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сахар смешайте с пектином. Ягоды поставьте нагреваться в сотейнике. Пока смесь холоднее 40 °C, введите сахар с пектином дождиком. Доведите до кипения и проварите 2–3 минуты, постоянно помешивая. В конце добавьте лимонную кислоту. Остудите и переложите в кондитерский мешок.
+                <span class="source-badge">⏱ Урок_01: 04:22–08:45</span>
+              </p>
+              <div class="warning-box">
+                <strong>Пектин вводят только до 40 °C:</strong> выше этой температуры он уже не раскрывается и не загустит массу.
+                <span class="source-badge">⏱ Урок_01: 05:49–06:39</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> яблочный пектин необратим — массу нельзя повторно нагревать и замораживать. Лимонная кислота активизирует пектин и закрепляет густоту.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Варка: <strong>2–3 мин после кипения</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>капля хочет стечь, но не падает</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Семена чиа и желатин</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Семена чиа (30 г) залейте кипящей водой (170 г) и оставьте на 2 часа, а лучше на ночь — они впитают воду и получится студенистая масса. Желатин (4 г) залейте холодной водой (20 г) и хорошо перемешайте, чтобы на дне не осталось сухих крупинок.
+                <span class="source-badge">⏱ Урок_01: 09:06–10:01</span>
+              </p>
+              <div class="warning-box">
+                <strong>Желатин начинайте первым:</strong> увидели в рецепте желатин — сразу замочите его, он должен набухнуть, пока вы делаете остальное.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> чиа можно заменить маком, но мак так воду не удержит.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Настаивание: <strong>2 ч, лучше ночь</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Заварная основа</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Яйца соедините с сахаром (200 г) и крахмалом, влейте молоко и нагревайте при постоянном помешивании до 82–84 °C или до первого «булька». В горячую массу введите желатин, белый шоколад, цедру и пудру йогурта. При необходимости пробейте погружным блендером и остудите до комнатной температуры.
+                <span class="source-badge">⏱ Урок_01: 10:22–14:17</span>
+              </p>
+              <div class="warning-box">
+                <strong>Непрерывно помешивайте:</strong> масса склонна пригорать и сворачиваться. Сняли с огня — продолжайте мешать, чтобы нагрев от дна прекратился.
+                <span class="source-badge">⏱ Урок_01: 11:49–12:57</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> ароматизатор здесь — не ваниль, а апельсиновая цедра.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>82–84 °C или первый бульк</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>масса чуть загустела, однородная</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Крем-мусс</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сливки (300 г) взбейте на большой скорости до крепких пиков. Настоянные семена чиа откиньте на сито, чтобы ушла лишняя влага. В сливки аккуратными поднимающими движениями введите остывшую заварную часть, затем семена чиа. Переложите в кондитерский мешок.
+                <span class="source-badge">⏱ Урок_01: 14:29–16:40</span>
+              </p>
+              <div class="warning-box">
+                <strong>Заварная часть должна быть комнатной температуры:</strong> если она застынет в холодильнике в желе, придётся нагревать заново.
+                <span class="source-badge">⏱ Урок_01: 15:13–15:26</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> по сути это мусс. Если кажется жидким, уберите мешок в холодильник на 30 минут, но не давайте застыть полностью — иначе не отсадите.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак готовности: <strong>пышная однородная масса с вкраплениями чиа</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Сборка верринов</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Хрустящий слой поломайте на небольшие кусочки — не в крошку. В стаканы или баночки выложите половину крошки, отсадите ягодное конфи, затем крем-мусс. Повторите слои ещё раз: крошка, конфи, мусс. Украсьте свежими ягодами и розмарином.
+                <span class="source-badge">⏱ Урок_01: 17:00–20:56</span>
+              </p>
+              <div class="warning-box">
+                <strong>Слои должны быть видны:</strong> отсаживайте конфи и крошку к самым краям банки — в этом весь смысл веррина.
+                <span class="source-badge">⏱ Урок_01: 18:05–18:18</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> хрустящий слой встречается два раза, ягодная начинка — два раза, мусс — тоже дважды.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Выход: <strong>10 стаканчиков по 230–250 г</strong></span>
+              <span class="param-pill">⏱ Хранение: <strong>72 ч в холодильнике</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Советы и секреты автора</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Ягоды:</strong> любые два вида из смородины, малины, черники и ежевики — можно оставить ягодами, можно пюрировать.</li>
+                <li><strong>Пектин NH вместо яблочного:</strong> брать вдвое меньше.</li>
+                <li><strong>Семена чиа:</strong> дают хруст и дополнительное желирование муссу.</li>
+                <li><strong>Хранение:</strong> 72 часа в холодильнике, месяц в морозилке, размораживать в холодильнике.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Пектин в горячие ягоды:</strong> не загустит, останутся комки.</li>
+                <li><strong>Повторный нагрев или заморозка конфи:</strong> яблочный пектин необратим, масса потечёт.</li>
+                <li><strong>Заварная часть застыла желе:</strong> не смешается со сливками.</li>
+                <li><strong>Чиа не откинули на сито:</strong> лишняя вода разжижит мусс.</li>
+                <li><strong>Слои не доходят до краёв:</strong> веррин выглядит «слепым».</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «Веррин лесные ягоды.docx» (раскладка и описание) и расшифровка вебинара «Урок_01» из папки «Веррин_Лесные_ягоды».</li>
+              <li><strong>Время выпечки:</strong> в DOCX — 15 минут, в видео — 10 минут при 170 °C (автор показывает золотистый корж). На странице указан диапазон 10–15 минут.</li>
+              <li><strong>Пектин:</strong> в DOCX 25 г яблочного; в видео уточнение — пектина NH нужно вдвое меньше.</li>
+              <li><strong>Противоречие:</strong> DOCX допускает хранение верринов в морозилке до месяца, но в видео автор говорит, что конфи на яблочном пектине замораживать нельзя. Замораживать можно только собранный десерт, и то с оговоркой.</li>
+              <li><strong>Соль:</strong> в DOCX не указана, в видео автор добавляет щепотку в хрустящий слой.</li>
+              <li><strong>Фото:</strong> в папке с материалами снимков нет, изображение сгенерировано по описанию.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

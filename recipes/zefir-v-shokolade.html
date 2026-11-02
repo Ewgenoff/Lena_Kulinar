@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Зефир в шоколаде — пошаговый рецепт и технология</title>
+  <meta name="description" content="Зефир на агаре и яблочно-смородиновом пюре: меренга, сироп до 105 °C, отсадка, обваливание в пудре с крахмалом и глазировка тёмным шоколадом с какао-маслом. Рецептура для планетарного и ручного миксера.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="zefir-v-shokolade">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Конфеты и сладости</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Зефир в шоколаде</h1>
+      <p class="recipe-lead">
+        Домашний зефир на агаре с яблочно-смородиновым пюре: агар и пектин держат воду вдвоём, поэтому зефир не расползается и держит форму. Половину зефирок обваливают в сахарной пудре с кукурузным крахмалом, вторую окунают в тёмный шоколад с какао-маслом по упрощённой схеме — без полноценного темперирования.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~40 мин: пюре, отвесы, агар в воде</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч на зефир + ~30 мин на глазировку</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">стабилизация 4–8 ч (у автора 6 ч)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~7–8 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">≈30 зефирок Ø 4–5 см (расчёт)</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/zefir-v-shokolade.jpg" alt="Зефирки, наполовину покрытые тонким слоем тёмного шоколада, и одна разломанная зефирка с воздушной светлой текстурой" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (30 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="30">30</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (зефирок)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Автор точное количество зефирок не называет. За базу взято ≈30 штук диаметром 4–5 см — расчёт по объёму зефирной массы (около 830 г) и весу одной зефирки. Раскладка в рецепте — полная порция автора для планетарного миксера.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">30</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍏 Ягоды, фрукты, яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яблоки кислые зелёные</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span>
+                <span class="shopping-hint">Нужно ≈160 г яблока с кожурой, но без сердцевины; чем кислее и недозрелее — тем лучше</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре чёрной смородины замороженное</strong>:
+                <span class="shopping-qty" data-base-amount="160" data-unit="г">160 г</span>
+                <span class="shopping-hint">Или столько же замороженных ягод. Уходит 200 г готового пюре, остаток — в морозилку (до 2 месяцев)</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С0</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span>
+                <span class="shopping-hint">Нужно 80 г белка комнатной температуры — это 2 белка С0 или 3 белка С1; желтки останутся</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло растительное</strong>:
+                <span class="shopping-hint">Немного, чтобы смазать силиконовую форму или противень</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Шоколад, агар, обсыпка</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="420" data-unit="г">420 г</span>
+                <span class="shopping-hint">120 г в меренгу + 300 г в сироп. Для большего выхода сахар в сиропе можно увеличить в 1,5 раза</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Агар силой 900 блюм</strong>:
+                <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+                <span class="shopping-hint">Агар 1000 блюм — 9 г, 1200 блюм — 7,5 г. Агар «Катани» или Dr. Oetker с добавками — 30 г (3 пачки по 10 г)</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шоколад тёмный 54 % профессиональный</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">65 г растопить с какао-маслом, 35 г пойдут на «посев». Плитку из супермаркета автор не советует</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао-масло</strong>:
+                <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+                <span class="shopping-hint">Гранулированное или куском — без разницы; повышает текучесть шоколада, чтобы слой был тоньше</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Для обваливания, вместе с кукурузным крахмалом</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Крахмал кукурузный</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Только кукурузный: картофельный даёт серый цвет и свой вкус</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сироп глюкозы</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">(Опционально) заменяет 100 г сахара в сиропе — зефир дольше не кристаллизуется и лучше хранится</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Пюре (готовим с запасом)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Яблоко кислое зелёное
+              <span class="ingredient-note">С кожурой, только без сердцевины; в кожуре и косточках больше всего пектина</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Вода
+              <span class="ingredient-note">Чтобы яблоко не пригорело при припускании</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Пюре чёрной смородины замороженное
+              <span class="ingredient-note">Соотношение с яблоком 50 на 50; можно вишню, абрикос, клюкву, бруснику</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Зефирная масса (планетарный миксер)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Пюре яблоко + смородина
+              <span class="ingredient-note">Из приготовленного выше; берётся по весу, остаток замораживается</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Белок яичный
+              <span class="ingredient-note">Комнатной температуры; 2 белка С0 или 3 белка С1. Альбумин: 8 г + 75 г воды</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Сахар-песок
+              <span class="ingredient-note">В меренгу, двумя порциями</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Сироп</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Вода
+              <span class="ingredient-note">Не кипяток, иначе агару тяжело разойтись</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Сахар-песок
+              <span class="ingredient-note">Всыпается в агар после закипания</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Агар силой 900 блюм
+              <span class="ingredient-note">1000 блюм — 9 г, 1200 блюм — 7,5 г; «Катани» / Dr. Oetker — 30 г</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Обсыпка и глазировка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Крахмал кукурузный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="65" data-unit="г">65 г</span> — Шоколад тёмный 54 %, первая порция
+              <span class="ingredient-note">Топится вместе с какао-маслом</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="35" data-unit="г">35 г</span> — Шоколад тёмный 54 %, вторая порция
+              <span class="ingredient-note">«Посев» целых калет для кристаллизации</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Какао-масло
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Шоколад белый — для декора
+              <span class="ingredient-note">По желанию; без количества, «сколько уйдёт»</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Если работаете ручным миксером</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Вся раскладка уменьшается ровно в 2 раза
+              <span class="ingredient-note">40 г белка (или 4 г альбумина + 40 г воды), 60 г сахара в меренгу, 100 г пюре, 150 г сахара в сироп, 60 г воды, 5 г агара 900 блюм («Катани» — 15 г), 4,5 г агара 1000 блюм, 4 г — 1200 блюм</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Пюре: яблоко и чёрная смородина</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Яблоки вымойте, сердцевину с косточками удалите, кожуру оставьте. Нарежьте произвольно, сложите в сотейник, влейте воду (60 г) и припускайте, пока яблоко не станет мягким и не будет проминаться. Затем добавьте замороженное пюре смородины (160 г) и варите вместе, пока оно не оттает и не прогреется. Горячую массу пробейте погружным блендером до гладкости — при желании протрите через сито.
+                <span class="source-badge">⏱ Часть 1: 08:18–23:20</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не берите готовое детское пюре:</strong> в нём пектин уже выделился при промышленной обработке, при повторном нагреве он разрушится — и связки «агар + пектин» не получится. Нужно свежее яблоко или своё пюре, замороженное без нагрева.
+                <span class="source-badge">⏱ Часть 1: 20:03–20:53</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> пюре делают с запасом (по 160 г вместо 100 г), потому что часть влаги выпаривается, а в зефир идёт строго 200 г по весу. Остаток уберите в пакет или контейнер и заморозьте: хранится до 2 месяцев, перед следующей готовкой его не прогревают, а только размораживают.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Варка: <strong>до мягкости яблока</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>сотейник, погружной блендер или сито</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>гладкое пюре по консистенции как детское питание</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Отвесить 200 г пюре</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Готовое пюре остудите до тёплого и отвесьте ровно 200 г. Остальное уберите в контейнер или пакет и заморозьте.
+                <span class="source-badge">⏱ Часть 1: 23:41–26:04</span>
+              </p>
+              <div class="warning-box">
+                <strong>Пюре не уваривают:</strong> цель — только размягчить яблоко и разморозить смородину, а не выпарить воду. Иначе изменится баланс влаги, который держат агар и пектин.
+                <span class="source-badge">⏱ Часть 1: 25:02–25:19</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ В зефир: <strong>200 г пюре</strong></span>
+              <span class="param-pill">🌡 Пюре: <strong>тёплое</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Подготовка: агар, сахар, белок</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В сотейник налейте воду (120 г) комнатной температуры, всыпьте агар (10 г) и оставьте набухать. Отвесьте два сахара: 120 г — в меренгу, 300 г — в сироп. Отделите белок (80 г) комнатной температуры. Пюре (200 г) держите под рукой — оно пойдёт в сироп.
+                <span class="source-badge">⏱ Часть 1: 28:50–33:43</span>
+              </p>
+              <div class="warning-box">
+                <strong>Вода не должна быть кипятком:</strong> в горячей воде агару тяжелее разойтись. Замачивать порошковый агар можно, но не обязательно — достаточно дать постоять, пока готовите остальное.
+                <span class="source-badge">⏱ Часть 1: 28:59–31:51</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> смотрите на состав агара. Если кроме агара там фруктоза, амилоза и прочие добавки («Катани», Dr. Oetker), порошка нужно в 3 раза больше — 30 г вместо 10 г.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>сотейник, миксер, весы</strong></span>
+              <span class="param-pill">🌡 Белок: <strong>комнатной температуры</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Меренга</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Белок начните взбивать на низкой скорости: за минуту альбумин и вода «расстанутся», и белок начнёт принимать воздух. Перейдите на среднюю скорость и добивайтесь мелкопузырчатой пены — на дне не должно оставаться жидкости. Всыпьте половину сахара (60 г), дождитесь, пока пузыри снова станут мелкими, всыпьте вторую половину и взбивайте до плотной гладкой меренги с эластичными «клювиками».
+                <span class="source-badge">⏱ Часть 1: 34:10–42:52</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сахар вводится в два приёма и только после плотной пены:</strong> если высыпать весь сразу в жидкий белок, меренга получится слабой, а зефир потом «поплывёт».
+                <span class="source-badge">⏱ Часть 1: 39:07–40:30</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> всю меренгу взбивайте на одной средней скорости, ничего не увеличивая. Какао, если хотите шоколадный вкус, вводите в самом конце, просеяв, — но помните: воздушность массы упадёт примерно в 1,5 раза.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>планетарный миксер (насадка-венчик)</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>гладкая блестящая масса, «клювики» держатся</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Сироп с агаром</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сотейник с набухшим агаром поставьте на нагрев и, обязательно помешивая, доведите до кипения. Всыпьте весь сахар (300 г), снова доведите до кипения, убавьте огонь до среднего и введите пюре (200 г). Уваривайте, помешивая, до 105 °C — или до состояния, когда капля сиропа, снятая с лопатки, застывает и «зависает» на ней.
+                <span class="source-badge">⏱ Часть 1: 35:29–46:48</span>
+              </p>
+              <div class="warning-box">
+                <strong>Лучше чуть переварить, чем не доварить:</strong> агар раскрывает свойства выше 100 °C. Если капля уже застывает на лопатке, а градусник показывает меньше — погрейте ещё: хуже не будет.
+                <span class="source-badge">⏱ Часть 1: 39:52–40:11</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> на хорошем среднем огне весь процесс занимает около 10 минут. Агар пригорает — мешайте не отходя. Не оставляйте готовый сироп стоять: сняли с огня — сразу заливайте.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Варка: <strong>~10 мин на среднем огне</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>105 °C</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>капля застывает на лопатке</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Ввести сироп и взбить до «хлюпанья»</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Включите миксер на максимальную скорость и тонкой струйкой вливайте горячий сироп в меренгу. Взбивайте 3–4 минуты. Масса готова, когда появляется характерное хлюпанье: после него взбивайте ещё 2–3 минуты, пока дежа не станет горячей, но не нестерпимо.
+                <span class="source-badge">⏱ Часть 1: 48:25–52:40</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сироп — только на максимальной скорости и только тонкой струёй:</strong> иначе белок свернётся раньше времени, и масса останется жидкой. Готовую массу перестают взбивать при 35–40 °C — именно при этой температуре агар начинает вставать.
+                <span class="source-badge">⏱ Часть 2: 07:51–08:24</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> услышали хлюпанье — есть ещё пара минут, чтобы дойти до мешков. Дальше масса густеет, и отсаживать станет тяжело.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Взбивание: <strong>3–4 мин + 2–3 мин после хлюпанья</strong></span>
+              <span class="param-pill">🌡 Масса: <strong>35–40 °C</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>хлюпанье, масса держится на лопатке</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Мешки, насадки и форма — заранее</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Пока масса взбивается, подготовьте 2–3 кондитерских мешка по 45 см, насадки «открытая звезда» 824 и 826 и лист пекарской бумаги. Силиконовую форму смажьте растительным маслом (спрей или кисть). Мешок без насадки отрежьте примерно на 1 см, мешок с насадкой — в верхней трети насадки.
+                <span class="source-badge">⏱ Часть 1: 50:34–57:11</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не отрезайте мешок ниже:</strong> при большом давлении шов разойдётся, и зефир окажется на столе. Открытая звезда лучше закрытой: в глубокие бороздки закрытой насадки потом набивается пудра, и обваленный зефир выглядит хуже.
+                <span class="source-badge">⏱ Часть 1: 56:36–57:05</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>2–3 мешка, насадки 824 / 826, силиконовая форма, пергамент</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Отсадка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Массу разложите по мешкам и работайте быстро, пока она тёплая. Мешок держите строго вертикально над столом, под углом 90°: выдавили, остановили давление, и только потом резко убрали мешок в сторону. Так получается аккуратная «пимпочка» вместо длинного хвоста. Круглые зефирки отсаживайте двумя одинаковыми окружностями диаметром 4–5 см; силиконовую форму заполняйте мешком без насадки и снимайте излишки лопаткой.
+                <span class="source-badge">⏱ Часть 1: 57:15–1:05:13</span>
+              </p>
+              <div class="warning-box">
+                <strong>Останавливайте давление до того, как убрать мешок:</strong> если давить и вытаскивать одновременно, останется «сопля» — некрасиво и потом неудобно обваливать.
+                <span class="source-badge">⏱ Часть 1: 58:55–59:03</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> чем проще форма зефирки, тем красивее ляжет глазировка. Фигурные зефирки лучше обваливать, а ровные кружочки — окунать в шоколад. Диаметры можно заранее нарисовать на бумаге и перевернуть лист.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Отсадка: <strong>быстро, пока масса тёплая</strong></span>
+              <span class="param-pill">📐 Диаметр: <strong>4–5 см</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Стабилизация</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Оставьте зефир при комнатной температуре на 4–8 часов (у автора — 6 часов, с утра до вечера). Удобно делать на ночь: к утру зефир уже готов к обсыпке и глазировке. Самый вкусный зефир — на следующий день.
+                <span class="source-badge">⏱ Часть 1: 1:06:29–1:30:12</span>
+              </p>
+              <div class="warning-box">
+                <strong>Корочка — не признак готовности:</strong> стабилизация идёт внутри. Молекулы агара «застывают» в нужном положении и держат воду. Если при отсадке ничего не растеклось — зефир стабилизируется, просто дайте ему время.
+                <span class="source-badge">⏱ Часть 2: 03:44–04:25</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> в дождливую и влажную погоду зефир сохнет дольше, особенно ягодный — в нём больше воды. Это нормально.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>4–8 ч</strong></span>
+              <span class="param-pill">🌡 Условия: <strong>комнатная температура, без сквозняков</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Обсыпка пудрой с крахмалом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Смешайте сахарную пудру (100 г) и кукурузный крахмал (30 г). Зефирку кладите в смесь, полностью засыпайте и тихонько обстучите, чтобы пудра попала во все углубления. Достаньте, стряхните лишнее и переложите на бумагу. В смесь можно окунать сразу по две зефирки одинакового диаметра, соединив их боками.
+                <span class="source-badge">⏱ Часть 2: 14:51–18:01</span>
+              </p>
+              <div class="warning-box">
+                <strong>Пудра с крахмалом — не «для красоты»:</strong> крахмал впитывает лишнюю влагу и внутри зефира, и из воздуха, поэтому зефир не отсыревает и не липнет. Непосыпанный зефир оставлять нельзя.
+                <span class="source-badge">⏱ Часть 2: 16:56–17:52</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> крахмал — только кукурузный. Картофельный даёт серый цвет и посторонний вкус. Просеивать его не нужно, просеивают только пудру, если она комками.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ Смесь: <strong>100 г пудры + 30 г крахмала</strong></span>
+              <span class="param-pill">⏱ Минимум до обсыпки: <strong>4 ч стабилизации</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Шоколад с какао-маслом и «посев»</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сложите в миску шоколад первой порции (65 г) и какао-масло (10 г). Топите в микроволновке пульсами: сначала 30 секунд, перемешать, затем 15 секунд, перемешать, дальше по 10 секунд — или на водяной бане, постоянно помешивая. Когда масса стала гладкой, без комочков, всыпьте вторую порцию шоколада (35 г), дайте постоять и размешайте без нагрева, а в конце догрейте 5–10 секунд — только чтобы масса стала чуть тёплой и текучей.
+                <span class="source-badge">⏱ Часть 2: 23:12–33:36</span>
+              </p>
+              <div class="warning-box">
+                <strong>Задача — растопить, но не перегреть:</strong> вторая порция целых калет работает как «посев»: она вносит уцелевшие кристаллы какао-масла, и шоколад потом застывает с хрустом. Какао-масло здесь не для темперирования, а чтобы повысить текучесть и получить тонкий слой.
+                <span class="source-badge">⏱ Часть 2: 24:35–25:07</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> так можно только с тёмным шоколадом. Молочный и белый придётся темперировать полноценно, иначе они не застынут.
+                <span class="source-badge">⏱ Часть 2: 26:10–26:36</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Пульсы: <strong>30 с → 15 с → по 10 с</strong></span>
+              <span class="param-pill">🌡 Нагрев: <strong>минимальный, без перегрева</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>гладкая блестящая текучая масса</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Окунуть зефир в шоколад</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Берите по одной зефирке самой ровной формы, окунайте полностью — вместе с дном. Вынули, стукните вилкой об палец, затем проведите вилкой по дну миски, снимая излишки, и выложите на пергамент или силикон. Помогайте себе второй вилочкой.
+                <span class="source-badge">⏱ Часть 2: 35:01–37:05</span>
+              </p>
+              <div class="warning-box">
+                <strong>Только по одной:</strong> две зефирки в шоколаде слипнутся в некрасивый ком. И следите, чтобы слой не стекал «кучей» на дно — для этого и нужен проход вилкой по дну миски.
+                <span class="source-badge">⏱ Часть 2: 36:39–37:05</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> чем холоднее шоколад, тем толще и ощутимее будет слой. Если шоколада осталось немного, его можно залить в силиконовые формочки.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>две вилки, пергамент или силиконовый коврик</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>ровный тонкий слой без потёков</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Застывание и декор</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Оставьте зефир застывать при 18–20 °C: шоколад сначала блестит, потом становится матовым — это признак, что он встал. Если сомневаетесь, поставьте лист с бумагой на доску в холодильник. Для декора растопите белый шоколад, отрежьте у мешка самый кончик (миллиметр) и нанесите тонкие линии-зигзаг.
+                <span class="source-badge">⏱ Часть 2: 40:24–48:04</span>
+              </p>
+              <div class="warning-box">
+                <strong>Температура застывания — 18–20 °C:</strong> в жаркой кухне шоколад может остаться липким. Именно поэтому автор включает кондиционер на 19 °C.
+                <span class="source-badge">⏱ Часть 2: 41:14–41:22</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> можно обойтись без декора — зефир вкусен и так. Сублимированные ягоды или цветной сахар тоже возможны, но автор предпочитает оставить гладкую поверхность.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Условия: <strong>18–20 °C</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>шоколад матовый, не липнет к пальцам</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Хранение</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Зефир в пудре хранится 5 суток при комнатной температуре 18–20 °C, в плотно закрытом контейнере в холодильнике — 7 суток. Зефир, покрытый шоколадом со всех сторон, живёт дольше: 5–7 дней при комнатной температуре. Замораживать можно: в плотном контейнере, затянутом плёнкой, до 3 месяцев, размораживать в холодильнике около получаса.
+                <span class="source-badge">⏱ Часть 1: 1:19:18–1:20:39</span>
+              </p>
+              <div class="warning-box">
+                <strong>Два главных врага:</strong> высокая влажность воздуха и прямые солнечные лучи. Держите контейнер в шкафчике, а не на подоконнике.
+                <span class="source-badge">⏱ Часть 2: 31:51–32:07</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> если нужен зефир для хранения при комнатной температуре, замените 30 % сахара в сиропе (100 г из 300 г) сиропом глюкозы — он не даёт сахару кристаллизоваться и дольше держит воду.
+                <span class="source-badge">⏱ Часть 1: 1:22:57–1:23:36</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ В пудре: <strong>5 суток при 18–20 °C</strong></span>
+              <span class="param-pill">⏱ В шоколаде: <strong>5–7 суток</strong></span>
+              <span class="param-pill">❄️ В морозилке: <strong>до 3 месяцев</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Советы и секреты автора</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Два гелеобразователя вместо одного:</strong> воду в зефире держат пектин из фруктов и ягод и агар. Яблоко берут всегда, даже если ягода богата пектином: у яблока больше клетчатки и меньше воды, поэтому текстура получается самой удачной.</li>
+                <li><strong>Порог пектина — 0,9:</strong> если показатель ягоды или фрукта 0,9 и выше (абрикос, персик, чёрная смородина, клюква, брусника, лимон), зефир можно делать на нём одном. Если ниже (клубника, малина, черника) — смешивать с яблоком 50 на 50.</li>
+                <li><strong>Сахар не заменяется:</strong> ни сахарозаменителем, ни мёдом, ни кленовым сиропом — сахар здесь не подсластитель, а стабилизатор. Чем больше сахара, тем стабильнее и дольше хранится зефир; безболезненно можно добавить его в сироп в 1,5 раза больше.</li>
+                <li><strong>Агар термообратим:</strong> готовый зефир можно нагреть, взбить и отсадить заново, а можно замораживать — свойства не теряются. Растворяется агар при 90 °C, максимум свойств отдаёт выше 100 °C, застывает при 35–40 °C.</li>
+                <li><strong>Пастеризованный белок:</strong> меренга на нём жиже — добавьте 1–2 г сухого альбумина, он заберёт лишнюю воду. Альбуфикс для глазури не подходит.</li>
+                <li><strong>Альтернатива живому белку:</strong> 8 г сухого альбумина + 75 г воды (для ручного миксера — 4 г + 40 г). Сырой белок безопасен: сиропа больше по объёму и он горячее 100 °C, белок полностью пастеризуется.</li>
+                <li><strong>Ароматизаторы — в пюре:</strong> свежий базилик, мяту, сушёную лаванду добавляют в конце термической обработки пюре, дают постоять и протирают через сито.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Масса осталась жидкой:</strong> мало взбивали после введения сиропа, сироп был недостаточно горячим, агар некачественный или его мало. Спасти нельзя — можно только вылить в кольцо и нарезать кубиками, но воздушность уже не вернуть.</li>
+                <li><strong>Сироп остыл, пока показывали меренгу:</strong> агар начинает схватываться, и в белке остаются комочки. Сняли с огня — сразу заливайте тонкой струёй.</li>
+                <li><strong>Взяли готовое яблочное пюре или детское питание:</strong> пектина в нём уже нет, зефир не держит форму.</li>
+                <li><strong>Гарнир из картофельного крахмала:</strong> серый цвет и крахмальный привкус. Только кукурузный.</li>
+                <li><strong>Обваливать раньше 4 часов:</strong> зефир ещё мягкий, пудра ляжет неровно и зефир деформируется.</li>
+                <li><strong>Глазировка двумя зефирками сразу:</strong> они слипаются в ком. Только по одной.</li>
+                <li><strong>Молочный или белый шоколад без темперирования:</strong> не застынет и останется липким. Упрощённая схема с «посевом» работает только с тёмным шоколадом.</li>
+                <li><strong>Плитка шоколада из супермаркета:</strong> в ней отсекается масло или вода, глазировка «седает». Нужен профессиональный шоколад.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «описание.docx» (рецептуры для планетарного и ручного миксера, инвентарь, таблица пектинов) и расшифровка «Расшифровка Зефир в шоколаде» из папки «Зефир в шоколаде» (две части: изготовление зефира и глазировка).</li>
+              <li><strong>Единицы агара:</strong> в карте указано «агар сила 900 блюм — 10 г», плюс пересчёт на 1000 блюм (9 г), 1200 блюм (7,5 г) и 3 пачки «Катани» (30 г). В видео автор называет «Катани» и Dr. Oetker агаром с добавками и советует брать их втрое больше — этот вариант и взят за основной.</li>
+              <li><strong>Таблица пектинов:</strong> в DOCX яблоки — 1,2, чёрная смородина — 1,1. В видео автор говорит про яблоко 1,1 и смородину «выше 1,3». На рецепт это не влияет: и яблоко, и смородина проходят порог 0,9, поэтому смесь 50 на 50 даёт запас по пектину.</li>
+              <li><strong>Количество зефирок:</strong> автор выход не называет. Взято ≈30 штук Ø 4–5 см — расчёт по объёму массы и весу одной зефирки; в форме у автора зефирки крупнее, и их получается меньше.</li>
+              <li><strong>Температура сиропа:</strong> в видео 105 °C, но основной ориентир — капля, застывающая на лопатке; при отсутствии термометра автор ориентируется именно на неё.</li>
+              <li><strong>Температура застывания шоколада:</strong> в видео названо 18–20 °C; при этом автор отдельно оговаривает, что это упрощённая схема, а не полноценное темперирование.</li>
+              <li><strong>Фото:</strong> в папке с материалами только таблица содержания пектинов (картинка из DOCX), снимков зефира нет. Изображение сгенерировано по описанию блюда и подлежит замене на реальное фото.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

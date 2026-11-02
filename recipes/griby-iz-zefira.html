@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Грибы из зефира — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Зефирные грибочки на агаре: яблочный зефир на белке и сиропе, ножки-конусы и шляпки, декор какао и маком. Сироп до 110 °C, стабилизация 2–4 часа, хранение 7–10 дней.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="griby-iz-zefira">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Конфеты и сладости</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Грибы из зефира</h1>
+      <p class="recipe-lead">
+        Яблочный зефир на агаре, отсаженный в виде грибов: конусные ножки и круглые шляпки, которые потом соединяются в один грибок. Шляпки обваливают в какао, ножки — в маке, а сверху добавляют сухой краситель-распылитель, чтобы грибы выглядели как настоящие.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">15 мин: агар набухает, пюре тёплое</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~40 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">стабилизация 2–4 ч, полная — 8–12 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~4 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">~25 грибочков (расчёт)</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/griby-iz-zefira.jpg" alt="Зефирные грибочки: белые ножки в маке и шляпки, присыпанные какао" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (25 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="25">25</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (грибочков)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Автор не указывает точное количество грибов. Ориентир — около 25 штук небольшого размера из этой раскладки зефирной массы.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">25</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍏 Пюре, сахар, яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яблочное пюре</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Тёплое, но не горячее; без сахара</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">100 г в зефирную массу + 200 г в сироп</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span>
+                <span class="shopping-hint">Нужно 40 г белка; желтки останутся</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сироп глюкозы</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Держит воду и продлевает время работы с массой</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧪 Агар, декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Агар силой 900</strong>:
+                <span class="shopping-qty" data-base-amount="7" data-unit="г">7 г</span>
+                <span class="shopping-hint">Агара «Катани» из магазина нужно в 3 раза больше — 21 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-hint">Для обваливания: 3 части пудры на 1 часть крахмала</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кукурузный крахмал</strong>:
+                <span class="shopping-hint">1 часть на 3 части сахарной пудры</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао</strong>:
+                <span class="shopping-hint">Для шляпок — густо сваренное, насыщенное</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мак</strong>:
+                <span class="shopping-hint">Для ножек — имитация лесной земли</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сухой краситель-распылитель</strong>:
+                <span class="shopping-hint">Жёлтый, по желанию — для реалистичности ножек</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Зефирная масса</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Яблочное пюре
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар-песок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Белок
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Сироп</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сахар-песок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="130" data-unit="г">130 г</span> — Вода
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Агар силой 900
+              <span class="ingredient-note">Агара «Катани» — 21 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Сироп глюкозы
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Какао — для шляпок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Мак — для ножек
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Смесь сахарной пудры и кукурузного крахмала (3 : 1)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Сухой краситель-распылитель — по желанию
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка агара и пюре</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Агар (7 г) залейте водой (130 г) и дайте набухнуть. Яблочное пюре должно быть тёплым, но не горячим. Подготовьте кондитерские мешки с насадками: отсаживать придётся быстро.
+                <span class="source-badge">⏱ Урок_01: 11:21–11:50</span>
+              </p>
+              <div class="warning-box">
+                <strong>Агар схватывается уже при 40 °C:</strong> поэтому всё, что нужно, готовят заранее, а массу раскладывают по мешкам сразу после взбивания.
+                <span class="source-badge">⏱ Урок_01: 27:14–27:18</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> агар силы 800–1200 пересчитывают; «Катани» из обычного магазина — это крахмал с пудрой, его берут втрое больше.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Набухание: <strong>до готовности сиропа</strong></span>
+              <span class="param-pill">🌡 Пюре: <strong>тёплое, не горячее</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Первая часть: пюре, сахар, белок</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Соедините пюре (100 г), сахар (100 г) и белок (40 г) и взбейте на средней скорости. Сначала масса светлеет и увеличивается, затем скорость можно поднять.
+                <span class="source-badge">⏱ Урок_01: 19:22–20:02</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не ждите пиков до введения сиропа:</strong> белок взбивается до пышной массы, окончательную структуру даст горячий сироп.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> ручным миксером работайте сразу на максимальной скорости.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>миксер, глубокая миска</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Сироп</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сахар (200 г), воду с набухшим агаром и сироп глюкозы (30 г) поместите в сотейник и варите, постоянно помешивая, до 110 °C или до состояния «нитей». Дайте кипению уняться.
+                <span class="source-badge">⏱ Урок_01: 11:46–13:02</span>
+              </p>
+              <div class="warning-box">
+                <strong>Ориентир — консистенция, а не только градусник:</strong> на кипении термометр врёт. Агар раскрылся, когда появляются тянущиеся «нити».
+                <span class="source-badge">⏱ Урок_01: 23:38–24:56</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> обязательно помешивайте — агар прилипает и пригорает.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>110 °C или «нити»</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>сотейник, термометр</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Ввести сироп и взбить</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Горячий сироп осторожно, но уверенно влейте во взбивающуюся массу, не прекращая взбивания, тонкой струйкой. Взбивайте около минуты — до однородной плотной массы.
+                <span class="source-badge">⏱ Урок_01: 24:56–27:18</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сироп не должен остыть:</strong> вливайте его сразу после варки, иначе агар начнёт схватываться прямо в сотейнике.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> готовую массу сразу разложите по мешкам — она очень быстро стабилизируется.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Взбивание: <strong>~1 мин</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>плотная глянцевая масса</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Ножки и шляпки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Ножки отсаживайте первой партией: сначала поставьте точку, затем тяните вверх — получаются конусы. Отставьте их стабилизироваться. Затем отсадите круглые шляпки и вдавите в каждую готовую ножку.
+                <span class="source-badge">⏱ Урок_01: 28:34–31:18</span>
+              </p>
+              <div class="warning-box">
+                <strong>Ножки — обязательно первыми:</strong> к моменту, когда отсаживаете шляпки, ножки должны быть уже стабильными, иначе гриб развалится.
+                <span class="source-badge">⏱ Урок_01: 31:09–31:18</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> идеальная ровность не нужна — ножка должна лишь напоминать грибную. Силиконовую форму сбрызгивать не нужно, зефир выйдет сам.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>мешки с насадками, коврик</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>ножка держит форму, не плывёт</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Стабилизация</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Оставьте грибы стабилизироваться на 2–4 часа. Полностью зефир стабилизируется через 8–12 часов — тогда его можно уверенно брать в руки.
+                <span class="source-badge">⏱ Урок_01: 37:14–37:21</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не обваливайте раньше времени:</strong> на липкой массе пудра и какао лягут неровно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>2–4 ч, полная 8–12 ч</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Декор и обваливание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Шляпки обваляйте в какао или сублимированных ягодах, ножки — в маке. Можно окунуть шляпку в густо сваренное какао. Сверху распылите сухой краситель-распылитель для реалистичности. Классический вариант — обвалять грибы в смеси сахарной пудры и кукурузного крахмала (3 : 1).
+                <span class="source-badge">⏱ Урок_01: 56:24–01:01:34</span>
+              </p>
+              <div class="warning-box">
+                <strong>Мак — это «земля»:</strong> им посыпают ножки и подложку, чтобы грибы смотрелись как лесные.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> храните грибы 7–10 дней при комнатной температуре в темноте.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Хранение: <strong>7–10 дней</strong></span>
+              <span class="param-pill">🌡 Условия: <strong>комнатная температура, темнота</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Советы и секреты автора</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Агар — самый сильный загуститель:</strong> застывает при 40 °C и отлично держит воду.</li>
+                <li><strong>Глюкозный сироп:</strong> тоже держит воду и продлевает время работы с массой.</li>
+                <li><strong>«Катани» из магазина:</strong> втрое больше, потому что это смесь с крахмалом и пудрой.</li>
+                <li><strong>Сухие красители-распылители:</strong> дают реалистичный оттенок ножек.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Сироп остыл до вливания:</strong> агар схватился, масса комковатая.</li>
+                <li><strong>Долгая пауза перед отсаживанием:</strong> зефир застывает в мешке.</li>
+                <li><strong>Шляпки раньше ножек:</strong> соединять нечего, гриб разваливается.</li>
+                <li><strong>Обваливать липкий зефир:</strong> декор ложится пятнами.</li>
+                <li><strong>Хранение в холодильнике:</strong> зефир отсыревает, лучше тёмное место при комнатной температуре.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «Грибы из зефира.docx» (технологическая карта) и расшифровка вебинара «Урок_01» из папки «Грибы_из_зефира».</li>
+              <li><strong>Количество:</strong> точный выход грибов автор не называет; ~25 штук — расчёт по объёму зефирной массы.</li>
+              <li><strong>Агар:</strong> в карте 7 г силы 900; в видео уточнено, что агара «Катани» нужно 21 г, а агар силы выше 900 пересчитывают.</li>
+              <li><strong>Температура сиропа:</strong> карта — 110 °C или «нити»; в видео автор ориентируется на консистенцию, потому что при кипении термометр показывает неточно.</li>
+              <li><strong>Декор:</strong> карта даёт обваливание в пудре с крахмалом и вариант с какао/маком; в видео дополнительно показан сухой краситель-распылитель.</li>
+              <li><strong>Фото:</strong> в папке с материалами снимков нет, изображение сгенерировано по описанию.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

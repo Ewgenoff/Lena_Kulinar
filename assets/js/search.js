@@ -593,6 +593,257 @@ window.RECIPES_FALLBACK = [
       "выпечка",
       "улитка"
     ]
+  },
+  {
+    "id": "babka-sochnaya-bulka",
+    "title": "Бабка сочная булка",
+    "category": "Выпечка",
+    "description": "Пышная дрожжевая бабка-завиванец на опаре: бриошевое тесто с апельсиновой цедрой, начинки — грильяж, клубника, мак или шоколад. После выпечки пропитывается ромовым сиропом.",
+    "time": "~5–6 ч (активное 2 ч)",
+    "timeMinutes": 330,
+    "servings": "4 бабки (24 куска)",
+    "difficulty": "Сложная",
+    "image": "assets/images/babka-sochnaya-bulka.jpg",
+    "url": "recipes/babka-sochnaya-bulka.html",
+    "ingredients": [
+      "бабка",
+      "завиванец",
+      "дрожжевое тесто",
+      "бриошь",
+      "грильяж",
+      "клубника",
+      "мак",
+      "шоколад",
+      "ром",
+      "апельсин"
+    ]
+  },
+  {
+    "id": "biskvit-klassicheskiy",
+    "title": "Классический бисквит",
+    "category": "Торты и десерты",
+    "description": "База для тортов на пяти яйцах: только яйца, сахар и мука, без разрыхлителя. Выпечка при 180 °C без конвекции 30–35 минут и созревание в холодильнике 6 часов. Плюс пропитка и два крема.",
+    "time": "~7–8 ч (активное 40 мин)",
+    "timeMinutes": 450,
+    "servings": "8 порций (бисквит Ø18–20 см, ~450 г)",
+    "difficulty": "Средняя",
+    "image": "assets/images/biskvit-klassicheskiy.jpg",
+    "url": "recipes/biskvit-klassicheskiy.html",
+    "ingredients": [
+      "бисквит",
+      "корж",
+      "яйца",
+      "сахар",
+      "мука",
+      "пропитка",
+      "крем",
+      "творожный сыр",
+      "маскарпоне",
+      "сливки"
+    ]
+  },
+  {
+    "id": "biskvit-korolevy-viktorii",
+    "title": "Бисквит королевы Виктории",
+    "category": "Торты и десерты",
+    "description": "Шоколадный кексовый бисквит на четырёх коржах Ø20 см: масло, тёмный шоколад, какао и сливки. Белки отделять не нужно, тесто ждёт до часа, выпечка при 180 °C: 23 минуты по коржам или 30 минут в двух формах.",
+    "time": "~2 ч (активное 40 мин)",
+    "timeMinutes": 120,
+    "servings": "8 порций (4 коржа Ø20 см)",
+    "difficulty": "Легкая",
+    "image": "assets/images/biskvit-korolevy-viktorii.jpg",
+    "url": "recipes/biskvit-korolevy-viktorii.html",
+    "ingredients": [
+      "бисквит",
+      "виктория",
+      "шоколад",
+      "какао",
+      "масло",
+      "сливки",
+      "корж",
+      "разрыхлитель"
+    ]
+  },
+  {
+    "id": "nachinki-yagodno-fruktovye",
+    "title": "Начинки ягодно-фруктовые",
+    "category": "Торты и десерты",
+    "description": "Три начинки для тортов: слива с черносливом на пектине, инжир с обжаренной клубникой и вишня с бобом тонка на крахмале и желатине. Держат форму в разрезе и хорошо переносят заморозку.",
+    "time": "~1 ч (активное 30 мин)",
+    "timeMinutes": 60,
+    "servings": "3 начинки на слой торта",
+    "difficulty": "Средняя",
+    "image": "assets/images/nachinki-yagodno-fruktovye.jpg",
+    "url": "recipes/nachinki-yagodno-fruktovye.html",
+    "ingredients": [
+      "начинка",
+      "слива",
+      "чернослив",
+      "инжир",
+      "клубника",
+      "вишня",
+      "пектин",
+      "желатин",
+      "боб тонка"
+    ]
+  },
+  {
+    "id": "verrin-lesnye-yagody",
+    "title": "Веррин лесные ягоды",
+    "category": "Торты и десерты",
+    "description": "Десерт в стаканчике из трёх слоёв: хрустящая ореховая крошка с апельсиновой цедрой, ягодное конфи на яблочном пектине и сливочный мусс на заварной основе с семенами чиа. Слои повторяются дважды.",
+    "time": "~4 ч (активное 1 ч)",
+    "timeMinutes": 240,
+    "servings": "10 порций (стаканчики 230–250 г)",
+    "difficulty": "Средняя",
+    "image": "assets/images/verrin-lesnye-yagody.jpg",
+    "url": "recipes/verrin-lesnye-yagody.html",
+    "ingredients": [
+      "веррин",
+      "лесные ягоды",
+      "смородина",
+      "малина",
+      "черника",
+      "ежевика",
+      "пектин",
+      "чиа",
+      "мусс",
+      "десерт в стакане"
+    ]
+  },
+  {
+    "id": "griby-iz-zefira",
+    "title": "Грибы из зефира",
+    "category": "Конфеты и сладости",
+    "description": "Яблочный зефир на агаре, отсаженный грибами: конусные ножки и круглые шляпки. Сироп до 110 °C, стабилизация 2–4 часа, декор какао и маком под лесную землю.",
+    "time": "~4 ч (активное 40 мин)",
+    "timeMinutes": 240,
+    "servings": "~25 грибочков",
+    "difficulty": "Средняя",
+    "image": "assets/images/griby-iz-zefira.jpg",
+    "url": "recipes/griby-iz-zefira.html",
+    "ingredients": [
+      "зефир",
+      "грибы из зефира",
+      "агар",
+      "яблочное пюре",
+      "белок",
+      "какао",
+      "мак",
+      "конфеты"
+    ]
+  },
+  {
+    "id": "zefir-v-shokolade",
+    "title": "Зефир в шоколаде",
+    "category": "Конфеты и сладости",
+    "description": "Домашний зефир на агаре с яблочно-смородиновым пюре: меренга, сироп до 105 °C, отсадка, обваливание в пудре с кукурузным крахмалом и глазировка тёмным шоколадом с какао-маслом по упрощённой схеме с «посевом».",
+    "time": "~7–8 ч (активное ~1 ч 30 мин)",
+    "timeMinutes": 450,
+    "servings": "≈30 зефирок Ø 4–5 см",
+    "difficulty": "Сложная",
+    "image": "assets/images/zefir-v-shokolade.jpg",
+    "url": "recipes/zefir-v-shokolade.html",
+    "ingredients": [
+      "зефир",
+      "зефир в шоколаде",
+      "агар",
+      "агар-агар",
+      "шоколад",
+      "тёмный шоколад",
+      "какао-масло",
+      "чёрная смородина",
+      "смородина",
+      "яблоко",
+      "яблочное пюре",
+      "пюре",
+      "пектин",
+      "белок",
+      "белки",
+      "яйца",
+      "сахарная пудра",
+      "кукурузный крахмал",
+      "крахмал",
+      "сироп глюкозы",
+      "конфеты"
+    ]
+  },
+  {
+    "id": "kapkeyki-6-vidov",
+    "title": "Капкейки 6 видов за один замес",
+    "category": "Выпечка",
+    "description": "Одно масляно-яичное тесто и шесть вкусов: кокос, брусника с маком, фисташка-малина, орехи, лимон с имбирём и ваниль, а шоколадный вариант — отдельным замесом. Сверху крем на маскарпоне, внутри цитрусовый курд.",
+    "time": "~2 ч (активное 50 мин)",
+    "timeMinutes": 120,
+    "servings": "10 капкейков одного вкуса (капсулы 4×5 см)",
+    "difficulty": "Средняя",
+    "image": "assets/images/kapkeyki-6-vidov.jpg",
+    "url": "recipes/kapkeyki-6-vidov.html",
+    "ingredients": [
+      "капкейки",
+      "капкейк",
+      "маскарпоне",
+      "творожный сыр",
+      "сливочное масло",
+      "масло",
+      "мука",
+      "мука пшеничная",
+      "сахар",
+      "сахарная пудра",
+      "яйца",
+      "сливки",
+      "кокос",
+      "кокосовая стружка",
+      "брусника",
+      "мак",
+      "фисташка",
+      "фисташковая паста",
+      "орехи",
+      "лимон",
+      "цедра",
+      "имбирь",
+      "ваниль",
+      "какао",
+      "курд",
+      "крем"
+    ]
+  },
+  {
+    "id": "kapkeyki-orehovye",
+    "title": "Ореховые капкейки с вишней",
+    "category": "Выпечка",
+    "description": "Кексовое тесто на масле 82,5% с обжаренными орехами, вишнёвая начинка-соус на кукурузном крахмале и стабильный крем без сливочного масла на творожном сыре и маскарпоне. Шапочки трёх цветов отсадкой из трёх мешков.",
+    "time": "~1 ч 50 мин (активное 50 мин)",
+    "timeMinutes": 110,
+    "servings": "10 капкейков (капсулы 4×5 см)",
+    "difficulty": "Средняя",
+    "image": "assets/images/kapkeyki-orehovye.jpg",
+    "url": "recipes/kapkeyki-orehovye.html",
+    "ingredients": [
+      "капкейки",
+      "капкейк",
+      "орехи",
+      "грецкий орех",
+      "фундук",
+      "миндаль",
+      "кешью",
+      "маскарпоне",
+      "творожный сыр",
+      "крем",
+      "сливочное масло",
+      "масло",
+      "мука",
+      "мука пшеничная",
+      "сахар",
+      "сахарная пудра",
+      "яйца",
+      "сливки",
+      "вишня",
+      "крахмал",
+      "кукурузный крахмал",
+      "начинка",
+      "коньяк"
+    ]
   }
 ];
 
@@ -687,6 +938,27 @@ function difficultyWeight(recipe) {
   if (value.startsWith('средн')) return 2;
   if (value.startsWith('сложн')) return 3;
   return 4;
+}
+
+// Три звезды сложности: закрашены по уровню (легкая — 1, средняя — 2, сложная — 3)
+function difficultyStars(value) {
+  const v = (value || '').toLowerCase();
+  const filled = v.startsWith('средн') ? 2 : v.startsWith('сложн') ? 3 : 1;
+  let html = '';
+  for (let i = 1; i <= 3; i++) {
+    html += `<span class="meta-star ${i <= filled ? 'on' : 'off'}">★</span>`;
+  }
+  return html;
+}
+
+// Часы (контурная иконка в стиле скриншота)
+function clockIcon() {
+  return '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
+}
+
+// Вилка и ложка (контурная иконка без тарелки)
+function cutleryIcon() {
+  return '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 2v8M11 2v8M9 2v10M9 12v10"/><path d="M17 3c-1.7 0-3 1.8-3 3.5S15.3 10 17 10s3-1.8 3-3.5S18.7 3 17 3Z"/><path d="M17 10v12"/></svg>';
 }
 
 // Light Russian Stemmer / Normalizer
@@ -787,16 +1059,16 @@ function renderRecipes() {
         <p class="card-desc">${recipe.description}</p>
         <div class="card-meta">
           <div class="meta-row meta-row-time">
-            <span class="meta-icon">⏱</span>
+            <span class="meta-icon">${clockIcon()}</span>
             <span class="meta-text">${recipe.time}</span>
           </div>
           <div class="meta-row meta-row-bottom">
             <div class="meta-item meta-servings">
-              <span class="meta-icon">🍽</span>
+              <span class="meta-icon">${cutleryIcon()}</span>
               <span class="meta-text">${recipe.servings}</span>
             </div>
             <div class="meta-item meta-difficulty">
-              <span class="meta-icon">📊</span>
+              <span class="meta-difficulty-stars">${difficultyStars(recipe.difficulty)}</span>
               <span class="meta-text">${recipe.difficulty}</span>
             </div>
           </div>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Начинки ягодно-фруктовые — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Три начинки для тортов: слива с черносливом, инжир с обжаренной клубникой и вишня с бобом тонка на крахмале и желатине. Точные граммовки, пектин NH, правила загущения.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="nachinki-yagodno-fruktovye">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Начинки ягодно-фруктовые</h1>
+      <p class="recipe-lead">
+        Три готовые начинки для бисквитных тортов: слива с черносливом на пектине, инжир с обжаренной клубникой и вишня с бобом тонка на крахмале и желатине. Все они держат форму в разрезе, не текут и хорошо переносят заморозку.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">15 мин: желатин замочить, боб натереть</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">остывание и стабилизация</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~1 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">3 начинки на слой торта</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/nachinki-yagodno-fruktovye.jpg" alt="Три ягодно-фруктовые начинки в банках: сливовая, клубнично-инжирная и вишнёвая" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (8 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="8">8</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (кусков)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Раскладка каждой начинки рассчитана на один слой торта Ø16–18 см. Число порций автор не называет: 8 — расчёт по готовому торту.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">8</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍓 Ягоды, фрукты, пюре</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре сливы</strong>:
+                <span class="shopping-qty" data-base-amount="180" data-unit="г">180 г</span>
+                <span class="shopping-hint">Без сахара, для начинки со черносливом</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Чернослив</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Порезать кусочками</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре инжира</strong>:
+                <span class="shopping-qty" data-base-amount="140" data-unit="г">140 г</span>
+                <span class="shopping-hint">Для начинки инжир-клубника</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Клубника</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Кусочками, обжаривается с сахаром и маслом</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Вишня без косточек</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Замороженная</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимонный сок</strong>:
+                <span class="shopping-qty" data-base-amount="45" data-unit="г">45 г</span>
+                <span class="shopping-hint">30 г в сливовую начинку + 15 г в инжирную</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Сахар, пектин, загустители</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">30 г слива + 60 г инжир (20 + 40) + 60 г вишня</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сироп глюкозы</strong>:
+                <span class="shopping-qty" data-base-amount="110" data-unit="г">110 г</span>
+                <span class="shopping-hint">50 г в сливовую + 60 г в инжирную</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пектин NH</strong>:
+                <span class="shopping-qty" data-base-amount="9" data-unit="г">9 г</span>
+                <span class="shopping-hint">3 г в сливовую + 6 г в инжирную</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кукурузный крахмал</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">В вишнёвую начинку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин</strong>:
+                <span class="shopping-qty" data-base-amount="6" data-unit="г">6 г</span>
+                <span class="shopping-hint">Замочить в 30 г холодной воды</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло</strong>:
+                <span class="shopping-qty" data-base-amount="35" data-unit="г">35 г</span>
+                <span class="shopping-hint">20 г к клубнике + 15 г в вишнёвую</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Боб тонка</strong>:
+                <span class="shopping-qty" data-base-amount="0.5" data-unit="шт." data-piece="true">0,5 шт.</span>
+                <span class="shopping-hint">Половина боба, натереть на мелкой тёрке</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Начинка слива-чернослив</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="180" data-unit="г">180 г</span> — Пюре сливы
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сироп глюкозы
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Пектин NH
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Чернослив кусочками
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Лимонный сок
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка инжир-клубника</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Клубника кусочками
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Сахар (к клубнике)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Сливочное масло (к клубнике)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="140" data-unit="г">140 г</span> — Пюре инжира
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Сахар (в пюре)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="6" data-unit="г">6 г</span> — Пектин NH
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сироп глюкозы
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Лимонный сок
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка вишня-боб тонка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Вишня замороженная без косточек
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Кукурузный крахмал
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="6" data-unit="г">6 г</span> — Желатин
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Холодная вода (для желатина)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Сливочное масло
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="0.5" data-unit="шт." data-piece="true">0,5 шт.</span> — Боб тонка
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Желатин залейте холодной водой (30 г) и оставьте набухать. Половину боба тонка натрите на мелкой тёрке — понадобится для вишнёвой начинки. Пюре и ягоды заранее достаньте, чтобы они не были ледяными.
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> начинки можно сварить сразу много и заморозить — в морозилке они хранятся месяц, в холодильнике 72 часа.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Желатин: <strong>до набухания</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Начинка слива-чернослив</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В пюре сливы (180 г) с сиропом глюкозы (50 г) введите дождиком сахар (30 г), смешанный с пектином NH (3 г). Доведите до кипения и немного поварите, постоянно помешивая. Добавьте чернослив (150 г) и лимонный сок (30 г).
+              </p>
+              <div class="warning-box">
+                <strong>Пектин — только дождиком и при помешивании:</strong> иначе он схватится комками.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>сотейник, лопатка</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>масса густеет, не течёт</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Начинка инжир-клубника</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Растопите масло (20 г), всыпьте сахар (20 г) и добавьте клубнику (200 г) — немного обжарьте. Отдельно в пюре инжира (140 г) с глюкозой (60 г) введите сахар (40 г) с пектином NH (6 г) дождиком, доведите до кипения, помешивая, и проварите 2–3 минуты. Добавьте обжаренную клубнику и лимонный сок (15 г).
+              </p>
+              <div class="warning-box">
+                <strong>Клубнику обжаривают отдельно:</strong> так она отдаёт лишнюю влагу и не разжижает начинку.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Варка: <strong>2–3 мин</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Начинка вишня-боб тонка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Вишню (250 г) выложите в сотейник и поставьте нагреваться. Всыпьте крахмал (15 г) с сахаром (60 г) и натёртый боб тонка, непрерывно перемешивая. Доведите до кипения, добавьте масло (15 г), перемешайте и снимите с огня. Введите набухший желатин и перемешайте до полного растворения.
+              </p>
+              <div class="warning-box">
+                <strong>Желатин — только в тёплую массу:</strong> в кипящую не вводите, иначе он потеряет силу.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> вишнёвая начинка держит форму за счёт крахмала и желатина — она подходит и для муссовых тортов.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак готовности: <strong>гладкая, густая, без комков</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Пектин и сахар:</strong> всегда смешивайте заранее и вводите в холодную основу дождиком.</li>
+                <li><strong>Слой меньше коржа:</strong> начинка должна быть на 2 см меньше диаметра коржа, иначе вытечет.</li>
+                <li><strong>Хранение:</strong> месяц в морозилке или 72 часа в холодильнике.</li>
+                <li><strong>Разморозка:</strong> перед сборкой начинку размораживать не нужно.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Пектин в горячую массу:</strong> комки, начинку придётся процеживать.</li>
+                <li><strong>Кипящий желатин:</strong> теряет желирующую силу.</li>
+                <li><strong>Много влаги от ягод:</strong> начинка течёт в разрезе.</li>
+                <li><strong>Начинка вровень с коржом:</strong> вытекает при сборке.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источник:</strong> DOCX «Начинки.docx» из папки «Начинки_ягодно-фруктовые» с тремя рецептурами и описанием процесса. Расшифровка вебинара использована для сверки.</li>
+              <li><strong>Пропорции:</strong> все граммовки перенесены без изменений; ингредиенты сгруппированы по начинкам.</li>
+              <li><strong>Пробел:</strong> автор не указывает, на какой диаметр коржа рассчитана каждая начинка и на сколько порций; в источниках есть только правило, что начинка должна быть на 2 см меньше коржа.</li>
+              <li><strong>Фото:</strong> в папке с материалами снимков нет, изображение сгенерировано по описанию.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

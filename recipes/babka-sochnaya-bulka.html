@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Бабка сочная булка — пошаговый рецепт и технология</title>
+  <meta name="description" content="Дрожжевая бабка-завиванец: бриошевое тесто на опаре, четыре начинки — грильяж, клубника, мак и шоколадный ганаш, ромовый сироп и золотая корочка.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body data-recipe-id="babka-sochnaya-bulka">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- 1. Общая информация -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Бабка сочная булка</h1>
+      <p class="recipe-lead">
+        Пышная дрожжевая бабка-завиванец на опаре: бриошевое тесто с апельсиновой цедрой и ванилью, четыре начинки на выбор — грильяж из грецких орехов, клубничная, маковая и шоколадный ганаш. Готовая бабка пропитывается ромовым сиропом, поэтому остаётся сочной. Из этой раскладки выходит четыре бабки по ~375 г.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">1 ч: опара и вымешивание</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~2 ч без учёта расстойки</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">3–3,5 ч расстойки + выпечка</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~5–6 ч (или 2 дня с расстойкой в холоде)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">4 бабки (~1,5 кг теста, 24 куска)</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/babka-sochnaya-bulka.jpg" alt="Золотистая бабка-завиванец с разрезом, видны слои шоколадной и ореховой начинки" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (24 порции)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="24">24</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (кусков)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Базовая раскладка — четыре бабки по ~375 г теста. Количество кусков автор не называет: 24 посчитаны по 6 кускам на бабку.
+          </p>
+        </div>
+
+        <!-- Переключатель источников -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Раздел: Купить в магазине -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">24</span> порции</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: молочное -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко</strong>:
+                <span class="shopping-qty" data-base-amount="255" data-unit="г">255 г</span>
+                <span class="shopping-hint">240 г для опары + 1 ст. л. для смазки. Жирность 3,2%</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="160" data-unit="г">160 г</span>
+                <span class="shopping-hint">140 г в тесто + 20 г в шоколадный ганаш</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 33%</strong>:
+                <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+                <span class="shopping-hint">Для шоколадного ганаша (или 50 г при молочном шоколаде)</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="шт." data-piece="true">5 шт.</span>
+                <span class="shopping-hint">4 шт. (~204 г) в тесто + 1 желток для смазки; белок от пятого не используется</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: бакалея -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Мука, сахар, дрожжи</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="800" data-unit="г">800 г</span>
+                <span class="shopping-hint">С белком от 12 г/100 г («Макфа» или «Манитоба»); 120 г — в опару</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="420" data-unit="г">420 г</span>
+                <span class="shopping-hint">100 г в тесто + 100 г в сироп + 100 г грильяж + 50 г клубника + 70 г мак</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Дрожжи прессованные</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Для опары; сухих дрожжей нужно в 3 раза меньше (10 г)</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="г">5 г</span>
+                <span class="shopping-hint">В тесто; в видео автор называет 8 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ванильная паста</strong>:
+                <span class="shopping-hint">1 ч. л. — или ванильный сахар с семенами, экстракт, ванилин</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Апельсин</strong>:
+                <span class="shopping-hint">1 шт. — нужна только цедра</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Грецкие орехи</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Обжаренные, для грильяжа</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Клубника / джем</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Густой клубничный конфитюр или замороженная клубника + сахар и пектин</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пектин NH</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="г">3 г</span>
+                <span class="shopping-hint">Для клубничной начинки; яблочного нужно 8 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сироп глюкозы</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">В клубничную начинку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мак</strong>:
+                <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span>
+                <span class="shopping-hint">Кондитерский, для маковой начинки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шоколад тёмный</strong>:
+                <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                <span class="shopping-hint">Для ганаша; молочного нужно 80 г. Можно заменить пастой «нутелла»</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Тёмный ром или коньяк</strong>:
+                <span class="shopping-hint">4 ст. л. в сироп; для детского варианта можно не добавлять</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимонная кислота</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="г">1 г</span>
+                <span class="shopping-hint">В клубничную начинку</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Ингредиенты и технология -->
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Тесто (на 4 бабки)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="800" data-unit="г">800 г</span> — Мука пшеничная в/с
+              <span class="ingredient-note">120 г в опару + 680 г в тесто</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="240" data-unit="г">240 г</span> — Молоко
+              <span class="ingredient-note">Подогретое до ~28 °C, для опары</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Дрожжи прессованные
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span> — Яйца С1 (≈204 г)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар-песок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="г">5 г</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              1 ч. л. — Ванильная паста
+              <span class="ingredient-note">Или ванильный сахар с семенами, экстракт, ванилин</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Цедра 1 апельсина
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="140" data-unit="г">140 г</span> — Масло сливочное 82,5% комнатной температуры
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Сироп для пропитки</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Вода
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар-песок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              4 ст. л. — Тёмный ром или коньяк
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка «Грильяж»</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Орех грецкий обжаренный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар-песок
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка «Клубника»</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              150 г — Густой клубничный конфитюр или джем
+              <span class="ingredient-note">Вариант Б: свежая / замороженная клубника с добавками ниже</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              150 г — Клубника замороженная (вариант Б)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сахар (вариант Б)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Пектин NH (вариант Б)
+              <span class="ingredient-note">Яблочного пектина — 8 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Сироп глюкозы (вариант Б)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              1 г — Лимонная кислота (вариант Б)
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка «Мак»</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Мак
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Сахар-песок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              1 шт. — Желток
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка «Шоколад»</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              150 г — Шоколадная паста «нутелла» (вариант А)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Шоколад тёмный (вариант Б)
+              <span class="ingredient-note">Молочного — 80 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сливки 33% (вариант Б)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Масло сливочное (вариант Б)
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Для смазки</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              1 шт. — Желток + 1 ст. л. молока
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Опара</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Молоко (240 г) подогрейте до ~28 °C — ощущается прохладным пальцу, не выше 35 °C. Добавьте дрожжи (30 г) и перемешайте лопаткой: цель — дать дрожжам размягчиться, полностью растворять не нужно. Просейте муку (120 г) и перемешайте. Закройте плёнкой с отверстием и оставьте при комнатной температуре на 30–40 минут.
+                <span class="source-badge">⏱ Урок_03: 13:14–16:11</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не перегрейте молоко:</strong> выше 35 °C дрожжи погибнут. Чем ближе температура к комнатной, тем лучше.
+                <span class="source-badge">⏱ Урок_03: 13:17–13:32</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> перемешивайте лопаткой, а не венчиком, чтобы сохранить волокна теста. Комочки муки в опаре не страшны.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>30–40 мин</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>опара удвоилась и запенилась</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Основа теста без сдобы</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В подошедшую опару добавьте яйца (4 шт., ~204 г), сахар (100 г), соль (5 г), ванильную пасту и свеженатёртую цедру апельсина. Всыпьте оставшуюся муку (680 г) и вымешивайте до развития клейковины — до того, как добавите масло.
+                <span class="source-badge">⏱ Урок_03: 21:18–25:00</span>
+              </p>
+              <div class="warning-box">
+                <strong>Масло добавляйте позже:</strong> клейковина и сдоба — противоборствующие. Сначала дайте развиться глютеновой сетке, потом вводите жир.
+                <span class="source-badge">⏱ Урок_03: 20:28–21:16</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> цедру трите непосредственно перед замесом — так сохранится больше эфирных масел. Лимонную цедру лучше не использовать: она горчит и темнеет при выпечке.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>миксер с крюком или руки</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>тесто тянется, глютен развился</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Масло в три приёма и вымешивание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сливочное масло (140 г) комнатной температуры вводите в 3–4 приёма, на минимальной скорости; каждую порцию — только после того, как предыдущая полностью вошла. После внесения всего масла вымешивайте ещё 15 минут руками или 7–10 минут в планетарном миксере.
+                <span class="source-badge">⏱ Урок_04: 14:26–17:58</span>
+              </p>
+              <div class="warning-box">
+                <strong>Ручной миксер не справится:</strong> с двойным замесом не вытянет; если миксер слабый — делайте один замес, как в рецепте. Муку не подсыпайте.
+                <span class="source-badge">⏱ Урок_04: 19:24–19:34</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> тесто сначала разжижается и становится рваным — это нормально. В итоге оно станет гладким, эластичным и не будет липнуть ни к столу, ни к рукам.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>15 мин руками / 7–10 мин миксером</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>масло комнатное; тесто лучше в прохладе</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>гладкая плёнка сверху, тесто не липнет</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Расстойка теста</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Соберите тесто в шар, подтянув складки внутрь, накройте плёнкой и оставьте при комнатной температуре на 2–2,5 часа — тесто увеличится в 2–2,5 раза. Можно убрать его в холодильник на ночь (до 24 часов) и дать согреться утром.
+                <span class="source-badge">⏱ Урок_04: 31:47–32:04</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не стимулируйте тепло:</strong> развитию текстуры способствует холод — вплоть до «утопления» теста в холодной воде, как делали в старину. Лучше откройте окно.
+                <span class="source-badge">⏱ Урок_04: 32:44–33:34</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> тесто хранится в холодильнике до 24 часов, в морозилке — до месяца (размораживать в холодильнике). Лучший вариант — замесить на ночь.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>2–2,5 ч или ночь в холоде</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>объём вырос в 2–2,5 раза</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Начинка «Грильяж»</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Грецкие орехи (100 г) подогрейте в микроволновке. Сахар (100 г) растопите на среднем огне, всыпая в 3–4 приёма растирающими движениями, до полного растворения кристаллов и карамельного цвета. Вмешайте тёплые орехи и выложите на бумагу для выпечки до полного остывания.
+                <span class="source-badge">⏱ Урок_02: 05:18–09:19</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не пережгите:</strong> орехи при отправке в растопленный сахар должны быть тёплыми, чтобы не было «шока». Карамель очень горячая — берегите руки.
+                <span class="source-badge">⏱ Урок_02: 07:42–09:29</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> после остывания грильяж можно слегка порубить в блендере, оставив кусочки до ~5 мм — крупные рвут тесто при разрезании.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак готовности: <strong>все кристаллы сахара растворились</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Начинка «Клубника»</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Вариант А — использовать готовый густой клубничный конфитюр (150 г). Вариант Б: замороженную клубнику (150 г) нагрейте, добавьте пектин (3 г), смешанный с сахаром (50 г), глюкозный сироп (15 г) и лимонную кислоту (1 г). Варите до «нестекающей капли», остудите.
+                <span class="source-badge">⏱ Урок_01: 13:22–20:37</span>
+              </p>
+              <div class="warning-box">
+                <strong>Пектин — в холодное пюре с сахаром:</strong> иначе схватится комками. Постоянно помешивайте и следите за температурой около 40 °C.
+                <span class="source-badge">⏱ Урок_01: 19:40–20:17</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> клубничная начинка течёт — детальнее следите за тем, чтобы не заходить до самых краёв пласта теста.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак готовности: <strong>капля не стекает с лопатки</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Начинка «Мак»</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Мак (80 г) замочите, жидкость слейте. Смешайте с сахаром (70 г) и желтком (1 шт). Перед нанесением смажьте пласт теста желтком, распределите маковую смесь и присыпьте сахаром.
+                <span class="source-badge">⏱ Урок_02: 11:22–18:21</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> смазка теста желтком до мака делает начинку сочной, а не сухой — мак не будет высыпаться.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Состояние: <strong>мак влажный, сахар распределён</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Начинка «Шоколад» и ганаш</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Вариант А — использовать готовую шоколадную пасту (150 г). Вариант Б: сливки (60 г) доведите до кипения в микроволновке, шоколад (70 г) растопите, соедините, добавьте масло (20 г) и доведите до однородной пастообразной массы; остудите.
+                <span class="source-badge">⏱ Урок_02: 13:52–23:03</span>
+              </p>
+              <div class="warning-box">
+                <strong>Тёмный шоколад при выпечке крупит:</strong> при 170 °C настоящий шоколад в начинке может стать крупинчатым из-за какао-масла. Покупная паста ведёт себя иначе — это нормально и не считается браком.
+                <span class="source-badge">⏱ Урок_02: 14:24–15:25</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> молочного шоколада на ганаш нужно больше (80 г) и меньше сливок (50 г). Ганаш без стабилизатора хранится до 72 часов.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак готовности: <strong>консистенция пасты, как у «нутеллы»</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Формирование рулетов</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Тесто обмять и разделить на 4 равные части по ~375 г, сформировать шарики и дать им подтянуться. Каждый раскатать в прямоугольник 35×40 см толщиной 2–3 мм, стараясь накатать на одной стороне. Распределить начинку, оставив чистым краешек, и свернуть плотный рулет, слепив края.
+                <span class="source-badge">⏱ Урок_04: 36:04–50:15</span>
+              </p>
+              <div class="warning-box">
+                <strong>Край не смазывайте начинкой:</strong> иначе рулет не склеится. Прямоугольник, а не круг — для ровных витков.
+                <span class="source-badge">⏱ Урок_04: 42:59–43:16</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> рулет сворачивайте плотно, слегка подтягивая тесто и подворачивая края, — от этого зависит красота витков бабки.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📐 Размер: <strong>35×40 см, толщина 2–3 мм</strong></span>
+              <span class="param-pill">⚖ Тесто: <strong>4 части по ~375 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Разрезка, скрутка и формы</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Шоколадный рулет перед разрезанием подержите 15 минут в холодильнике, чтобы ганаш стабилизировался. Колбасу разрежьте вдоль: сначала надрез до середины, потом до конца. Скрепите половины, выложите правую на левую и так завейте косичку, концы подверните внутрь. Выложите в смазанную маслом форму (можно с кружком пергамента на дне).
+                <span class="source-badge">⏱ Урок_04: 50:19–59:51</span>
+              </p>
+              <div class="warning-box">
+                <strong>Только шоколадную охлаждают:</strong> она с жидковатым ганашем — стабилизация нужна, чтобы не расползлась при скрутке. Остальные разрезать можно сразу.
+                <span class="source-badge">⏱ Урок_04: 50:20–50:30</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> на противне без формы бабка расползётся в стороны. Банка детского питания 800 г (верхий Ø 12,5 см) даёт самые ровные и красивые бабки.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>смазанные маслом формы</strong></span>
+              <span class="param-pill">⏱ В холодильник: <strong>15 мин (шоколадная)</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Расстойка и смазка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сформированные бабки оставьте на расстойку на 30 минут при комнатной температуре (можно 15 минут при комнатной и затем убрать в холод, чтобы не переросли). Смешайте желток с молоком и смажьте верх.
+                <span class="source-badge">⏱ Урок_04: 01:00:18–01:00:21</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не перестойте:</strong> объём должен вырасти примерно в полтора раза. Если переросло — бабка может опасть в духовке.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>30 мин</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>объём вырос в ~1,5 раза</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Выпечка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте при 170 °C с конвекцией (или без — режим «верх-низ») 25–30 минут. Проверяйте готовность зубочисткой — в режиме автора хватает 25 минут.
+                <span class="source-badge">⏱ Урок_04: 50:40–51:09</span>
+              </p>
+              <div class="warning-box">
+                <strong>Термометр для духовки:</strong> в газовой духовке показания на ручке могут врать — используйте отдельный градусник.
+                <span class="source-badge">⏱ Урок_04: 51:21–51:42</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>25–30 мин</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>170 °C, конвекция или верх-низ</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>сухая зубочистка, румяная корочка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Сироп и пропитка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Воду (150 г) соедините с сахаром (100 г), доведите до кипения и прокипятите 3 минуты. Остудите до комнатной температуры и добавьте тёмный ром или коньяк (4 ст. л). Горячие бабки пропитайте остывшим сиропом, начиная понемногу и постепенно увеличивая количество.
+                <span class="source-badge">⏱ Урок_02: 11:46–12:05</span>
+              </p>
+              <div class="warning-box">
+                <strong>Пропитка холодная, бабки горячие:</strong> именно так они впитывают сироп и остаются сочными. После пропитки дайте пропитаться и лишь потом украшайте пудрой или глазурью.
+                <span class="source-badge">⏱ Урок_04: 01:27:07–01:28:40</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> для детского варианта алкоголь в сироп можно не добавлять. Хватит сиропа на 4 бабки.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>3 мин кипения</strong></span>
+              <span class="param-pill">🍹 Алкоголь: <strong>4 ст. л. рома или коньяка</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Сначала клейковина, потом сдоба:</strong> именно порядок ввода масла даёт бриошевую текстуру.</li>
+                <li><strong>Холод развивает текстуру:</strong> тесто в холодильнике на ночь (до 24 ч) — лучший вариант; «утопленник» в холодной воде — старинный способ.</li>
+                <li><strong>Апельсиновая цедра:</strong> не горчит и не темнеет при выпечке, в отличие от лимонной.</li>
+                <li><strong>Мука с белком от 12 г/100 г:</strong> «Макфа», «Манитоба», «Нордик» — лучше всего для развития клейковины.</li>
+                <li><strong>Живые дрожжи проверяйте:</strong> запах должен быть приятным, без кислого и горького.</li>
+                <li><strong>Тёплые орехи в горячий сахар:</strong> без «шока» и без комков в грильяже.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Перегретое молоко:</strong> дрожжи гибнут, тесто не поднимается.</li>
+                <li><strong>Масло раньше времени:</strong> клейковина не развивается, тесто рвётся.</li>
+                <li><strong>Подсыпать муку:</strong> тесто забивается, бабка выходит плотной.</li>
+                <li><strong>Перегрев сахара в грильяже:</strong> горечь и комки.</li>
+                <li><strong>Выпечка без формы:</strong> бабка расползается в стороны.</li>
+                <li><strong>Пропитка горячим сиропом холодной бабки:</strong> сироп не впитается так равномерно.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «Babka — сочная булка.docx» (раскладка) и расшифровка вебинара из четырёх уроков: «Урок_01» (клубничная начинка), «Урок_02» (грильяж, мак, шоколад, сироп), «Урок_03» (опара и основа теста), «Урок_04» (масло, расстойка, формирование, выпечка).</li>
+              <li><strong>Соль:</strong> в DOCX указано 5 г, в видео автор называет 8 г. На странице — 5 г по карточке.</li>
+              <li><strong>Дрожжи:</strong> DOCX — 30 г прессованных; в опару идёт 30 г (вся норма). Сухих — в 3 раза меньше.</li>
+              <li><strong>Пропитка:</strong> часть рома в DOCX указана как «4 ст. л. тёмный ром или коньяк» — в видео детский вариант без алкоголя.</li>
+              <li><strong>Порции:</strong> автор называет только 4 бабки по ~375 г теста; 24 куска (по 6 на бабку) — расчёт.</li>
+              <li><strong>Готовность:</strong> время выпечки проверяется зубочисткой; в режиме автора хватило 25 минут при 170 °C.</li>
+              <li><strong>Фото:</strong> в папке с материалами снимков нет. На странице — изображение, присланное владельцем сайта: плетёная бабка с тёмной начинкой, грецкие орехи на фоне. Оно не из исходников.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

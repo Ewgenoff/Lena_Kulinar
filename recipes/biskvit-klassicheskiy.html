@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Классический бисквит — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Классический бисквит на 5 яйцах: форма 18–20 см, выход ~450 г, выпечка при 180 °C без конвекции 30–35 минут, созревание в холодильнике 6 часов. Плюс пропитка, крем внутрь и крем для выравнивания.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="biskvit-klassicheskiy">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Классический бисквит</h1>
+      <p class="recipe-lead">
+        База для большинства тортов: пять яиц, сахар и мука — ничего лишнего. Секрет в идеально взбитой меренге и бережном соединении с мукой. Плюс обязательная пропитка, крем на творожном сыре и крем для выравнивания, чтобы получился готовый торт.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">20 мин: продукты комнатной температуры, разделение яиц</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~40 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">6 ч созревания в холодильнике</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~7–8 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 бисквит Ø18–20 см, ~450 г</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/biskvit-klassicheskiy.jpg" alt="Готовый классический бисквит на решётке, разрезанный на коржи" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (8 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="8">8</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (кусков)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Базовая раскладка — один бисквит Ø18–20 см весом около 450 г. Число порций автор не называет: 8 посчитаны по готовому торту.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">8</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="шт." data-piece="true">5 шт.</span>
+                <span class="shopping-hint">Или 4 яйца категории С0</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творожный сыр</strong>:
+                <span class="shopping-qty" data-base-amount="450" data-unit="г">450 г</span>
+                <span class="shopping-hint">250 г в крем внутрь + 200 г в крем для выравнивания</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Маскарпоне</strong>:
+                <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span>
+                <span class="shopping-hint">В крем внутрь торта</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 30% и выше</strong>:
+                <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                <span class="shopping-hint">Холодные, взбиваются отдельно</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="180" data-unit="г">180 г</span>
+                <span class="shopping-hint">Комнатной температуры, в крем для выравнивания</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Мука, сахар, аромат</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Просейте вместе с какао, если делаете шоколадный вариант</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">150 г в бисквит + 100 г в пропитку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="220" data-unit="г">220 г</span>
+                <span class="shopping-hint">100 г в крем внутрь + 120 г в крем для выравнивания</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ароматизатор</strong>:
+                <span class="shopping-hint">Ваниль, ванильный сахар, экстракт или цедра цитруса — по вкусу</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Бисквит (Ø18–20 см)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="шт." data-piece="true">5 шт.</span> — Яйца С1
+              <span class="ingredient-note">Или 4 яйца С0; комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сахар-песок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Мука высшего сорта
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Пропитка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Вода
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар-песок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Ароматизатор — по вкусу
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем внутрь торта</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Творожный сыр
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Маскарпоне
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Сливки 30% и выше
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахарная пудра
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем для выравнивания</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="180" data-unit="г">180 г</span> — Сливочное масло
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Творожный сыр холодный
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка и разделение яиц</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Все продукты заранее выньте из холодильника — они должны быть комнатной температуры, особенно яйца. Яйца чисто разделите на белки и желтки: даже капля желтка в белке испортит меренгу, и это не миф.
+              </p>
+              <div class="warning-box">
+                <strong>Чистое разделение:</strong> белки взбиваются только в идеально чистой и обезжиренной посуде. Капля желтка не даст им подняться.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>комнатная</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>миксер, две сухие миски</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Меренга</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Белки начните взбивать на низкой скорости около минуты, затем увеличьте до максимальной. Введите четверть сахара, продолжайте взбивать, затем ещё четверть — до стоячих пиков.
+              </p>
+              <div class="warning-box">
+                <strong>95% ошибок бисквита — недостаточно взбитые белки.</strong> Не бойтесь перебить, но следите за результатом: масса должна держать пик.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> сахар вводится, когда белки уже взбиты, а не сразу.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак готовности: <strong>стоячие пики</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Желтки с сахаром</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Желтки соедините с половиной сахара и взбивайте 3–4 минуты — до просветления и увеличения объёма.
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> ручным миксером сначала работайте с белками, потом с желтками — меренга не осядет.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>3–4 мин</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>масса посветлела и выросла</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Соединение теста</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Треть белка введите лопаткой в желтки. В эту массу добавьте просеянную муку за один приём. Затем бережно, быстро и тщательно введите оставшиеся белки лопаткой.
+              </p>
+              <div class="warning-box">
+                <strong>Муку — только за один приём</strong> и никаких пауз после начала объединения меренги с желтками: теряется высота бисквита.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> последнюю порцию белка вводите особенно аккуратно, чтобы в тесте не осталось кусочков белка.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>силиконовая лопатка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Выпечка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Тесто переложите в форму и поставьте в заранее разогретую до 180 °C духовку. Режим без конвекции, «верх-низ». Первые 30 минут духовку не открывайте, затем проверьте зубочисткой. Время выпечки — 30–35 минут.
+              </p>
+              <div class="warning-box">
+                <strong>Не открывать первые 30 минут:</strong> от перепада температуры бисквит осядет.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> в газовой духовке выпекайте на самом верхнем уровне и контролируйте температуру отдельным термометром.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>30–35 мин</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>180 °C без конвекции</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>сухая зубочистка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Остывание и созревание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Готовый бисквит переверните на решётку и дождитесь остывания до комнатной температуры. Затем вырежьте, заверните в пищевую плёнку и уберите в холодильник минимум на 6 часов.
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> бисквит хранится 10 суток в холодильнике и 2 месяца в морозилке, вкус после морозилки не меняется.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Созревание: <strong>минимум 6 ч</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Пропитка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Воду (300 г) с сахаром (100 г) доведите до кипения и варите 3 минуты. В конце добавьте ароматизатор, остудите до комнатной температуры. Цедру цитрусовых выньте после остывания. Алкоголь — 1 столовая ложка на 150–200 мл.
+              </p>
+              <div class="warning-box">
+                <strong>Не пропитывайте молоком или мороженым:</strong> автор не рекомендует. Пропитка хранится месяц в холодильнике.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Варка: <strong>3 мин</strong></span>
+              <span class="param-pill">🥃 Алкоголь: <strong>1 ст. л. на 150–200 мл</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Крем внутрь торта</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Творожный сыр (250 г), маскарпоне (80 г) и просеянную пудру (100 г) взбейте на большой скорости 2 минуты — до загустения и исчезновения комков. Сливки (70 г) взбейте отдельно до мягких пиков и объедините с сырной массой.
+              </p>
+              <div class="warning-box">
+                <strong>Не перевзбивайте:</strong> сливки только до мягких пиков, иначе крем расслоится.
+              </div>
+              <div class="tip-box">
+                <strong>Золотое правило:</strong> вес крема внутрь равен весу бисквита. Срок годности крема — 72 часа.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Взбивание: <strong>2 мин</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Крем для выравнивания</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Масло комнатной температуры (180 г) взбейте с пудрой (120 г) до бела. В три приёма добавьте холодный творожный сыр (200 г) и взбейте на большой скорости.
+              </p>
+              <div class="warning-box">
+                <strong>Только перед выравниванием:</strong> этот крем не делают заранее, срок его годности — 72 часа.
+              </div>
+              <div class="tip-box">
+                <strong>Ориентир:</strong> вес крема для выравнивания примерно равен весу торта; со временем его требуется всё меньше.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сыр: <strong>холодный</strong></span>
+              <span class="param-pill">🌡 Масло: <strong>комнатной температуры</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Сборка и тайминг</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Коржи разрежьте, пропитайте сиропом, проложите кремом и начинкой, соберите торт и отправьте в холодильник. Выравнивание и декор делайте позже — в пределах срока годности крема (72 часа).
+              </p>
+              <div class="tip-box">
+                <strong>План заранее:</strong> бисквит — за 10 дней, пропитку — за месяц, начинки можно заморозить на месяц. Собранный торт замораживается на месяц.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Хранение торта: <strong>72 часа</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Вариации вкуса:</strong> шоколадный — заменить 20% муки на какао; маковый — +17–20 г мака; лимонный — 1 ч. л. цедры к желткам; цветной — краситель в готовую меренгу.</li>
+                <li><strong>Разрыхлитель не нужен:</strong> если в рецепте классического бисквита есть сода или разрыхлитель — рецепт неудачный.</li>
+                <li><strong>Меренга решает:</strong> тщательно взбивайте белки, не бойтесь перебить.</li>
+                <li><strong>Пропитка обязательна:</strong> она балансирует вкус и делает торт сочным.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Холодные яйца:</strong> масса плохо взбивается, бисквит ниже.</li>
+                <li><strong>Капля желтка в белке:</strong> меренга не держит форму.</li>
+                <li><strong>Постепенное добавление муки:</strong> тесто оседает.</li>
+                <li><strong>Открыть духовку в первые 30 минут:</strong> бисквит падает.</li>
+                <li><strong>Собирать на холодном бисквите:</strong> крем «поплывёт», торт нестабилен.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источник:</strong> PDF «Общий файл по классическому бисквиту» (14 страниц) из папки «Бисквит_Классический»: правила теста, рецептура, выпечка, пропитка, крем внутрь, крем для выравнивания, тайминг. Видеоуроки не расшифровывались.</li>
+              <li><strong>Рецептура:</strong> 5 яиц С1 (или 4 С0), 150 г сахар, 100 г мука; выход ~450 г на форму Ø18–20 см.</li>
+              <li><strong>Пропуск:</strong> в PDF есть рецепт желейной ягодной начинки, но его ингредиенты в тексте не читаются (содержимое выпало при извлечении). Отдельные начинки собраны в рецепте «Начинки ягодно-фруктовые».</li>
+              <li><strong>Порции:</strong> автор не указывает; 8 посчитаны по готовому торту.</li>
+              <li><strong>Фото:</strong> в папке с материалами снимков нет, изображение сгенерировано по описанию.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

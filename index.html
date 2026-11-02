@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Кулинарная библиотека | CookBook</title>
+  <title>Кулинарная библиотека</title>
   <meta name="description" content="Автономная кулинарная библиотека проверенных домашних и ресторанных рецептов">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
   <link rel="stylesheet" href="assets/css/style.css">
   <script defer src="https://cloud.umami.is/script.js" data-website-id="3b336dd0-5827-4ef1-99ff-2b037697afd8"></script>
 </head>
@@ -15,13 +16,9 @@
       <a href="index.html" class="brand">
         <span class="brand-logo">📖</span>
         <div class="brand-text">
-          <h1>CookBook</h1>
-          <p>Кулинарная библиотека</p>
+          <h1>Кулинарная библиотека Елены</h1>
         </div>
       </a>
-      <div class="nav-actions">
-        <span class="btn-secondary" style="cursor: default;">✨ 100% точность технологий</span>
-      </div>
     </div>
   </header>
 
@@ -42,7 +39,7 @@
 
       <div class="filter-row">
         <div class="category-chips">
-          <button class="chip active" data-category="all">Все рецепты</button>
+          <button class="chip active" data-category="all">Все</button>
           <button class="chip" data-category="Торты и десерты">Торты и десерты</button>
           <button class="chip" data-category="Напитки">Напитки</button>
           <button class="chip" data-category="Конфеты и сладости">Конфеты и сладости</button>
@@ -50,14 +47,13 @@
         </div>
 
         <div class="sort-select-wrapper">
-          <label for="sortSelect">Сортировка:</label>
           <select id="sortSelect" class="sort-select">
             <option value="default">По умолчанию</option>
             <option value="name-asc">По названию (А–Я)</option>
             <option value="name-desc">По названию (Я–А)</option>
             <option value="time-asc">По времени (быстрее)</option>
-            <option value="difficulty-asc">По сложности (сначала простые)</option>
-            <option value="difficulty-desc">По сложности (сначала сложные)</option>
+            <option value="difficulty-asc">По сложности: простые</option>
+            <option value="difficulty-desc">По сложности: сложные</option>
           </select>
         </div>
       </div>
@@ -77,7 +73,7 @@
   </main>
 
   <footer class="site-footer">
-    <p>© CookBook — Автономная кулинарная библиотека. Подготовлено для размещения на GitHub Pages.</p>
+    <p>© Кулинарная библиотека Елены.</p>
   </footer>
 
   <script src="assets/js/common.js"></script>

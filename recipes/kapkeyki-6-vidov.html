@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Капкейки 6 видов за один замес — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Капкейки на сливочном масле: один базовый замес и шесть вкусов — кокосовый, брусничный с маком, фисташка-малина, ореховый, лимон-имбирь и ванильный, плюс шоколадный отдельным замесом. Крем с маскарпоне и универсальный цитрусовый курд.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body data-recipe-id="kapkeyki-6-vidov">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Капкейки 6 видов за один замес</h1>
+      <p class="recipe-lead">
+        Одно масляно-яичное тесто, разделённое на шесть частей, и шесть разных вкусов: кокос, брусника с маком, фисташка-малина, орехи, лимон с имбирём и ваниль. Отдельным замесом — шоколадный вариант, потому что какао вводится вместе с мукой. Сверху — плотный крем на маскарпоне, внутри — универсальный цитрусовый курд.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">50 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">~1 ч 10 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~2 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">10 капкейков одного вкуса (капсулы 4×5 см)</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/kapkeyki-6-vidov.jpg" alt="Шесть видов капкейков с разноцветными шапочками из крема, ягодами и орехами на чёрной витрине" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (10 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="10">10</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">капкейков</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — один замес автора: тесто и крем на 10 капкейков одного вкуса. Все граммовки масштабируются, включая начинки и крем. Чтобы сделать сразу все шесть вкусов, поставьте 60 — или замесите базу шесть раз и разделите на шесть частей.
+          </p>
+        </div>
+
+        <!-- Переключатель источников и таймкодов видео -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">10</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: молочное, яйца, масла -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масла</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="6" data-unit="шт." data-piece="true">6 шт.</span>
+                <span class="shopping-hint">2 целых яйца в тесто + 4 желтка в курд; 4 белка останутся — пустите их на безе или омлет</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">90 г в тесто (заранее размягчить) + 60 г в курд</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 33% и выше</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">50 г холодных в тесто + 50 г в крем. Берите те, что хорошо взбиваются</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творожный сыр</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Для крема; плотный, не «ванночка с ложкой»</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Маскарпоне</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Автор берёт только Galbani или Bonfesta: с другими марками крем выходит жидким</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: бакалея, наполнители, декор -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧂 Бакалея, наполнители, декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="120" data-unit="г">120 г</span>
+                <span class="shopping-hint">Просеять вместе с разрыхлителем — это обязательно</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок (всего)</strong>:
+                <span class="shopping-qty" data-base-amount="215" data-unit="г">215 г</span>
+                <span class="shopping-hint">140 г в тесто + 75 г в курд</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">В крем; идёт вся сразу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Разрыхлитель</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="г">4 г</span>
+                <span class="shopping-hint">Небольшая пачка или чайная ложка без горки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Наполнитель на выбор</strong> — кокосовая стружка, замороженная брусника с маком, фисташковая паста, обжаренные орехи, цукаты имбиря с лимоном или ванильная паста
+                <span class="shopping-hint">Количества на один вкус — в раскладке ниже. Стружку берите свежую и белую, замороженную бруснику размораживать не нужно</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао-порошок</strong> (для шоколадного замеса):
+                <span class="shopping-qty" data-base-amount="20" data-unit="г">20 г</span>
+                <span class="shopping-hint">17–20 г по рецептуре автора; шоколадные капкейки замешиваются отдельно от остальных</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Цитрусы для курда</strong> — лимон, лайм, апельсин или мандарин
+                <span class="shopping-hint">100 г сока и 2 ч. л. цедры; для грейпфрута цедру не брать</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Краситель водорастворимый зелёный</strong>
+                <span class="shopping-hint">1–2 капли в фисташковое тесто, по желанию</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — бумажные капсулы 4×5 см с усилением, кондитерские мешки, лопатки
+                <span class="shopping-hint">Капсулы нужны с усилением, иначе разойдутся при выпечке</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">База на 10 капкейков (один вкус)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="90" data-unit="г">90 г</span> — Масло сливочное 82,5%
+              <span class="ingredient-note">Комнатной температуры, размягчённое</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="140" data-unit="г">140 г</span> — Сахар-песок
+              <span class="ingredient-note">Не растворяется в масле полностью — крупинки остаются</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span> — Яйца С1
+              <span class="ingredient-note">Около 120 г без скорлупы; вводить по одному</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Мука пшеничная в/с
+              <span class="ingredient-note">Просеять и смешать с разрыхлителем до ввода в тесто</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="г">4 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сливки холодные
+              <span class="ingredient-note">Добавляются в самом конце — «поцелуй мамы»</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Кокосовые</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Кокосовая стружка
+              <span class="ingredient-note">Смешать с мукой и разрыхлителем; стружка должна быть свежей</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Брусничные с маком</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Брусника замороженная
+              <span class="ingredient-note">Не размораживать, добавлять прямо из морозилки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Мак
+              <span class="ingredient-note">В сухую смесь вместе с мукой</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Фисташка-малина</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Фисташковая паста
+              <span class="ingredient-note">Вводится в масляно-яичную массу до муки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              1–2 капли — Краситель зелёный водорастворимый (по желанию)
+              <span class="ingredient-note">Только для яркости цвета, на вкус не влияет</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Ореховые</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Орехи обжаренные рубленые
+              <span class="ingredient-note">В сухую смесь с мукой</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Шоколад нетающий (опционально)
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Лимон-имбирь</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Цедра 1/2 небольшого лимона — Лимон
+              <span class="ingredient-note">Тереть тонко, без белой части</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Цукаты имбиря мелко порезанные
+              <span class="ingredient-note">Или 2 ч. л. натёртого свежего корня</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Ванильные</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Ванильная паста, натуральная ваниль или ванильный сахар
+              <span class="ingredient-note">1 ч. л.; можно заменить ванилином</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Шоколадные (отдельный замес)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              17–20 г — Какао-порошок
+              <span class="ingredient-note">Смешать с мукой и разрыхлителем: поэтому шоколадный замес делают отдельно от общего теста</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем с маскарпоне (на 10 капкейков)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Творожный сыр
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Маскарпоне
+              <span class="ingredient-note">Galbani или Bonfesta — другие марки дают жидкую массу</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сливки жирные
+              <span class="ingredient-note">Вводятся, когда крем почти готов; отдельно не взбиваются</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Универсальный цитрусовый курд</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сок цитруса
+              <span class="ingredient-note">Лайм, апельсин, мандарин; лимон лучше пополам с апельсином</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="ч. л.">2 ч. л.</span> — Цедра цитрусов тёртая
+              <span class="ingredient-note">Для грейпфрута цедру не добавлять</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="75" data-unit="г">75 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Желтки (4 шт.)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Масло сливочное
+              <span class="ingredient-note">Достать из холодильника за 10 минут — не сильно размягчённое</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка и декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Карамель, конфи или курд для начинки
+              <span class="ingredient-note">Расход крема — 40–45 г на капкейк</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка продуктов</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Достаньте масло заранее, чтобы оно стало мягким, но не растаяло. Подготовьте сливочное масло 82,5%, яйца категории С1, сахарный песок, просеянную муку высшего сорта и разрыхлитель — больше в базовом тесте ничего нет.
+                <span class="source-badge">⏱ Урок 2: 00:28–00:49</span>
+              </p>
+              <p>
+                Разложите наполнители по отдельным мискам: рубленые обжаренные орехи, кокосовая стружка, брусника с маком, фисташковая паста, ваниль, имбирь и лимонная цедра. Так вы не перепутаете вкусы, когда тесто будет разделено.
+                <span class="source-badge">⏱ Урок 2: 00:49–01:12</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Масло: <strong>комнатной температуры</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Миксер, весы, 6 мисок</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Масло с сахаром</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Взбейте размягчённое сливочное масло с сахарным песком. Начинайте на небольшой скорости, чтобы масло не разлеталось по стенкам, затем увеличьте до максимальной.
+                <span class="source-badge">⏱ Урок 2: 01:13–02:08</span>
+              </p>
+              <div class="tip-box">
+                <strong>Сахар не растворится:</strong> в масле он остаётся крупинками — это нормально и правильно. Масса должна стать однородной и светлой, а не гладкой, как сироп.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>1–1,5 мин</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Однородная светлая масса с крупинками сахара</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Яйца по одному</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Вводите яйца строго по одному, каждый раз взбивая до полного включения. Не добавляйте по два и не торопитесь — иначе масса расслоится.
+                <span class="source-badge">⏱ Урок 2: 02:10–02:54</span>
+              </p>
+              <div class="warning-box">
+                <strong>Если тесто расслоилось:</strong> слегка прогрейте массу (например, над тёплой водой) и взбейте ещё раз — эмульсия соберётся обратно. В норме видна только крупинка сахара, никакого расслоения.
+                <span class="source-badge">⏱ Урок 2: 03:27–03:35</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Яйца: <strong>по одному, 2 шт.</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Гладкая масса без расслоения</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Мука с разрыхлителем</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отвесьте разрыхлитель в муку и обязательно перемешайте их между собой ещё до теста — так разрыхлитель распределится равномерно.
+                <span class="source-badge">⏱ Урок 2: 03:46–03:58</span>
+              </p>
+              <p>
+                Введите масляно-яичную смесь в сухие ингредиенты за один приём и перемешайте миксером: начните на низкой скорости, затем увеличьте до максимума. Взбивайте недолго — только до объединения.
+                <span class="source-badge">⏱ Урок 2: 04:00–04:58</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Порядок: <strong>Смесь → в муку, за один приём</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Тесто собралось, муки не видно</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Холодные сливки — «поцелуй мамы»</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В самом конце, когда тесто уже готово, влейте холодные сливки и вмешайте миксером. Добавление холодного продукта в последний момент автор называет «поцелуй мамы»: тесто становится нежнее и рассыпчатее.
+                <span class="source-badge">⏱ Урок 2: 05:03–05:38</span>
+              </p>
+              <div class="tip-box">
+                <strong>Сливки только холодные:</strong> прямо из холодильника. Тёплые не дадут того эффекта, ради которого их добавляют в конце.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сливки: <strong>холодные</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Тесто готово, гладкое и мягкое</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Деление на шесть частей и наполнители</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разделите всё тесто на весах на шесть равных частей. В каждую часть добавьте свой наполнитель: орехи, кокосовую стружку, бруснику с маком, фисташковую пасту, ваниль, имбирь с лимонной цедрой. Цедру трите тонко — половины чайной ложки достаточно.
+                <span class="source-badge">⏱ Урок 2: 05:40–07:11</span>
+              </p>
+              <p>
+                Перемешайте каждую часть своей лопаткой, чтобы наполнитель разошёлся по всему тесту. Затем переложите тесто в шесть кондитерских мешков.
+                <span class="source-badge">⏱ Урок 2: 07:11–07:30</span>
+              </p>
+              <div class="tip-box">
+                <strong>Для яркого цвета:</strong> в фисташковое тесто можно добавить 1–2 капли зелёного водорастворимого красителя. Это необязательно — на вкус он не влияет.
+                <span class="source-badge">⏱ Урок 2: 08:36–08:49</span>
+              </div>
+              <div class="warning-box">
+                <strong>Шоколадные — отдельным замесом:</strong> какао добавляется не в конце, а вместе с мукой и разрыхлителем, поэтому в общий замес его не ввести. Замесите шоколадное тесто отдельно по той же базе.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Деление: <strong>6 равных частей по весу</strong></span>
+              <span class="param-pill">🥣 Инструмент: <strong>6 лопаток, 6 мешков</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Отсадка в капсулы</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Возьмите бумажные капсулы 4×5 см с усилением — обычные при выпечке раскрываются. Отсаживайте тесто по весам: 50–55 г в каждую капсулу, каждый вкус одинаково. Удобно отвесить сразу пять штук, выставить их на противень и продолжить.
+                <span class="source-badge">⏱ Урок 2: 08:51–09:28</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Порция теста: <strong>50–55 г на капсулу</strong></span>
+              <span class="param-pill">🧁 Капсулы: <strong>4×5 см с усилением</strong></span>
+              <span class="param-pill">🔢 Выход: <strong>9–11 шт. с одного вкуса</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Выпечка и остывание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выставьте капкейки ровными рядами в заранее разогретую духовку. Режим без конвекции, 170 °C, около 23–25 минут: кокосовым, фисташковым, ореховым, лимонным и ванильным хватает примерно 23 минут, брусничным с сочной ягодой нужно около 25.
+                <span class="source-badge">⏱ Урок 2: 10:03–10:18</span>
+              </p>
+              <p>
+                Готовность проверьте шпажкой — она должна выйти абсолютно сухой. Второй способ: нажмите на верхушку пальцем, тесто должно пружинить и восстанавливаться, без отпечатка.
+                <span class="source-badge">⏱ Урок 2: 10:27–10:45</span>
+              </p>
+              <p>
+                Выключите духовку и оставьте капкейки остывать до комнатной температуры прямо в ней, приоткрыв дверцу.
+                <span class="source-badge">⏱ Урок 2: 10:45–10:53</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не передержите:</strong> ориентируйтесь не только на минуты, но и на свою духовку — сухая шпажка и упругая верхушка важнее таймера.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>170 °C, без конвекции</strong></span>
+              <span class="param-pill">⏱ Время: <strong>23–25 мин</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Сухая шпажка, тесто пружинит</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Крем с маскарпоне</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Взбейте творожный сыр, маскарпоне и всю сахарную пудру сразу. Начните на небольшой скорости, чтобы пудра не летела, потом увеличьте до максимальной.
+                <span class="source-badge">⏱ Урок 1: 00:19–01:07</span>
+              </p>
+              <p>
+                Когда крем станет однородным и без комочков, влейте 50 г жирных сливок и взбейте ещё раз — до пышной, плотной и белой массы. Отдельно сливки не взбивают: их слишком мало для этого количества крема.
+                <span class="source-badge">⏱ Урок 1: 01:15–01:52</span>
+              </p>
+              <div class="warning-box">
+                <strong>Маскарпоне решает всё:</strong> автор использует только Galbani и Bonfesta. С другими марками крем получается жидким и не держит шапочку, как бы долго вы его ни взбивали.
+                <span class="source-badge">⏱ Урок 1: 01:58–02:23</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Взбивание: <strong>не больше 2 минут</strong></span>
+              <span class="param-pill">⚖ Расход: <strong>40–45 г на капкейк</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Пышный плотный белый крем</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Универсальный цитрусовый курд</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Соедините сок цитруса, цедру, сахар и желтки и уварите на водяной бане при постоянном помешивании до состояния крема — 7–10 минут.
+              </p>
+              <p>
+                Снимите с бани и переложите в другую посуду. Для гладкой текстуры протрите курд через сито. Добавьте не сильно размягчённое сливочное масло и перемешайте до однородности.
+              </p>
+              <div class="tip-box">
+                <strong>Какой цитрус:</strong> лучше всего получается лайм, апельсин и мандарин. Грейпфрутовый вкусный, но цедру грейпфрута добавлять не надо. Лимонный — для любителей покислее, его хорошо брать пополам с апельсином.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Уваривание: <strong>7–10 мин на водяной бане</strong></span>
+              <span class="param-pill">🌡 Масло: <strong>из холодильника, 10 минут на столе</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Густой крем, держится на лопатке</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 11 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Начинка и шапочка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В остывшие капкейки выдавите начинку: подойдут карамель разных видов, конфи или цитрусовый курд — он сочетается с любым из шести вкусов теста.
+              </p>
+              <p>
+                Отсадите крем на каждый капкейк шапочкой. Расход зависит от насадки, в среднем 40–45 г крема на один капкейк — этого количества хватает на 10 штук.
+              </p>
+              <div class="tip-box">
+                <strong>Хранение:</strong> без крема и начинки капкейки стоят в холодильнике до 10 дней, в морозилке — до 2 месяцев. Крем — не более 72 часов и не замораживается. Курд хранится 7 суток в холодильнике и 30 дней в морозилке.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Крем: <strong>40–45 г на капкейк</strong></span>
+              <span class="param-pill">🧊 Крем: <strong>до 72 часов, не замораживать</strong></span>
+              <span class="param-pill">🍋 Курд: <strong>7 суток / 30 дней в морозилке</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Один замес — шесть вкусов:</strong> базовое тесто делается один раз, затем делится по весу на шесть частей. Так не нужно замешивать тесто шесть раз подряд.</li>
+                <li><strong>«Поцелуй мамы»:</strong> холодные сливки в самом конце замеса делают тесто нежнее и рассыпчатее.</li>
+                <li><strong>Наполнители — по правилам:</strong> орехи, кокосовая стружка и мак идут в сухую смесь с мукой; фисташковая паста — в масляно-яичную массу до муки; ягоды и пряности — в готовое тесто.</li>
+                <li><strong>Капсулы с усилением:</strong> бумажные формочки 4×5 см должны держать форму, иначе капкейки «раскроются» при выпечке.</li>
+                <li><strong>Вес вместо глазомера:</strong> 50–55 г теста на капсулу и деление теста на равные части по весам — залог одинаковых капкейков.</li>
+                <li><strong>Маскарпоне Galbani или Bonfesta:</strong> только эти марки дают нужную плотность крема.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Яйца добавлены по два:</strong> масса расслаивается. Вводить только по одному, при расслоении прогреть и взбить снова.</li>
+                <li><strong>Разрыхлитель не смешан с мукой:</strong> распределяется неравномерно, капкейки поднимаются неровно.</li>
+                <li><strong>Какао добавлено в общий замес:</strong> шоколадные капкейки так не сделать — какао идёт в муку, поэтому нужен отдельный замес.</li>
+                <li><strong>Обычные бумажные формочки:</strong> разъезжаются при выпечке, шапочка и форма теряются.</li>
+                <li><strong>Проверка «на глаз»:</strong> без шпажки легко вынуть капкейки сырыми или пересушить — ориентируйтесь на сухую шпажку и упругую верхушку.</li>
+                <li><strong>Крем из случайного маскарпоне:</strong> крем течёт и не держит форму, сколько ни взбивай.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> мастер-класс Надежды Зубовой «Капкейки 6 видов» — расшифровка двух видео (Урок 1 — крем с маскарпоне, Урок 2 — тесто, наполнители и выпечка) и текстовый конспект с точными граммовками.</li>
+              <li><strong>Расхождения:</strong> в видео капкейки выпекаются «примерно 25 минут», в конспекте для большинства вкусов указано около 23 минут, для брусничных — 25. На странице взят диапазон 23–25 минут с пояснением по вкусам.</li>
+              <li><strong>Расхождения:</strong> в видео говорится «6 видов, а возможно, и 7» — в конспекте действительно семь рецептов, где шоколадный помечен как отдельный замес. На странице шесть вкусов из общего теста и шоколадный отдельно.</li>
+              <li><strong>Расхождения:</strong> в конспекте кокосовые капкейки названы «коросовыми», а в видео кокосовый наполнитель назван и стружкой, и кокосовой мукой. На странице — кокосовая стружка 25 г по конспекту.</li>
+              <li><strong>Пропорции:</strong> граммовки взяты из конспекта: он даёт раскладку на один вкус (9–11 капкейков). В видео тесто замешивается сразу на шесть вкусов и делится на шесть частей — на странице база пересчёта равна 10 капкейкам одного вкуса, для всех шести вкусов нужно поставить 60.</li>
+              <li><strong>Выход:</strong> у автора он разный — 9–10 штук для лимонного и ванильного, 10 для кокосового и шоколадного, 11 для брусничного, фисташкового и орехового; в калькуляторе принято 10.</li>
+              <li><strong>Пробелы:</strong> в видео нет сборки капкейков и работы с начинкой — начинка и шапочка описаны по конспекту; конкретная насадка и техника отсадки крема в исходниках не показаны.</li>
+              <li><strong>Пробелы:</strong> общее время приготовления автор не называет, время подготовки и активной работы на странице оценено по видео (замес и отсадка) и указано ориентировочно. Выход курда в граммах в исходниках не указан.</li>
+              <li><strong>Фото:</strong> снимок готовых капкейков прислан владельцем сайта, в исходной папке (видео и конспект) его не было.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

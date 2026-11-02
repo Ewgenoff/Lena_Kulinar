@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ореховые капкейки с вишней и кремом на маскарпоне — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Ореховые капкейки на сливочном масле 82,5%: тесто с обжаренными орехами, вишнёвая начинка на крахмале и стабильный крем без сливочного масла на творожном сыре и маскарпоне. Тройное окрашивание шапочек и правила отсадки.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body data-recipe-id="kapkeyki-orehovye">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Ореховые капкейки с вишнёвой начинкой и кремом на маскарпоне</h1>
+      <p class="recipe-lead">
+        Кексовое тесто на масле 82,5% с обжаренными орехами, холодные сливки в конце замеса — «поцелуй мамы» — и шапочка из стабильного крема на творожном сыре и маскарпоне, без сливочного масла. Внутри вишнёвая начинка-соус на кукурузном крахмале. Три цвета крема складываются в тройную шапочку без специальных насадок.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">50 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">~45 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~1 ч 50 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">9–11 капкейков (капсулы 4×5 см)</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/kapkeyki-orehovye.jpg" alt="Шесть ореховых капкейков с высокими шапочками из крема трёх пастельных цветов, ягодами и грецкими орехами на мраморном столе" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (10 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="10">10</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">капкейков</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Все граммовки автоматически масштабируются. База — один замес автора: 10 капкейков и крем, которого хватает на 10–12 шапочек. Тесто рассчитано на 9–11 капсул 4 сантиметра в высоту и 5 в диаметре.
+          </p>
+        </div>
+
+        <!-- Переключатель источников и таймкодов видео -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">10</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: молочное, яйца, масла -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масла</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С0</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span>
+                <span class="shopping-hint">Крупные, комнатной температуры; в тесто идут только они, других яиц в рецепте нет</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="90" data-unit="г">90 г</span>
+                <span class="shopping-hint">Только 82,5%: с 72,5% нарушается баланс жира и жидкости и тесто плывёт. Заранее размягчить</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 33% (можно менее жирные)</strong>:
+                <span class="shopping-qty" data-base-amount="110" data-unit="г">110 г</span>
+                <span class="shopping-hint">50 г холодных в тесто + 60 г в крем. В тесто подойдёт и ледяное молоко</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творожный сыр</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Hochland Cremeta, Violet, «Хохланд для выпечки», Альметте. От марки зависит плотность крема</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Маскарпоне</strong>:
+                <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span>
+                <span class="shopping-hint">Bonfesta или Galbani — автор берёт только эти марки</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: бакалея, орехи, начинка, декор -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥜 Бакалея, орехи, начинка и декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="120" data-unit="г">120 г</span>
+                <span class="shopping-hint">Плюс 4 г разрыхлителя отвешивать поверх муки, не сбрасывая весы до нуля</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок (всего)</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">140 г в тесто + 60 г в вишнёвую начинку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="120" data-unit="г">120 г</span>
+                <span class="shopping-hint">В крем; добавляется вся сразу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Разрыхлитель</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="г">4 г</span>
+                <span class="shopping-hint">Маленькая пачка; на весах мука с разрыхлителем должна дать 124 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Орехи обжаренные</strong>:
+                <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                <span class="shopping-hint">Любые: грецкий, фундук, кешью, миндаль, фисташка, арахис. Обязательно обжаренные и рубленые</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Вишня замороженная</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Без косточек; так же делают с черникой и клубникой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кукурузный крахмал</strong>:
+                <span class="shopping-qty" data-base-amount="25" data-unit="г">25 г</span>
+                <span class="shopping-hint">Можно картофельный, но меньше — около 18 г, или 15–17 г обычной муки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Коньяк, бренди или ром</strong> (опционально)
+                <span class="shopping-hint">Максимум 2 ст. л. в горячую начинку — останется только аромат</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Красители водорастворимые</strong> (опционально)
+                <span class="shopping-hint">Три цвета для тройной шапочки; жирорастворимые не подойдут</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ягоды и декор</strong>
+                <span class="shopping-hint">По вкусу: целые ягоды, розмарин, конфеты</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — капсулы 4 см × 5 см с усилением, кондитерские мешки, насадка №855 (закрытая звезда)
+                <span class="shopping-hint">Капсулы без усиления раскроются; вместо насадки можно взять любую звезду</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Тесто (на 9–11 капкейков)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="90" data-unit="г">90 г</span> — Масло сливочное 82,5%
+              <span class="ingredient-note">Размягчённое, комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="140" data-unit="г">140 г</span> — Сахар-песок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span> — Яйца С0
+              <span class="ingredient-note">Комнатной температуры, вводить по одному</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Мука пшеничная в/с
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="г">4 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Орехи обжаренные рубленые
+              <span class="ingredient-note">Любые; у автора грецкий. Добавляются вместе с сухими ингредиентами</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сливки холодные
+              <span class="ingredient-note">33% или менее жирные; можно ледяное молоко или ледяную воду</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем на маскарпоне (на 10–12 шапочек)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Творожный сыр
+              <span class="ingredient-note">Холодный, прямо из холодильника</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Маскарпоне
+              <span class="ingredient-note">Bonfesta или Galbani</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сливки 30% и выше
+              <span class="ingredient-note">Холодные, хорошо взбивающиеся — от них зависит стабильность крема</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Вишнёвая начинка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Вишня замороженная
+              <span class="ingredient-note">Не размораживать заранее</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сахар
+              <span class="ingredient-note">В карте 60–80 г; на мастер-классе отвешено 60 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Кукурузный крахмал
+              <span class="ingredient-note">Смешать с сахаром, чтобы не было комков</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Окрашивание и декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Красители водорастворимые (гелевые или жидкие)
+              <span class="ingredient-note">У автора светло-зелёный, голубой и розовый America Lorca</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Ягоды и розмарин для декора
+              <span class="ingredient-note">Ягоды кладут целыми; крупные разрезают и покрывают нейтральным гелем</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка: орехи, масло, духовка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Орехи обжарьте и порубите ножом — блендер пачкать не обязательно. Масло и яйца достаньте заранее: все ингредиенты должны быть примерно одной температуры, холодными остаются только сливки.
+                <span class="source-badge">⏱ Урок 1: 03:58–04:32</span>
+              </p>
+              <p>
+                Духовку разогрейте до 180 °C, режим «верх-вниз», противень ставится посередине. Пока тесто делается, духовка успеет выйти на режим.
+                <span class="source-badge">⏱ Урок 1: 12:02–14:34</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Духовка: <strong>180 °C, верх-вниз</strong></span>
+              <span class="param-pill">🌰 Орехи: <strong>обязательно обжаренные</strong></span>
+              <span class="param-pill">🌡 Ингредиенты: <strong>комнатной температуры</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Масло с сахаром</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Смешайте размягчённое сливочное масло со всем сахаром и взбейте миксером: сначала на небольшой скорости, чтобы сахар не разлетался, затем на максимальной. У автора это занимает около трёх минут.
+                <span class="source-badge">⏱ Урок 1: 15:21–17:43</span>
+              </p>
+              <div class="tip-box">
+                <strong>Почему масло именно 82,5%:</strong> кексовое тесто — это эмульсия масла и яиц. С маслом 72,5% жидкости становится больше, жира меньше, система теряет устойчивость — и капкейки оседают, трескаются или вылезают из капсул.
+                <span class="source-badge">⏱ Урок 1: 35:43–37:42</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>~3 мин</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Масса однородная, сахар крупинками</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Яйца по одному</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Введите яйца строго по одному, каждый раз взбивая до полного объединения. Это самый важный этап: именно здесь создаётся эмульсия, от которой зависит, поднимутся капкейки ровно или осядут.
+                <span class="source-badge">⏱ Урок 1: 17:43–19:30</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не добавляйте два яйца сразу:</strong> эмульсия не образуется, масса расслоится. Признак правильно замешанного теста — гладкая однородная масса без расслоения, видны только крупинки сахара.
+                <span class="source-badge">⏱ Урок 1: 19:08–19:42</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Яйца: <strong>по одному, 2 шт.</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Гладкая масса без расслоения</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Сухие ингредиенты и орехи</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Добавьте всю муку, разрыхлитель и орехи за один приём и перемешайте миксером на средней скорости. Тесто получается довольно густым — так и должно быть.
+                <span class="source-badge">⏱ Урок 1: 19:50–21:27</span>
+              </p>
+              <div class="tip-box">
+                <strong>Хитрость с весами:</strong> не сбрасывайте весы до нуля под разрыхлитель — бытовые весы не чувствуют 4 г. Насыпьте 120 г муки, а разрыхлитель добавляйте сверху, чтобы на весах было 124 г.
+                <span class="source-badge">⏱ Урок 1: 20:08–20:25</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ На весах: <strong>мука + разрыхлитель = 124 г</strong></span>
+              <span class="param-pill">🌰 Орехи: <strong>70 г, любые обжаренные</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Густое тесто с орехами</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Холодные сливки — «поцелуй мамы»</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В готовое тесто влейте 50 г холодных сливок и вмешайте миксером. Это «поцелуй мамы»: холодный продукт в самом конце делает тесто нежнее и рассыпчатее. Сливки можно заменить ледяным молоком или даже ледяной водой — они не участвуют в создании эмульсии.
+                <span class="source-badge">⏱ Урок 1: 21:48–24:02</span>
+              </p>
+              <div class="tip-box">
+                <strong>Почему так:</strong> в муке есть глютен, который уже начал образовывать связи. Холод заставляет его «съёжиться», а затем раскрыться шире — текстура получается качественнее.
+                <span class="source-badge">⏱ Урок 1: 22:57–23:26</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сливки: <strong>холодные, из холодильника</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Тесто готово, гладкое и мягкое</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Отсадка в капсулы</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите тесто в кондитерский мешок (можно выкладывать и чайной ложкой) и отсадите по 50–55 г в капсулы высотой 4 см и диаметром 5 см. У автора вышло 10 штук, остаток теста разошёлся по капсулам по чуть-чуть.
+                <span class="source-badge">⏱ Урок 1: 27:03–31:25</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не разравнивайте тесто в капсуле:</strong> масла в тесте много, при нагреве оно растает и выровняет поверхность само. Отсаживать нужно так, чтобы не запачкать края капсулы.
+                <span class="source-badge">⏱ Урок 1: 31:27–31:42</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Тесто: <strong>50–55 г на капсулу</strong></span>
+              <span class="param-pill">🧁 Капсулы: <strong>4 см высота × 5 см диаметр, с усилением</strong></span>
+              <span class="param-pill">🔢 Выход: <strong>9–11 штук</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Выпечка и остывание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте 25 минут при 180 °C в режиме «верх-вниз», противень посередине. В газовой духовке — те же 180 °C, но противень ставьте максимально высоко; для выравнивания температуры может понадобиться противень с водой под капкейками. При неотключаемой конвекции температуру снижают на 10 градусов.
+                <span class="source-badge">⏱ Урок 1: 31:43–35:38</span>
+              </p>
+              <p>
+                Готовность проверяйте зубочисткой — она должна выйти сухой. Капкейки выньте из противня и дайте полностью остыть, прежде чем снимать капсулу: её нужно растянуть и снять, тогда капкейк выйдет целым.
+                <span class="source-badge">⏱ Урок 2: 15:07–16:02</span>
+              </p>
+              <div class="warning-box">
+                <strong>Если шапочки с одной стороны есть, а с другой нет:</strong> духовка греет неравномерно. Это единственная причина, тесто тут ни при чём.
+                <span class="source-badge">⏱ Урок 1: 50:27–51:08</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>180 °C, верх-вниз</strong></span>
+              <span class="param-pill">⏱ Время: <strong>25 мин</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Сухая зубочистка</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Вишнёвая начинка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Смешайте сахар с кукурузным крахмалом — так крахмал не пойдёт комками и не придётся добавлять лишнюю жидкость. Замороженную вишню нагрейте и, как только она немного отойдёт, постепенно всыпьте сахар с крахмалом.
+                <span class="source-badge">⏱ Урок 1: 43:40–47:31</span>
+              </p>
+              <p>
+                Варите, помешивая, пока масса не станет прозрачной и не загустеет, — это и есть признак готовности. Снимите с огня; сотейник можно оставить прямо на плите, начинка будет остывать.
+                <span class="source-badge">⏱ Урок 1: 48:35–49:47</span>
+              </p>
+              <div class="tip-box">
+                <strong>Это соус, а не конфи:</strong> начинка получается более жидкой, чем конфи, кули или компоте, и для капкейков это очень удобно. Так же делают с замороженной черникой и клубникой. Коньяк, бренди или ром — максимум 2 ст. л. в горячую массу, чтобы остался только аромат.
+                <span class="source-badge">⏱ Урок 1: 45:31–49:09</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍒 Вишня: <strong>200 г замороженной</strong></span>
+              <span class="param-pill">🍮 Загуститель: <strong>25 г кукурузного крахмала</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Масса прозрачная и густая</strong></span>
+              <span class="param-pill">🧊 Хранение: <strong>до 72 ч в холодильнике</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Крем на творожном сыре и маскарпоне</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Соедините холодные творожный сыр, маскарпоне и всю сахарную пудру. Взбивайте первую минуту на небольшой скорости, чтобы пудра не вылетела, затем на максимальной — до густой однородной массы.
+                <span class="source-badge">⏱ Урок 1: 50:17–56:39</span>
+              </p>
+              <p>
+                Сливки взбейте отдельно и введите в сырную массу — или налейте их в чашу рядом с кремом и взбейте сначала их, а потом объедините всё вместе. Так крем гарантированно не останется жидким: сливки успеют загустеть.
+                <span class="source-badge">⏱ Урок 1: 58:35–1:03:23</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не перевзбивайте:</strong> от долгого взбивания пудра растворяется, и крем становится жиже. Как только масса стала густой и однородной — остановитесь. И не взбивайте маскарпоне одно: оно отсекает воду, а вместе с творожным сыром этого не происходит.
+                <span class="source-badge">⏱ Урок 1: 56:19–59:08</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Всё холодное: <strong>из холодильника</strong></span>
+              <span class="param-pill">⚖ Расход: <strong>44–45 г на шапочку</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Густой белый крем</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Тройное окрашивание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разделите крем на три равные части — примерно по 165 г — и окрасьте каждую водорастворимым красителем. Сухой краситель сначала разведите каплей воды, иначе он будет расходиться комками. Синие красители очень насыщенные: добавляйте крошечную каплю.
+                <span class="source-badge">⏱ Урок 1: 1:04:04–1:10:37</span>
+              </p>
+              <p>
+                Каждую часть положите в маленький мешок без насадки, кончики отрежьте одинаково — около 1 см. Затем все три мешка вставьте в один большой с насадкой №855, выровняв их по высоте: тогда шапочка получится трёхцветной, а не двухцветной.
+                <span class="source-badge">⏱ Урок 2: 00:01:49–00:11:59</span>
+              </p>
+              <div class="tip-box">
+                <strong>Насадку отрезают в верхней трети:</strong> если отрезать ниже, под давлением насадка выдавится из мешка. На цвет влияет только верхний слой — подбирайте нежные пастельные сочетания.
+                <span class="source-badge">⏱ Урок 2: 00:10:21–00:10:48</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🎨 Крем: <strong>3 части по ~165 г</strong></span>
+              <span class="param-pill">🧰 Насадка: <strong>№855, закрытая звезда</strong></span>
+              <span class="param-pill">✂ Кончики: <strong>отрезать одинаково, ~1 см</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 11 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Начинка внутри капкейка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Чайной ложкой нарисуйте на капкейке треугольник, утапливая ложку примерно на две трети глубины, и выньте середину. Специальные приспособления для этого не нужны.
+                <span class="source-badge">⏱ Урок 2: 16:02–16:43</span>
+              </p>
+              <p>
+                Положите начинку вровень с поверхностью капкейка — не горкой. Начинка гладкая, и шапочка по ней съедет при транспортировке.
+                <span class="source-badge">⏱ Урок 2: 18:05–18:42</span>
+              </p>
+              <div class="tip-box">
+                <strong>Солёная карамель:</strong> под неё отверстие делают меньше — она очень насыщенная и перебьёт вкус орехового теста.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥄 Инструмент: <strong>Чайная ложка</strong></span>
+              <span class="param-pill">📏 Глубина: <strong>~2/3 капкейка</strong></span>
+              <span class="param-pill">⚖ Вес готового: <strong>~120 г</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 12 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Шапочки и декор</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Держите мешок зажатым между большим и указательным пальцем и строго вертикально над капкейком. Ведите окружность, поднимитесь на уровень выше и сделайте вторую окружность того же диаметра. Закончите давление, но насадку не вынимайте — придержите капкейк и уведите насадку в сторону: тогда сверху не останется «сопли».
+                <span class="source-badge">⏱ Урок 2: 19:11–23:08</span>
+              </p>
+              <p>
+                Шапочка не должна выходить за границы капкейка — иначе его сложно взять и поставить в коробку. Украсьте целыми ягодами и розмарином; крупные ягоды, например клубнику, разрежьте и покройте срез нейтральным гелем.
+                <span class="source-badge">⏱ Урок 2: 23:30–27:53</span>
+              </p>
+              <div class="warning-box">
+                <strong>Рваные края шапочки:</strong> виноват лишний воздух в креме. Если крем постоял в холодильнике, пробейте его миксером перед отсадкой — и края будут гладкими.
+                <span class="source-badge">⏱ Урок 2: 12:08–13:02</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Крем: <strong>44–45 г на капкейк</strong></span>
+              <span class="param-pill">📐 Диаметр: <strong>не шире капкейка</strong></span>
+              <span class="param-pill">🍓 Декор: <strong>Целые ягоды, розмарин</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Три правила эмульсии:</strong> следовать рецепту, держать ингредиенты одной температуры и вводить жидкость в жир медленно — по одному яйцу.</li>
+                <li><strong>Масло только 82,5%:</strong> «старое» масло, которое долго лежало, тоже не годится — качество теста зависит от качества масла.</li>
+                <li><strong>«Поцелуй мамы»:</strong> холодные сливки в конце замеса делают текстуру нежнее; заменить можно ледяным молоком или водой.</li>
+                <li><strong>Орехи — и сухие, и жир:</strong> в орехах много жира, поэтому они дополнительно стабилизируют тесто.</li>
+                <li><strong>Крем без масла:</strong> он стабильный, держит форму, белый и легко окрашивается; расход — 44–45 г на шапочку насадкой №855, у других насадок бывает до 66–67 г.</li>
+                <li><strong>Сливки отдельно:</strong> автор взбивает их в стороне, чтобы крем гарантированно не остался жидким; с планетарным миксером можно вливать постепенно.</li>
+                <li><strong>Маффин или капкейк:</strong> маффин — это капкейк без начинки; стоит вставить внутрь начинку, и он становится капкейком.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Масло 72,5%:</strong> баланс жидкости и жиров нарушен — капкейки оседают, трескаются, «выпрыгивают» из капсул.</li>
+                <li><strong>Два яйца сразу:</strong> тесто расслаивается, устойчивой эмульсии не получается.</li>
+                <li><strong>Тесто разровняли в капсуле:</strong> лишняя работа — масло само выровняет поверхность при выпечке.</li>
+                <li><strong>Капсулы без усиления:</strong> раскрываются, и капкейк превращается в блинчик.</li>
+                <li><strong>Крем перевзбит:</strong> пудра растворяется, крем становится жидким и требует долгой стабилизации в холодильнике.</li>
+                <li><strong>Начинка горкой:</strong> шапочка съезжает при переноске.</li>
+                <li><strong>Шапочка шире капкейка:</strong> капкейк неудобно брать и ставить в коробку.</li>
+                <li><strong>Крем после холодильника не пробит:</strong> пузыри воздуха дают рваный край шапочки.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> вебинар Надежды Зубовой «Капкейки ореховые» — расшифровка двух видео (Урок 1: тесто, теория, начинка и крем; Урок 2: окрашивание, сборка, отсадка шапочек) и технологическая карта с точными граммовками.</li>
+              <li><strong>Расхождения — температура и время:</strong> в карте указано 170 °C и около 23 минут, на видео автор печёт 25 минут при 180 °C в режиме «верх-вниз». На странице взяты 180 °C и 25 минут как показанные на практике.</li>
+              <li><strong>Расхождения — творожный сыр:</strong> в карте 230 г, на видео автор дважды отвешивает и называет 250 г. На странице 250 г; если хотите строго по карте, возьмите 230 г — крем будет чуть плотнее.</li>
+              <li><strong>Расхождения — сахар и крахмал в начинке:</strong> в карте 60–80 г сахара и 25–30 г крахмала, на видео отвешено 60 г сахара и 25 г крахмала. Взят вариант с видео.</li>
+              <li><strong>Расхождения — категория яиц:</strong> в карте яйца С1, на видео — С0 (дважды). На странице С0, как на мастер-классе.</li>
+              <li><strong>Выход:</strong> автор говорит о 9–11 капкейках, на видео получилось 10 штук. Крема по карте хватает на 10–12 шапочек.</li>
+              <li><strong>Пробелы:</strong> общее время приготовления автор не называет — подготовка и активная работа на странице оценены по видео и указаны ориентировочно.</li>
+              <li><strong>Пробелы:</strong> точные граммовки красителей не приводятся — окрашивание идёт «на глаз», до нужного оттенка.</li>
+              <li><strong>Фото:</strong> отдельного снимка блюда в папке нет — сначала на странице стоял кадр из видео, затем владелец сайта прислал собственную фотографию готовых капкейков, она и используется.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

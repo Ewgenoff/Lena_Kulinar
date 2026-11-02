@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Бисквит королевы Виктории — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Шоколадный кексовый бисквит на 4 коржа Ø20 см: масло, шоколад, какао и сливки. Выпечка при 180 °C без конвекции: по коржам 23 минуты, в двух формах 30 минут. Плюс варианты вкусов.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="biskvit-korolevy-viktorii">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Легкая</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Бисквит королевы Виктории</h1>
+      <p class="recipe-lead">
+        Кексовый бисквит с большим количеством сдобы: масло, шоколад, какао и сливки. Работать с ним проще, чем с классическим — белки отделять не нужно, тесто ждёт до часа, а собирать торт можно сразу после остывания коржей. Из раскладки выходит четыре коржа Ø20 см.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">20 мин: продукты комнатной температуры</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~40 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">выпечка 23–30 мин + остывание</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~2 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">4 коржа Ø20 см</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/biskvit-korolevy-viktorii.jpg" alt="Шоколадные коржи бисквита Виктории на решётке, один корж разрезан" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (8 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="8">8</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (кусков)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Базовая раскладка — тесто на 4 коржа диаметром 20 см. Число порций автор не называет: 8 посчитаны по готовому торту.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">8</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="225" data-unit="г">225 г</span>
+                <span class="shopping-hint">Размягчённое, комнатной температуры</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="шт." data-piece="true">5 шт.</span>
+                <span class="shopping-hint">Или 4 яйца категории С0; комнатной температуры</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 30% и выше</strong>:
+                <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                <span class="shopping-hint">Холодные — добавляются в конце</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Мука, шоколад, бакалея</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная</strong>:
+                <span class="shopping-qty" data-base-amount="225" data-unit="г">225 г</span>
+                <span class="shopping-hint">Просейте вместе с какао и разрыхлителем</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="225" data-unit="г">225 г</span>
+                <span class="shopping-hint">Просеять, взбивается с маслом</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Тёмный шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span>
+                <span class="shopping-hint">Растопить и ввести после яиц</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Просеять с мукой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Разрыхлитель</strong>:
+                <span class="shopping-qty" data-base-amount="1.5" data-unit="ч. л.">1,5 ч. л.</span>
+                <span class="shopping-hint">В кексовом бисквите он уместен, в отличие от классического</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Тесто (4 коржа Ø20 см)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="шт." data-piece="true">5 шт.</span> — Яйца С1
+              <span class="ingredient-note">Или 4 яйца С0</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="225" data-unit="г">225 г</span> — Масло сливочное размягчённое
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="225" data-unit="г">225 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="225" data-unit="г">225 г</span> — Мука
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1.5" data-unit="ч. л.">1,5 ч. л.</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Какао
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Шоколад тёмный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Сливки 30% и выше, холодные
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка и эмульсия</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Все ингредиенты должны быть одинаковой комнатной температуры: кексовое тесто — это эмульсия яиц и масла, и она держится только при таком условии. Ингредиенты вводите постепенно и смешивайте на довольно высокой скорости миксера.
+              </p>
+              <div class="warning-box">
+                <strong>Три правила эмульсии:</strong> одинаковая комнатная температура, постепенное добавление, высокая скорость миксера. Иначе масса расслоится.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>комнатная у всех продуктов</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Масло с пудрой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Масло (225 г) взбейте с просеянной сахарной пудрой (225 г) до бела.
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> белки и желтки в этом бисквите отделять не нужно — взбивается всё яйцо.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак готовности: <strong>масса побелела и стала пышной</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Яйца и шоколад</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                По одному введите яйца, каждый раз взбивая до объединения. Затем введите растопленный шоколад (80 г).
+              </p>
+              <div class="warning-box">
+                <strong>Яйца именно по одному:</strong> сразу всю массу вводить нельзя — эмульсия расслоится.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак готовности: <strong>однородная глянцевая масса</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Сухие ингредиенты и сливки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Муку просейте с какао и разрыхлителем. В один приём введите сухие ингредиенты в масляно-яичную смесь. Добавьте холодные сливки (70 г) и перемешайте миксером.
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> тесто после замеса может подождать до 60 минут, пока вы подготовите формы.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>миксер, сито</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Выпечка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте в заранее разогретой духовке при 180 °C без конвекции. Если печёте по коржам, каждый в своей форме — 23 минуты. Если делите тесто на две формы — 30 минут.
+              </p>
+              <div class="warning-box">
+                <strong>Всё тесто в одной форме не выпекайте:</strong> корж не пропечётся равномерно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>23 мин по коржам / 30 мин в двух формах</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>180 °C без конвекции</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>сухая зубочистка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Остывание и сборка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Коржи остудите до комнатной температуры — и можно собирать торт сразу, ждать 6–8 часов в холодильнике не нужно.
+              </p>
+              <div class="warning-box">
+                <strong>Крем должен быть плотным:</strong> коржи Виктории тяжёлые и плотные, крем на сливках они «выдавят». Берите масляный крем или замените сливки маскарпоне 1 к 1.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> коржи Виктории любят пропитку — не пропускайте этот шаг.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Крем: <strong>масляный или с маскарпоне</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и варианты вкусов</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора: добавки до 225 г, оптимум 100 г</h4>
+              <ul>
+                <li><strong>Ванильная:</strong> ваниль или ванилин в сахар по вкусу.</li>
+                <li><strong>Маковая:</strong> +30 г мака вместе с мукой.</li>
+                <li><strong>Ореховая:</strong> 100 г порубленных обжаренных орехов с мукой.</li>
+                <li><strong>Ореховая паста или пралине:</strong> 80–100 г после яиц.</li>
+                <li><strong>Тыква или шпинат:</strong> 100 г тёплого пюре после яиц.</li>
+                <li><strong>Сухофрукты:</strong> 100 г вместе с мукой.</li>
+                <li><strong>Замороженные ягоды:</strong> 100 г в самом конце.</li>
+                <li><strong>Красители:</strong> водорастворимые, в самом конце.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Холодные продукты:</strong> эмульсия расслаивается, тесто «рвётся».</li>
+                <li><strong>Все яйца сразу:</strong> масса не объединяется.</li>
+                <li><strong>Всё тесто в одной форме:</strong> корж не пропекается.</li>
+                <li><strong>Крем на сливках без стабилизации:</strong> коржи его выдавливают.</li>
+                <li><strong>Перебор с наполнителем:</strong> больше 225 г бисквит не выдержит.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> PDF «рецептура.pdf» (состав и технология) и PDF «добавки_сборка.pdf» (варианты наполнителей и правила сборки) из папки «Бисквит_королевы_Виктории». Расшифровка CSV использована для сверки.</li>
+              <li><strong>Название:</strong> в источниках — «Шоколадный бисквит Виктория», на странице — «Бисквит королевы Виктории».</li>
+              <li><strong>Порции:</strong> автор указывает только 4 коржа Ø20 см; 8 порций — расчёт по готовому торту.</li>
+              <li><strong>Крем:</strong> в PDF нет отдельной рецептуры крема для Виктории — только правила выбора (плотный масляный, либо сливки с маскарпоне 1:1).</li>
+              <li><strong>Фото:</strong> в папке с материалами снимков нет, изображение сгенерировано по описанию.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>
