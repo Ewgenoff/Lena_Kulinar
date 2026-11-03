@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Блинный торт «Томми» с кремом из варёной сгущёнки — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Блинный торт «Томми» Надежды Зубовой: тонкие эластичные блины на молоке, крем из холодных сливок с варёной сгущёнкой и желатином, сборка рулетом на 20 блинов в кольце Ø16 см под грузом и четыре блина внахлёст сверху.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="blinnyy-tort-tommi">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться к каталогу рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Блинный торт «Томми»</h1>
+      <p class="recipe-lead">
+        Торт без духовки: двадцать тонких блинов, крем из холодных сливок с варёной сгущёнкой и желатином, сборка рулетом в кольце Ø16 см под грузом. Снаружи торт закрывают четырьмя блинами внахлёст — и на разрезе получается спираль из блинов и крема. Тесто для блинов лучше замешать накануне: за ночь в холодильнике оно становится эластичнее, и блины не рвутся при сворачивании.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~30 мин тесто + ночь в холодильнике</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч 30 мин (блины, крем, сборка)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Ночь тесту, 4 часа – ночь торту в холодильнике</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">2 дня</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 торт Ø16 см, высота 8–10 см (20 блинов)</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/blinnyy-tort-tommi.jpg" alt="Блинный торт «Томми» на чёрной подложке: верх закрывают четвёртым блином внахлёст" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 торт)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">торт</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База калькулятора — один торт Ø16 см высотой 8–10 см: 20 блинов диаметром 21–23 см на сковороде 24 см. Блины пекутся с запасом — первый всегда идёт «комом».
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> торт</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на блины, крем из сгущёнки и сливок и декор. Сгущёнку берите именно варёную и натуральную — в составе должно быть только молоко и сахар.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко</strong>:
+                <span class="shopping-qty" data-base-amount="600" data-unit="г">600 г</span>
+                <span class="shopping-hint">Можно заменить сывороткой, но не кефиром и не ряженкой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 30 % и выше</strong>:
+                <span class="shopping-qty" data-base-amount="380" data-unit="г">380 г</span>
+                <span class="shopping-hint">Холодные; заменяются сметаной 30 % один к одному</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сгущённое молоко варёное</strong>:
+                <span class="shopping-qty" data-base-amount="360" data-unit="г">360 г</span>
+                <span class="shopping-hint">Банка 360 г, банка 380 г тоже подойдёт. Нужна густая: жидкая сделает крем слишком мягким</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца С0</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span>
+                <span class="shopping-hint">В тесто для блинов</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло растительное</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="ст. л.">4 ст. л.</span>
+                <span class="shopping-hint">В тесто; сковороду смазывают только под первый блин</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Бакалея, желатин, декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="ст. л.">2 ст. л.</span>
+                <span class="shopping-hint">Без горки, в тесто</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="0.5" data-unit="ч. л.">0,5 ч. л.</span>
+                <span class="shopping-hint">В тесто</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин</strong>:
+                <span class="shopping-qty" data-base-amount="6" data-unit="г">6 г</span>
+                <span class="shopping-hint">Замочить в 30 г холодной воды; сильный, около 220 блюм</span>
+              </div>
+            </li>
+            <li class="shopping-item" style="border-style: dashed;"><div class="shopping-item-content">
+                <strong>Ягоды для декора (опционально)</strong> — по вкусу
+                <span class="shopping-hint">Самый простой вариант декора; можно обойтись дополнительным кремом</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — кольцо Ø16 см, подложка, тарелка и груз (например, пакет сливок), сковорода Ø24 см, палетка
+                <span class="shopping-hint">Плёнка под кольцо не нужна</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Блины</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span> — Яйца С0
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="ст. л.">2 ст. л.</span> — Сахар
+              <span class="ingredient-note">Без горки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="0.5" data-unit="ч. л.">0,5 ч. л.</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Мука пшеничная в/с
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="600" data-unit="г">600 г</span> — Молоко
+              <span class="ingredient-note">Можно заменить сывороткой</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="ст. л.">4 ст. л.</span> — Масло растительное
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем «Томми»</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="360" data-unit="г">360 г</span> — Сгущённое молоко варёное
+              <span class="ingredient-note">Холодное; банка 380 г тоже подойдёт</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="380" data-unit="г">380 г</span> — Сливки 30 % и выше
+              <span class="ingredient-note">Холодные, из холодильника</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="6" data-unit="г">6 г</span> — Желатин
+              <span class="ingredient-note">Замочить заранее, минут на 7</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Вода для желатина
+              <span class="ingredient-note">Холодная</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Ягоды
+              <span class="ingredient-note">Или дополнительный крем</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Тесто для блинов</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разбейте в миску 4 яйца С0 и перемешайте, добавьте 4 ст. л. растительного масла, затем сухие ингредиенты — 200 г муки, 2 ст. л. сахара без горки и 0,5 ч. л. соли — и снова перемешайте. Постепенно введите 600 г молока и перемешайте так, чтобы не осталось комочков.
+                <span class="source-badge">⏱ Урок 1: 00:00:44–00:01:37</span>
+              </p>
+              <div class="warning-box">
+                <strong>Консистенция — как у жидких сливок:</strong> тесто льётся, со сметаной его не сравнить. Автор ориентируется на сливки 22–33 %. Соду и разрыхлитель не добавляют: блины не должны быть дырчатыми, они нужны тонкие.
+                <span class="source-badge">⏱ Урок 1: 00:00:30–00:06:51</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥛 Молоко: <strong>600 г, постепенно</strong></span>
+              <span class="param-pill">🚫 Разрыхлитель: <strong>Не нужен</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Отдых теста: час или ночь</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Дайте тесту постоять: хорошо, если час при комнатной температуре, и прекрасно, если оно проведёт ночь в холодильнике — тогда тесто делают накануне, а блины пекут на следующий день. Перед выпечкой тесто должно быть комнатной температуры.
+                <span class="source-badge">⏱ Урок 1: 00:04:34–00:05:43</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем ждать:</strong> в муке есть глютен, и за время отдыха развиваются глютеновые цепи — тесто становится прочнее и эластичнее. Блины потом не трескаются и не рвутся, когда в них заворачивают начинку или сворачивают торт.
+                <span class="source-badge">⏱ Урок 1: 00:00:52–00:01:32</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Минимум: <strong>1 час</strong></span>
+              <span class="param-pill">🌙 Лучше: <strong>Ночь в холодильнике</strong></span>
+              <span class="param-pill">🌡 Перед выпечкой: <strong>Комнатная температура</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Выпечка блинов Ø21–23 см</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Хорошо разогрейте блинную сковороду Ø24 см. Смажьте её маслом только под первый блин, дальше пеките без масла: оно уже есть в тесте. Сковороду поднимайте и наливайте тесто на поднятую, а потом ставьте на огонь — так оно распределяется ровным тонким слоем. Блины должны получиться одинакового размера, 21–23 см.
+                <span class="source-badge">⏱ Урок 1: 00:04:15–00:08:13</span>
+              </p>
+              <div class="warning-box">
+                <strong>Блины должны остыть</strong> перед сборкой: на тёплый блин крем потечёт. Первый блин автор оставляет «комом» для себя — он не идёт в торт.
+                <span class="source-badge">⏱ Урок 1: 00:01:51–00:02:13</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍳 Сковорода: <strong>Ø24 см</strong></span>
+              <span class="param-pill">🥞 Блины: <strong>Ø21–23 см</strong></span>
+              <span class="param-pill">🧈 Масло: <strong>Только под первый</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Крем: взбить холодные сливки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Залейте в чашу 380 г холодных сливок 30 % и выше и взбивайте сразу на большой скорости до плотных пиков: венчик должен держать форму. Сливки и сгущёнка — только из холодильника.
+                <span class="source-badge">⏱ Урок 1: 00:10:34–00:11:49; Урок 2: 00:00:01–00:02:16</span>
+              </p>
+              <div class="warning-box">
+                <strong>Как поймать момент перебитых сливок:</strong> первый признак — масса визуально уменьшилась в объёме, хотя плотность ещё нормальная. Следующий шаг — крупинка, и сливки свернулись. Спасти их уже нельзя, разве что пустить в бефстроганов.
+                <span class="source-badge">⏱ Урок 2: 00:00:06–00:00:18</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Скорость: <strong>Максимальная</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Плотные пики</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Сгущёнку разбить и соединить со сливками</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выложите 360 г варёной сгущёнки в отдельную миску и пройдитесь миксером на минимальной скорости — не взбивайте, а разбейте плотность, чтобы сгущёнка стала мягче. Затем добавьте её в сливки и взбейте на большой скорости до объединения.
+                <span class="source-badge">⏱ Урок 2: 00:02:43–00:06:01</span>
+              </p>
+              <div class="warning-box">
+                <strong>Почему не вылить сразу:</strong> в сливках сгущёнка собьётся в комочки, и придётся взбивать минут семь — с большим риском перебить сливки. Крем получается не очень густым, по консистенции как сметана, и стекает с лопатки — это нормально.
+                <span class="source-badge">⏱ Урок 2: 00:02:57–00:07:32</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚙️ Сгущёнка: <strong>Минимальная скорость</strong></span>
+              <span class="param-pill">🥛 Сливки: <strong>Большая скорость</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Желатин в крем</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Желатин замочите заранее в 30 г холодной воды — достаточно минут 7. Растопите его в микроволновке до жидкого состояния и влейте в крем прямо при взбивании.
+                <span class="source-badge">⏱ Урок 2: 00:06:57–00:08:28</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> желатин берут сильный, около 220 блюм. Если замачиваете его в горячей воде, ждать нужно не меньше 15 минут.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">💧 Замачивание: <strong>≈7 минут</strong></span>
+              <span class="param-pill">💪 Сила: <strong>≈220 блюм</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">16 блинов и крем полосой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                На торт нужно 20 блинов: 16 сейчас и 4 в самом конце. Разложите 16 блинов на столе внахлёст, как показано в уроке, и распределите по ним крем: сначала по столовой ложке, потом добавьте ещё, если останется. Крем кладут полосой примерно 10 см посередине блина. Немного крема — буквально на два блина — оставьте для финального декора.
+                <span class="source-badge">⏱ Урок 2: 00:09:17–00:14:40</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не пробуйте крем до сборки:</strong> он настолько вкусный, что торта можно не досчитаться. Автор разрешает попробовать только остатки, когда торт уже собран.
+                <span class="source-badge">⏱ Урок 2: 00:06:39–00:06:55</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥞 Всего блинов: <strong>20 (16 + 4)</strong></span>
+              <span class="param-pill">📏 Полоса крема: <strong>≈10 см</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Свернуть рулетом по высоте торта</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Подверните края блинов по высоте будущего торта — автор ориентируется на 8–10 см — и сворачивайте всё рулетом, помогая себе, чтобы блины не разъезжались. Крем может немного выходить: это нормально. Старайтесь, чтобы рулет получился плотным, но не отчаивайтесь, если с первого раза вышло неаккуратно — разрез всё равно будет красивым.
+                <span class="source-badge">⏱ Урок 2: 00:15:03–00:18:44</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> если крем где-то распределился не туда, поправьте его в ту сторону, в которую нужно, — главное, чтобы всё плотно склеилось.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📐 Высота: <strong>8–10 см</strong></span>
+              <span class="param-pill">🌀 Форма: <strong>Плотный рулет</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Кольцо, груз и холодильник</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Поставьте рулет на подложку, сверху наденьте кольцо Ø16 см и зажмите торт в нём — плёнка не нужна. Положите сверху тарелку, прижмите и поставьте груз, например пакет сливок. Уберите в холодильник минимум на 4 часа, лучше на ночь. Желатин в креме нужен именно для того, чтобы всё схватилось.
+                <span class="source-badge">⏱ Урок 2: 00:18:54–00:20:14</span>
+              </p>
+              <div class="warning-box">
+                <strong>Срок годности торта — 72 часа</strong> в холодильнике, и декорировать его можно только после того, как он застыл.
+                <span class="source-badge">⏱ Урок 2: 00:20:10–00:20:23</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Кольцо: <strong>Ø16 см</strong></span>
+              <span class="param-pill">🧊 Холодильник: <strong>4 часа – ночь</strong></span>
+              <span class="param-pill">📦 Срок: <strong>72 часа</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Четыре блина сверху</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Оставшийся крем за ночь застыл из-за желатина — прогрейте его немного в микроволновке. Выберите четыре самых красивых блина, желательно посветлее: они будут снаружи. Смажьте каждый тонким слоем крема — толстый слой не нужен, главное, чтобы блин прилип, — и накройте торт внахлёст, не до самого низа, делая сверху складочки. Тремя блинами не обойтись, нужно именно четыре.
+                <span class="source-badge">⏱ Урок 2: 00:20:51–00:23:12</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> после этого можно ещё дать торту постоять в холодильнике, а можно сразу резать — вкус от этого не изменится.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥞 Блинов: <strong>4</strong></span>
+              <span class="param-pill">🎨 Цвет: <strong>Посветлее</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Декор и разрез</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Проще всего украсить торт ягодами, но можно сделать дополнительный крем и выложить его сверху. Торт нарядный сам по себе и достоин любого праздника. Режут его как обычный: на разрезе видна спираль из блинов и крема.
+                <span class="source-badge">⏱ Урок 2: 00:23:24–00:25:35</span>
+              </p>
+              <div class="tip-box">
+                <strong>Куда ещё:</strong> крем из сгущёнки и сливок годится не только для этого торта — он хорошо работает как универсальный крем для выравнивания и прослойки.
+                <span class="source-badge">⏱ Урок 1: 00:10:08–00:10:14</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍓 Декор: <strong>Ягоды или крем</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>72 часа в холодильнике</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Блины нейтральные:</strong> не пряные и не сильно солёные — рецепт специально сделан несладким, чтобы крем задавал вкус.</li>
+                <li><strong>Тесто отдыхает:</strong> час при комнатной температуре или ночь в холодильнике; глютеновые цепи делают блины эластичными.</li>
+                <li><strong>Поднимайте сковороду:</strong> тесто наливают на поднятую сковороду и только потом ставят на огонь — так оно распределяется ровно.</li>
+                <li><strong>Масло только под первый блин:</strong> остальное уже в тесте.</li>
+                <li><strong>Сливки и сгущёнка холодные:</strong> иначе крем не взобьётся.</li>
+                <li><strong>Сгущёнку разбивают, а не взбивают:</strong> иначе комочки в креме.</li>
+                <li><strong>Желатин обязателен:</strong> без него рулет не схватится в кольце.</li>
+                <li><strong>Блины снаружи посветлее:</strong> автор выбирает для декора самые красивые.</li>
+                <li><strong>Торт без духовки:</strong> вся технология — на плите и в холодильнике.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Кефир вместо молока:</strong> для кисломолочки нужен другой рецепт блинов.</li>
+                <li><strong>Тёплые блины в сборку:</strong> крем потечёт.</li>
+                <li><strong>Перебитые сливки:</strong> сначала падает объём, потом появляются крупинки — исправить уже нельзя.</li>
+                <li><strong>Сгущёнка сразу в сливки:</strong> комочки и риск перебить крем.</li>
+                <li><strong>Жидкая светлая сгущёнка:</strong> крем получается слишком мягким; сгущёнку нужно уваривать сильнее.</li>
+                <li><strong>Толстый слой крема под верхними блинами:</strong> крем потечёт по борту.</li>
+                <li><strong>Мало блинов:</strong> тремя блинами верх не закрыть, нужно четыре.</li>
+                <li><strong>Нет груза:</strong> рулет не уплотняется, разрез получается рыхлым.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Молоко:</strong> заменяется сывороткой; она же подходит для осетинских пирогов. Сыворотку можно получить, делая творог.</li>
+                <li><strong>Сливки:</strong> заменяются сметаной 30 % один к одному, а сметану 20 % можно отвесить, чтобы убрать лишнюю жидкость.</li>
+                <li><strong>Сгущёнка:</strong> можно сварить самостоятельно, но варить дольше — жидкая не подойдёт.</li>
+                <li><strong>Готовые блины:</strong> подойдёт любой несладкий и неострый рецепт, главное — тонкие и эластичные.</li>
+                <li><strong>Декор:</strong> ягоды, дополнительный крем или ничего.</li>
+                <li><strong>Крем:</strong> универсальный — годится и для других тортов.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 (ингредиенты и отдых теста — 00:00:44–00:05:43; выпечка блинов — 00:04:15–00:08:13; крем — 00:09:25–00:11:49); Урок_02.mp4 (сливки и сгущёнка — 00:00:01–00:08:28; сборка — 00:09:17–00:20:23; верхние блины и декор — 00:20:51–00:25:35); DOCX «Блинный торт Томми» — граммовки, сроки хранения и порядок действий.</li>
+              <li><strong>Расшифровка:</strong> CSV для этой папки не было, речь распознана заново по обоим урокам (510 строк, «Расшифровка Блинный_торт_Томми.csv»). Реклама, приветствия и разговоры про соцсети в рецепт не вошли.</li>
+              <li><strong>Сгущёнка:</strong> в DOCX 360 г, в видео автор говорит, что банка 380 г тоже подойдёт. В калькуляторе стоит 360 г.</li>
+              <li><strong>Количество крема на блины:</strong> в DOCX и видео вес не назван — крем раскладывают ложками, полосой около 10 см, и часть оставляют на финал (в видео «буквально на 2 блина»).</li>
+              <li><strong>Диаметр:</strong> в DOCX размеров нет; в видео блины Ø21–23 см, сковорода Ø24 см, кольцо Ø16 см, высота торта 8–10 см.</li>
+              <li><strong>Пробелы:</strong> вес готового торта не назван; точное время выпечки одного блина автор не называет; количество ягод для декора не указано; время застывания крема в холодильнике дано как «минимум 4 часа, лучше на ночь».</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_02.mp4 (00:23:15), где верх торта закрывают четвёртым блином, обрезанный по краям записи.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

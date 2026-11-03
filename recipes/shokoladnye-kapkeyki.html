@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Шоколадные капкейки с печёным бананом — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Шоколадные капкейки Надежды Зубовой: тесто на какао и тёмном шоколаде с карамелизованными бананами, которые дают влажный мякиш и долгую свежесть. Отсадка по 70 г, выпечка при 170 °C и шапочка из крема с клубничным конфи.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body data-recipe-id="shokoladnye-kapkeyki">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Лёгкая</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Шоколадные капкейки с печёным бананом</h1>
+      <p class="recipe-lead">
+        Начинаются с бананов: их карамелизуют в духовке и вводят в тесто. Банана в готовом капкейке не чувствуется — он работает как влажный мякиш, который долго остаётся свежим. Тесто на какао и тёмном шоколаде, отсадка по 70 г, сверху клубничное конфи и шапочка из крема.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">15 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">35 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">~1 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~1 ч 40 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">8 капкейков по 70 г теста</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/shokoladnye-kapkeyki.jpg" alt="Четыре шоколадных капкейка в красных капсулах с шапочками из светлого крема, малиной и зеленью" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (8 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="8">8</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">капкейков</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — 8 капкейков по 70 г теста, как в авторской рецептуре. Тесто раскладывается в капсулы больше половины: капкейки почти не поднимаются, но поднимают за собой какао и шоколад.
+          </p>
+        </div>
+
+        <!-- Переключатель источников и таймкодов видео -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">8</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Крем и клубничное конфи в авторской карте не расписаны — их количества указаны «по вкусу».
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: бананы, молочное, яйца -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍌 Бананы, масло, яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Бананы</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">Вес без кожуры; нужны переспевшие — они лучше запекутся и будут мягкими</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное</strong>:
+                <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span>
+                <span class="shopping-hint">Размягчённое, комнатной температуры</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные</strong>:
+                <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span>
+                <span class="shopping-hint">В карте яйцо указано в граммах — это чуть больше полутора яиц С0</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: бакалея, шоколад, начинка -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Бакалея, шоколад и начинка</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок (в тесто)</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Плюс отдельно сахар для бананов</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар для бананов</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="ст. л.">2 ст. л.</span>
+                <span class="shopping-hint">Присыпать половинки перед запеканием</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Тёмный шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Растопить и ввести тёплым</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">Просейте вместе с мукой — иначе останутся комочки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="65" data-unit="г">65 г</span>
+                <span class="shopping-hint">Вместе с какао и разрыхлителем</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Разрыхлитель</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="г">2 г</span>
+                <span class="shopping-hint">Добавляйте поверх муки, не сбрасывая весы — бытовые весы 2 г не чувствуют</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Клубничное конфи</strong> (по вкусу)
+                <span class="shopping-hint">Для начинки внутрь; рецепт конфи в карте не приведён</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Крем для шапочки</strong> (по вкусу)
+                <span class="shopping-hint">На видео шапочка отсажена готовым кремом, а его рецепт в карту не попал</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Малина и зелень для декора</strong> (по вкусу)
+                <span class="shopping-hint">Свежая малина и побеги зелени, как на видео</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — капсулы для капкейков, кондитерский мешок, насадка 8 мм семиконечная закрытая звезда
+                <span class="shopping-hint">Насадка нужна для шапочек; форма капсул — любая под 70 г теста</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Карамелизованные бананы</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Бананы без кожуры
+              <span class="ingredient-note">Переспевшие; из них 250 г уйдёт в тесто</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="ст. л.">2 ст. л.</span> — Сахар-песок
+              <span class="ingredient-note">Присыпать бананы перед запеканием</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Тесто (на 8 капкейков)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Масло сливочное
+              <span class="ingredient-note">Размягчённое, комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сахар-песок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Яйцо
+              <span class="ingredient-note">Отвешенное; вводить постепенно — желток и белок</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Тёмный шоколад
+              <span class="ingredient-note">Растопленный и тёплый</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="65" data-unit="г">65 г</span> — Мука пшеничная в/с
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Какао
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Карамелизованные бананы
+              <span class="ingredient-note">Из общей партии в 300 г; вводятся в самом конце</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка и шапочка (в карте не расписаны)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Клубничное конфи
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Крем для шапочки
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Малина и зелень для декора
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Карамелизация бананов</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Начинать нужно с бананов — с ними и начинается вся работа над капкейками. Берите переспевшие: они лучше запекутся и будут в начинке мягкими. Разрежьте их пополам, присыпьте сахарным песком и отправьте запекаться на 15–20 минут при 170 °C.
+                <span class="source-badge">⏱ Урок 1: 00:09–00:52</span>
+              </p>
+              <div class="tip-box">
+                <strong>Банана в капкейке не будет:</strong> даже тем, кто не любит бананы в выпечке, эти капкейки нравятся. Банан несёт не вкус, а функцию влажного мякиша, который долго остаётся свежим.
+                <span class="source-badge">⏱ Урок 1: 00:29–00:40</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>170 °C на видео, 180 °C в карте</strong></span>
+              <span class="param-pill">⏱ Время: <strong>15–20 мин</strong></span>
+              <span class="param-pill">🍌 Бананы: <strong>переспевшие</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Банановая кашица</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Готовые бананы нарежьте кубиком — красота тут не нужна, всё равно будем перемешивать. Получится банановая кашица, она и нужна для теста. Остужать обязательно не нужно: можно использовать даже тёплой, 40–50 °C.
+                <span class="source-badge">⏱ Урок 1: 00:57–01:24</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔪 Нарезка: <strong>кубиком</strong></span>
+              <span class="param-pill">🌡 В тесто: <strong>можно тёплой, 40–50 °C</strong></span>
+              <span class="param-pill">⚖ В тесто идёт: <strong>250 г из 300 г</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Масло с сахаром</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сливочное масло и сахар взвесьте в одну миску. Масло должно быть размягчённым. Начните взбивать на небольшой скорости, чтобы сахар не разлетался, а затем увеличьте до максимальной.
+                <span class="source-badge">⏱ Урок 1: 01:27–02:16</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Масло: <strong>80 г размягчённого</strong></span>
+              <span class="param-pill">🍬 Сахар: <strong>50 г</strong></span>
+              <span class="param-pill">🌀 Скорость: <strong>от малой к максимальной</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Яйцо поэтапно</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В масло с сахаром постепенно добавьте желток и белок. На расслаивание здесь можно не смотреть: в самом конце вы добавите тёплый шоколад, и он объединит массу. Но вводить яйцо всё равно нужно поэтапно.
+                <span class="source-badge">⏱ Урок 1: 02:27–02:41</span>
+              </p>
+              <div class="tip-box">
+                <strong>Почему не страшно расслаивание:</strong> яйца тяжёлые и холодные по отношению к маслу, поэтому масса может «разойтись». Эмульсию в этом тесте собирает шоколад — он вводится следующим шагом.
+                <span class="source-badge">⏱ Урок 1: 02:32–02:39</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Яйцо: <strong>80 г</strong></span>
+              <span class="param-pill">🔁 Ввод: <strong>постепенно</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>масса может расслоиться — это норма</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Тёплый шоколад</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Растопите тёмный шоколад в микроволновке и введите его в массу тёплым. После этого перемешайте всё миксером: масса станет абсолютно однородной, гладкой, без включений — и совсем не будет напоминать манную кашу.
+                <span class="source-badge">⏱ Урок 1: 03:07–03:47</span>
+              </p>
+              <div class="warning-box">
+                <strong>Шоколад не должен быть горячим:</strong> тёплый шоколад объединяет массу, а слишком горячий поведёт себя с маслом и яйцами непредсказуемо.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Шоколад: <strong>30 г тёмного</strong></span>
+              <span class="param-pill">♨ Температура: <strong>тёплый, не горячий</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>гладкая однородная масса</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Сухие ингредиенты</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Муку, какао и разрыхлитель смешайте вместе и обязательно просейте — иначе в тесте останутся комочки какао. Добавьте всё за один приём и перемешайте миксером на низкой скорости.
+                <span class="source-badge">⏱ Урок 1: 01:46–01:58</span>
+              </p>
+              <p>
+                Просеивать нужно именно все три ингредиента вместе — так какао распределяется по муке и не сбивается в комки.
+                <span class="source-badge">⏱ Урок 1: 03:47–03:58</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Мука: <strong>65 г</strong></span>
+              <span class="param-pill">🍫 Какао: <strong>15 г</strong></span>
+              <span class="param-pill">🥄 Разрыхлитель: <strong>2 г</strong></span>
+              <span class="param-pill">🌀 Миксер: <strong>низкая скорость</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Бананы в тесто</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В самом конце введите лопаткой карамелизованные бананы. Здесь есть выбор: если хотите, чтобы кусочки банана ощущались в выпечке, вводите лопаткой; если хотите, чтобы их не было заметно совсем, добавляйте бананы венчиками миксера, как и сухие ингредиенты.
+                <span class="source-badge">⏱ Урок 1: 04:10–04:27</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍌 Бананы: <strong>250 г</strong></span>
+              <span class="param-pill">🥄 Лопатка: <strong>кусочки чувствуются</strong></span>
+              <span class="param-pill">🌀 Миксер: <strong>банана не заметно</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Отсадка в капсулы</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите тесто в кондитерский мешок и отсадите по 70 г в каждую капсулу. Теста в капсуле будет больше, чем обычно: заполняйте больше половины — капкейки почти не поднимутся.
+                <span class="source-badge">⏱ Урок 1: 04:29–04:48</span>
+              </p>
+              <div class="tip-box">
+                <strong>Выход — 8 капкейков:</strong> именно столько получается из этой рецептуры при отсадке по 70 г.
+                <span class="source-badge">⏱ Урок 1: 05:11–05:14</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Тесто: <strong>70 г на капсулу</strong></span>
+              <span class="param-pill">🔢 Выход: <strong>8 капкейков</strong></span>
+              <span class="param-pill">🧁 Заполнение: <strong>больше половины</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Выпечка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте при 170 °C в режиме конвекции 25 минут; по карте время 27–30 минут. Эти капкейки пекутся чуть дольше обычных, потому что в тесте много влаги из бананов.
+                <span class="source-badge">⏱ Урок 1: 05:15–05:27</span>
+              </p>
+              <p>
+                Сильно они не поднимутся — и это не ошибка: теста в форме много, а подъём сдерживает влажный банан. Проверьте готовность зубочисткой.
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>170 °C</strong></span>
+              <span class="param-pill">🔄 Режим: <strong>конвекция</strong></span>
+              <span class="param-pill">⏱ Время: <strong>25–30 мин</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Начинка клубничным конфи</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Остывшие капкейки начините клубничным конфи — автор отправляет его внутрь, чтобы было «вообще невыносимо вкусно». Шоколад, банан и клубника в одной комбинации и составляют тот самый вкус этого капкейка.
+                <span class="source-badge">⏱ Урок 1: 05:37–06:09</span>
+              </p>
+              <div class="warning-box">
+                <strong>Рецепта конфи в карте нет:</strong> в технологической карте расписаны только бананы и тесто. Конфи берите готовое или по любому отработанному рецепту.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍓 Конфи: <strong>клубничное</strong></span>
+              <span class="param-pill">🕳 Куда: <strong>внутрь капкейка</strong></span>
+              <span class="param-pill">⏱ Подача: <strong>после остывания</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 11 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Шапочка из крема</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отсадите шапочку кремом через насадку 8 мм — семиконечную закрытую звезду. Украсьте малиной и зеленью, как на видео. Рецепт крема в карту не попал: в уроке он уже готов, поэтому используйте свой проверенный или готовый.
+                <span class="source-badge">⏱ Урок 1: 06:14–06:22</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧰 Насадка: <strong>8 мм, 7-конечная звезда</strong></span>
+              <span class="param-pill">🍓 Декор: <strong>малина, зелень</strong></span>
+              <span class="param-pill">📦 Хранение в сборе: <strong>72 ч</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Только переспевшие бананы:</strong> они хорошо запекаются и дают мягкую кашицу.</li>
+                <li><strong>Банан — не вкус, а текстура:</strong> он отвечает за влажный мякиш и долгую свежесть капкейка.</li>
+                <li><strong>Бананы можно теплыми:</strong> 40–50 °C — рабочая температура, ждать полного остывания не нужно.</li>
+                <li><strong>Шоколад собирает эмульсию:</strong> поэтому расслоение после яиц не страшно.</li>
+                <li><strong>Какао только вместе с мукой и разрыхлителем:</strong> просеивать всё сразу, чтобы не было комочков.</li>
+                <li><strong>Сухие ингредиенты — за один приём</strong> и на низкой скорости миксера.</li>
+                <li><strong>Бананы лопаткой или миксером:</strong> лопатка оставляет кусочки, миксер делает их незаметными.</li>
+                <li><strong>Заполняйте капсулу больше половины:</strong> тесто почти не поднимается, зато получается плотным и влажным.</li>
+                <li><strong>Пеките дольше обычного:</strong> 25–30 минут против привычных 20 — из-за влаги бананов.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Недозрелые бананы:</strong> не дают ни нужной кашицы, ни влажности в мякише.</li>
+                <li><strong>Горячий шоколад:</strong> ведёт себя с маслом и яйцами непредсказуемо, лучше тёплый.</li>
+                <li><strong>Сухие ингредиенты не просеяли:</strong> в тесте остаются комочки какао.</li>
+                <li><strong>Долго мешали после ввода сухих:</strong> тесто теряет воздух и получается плотным.</li>
+                <li><strong>Малая порция теста в капсуле:</strong> капкейк получается сухим — тесту нужны свои 70 г.</li>
+                <li><strong>Ждали высокого подъёма:</strong> эти капкейки почти не поднимаются, это особенность рецепта.</li>
+                <li><strong>Вынимали горячими:</strong> горячий капкейк легко разваливается, дайте ему остыть.</li>
+                <li><strong>Собирали заранее:</strong> собранные капкейки хранятся 72 часа, но крем и конфи размягчают мякиш.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение</h4>
+              <ul>
+                <li><strong>Без крема и начинки:</strong> в пакете или контейнере в холодильнике — до 12 дней.</li>
+                <li><strong>В морозилке:</strong> до 2 месяцев.</li>
+                <li><strong>В сборе:</strong> до 72 часов в холодильнике.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> вебинар Надежды Зубовой «Капкейки шоколадные» (Тортомафия, месяц 2) — расшифровка урока и технологическая карта с граммовками.</li>
+              <li><strong>Расхождения — температура бананов:</strong> на видео автор запекает бананы при 170 °C, в карте указано 180 °C. На странице взяты оба значения.</li>
+              <li><strong>Расхождения — время выпечки капкейков:</strong> на видео 25 минут, в карте 27–30. На странице указан диапазон, потому что капкейки с бананом пекутся дольше обычных.</li>
+              <li><strong>Расхождения — сахар для бананов:</strong> в карте 2 ст. л., на видео автор присыпает «чуть-чуть». Количество в карте точнее, оно и приведено в раскладке.</li>
+              <li><strong>Пробелы — крем:</strong> в карте нет рецепта крема для шапочки, на видео он уже готов. Количество и состав не выдуманы, ингредиент отмечен «по вкусу».</li>
+              <li><strong>Пробелы — конфи:</strong> клубничное конфи упоминается на видео, но его рецепта в карте нет.</li>
+              <li><strong>Пробелы:</strong> общее и активное время автор не называет — значения на странице оценены по видео.</li>
+              <li><strong>Фото:</strong> отдельного снимка в папке нет — используется кадр из урока (00:07:05) с готовыми капкейками.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

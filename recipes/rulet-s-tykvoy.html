@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рулет с тыквой из сметанного теста — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Рулет с тыквой Надежды Зубовой: безопарное дрожжевое тесто со сметаной, замешанное руками. Пласт 40 × 50 см смазывают растительным маслом, кладут 300 г тыквы, натёртой на крупную тёрку, посыпают сахаром, скручивают и выпекают 30 минут.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="rulet-s-tykvoy">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Рулет с тыквой из сметанного теста</h1>
+      <p class="recipe-lead">
+        Вертута — тонкий дрожжевой рулет, который автор делает из сметанного теста безопарным способом и замешивает руками. Сметана содержит молочную кислоту, поэтому тесто ведёт себя почти как песочное: появляется лёгкая слоистость и ощущение сдобы. Пласт смазывают растительным маслом, чтобы слои не слипались, щедро засыпают натёртой тыквой с сахаром, скручивают плотным валиком и выпекают 30 минут.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~15 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~30 мин (замес 10–20 мин)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Расстойка теста, выпечка 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">≈2 ч (без времени расстойки)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 рулет из 400 г теста, пласт 40 × 50 см</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/rulet-s-tykvoy.jpg" alt="Нарезанные куски рулета с тыквенной начинкой, присыпанные сахарной пудрой, на тёмном столе" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 рулет)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">рулет</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База калькулятора — один рулет: по DOCX на него нужно 400 г теста, а тесто в источнике дано на большой замес (900–950 г муки). Граммовки пересчитаны пропорционально под 400 г выхода — коэффициентом ≈0,21. Начинка — 300 г тыквы на пласт 40 × 50 см.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> рулет</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Список на 400 г теста и начинку на один рулет: бакалея и молочное в первой колонке, тыква и расходники — во второй.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Бакалея, молочное, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Плюс немного на подпыл. В авторском замесе мука берётся с запасом — тесто не должно быть крутым</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко</strong>:
+                <span class="shopping-qty" data-base-amount="85" data-unit="г">85 г</span>
+                <span class="shopping-hint">Комнатной температуры</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные</strong>:
+                <span class="shopping-qty" data-base-amount="32" data-unit="г">32 г</span>
+                <span class="shopping-hint">Без скорлупы, комнатной температуры; плюс яйцо на смазку рулета</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="28" data-unit="г">28 г</span>
+                <span class="shopping-hint">В тесто; для начинки — ещё 2 ст. л.</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="г">3 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Дрожжи прессованные</strong>:
+                <span class="shopping-qty" data-base-amount="8.5" data-unit="г">8,5 г</span>
+                <span class="shopping-hint">Свежие, слоистые; проверьте, что лепятся как пластилин</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сметана 15–25%</strong>:
+                <span class="shopping-qty" data-base-amount="21" data-unit="г">21 г</span>
+                <span class="shopping-hint">Она и даёт тесту слоистость и сдобный вкус</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное</strong>:
+                <span class="shopping-qty" data-base-amount="26" data-unit="г">26 г</span>
+                <span class="shopping-hint">Комнатной температуры, вводится в 2–3 приёма</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🎃 Тыква, смазка, расходники</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Тыква</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">В очищенном виде, натереть на крупную тёрку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйцо для смазки</strong> — 1 шт.
+                <span class="shopping-hint">Смазать рулет перед выпечкой; можно яйцо с молоком или желток</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло растительное</strong> — сколько уйдёт
+                <span class="shopping-hint">Им смазывают стол при раскатке и сам пласт, чтобы слои не слипались</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong> — по вкусу
+                <span class="shopping-hint">Для подачи, по желанию</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — пергамент, полотенце
+                <span class="shopping-hint">Полотенцем накрывают миску на расстойке, пергамент — на противень</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Тесто со сметаной (400 г)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Мука пшеничная
+              <span class="ingredient-note">Просейте заранее</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="85" data-unit="г">85 г</span> — Молоко
+              <span class="ingredient-note">Комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="32" data-unit="г">32 г</span> — Яйца
+              <span class="ingredient-note">Без скорлупы, комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="28" data-unit="г">28 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="8.5" data-unit="г">8,5 г</span> — Дрожжи прессованные
+              <span class="ingredient-note">Раскрошить в муку</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="21" data-unit="г">21 г</span> — Сметана 15–25%
+              <span class="ingredient-note">Вводится в два приёма</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="26" data-unit="г">26 г</span> — Масло сливочное
+              <span class="ingredient-note">Комнатной температуры, в 2–3 приёма в самом конце</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка и смазка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Тыква
+              <span class="ingredient-note">Натереть на крупную тёрку</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="ст. л.">2 ст. л.</span> — Сахар
+              <span class="ingredient-note">Присыпать тыкву</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Сколько уйдёт — Масло растительное
+              <span class="ingredient-note">Для раскатки стола и смазки пласта</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Яйцо для смазки
+              <span class="ingredient-note">Смазать рулет перед выпечкой</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Сухие ингредиенты, молоко и яйца</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В миску просейте муку с солью, добавьте сахар и раскрошенные дрожжи. Перемешайте сухие ингредиенты руками, прямо в миске.
+                <span class="source-badge">⏱ Урок 1: 00:40–01:01</span>
+              </p>
+              <p>
+                Влейте молоко и яйца и начните замес в миске — задача собрать все сухие ингредиенты в большой комок. Потом переложите тесто на стол и продолжайте месить там.
+                <span class="source-badge">⏱ Урок 1: 01:03–01:31</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> сметану вводите именно на этом этапе, до масла — иначе руками замешивать тесто будет тяжело.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Способ: <strong>Руками, безопарный</strong></span>
+              <span class="param-pill">🌡 Молоко и яйца: <strong>Комнатной температуры</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Сметана в два приёма</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сметану введите в два приёма: сначала первую часть, замесите, затем вторую — и мешайте до однородности. Сметана немного разжижит тесто, это нормально.
+                <span class="source-badge">⏱ Урок 1: 01:46–02:24</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> молочная кислота сметаны делает тесто похожим на сдобное песочное — появляется небольшая слоистость. Из этого теста получаются не только вертуты, но и кулебяки с пирожками.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥛 Сметана: <strong>15–25%, в два приёма</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Тесто липкое и пока неоднородное</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Масло в 2–3 приёма и вымешивание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Вводите сливочное масло комнатной температуры небольшими порциями — каждую следующую только после того, как предыдущая полностью вошла в тесто. Вымешивайте до однородности.
+                <span class="source-badge">⏱ Урок 1: 02:26–03:11</span>
+              </p>
+              <p>
+                Тесто получится не очень крутым, но добавлять муку не нужно. Ориентир автора: если мука Макфа с 12% белка, тесто должно отставать от рук.
+                <span class="source-badge">⏱ Урок 1: 03:11–03:25</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не забивайте тесто мукой:</strong> лишняя мука сделает рулет плотным. Если тесто кажется мягким — так и должно быть, из него потом легко раскатывать.
+                <span class="source-badge">⏱ Урок 1: 03:14–03:19</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Замес: <strong>10–20 минут</strong></span>
+              <span class="param-pill">🧈 Масло: <strong>Мягкое, порциями</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Тесто однородное, отстаёт от рук</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Расстойка под полотенцем</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Соберите тесто в комок, оставьте в той же миске, в которой начинали вымешивать, накройте полотенцем и дайте подойти.
+                <span class="source-badge">⏱ Урок 1: 03:25–03:34</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> время расстойки в этом уроке не называется — ориентируйтесь на тесто: оно должно заметно увеличиться и стать мягким, податливым при раскатке.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Расстойка: <strong>До увеличения в объёме</strong></span>
+              <span class="param-pill">🌡 Условия: <strong>Комнатная температура, под полотенцем</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Раскатка 40 × 50 см на масле</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Стол смажьте растительным маслом — раскатывать будем на нём, а не на муке. Раскатайте тесто довольно тонко, в прямоугольник 40 × 50 см.
+                <span class="source-badge">⏱ Урок 2: 00:17–00:30</span>
+              </p>
+              <p>
+                Смажьте пласт растительным маслом по всей поверхности, но оставьте по 3–5 см с каждого края несмазанными — эти края должны легко скрепиться. Масло нужно для того, чтобы слои внутри рулета не слипались.
+                <span class="source-badge">⏱ Урок 2: 00:31–00:53</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> это тесто мягче обычного дрожжевого и менее упругое, поэтому раскатывается легко. Вертуты, кстати, бывают и солёными — например, с творогом и зеленью.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Пласт: <strong>40 × 50 см</strong></span>
+              <span class="param-pill">🫒 Раскатка: <strong>На растительном масле</strong></span>
+              <span class="param-pill">✂️ Края: <strong>3–5 см без масла</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Тыква с сахаром на пласт</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Распределите по пласту 300 г тыквы, натёртой на крупную тёрку, и присыпьте двумя ложками сахара.
+                <span class="source-badge">⏱ Урок 2: 00:55–01:17</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> натёртая тыква по виду похожа на морковь, но вкус у рулета совершенно другой — сладкий и мягкий.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🎃 Тыква: <strong>300 г, крупная тёрка</strong></span>
+              <span class="param-pill">🍬 Сахар: <strong>2 ст. л.</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Скрутка, смазка и выпечка 30 минут</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Закручивайте рулет плотно и не торопясь, делая лёгкое движение на себя — так скрутка уплотняется. Края подверните внутрь и прижмите, чтобы начинка не вытекала, и переложите рулет на противень.
+                <span class="source-badge">⏱ Урок 2: 01:37–02:33</span>
+              </p>
+              <p>
+                Смажьте сверху яйцом и отправляйте выпекаться — 30 минут.
+                <span class="source-badge">⏱ Урок 2: 02:35–02:40</span>
+              </p>
+              <div class="warning-box">
+                <strong>Температура в источниках не указана:</strong> ни в DOCX, ни в уроке автор не называет режим для этого рулета — только время, 30 минут. Ориентируйтесь на свою духовку и проверяйте готовность: рулет должен зарумяниться, а тесто — пропечься.
+                <span class="source-badge">⏱ DOCX</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Выпечка: <strong>30 минут</strong></span>
+              <span class="param-pill">🥚 Смазка: <strong>Яйцом</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Румяная корочка, сухая зубочистка</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Зачем сметана:</strong> молочная кислота делает тесто похожим на сдобное песочное — появляется лёгкая слоистость и ощущение сдобы.</li>
+                <li><strong>Сметана до масла:</strong> если ввести её позже, руками замешивать тесто будет тяжело.</li>
+                <li><strong>Масло порциями:</strong> каждая следующая порция — только после того, как предыдущая полностью вошла в тесто.</li>
+                <li><strong>Без лишней муки:</strong> тесто должно остаться некрутым, иначе рулет будет плотным, а раскатка — тяжёлой.</li>
+                <li><strong>Растительное масло на столе:</strong> раскатка идёт на масле, а не на муке — так тесто не забивается.</li>
+                <li><strong>Края без масла:</strong> 3–5 см по периметру оставляют сухими, чтобы рулет легко склеился.</li>
+                <li><strong>Плотная скрутка:</strong> лёгкое движение на себя уплотняет валик и не даёт слоям разойтись при выпечке.</li>
+                <li><strong>Универсальное тесто:</strong> из него же делают кулебяки и пирожки, а вертуты бывают и солёными — с творогом и зеленью.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Досыпать муку «до крутости»:</strong> тесто станет плотным, рулет потеряет слоистость.</li>
+                <li><strong>Смазать маслом весь пласт до края:</strong> края не склеятся и рулет развернётся при выпечке.</li>
+                <li><strong>Раскатывать на муке:</strong> тесто забивается, пласт получается жёстким.</li>
+                <li><strong>Скручивать слабо:</strong> внутри останутся пустоты, начинка вытечет.</li>
+                <li><strong>Не смазать яйцом:</strong> корочка будет бледной.</li>
+                <li><strong>Печь «на глаз» без проверки:</strong> температура не указана, поэтому первый рулет проверяйте зубочисткой.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 (замес теста со сметаной — 00:00–03:34), Урок_02.mp4 (раскатка, смазка, тыква, скрутка, смазка яйцом — 00:01–02:40); расшифровка с таймкодами «Расшифровка Рулет_с_тыквой.csv»; файл «Рулет_с_тыквой.docx» с граммовками теста и начинки. Таймкоды на странице — реальные, из расшифровки.</li>
+              <li><strong>Пересчёт теста:</strong> в DOCX тесто дано на большой замес (900–950 г муки) и отдельно сказано: «рассчитай граммовки продуктов на тесто так, чтобы выход теста был 400 г». Все граммовки пересчитаны пропорционально (коэффициент ≈0,21) и округлены: мука 200 г, молоко 85 г, яйца 32 г, сахар 28 г, соль 3 г, дрожжи 8,5 г, сметана 21 г, масло 26 г.</li>
+              <li><strong>Время замеса:</strong> DOCX — 10–15 минут, в видео автор говорит 15–20. На странице указан общий диапазон 10–20 минут.</li>
+              <li><strong>Температура выпечки:</strong> не указана ни в DOCX, ни в видео — есть только время, 30 минут. Это пробел источника, а не страницы.</li>
+              <li><strong>Расстойка:</strong> время не называется: автор просто оставляет тесто под полотенцем «на расстойку».</li>
+              <li><strong>Хранение:</strong> DOCX отсылает к другому рецепту теста («время выпечки, хранение — такие же, как и для теста с машинным замесом»), поэтому конкретных сроков для этого теста в источниках нет.</li>
+              <li><strong>Сахар в начинку:</strong> в DOCX — «2 ложки сахара» без уточнения, столовые или чайные; на странице — 2 ст. л.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице стоит кадр из Урок_02.mp4 с нарезанным готовым рулетом в пудре. Пользователь сообщил, что фото в любом случае переделает.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

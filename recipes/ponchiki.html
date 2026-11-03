@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пончики с ягодной начинкой и глазурью — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Пончики Надежды Зубовой на дрожжевом тесте опарным способом: холодное брожение 4–24 часа, раскатка 1–1,5 см, жарка во фритюре при 165–170 °C. Внутри — ягодная начинка на кукурузном крахмале, снаружи — взбитая глазурь на желатине.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="ponchiki">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Пончики с ягодной начинкой и глазурью</h1>
+      <p class="recipe-lead">
+        Пончики на дрожжевом тесте, замешанном опарным способом: опару оставляют на 5–10 минут, а готовое тесто убирают в холодильник на 4–24 часа и почти не вымешивают. Раскатка 1–1,5 см, вырубка кольцами и круглыми, жарка во фритюре при 165–170 °C — именно на этой температуре пончики хорошо пропекаются и не горят. Внутрь — плотная ягодная начинка на кукурузном крахмале, снаружи — блестящая глазурь на желатине.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~15 мин (опара 5–10 мин)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Холод 4–24 ч, отдых пласта 30 мин, расстойка 15–40 мин, жарка</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">6–26 ч с брожением</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">≈12 пончиков Ø8,5 см (1 кг теста) плюс шарики-серединки</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/ponchiki.jpg" alt="Два готовых пончика в белой глазури с цветной посыпкой на чёрном подносе, рядом рука с лотком посыпки" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (12 пончиков)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="12">12</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">пончиков</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База калькулятора — один замес из DOCX: автор говорит, что из него получается 1 кг теста и примерно 12 больших пончиков Ø8,5 см, если не собирать и не раскатывать обрезки заново (тогда выйдет больше). Начинка и глазурь даны на этот же замес.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">12</span> пончиков</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на один замес теста, начинку и глазурь: бакалея и молочное в первой колонке, ягоды, фритюр и декор — во второй.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Бакалея, молочное, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="500" data-unit="г">500 г</span>
+                <span class="shopping-hint">Плюс запас на подсыпку: в видео у автора уходит 550 г (160 в опару, 340 в тесто, 50 на подпыл)</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Дрожжи прессованные</strong>:
+                <span class="shopping-qty" data-base-amount="25" data-unit="г">25 г</span>
+                <span class="shopping-hint">Или 8–8,5 г сухих инстантных вместо 25 г свежих</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко сухое</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Натуральное, не соевый заменитель. Делает тесто эластичнее и даёт сливочный вкус</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="290" data-unit="г">290 г</span>
+                <span class="shopping-hint">50 г в тесто + 60 г в начинку + 180 г в глазурь</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+                <span class="shopping-hint">В тесто</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мёд</strong>:
+                <span class="shopping-qty" data-base-amount="25" data-unit="г">25 г</span>
+                <span class="shopping-hint">Держит влагу и работает консервантом. Можно заменить инвертным сахаром или 25 г обычного сахара</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span>
+                <span class="shopping-hint">Комнатной температуры</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное</strong>:
+                <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                <span class="shopping-hint">Размягчённое, вводится в два приёма</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин</strong>:
+                <span class="shopping-qty" data-base-amount="6" data-unit="г">6 г</span>
+                <span class="shopping-hint">Для глазури, замочить в 30 г холодной воды</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Крахмал кукурузный</strong>:
+                <span class="shopping-qty" data-base-amount="25" data-unit="г">25 г</span>
+                <span class="shopping-hint">В начинку, смешать с сахаром до добавления</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ваниль, ванильный сахар или ванильная паста</strong> — по вкусу
+                <span class="shopping-hint">В тесто, примерно чайная ложка; в глазурь — по желанию</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимонный сок</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span>
+                <span class="shopping-hint">Для вкуса глазури, по желанию. Заменяется ванилином</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍓 Ягоды, фритюр, декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ягоды или ягодное пюре</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">Клубника, малина, вишня, смородина, абрикос, даже яблоки. Свежие или замороженные</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло растительное рафинированное дезодорированное</strong>:
+                <span class="shopping-qty" data-base-amount="700" data-unit="г">700 г</span>
+                <span class="shopping-hint">Для фритюра: автор выливает в сотейник две трети литровой бутылки. Без запаха, повторно не использовать</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Посыпка кондитерская</strong> — по вкусу
+                <span class="shopping-hint">Цветная, для декора глазури. Можно обойтись без неё</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Краситель водорастворимый (опционально)</strong> — по вкусу
+                <span class="shopping-hint">Дома используют только водорастворимые красители, жирорастворимые практически не нужны</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — пищевая плёнка, пергамент, кондитерский мешок с насадкой, кулинарный термометр, бумажные салфетки
+                <span class="shopping-hint">Пергамент нарезать квадратиками под пончики, салфетки — чтобы снять лишний жир после жарки</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Тесто (опара + замес)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="500" data-unit="г">500 г</span> — Мука пшеничная в/с
+              <span class="ingredient-note">DOCX: 500 ± 50 г. В видео 550 г: 160 г в опару, 340 г в тесто, 50 г на подсыпку</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Вода
+              <span class="ingredient-note">Строго комнатной температуры, не тёплая: дрожжи — живой организм</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Дрожжи прессованные
+              <span class="ingredient-note">Или 8–8,5 г сухих инстантных</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Молоко сухое
+              <span class="ingredient-note">Натуральное сухое молоко, не соевый заменитель</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span> — Яйца С1
+              <span class="ingredient-note">Комнатной температуры, не из холодильника</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Мёд
+              <span class="ingredient-note">Или инвертный сахар; можно заменить 25 г обычного сахара. В DOCX указано 125 г — по видео и по логике замеса 25 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сахар
+              <span class="ingredient-note">Вводится в два приёма уже после муки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Масло сливочное размягчённое
+              <span class="ingredient-note">Вводится в два приёма в самом конце</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Ваниль, ванильный сахар или ванильная паста
+              <span class="ingredient-note">Автор добавляет примерно чайную ложку пасты</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Ягодная начинка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Ягоды или ягодное пюре
+              <span class="ingredient-note">Клубника, малина, вишня, смородина, абрикос, яблоки. Свежие или замороженные</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сахар
+              <span class="ingredient-note">В DOCX 60–90 г, в видео 60 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Крахмал кукурузный
+              <span class="ingredient-note">Не желатин и не пектин: начинка должна держаться в горячем пончике</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Глазурь</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="180" data-unit="г">180 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Вода в сироп
+              <span class="ingredient-note">Холодная, прямо в сахар</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="6" data-unit="г">6 г</span> — Желатин
+              <span class="ingredient-note">Замочить в 30 г холодной воды заранее</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Вода для замачивания желатина
+              <span class="ingredient-note">Холодная или ледяная</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Лимонный сок
+              <span class="ingredient-note">По желанию, для вкуса; можно заменить ванилином</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Для жарки и декора</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="700" data-unit="г">700 г</span> — Масло растительное рафинированное
+              <span class="ingredient-note">Для фритюра, без запаха. Свободных мест на поверхности быть не должно</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Посыпка кондитерская, краситель водорастворимый
+              <span class="ingredient-note">Краситель — по желанию, только водорастворимый</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Начинаем с начинки — она должна остыть</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Ягоды пробейте блендером: частиц, которые не пройдут через насадку, остаться не должно. Сахар смешайте с кукурузным крахмалом заранее — так крахмал не возьмётся комками.
+                <span class="source-badge">⏱ Урок 1: 01:39–03:35</span>
+              </p>
+              <p>
+                Пюре прогрейте, но не кипятите — нужно лишь, чтобы не осталось льда. Затем тонкой струйкой, постоянно помешивая, введите крахмал с сахаром. Доведите до кипения и варите около двух минут, пока масса не станет прозрачной.
+                <span class="source-badge">⏱ Урок 1: 04:00–09:28</span>
+              </p>
+              <div class="warning-box">
+                <strong>Помешивайте непрерывно:</strong> ягодная начинка на крахмале склонна пригорать — оставить её и уйти нельзя. Готовность видна по цвету: из матовой масса становится прозрачной, у клубники видны косточки.
+                <span class="source-badge">⏱ Урок 1: 06:16–08:29</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> желатин для начинки не подходит — он держит только холодное, а пектин дорог. Крахмал прост, доступен и даёт плотную начинку, которая не вытекает из пончика даже в жару. Хранится такая начинка 72 часа в холодильнике, её можно сделать заранее.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Варка: <strong>≈2 минуты после кипения</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Масса прозрачная и густая</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>72 часа в холодильнике</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Опара: вода, дрожжи, 160 г муки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В большую миску налейте воду комнатной температуры и растворите в ней дрожжи. Если дрожжи прессованные — 25 г, если сухие инстантные — 8–8,5 г.
+                <span class="source-badge">⏱ Урок 1: 11:42–12:54</span>
+              </p>
+              <p>
+                Всыпьте 160 г просеянной муки и перемешайте. По консистенции масса получится как для густых оладий. Оставьте на 5–10 минут, пока не начнут образовываться пузыри.
+                <span class="source-badge">⏱ Урок 1: 13:20–14:32</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> вода именно комнатной температуры. Если взять почти горячую, добавить много сахара «покормить голодные дрожжи» и накрыть плёнкой в контакт — результат будет неудачным. К дрожжам нужно относиться как к живому организму.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Отдых опары: <strong>5–10 минут</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Появились пузыри</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Жидкие ингредиенты в опару</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В опару добавьте мёд, три яйца комнатной температуры, соль и сухое молоко. Перемешайте — уже не венчиком, а лопаткой: венчик активно развивает глютен, а нам нужно бережно обойтись с мукой.
+                <span class="source-badge">⏱ Урок 1: 26:55–28:48</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> сухое молоко вместо молока — чтобы не вводить лишнюю жидкость, но сохранить сливочный вкус. Оно же делает тесто более эластичным. Мёд здесь не для сладости, а чтобы держать влагу: своего рода консервант, поэтому он часто есть в пряниках и дрожжевом тесте.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Инструмент: <strong>Лопатка, не венчик</strong></span>
+              <span class="param-pill">🌡 Яйца: <strong>Комнатной температуры</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Мука, сахар в два приёма, масло в два приёма</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Всыпьте остальную муку (340 г, ещё 50 г оставьте на подсыпку) и перемешайте рукой или миксером с насадкой-крюком. Вымешивать не нужно — только добиться, чтобы вся мука смочилась. Тесто будет густым, но липким и «рваным».
+                <span class="source-badge">⏱ Урок 1: 31:09–32:44</span>
+              </p>
+              <p>
+                Теперь добавьте сахар в два приёма, каждый раз перемешивая. Тесто станет жиже — это нормально: сахар забрал часть жидкости. Затем так же, в два приёма, введите размягчённое сливочное масло и добавьте ваниль.
+                <span class="source-badge">⏱ Урок 1: 32:46–36:41</span>
+              </p>
+              <div class="warning-box">
+                <strong>Почему сахар и масло — после муки:</strong> и то и другое конкурирует с мукой. Сахар быстрее впитывает воду, а масло обволакивает муку снаружи и не даёт образоваться глютеновым цепям — мякиш получится некрасивым. Сначала мука должна напитаться влагой.
+                <span class="source-badge">⏱ Урок 1: 30:22–31:09</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> не ждите гладкого теста — мы его не вымешиваем. За счёт холодного брожения оно само станет красивым и упругим. Ручным миксером с крюками не работайте: тесто для него слишком тугое, нужен планетарный миксер или руки.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Мука: <strong>340 г в тесто + 50 г на подсыпку</strong></span>
+              <span class="param-pill">🥣 Порядок: <strong>Мука → сахар ×2 → масло ×2</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Тесто липкое и «рваное» — так и надо</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Холодное брожение 4–24 часа</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Соберите тесто в шар, затяните миску пищевой плёнкой и уберите в холодильник минимум на 4 часа, максимум на 24. Если тесто слишком подходит — обомните и верните обратно.
+                <span class="source-badge">⏱ Урок 1: 38:02–38:40</span>
+              </p>
+              <p>
+                Через 4 часа достаньте, обомните и скатайте в шар: тесто станет гладким, плотным и очень упругим. Именно таким оно и должно быть.
+                <span class="source-badge">⏱ Урок 1: 42:07–43:45</span>
+              </p>
+              <div class="warning-box">
+                <strong>В холодильнике должно быть теплее +4 °C:</strong> ниже — дрожжи впадают в анабиоз и тесто не растёт. В самом холодильнике тесто обминать не нужно: это требуется, только если холодильник даёт +9 °C или ёмкость слишком маленькая.
+                <span class="source-badge">⏱ Урок 1: 38:06–38:14, 42:07–42:25</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Холод: <strong>4–24 часа</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>Выше +4 °C</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Тесто гладкое, плотное, «пищит» от газа</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Раскатка 1–1,5 см и отдых пласта</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Раскатайте тесто в пласт толщиной около 1 см (автор не любит толстые пончики; 1,5–2 см — если хотите «колобки», а 4 см — риск не прожарить). Мукой не увлекайтесь: тесто уже достаточно «забито».
+                <span class="source-badge">⏱ Урок 1: 43:47–45:51</span>
+              </p>
+              <p>
+                Переложите пласт на пергамент и уберите в холодильник на 30 минут (можно и на час — тогда накройте плёнкой). Отдохнувшее тесто перестаёт сжиматься и позволяет вырезать ровные пончики.
+                <span class="source-badge">⏱ Урок 1: 45:55–46:42</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> это тесто отлично подойдёт и для жареных пирожков — с капустой и яйцом, с луком или ягодной начинкой.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Толщина: <strong>1–1,5 см</strong></span>
+              <span class="param-pill">🧊 Отдых пласта: <strong>30 минут в холодильнике</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Вырубка и расстойка на пергаменте</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Вырежьте круги резаком Ø8,5 см (стандарт кофеен — 8–9 см; миниатюрные — 6 см, ими красиво украшать торты). Серединку вырубите кольцом Ø2,5–3 см. Каждый пончик кладите на отдельный квадратик пергамента — так его удобно перенести в масло, и он не деформируется.
+                <span class="source-badge">⏱ Урок 1: 48:33–52:17</span>
+              </p>
+              <p>
+                Оставьте пончики на расстойку на 30–40 минут (в видео — 15–20 минут, тесто за это время подходит до 1,5–2 см). Шарики-серединки не выбрасывайте: их тоже жарят и посыпают пудрой.
+                <span class="source-badge">⏱ Урок 1: 52:35–52:54</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> обрезки теста собирайте в шар, раскатывайте заново и давайте отдохнуть — только тогда из них получатся аккуратные пончики.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Диаметр: <strong>8,5 см, отверстие 2,5–3 см</strong></span>
+              <span class="param-pill">⏱ Расстойка: <strong>30–40 минут (в видео 15–20)</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Толщина выросла до 1,5–2 см</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Жарка при 165–170 °C</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Налейте масло в сотейник (примерно две трети литра), нагрейте до 165–170 °C и убавьте нагрев почти до минимума. Опускайте пончики прямо с бумажкой — она легко снимается. Заполните всю поверхность масла: свободных мест быть не должно, иначе масло начнёт гореть.
+                <span class="source-badge">⏱ Урок 1: 54:49–58:00</span>
+              </p>
+              <p>
+                Жарьте с двух сторон до золотистого цвета, переворачивая палочками. Готовность проверяйте зубочисткой: она должна выйти сухой. Готовые пончики выкладывайте на тарелку с бумажной салфеткой.
+                <span class="source-badge">⏱ Урок 1: 01:01:20–01:05:51</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не 180–200 °C, а 165–170 °C:</strong> при более высокой температуре пончики горят снаружи и остаются сырыми внутри. Обязательно пользуйтесь кулинарным термометром и следите, чтобы масло не перегревалось. Повторно масло не нагревайте — при повторном нагреве образуются канцерогены.
+                <span class="source-badge">⏱ Урок 1: 55:09–55:39, 01:01:17–01:01:39</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>165–170 °C</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Сотейник, термометр, палочки</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Зубочистка сухая, корочка золотистая</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Глазурь на желатине</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Желатин замочите в 30 г холодной или ледяной воды — он превратится в плотную массу. Сахар засыпьте в маленький сотейник, добавьте 40 г холодной воды и, помешивая, доведите до кипения. Проварите 2 минуты на среднем огне, пока весь сахар не разойдётся: это сироп, не карамель.
+                <span class="source-badge">⏱ Урок 1: 06:17–09:59</span>
+              </p>
+              <p>
+                Снимите с огня, добавьте набухший желатин и перемешайте до полного растворения. Взбейте миксером на максимальной скорости до пышной белой массы — она должна начать наматываться на венчике. В этот момент глазурь готова.
+                <span class="source-badge">⏱ Урок 1: 12:33–17:19</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не перевзбейте:</strong> если сбивать слишком долго, глазурь станет настолько густой, что с ней невозможно будет работать. Ориентир — масса наматывается на венчик. Застывшую глазурь можно мягко разогреть в микроволновке.
+                <span class="source-badge">⏱ Урок 1: 15:19–15:40, 01:20:54</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> лимонный сок или ванилин нужны только для вкуса, а не для «улучшения» глазури. Краситель — водорастворимый, его добавляют в самом конце.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Сироп: <strong>2 минуты после кипения</strong></span>
+              <span class="param-pill">🌡 Желатин: <strong>Замачивать в холодной воде</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Масса наматывается на венчик</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Начинка и глазировка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Пончики должны полностью остыть. Начинку переложите в кондитерский мешок с длинной насадкой (автор использует №230 для эклера), проколите пончик сбоку, держите его сверху и снизу и наполняйте, чувствуя, как он заполняется, — так он не разорвётся.
+                <span class="source-badge">⏱ Урок 1: 10:42–11:24, 01:18:48–01:20:41</span>
+              </p>
+              <p>
+                Окуните пончик в глазурь наполовину, сделайте движение вправо-влево и вперёд-назад, снимите лишнее о край и постучите пончиком по руке, чтобы глазурь распределилась. Сразу посыпьте декором.
+                <span class="source-badge">⏱ Урок 1: 17:24–18:36</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> нет длинной насадки — подойдёт любая жёсткая: открытая звезда, шприц или просто небольшое круглое отверстие. Можно разрезать пончик, положить начинку и склеить его за счёт неё. В кольцо начинку тоже можно ввести: проколоть, держать сверху и снизу и продвигать насадку.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍓 Начинка: <strong>Полностью остывшая, плотная</strong></span>
+              <span class="param-pill">🍩 Глазурь: <strong>Погружением наполовину</strong></span>
+              <span class="param-pill">🎨 Декор: <strong>Посыпка сразу, пока глазурь мокрая</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Крахмал, а не желатин:</strong> пончик может быть ещё тёплым, а желатиновая начинка держит только холодное. Пектин дорог, крахмал доступен и даёт плотную начинку, которая не вытекает.</li>
+                <li><strong>Вода комнатной температуры:</strong> дрожжи — живой организм. Тёплая вода плюс много сахара «для голодных дрожжей» дают неудачный результат.</li>
+                <li><strong>Сахар и масло — в конце:</strong> они конкурируют с мукой за воду и мешают образованию глютена. Сначала мука должна напитаться влагой.</li>
+                <li><strong>Холодное брожение:</strong> 4–24 часа в холодильнике, и тесто само становится гладким и упругим — вымешивать его не нужно.</li>
+                <li><strong>Сахар «оживляет» тесто:</strong> когда вы его добавляете, тесто становится жиже — сахар растворяется и забирает часть жидкости.</li>
+                <li><strong>Мёд — консервант:</strong> он держит влагу внутри изделия, поэтому пончики дольше остаются мягкими.</li>
+                <li><strong>Квадратики пергамента:</strong> пончик переносится в масло на бумажке и не деформируется.</li>
+                <li><strong>Температура фритюра:</strong> 165–170 °C — ниже, чем пишут в интернете, зато цвет ровный и середина прожаривается.</li>
+                <li><strong>Запас теста:</strong> тесто можно держать в холодильнике до 24 часов — пончики удобно жарить утром на завтрак.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Тёплая вода для опары:</strong> дрожжи частично гибнут, тесто плохо поднимается.</li>
+                <li><strong>Сахар и масло в начале:</strong> тесто разжижается, мякиш получается некрасивым.</li>
+                <li><strong>Вымешивание до гладкости:</strong> не нужно. Тесто должно остаться «рваным» — работу сделает холод.</li>
+                <li><strong>Холодильник холоднее +4 °C:</strong> дрожжи засыпают, тесто не растёт.</li>
+                <li><strong>Раскатка сразу после холодильника:</strong> пласт сжимается, пончики получаются неровными. Нужен отдых 30 минут.</li>
+                <li><strong>Толщина 4 см:</strong> пончики не прожарятся внутри.</li>
+                <li><strong>Фритюр 180–200 °C:</strong> снаружи горелая корочка, внутри сырое тесто.</li>
+                <li><strong>Свободные места в масле:</strong> масло начинает гореть. Заполняйте поверхность.</li>
+                <li><strong>Повторный нагрев масла:</strong> образуются канцерогены, вкус портится.</li>
+                <li><strong>Начинка в горячий пончик:</strong> пончик рвётся, начинка вытекает. Дайте полностью остыть.</li>
+                <li><strong>Долгое взбивание глазури:</strong> она становится слишком густой и не покрывает пончик.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 (ягодная начинка — 00:00–09:30, опара и замес теста — 00:11–00:39, раскатка и вырубка — 00:42–00:52, жарка — 00:53–01:06, глазурь — 01:06–01:17, начинение и декор — 01:17–01:23); расшифровка с таймкодами «Расшифровка Пончики.csv»; файл «Пончики.docx» с точными граммовками теста, начинки и глазури. Таймкоды на странице — реальные, из расшифровки.</li>
+              <li><strong>Мёд — главное расхождение:</strong> в DOCX указано 125 г мёда, в видео автор несколько раз называет 25 г («добавила 25 граммов мёда», «25 граммов мёда, или 25 граммов сахара вместо него»). На странице — 25 г: при 125 г тесто стало бы заметно жиже и слаще, а пропорции остальных ингредиентов рассчитаны на 25 г.</li>
+              <li><strong>Мука:</strong> DOCX — 500 г «плюс-минус 50 г». В видео автор берёт 550 г и раскладывает их так: 160 г в опару, 340 г в тесто, 50 г остаётся на подсыпку. На странице база — 500 г с пояснением про запас.</li>
+              <li><strong>Дрожжи:</strong> DOCX — 25 г прессованных. В видео автор считает, что сухих нужно в три раза меньше, и уточняет с соведущим: 8–8,5 г, берёт 8 г. На странице — оба варианта.</li>
+              <li><strong>Сахар в начинку:</strong> DOCX — 60–90 г, в видео — 60 г. На странице 60 г.</li>
+              <li><strong>Время расстойки:</strong> DOCX — 30–40 минут, в видео пончики отдыхают 15–20 минут. На странице указаны оба ориентира.</li>
+              <li><strong>Время жарки:</strong> автор его не называет, только температуру (165–170 °C) и признак готовности — сухая зубочистка. Точных минут на странице нет намеренно.</li>
+              <li><strong>Выход:</strong> «всего теста 1 килограмм, больших пончиков штук 12» — если не собирать обрезки. В видео также жарят шарики-серединки; они в базовое количество не входят.</li>
+              <li><strong>Пробелы:</strong> точный вес готового пончика и количество начинки на один пончик автор не называет; температура и время выпечки не применимы — только фритюр.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице стоит кадр из Урок_01.mp4 с готовыми пончиками в глазури. Пользователь сообщил, что фото в любом случае переделает.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

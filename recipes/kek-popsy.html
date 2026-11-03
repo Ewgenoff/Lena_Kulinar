@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пирожное «Кейк-попсы» из красного бархата — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Кейк-попсы Надежды Зубовой: остатки бисквита в крошку, сливочное масло и сгущёнка, коньяк, шарики по 30 г, стабилизация в холодильнике и палочки на шоколадной «заплатке». Плюс рецепт бисквита «Красный бархат» с нуля.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body data-recipe-id="kek-popsy">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Лёгкая</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Пирожное «Кейк-попсы» из красного бархата</h1>
+      <p class="recipe-lead">
+        Кейк-попс — это «Картошка» в новом виде: остатки бисквита в крошку, сливочное масло и сгущёнка, коньяк по желанию и палочка на шоколадной «заплатке». Именно масло, а не крем, держит шарик на палочке вертикально, поэтому пропорции менять нельзя. Десерт самостоятельный, но хорош и как декор торта или составляющая кэнди-бара.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">15 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">25 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">45 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~1 ч 25 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">30 пирожных по 30 г</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/kek-popsy.jpg" alt="Кейк-попсы из бисквита «Красный бархат»: красные шарики на белых палочках, застывшие на подложке" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (30 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="30">30</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">пирожных</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — рецептура карты: 600 г бисквитной крошки на 30 пирожных по 30 г. Если катаете шарики по 35 г, тех же 30 штук получится меньше — уменьшите число в калькуляторе, и раскладка пересчитается.
+          </p>
+        </div>
+
+        <!-- Переключатель источников и таймкодов видео -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">30</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Список рассчитан на 30 пирожных: сама масса для кейк-попсов и расходники. Бисквит «Красный бархат» — отдельным блоком: его берут готовым или пекут заранее, тогда продукты под него покупают дополнительно.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: молочное, шоколад -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Масло, сгущёнка, шоколад</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Размягчённое, комнатной температуры — оно скрепляет массу и держит шарик на палочке</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сгущённое молоко</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Половина стандартной банки 380 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шоколад тёмный</strong>:
+                <span class="shopping-qty" data-base-amount="35" data-unit="г">35 г</span>
+                <span class="shopping-hint">Только для «заплаток» на палочках; подойдёт и тот, из которого будете делать глазурь</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Коньяк или бренди</strong> (опционально):
+                <span class="shopping-qty" data-base-amount="2" data-unit="ст. л.">2 ст. л.</span>
+                <span class="shopping-hint">По карте 1–2 ст. л., можно не добавлять совсем</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: бакалея и расходники -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Основа и расходники</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Бисквит готовый или песочное печенье</strong>
+                <span class="shopping-hint">Нужно 600 г крошки — это остатки любых бисквитов, можно смешивать; вес самого бисквита до измельчения больше</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Палочки для кейк-попсов</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="шт." data-piece="true">30 шт.</span>
+                <span class="shopping-hint">Плюс пара запасных на случай брака</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — зубочистки, одноразовые перчатки, доска или подложка под застывание
+                <span class="shopping-hint">Перчатки обязательны: массу вымешивают рукой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Если печёте бисквит «Красный бархат» сами</strong> — мука, сахар, какао, сода, лимонный сок, соль, растительное масло, простокваша, краситель и яйца:
+                <span class="shopping-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span>
+                <span class="shopping-hint">Яйца С0: 2 целых + 2 желтка, два белка останутся — пустите их на безе или меренгу. Остальные продукты под бисквит перечислены в ингредиентах</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Масса для кейк-попсов — на 30 пирожных по 30 г</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="600" data-unit="г">600 г</span> — Бисквитная крошка
+              <span class="ingredient-note">Любые остатки бисквитов, можно смесь; подойдёт и крошка песочного печенья</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сливочное масло, размягчённое
+              <span class="ingredient-note">Пропорцию не менять: масло — тот самый «цемент», который держит шарик на палочке</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сгущённое молоко
+              <span class="ingredient-note">Сладкий вкус и вторая половина связующего</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="ст. л.">2 ст. л.</span> — Коньяк или бренди
+              <span class="ingredient-note">По карте 1–2 ст. л.; на видео — «чуть больше чайной ложки» на свою порцию. Можно не добавлять</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Для палочек и наполнителей</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="35" data-unit="г">35 г</span> — Тёмный шоколад
+              <span class="ingredient-note">Растопить для «заплаток» на палочках; можно взять шоколад будущей глазури</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Дробленые орехи
+              <span class="ingredient-note">Вместе с какао — любая вкусовая добавка в крошку</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Какао
+              <span class="ingredient-note">Для более шоколадного вкуса массы</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Бисквит «Красный бархат» — если печёте сами</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="260" data-unit="г">260 г</span> — Сахар
+              <span class="ingredient-note">Взбивается со сливочным маслом</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="270" data-unit="г">270 г</span> — Мука
+              <span class="ingredient-note">Просеть вместе с какао, содой и солью</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="17" data-unit="г">17 г</span> — Какао
+              <span class="ingredient-note">Автор берёт какао не самого лучшего качества, например «Золотой ярлык»</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="0.5" data-unit="ч. л.">0,5 ч. л.</span> — Сода
+              <span class="ingredient-note">Идёт в простоквашу вместе с красителем</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Соль, щепотка
+              <span class="ingredient-note">В сухие ингредиенты</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Лимонный сок
+              <span class="ingredient-note">По карте; в порядке замеса отдельно не упомянут</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="130" data-unit="г">130 г</span> — Сливочное масло
+              <span class="ingredient-note">Взбить с сахаром</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="55" data-unit="г">55 г</span> — Растительное масло
+              <span class="ingredient-note">Вводится после взбивания масла с сахаром</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span> — Яйца С0
+              <span class="ingredient-note">Вводятся по одному</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span> — Яичные желтки
+              <span class="ingredient-note">Два белка останутся — пустите их на безе или меренгу</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="220" data-unit="г">220 г</span> — Простокваша
+              <span class="ingredient-note">В неё добавляют краситель и соду и дают постоять</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="0.25" data-unit="ч. л.">0,25 ч. л.</span> — Краситель, с горкой
+              <span class="ingredient-note">Сухой, жидкий или гелевый — добавлять до желаемого цвета</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Основа: бисквит в мелкую крошку</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Подойдёт абсолютно любая крошка: остатки классического или шоколадного бисквита, крошка песочного печенья, даже основа для чизкейка. Бисквиты можно смешивать между собой. Измельчайте в комбайне или руками — задача одна: получить мелкую-мелкую крошку.
+                <span class="source-badge">⏱ Урок 1: 00:37–01:34</span>
+              </p>
+              <p>
+                На видео используется бисквит «Красный бархат» — поэтому кейк-попсы получаются такими красивыми внутри. Рецепт этого бисквита — шаги 10–11.
+                <span class="source-badge">⏱ Урок 1: 00:12–00:27</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем это кондитеру:</strong> у кондитера обязательно должны быть рецепты, которые утилизируют остатки. Остался один корж — его можно выбросить, а можно превратить в кейк-попсы и не потерять ни грамма.
+                <span class="source-badge">⏱ Урок 1: 02:05–02:37</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍞 Крошка: <strong>600 г</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>комбайн или руки</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>мелкая, однородная</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Связующее: масло и сгущёнка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите крошку в миску, добавьте размягчённое сливочное масло и сгущённое молоко и перемешайте рукой — только в перчатках. Масса должна стать плотной и однородной, как у «Картошки».
+                <span class="source-badge">⏱ Урок 1: 01:35–03:41</span>
+              </p>
+              <div class="warning-box">
+                <strong>Почему именно сливочное масло:</strong> в иностранных рецептах в кейк-попс кладут любой крем — заварной, масляный, на маскарпоне. Но там шарики лежат на подставке палочкой вверх. Чтобы бомбошка стояла на палочке (в том числе в торте), скрепляющим элементом обязательно должно быть сливочное масло, и его пропорцию менять нельзя.
+                <span class="source-badge">⏱ Урок 1: 02:46–03:31</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Масло: <strong>150 г, размягчённое</strong></span>
+              <span class="param-pill">🥛 Сгущёнка: <strong>150 г</strong></span>
+              <span class="param-pill">🧤 Мешать: <strong>рукой, в перчатках</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Коньяк и вкусовые наполнители</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Влейте коньяк или бренди и ещё раз перемешайте. На видео в свою порцию автор добавляет чуть больше чайной ложки, по карте на 600 г крошки идёт 1–2 ст. л. Алкоголь можно не добавлять совсем.
+                <span class="source-badge">⏱ Урок 1: 03:47–03:52</span>
+              </p>
+              <p>
+                Если хочется другого вкуса, в крошку добавляют дробленые орехи или какао — любые наполнители по вашему выбору. Их количество автор не нормирует: ориентируйтесь на вкус массы.
+                <span class="source-badge">⏱ Урок 1: 00:46–00:53</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥃 Коньяк: <strong>1–2 ст. л., по желанию</strong></span>
+              <span class="param-pill">🥜 Наполнители: <strong>орехи, какао — по вкусу</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Взвешивание по 30 г</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Развесьте массу на комочки по 30 г. Допустимый диапазон — 30–35 г, в зависимости от того, какие пирожные нужны. Крупнее делать нельзя: шарик не будет держаться на палочке.
+                <span class="source-badge">⏱ Урок 1: 04:07–04:20</span>
+              </p>
+              <div class="warning-box">
+                <strong>Если кейк-попсы пойдут в торт:</strong> только 30 г, не больше. Тяжёлый шарик наклонится и сползёт по палочке, и вертикально в торте он не встанет.
+                <span class="source-badge">⏱ Урок 1: 04:25–04:32</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ Вес: <strong>30 г, максимум 35 г</strong></span>
+              <span class="param-pill">🔢 Количество: <strong>30 штук</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Шарики и стабилизация</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Скатайте комочки в максимально ровные шарики: чем ровнее заготовка, тем ровнее ляжет глазурь. Затем уберите в холодильник примерно на 30–40 минут, можно дольше; в морозилке достаточно 15–20 минут.
+                <span class="source-badge">⏱ Урок 1: 04:37–05:12</span>
+              </p>
+              <p>
+                После стабилизации шарики нужно ещё раз подкатать — они становятся мятыми, с неровностями. Катайте в руках, пока не получится форма идеального шара.
+                <span class="source-badge">⏱ Урок 1: 05:12–05:32</span>
+              </p>
+              <div class="tip-box">
+                <strong>Силиконовая форма:</strong> существуют формы под кейк-попсы — в них просто набивают массу, и шарик застывает уже ровным. Автор относится к таким девайсам с сомнением: руками результат не хуже.
+                <span class="source-badge">⏱ Урок 1: 05:34–05:45</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Холодильник: <strong>30–40 мин</strong></span>
+              <span class="param-pill">❄️ Морозилка: <strong>15–20 мин</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>шарик держит форму, поверхность ровная</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Отверстие зубочисткой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Зубочисткой проткните шарик практически до дна — точно так же, как потом пойдёт палочка. Это делают заранее, чтобы не нарушить целостность шарика: без канала более широкая палочка его разорвёт и он треснет.
+                <span class="source-badge">⏱ Урок 1: 05:47–06:04</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🪥 Инструмент: <strong>зубочистка</strong></span>
+              <span class="param-pill">📏 Глубина: <strong>почти до дна шарика</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Палочки на шоколадной «заплатке»</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Растопите тёмный шоколад — можно взять тот же, из которого будете делать глазурь. Обмакните кончик палочки в шоколад, вставьте её в отверстие примерно на глубину кейк-попса, а затем наденьте шарик.
+                <span class="source-badge">⏱ Урок 1: 06:07–06:33</span>
+              </p>
+              <div class="tip-box">
+                <strong>Шоколад снаружи — это нормально:</strong> он остаётся у основания шарика и работает как заплатка. Именно она соединяет кейк-попс с палочкой, застывает и никуда не денется.
+                <span class="source-badge">⏱ Урок 1: 06:34–06:45</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Шоколад: <strong>35 г тёмного, растопить</strong></span>
+              <span class="param-pill">🍢 Палочки: <strong>30 шт.</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>шоколад застыл, стал матовым</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Полная заморозка перед глазурью</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Перед покрытием глазурью кейк-попсы нужно полностью заморозить. Холодный шарик держит форму, и глазурь схватывается на нём ровным слоем.
+                <span class="source-badge">⏱ Урок 1: 07:25–07:31</span>
+              </p>
+              <div class="warning-box">
+                <strong>Глазурь:</strong> в этом уроке автор только анонсирует покрытие — глазурь она будет делать из белого шоколада, но сам процесс в видео и техкарту не вошёл. Пропорции глазури на странице не приводятся: берите проверенный рецепт белого шоколада с какао-маслом.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">❄️ Заморозка: <strong>до полного застывания</strong></span>
+              <span class="param-pill">🍫 Глазурь: <strong>по автору — белый шоколад</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Хранение и подача</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Срок годности кейк-попсов — 72 часа, в морозилке они хранятся 2 месяца. Подавайте как самостоятельное пирожное либо ставьте в торт и на кэнди-бар: благодаря маслу шарик стоит на палочке вертикально.
+              </p>
+              <div class="tip-box">
+                <strong>Где пригодятся:</strong> это желанный десерт для детей и удобный способ добавить объём и цвет декору торта — на палочке или без неё.
+                <span class="source-badge">⏱ Урок 1: 00:02–00:12</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📅 Холодильник: <strong>72 ч</strong></span>
+              <span class="param-pill">❄️ Морозилка: <strong>2 месяца</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Бисквит «Красный бархат»: замес</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В простоквашу добавьте краситель и соду, перемешайте и дайте постоять. Сливочное масло взбейте с сахаром, добавьте растительное масло и взбейте ещё раз. Введите по одному яйца и желтки.
+              </p>
+              <p>
+                Сухие ингредиенты — муку, какао, соду и соль — соедините и просейте, затем введите в масляно-яичную смесь. В конце добавьте простоквашу с красителем и содой.
+              </p>
+              <div class="tip-box">
+                <strong>Какао:</strong> автор берёт 17 г какао не самого лучшего качества — например, «Золотой ярлык». Именно такой порошок даёт нужный цвет и вкус «Красного бархата».
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥛 Простокваша: <strong>220 г</strong></span>
+              <span class="param-pill">🎨 Краситель: <strong>до желаемого цвета</strong></span>
+              <span class="param-pill">🥄 Порядок: <strong>масло с сахаром → масло растительное → яйца → сухие → простокваша</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 11 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Выпечка бисквита</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте бисквит 45–50 минут при 170 °C в режиме конвекции. Тесто желательно разделить на две формы — так бисквит пропечётся равномерно и не подгорит сверху.
+              </p>
+              <div class="warning-box">
+                <strong>Одна форма:</strong> в высокой форме бисквит часто остаётся сырым в центре, пока края уже схватились. Две формы дают ровный пропёк.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>170 °C</strong></span>
+              <span class="param-pill">🔄 Режим: <strong>конвекция</strong></span>
+              <span class="param-pill">⏱ Время: <strong>45–50 мин</strong></span>
+              <span class="param-pill">🍰 Формы: <strong>две, чтобы не было непропека</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Масло — это «цемент»:</strong> оно держит шарик на палочке вертикально. С другим кремом кейк-попс придётся класть палочкой вверх, как на иностранных фото.</li>
+                <li><strong>Пропорции не менять:</strong> 600 г крошки на 150 г масла и 150 г сгущёнки — иначе конструкция развалится.</li>
+                <li><strong>Крошка — из чего угодно:</strong> остатки бисквитов, их смесь, песочное печенье, основа для чизкейка.</li>
+                <li><strong>Мелкая крошка:</strong> от неё зависит однородность массы и ровная поверхность шарика.</li>
+                <li><strong>Ровные шарики:</strong> чем ровнее скатана заготовка, тем ровнее ляжет глазурь.</li>
+                <li><strong>Подкатка после холодильника:</strong> застывшую заготовку обязательно катают ещё раз — она выходит мятой.</li>
+                <li><strong>Зубочистка до палочки:</strong> сначала канал, потом палочка, иначе шарик трескается.</li>
+                <li><strong>Шоколадная заплатка:</strong> шоколад на палочке — не грязь, а крепление. Он застывает и держит шарик.</li>
+                <li><strong>30 г для торта:</strong> больше 30 г шарик не удержится на палочке вертикально.</li>
+                <li><strong>Утилизация остатков:</strong> у кондитера должны быть рецепты, которые превращают обрезки в отдельный десерт.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Крем вместо масла:</strong> шарик скатывается по палочке вниз и не стоит вертикально.</li>
+                <li><strong>Шарики крупнее 35 г:</strong> тяжёлая заготовка не держится на палочке.</li>
+                <li><strong>Палочку вставили без отверстия:</strong> шарик трескается, целостность нарушена.</li>
+                <li><strong>Не подкатали после стабилизации:</strong> неровности остаются под глазурью и видны.</li>
+                <li><strong>Покрывают глазурью тёплые шарики:</strong> глазурь стекает неровно; перед покрытием нужна полная заморозка.</li>
+                <li><strong>Крупная крошка:</strong> масса получается неоднородной, шарик катается с трещинами.</li>
+                <li><strong>Бисквит в одной высокой форме:</strong> центр остаётся сырым, пока края уже готовы.</li>
+                <li><strong>Передержали срок хранения:</strong> дольше 72 часов в холодильнике десерт уже не тот.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> урок Надежды Зубовой «Пирожное. Кейк-попсы» (Тортомафия, месяц 2) — расшифровка видео с таймкодами и технологическая карта с точными граммовками, включая рецепт бисквита «Красный бархат».</li>
+              <li><strong>Расхождения — коньяк:</strong> в карте 1–2 ст. л. на 600 г крошки, на видео автор говорит «чуть больше чайной ложки». На странице указано 2 ст. л. по карте, вариант с видео — в шаге 3.</li>
+              <li><strong>Расхождения — стабилизация:</strong> в карте 15 минут в морозилке или 45 минут в холодильнике, на видео 30–40 минут в холодильнике или 15–20 минут в морозилке. Приведены оба варианта.</li>
+              <li><strong>Расхождения — вес:</strong> по карте шарики по 30 г (из 600 г крошки выходит 30 пирожных), на видео диапазон 30–35 г с оговоркой, что для торта — не больше 30 г.</li>
+              <li><strong>Пробелы — глазурь:</strong> в уроке и техкарте покрытия нет: автор только говорит, что глазурь будет из белого шоколада, а видео заканчивается на заморозке заготовок. Пропорции глазури на странице не приводятся, потому что их нет в источниках.</li>
+              <li><strong>Пробелы — наполнители:</strong> орехи и какао упомянуты без граммовок — количество «по вкусу».</li>
+              <li><strong>Пробелы — выход крошки:</strong> масса бисквита до измельчения не указана: в карте фиксируется только 600 г готовой крошки.</li>
+              <li><strong>Пробелы — лимонный сок:</strong> в карте бисквита указан 1 ч. л., но в порядке замеса отдельно не упомянут.</li>
+              <li><strong>Фото:</strong> отдельного снимка в папке нет — на странице кадр из видео урока (07:05): заготовки кейк-попсов на палочках после застывания шоколада. Готовых кейк-попсов в глазури в уроке не показывают.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

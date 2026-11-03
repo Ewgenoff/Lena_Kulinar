@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Закусочный чизкейк с вялеными томатами и кинзой — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Закусочный чизкейк Надежды Зубовой: солёная песочная основа из восстановленного теста бризе с чёрным кунжутом, сырная масса с вялеными томатами и кинзой, выпечка 30 минут при 160 °C и 20–30 минут при 120 °C на водяной бане.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="chizkeyk-zakusochnyy">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться к каталогу рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Основные блюда</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Закусочный чизкейк с вялеными томатами и кинзой</h1>
+      <p class="recipe-lead">
+        Солёная версия чизкейка из вебинара Надежды Зубовой: основа — восстановленное солёное песочное тесто бризе с чёрным кунжутом, начинка — творожный сыр с яйцами, вялеными томатами и зеленью. По сути это террин из сыра, который запекают как обычный чизкейк — на водяной бане и с понижением температуры. Рецепт устроен как конструктор: вместо томатов и кинзы можно взять грибы, укроп или красную рыбу.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~40 мин (тесто и основа)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Стабилизация 1–8 ч, выпечка ~50 мин, ночь в холодильнике</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">2 дня (с ночью в холодильнике)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 чизкейк в форме 15 × 15 × 4 см</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/chizkeyk-zakusochnyy.jpg" alt="Закусочный чизкейк: сырная масса на солёной песочной основе в чёрной квадратной форме перед выпечкой" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 чизкейк)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">чизкейк</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База калькулятора — один закусочный чизкейк в форме 15 × 15 × 4 см (или в кольце Ø14–15 см высотой 4–5 см). Тесто бризе в рецепте дано полным замесом: на чизкейк уходит 210 г готовой крошки, остальное тесто можно выпечь и использовать для другой выпечки.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> чизкейк</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Список на тесто бризе, солёную основу и сырную массу. Напоминаем: замес бризе рассчитан с запасом — на чизкейк идёт только 210 г крошки.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧈 Тесто и основа</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="450" data-unit="г">450 г</span>
+                <span class="shopping-hint">На полный замес бризе; в чизкейк уйдёт лишь часть</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5 %</strong>:
+                <span class="shopping-qty" data-base-amount="310" data-unit="г">310 г</span>
+                <span class="shopping-hint">250 г холодного в тесто + 60 г мягкого в восстановление крошки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">В тесто, плюс немного в сырную массу по вкусу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кунжут чёрный</strong>:
+                <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+                <span class="shopping-hint">7–10 г в основу; светлый кунжут тоже подойдёт</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Вода ледяная</strong>:
+                <span class="shopping-qty" data-base-amount="125" data-unit="г">125 г</span>
+                <span class="shopping-hint">В тесто; вода должна быть именно ледяной</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧀 Сырная масса и начинка</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творожный сыр</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Типа Philadelphia: Hochland, Violette, Almette сливочный. Не плавленый</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца С1</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span>
+                <span class="shopping-hint">Именно С1: категория указана в рецепте</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 33 %</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">В сырную массу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Вяленые томаты</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Не измельчать: они пойдут в блендер целиком</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Зелень (кинза)</strong>:
+                <span class="shopping-qty" data-base-amount="40" data-unit="г">40 г</span>
+                <span class="shopping-hint">Можно укроп или петрушка; рубится и вводится лопаткой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль и перец чёрный молотый</strong> — по вкусу
+                <span class="shopping-hint">Массу пробуют и досаливают: сыры солят по-разному</span>
+              </div>
+            </li>
+            <li class="shopping-item" style="border-style: dashed;"><div class="shopping-item-content">
+                <strong>Паприка (опционально)</strong> — по вкусу
+                <span class="shopping-hint">Автор предлагает как один из вариантов вкуса</span>
+              </div>
+            </li>
+            <li class="shopping-item" style="border-style: dashed;"><div class="shopping-item-content">
+                <strong>Грибы или красная рыба (опционально)</strong> — по вкусу
+                <span class="shopping-hint">Грибы добавляют кусочками и не блендируют, иначе чизкейк станет серым</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — форма 15 × 15 × 4 см со съёмным дном (или кольцо Ø14–15 см высотой 4–5 см), пергамент, водяная баня
+                <span class="shopping-hint">Форма должна позволять снять дно: закуску удобно резать на порционные куски</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Тесто бризе</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="450" data-unit="г">450 г</span> — Мука пшеничная высшего сорта
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Масло сливочное 82,5 %
+              <span class="ingredient-note">Холодное, порезанное кубиком</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Вода ледяная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Соль
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Основа из крошки</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="210" data-unit="г">210 г</span> — Крошка бризе
+              <span class="ingredient-note">Можно заменить крошкой солёных или сырных крекеров</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Масло сливочное 82,5 %
+              <span class="ingredient-note">Комнатной температуры, для восстановления крошки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Кунжут чёрный
+              <span class="ingredient-note">По рецепту 7–10 г</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Сырная основа</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Творожный сыр
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span> — Яйца С1
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сливки
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Вяленые томаты
+              <span class="ingredient-note">Целиком, не измельчая</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Зелень (кинза)
+              <span class="ingredient-note">Рубленая, вводится лопаткой в самом конце</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Соль и перец чёрный молотый
+              <span class="ingredient-note">Пробовать массу до выпечки</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Бризе: сухие ингредиенты и холодное масло</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сложите в чашу комбайна 450 г муки и 15 г соли, добавьте 250 г холодного масла, порезанного кубиком, и пробейте до состояния крошки. Затем введите 125 г ледяной воды и объедините за несколько секунд: однородного теста ждать не нужно — останутся крупные крошки и комки.
+                <em style="font-size: 13px; color: var(--text-muted);">Источник: DOCX «Чизкейк_Закусочный»</em>
+              </p>
+              <div class="warning-box">
+                <strong>Тесто не вымешивают:</strong> как только масса собралась в крошку, работу прекращают. Долгий замес греет масло, и при выпечке оно начнёт вытекать.
+                <em style="font-size: 13px; color: var(--text-muted);">Источник: DOCX «Чизкейк_Закусочный»</em>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>Комбайн или нож и доска</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Крошка, а не однородное тесто</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Раскатка 3–4 мм и стабилизация</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Соберите крошки руками в комок, раскатайте между двумя листами пергамента толщиной 3–4 мм и уберите в холодильник или морозилку на стабилизацию. Пласт удобно хранить и выпекать прямо на бумаге.
+                <em style="font-size: 13px; color: var(--text-muted);">Источник: DOCX «Чизкейк_Закусочный»</em>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Толщина: <strong>3–4 мм</strong></span>
+              <span class="param-pill">🧊 Стабилизация: <strong>Холодильник или морозилка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Выпечка пласта: 20 минут при 170 °C с конвекцией</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте стабилизированный пласт в заранее разогретой духовке 20 минут при 170 °C с конвекцией. Дайте полностью остыть — крошку делают только из холодного печенья.
+                <em style="font-size: 13px; color: var(--text-muted);">Источник: DOCX «Чизкейк_Закусочный»</em>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> отдельного видео по бризе нет — в документе указано, что процесс такой же, как у песочного теста сабле, и его можно посмотреть в отдельном уроке. Поэтому таймкоды здесь не ставятся.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Режим: <strong>170 °C, конвекция</strong></span>
+              <span class="param-pill">⏱ Выпечка: <strong>20 минут</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Восстановление крошки с маслом и кунжутом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Измельчите выпеченный пласт в крошку и отвесьте 210 г. Перемните крошку с 60 г мягкого сливочного масла комнатной температуры, добавьте 7–10 г чёрного кунжута и перемешайте. Вместо бризе подойдёт крошка солёных или сырных крекеров.
+                <span class="source-badge">⏱ Урок 1: 00:00:01–00:00:09</span>
+              </p>
+              <div class="warning-box">
+                <strong>Масло — размягчённое:</strong> именно оно «восстанавливает» тесто, поэтому крошка должна стать липкой и собраться в комок. Если масло холодное, комок не получится.
+                <span class="source-badge">⏱ Урок 1: 00:00:22–00:00:30</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ Крошка: <strong>210 г</strong></span>
+              <span class="param-pill">🥣 Масло: <strong>60 г, комнатной температуры</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Форма и борта: сначала стенки, потом дно</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Возьмите форму 15 × 15 × 4 см со съёмным дном — альтернатива — кольцо диаметром 14–15 см и высотой 4–5 см. Выложите крошку и сначала сформируйте борта рукой: стакан здесь не помощник, форма маленькая. Затем займитесь дном.
+                <span class="source-badge">⏱ Урок 1: 00:00:09–00:00:46</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> чизкейк получается очень сытным, поэтому форма нужна небольшая — так его удобнее есть и резать на порционные куски.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Форма: <strong>15 × 15 × 4 см или кольцо Ø14–15 см</strong></span>
+              <span class="param-pill">🧊 Стабилизация: <strong>Холодильник или морозилка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Сырная масса: блендер, а не миксер</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Соедините 250 г творожного сыра, 2 яйца С1, 50 г вяленых томатов (их не режут — идут целиком) и 50 г сливок. Пробейте погружным блендером до однородности: масса получится приятного кораллового оттенка.
+                <span class="source-badge">⏱ Урок 2: 00:00:01–00:01:40</span>
+              </p>
+              <div class="warning-box">
+                <strong>Зелень не блендируют:</strong> если пробить её вместе с массой, коралловый цвет станет коричневым. Кинзу и петрушку вводят рублеными лопаткой. Исключение — вариант с красной рыбой: там укроп можно пробить блендером, чтобы масса стала зелёной.
+                <span class="source-badge">⏱ Урок 2: 00:01:24–00:02:33</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>Погружной блендер, лопатка</strong></span>
+              <span class="param-pill">🎨 Цвет: <strong>Коралловый</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Соль, перец и зелень лопаткой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Попробуйте массу и досолите — сыры солят по-разному. Добавьте молотый чёрный перец, при желании паприку, затем рубленую зелень и перемешайте лопаткой, чтобы в массе остались листочки.
+                <span class="source-badge">⏱ Урок 2: 00:02:02–00:02:33</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> рецепт — конструктор. Вместо томатов и кинзы можно взять грибы (кусочками, не блендируя), укроп или красную рыбу: с рыбой масса красиво смотрится на разрезе.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧂 Соль: <strong>По вкусу, после пробы</strong></span>
+              <span class="param-pill">🌿 Зелень: <strong>Лопаткой, листочками</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Выкладываем массу на основу</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите сырную массу на подготовленную песочную основу и разровняйте — удобно лопаткой или палеткой. Борта должны остаться открытыми, как у обычного чизкейка.
+                <span class="source-badge">⏱ Урок 2: 00:02:48–00:03:15</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак: <strong>Ровная поверхность без пустот</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Выпечка на водяной бане: 160 °C, затем 120 °C</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте 30 минут при 160 °C, затем снизьте температуру до 120 °C и допекайте ещё 20–30 минут. Режим — как у сладких чизкейков, на водяной бане, без конвекции.
+                <span class="source-badge">DOCX: «Чизкейк_Закусочный»; Урок 2: 00:03:01–00:03:07</span>
+              </p>
+              <div class="warning-box">
+                <strong>Водяная баня обязательна:</strong> она сглаживает перепады температуры, и сырная масса не схватывается коркой раньше середины. Признак готовности — упругая, но ещё подрагивающая середина.
+                <span class="source-badge">⏱ Урок 2: 00:03:01–00:03:15</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Этап 1: <strong>160 °C — 30 минут</strong></span>
+              <span class="param-pill">🌡 Этап 2: <strong>120 °C — 20–30 минут</strong></span>
+              <span class="param-pill">💧 Баня: <strong>Да</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Остывание, ночь в холодильнике и хранение</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Остудите чизкейк до комнатной температуры и уберите в холодильник на ночь. Так масса стабилизируется, и закуску можно будет резать ровными кусками. Срок хранения — 5 суток в холодильнике.
+                <em style="font-size: 13px; color: var(--text-muted);">Источник: DOCX «Чизкейк_Закусочный»</em>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> подавайте охлаждённым, нарезав на порционные куски — это закуска, а не десерт, и одного чизкейка хватает на несколько человек.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Холодильник: <strong>Ночь</strong></span>
+              <span class="param-pill">📦 Срок годности: <strong>5 суток</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Это не десерт:</strong> чизкейком блюдо называют только потому, что в нём много сыра; по сути это запечённый террин.</li>
+                <li><strong>Конструктор вкуса:</strong> томаты, кинза, перец Паприка, грибы, укроп, красная рыба — любой набор.</li>
+                <li><strong>Грибы — кусочками:</strong> если пробить их блендером, чизкейк получится серого цвета.</li>
+                <li><strong>Рыба меняет цвет:</strong> с красной рыбой и укропом массу можно пробить блендером, и она станет зелёной.</li>
+                <li><strong>Небольшая форма:</strong> закуска сытная, поэтому 15 × 15 см — оптимально.</li>
+                <li><strong>Съёмное дно:</strong> форма со снимающимся дном или разъёмное кольцо сильно упрощают нарезку.</li>
+                <li><strong>Срок хранения:</strong> 5 суток в холодильнике — с этим рецептом удобно готовить заранее.</li>
+                <li><strong>Соль пробуют:</strong> творожные сыры отличаются по солёности, массу обязательно дегустируют до выпечки.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Долгий замес бризе:</strong> масло греется, тесто теряет слоистость, при выпечке масло отсекается.</li>
+                <li><strong>Тёплая вода в тесто:</strong> по рецепту вода ледяная, иначе крошка выходит липкой.</li>
+                <li><strong>Холодное масло в восстановлении:</strong> крошка не собирается в комок.</li>
+                <li><strong>Блендер вместе с зеленью:</strong> цвет уходит в коричневый.</li>
+                <li><strong>Непробитая масса:</strong> томаты и сыр не объединяются, комки остаются в начинке.</li>
+                <li><strong>Выпечка без водяной бани:</strong> середина отстаёт от краёв, появляются трещины.</li>
+                <li><strong>Нарезка сразу из духовки:</strong> горячая масса разваливается — нужны остывание и ночь в холодильнике.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Бризе:</strong> крошка солёных или сырных крекеров — готовая и доступная замена.</li>
+                <li><strong>Творожный сыр:</strong> любой сыр типа Philadelphia без растительных жиров.</li>
+                <li><strong>Вяленые томаты:</strong> грибы, оливки, красная рыба, укроп.</li>
+                <li><strong>Зелень:</strong> кинза, укроп, петрушка — по вкусу.</li>
+                <li><strong>Специи:</strong> чёрный перец, паприка или собственная смесь.</li>
+                <li><strong>Форма:</strong> квадратная 15 × 15 × 4 см, разъёмное кольцо Ø14–15 см или форма со съёмным дном.</li>
+                <li><strong>Подача:</strong> охлаждённой, порционными кусками.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 (восстановление основы и форма — 00:00:01–00:00:46); Урок_02.mp4 (сырная масса и выкладывание — 00:00:01–00:03:15); «Чизкейк_Закусочный.docx» — граммовки, тесто бризе и режимы выпечки; «Расшифровка Чизкейк_Закусочный.csv».</li>
+              <li><strong>Тесто бризе:</strong> в видео не снималось — в DOCX прямо сказано, что отдельного урока нет, а процесс такой же, как у песочного теста сабле. Поэтому у этапов с бризе стоят ссылки на DOCX, а не таймкоды.</li>
+              <li><strong>Количество теста:</strong> замес бризе в DOCX дан полным (450 г муки, 250 г масла) без указания выхода, а на чизкейк идёт 210 г готовой крошки. Часть теста остаётся — используйте её для другой выпечки или сделайте двойную порцию чизкейка.</li>
+              <li><strong>Кунжут:</strong> в DOCX указан диапазон 7–10 г; на странице для ровных чисел пересчёта взято 10 г.</li>
+              <li><strong>Режим выпечки:</strong> в DOCX — 30 минут при 160 °C и 20–30 минут при 120 °C. В видео названа только водяная баня и «такой же режим, как у сладких чизкейков».</li>
+              <li><strong>Пробелы:</strong> вес готового чизкейка и число порций не указаны; время стабилизации теста в DOCX не названо («в холодильник или в морозилку»).</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет, и в записи нет кадра выпеченного закусочного чизкейка — урок заканчивается отправкой формы в духовку. На странице стоит кадр из Урок_02.mp4 (00:03:30) с сырной массой на основе, обрезанный по краям.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

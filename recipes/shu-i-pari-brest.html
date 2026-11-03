@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пирожные шу и пари-брест — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Шу и пари-брест Надежды Зубовой: заварное тесто на молоке с водой, кракелин, крем на молочном шоколаде с домашним пралине и желатином. Режимы выпечки для электрической и газовой духовки, начинка и декор.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body data-recipe-id="shu-i-pari-brest">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Пирожные шу и пари-брест</h1>
+      <p class="recipe-lead">
+        Заварное тесто на молоке с водой и ледяным маслом, тонкий кракелин сверху и крем на молочном шоколаде с домашним пралине, глюкозой и желатином. Круглые шу и кольца пари-брест пекут по одному режиму: сначала в раскалённой духовке с выключенным нагревом, потом при 150 °C и в конце с конвекцией. Результат на 80% зависит от духовки, а не от отсадки.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">1 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">~2 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~4 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 замес теста + ~900 г крема</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/shu-i-pari-brest.jpg" alt="Начинка пари-бреста кремом на молочном шоколаде: кольцо из заварного теста в кракелине с ореховой крошкой" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 замес)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">× замес</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — одна полная порция по рецептуре автора: тесто на 80 г муки, кракелин и крем примерно на 900 г (на видео автор делит его пополам — по 448 г). Точное число пирожных зависит от размера отсадки, поэтому калькулятор считает замесы, а не штуки.
+          </p>
+        </div>
+
+        <!-- Переключатель источников и таймкодов видео -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Количество замесов: <span class="shopping-portion-val">1</span></span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на один замес: тесто, кракелин и крем пари-брест. Мука нужна именно «Макфа» — под неё отработан рецепт; на другой муке количество яйца подбирают по консистенции.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: молочное, яйца -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, масло и яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко 1,5–3,2%</strong>:
+                <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span>
+                <span class="shopping-hint">Идёт в тесто вместе с водой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 30% и выше</strong>:
+                <span class="shopping-qty" data-base-amount="550" data-unit="г">550 г</span>
+                <span class="shopping-hint">150 г на нагрев, 400 г холодных в крем; берите те, что точно взбиваются</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="160" data-unit="г">160 г</span>
+                <span class="shopping-hint">80 г в тесто (холодное, кубиком) и 80 г в кракелин (холодное)</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span>
+                <span class="shopping-hint">По весу 160 г, комнатной температуры; можно С0 — тогда смотрите по весу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="г">5 г</span>
+                <span class="shopping-hint">Замачивается в 25 г воды; сила 220, листовой пересчитывают с 160</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: шоколад, сахар, орехи -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Шоколад, сиропы и орехи</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шоколад молочный</strong>:
+                <span class="shopping-qty" data-base-amount="230" data-unit="г">230 г</span>
+                <span class="shopping-hint">Профессиональный с высоким содержанием какао-масла стабилизирует крем за 2 часа</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Инвертный сахар (тримолин)</strong>:
+                <span class="shopping-qty" data-base-amount="17" data-unit="г">17 г</span>
+                <span class="shopping-hint">Можно заменить нейтральным мёдом или полностью глюкозным сиропом</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сироп глюкозы</strong>:
+                <span class="shopping-qty" data-base-amount="17" data-unit="г">17 г</span>
+                <span class="shopping-hint">Держит свободную воду и сохраняет свежий вид крема</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Фундук обжаренный</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">На домашнее пралине; часть орехов оставьте на декор</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пралине или ореховая паста</strong> (альтернатива)
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Купить вместо орехов с сахаром: 50 г готовой пасты на крем</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная «Макфа»</strong>:
+                <span class="shopping-qty" data-base-amount="180" data-unit="г">180 г</span>
+                <span class="shopping-hint">80 г в тесто, 100 г в кракелин; для заварного теста нужна сильная мука</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="90" data-unit="г">90 г</span>
+                <span class="shopping-hint">10 г в тесто, 80 г в пралине</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар тростниковый коричневый</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">В кракелин; на белом сахаре с красителем получится цветной</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="г">3 г</span>
+                <span class="shopping-hint">В заварное тесто</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло растительное</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="г">5 г</span>
+                <span class="shopping-hint">В пралине, если оно получилось сухим</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Декор</strong> — малина, сахарная пудра, какао-микро
+                <span class="shopping-hint">По вкусу: ягоды разрезают пополам, шапочки припыляют пудрой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — пергамент, пищевая плёнка, кондитерские мешки, насадка-звезда 868 (или круглая 16 мм), силиконовый коврик, погружной блендер
+                <span class="shopping-hint">Шаблон с кругами 8 см и 3,5 см рисуют на пергаменте заранее</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Заварное тесто — один замес</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Молоко
+              <span class="ingredient-note">1,5–3,2% жирности</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Вода
+              <span class="ingredient-note">Вместе с молоком доводится до кипения</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Масло сливочное 82,5%
+              <span class="ingredient-note">Холодное, нарезать кубиком: так оно не разойдётся раньше времени</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Сахар
+              <span class="ingredient-note">В заварку</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Соль
+              <span class="ingredient-note">В заварку</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Мука «Макфа»
+              <span class="ingredient-note">Просейте заранее; вводится всей порцией сразу</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Яйца
+              <span class="ingredient-note">Комнатной температуры, примерно 3 шт.; на другой муке уйдёт не всё</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Кракелин</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Масло сливочное
+              <span class="ingredient-note">Холодное</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар тростниковый
+              <span class="ingredient-note">Можно обычный белый плюс краситель</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Мука
+              <span class="ingredient-note">Раскатывать тонко — на толщину крупинки сахара</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем пари-брест</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сливки для нагрева
+              <span class="ingredient-note">30% и выше</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="17" data-unit="г">17 г</span> — Инвертный сахар
+              <span class="ingredient-note">Тримолин; можно заменить мёдом без вкуса</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="17" data-unit="г">17 г</span> — Сироп глюкозы
+              <span class="ingredient-note">Без инвертного сахара — 34 г глюкозы</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="230" data-unit="г">230 г</span> — Молочный шоколад
+              <span class="ingredient-note">Какао-масло в составе — главный стабилизатор крема</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Пралине или фундучная паста
+              <span class="ingredient-note">Или 50 г домашнего пралине из 100 г орехов</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="г">5 г</span> — Желатин
+              <span class="ingredient-note">Замочить в 25 г холодной воды 1:5</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="400" data-unit="г">400 г</span> — Сливки холодные
+              <span class="ingredient-note">Вводятся последними, в горячую массу</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Домашнее пралине (если нет пасты)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Орехи обжаренные
+              <span class="ingredient-note">Горячие, когда всыпаются в карамель</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Сахар
+              <span class="ingredient-note">Карамель светлая, без горького оттенка</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="г">5 г</span> — Масло растительное
+              <span class="ingredient-note">Если пралине сухое — чайная ложка при измельчении</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Пралине: орехи в светлой карамели</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сковороду раскалите, и только потом всыпьте сахар — так карамель схватится ровно. Орехи заранее обжарьте, очистите от шелухи и прогрейте горячими, чтобы они вошли в расплавленный сахар.
+                <span class="source-badge">⏱ Урок 1: 07:48–11:34</span>
+              </p>
+              <p>
+                Сахар плавится сухим способом: растирайте его лопаткой, прижимая к горячей поверхности, — так он разойдётся быстрее. Доводите только до светлого оттенка: коричневая карамель даст горький привкус. Всыпьте орехи, перемешайте, выключите нагрев и выложите массу на коврик остывать.
+                <span class="source-badge">⏱ Урок 1: 11:40–14:13</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не в блендер горячим:</strong> орехи начнут отдавать масло, а сама мельница нагреется и не справится. Ждите полного остывания.
+                <span class="source-badge">⏱ Урок 1: 14:14–14:38</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥜 Орехи: <strong>100 г обжаренных, горячих</strong></span>
+              <span class="param-pill">🍬 Сахар: <strong>80 г</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>карамель светлая</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Пралине: измельчить и добавить масло</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Остывшие орехи в карамели измельчите в мельнице или кофемолке. Часть орехов отложите для декора — они пойдут на пирожные целиком. Если пралине выходит сухим, влейте чайную ложку рафинированного растительного масла (у автора — виноградной косточки) и пробейте ещё.
+                <span class="source-badge">⏱ Урок 1: 29:51–35:50</span>
+              </p>
+              <div class="tip-box">
+                <strong>Домашнее — крупнее промышленного:</strong> у готовой пасты текстура мелкодисперсная, у домашней остаются крупинки. Автор считает, что вкус от этого только выигрывает.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚙️ Мельница: <strong>блендер или кофемолка</strong></span>
+              <span class="param-pill">🫗 Масло: <strong>~1 ч. л., если сухо</strong></span>
+              <span class="param-pill">🥣 В крем: <strong>50 г пасты</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Крем: сливки с сахарами и шоколад</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В сотейник налейте первую порцию сливок — 150 г, добавьте инвертный сахар и сироп глюкозы. Нагрейте до кипения, но не кипятите: задача — растворить сахара. Параллельно подтоп'ите шоколад в микроволновке и залейте его горячими сливками.
+                <span class="source-badge">⏱ Урок 1: 24:32–39:03</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем два сахара:</strong> инвертный сахар и глюкоза держат свободную воду из сливок. Без них крем тоже получится, но стабилизируется за 12–24 часа вместо двух.
+                <span class="source-badge">⏱ Урок 1: 18:11–23:12</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥛 Сливки: <strong>150 г, до кипения</strong></span>
+              <span class="param-pill">🍬 Сахара: <strong>17 г + 17 г</strong></span>
+              <span class="param-pill">🍫 Шоколад: <strong>230 г, подтопить</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Крем: пралине, желатин, холодные сливки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Мешайте ганаш от центра — постепенно в него войдут все сливки. Добавьте 50 г пралине и перемешайте до объединения. Затем введите набухший желатин лепёшечкой и мешайте до полного растворения, без венчика: лишний воздух сейчас не нужен.
+                <span class="source-badge">⏱ Урок 1: 39:49–43:15</span>
+              </p>
+              <p>
+                Влейте 400 г холодных сливок по весу, перемешайте лопаткой и пройдите массу погружным блендером — не взбивая, а гомогенизируя, чтобы получилась ровная эмульсия.
+                <span class="source-badge">⏱ Урок 1: 43:15–47:03</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥜 Пралине: <strong>50 г</strong></span>
+              <span class="param-pill">🧊 Желатин: <strong>5 г + 25 г воды</strong></span>
+              <span class="param-pill">🥛 Сливки: <strong>400 г холодных</strong></span>
+              <span class="param-pill">🥣 Блендер: <strong>погружной, без воздуха</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Стабилизация крема в морозилке</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разделите крем пополам — у автора вышло по 448 г: одну часть в высокий узкий стакан, вторую в контейнер. Накройте плёнкой в контакт, чтобы конденсат не капал на поверхность, и уберите в морозилку на 2 часа. В холодильнике стабилизация займёт около 5 часов.
+                <span class="source-badge">⏱ Урок 1: 47:19–51:29</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не стабилизируйте одним объёмом:</strong> большая масса не успеет схватиться как нужно. И не передержите в морозилке — замёрзший крем придётся оттаивать.
+                <span class="source-badge">⏱ Урок 1: 48:21–52:15</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥤 Тара: <strong>узкий высокий стакан</strong></span>
+              <span class="param-pill">❄️ Морозилка: <strong>2 ч</strong></span>
+              <span class="param-pill">🧊 Холодильник: <strong>~5 ч</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Взбивание крема</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Проверьте готовность на ощупь: крем должен быть плотным, как холодец. Снимите плёнку, опустите венчики в холодный стакан и сразу взбивайте на большой скорости — примерно 5–7 минут, поглядывая на массу.
+                <span class="source-badge">⏱ Урок 3: 12:04–13:11</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не перебейте:</strong> как только крем стал плотным и держит форму, остановитесь. Перебитый крем с молочным шоколадом «растворяется» и теряет структуру. Если крем вышел жиже — переложите в мешок и охладите: желатин догонит плотность.
+                <span class="source-badge">⏱ Урок 3: 16:22–20:10</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>5–7 мин</strong></span>
+              <span class="param-pill">⚡ Скорость: <strong>сразу большая</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>плотный, как холодец</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Заварное тесто: заваривание муки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В сотейник налейте молоко и воду, добавьте холодное масло, нарезанное кубиком, соль и сахар. Доведите до кипения: масло должно разойтись, а молоко — закипеть, но не выкипать. Затем выключите огонь и всыпьте всю муку сразу, энергично перемешивая.
+                <span class="source-badge">⏱ Урок 1: 16:11–23:36</span>
+              </p>
+              <p>
+                Верните на сильный огонь и обжаривайте тесто 2–3 минуты, пока оно не соберётся в комок и на дне не образуется корочка. Показатель — приятный запах заваренного теста.
+                <span class="source-badge">⏱ Урок 1: 24:07–25:14</span>
+              </p>
+              <div class="tip-box">
+                <strong>Масло именно кубиком и холодным:</strong> иначе оно разойдётся раньше, чем закипит молоко, и тесто получится другим.
+                <span class="source-badge">⏱ Урок 1: 18:30–18:53</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥛 Жидкость: <strong>80 г молока + 80 г воды</strong></span>
+              <span class="param-pill">🧈 Масло: <strong>80 г, холодное, кубиком</strong></span>
+              <span class="param-pill">⏱ Обжарка: <strong>2–3 мин</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Тесто остыло — вводим яйца</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Дайте тесту остыть до температуры ниже 55 °C — годится и полностью комнатная. Пока остывает, разбейте яйца и пропустите их через сито: так они станут однородными и не пойдут комочками.
+                <span class="source-badge">⏱ Урок 1: 26:03–30:15</span>
+              </p>
+              <p>
+                Яйца вводите постепенно и понемногу, вмешивая каждую порцию полностью. Готовое тесто гладкое, блестящее и держится на лопатке, стекая «клювом». На муке «Макфа» уйдёт вся порция яйца.
+                <span class="source-badge">⏱ Урок 1: 44:29–55:23</span>
+              </p>
+              <div class="warning-box">
+                <strong>Горячее тесто и холодные яйца:</strong> в первом случае получится омлет, во втором масло встанет и застынет. И не выливайте всё яйцо сразу — тесто поплывёт кусками.
+                <span class="source-badge">⏱ Урок 1: 26:19–26:30</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Тесто: <strong>ниже 55 °C</strong></span>
+              <span class="param-pill">🥚 Яйца: <strong>160 г, тёплые</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>блестит, стекает «клювом»</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Мешок и отдых в холодильнике</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите тесто в мешок с насадкой-звездой 868. Если такой нет, подойдёт круглая диаметром около 16 мм или просто отрезанный на 1,5 см мешок. Кладите тесто в высокий стакан, чтобы внутрь попало меньше воздуха, и уберите в холодильник минут на 20.
+                <span class="source-badge">⏱ Урок 1: 58:43–02:05:26</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем холод:</strong> масло в тесте схватится, тесто станет гуще и легче в работе. Спокойно может лежать до 24 часов.
+                <span class="source-badge">⏱ Урок 1: 02:05:18–02:05:49</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⭐ Насадка: <strong>звезда 868 или 16 мм</strong></span>
+              <span class="param-pill">🧊 Холодильник: <strong>~20 мин</strong></span>
+              <span class="param-pill">⏳ Максимум: <strong>24 ч</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Кракелин</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Смешайте холодное масло с тростниковым сахаром и мукой в песочное тесто. Раскатайте очень тонко — в Италии говорят «на толщину крупинки сахара». Уберите в морозилку примерно на 20 минут, затем вырежьте круги: большие 8 см для колец, маленькие 3,5 см для шу.
+                <span class="source-badge">⏱ Урок 1: 02:06:15–02:29:45</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем кракелин:</strong> при высокой температуре песочное тесто растекается и покрывает заварное целиком, поэтому изделие не трескается. Это второй приём для стабильного результата после круглой формы.
+                <span class="source-badge">⏱ Урок 1: 11:26–11:59</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Масло: <strong>80 г холодного</strong></span>
+              <span class="param-pill">🍬 Сахар: <strong>100 г тростникового</strong></span>
+              <span class="param-pill">📐 Круги: <strong>8 см и 3,5 см</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 11 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Отсадка: кольца и шу</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                На пергаменте заранее нарисуйте круги 8 см и 3,5 см и переверните лист рисунком вниз. Кольца пари-брест отсаживайте по кругу 8 см, держа насадку почти на ковре и с одинаковым давлением. Шу отсаживайте строго вертикально на диаметр около 3,5 см — ориентир автор даёт по пятирублёвой монете.
+                <span class="source-badge">⏱ Урок 2: 11:02–17:29</span>
+              </p>
+              <p>
+                Давление сначала усиливайте, затем ослабляйте и только после этого убирайте мешок. Сажайте заготовки на расстоянии друг от друга — при выпечке они увеличиваются.
+                <span class="source-badge">⏱ Урок 2: 15:43–17:15</span>
+              </p>
+              <div class="warning-box">
+                <strong>Зубчатая насадка не для красоты:</strong> с гладким срезом заготовка стремится треснуть сразу. Звёздочка распределяет натяжение.
+                <span class="source-badge">⏱ Урок 2: 13:21–13:28</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⭕ Кольца: <strong>8 см</strong></span>
+              <span class="param-pill">⚪ Шу: <strong>3,5 см</strong></span>
+              <span class="param-pill">📏 Расстояние: <strong>с запасом</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 12 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Выпечка: три этапа</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Электрическая духовка: разогрейте до 250–260 °C (не менее 20–30 минут), поставьте противень, выключите нагрев и ждите 20–22 минуты. Затем включите 150 °C в режиме «верх-низ» без конвекции на 30 минут. Последние 10 минут — 160 °C с конвекцией.
+                <span class="source-badge">⏱ Урок 2: 02:24–03:28</span>
+              </p>
+              <p>
+                Газовая духовка: выпекайте весь процесс при 150–160 °C на самом верху, 45–50 минут. Разгонять её до 250 °C и выключать нельзя — чтобы включить нагрев снова, придётся открывать дверцу, и заготовки осядут.
+                <span class="source-badge">⏱ Урок 2: 03:39–04:18</span>
+              </p>
+              <div class="warning-box">
+                <strong>Первый этап — с выключенным нагревом:</strong> никаких потоков воздуха, только остаточное тепло раскалённой духовки. Именно так изделия поднимаются и не рвутся.
+                <span class="source-badge">⏱ Урок 3: 07:08–07:17</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Старт: <strong>250–260 °C, нагрев выключен</strong></span>
+              <span class="param-pill">⏱ Этап 2: <strong>150 °C, верх-низ, 30 мин</strong></span>
+              <span class="param-pill">🔄 Этап 3: <strong>160 °C, конвекция, 10 мин</strong></span>
+              <span class="param-pill">🔥 Газовая: <strong>150–160 °C, 45–50 мин</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 13 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Как открыть остывшие пирожные</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Полностью остывшие шу открывают сверху: снимают «крышечку», не разрезая пополам. Пари-брест разрезают пополам по горизонтали — кольцо высокое, и начинку кладут между половинами. Внутри не обязательно выбирать мякиш: крем продавит его сам.
+                <span class="source-badge">⏱ Урок 4: 02:28–04:52</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не остужайте в морозилке:</strong> автор признаётся, что делает так от безысходности — для быстрого остывания это неправильно.
+                <span class="source-badge">⏱ Урок 4: 00:29–01:02</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚪ Шу: <strong>снять крышечку</strong></span>
+              <span class="param-pill">⭕ Пари-брест: <strong>разрезать пополам</strong></span>
+              <span class="param-pill">🥄 Мякиш: <strong>вынимать не обязательно</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 14 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Начинка и декор</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Крем из холодильника достаньте в мешке — он станет ещё плотнее. Кольцо пари-брест начинайте заполнять снизу, укладывая кольца крема по кругу так, чтобы он не свисал с боков. Верхние шапочки припудрите сахарной пудрой — не густо, чтобы читалась текстура крема.
+                <span class="source-badge">⏱ Урок 4: 06:32–07:53</span>
+              </p>
+              <p>
+                Шу наполняйте другой насадкой и делайте шапочку сверху, давая крему раскрыться. Украсьте карамелизованным фундуком, половинками малины и карамельным сахаром или какао-микро.
+                <span class="source-badge">⏱ Урок 4: 11:03–15:13</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧁 Крем: <strong>из мешка, холодный</strong></span>
+              <span class="param-pill">🍓 Ягоды: <strong>малина половинками</strong></span>
+              <span class="param-pill">🥜 Декор: <strong>фундук, карамельный сахар</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 15 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">15</span>
+                <h3 class="step-title">Хранение</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Тесто хранится 24 часа в холодильнике. Крем — 72 часа в холодильнике или месяц в морозилке, причём замораживают его до взбивания, а размораживают в холодильнике и только потом взбивают. Отпечённые заготовки без крема отлично уходят в морозилку на месяц: кремом их начиняют уже после разморозки.
+                <span class="source-badge">⏱ Урок 3: 27:33–29:19</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍥 Тесто: <strong>24 ч в холодильнике</strong></span>
+              <span class="param-pill">🥣 Крем: <strong>72 ч / месяц в морозилке</strong></span>
+              <span class="param-pill">🥐 Заготовки: <strong>месяц в морозилке</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Круглые формы:</strong> чем ближе изделие к кругу, тем меньше внутреннего напряжения и тем меньше ошибок.</li>
+                <li><strong>Кракелин — страховка от трещин:</strong> песочный слой растекается и закрывает заварное тесто целиком.</li>
+                <li><strong>80% успеха — духовка:</strong> режим выпечки и понимание своей печи важнее отсадки.</li>
+                <li><strong>Первый этап без нагрева:</strong> раскалённая духовка выключена, потоков воздуха нет.</li>
+                <li><strong>Масло в тесто холодным кубиком:</strong> оно не должно разойтись раньше молока.</li>
+                <li><strong>Яйца через сито:</strong> однородное яйцо — однородное тесто.</li>
+                <li><strong>Не выше 55 °C:</strong> при более горячем тесте яйца дадут омлет.</li>
+                <li><strong>Тесто блестит и стекает «клювом»:</strong> верный признак правильной консистенции.</li>
+                <li><strong>Отдых теста в холодильнике:</strong> масло схватывается, работать легче; можно держать до суток.</li>
+                <li><strong>Четыре стабилизатора крема:</strong> какао-масло, инвертный сахар, глюкоза и желатин.</li>
+                <li><strong>Крем взбивают в узком стакане:</strong> в широкой посуде те же сливки взбиваются «вечность».</li>
+                <li><strong>Крем можно морозить:</strong> желатин и сахар позволяют хранить его месяц.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Яйца в горячее тесто:</strong> получается омлет, а не заварное тесто.</li>
+                <li><strong>Холодные яйца:</strong> масло в тесте встаёт и застывает комками.</li>
+                <li><strong>Всё яйцо сразу:</strong> тесто плавает кусками в яйце.</li>
+                <li><strong>Пропущен холодный кубик масла:</strong> масло расходится раньше молока, тесто выходит другим.</li>
+                <li><strong>Недогретая духовка:</strong> изделия не поднимаются; проверяйте температуру градусником.</li>
+                <li><strong>Включили нагрев на первом этапе:</strong> поток воздуха рвёт и пригибает заготовки.</li>
+                <li><strong>Открыли духовку в процессе:</strong> шу и кольца оседают.</li>
+                <li><strong>Отсадили гладким срезом:</strong> заготовки трескаются сразу.</li>
+                <li><strong>Мало расстояния между заготовками:</strong> при выпечке они слипаются.</li>
+                <li><strong>Перебили крем:</strong> масса теряет структуру; особенно чувствителен молочный и белый шоколад.</li>
+                <li><strong>Стабилизировали крем одним объёмом:</strong> большой массе не хватает времени схватиться.</li>
+                <li><strong>Остужали выпечку в морозилке:</strong> так делать нельзя, автор делает это только от безысходности.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> вебинар Надежды Зубовой «Шу и пари-брест» (Тортомафия, месяц 2) — четыре части: урок 1 — пралине, крем, заварное тесто и кракелин, урок 2 — отсадка и режимы выпечки, урок 3 — взбивание крема и разбор ошибок, урок 4 — начинка и декор; плюс DOCX с граммовками, инвентарём и двумя рецептами теста.</li>
+              <li><strong>Расхождения — рецепт теста:</strong> в DOCX два блока. Первый («Для теста») даёт 80 г молока, 160 г масла, 180 г муки и 160 г яйца, второй («Рецепт заварного теста») — 80 г молока с 80 г воды, 80 г масла, 80 г муки и 160 г яйца. На видео автор готовит по второму варианту, он и взят за основу; первый в уроке не используется.</li>
+              <li><strong>Расхождения — соль:</strong> в первом блоке карты 2,5 г, во втором 3 г. На странице 3 г — по тому рецепту, который отрабатывался в эфире.</li>
+              <li><strong>Расхождения — пралине:</strong> по карте 100 г орехов и 80 г сахара, в эфире автор делает половину порции — 50 г орехов и 40 г сахара. На странице полная норма, так как крем рассчитан на 50 г пасты.</li>
+              <li><strong>Расхождения — время первого этапа выпечки:</strong> 20–22 минуты при 250–260 °C; если духовка разгоняется только до 230 °C, автор советует 15 минут.</li>
+              <li><strong>Расхождения — стабилизация крема:</strong> в морозилке 2 часа, в холодильнике около 5 часов. Без инвертного сахара и глюкозы — 12–24 часа.</li>
+              <li><strong>Пробелы — число пирожных:</strong> ни карта, ни видео не называют точное количество изделий из одного замеса: оно зависит от размера отсадки. Известно только, что крема получается около 900 г (автор делит его на две части по 448 г).</li>
+              <li><strong>Пробелы — насадки:</strong> в карте указаны французские звёзды 868 (5 см высота, 16 мм верх, 35 мм низ), 865 (35 / 11 / 30 мм) и 8 мм (35 / 8 / 25 мм), на видео для колец и шу работают 868 и вторая звезда. Замена при отсутствии — открытая звезда 824.</li>
+              <li><strong>Пробелы — альтернативные начинки:</strong> автор перечисляет заварной крем, крем англез, кремё и взбитые ганаши, но граммовок в этом уроке не даёт.</li>
+              <li><strong>Пробелы — декор:</strong> фундук, малина, карамельный сахар и какао-микро без граммовок, «по вкусу».</li>
+              <li><strong>Фото:</strong> готового снимка в папке нет (изображение в DOCX — это шаблон с кругами для отсадки). На странице кадр из урока 4 (13:40): наполнение пари-бреста кремом.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

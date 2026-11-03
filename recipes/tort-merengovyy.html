@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Торт «Меренговый» — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Меренговый торт Надежды Зубовой: четыре безглютеновых коржа из «неправильной» меренги (200 г белка и 260 г сахара), крем на маскарпоне, ягодное конфи и кокосовое кремю с лаймом. Температуры выпечки, отсадка, сборка в кольце 16 см и декор ягодами.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body data-recipe-id="tort-merengovyy">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Торт «Меренговый»</h1>
+      <p class="recipe-lead">
+        Летний десерт одного дня: четыре тонких коржа из «неправильной» меренги, где сахара не вдвое больше белка, а почти столько же. Из-за этого коржи выходят мягкими и эластичными — их легко разрезать вилкой. Внутри крем на маскарпоне, ягодное конфи и кокосовое кремю с лаймом, сверху ягоды и мята. Автор собирает торт в кольце 16 см и предупреждает: есть его лучше в тот же день, пока меренга не набрала влагу из крема.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">30–40 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">~2 ч (выпечка, остывание, стабилизация)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~3 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 торт Ø16 см (4 коржа, 3 прослойки)</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-merengovyy.jpg" alt="Готовый меренговый торт на деревянной подставке: белый крем с рельефным бортиком, синяя полоса по боку и горка клубники с листиками мяты" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 торт)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (тортов)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Одна порция — один торт диаметром 15–16 см: четыре меренговых коржа толщиной 1,5–2 см и три прослойки. Автор рисует на пергаменте круги 15 см, а собирает торт в кольце 16 см — при выпечке коржи расползаются примерно до 17 см. Рецепт конфи рассчитан на три прослойки 12–14 см, в торт идёт одна (120–130 г), остальное замораживается; кокосового кремю хватает на два торта, используется примерно 110 г.
+          </p>
+        </div>
+
+        <!-- Переключатель источников и таймкодов видео -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Основной контент: Ингредиенты + Технология -->
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> торт</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Продукты на один торт диаметром 15–16 см: коржи, крем внутрь, конфи и кокосовое кремю. Ягоды для верха, краситель и насадки идут отдельно — их количество зависит от того, как вы украшаете.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: молочное, яйца, орехи -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, орехи</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С0</strong>:
+                <span class="shopping-qty" data-base-amount="6" data-unit="шт." data-piece="true">6 шт.</span>
+                <span class="shopping-hint">Белки и желтки по отдельности не продают, поэтому берём целые яйца. Пять белков — это около 200 г (белок С0 весит примерно 40 г), из этих же яиц нужны два желтка по 20 г на кокосовое кремю. Оставшиеся 3–4 желтка пустите на заварной крем, крем-брюле или омлет</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Маскарпоне</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Порция только внутрь торта. Автор советует Гальбани, на втором месте Бланфеста: с плохим сыром крем не загустеет. Будете украшать снаружи, как в видео, — берите двойную норму, 400 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 33% (не меньше 30%)</strong>:
+                <span class="shopping-qty" data-base-amount="260" data-unit="г">260 г</span>
+                <span class="shopping-hint">200 г в крем и 60 г в кокосовое кремю. Для декора снаружи нужна двойная норма крема. Сливки 22% для этого торта автор не советует</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+                <span class="shopping-hint">Можно заменить на 100 г сгущённого молока — автору такой вариант понравился. Пудру обязательно просеивать</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре кокоса (кокосовые сливки)</strong>:
+                <span class="shopping-qty" data-base-amount="90" data-unit="г">90 г</span>
+                <span class="shopping-hint">Замороженное, густое, а не жидкое — у автора Fresh Harvest. Полностью размораживать не нужно, достаточно 10 минут при комнатной температуре</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Фундук жареный рубленый</strong>:
+                <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+                <span class="shopping-hint">Опционально: подойдёт любой жареный дробленый орех — фисташка, грецкий. Не любите орехи — просто не кладите</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: ягоды, бакалея, декор -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍓 Ягоды, бакалея, декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ягоды для конфи</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Клубника, вишня, черника, смородина — можно замороженные или в виде пюре. Смородину и малину автор не берёт из-за косточек</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="360" data-unit="г">360 г</span>
+                <span class="shopping-hint">260 г в меренгу, 60–80 г в конфи (80 г, если ягоды кислые), 30 г в кокосовое кремю</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кукурузный крахмал</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Картофельный можно, но его кладут вдвое меньше — он сильнее и даёт серый цвет и привкус</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин быстрорастворимый</strong>:
+                <span class="shopping-qty" data-base-amount="12" data-unit="г">12 г</span>
+                <span class="shopping-hint">8 г в конфи и 4 г в кремю. У автора Dr. Oetker «Платиновая», сила 220 Блюм; заливать ледяной водой, иначе пойдёт гель вместо стабильного желе</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре лайма</strong>:
+                <span class="shopping-qty" data-base-amount="25" data-unit="г">25 г</span>
+                <span class="shopping-hint">Или один свежий лайм: сок по весу плюс цедра половины плода. Лимон тоже подойдёт, но вкус будет проще</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ванильный сахар или ванильная паста</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">В рецептуре автора ваниль не указана — она добавляет её по вкусу: половину пачки ванильного сахара, либо 1 ч. л. пасты или экстракта</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Свежие ягоды для верха</strong> — клубника, малина, голубика
+                <span class="shopping-hint">Сколько уйдёт: у автора горка клубники с черешками, малина и голубика. Клубнику оставляют с черешками — так она хранится дольше</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мята свежая</strong>
+                <span class="shopping-hint">Небольшие листочки — они идут не только для красоты, но и для вкуса: с маскарпоне мята сочетается лучше всего</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Краситель водорастворимый</strong> (опционально)
+                <span class="shopping-hint">Любой: жидкий, гелевый, сухой. У автора синий — на 80 г крема для полосы по борту</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — пергамент, кондитерские мешки, кольцо 16 см, насадки
+                <span class="shopping-hint">Пергамент нужен хороший, силиконизированный, иначе коржи не снять. Насадки: открытая звезда № 824 или закрытая маленькая № 35</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Меренговые коржи</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Белок яичный, тёплый
+              <span class="ingredient-note">Это 5 белков от яиц категории С0 (один белок ≈ 40 г). Тёплый — значит комнатной температуры: достаньте яйца из холодильника заранее</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="260" data-unit="г">260 г</span> — Сахар-песок
+              <span class="ingredient-note">Пропорция намеренно нарушена: сахара не вдвое больше белка, а почти столько же — автор называет это «практически 1 к 1»</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Кукурузный крахмал
+              <span class="ingredient-note">Заменяет муку, поэтому коржи безглютеновые. Картофельного берут вдвое меньше</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Фундук жареный рубленый (опционально)
+              <span class="ingredient-note">Можно любой жареный дробленый орех или вообще без него</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Ванильный сахар (или 1 ч. л. ванильной пасты)
+              <span class="ingredient-note">В рецептуре ваниль не указана, автор добавляет по вкусу половину пачки — около 7–15 г</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем внутрь торта</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Маскарпоне
+              <span class="ingredient-note">Для оформления торта снаружи нужна двойная норма, иначе крема не хватит</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сливки 30–33%, холодные
+              <span class="ingredient-note">Холодные сливки и холодная посуда — половина успеха. 22% для этого крема автор не советует</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сахарная пудра
+              <span class="ingredient-note">Или 100 г сгущённого молока вместо пудры. Меньше 60 г класть нет смысла — крем и так почти не сладкий</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Ягодное конфи</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Ягоды (клубника, вишня, черника, смородина)
+              <span class="ingredient-note">Можно замороженные или пюре. В торт идёт 120–130 г готового конфи, остальное замораживается до 3 месяцев</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сахар
+              <span class="ingredient-note">До 80 г, если ягоды заведомо кислые — например, одна брусника</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="8" data-unit="г">8 г</span> — Желатин быстрорастворимый
+              <span class="ingredient-note">Замочить заранее, на дне не должно остаться сухих крупинок</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Вода холодная
+              <span class="ingredient-note">Именно ледяная: в тёплой воде желатин схватывается гелем и хуже отдаёт силу</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Кокосовое кремю</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="90" data-unit="г">90 г</span> — Пюре кокоса (кокосовые сливки)
+              <span class="ingredient-note">Густое и мелкодисперсное; если замените кокосовыми сливками — вес тот же</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Желток
+              <span class="ingredient-note">Два желтка от яиц С0 по 20 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сливки 33%
+              <span class="ingredient-note">Для кремю жирность не так критична, как для крема: здесь подойдут и 22%</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="г">4 г</span> — Желатин быстрорастворимый
+              <span class="ingredient-note">Плюс 20 г ледяной воды для замачивания</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Вода холодная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Пюре или сок лайма
+              <span class="ingredient-note">Добавляется в самом конце, вместе с желатином, — чтобы сохранились эфирные масла</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Для сборки и верха</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Сколько уйдёт — Свежие ягоды: клубника, малина, голубика
+              <span class="ingredient-note">Клубнику оставляйте с черешками; свежие ягоды внутри торта автор не советует — они жёстче коржей, но для десерта одного дня допустимы</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Несколько листочков — Мята свежая
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Краситель водорастворимый
+              <span class="ingredient-note">На полосу по борту у автора ушло около 80 г крема, окрашенного синим</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">В чём хитрость: «неправильная» меренга</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Классическая меренга строится на пропорции 1 к 2: одна часть белка и две части сахара. Здесь пропорция намеренно нарушена — сахара почти столько же, сколько белка. Меренга получается мягкой и эластичной, и именно из-за этого торт потом легко режется, а коржи остаются нежными.
+                <span class="source-badge">⏱ Урок 1: 04:18–05:13</span>
+              </p>
+              <p>
+                Второй компонент коржей — кукурузный крахмал: он заменяет муку, поэтому торт получается безглютеновым. Картофельный крахмал допустим, но его кладут вдвое меньше — он сильнее и даёт серый цвет и характерный привкус.
+                <span class="source-badge">⏱ Урок 1: 05:39–06:13</span>
+              </p>
+              <div class="tip-box">
+                <strong>Порядок работы:</strong> автор начинает не с коржей, а с начинок. Пока коржи пекутся и остывают, конфи и кремю успевают стабилизироваться в холодильнике, и сборка идёт без пауз.
+                <span class="source-badge">⏱ Урок 1: 07:01–07:47</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Пропорция: <strong>200 г белка на 260 г сахара</strong></span>
+              <span class="param-pill">🌾 Крахмал: <strong>30 г кукурузного</strong></span>
+              <span class="param-pill">🚫 Глютен: <strong>Нет, коржи безглютеновые</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Ягодное конфи: ягоды, сахар и желатин</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Желатин отвесьте и залейте холодной водой заранее: 8 г желатина и 40 г воды. На дне не должно остаться сухих частичек. Замечание автора про лето: вода в графине успевает нагреться выше комнатной, и тогда желатин даёт гель вместо нормального желе, поэтому вода нужна именно ледяная.
+                <span class="source-badge">⏱ Урок 1: 10:47–11:54</span>
+              </p>
+              <p>
+                В сотейник отправьте 250 г ягод и 60 г сахара. Автор берёт именно 60 г, потому что коржи очень сладкие; 80 г нужны только под заведомо кислые ягоды вроде брусники. Нагревайте, помешивая, пока сахар не разойдётся и ягоды почти не закипят. Цели сварить их нет.
+                <span class="source-badge">⏱ Урок 1: 09:44–10:37</span>
+              </p>
+              <p>
+                Снимите с огня и добавьте желатин прямо в горячую массу — разогревать его в микроволновке не нужно, он разойдётся сам. Мешайте до полного растворения. Поскольку термическая обработка была короткой, ягоды сохраняют свежий вкус.
+                <span class="source-badge">⏱ Урок 1: 12:28–13:50</span>
+              </p>
+              <p>
+                Переложите конфи в кондитерский мешок. На весах отложите 120–130 г — столько пойдёт в торт, — а остальное уберите в морозилку: там начинка спокойно живёт до следующего торта.
+                <span class="source-badge">⏱ Урок 1: 14:30–15:47</span>
+              </p>
+              <div class="warning-box">
+                <strong>Косточки:</strong> смородину и малину автор в это конфи не берёт — мелких косточек слишком много, и они чувствуются на зубах. Клубника, вишня и черника дают чистую текстуру.
+                <span class="source-badge">⏱ Урок 1: 12:45–12:58</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍓 Ягоды: <strong>250 г</strong></span>
+              <span class="param-pill">🍬 Сахар: <strong>60–80 г</strong></span>
+              <span class="param-pill">🥄 Желатин: <strong>8 г + 40 г ледяной воды</strong></span>
+              <span class="param-pill">⚖ В торт: <strong>120–130 г</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Кокосовое кремю: завариваем желтки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Второй желатин — 4 г и 20 г ледяной воды — тоже поставьте набухать заранее. В сотейник отвесьте 60 г жирных сливок, 90 г кокосового пюре и 30 г сахара. Пюре можно брать прямо замороженным: подержите его 10 минут при комнатной температуре и отберите нужное.
+                <span class="source-badge">⏱ Урок 1: 22:05–24:33</span>
+              </p>
+              <p>
+                Нагрейте смесь, помешивая, чтобы сахар разошёлся и масса хорошо прогрелась, — до кипения доводить не нужно. Затем 40 г желтков слегка разбейте и влейте к ним горячую смесь тонкой струйкой, постоянно помешивая: так желток не «шокируется» и не свернётся. Потом верните всё обратно в сотейник.
+                <span class="source-badge">⏱ Урок 1: 25:24–27:56</span>
+              </p>
+              <p>
+                Уваривайте на самом маленьком огне, не переставая мешать, до 82 °C — или, как делает автор, до первого «булька». Как только он появился, снимайте с огня, но продолжайте мешать: иначе масса пригорит ко дну. Густота — как у жидкой сгущёнки, сильнее она не загустеет, и это нормально.
+                <span class="source-badge">⏱ Урок 1: 28:01–30:47</span>
+              </p>
+              <p>
+                В тёплую массу добавьте набухший желатин и перемешайте до полного растворения, а в самом конце — 25 г пюре или сока лайма. Лайм идёт последним, чтобы эфирные масла и свежесть не улетучились при нагреве. Разделите кремю пополам: примерно 110 г пойдёт в торт, вторая половина — в морозилку.
+                <span class="source-badge">⏱ Урок 1: 31:08–37:09</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем лайм:</strong> кокос сладкий и тропический, а лайм даёт нотку свежести и уводит от приторности. Если лайм свежий, потрите ещё и цедру половины плода — будет ещё лучше.
+                <span class="source-badge">⏱ Урок 1: 31:25–31:53</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥥 Пюре кокоса: <strong>90 г</strong></span>
+              <span class="param-pill">🥚 Желтки: <strong>40 г (2 шт.)</strong></span>
+              <span class="param-pill">🌡 Уваривание: <strong>До 82 °C или первого «булька»</strong></span>
+              <span class="param-pill">🍋 Лайм: <strong>25 г в самом конце</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Белки: тёплые и без единой капли жира</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Яйца категории С0: белок весит около 40 г, желток — около 20 г. Отсюда весь расчёт: пять белков дают 200 г, два желтка — 40 г. Отделяйте белки очень чисто, чтобы в них не попал желток.
+                <span class="source-badge">⏱ Урок 1: 18:05–18:28</span>
+              </p>
+              <p>
+                Жир желтка окутывает молекулы белка и не даёт им принимать воздух — меренга выйдет нестабильной и поплывёт. По той же причине плохо вымытая миска, в которой взбивали что-то жирное, испортит всё дело.
+                <span class="source-badge">⏱ Урок 1: 18:30–19:54</span>
+              </p>
+              <p>
+                А вот капля воды не страшна: белок больше чем на 90% состоит из воды. Белки должны быть тёплыми, то есть комнатной температуры, — достаньте яйца из холодильника заранее.
+                <span class="source-badge">⏱ Урок 1: 19:14–19:41</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Белки: <strong>5 шт. (200 г), тёплые</strong></span>
+              <span class="param-pill">🟡 Желтки: <strong>2 шт. (40 г) — в кремю</strong></span>
+              <span class="param-pill">🧼 Посуда: <strong>Обезжиренная, без желтка</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Духовка и пергамент с кружками</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разогрейте духовку заранее: режим конвекции и 150 °C. К моменту, когда коржи окажутся внутри, она должна быть уже горячей.
+                <span class="source-badge">⏱ Урок 1: 40:54–41:19</span>
+              </p>
+              <p>
+                На пергаменте нарисуйте круги диаметром 15 см — по одному на корж — и переверните лист рисунком вниз. Автор делает круги 15 см, потому что при выпечке меренга расползётся в стороны: в итоге коржи выходят примерно на 17 см.
+                <span class="source-badge">⏱ Урок 1: 44:03–44:48</span>
+              </p>
+              <div class="warning-box">
+                <strong>Пергамент решает:</strong> бывает, что коржи поднялись идеально, а снять их невозможно — прилипли намертво. Берите профессиональный силиконизированный пергамент: он пропускает воздух, и меренга сохнет.
+                <span class="source-badge">⏱ Урок 1: 44:31–46:12</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Режим: <strong>Конвекция 150 °C</strong></span>
+              <span class="param-pill">⭕ Круги: <strong>Ø15 см на пергаменте</strong></span>
+              <span class="param-pill">📄 Бумага: <strong>Силиконизированная</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Взбивание: сахар в четыре приёма</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Начните взбивать белки на минимальной скорости — буквально минуту. В этот момент белок разделяется, и его белки получают возможность принимать воздух. Сахар в жидкий белок добавлять нельзя: он растворится, получится сироп, а сироп не взбивается. Сахар идёт только тогда, когда белок уже взбился.
+                <span class="source-badge">⏱ Урок 1: 46:14–47:24</span>
+              </p>
+              <p>
+                Переключите миксер на максимум и ждите, пока на дне не останется жидкости. Показатель — однородно мелкая «перистая» текстура: пузырьки должны быть одинаково мелкими. Если в массе ещё есть крупные пузыри, с сахаром рано.
+                <span class="source-badge">⏱ Урок 1: 47:24–48:59</span>
+              </p>
+              <p>
+                Вводите 260 г сахара в четыре приёма, каждый раз дожидаясь, пока предыдущая порция разойдётся. Масса постепенно становится блестящей. В середине процесса добавьте ванильный сахар — автор берёт половину пачки, около 7–15 г, или чайную ложку пасты.
+                <span class="source-badge">⏱ Урок 1: 49:00–52:21</span>
+              </p>
+              <p>
+                Дальше взбивайте до устойчивых пиков — ориентировочно около пяти минут, но смотрите на массу, а не на часы. Готовая меренга упругая и блестящая, почти весь сахар разошёлся; если немного осталось, это нормально, потому что меренга здесь сырая.
+                <span class="source-badge">⏱ Урок 1: 52:18–55:49</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌀 Скорость: <strong>Сначала минимум, потом максимум</strong></span>
+              <span class="param-pill">🍬 Сахар: <strong>260 г в 4 приёма</strong></span>
+              <span class="param-pill">⏱ Взбивание: <strong>~5 мин до устойчивых пиков</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Масса блестящая и упругая</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Орехи и крахмал — только лопаткой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Готовую меренгу переложите в кондитерский мешок, а орехи и крахмал вводите лопаткой, не миксером, и максимально быстро — чтобы весь воздух, который вы загнали, остался внутри.
+                </p>
+              <p>
+                Сначала перемешайте крахмал с орехами между собой, так их легче распределить. Лопатка входит ребром, проходит по дну и переворачивает массу наверх. Перемешали — и остановились, больше ничего делать не нужно.
+                <span class="source-badge">⏱ Урок 1: 56:47–58:05</span>
+              </p>
+              <div class="tip-box">
+                <strong>Орехи опциональны:</strong> 60 г фундука можно не класть вовсе. Крахмал — не опция: он держит структуру коржа, как мука в бисквите.
+                <span class="source-badge">⏱ Урок 1: 57:07–57:50</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥄 Инструмент: <strong>Лопатка, не миксер</strong></span>
+              <span class="param-pill">🌰 Орехи: <strong>60 г, опционально</strong></span>
+              <span class="param-pill">🌽 Крахмал: <strong>30 г, обязательно</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Отсадка коржей</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                У мешка отрежьте кончик примерно на 2 см в диаметре — ровно, не под углом. Отсаживайте толсто, по нарисованным кругам, стараясь держать ровную поверхность: если верх неровный, на выпечку это не повлияет, но собирать торт будет сложнее.
+                <span class="source-badge">⏱ Урок 1: 01:01:07–01:05:29</span>
+              </p>
+              <p>
+                Толщина заготовки — около 1,5–2 см. Коржи немного расползутся и увеличатся; даже если два соседних соединятся, ничего страшного.
+                <span class="source-badge">⏱ Урок 1: 01:05:53–01:06:03</span>
+              </p>
+              <div class="warning-box">
+                <strong>Меренга не ждёт:</strong> отсаживать и печь нужно сразу. Если у вас нет конвекции, два противня одновременно не выйдет: второй не должен стоять полчаса, эта меренга столько не держится.
+                <span class="source-badge">⏱ Урок 1: 45:00–45:27</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">✂ Отверстие: <strong>~2 см, ровно</strong></span>
+              <span class="param-pill">⭕ Диаметр: <strong>15 см по кругам</strong></span>
+              <span class="param-pill">📏 Толщина: <strong>1,5–2 см</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Выпечка: 30 минут</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Ставьте противень в середину духовки и пеките 30 минут при 150 °C с конвекцией. Если конвекции нет — те же 30 минут, но при 160 °C.
+                <span class="source-badge">⏱ Урок 1: 01:05:36–01:05:51</span>
+              </p>
+              <p>
+                В газовой духовке противень ставят максимально наверх, а вниз — ещё один противень с водой: мы выпекаем, а не сушим. С конвекцией можно печь сразу на двух противнях.
+                <span class="source-badge">⏱ Урок 1: 01:05:51–01:06:16</span>
+              </p>
+              <div class="tip-box">
+                <strong>Трещины — это нормально:</strong> если коржи потрескались сверху, ничего страшного. Чтобы их не было совсем, подбирают режим выпечки, а конвекция, наоборот, трещинам способствует.
+                <span class="source-badge">⏱ Урок 1: 01:36:43–01:37:04</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Конвекция: <strong>150 °C</strong></span>
+              <span class="param-pill">🌡 Верх-низ: <strong>160 °C</strong></span>
+              <span class="param-pill">⏱ Время: <strong>30 минут</strong></span>
+              <span class="param-pill">🔥 Газовая: <strong>Наверх + противень с водой вниз</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Снять с противня и остудить под крышкой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Горячий противень накройте вторым, холодным, и переверните конструкцию — так коржи переходят на холодный лист. Снимайте горячий противень и сразу, пока коржи тёплые, отделяйте бумагу.
+                </p>
+              <p>
+                Бумагу нельзя тянуть вверх: её подгибают и снимают очень бережно, иначе корж сломается. Сняли — снова накройте, чтобы коржи остывали и не теряли влагу. Собирать можно только на остывших.
+                <span class="source-badge">⏱ Урок 1: 01:37:16–01:38:47</span>
+              </p>
+              <div class="tip-box">
+                <strong>Влажный низ — не брак:</strong> если низ коржа кажется сыроватым, это конденсат: влага никуда не делась, аэрации на столе нет. Мы выпекали, а не сушили, поэтому делать ничего не нужно.
+                <span class="source-badge">⏱ Урок 1: 01:54:48–01:55:12</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔄 Приём: <strong>Накрыть холодным противнем и перевернуть</strong></span>
+              <span class="param-pill">📄 Бумага: <strong>Снимать тёплой, подгибая</strong></span>
+              <span class="param-pill">⏳ Сборка: <strong>Только на остывших коржах</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 11 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Крем на маскарпоне</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сливки должны быть холодными, посуда — тоже, в помещении лучше прохладно. Взбивайте сливки ручным миксером сразу на максимальной скорости: если начать с минимума, они могут не взбиться и свернутся на половине пути. С планетарным миксером этот нюанс не так критичен.
+                <span class="source-badge">⏱ Урок 1: 01:14:14–01:15:09</span>
+              </p>
+              <p>
+                Взбивайте до плотных пиков и следите за моментом: перед тем как свернуться, сливки визуально уменьшаются в объёме и начинают отсекать сыворотку. Как только это заметили — немедленно останавливайтесь.
+                <span class="source-badge">⏱ Урок 1: 01:21:14–01:21:57</span>
+              </p>
+              <p>
+                Дальше автор идёт от обратного: сначала лишь слегка разбивает маскарпоне, затем постепенно вводит в него взбитые сливки и только в конце — просеянную сахарную пудру. Порядок именно такой, потому что маскарпоне от долгих манипуляций сворачивается: чем их меньше, тем лучше результат.
+                <span class="source-badge">⏱ Урок 1: 01:22:05–01:27:40</span>
+              </p>
+              <p>
+                Готовый крем густой и совершенно однородный, без комков. В торт у автора уходит около 460 г крема. Хранится такой крем 72 часа в миске — перед использованием его нужно ещё раз пробить миксером.
+                <span class="source-badge">⏱ Урок 1: 01:29:40–01:30:14</span>
+              </p>
+              <div class="warning-box">
+                <strong>Двойная норма:</strong> в рецептуре крем дан только внутрь. Если украшать торт снаружи, как в видео, норму удваивают: 400 г сливок, 400 г маскарпоне и 120 г пудры вместо 60 г.
+                <span class="source-badge">⏱ Урок 1: 01:13:57–01:14:09</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧀 Маскарпоне: <strong>200 г</strong></span>
+              <span class="param-pill">🥛 Сливки: <strong>200 г, холодные</strong></span>
+              <span class="param-pill">🍬 Пудра: <strong>60 г, просеять</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>72 часа в холодильнике</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 12 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Сборка в кольце 16 см</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Автор собирает торт в кольце диаметром 16 см, потому что так удобнее; можно обойтись и без него. На подложку выдавите маленькую капельку крема — корж прилипнет и не поедет. Крем разделите примерно на три части, по 150 г на прослойку.
+                <span class="source-badge">⏱ Урок 1: 01:51:08–01:53:05</span>
+              </p>
+              <p>
+                У торта четыре коржа и три прослойки, и они разные. Первая: тонкий слой крема, сверху кокосовое кремю. Вторая: только крем, при желании посыпанный дробленым орехом. Третья: крем и ягодное конфи. Наносите крем тонко — сверху он тоже пойдёт.
+                <span class="source-badge">⏱ Урок 1: 01:56:12–01:59:22</span>
+              </p>
+              <p>
+                Верхний корж кладите гладкой стороной вверх, а не той, что была верхушкой при выпечке. Кольцо раскройте, обожмите вокруг торта и отправьте в холодильник минимум на 40 минут, чтобы всё стабилизировалось.
+                <span class="source-badge">⏱ Урок 1: 01:59:22–02:03:48</span>
+              </p>
+              <div class="tip-box">
+                <strong>Без кокосового кремю:</strong> если вы его не делали, во все прослойки идёт только крем, а ягодное конфи лучше положить в среднюю — так срез будет красивее.
+                <span class="source-badge">⏱ Урок 1: 02:04:36–02:04:52</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⭕ Кольцо: <strong>16 см</strong></span>
+              <span class="param-pill">🥄 Крем: <strong>~150 г на прослойку</strong></span>
+              <span class="param-pill">🧊 Стабилизация: <strong>40 минут в холодильнике</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 13 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Декор кремом: бортик и синяя полоса</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Для декора автор берёт открытую звезду № 824 с шестью пиками; подойдёт и маленькая закрытая звезда № 35 — ею уходит меньше крема. Мешок держат между большим и указательным пальцами, давит рука, а не сам мешок, насадка стоит строго перпендикулярно поверхности торта.
+                <span class="source-badge">⏱ Урок 1: 02:07:07–02:07:27</span>
+              </p>
+              <p>
+                Отсаживайте от середины и ведите по кругу против часовой стрелки. По краю бортик делают выше, чем кажется нужным: сверху ляжет гора фруктов, и без запаса будет ощущение, что ягоды сваливаются.
+                <span class="source-badge">⏱ Урок 1: 02:08:03–02:10:35</span>
+              </p>
+              <p>
+                Полосу по борту делают окрашенным кремом: у автора это синий водорастворимый краситель и около 80 г крема, отсаженного маленькой закрытой звездой. Краситель годится любой — жидкий, гелевый, сухой.
+                <span class="source-badge">⏱ Урок 1: 01:33:58–01:40:45</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧰 Насадки: <strong>№ 824 или № 35</strong></span>
+              <span class="param-pill">🔄 Движение: <strong>От центра, против часовой</strong></span>
+              <span class="param-pill">🎨 Полоса: <strong>~80 г окрашенного крема</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 14 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Ягоды и мята</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сверху автор выкладывает клубнику с черешками, малину и голубику. Клубнику мыть не советует: даже аккуратно вымытая ягода теряет вид. Черешки оставляют не только ради зеленого акцента — с ними клубника хранится дольше.
+                <span class="source-badge">⏱ Урок 1: 02:12:27–02:16:33</span>
+              </p>
+              <p>
+                Мята идёт не для красоты, а для вкуса: с маскарпоне она сочетается лучше всего. Берите только маленькие листочки — крупные грубее и по аромату, и на вид.
+                <span class="source-badge">⏱ Урок 1: 02:16:44–02:17:06</span>
+              </p>
+              <div class="tip-box">
+                <strong>Свежие ягоды внутри:</strong> их можно положить вместо конфи, но при нарезании они жёстче коржей и крема и ломают текстуру. Либо режьте мельче, либо оставайтесь на конфи — для десерта одного дня допустимы оба варианта.
+                <span class="source-badge">⏱ Урок 1: 02:01:51–02:02:28</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍓 Верх: <strong>Клубника, малина, голубика</strong></span>
+              <span class="param-pill">🌿 Мята: <strong>Только мелкие листочки</strong></span>
+              <span class="param-pill">💧 Мытьё: <strong>Клубнику автор не моет</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 15 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">15</span>
+                <h3 class="step-title">Стабилизация, нарезка и сроки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                После украшения торт отправляют в холодильник ещё на час — и только после этого режут. Если собирали без декора, сначала 40 минут в холодильнике, потом украшение и ещё час.
+                <span class="source-badge">⏱ Урок 1: 02:12:07–02:12:22</span>
+              </p>
+              <p>
+                Это десерт одного дня. Не потому, что торт испортится: «неправильная» меренга активно впитывает влагу из крема и через сутки-двое размокает. Лучше всего есть его часа через четыре после сборки; два часа в холодильнике — уже достаточно, чтобы подать к чаю.
+                <span class="source-badge">⏱ Урок 1: 01:07:09–01:07:35</span>
+              </p>
+              <div class="tip-box">
+                <strong>Запасы в морозилку:</strong> остатки конфи спокойно лежат в морозилке до 3 месяцев, кокосовое кремю — до 2 месяцев. Это готовая начинка для следующего торта, и её не нужно готовить заново.
+                <span class="source-badge">⏱ Урок 1: 00:34:28–00:35:48</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 После декора: <strong>1 час в холодильнике</strong></span>
+              <span class="param-pill">🍰 Подача: <strong>Лучше через ~4 часа</strong></span>
+              <span class="param-pill">📅 Срок: <strong>Десерт одного дня</strong></span>
+              <span class="param-pill">❄ Запасы: <strong>Конфи 3 мес., кремю 2 мес.</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Пропорция важнее техники:</strong> «неправильная» меренга — почти 1:1 вместо 1:2 — и есть причина, по которой коржи мягкие, а торт режется вилкой. Не «исправляйте» пропорцию.</li>
+                <li><strong>Сахар только в взбитый белок:</strong> в жидком белке сахар растворяется в сироп, а сироп не взбивается. Сахар идёт в четыре приёма, когда пузыри стали однородно мелкими.</li>
+                <li><strong>Белки должны быть тёплыми:</strong> комнатной температуры, из холодильника — заранее. Капля воды не мешает, капля жира — губит.</li>
+                <li><strong>Крахмал вместо муки:</strong> кукурузный не даёт постороннего вкуса и цвета; картофельного кладут вдвое меньше.</li>
+                <li><strong>Орехи и крахмал — лопаткой:</strong> миксер выбьет воздух, а лопатка ребром сохранит его.</li>
+                <li><strong>Сначала начинки, потом коржи:</strong> конфи и кремю должны остыть и стабилизироваться к моменту сборки.</li>
+                <li><strong>Крем от обратного:</strong> сначала разбить маскарпоне, потом постепенно ввести взбитые сливки, пудру — в самом конце. Чем меньше манипуляций с маскарпоне, тем стабильнее крем.</li>
+                <li><strong>Гальбани или Бланфеста:</strong> качество маскарпоне автор считает главным условием. С плохим сыром крем останется жидким.</li>
+                <li><strong>Бортик выше, чем кажется:</strong> сверху ляжет гора ягод, и без запаса по высоте они «сваливаются» с торта.</li>
+                <li><strong>Ягоды — последними:</strong> клубника с черешками, малина, голубика и мелкие листья мяты. Мята здесь ради вкуса, а не ради декора.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Влажная или жирная посуда:</strong> плохо вымытая миска после масляного крема, капля жира или желтка в белке — меренга нестабильна, плывёт и не держит форму.</li>
+                <li><strong>Сахар добавлен слишком рано:</strong> пока на дне остаётся жидкий белок, сахар превращается в сироп, и взбить его уже невозможно.</li>
+                <li><strong>Недостаточно взбитая меренга:</strong> коржи выпекутся, а при открытии духовки осядут. Взбивайте дальше — автор однажды взбивала около 15 минут.</li>
+                <li><strong>Погоня за гладкостью:</strong> трещины на коржах — норма, а конвекция им даже способствует. Идеально ровные коржи требуют подбора режима, а не спасения.</li>
+                <li><strong>Плохой пергамент:</strong> коржи поднимутся, но снять их будет невозможно. Нужен силиконизированный профессиональный.</li>
+                <li><strong>Сливки взбиты с малой скорости:</strong> ручным миксером начинают сразу на максимуме. Холодные сливки, холодная посуда, прохладное помещение.</li>
+                <li><strong>Перевзбитые сливки:</strong> перед сворачиванием они уменьшаются в объёме и начинают отсекать сыворотку — в этот момент нужно останавливаться.</li>
+                <li><strong>Жидкий крем намазан на коржи:</strong> автор вспоминает такой случай — если крем не загустел, взбивайте дальше, но следите, чтобы не свернулся, а не собирайте торт «как есть».</li>
+                <li><strong>Сладкая начинка поверх сладких коржей:</strong> сахар в конфи и креме специально уменьшен. Меньше 60 г пудры класть нет смысла — крем и так почти не сладкий.</li>
+                <li><strong>Торт на второй день:</strong> меренга набирает влагу из крема и размокает. Это десерт одного дня, и лучшее время для него — через несколько часов после сборки.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> вебинар Надежды Зубовой «Торт «Меренговый»» (файл Урок_01.mp4, длительность 2 ч 20 мин) и расшифровка с таймкодами; граммовки сверены с DOCX «Торт_Меренговый .docx».</li>
+              <li><strong>Диаметр:</strong> в DOCX диаметр не указан. По видео: круги на пергаменте 15 см, сборка в кольце 16 см, готовые коржи расползлись примерно до 17 см. База калькулятора — один торт.</li>
+              <li><strong>Конфи:</strong> в DOCX сказано «достаточно для 3 прослоек диаметром 12–14 см, мы используем одну»; в видео — «хватило бы на 3 таких торта» диаметром 15 см, а на стандартный 18–20 см — на 2. На странице один вариант: 120–130 г в торт, остальное в морозилку.</li>
+              <li><strong>Крем:</strong> в DOCX 200 г маскарпоне, 200 г сливок и 60 г пудры «внутрь» и оговорка, что для наружного оформления нужна двойная порция. В видео автор действительно делает двойную (400/400/120) и откладывает 460 г внутрь.</li>
+              <li><strong>Остаток маскарпоне:</strong> по словам автора, лишние 100 г из пачки можно добавить в крем, но тогда пудры нужно 70 г, а не 60.</li>
+              <li><strong>Сахар в конфи:</strong> 60 г в DOCX и в видео, 80 г — только для заведомо кислых ягод (пример автора — брусника).</li>
+              <li><strong>Желатин:</strong> в DOCX просто «быстрорастворимый». В видео — Dr. Oetker «Платиновая», сила 220 Блюм, замачивать только ледяной водой.</li>
+              <li><strong>Ваниль:</strong> в DOCX её нет вовсе, в видео автор добавляет по вкусу половину пачки ванильного сахара (15 г) или чайную ложку пасты. На странице 15 г как верхняя граница.</li>
+              <li><strong>Температуры выпечки:</strong> 150 °C с конвекцией или 160 °C верх-низ, 30 минут; газовая — противень максимально вверх плюс противень с водой вниз. Это единственные цифры, которые автор называет.</li>
+              <li><strong>Время взбивания:</strong> автор ориентируется на текстуру, а не на минуты: «около 5 минут», но упоминает и 10, и 15 минут. Поэтому в шагах стоит диапазон и признаки готовности.</li>
+              <li><strong>Количество крема на прослойку:</strong> названо голосом («по 150 грамм»), отдельно назван общий вес — 460 г внутрь. При пересчёте на два торта крем делится пропорционально.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет, только видео. На странице стоит кадр 02:17:58 — собранный и украшенный торт на подставке, с клубникой, голубикой и мятой.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

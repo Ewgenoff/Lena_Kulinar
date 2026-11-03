@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рождественский штоллен с марципаном — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Рождественский штоллен Надежды Зубовой на твороге и разрыхлителе: сухофрукты, замоченные в коньяке, рубленый миндаль, марципановая серединка и складка «одеялом». Выпечка при 170 °C с конвекцией 45–50 минут, горячее масло, сахарная пудра и 24 часа на созревание.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="rozhdestvenskiy-shtollen">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Рождественский штоллен с марципаном</h1>
+      <p class="recipe-lead">
+        Штоллен — рождественский кекс на твороге и разрыхлителе, с большим количеством сухофруктов, рубленым миндалём и марципановой серединкой. Тесто собирается в крупную крошку, а не вымешивается: творог должен быть жирным и не крупинчатым. Внутрь кладут колбаску марципана и заворачивают её тестом «одеялом» — отсюда и традиционная форма. Горячий штоллен пропитывают сливочным маслом и дважды посыпают пудрой, а вкуснее всего он становится через 24 часа.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~20 мин (плюс сухофрукты на 8–48 ч)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~50 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Замачивание сухофруктов 8–48 ч, выпечка 45–50 мин, созревание 24 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">1–2 суток с замачиванием и созреванием</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 штоллен ≈20 × 16 см, толщиной 1,5–2 см</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/rozhdestvenskiy-shtollen.jpg" alt="Готовый рождественский штоллен, щедро посыпанный сахарной пудрой, на пергаменте рядом с веточкой" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 штоллен)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">штоллен</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База калькулятора — один штоллен по рецептуре автора (пласт 20 × 16 см). Начинка-марципан дана отдельной группой: из указанного количества получается около 250 г марципана, этого хватает на два штоллена, а в один идёт примерно 125 г.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> штоллен</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на один штоллен: бакалея, творог и масло в первой колонке, сухофрукты, орехи и марципан — во второй.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Бакалея, творог, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Обычная мука высшего сорта, просеять с разрыхлителем и солью</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Разрыхлитель</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="г">5 г</span>
+                <span class="shopping-hint">Современная замена закваске: так штоллен получается быстрее</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творог 9% и выше</strong>:
+                <span class="shopping-qty" data-base-amount="130" data-unit="г">130 г</span>
+                <span class="shopping-hint">Желательно не крупинчатый; заменить творожным сыром 1:1. Сухой крупинчатый пробейте блендером</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="135" data-unit="г">135 г</span>
+                <span class="shopping-hint">65 г в тесто + 70 г на пропитку горячего штоллена. Комнатной температуры</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="125" data-unit="г">125 г</span>
+                <span class="shopping-hint">75 г в тесто + 50 г на сироп для марципана</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйцо куриное С0</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">60–65 г, комнатной температуры. Вводить в три приёма</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="г">2 г</span>
+                <span class="shopping-hint">В DOCX 1,5–2 г. Усиливает вкус и оттеняет сладость</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">150 г на обсыпку штоллена в два приёма + 100 г в марципан</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ванильный сахар с семенами ванили</strong>:
+                <span class="shopping-qty" data-base-amount="7" data-unit="г">7 г</span>
+                <span class="shopping-hint">Или ваниль, ванильный экстракт, ванильная паста — на выбор по вкусу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — пергамент, пищевая плёнка
+                <span class="shopping-hint">Пергамент на противень и для заворачивания готового штоллена, плёнка — для марципана</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍊 Сухофрукты, орехи, марципан</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сухофрукты (цукаты апельсина, вяленая вишня, клюква, изюм, курага)</strong>:
+                <span class="shopping-qty" data-base-amount="130" data-unit="г">130 г</span>
+                <span class="shopping-hint">Комбинация на выбор. После замачивания и отжима выйдет ≈160 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Коньяк, ром или бренди</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Для замачивания сухофруктов на 8–48 часов. Замена — апельсиновый или вишнёвый сок, крепкий чай с травами</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Миндаль</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">50 г рубленого обжаренного в тесто + 100 г миндальной муки для марципана</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Цедра лимона, апельсина, лайма или мандарина</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span>
+                <span class="shopping-hint">Снять с одного плода; подойдёт любой цитрус</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Марципан готовый (опционально)</strong>:
+                <span class="shopping-qty" data-base-amount="125" data-unit="г">125 г</span>
+                <span class="shopping-hint">Если не хотите делать марципан сами. Искать в крупных гипермаркетах; в шоколаде брать не стоит — он горит при выпечке</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Миндальная мука (для домашнего марципана)</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Мелкого помола; можно смолоть миндаль в процессоре, шелуху не снимать</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Тесто (все продукты комнатной температуры)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Мука пшеничная в/с
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="г">5 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="130" data-unit="г">130 г</span> — Творог 9% и выше
+              <span class="ingredient-note">Не крупинчатый; можно заменить творожным сыром 1:1 или рикоттой</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="65" data-unit="г">65 г</span> — Масло сливочное 82,5%
+              <span class="ingredient-note">Очень хорошо размягчённое</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="75" data-unit="г">75 г</span> — Сахар
+              <span class="ingredient-note">Не должен раствориться — жидкости в тесте почти нет</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span> — Яйцо С0 (60–65 г)
+              <span class="ingredient-note">Тёплое. Вводится в три приёма</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Соль
+              <span class="ingredient-note">В DOCX 1,5–2 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Ванильный сахар
+              <span class="ingredient-note">Или ваниль, экстракт, паста, сахар с семенами ванили</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="130" data-unit="г">130 г</span> — Сухофрукты
+              <span class="ingredient-note">Цукаты апельсина, вяленая вишня, клюква, изюм, курага — комбинация на выбор</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Миндаль рубленый
+              <span class="ingredient-note">Заранее обжаренный, продольная рубка. Можно заменить арахисом, грецким орехом, каштанами</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Цедра цитруса
+              <span class="ingredient-note">Лимон, апельсин, лайм или мандарин</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Коньяк, ром или бренди
+              <span class="ingredient-note">Для замачивания сухофруктов. Или апельсиновый/вишнёвый сок, крепкий чай с травами</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Для пропитки и обсыпки</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Масло сливочное
+              <span class="ingredient-note">Растопить; в DOCX 70–100 г, в видео — 70 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сахарная пудра
+              <span class="ingredient-note">Посыпать дважды: первый слой пожелтеет, второй даст белый вид</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Марципан (выход ≈250 г, на 2 штоллена)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Миндальная мука
+              <span class="ingredient-note">Мелкого помола, просеять</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахарная пудра
+              <span class="ingredient-note">Просеять вместе с миндальной мукой</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сахар
+              <span class="ingredient-note">На сироп вместе с водой</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Вода
+              <span class="ingredient-note">В сироп; варится до 110 °C — примерно 3 минуты после закипания</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Миндальный ароматизатор
+              <span class="ingredient-note">По желанию, чтобы усилить вкус</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Сухофрукты в алкоголе на 8–48 часов</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сухофрукты порежьте и промойте: курагу и крупный изюм обязательно измельчите. Сложите в контейнер и залейте коньяком, ромом или бренди на 8–48 часов.
+                <span class="source-badge">⏱ Урок 1: 30:43–31:04</span>
+              </p>
+              <p>
+                Перед замесом слегка отожмите: сильно мокрыми они не нужны, но и выжимать досуха не стоит. Из 130 г сухих фруктов получится примерно 160 г.
+                <span class="source-badge">⏱ Урок 1: 30:55–32:53</span>
+              </p>
+              <div class="warning-box">
+                <strong>Остатки алкоголя не выливайте в тесто:</strong> в штоллен идут только отжатые фрукты. Жидкость, которая стекла, в тесто не добавляется.
+                <span class="source-badge">⏱ Урок 1: 32:04–32:36</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> если алкоголь не подходит, замачивайте в апельсиновом или вишнёвом соке либо в крепком горячем чае с травами — бергамот, чабрец. Совсем сухие сухофрукты можно сначала зашпарить и подсушить, а потом уже резать и замачивать. В готовом штоллене алкоголя нет: за 45–50 минут выпечки он полностью испаряется, остаётся только аромат.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Замачивание: <strong>8–48 часов</strong></span>
+              <span class="param-pill">⚖ Выход: <strong>≈160 г отжатых сухофруктов</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Масло с сахаром — взбить до бела</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Размягчённое масло 82,5% взбейте с сахаром: сначала на небольшой скорости, чтобы сахар не разлетался, затем на максимальной — до побеления массы.
+                <span class="source-badge">⏱ Урок 1: 09:21–13:27</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сахар не должен раствориться:</strong> ему не в чем растворяться — жидкости в тесте почти нет. Он остаётся крупинками, и это правильно.
+                <span class="source-badge">⏱ Урок 1: 16:43–16:50</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> жирность масла важна — берите 82,5%, чтобы соблюсти баланс жиров и жидкостей. Домашнее масло тоже подойдёт: по жирности оно обычно не уступает.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Масло: <strong>82,5%, комнатной температуры</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Масса побелела</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Яйцо в три приёма и творог</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Яйцо категории С0 (60–65 г) вводите примерно по 20 г, в три приёма, каждый раз перемешивая миксером. После каждого приёма масса остаётся густой, жидкости на дне быть не должно.
+                <span class="source-badge">⏱ Урок 1: 13:31–16:27</span>
+              </p>
+              <p>
+                Затем добавьте 130 г тёплого творога комнатной температуры и перемешайте миксером до однородной эмульсии. Крупинки творога видны — так и должно быть, главное, чтобы не отсекалась жидкость.
+                <span class="source-badge">⏱ Урок 1: 16:51–20:26</span>
+              </p>
+              <div class="warning-box">
+                <strong>Холодные яйца и творог расслаивают массу:</strong> масло перестаёт принимать яйцо, эмульсия распадается, и штоллен получается хуже. Если расслоение всё же началось — прогрейте массу в микроволновке импульсами по 7 секунд, перемешивая между ними.
+                <span class="source-badge">⏱ Урок 1: 14:21–14:46, 16:08–16:27</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> чем жирнее творог, тем вкуснее: сдобы в этом штоллене немного для такого количества муки. Жирный творог вдобавок хорошо держит влагу, и штоллен дольше остаётся свежим.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Яйцо: <strong>3 приёма по ~20 г</strong></span>
+              <span class="param-pill">🌡 Творог: <strong>Комнатной температуры</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Однородная эмульсия без жидкости</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Сухие ингредиенты — получается крошка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Муку просейте и перемешайте с разрыхлителем и солью. Введите всё в масляно-творожную массу и перемешайте миксером на небольшой скорости — равномерности ждать не стоит, получится крошка.
+                <span class="source-badge">⏱ Урок 1: 20:27–24:13</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> если крошка не получается, а собирается комок — скорее всего, творог слишком влажный. Это не ошибка, просто работайте дальше. И не стремитесь превратить крошку в гладкий комок: она такой и должна остаться.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Инструмент: <strong>Миксер на малой скорости</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Крупная крошка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Миндаль, ваниль, цукаты и цедра</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Добавьте 50 г рубленого обжаренного миндаля (рубите продольно, чтобы получились длинные брусочки), 7 г ванильного сахара, отжатые сухофрукты и цедру цитруса. Перемешайте.
+                <span class="source-badge">⏱ Урок 1: 24:19–25:35, 30:31–31:04</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> цедру добавляйте вместе с сухофруктами — автор в видео её забыла и напомнила об этом зрителям. Если у вас апельсиновые цукаты, вкус и так будет сбалансирован. При аллергии на орехи их можно просто исключить или заменить тем же весом сухофруктов.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥜 Миндаль: <strong>50 г, обжаренный, продольная рубка</strong></span>
+              <span class="param-pill">🍊 Цедра: <strong>1 ч. л., вместе с сухофруктами</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Марципан: сироп и миндальная мука</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Миндальную муку просейте вместе с сахарной пудрой и перемешайте — обязательно до введения сиропа. Сварите сироп из 50 г сахара и 50 г воды: после закипания около 3 минут, до 110 °C, пока сахар полностью не разойдётся. Посуда нужна маленькая: 100 г сиропа в большой кастрюле просто не сварить.
+                <span class="source-badge">⏱ Урок 1: 48:49–50:56</span>
+              </p>
+              <p>
+                Половину горячего сиропа (50 г) вылейте в миндально-пудровую смесь и замесите марципановую массу. Вторая половина не понадобится. Заверните в пищевую плёнку и уберите в холодильник застывать.
+                <span class="source-badge">⏱ Урок 1: 52:39–54:56</span>
+              </p>
+              <div class="warning-box">
+                <strong>Только половина сиропа:</strong> если вылить весь, марципан получится слишком жидким. Рецепт рассчитан так, что из 250 г марципана выходит два штоллена.
+                <span class="source-badge">⏱ Урок 1: 53:11–54:01</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> готовый марципан проще — он продаётся «картофелинами» в крупных гипермаркетах. Но если делаете рождественское обрядовое блюдо, лучше сделать самому: в промышленном марципане меньше миндальной муки и есть искусственные ароматизаторы. Миндальную муку можно смолоть самостоятельно, шелуху снимать не нужно — она даёт более яркий вкус.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сироп: <strong>110 °C, ~3 минуты после кипения</strong></span>
+              <span class="param-pill">⚖ Выход: <strong>≈250 г марципана (на 2 штоллена)</strong></span>
+              <span class="param-pill">🧊 Застывание: <strong>В холодильнике, в плёнке</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Формовка «одеялом»</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Соберите тесто в комок и выложите на противень с пергаментом. Сформируйте руками прямоугольник: ширина 20 см, длина 16–17 см, толщина 1,5–2 см. Пласт не растекается и остаётся на листе.
+                <span class="source-badge">⏱ Урок 1: 33:03–38:31</span>
+              </p>
+              <p>
+                Марципан разомните как пластилин и скатайте колбаску длиной с пласт. Положите её на одну треть теста, загните сначала одну часть, затем вторую — как одеялом. Шов должен быть виден, а марципан — не выглядывать снаружи. Слегка приплюсните штоллен: так он лучше пропечётся и это его традиционная форма.
+                <span class="source-badge">⏱ Урок 1: 38:31–45:00</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> вместо марципана внутрь можно положить маковую начинку — как в маковом рулете, размазав по всему пласту, — или просто полоску сухофруктов. Готовый штоллен на этом этапе можно заморозить: размораживать не нужно, просто добавьте 20 минут ко времени выпечки. Хранится в морозилке до 2 месяцев.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Пласт: <strong>20 × 16–17 см, толщина 1,5–2 см</strong></span>
+              <span class="param-pill">🥜 Марципан: <strong>≈125 г колбаской</strong></span>
+              <span class="param-pill">🕐 До выпечки: <strong>1 час при комнатной температуре или 24 часа в холодильнике</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Выпечка 45–50 минут</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте в заранее разогретой духовке: 170 °C с конвекцией 45–50 минут. Противень ставьте посередине. Готовность проверяйте сухой зубочисткой, как обычный кекс.
+                <span class="source-badge">⏱ Урок 1: 46:28–47:12</span>
+              </p>
+              <div class="warning-box">
+                <strong>Другие духовки:</strong> без конвекции — режим «верх-низ» при 180 °C. В газовой духовке — 180 °C, противень на самый верх; времени может понадобиться больше, ориентируйтесь на зубочистку.
+                <span class="source-badge">⏱ Урок 1: 29:42–30:31, 48:19–48:29</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> пекарский камень в духовке помогает выровнять температуру — на нём хорошо печь и хлеб, и пиццу.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>170 °C конвекция / 180 °C верх-низ</strong></span>
+              <span class="param-pill">⏱ Время: <strong>45–50 минут</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Сухая зубочистка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Горячее масло и пудра в два приёма</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Пока штоллен горячий, растопите 70 г сливочного масла и щедро промажьте им штоллен кисточкой в несколько приёмов со всех сторон. Масло должно впитаться, а не стечь на пергамент.
+                <span class="source-badge">⏱ Урок 1: 01:07:12–01:12:53</span>
+              </p>
+              <p>
+                Затем посыпьте сахарной пудрой. Первый слой пожелтеет от масла — дайте ему схватиться и посыпьте второй раз: он даст красивый белоснежный вид. Всего нужно около 150 г пудры.
+                <span class="source-badge">⏱ Урок 1: 01:13:00–01:14:30</span>
+              </p>
+              <div class="warning-box">
+                <strong>Только на горячий штоллен:</strong> масло войдёт, только если изделие горячее. На остывшем или, тем более, холодном штоллене эта операция не сработает — масло останется на поверхности.
+                <span class="source-badge">⏱ Урок 1: 01:09:00–01:09:11</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> эту сдобу мы добавляем снаружи именно потому, что внутри её мало. Если бы всё масло и сахар пошли в тесто, оно стало бы настолько жидким, что завернуть его «одеялом» не получилось бы. Пропитывать штоллен алкоголем автор не советует: детям такой десерт уже нельзя.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Масло: <strong>70 г, растопленное, кисточкой</strong></span>
+              <span class="param-pill">🍬 Пудра: <strong>150 г, два слоя</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Масло ушло в тесто, пудра белая</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Завернуть и дать созреть 24 часа</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Заверните штоллен в пергамент и оставьте созревать. Он станет вкуснее через 24 часа — постарайтесь не съесть его в день выпечки.
+                <span class="source-badge">⏱ Урок 1: 01:12:34–01:12:47</span>
+              </p>
+              <p>
+                Хранение: 3 дня при комнатной температуре, 1 месяц в холодильнике, 2 месяца в морозилке. Замораживать можно и готовый штоллен, и сформированное тесто.
+                <span class="source-badge">⏱ DOCX</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> раньше штоллены пекли загодя и хранили в комодах при +14 °C, потому что не было холодильников. Сейчас достаточно 24 часов — и можно подавать. Пергамент, вымоченный в роме, от порчи не спасает: это миф.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Созревание: <strong>24 часа</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>3 дня / 1 месяц / 2 месяца</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Всё комнатной температуры:</strong> масло, яйцо и даже творог. Иначе эмульсия расслаивается и кекс получается хуже.</li>
+                <li><strong>Штоллен — это кекс:</strong> сдобы и сахара в нём немного, поэтому все правила кексов работают и здесь: взбить масло с сахаром до бела, яйцо вводить постепенно.</li>
+                <li><strong>Сахар не растворяется:</strong> жидкости в тесте почти нет, крупинки остаются — это норма.</li>
+                <li><strong>Разрыхлитель вместо закваски:</strong> исторически штоллен делали на закваске, но с разрыхлителем проще и быстрее, и такие рецепты давно стали классикой.</li>
+                <li><strong>Жирный творог:</strong> чем жирнее, тем вкуснее и тем дольше штоллен остаётся свежим — творог держит влагу.</li>
+                <li><strong>Крошка, а не комок:</strong> тесто не вымешивают до гладкости, оно должно напоминать по консистенции дрожжевое — такое, из которого можно слепить пирожок.</li>
+                <li><strong>Сдоба снаружи:</strong> масло и пудра добавляются после выпечки, иначе тесто стало бы слишком жидким для формовки.</li>
+                <li><strong>Заготовка впрок:</strong> сформированные штоллены замораживают до 2 месяцев и пекут без разморозки, добавив 20 минут.</li>
+                <li><strong>Время разрыхлителя:</strong> без холодильника тесто нужно отправить в печь в течение часа. В холодильнике заготовка стоит до 24 часов.</li>
+                <li><strong>Миндальная серединка:</strong> в Европе её иногда окрашивают водорастворимым красителем в голубой или розовый — по традиции «на пол» ребёнка. На разрез это смотрится очень эффектно.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Холодные продукты:</strong> масса расслаивается, масло не принимает яйцо. Грейте яйцо в тёплой воде, творог доставайте заранее.</li>
+                <li><strong>Расслоение не исправили:</strong> прогревайте массу импульсами по 7 секунд в микроволновке, иначе эмульсию уже не собрать.</li>
+                <li><strong>Весь сироп в марципан:</strong> он получится жидким. Нужна ровно половина — 50 г.</li>
+                <li><strong>Марципан в шоколаде:</strong> при 170 °C шоколад начнёт гореть. Берите обычный марципан.</li>
+                <li><strong>Мокрые сухофрукты:</strong> лишний алкоголь в тесте делает его жиже. Отжимайте.</li>
+                <li><strong>Смазывать остывший штоллен:</strong> масло не впитается. Только пока горячий.</li>
+                <li><strong>Один слой пудры:</strong> первый слой желтеет от масла, поэтому пудру наносят дважды.</li>
+                <li><strong>Печь сразу без проверки:</strong> в газовой духовке время больше, а верхнее положение противня обязательно.</li>
+                <li><strong>Съесть в день выпечки:</strong> вкус раскрывается через 24 часа.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 (сухофрукты, замес, формовка, марципан, выпечка, пропитка маслом и пудрой — 00:00–01:15:48); расшифровка с таймкодами «Расшифровка Рождественский_штоллен.csv»; файл «Рождественский Штоллен.docx» с точными граммовками теста, марципана и обсыпки. Таймкоды на странице — реальные, из расшифровки.</li>
+              <li><strong>Соль:</strong> DOCX — 1,5–2 г. На странице 2 г с пометкой диапазона.</li>
+              <li><strong>Масло на пропитку:</strong> DOCX — 70–100 г, в видео автор берёт 70 г. На странице 70 г с пометкой.</li>
+              <li><strong>Ваниль:</strong> DOCX — 7 г ванилина/ванильного сахара/пасты, в видео автор отвешивает 15 г и берёт половину — 7 г. Совпадает.</li>
+              <li><strong>Марципан:</strong> в видео автор использует готовый марципан — около 125 г на штоллен; рецептура домашнего марципана в DOCX даёт около 250 г, то есть на два штоллена. На странице марципан вынесен отдельной группой с пояснением.</li>
+              <li><strong>Температура:</strong> DOCX — 170 °C конвекция 45–50 минут; альтернативы 180 °C верх-низ и 180 °C в газовой духовке на верхнем уровне. В видео те же цифры.</li>
+              <li><strong>Пробелы:</strong> точный вес готового штоллена автор не называет; в DOCX указан размер пласта (20 × 16 см) и толщина 1,5–2 см. Ни в DOCX, ни в видео нет граммовки маковой начинки — она упоминается только как альтернатива марципану.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице стоит кадр из Урок_01.mp4 с готовым штолленом в пудре. Пользователь сообщил, что фото в любом случае переделает.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

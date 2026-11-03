@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кулебяка с капустой и яйцом — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Кулебяка с капустой и яйцом Надежды Зубовой: универсальное дрожжевое тесто холодным способом на 8–24 ч в холодильнике, начинка из капусты, тушённой в белом вине с рублеными яйцами, формовка одним куском теста и выпечка при 170–180 °C.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="kulebyaka">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Основные блюда</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Кулебяка с капустой и яйцом</h1>
+      <p class="recipe-lead">
+        Кулебяка на универсальном дрожжевом тесте, замешанном холодным способом: без долгого вымешивания, на ночь в холодильник. Начинка — капуста, тушённая в белом вине, с рублеными варёными яйцами. Кулебяку отличает то, что она состоит из одного куска теста: на одну часть выкладывают начинку, другой накрывают сверху. Из этой же рецептуры теста получаются и маленькие пирожки.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~15 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Тесто в холодильнике 8–24 ч, начинка, формовка 15–20 мин, выпечка 25–35 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~3–4 ч активной работы + ночь на тесто</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">4 кулебяки (150 г теста + 150 г начинки в каждой)</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/kulebyaka.jpg" alt="Две выложенные на противень кулебяки из сырого теста, украшенные цветочками-вырубками, перед выпечкой" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 замес)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">замес (4 кулебяки)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База калькулятора — один замес теста по DOCX (выход ~2 кг) и начинка на 4 кулебяки: по 150 г теста + 150 г начинки в каждом пироге. Из этого же теста автор формует и маленькие пирожки (по 50–55 г теста).
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> замес</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на один замес теста (≈2 кг) и начинку на 4 кулебяки: бакалея и масло в первой колонке, овощи и яйца — во второй.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Бакалея, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с (Макфа)</strong>:
+                <span class="shopping-qty" data-base-amount="1000" data-unit="г">1000 г</span>
+                <span class="shopping-hint">Всё в тесто, плюс запас на подпыл. Килограммовый пакет</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Дрожжи прессованные</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Свежие. Проверьте слоистость: хорошие дрожжи даже слепить можно как пластилин</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="120" data-unit="г">120 г</span>
+                <span class="shopping-hint">В тесто</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">200 г в тесто + 50 г в начинку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="20" data-unit="г">20 г</span>
+                <span class="shopping-hint">В тесто; начинка солится по вкусу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Вино белое полусладкое</strong>:
+                <span class="shopping-qty" data-base-amount="180" data-unit="г">180 г</span>
+                <span class="shopping-hint">Для тушения капусты, полусладкое или сладкое. Алкоголь выпаривается</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">Комнатной температуры, в тесто</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — пищевая плёнка, пергамент
+                <span class="shopping-hint">Плёнка на тесто в холодильник, пергамент на противень</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥬 Овощи, яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Капуста белокочанная</strong>:
+                <span class="shopping-qty" data-base-amount="500" data-unit="г">500 г</span>
+                <span class="shopping-hint">Мелко нашинкованная, для начинки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="9" data-unit="шт." data-piece="true">9 шт.</span>
+                <span class="shopping-hint">250 г (≈5 шт.) в тесто, 3–4 отварных на начинку, запас на смазку изделий</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Тесто холодным способом</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1000" data-unit="г">1000 г</span> — Мука пшеничная в/с
+              <span class="ingredient-note">Макфа или другая хлебопекарная</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Дрожжи прессованные
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Молоко комнатной температуры
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Яйца куриные (≈5 шт.)
+              <span class="ingredient-note">Комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сливочное масло размягчённое
+              <span class="ingredient-note">Ввести в несколько приёмов в самом конце</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Яйцо или молоко для смазки изделий перед выпечкой
+              <span class="ingredient-note">Яйцо, яйцо с молоком, желток, желток с водой, сладкий чай или просто молоко</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка с капустой</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="500" data-unit="г">500 г</span> — Капуста белокочанная
+              <span class="ingredient-note">Мелким кубиком</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сливочное масло
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="180" data-unit="г">180 г</span> — Вино белое полусладкое
+              <span class="ingredient-note">Выпарится, останется вкус</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span> — Яйца отварные (3–4 шт.)
+              <span class="ingredient-note">Рубленые, добавить в готовую капусту</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Соль и перец
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Холодный замес теста</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В дежу высыпьте всю муку, раскрошите дрожжи, добавьте сахар и соль. Проверьте дрожжи на свежесть: если кусочек лепится и ведёт себя как пластилин — они хорошие.
+                <span class="source-badge">⏱ Урок 1: 00:01–00:22</span>
+              </p>
+              <p>
+                Включите миксер на низкую скорость, постепенно введите молоко комнатной температуры, затем яйца. Не торопитесь, дайте тесту принять всю влагу. На соединение муки и влаги уходит около минуты.
+                <span class="source-badge">⏱ Урок 1: 00:35–00:45</span>
+              </p>
+              <div class="warning-box">
+                <strong>Масло — только в самом конце:</strong> сначала мука должна впитать влагу, иначе тесто сразу разжижится и покажется, что муки не хватает. Вводите масло понемногу, по порциям.
+                <span class="source-badge">⏱ Урок 1: 00:45–00:58</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Способ: <strong>Сначала сухие + влага, масло в конце</strong></span>
+              <span class="param-pill">⏱ Увлажнение: <strong>~1 минута</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Вводим масло — тесто собирается</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Добавляйте 200 г размягчённого сливочного масла в несколько приёмов, каждый раз давая тесту собраться. Если тесто разжижилось — просто помешайте ещё немного, оно соберётся и можно добавлять следующую порцию. На введение масла уходит ~5 минут.
+                <span class="source-badge">⏱ Урок 1: 00:52–00:58</span>
+              </p>
+              <p>
+                Больше вымешивать не нужно. Тесто мягкое, слегка рыхлое, без натянутой глютеновой плёнки, но держится и не рвётся. Выход примерно 2 кг.
+                <span class="source-badge">⏱ Урок 1: 04:41–05:52</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Масло: <strong>~5 минут, в несколько приёмов</strong></span>
+              <span class="param-pill">⚖ Выход: <strong>~2 кг теста</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Тесто на ночь в холодильник</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Снимите с миксера и сделайте из теста комок (издержки из дежи можно не доставать — они туда же). Затяните миску пищевой плёнкой и уберите в холодильник на 8 часов, максимум на 24 часа.
+                <span class="source-badge">⏱ Урок 1: 05:36–05:53</span>
+              </p>
+              <p>
+                Без тёплых ингредиентов процесс уже запущен (влага, сахар, дрожжи) — тесто поднимется и в холодильнике. Перед работой доведите его до комнатной температуры.
+                <span class="source-badge">⏱ Урок 1: 05:53–06:10</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Охлаждение: <strong>8–24 часа в холодильнике</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>48 ч в холодильнике, 1 мес в морозилке</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Начинка: капуста в белом вине</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Капусту нарежьте мелко, выложите в сотейник, добавьте сливочное масло и слегка обжарьте, чтобы не пригорала и не меняла цвет, но немного уменьшилась в объёме.
+                <span class="source-badge">⏱ Урок 3: 00:18–00:36</span>
+              </p>
+              <p>
+                Влейте белое вино (полусладкое или сладкое) и тушите до полного испарения алкоголя и лишней жидкости — в капусте её быть не должно. Посолите и поперчите по вкусу.
+                <span class="source-badge">⏱ Урок 3: 00:36–00:44</span>
+              </p>
+              <p>
+                Остудите полностью. Перед формовкой вмешайте рубленые отварные яйца и ещё раз попробуйте на соль — начинка должна быть чуть солонее, чем вы от неё ожидаете.
+                <span class="source-badge">⏱ Урок 3: 01:41–02:07</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍷 Вино: <strong>180 г, тушить до выпаривания</strong></span>
+              <span class="param-pill">🥚 Яйца: <strong>3–4 рубленых в конце</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Без лишней жидкости</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Формовка кулебяк</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Нагретое тесто разделите на кусочки и взвесьте: для кулебяки 130–150 г теста, для маленьких пирожков 50–55 г. Каждый кусок подкатайте в гладкий комочек.
+                <span class="source-badge">⏱ Урок 2: 00:33–02:19</span>
+              </p>
+              <p>
+                Раскатайте лепёшку, на одну часть выложите начинку (столько же по весу, сколько теста — ~150 г), второй край накройте сверху. Защипните. Кулебяка — это один кусок теста, накрытый другим.
+                <span class="source-badge">⏱ Урок 4: 00:02–00:52</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Тесто: <strong>130–150 г; пирожки 50–55 г</strong></span>
+              <span class="param-pill">🥣 Способ: <strong>Начинка на край, накрыть вторым краем</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Декор, смазка и выпечка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Кулебяки украсьте вырубками из того же теста (цветочки), раскатав его потоньше. Оставьте подойти на 15–20 минут после формовки — это расстойка.
+                <span class="source-badge">⏱ Урок 4: 01:16–02:10</span>
+              </p>
+              <p>
+                Проколите изделия вилкой или ножом (чтобы выходил пар) и смажьте яйцом с молоком, желтком или сладким крепким чаем, чтобы зарумянились.
+                <span class="source-badge">⏱ Урок 4: 02:10–02:10</span>
+              </p>
+              <p>
+                Выпекайте в заранее разогретой духовке: 170 °C с конвекцией (можно на нескольких противнях сразу) или 180 °C верх-низ. Маленькие пирожки 18–25 минут, кулебяки — 25–35 минут.
+                <span class="source-badge">⏱ DOCX</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Расстойка: <strong>15–20 минут</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>170 °C конвекция или 180 °C верх-низ</strong></span>
+              <span class="param-pill">⏱ Время: <strong>Кулебяки 25–35 мин, пирожки 18–25 мин</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Холодное тесто — экономный замес:</strong> за 10 минут без тёплых ингредиентов. Всё делается миксером на низкой скорости, долго вымешивать не нужно.</li>
+                <li><strong>Проверка дрожжей:</strong> свежие лепятся как пластилин, имеют слоистую текстуру. Проверяйте их ещё в магазине.</li>
+                <li><strong>Масло понемногу:</strong> если ввести всё сразу, тесто разжижится. Каждая порция должна полностью войти.</li>
+                <li><strong>Капуста без сырости:</strong> тушите до полного выпаривания вина и жидкости — влажная начинка рвёт тесто паром.</li>
+                <li><strong>Начинка чуть солонее:</strong> в пироге она зазвучит правильно. Пробуйте до формовки.</li>
+                <li><strong>Взвешивание кусочков:</strong> одинаковые пирожки — секрет сектора одинаковой выпечки. Отвешивайте тесто.</li>
+                <li><strong>Заморозка готового теста:</strong> до месяца в морозилке, размораживают при комнатной температуре.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Масло сразу:</strong> тесто разжижается и кажется, что мало муки. Вводите масло в конце порциями.</li>
+                <li><strong>Влажная капустная начинка:</strong> пар при выпечке рвёт кулебяку. Тушите до сухости.</li>
+                <li><strong>Не прокололи изделия:</strong> пирог может лопнуть. Прокалывайте вилкой или ножом перед духовкой.</li>
+                <li><strong>Горячая начинка на тесто:</strong> начинку добавляют только полностью остывшую.</li>
+                <li><strong>Тёплые ингредиенты:</strong> для холодного способа молоко и яйца именно комнатной температуры, ничего греть не надо.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> серия Надежды Зубовой — Урок_01.mp4 (холодный замес теста), Урок_02.mp4 (деление и подкатка), Урок_03.mp4 (капустная начинка), Урок_04.mp4 (формовка кулебяк, декор, смазка); расшифровка с таймкодами; файл «Кулебяка с капустой и яйцом.docx» с точными граммовками теста и начинки. Таймкоды на странице — реальные, из расшифровки.</li>
+              <li><strong>Выход:</strong> DOCX даёт рецептуру теста (≈2 кг) и просит рассчитать начинку так, чтобы вышло 4 кулебяки по 150 г теста + 150 г начинки. База калькулятора — один замес теста и начинка на 4 кулебяки. В видео автор отвешивает тесто по 130 г, в DOCX указано 150 г — на странице поля «130–150 г».</li>
+              <li><strong>Смазка:</strong> DOCX допускает яйцо, яйцо с молоком, желток, желток с водой, сладкий крепкий чай или молоко. В видео показана смазка яйцом.</li>
+              <li><strong>Начинка:</strong> DOCX даёт 500 г капусты, 50 г масла, 180 г вина и 3–4 яйца. Точный выход начинки автор не называет; начинка в кулебяку кладётся примерно равная тесту по весу.</li>
+              <li><strong>Расстойка:</strong> DOCX говорит про 15–20 минут после формовки. В видео подробно не показана.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице стоит кадр из Урок_04.mp4 — две кулебяки из сырого теста с цветочками-вырубками на пергаменте перед выпечкой (кадр 00:02:10). Пользователь сообщил, что фото в любом случае переделает.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

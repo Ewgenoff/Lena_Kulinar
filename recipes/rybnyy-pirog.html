@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рыбный пирог на холодном дрожжевом тесте — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Рыбный пирог Надежды Зубовой: дрожжевое тесто холодным способом (8–24 часа в холодильнике, без долгого вымешивания) и начинка из рыбы, обжаренного лука-порея, варёных яиц и творожного сыра. Выпечка при 170 °C с конвекцией 20–25 минут.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="rybnyy-pirog">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Основные блюда</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Рыбный пирог на холодном дрожжевом тесте</h1>
+      <p class="recipe-lead">
+        Закрытый рыбный пирог на универсальном дрожжевом тесте холодным способом: всё смешивается за несколько минут, масло вводится в самом конце, а тесто уходит в холодильник на ночь — от 8 до 24 часов. Начинка простая и сытная: обжаренный лук-порей, отварная рыба без костей, рубленые варёные яйца и творожный сыр. Пирог смазывают яйцом, прокалывают и выпекают 20–25 минут.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~40 мин (замес, начинка, формовка)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Холодильник 8–24 ч, расстойка 15–20 мин, выпечка 20–25 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">9–25 ч с холодным брожением</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 пирог из 500 г теста</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/rybnyy-pirog.jpg" alt="Закрытый рыбный пирог из дрожжевого теста с румяной корочкой и разрезом, в котором видна начинка из рыбы, яйца и лука" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 пирог)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">пирог</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База калькулятора — один пирог: по DOCX на него нужно 500 г теста, а тесто в источнике дано на большой замес (1000 г муки, выход ≈2 кг). Граммовки пересчитаны пропорционально под 500 г выхода — коэффициентом ≈0,26. Начинка дана на один пирог.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> пирог</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Список на 500 г теста и начинку на один пирог: бакалея и молочное в первой колонке, рыба и овощи — во второй.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Бакалея, молочное, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная (Макфа)</strong>:
+                <span class="shopping-qty" data-base-amount="258" data-unit="г">258 г</span>
+                <span class="shopping-hint">Плюс запас на подпыл. Автор работает на Макфе</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Дрожжи прессованные</strong>:
+                <span class="shopping-qty" data-base-amount="13" data-unit="г">13 г</span>
+                <span class="shopping-hint">Свежие: проверьте слоистость и запах, кусочек должен лепиться как пластилин</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="31" data-unit="г">31 г</span>
+                <span class="shopping-hint">В тесто</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="г">5 г</span>
+                <span class="shopping-hint">В тесто; начинка солится отдельно</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко</strong>:
+                <span class="shopping-qty" data-base-amount="77" data-unit="г">77 г</span>
+                <span class="shopping-hint">Комнатной температуры — ничего не подогревать</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное</strong>:
+                <span class="shopping-qty" data-base-amount="77" data-unit="г">77 г</span>
+                <span class="shopping-hint">52 г размягчённого в тесто + 25 г на обжарку лука</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творожный сыр</strong>:
+                <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span>
+                <span class="shopping-hint">В начинку, верхним слоем</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — пищевая плёнка, пергамент
+                <span class="shopping-hint">Плёнкой затягивают миску на ночь, пергамент — на противень</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🐟 Рыба, овощи, яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Рыба (красная или скумбрия)</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">Можно заменить консервами; филе без костей</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лук-порей</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">Один стебель, обжарить на сливочном масле</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span>
+                <span class="shopping-hint">1–2 отварных в начинку, одно яйцо на смазку пирога</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль, перец</strong> — по вкусу
+                <span class="shopping-hint">Лук солится при обжарке, рыба варится в подсоленной воде</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Тесто холодным способом (500 г)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="258" data-unit="г">258 г</span> — Мука пшеничная
+              <span class="ingredient-note">Макфа или другая хлебопекарная, просеять</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="13" data-unit="г">13 г</span> — Дрожжи прессованные
+              <span class="ingredient-note">Раскрошить прямо в муку</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="г">5 г</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="31" data-unit="г">31 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="77" data-unit="г">77 г</span> — Молоко комнатной температуры
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="64" data-unit="г">64 г</span> — Яйца
+              <span class="ingredient-note">Комнатной температуры, без скорлупы</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="52" data-unit="г">52 г</span> — Масло сливочное размягчённое
+              <span class="ingredient-note">Вводится в несколько приёмов в самом конце</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Ваниль
+              <span class="ingredient-note">Только если делаете сладкие булочки из этого теста — в рыбный пирог не нужна</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Рыба
+              <span class="ingredient-note">Красная или скумбрия, можно консервы. Отварить в подсоленной воде, разобрать на кусочки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span> — Лук-порей
+              <span class="ingredient-note">Обжарить со сливочным маслом и посолить</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Масло сливочное
+              <span class="ingredient-note">Для обжарки лука</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span> — Яйца варёные
+              <span class="ingredient-note">В DOCX 1–2 шт., рубленые</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Творожный сыр
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Соль и перец
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Для смазки</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Яйцо, яйцо с молоком, желток, желток с водой, крепкий сладкий чай или молоко
+              <span class="ingredient-note">Любой из вариантов — чтобы пирог зарумянился</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Сухие ингредиенты, молоко и яйца</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В дежу миксера высыпьте всю муку, раскрошите дрожжи, добавьте сахар и соль. Включите низкую скорость и влейте молоко комнатной температуры, затем яйца.
+                <span class="source-badge">⏱ Урок 1: 00:09–02:07</span>
+              </p>
+              <p>
+                Дайте тесту впитать всю влагу — на соединение муки и жидкости уходит около минуты. Порядок важен: сначала жидкость, масло — только в самом конце.
+                <span class="source-badge">⏱ Урок 1: 02:13–02:52</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> молоко не подогревайте, яйца тоже комнатной температуры. В тесте не нужно ничего теплее окружающей среды.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Впитывание влаги: <strong>~1 минута</strong></span>
+              <span class="param-pill">🌡 Молоко и яйца: <strong>Комнатной температуры</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Масло в несколько приёмов</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Добавляйте размягчённое масло понемногу, давая каждой порции полностью войти в тесто. Если тесто разжижилось — просто помешайте ещё немного, оно соберётся, и тогда вводите следующую порцию. На всё уходит около 5 минут.
+                <span class="source-badge">⏱ Урок 1: 02:30–04:47</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не вываливайте всё масло сразу:</strong> тесто разжижится и покажется, что не хватает муки. Тесто должно быть мягким и рыхлым, без натянутой глютеновой плёнки, но держаться и не рваться.
+                <span class="source-badge">⏱ Урок 1: 03:09–05:37</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> из этого теста выходят пирожки и кулебяки. Хотите сладкую выпечку — добавьте в тесто ваниль.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Масло: <strong>~5 минут, порциями</strong></span>
+              <span class="param-pill">⚖ Выход авторского замеса: <strong>≈2 кг</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Холодильник на 8–24 часа</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Соберите тесто в комок и верните в дежу. Затяните пищевой плёнкой и уберите в холодильник на 8 часов, максимум на 24. Печь автор советует на следующий день.
+                <span class="source-badge">⏱ Урок 1: 05:37–06:10</span>
+              </p>
+              <p>
+                Перед работой достаньте тесто, выложите на стол, накройте тряпочкой и дайте нагреться до комнатной температуры — оно не будет сильно липнуть к рукам.
+                <span class="source-badge">⏱ Урок 2: 00:01–00:27</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> ничего тёплого мы не добавляли, но процесс уже запущен — влага, сахар, дрожжи. Тесто поднимется и в холодильнике.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Холод: <strong>8–24 часа</strong></span>
+              <span class="param-pill">📦 Хранение теста: <strong>48 ч в холодильнике, 1 мес в морозилке</strong></span>
+              <span class="param-pill">🌡 Перед работой: <strong>До комнатной температуры</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Начинка: лук, рыба, яйца, сыр</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Лук-порей обжарьте со сливочным маслом и посолите. Рыбу отварите в подсоленной воде и разберите на кусочки без костей. Яйца отварите и порубите.
+                <span class="source-badge">⏱ DOCX</span>
+              </p>
+              <div class="warning-box">
+                <strong>Начинка должна остыть:</strong> горячий лук или рыба дадут пар и размягчат тесто снизу. Дайте всем компонентам дойти до комнатной температуры.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧅 Лук: <strong>Обжарить, посолить</strong></span>
+              <span class="param-pill">🐟 Рыба: <strong>Отварить, без костей</strong></span>
+              <span class="param-pill">🥚 Яйца: <strong>Отварить, порубить</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Формовка пирога</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отвесьте 500 г теста. На дно пирога выложите слой лука и посолите, затем рыбу кусочками, сверху рубленое яйцо и творожный сыр. Закройте пирог второй частью теста и защипните края.
+                <span class="source-badge">⏱ DOCX</span>
+              </p>
+              <p>
+                Смажьте яйцом и обязательно проколите вилкой или ножом — чтобы выходил пар. После формовки дайте изделию подойти 15–20 минут.
+                <span class="source-badge">⏱ DOCX</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> взвешивайте тесто. Секрет одинаковых изделий именно в этом: небольшие пирожки — 50–55 г, большие пироги и кулебяки — 400–500 г теста.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Тесто: <strong>500 г на пирог</strong></span>
+              <span class="param-pill">⏱ Расстойка: <strong>15–20 минут</strong></span>
+              <span class="param-pill">🥚 Смазка: <strong>Яйцом, затем проколоть</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Выпечка 20–25 минут</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте в заранее разогретой духовке: 170 °C с конвекцией (можно сразу на нескольких противнях) или 180 °C в режиме «верх-низ». Пирогу нужно 20–25 минут.
+                <span class="source-badge">⏱ DOCX</span>
+              </p>
+              <div class="warning-box">
+                <strong>Газовая духовка:</strong> пеките при 180 °C только на одном противне, время может понадобиться больше — ориентируйтесь на румяную корочку.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> время зависит от размера изделия и силы духовки. Большие пироги и кулебяки пекут не менее 25–35 минут, всё зависит от начинки.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>170 °C конвекция / 180 °C верх-низ</strong></span>
+              <span class="param-pill">⏱ Время: <strong>20–25 минут</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Румяная корочка, сухая зубочистка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Хранение готового пирога</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Готовый пирог храните 2 дня при комнатной температуре — в бумажном пакете, холщовом мешочке или под полотенцем. В холодильнике в плёнке — до 7 дней.
+                <span class="source-badge">⏱ DOCX</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> разогревать лучше в духовке, а не в микроволновке — корочка останется хрустящей.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📦 Комнатная температура: <strong>2 дня</strong></span>
+              <span class="param-pill">❄️ Холодильник: <strong>до 7 дней в плёнке</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Холодный способ:</strong> замес занимает минуты, а не полчаса — тесто не вымешивают до гладкости, работу делает холодильник.</li>
+                <li><strong>Проверка дрожжей:</strong> свежие дрожжи имеют слоистую текстуру и лепятся как пластилин — это видно ещё в магазине.</li>
+                <li><strong>Масло в конце:</strong> сначала мука должна напитаться влагой, иначе тесто разжижится и покажется, что мало муки.</li>
+                <li><strong>Разжижилось — подождите:</strong> дайте тесту собраться, помешайте ещё немного, и только потом добавляйте масло.</li>
+                <li><strong>Ничего тёплого:</strong> молоко и яйца комнатной температуры, греть не нужно.</li>
+                <li><strong>Взвешивание:</strong> одинаковые изделия получаются только при отвешивании теста — 50–55 г на пирожок, 400–500 г на пирог.</li>
+                <li><strong>Проколы:</strong> пирог прокалывают вилкой или ножом перед выпечкой, иначе пар разорвёт верх.</li>
+                <li><strong>Запас теста:</strong> тесто хранится 48 часов в холодильнике и месяц в морозилке, размораживают при комнатной температуре.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Всё масло сразу:</strong> тесто разжижается, и кажется, что не хватает муки.</li>
+                <li><strong>Подогретое молоко:</strong> в холодном способе это лишнее, тесто начинает вести себя непредсказуемо.</li>
+                <li><strong>Печь сразу после холодильника:</strong> холодное тесто плохо раскатывается и рвётся при формовке.</li>
+                <li><strong>Горячая начинка:</strong> пар размягчает тесто, низ пирога получается сырым.</li>
+                <li><strong>Не прокололи верх:</strong> пирог может вздуться и лопнуть.</li>
+                <li><strong>Много начинки:</strong> тесто не пропекается, если слой начинки слишком толстый.</li>
+                <li><strong>Хранить в пакете тёплым:</strong> корочка отсыревает. Дайте пирогу остыть.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 (замес теста холодным способом — 00:00–06:10), Урок_02.mp4 (тесто после холодильника, деление и подкатка — 00:00–02:31); расшифровка с таймкодами «Расшифровка Рыбный пирог.csv»; файл «Рыбный пирог.docx» с граммовками теста, начинки и режимами выпечки. Таймкоды на странице — реальные, из расшифровки.</li>
+              <li><strong>Урок_03.mp4 повреждён:</strong> файл не открывается (нет moov atom), поэтому начинка и выпечка восстановлены по DOCX — там есть и порядок слоёв, и режимы. Видеотаймкодов для этих шагов у страницы нет.</li>
+              <li><strong>Пересчёт теста:</strong> в DOCX тесто дано на большой замес (1000 г муки, выход ≈2 кг) и отдельно сказано: «рассчитай граммовки продуктов на тесто так, чтобы выход теста был 500 г». Граммовки пересчитаны пропорционально (коэффициент ≈0,26) и округлены.</li>
+              <li><strong>Количество яиц в начинке:</strong> в DOCX «1–2 шт.»; на странице 2 шт. с пометкой диапазона.</li>
+              <li><strong>Рыба:</strong> DOCX допускает красную рыбу, скумбрию и консервы. В видео начинка не показана.</li>
+              <li><strong>Пробелы:</strong> точный вес готового пирога не указан; температура внутри пирога и время расстойки в видео не названы — расстойка 15–20 минут и режимы взяты из DOCX.</li>
+              <li><strong>Фото:</strong> в папке нет ни готовых снимков, ни пригодного кадра — урок с начинкой и выпечкой (Урок_03) повреждён. На странице стоит сгенерированное изображение-заглушка, а не настоящее фото пирога; его нужно заменить.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

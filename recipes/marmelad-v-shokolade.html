@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мармелад в шоколаде: малина, абрикос и вишня — пошаговый рецепт | CookBook</title>
+  <meta name="description" content="Мармелад в шоколаде Надежды Зубовой: три вида на яблочном (жёлтом) пектине с сиропом глюкозы, варка до 105–106 °C, проба на нестекающую каплю, обсыпка сахаром и темперирование тёмного шоколада методом посева.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body data-recipe-id="marmelad-v-shokolade">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Конфеты и сладости</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Мармелад в шоколаде: малина, абрикос и вишня</h1>
+      <p class="recipe-lead">
+        Настоящий фруктовый мармелад — это пюре, яблочный (жёлтый) пектин и сироп глюкозы, без желатина и агара: пектин даёт упругую текстуру, которая пружинит, а не хрустит стеклом. Три вида варятся одинаково, но до разной температуры: чем кислее ягода, тем выше и температура, и количество кислоты. Дальше мармелад режут брусочками, обваливают в сахаре и купают в темперированном тёмном шоколаде.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">1 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">~2 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~3 ч 50 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">3 вида мармелада по 250 г пюре + конфеты</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/marmelad-v-shokolade.jpg" alt="Мармелад в шоколаде: брусочки в тёмной глазури на решётке, рядом пласты мармелада в сахаре" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (3 вида)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="3">3</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">вида мармелада</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — полный набор урока: три вида по 250 г пюре (малина, абрикос, вишня). Калькулятор масштабирует все три рецептуры одновременно; если варите только один вид, берите его строки из раскладки без пересчёта — сахар и кислота у видов разные.
+          </p>
+        </div>
+
+        <!-- Переключатель источников и таймкодов видео -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Количество видов: <span class="shopping-portion-val">3</span></span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на три вида мармелада и конфеты в шоколаде. Пектин нужен именно яблочный (жёлтый): цитрусовый и пектин NH для этого рецепта не подойдут.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: пюре -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍓 Пюре и ягоды</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре малины</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Покупное кондитерское или своё из свежих либо замороженных ягод</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре абрикоса</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Из этого вида мармелад получается самым ароматным</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре вишни без косточек</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Самый жидкий и самый сложный вид из трёх</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимон</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">Из него отжимают сок — 13 г на три вида; кислоту в воде не разводят</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: пектин, сахар, шоколад -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Пектин, сиропы и шоколад</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пектин яблочный (жёлтый)</strong>:
+                <span class="shopping-qty" data-base-amount="21" data-unit="г">21 г</span>
+                <span class="shopping-hint">По 7 г на вид. Цитрусовый пектин и пектин NH не подойдут</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="855" data-unit="г">855 г</span>
+                <span class="shopping-hint">75 г — с пектином, 780 г — в варку: 270 г малина, 240 г абрикос, 270 г вишня</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сироп глюкозы 43%</strong>:
+                <span class="shopping-qty" data-base-amount="195" data-unit="г">195 г</span>
+                <span class="shopping-hint">По 65 г на вид; нужен жидкий, из кондитерского магазина. Сухая глюкоза, декстроза и мёд не заменяют</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимонная кислота</strong>:
+                <span class="shopping-qty" data-base-amount="13" data-unit="г">13 г</span>
+                <span class="shopping-hint">4 г малина, 5 г абрикос, 4 г вишня; растворяется в лимонном соке перед варкой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шоколад тёмный 54%</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">160 г на нагрев и 40 г калетками — для темперирования методом посева</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар мелкокристаллический</strong>
+                <span class="shopping-hint">По вкусу, для обсыпки мармелада: именно мелкий, не крупный</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао-масло</strong> (опционально):
+                <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+                <span class="shopping-hint">Добавить в растопленный шоколад, чтобы глазурь была жиже и корпус тоньше</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шоколад 72% для полосок</strong> (опционально)
+                <span class="shopping-hint">По вкусу, для декора поверх глазури</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — погружной термометр, силиконовые коврики, металлическая рамка (или кольцо, форма со съёмным дном), простые силиконовые формы, сотейник на 2 л, решётка, вилка
+                <span class="shopping-hint">Термометр обязателен, пирометр не подойдёт; на один вид нужен свой коврик</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Малиновый мармелад — варка до 106 °C</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Пюре малины
+              <span class="ingredient-note">Без косточек; можно покупное или своё</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Сахар с пектином
+              <span class="ingredient-note">Смешивается с пектином, чтобы тот не комковался</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Пектин яблочный (жёлтый)
+              <span class="ingredient-note">Вводится дождём в пюре холоднее 40 °C</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="270" data-unit="г">270 г</span> — Сахар во второй приём
+              <span class="ingredient-note">Всыпается в закипевшую массу</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="65" data-unit="г">65 г</span> — Сироп глюкозы
+              <span class="ingredient-note">После пектина, перед вторым сахаром</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="г">4 г</span> — Лимонная кислота
+              <span class="ingredient-note">Растворить в 4 г лимонного сока заранее</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Абрикосовый мармелад — варка до 105 °C</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Пюре абрикоса
+              <span class="ingredient-note">Абрикос слаще малины, поэтому сахара меньше, а кислоты больше</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Сахар с пектином
+              <span class="ingredient-note">Пропорция та же, что у малины</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Пектин яблочный (жёлтый)
+              <span class="ingredient-note">Дождём, при постоянном помешивании</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="240" data-unit="г">240 г</span> — Сахар во второй приём
+              <span class="ingredient-note">На 30 г меньше, чем у малины и вишни</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="65" data-unit="г">65 г</span> — Сироп глюкозы
+              <span class="ingredient-note">Столько же, как в остальных видах</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="г">5 г</span> — Лимонная кислота
+              <span class="ingredient-note">Растворить в 5 г лимонного сока заранее</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Вишнёвый мармелад — варка до 106 °C</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Пюре вишни
+              <span class="ingredient-note">Без косточек; самый жидкий вид, стабилизируется дольше всех</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Сахар с пектином
+              <span class="ingredient-note">В холодное пюре</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Пектин яблочный (жёлтый)
+              <span class="ingredient-note">Для черники и чёрной смородины автор советует 8 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="270" data-unit="г">270 г</span> — Сахар во второй приём
+              <span class="ingredient-note">Как у малины</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="65" data-unit="г">65 г</span> — Сироп глюкозы
+              <span class="ingredient-note">Как у малины и абрикоса</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="г">4 г</span> — Лимонная кислота
+              <span class="ingredient-note">Растворить в 4 г лимонного сока заранее</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Конфеты и обсыпка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Шоколад тёмный 54%
+              <span class="ingredient-note">160 г на нагрев + 40 г калетками для посева</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Сахар мелкокристаллический
+              <span class="ingredient-note">Для обваливания мармелада</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Какао-масло
+              <span class="ingredient-note">По желанию: глазурь станет жиже, корпус тоньше</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Пюре: покупное, своё или из заморозки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Автор работает на готовом кондитерском пюре, но подойдут и обычные фрукты: возьмите нужное количество по весу, пробейте блендером и используйте. Замороженные ягоды разморозьте и пробейте — жидкость при этом не сливайте.
+                <span class="source-badge">⏱ Урок 1: 03:14–03:36</span>
+              </p>
+              <p>
+                Если пюре заготавливают впрок, к нему добавляют 10% сахара по весу, нагревают до растворения сахара (но не кипятят), раскладывают по контейнерам и замораживают. Сахар делает кристаллы льда мелкими, и при разморозке фруктовая мембрана не рвётся.
+                <span class="source-badge">⏱ Урок 1: 03:37–04:54</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍓 Пюре: <strong>250 г на вид</strong></span>
+              <span class="param-pill">🧊 Заготовка: <strong>+10% сахара по весу</strong></span>
+              <span class="param-pill">🌡 Нагрев: <strong>до растворения, не кипятить</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Почему пектин, а не желатин и агар</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Желатин желирует и несладкую жидкость, и холодец, но не увеличивает срок годности: мармелад на желатине живёт три дня и требует холодильника — это уже другой продукт. Агар даёт «стеклянную» текстуру: изделие ломается ровными кусками, не пружинит и не тянется, а в магазинах на нём желируют подкрашенный сироп с ароматизатором.
+                <span class="source-badge">⏱ Урок 1: 08:12–10:47</span>
+              </p>
+              <div class="tip-box">
+                <strong>Микс пектина и агара:</strong> в этом случае пюре можно разбавлять водой и уваривать, но автор работает на 100% пюре без добавления жидкости — так вкус остаётся честным.
+                <span class="source-badge">⏱ Урок 1: 10:47–11:30</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🚫 Желатин: <strong>не мармелад</strong></span>
+              <span class="param-pill">🚫 Агар: <strong>стеклянная текстура</strong></span>
+              <span class="param-pill">✅ Пектин: <strong>пружинит и упругий</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Яблочный (жёлтый) пектин и глюкоза</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Нужен яблочный пектин; жёлтый — это, как правило, он же или смесь яблочного с цитрусовым. Он даёт вязкость и схватывает воду при высокой кислотности и большом количестве сахара. Пектин NH и цитрусовый для этого рецепта не подходят: NH разработан под низкую кислотность и мало сахара и нужной текстуры не даст.
+                <span class="source-badge">⏱ Урок 1: 05:50–06:12</span>
+              </p>
+              <p>
+                Сироп глюкозы — сильный натуральный консервант: он не даёт сахару кристаллизоваться, связывает воду и продлевает срок годности мармелада до двух месяцев. Без него мармелад живёт неделю и может «мокнуть».
+                <span class="source-badge">⏱ Урок 1: 15:12–16:42</span>
+              </p>
+              <div class="warning-box">
+                <strong>Яблочный пектин необратим:</strong> его нельзя переварить, остудить и сварить заново, а замораживать бессмысленно — после разморозки он потечёт. Всё варится за один раз.
+                <span class="source-badge">⏱ Урок 1: 17:51–19:32</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍏 Пектин: <strong>7 г на 250 г пюре</strong></span>
+              <span class="param-pill">🍯 Глюкоза: <strong>65 г, жидкая 43%</strong></span>
+              <span class="param-pill">📅 Срок: <strong>2 месяца вместо недели</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Кислота: растворить в лимонном соке</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В самом начале отвесьте лимонный сок и растворите в нём лимонную кислоту — пусть стоит и растворяется, пока варится мармелад. Раствор в соке делает кислоту сильнее, чем в воде.
+                <span class="source-badge">⏱ Урок 1: 07:33–07:48</span>
+              </p>
+              <div class="warning-box">
+                <strong>Заменить кислоту соком нельзя:</strong> неизвестно, сколько кислоты реально в лимоне, поэтому по граммам сок кислоту не замещает. И даже в кислом мармеладе из лайма кислота нужна — она фиксирует густоту и компенсирует ту, что разрушилась при долгой варке.
+                <span class="source-badge">⏱ Урок 1: 24:16–26:36</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍋 Кислота: <strong>4–5 г на вид</strong></span>
+              <span class="param-pill">🧃 Сок: <strong>столько же, по весу</strong></span>
+              <span class="param-pill">⏱ Ввод: <strong>в самом конце варки</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Пектин в холодное пюре</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Смешайте пектин с первой порцией сахара (25 г) — это нужно, чтобы он не комковался. Вводите смесь дождём в пюре, которое ещё не нагрелось до 40 °C, и сразу активно перемешивайте: нельзя всыпать комом и уйти. Затем при лёгком нагреве домешивайте, чтобы пектин распределился равномерно.
+                <span class="source-badge">⏱ Урок 1: 35:00–36:38</span>
+              </p>
+              <div class="warning-box">
+                <strong>Только в холодное:</strong> в пюре горячее 40 °C пектин закомкуется и не раскроет загущающие свойства. Если пектин пришёл комками, разомните его прямо в упаковке.
+                <span class="source-badge">⏱ Урок 1: 35:24–36:17</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Пюре: <strong>холоднее 40 °C</strong></span>
+              <span class="param-pill">🥄 Сахар: <strong>25 г с пектином</strong></span>
+              <span class="param-pill">🌧 Ввод: <strong>дождём, при помешивании</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Сироп глюкозы и первый сахар</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Снимите массу с нагрева, поставьте на весы и добавьте сироп глюкозы — 65 г. Верните на плиту и доведите до кипения, чтобы глюкоза полностью разошлась. Пюре после пектина становится матовым и более ярким.
+                <span class="source-badge">⏱ Урок 1: 37:49–39:22</span>
+              </p>
+              <p>
+                Как только закипело — всыпайте вторую порцию сахара и сразу убавляйте температуру: дальше мармелад варится на маленьком огне при постоянном помешивании, иначе пригорает и прилипает.
+                <span class="source-badge">⏱ Урок 1: 40:19–42:39</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍯 Глюкоза: <strong>65 г</strong></span>
+              <span class="param-pill">🍬 Второй сахар: <strong>270 / 240 / 270 г</strong></span>
+              <span class="param-pill">🔥 Огонь: <strong>маленький, постоянно мешать</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Варка до 105–106 °C</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Малину и вишню уваривают до 106 °C, абрикос — до 105 °C: чем кислее ягода, тем выше температура. Нужно уверенное значение 106–106,5 °C, а не «105,5 — и так сойдёт». Температура может подолгу стоять на месте — это нормально: густота появится только после того, как испарится лишняя влага.
+                <span class="source-badge">⏱ Урок 1: 41:16–42:39</span>
+              </p>
+              <div class="tip-box">
+                <strong>Вторая проверка — капля:</strong> капните на холодное блюдце. Пока капля стекает — варим дальше; когда она хочет стечь, но не стекает и снимается с блюдца, мармелад готов.
+                <span class="source-badge">⏱ Урок 1: 48:50–52:00</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Малина и вишня: <strong>106 °C</strong></span>
+              <span class="param-pill">🌡 Абрикос: <strong>105 °C</strong></span>
+              <span class="param-pill">🔍 Проба: <strong>нестекающая капля</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Лимонная кислота в конце</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Снимите с огня, дайте кипению уняться и влейте раствор кислоты в соке, интенсивно перемешивая. Загустение фиксируется физико-химически: при остывании пектин не отдаёт воду и остаётся в гелеобразном состоянии. Цвет сразу меняется и становится ярче.
+                <span class="source-badge">⏱ Урок 1: 51:49–52:15</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍋 Кислота + сок: <strong>4+4 / 5+5 / 4+4 г</strong></span>
+              <span class="param-pill">⚡ Мешать: <strong>интенсивно, снимая с огня</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Заливка: толщина 8–12 мм</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разливайте сразу и быстро: мармелад схватывается на глазах. Часть уходит в мелкие силиконовые формы (звёздочки, круги), остальное — в рамку на силиконовом коврике. Формы силиконом смазывать не нужно.
+                <span class="source-badge">⏱ Урок 1: 52:58–56:10</span>
+              </p>
+              <div class="warning-box">
+                <strong>Оптимальная толщина — 8–12 мм.</strong> Толще делать не стоит: мармелад очень сладкий, и большой кусок за один раз съесть тяжело. В рамке слой можно подровнять и не доливать до самого верха.
+                <span class="source-badge">⏱ Урок 1: 47:52–48:15</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Толщина: <strong>8–12 мм</strong></span>
+              <span class="param-pill">🧰 Тара: <strong>рамка, кольцо, силикон</strong></span>
+              <span class="param-pill">⚡ Темп: <strong>залить за один раз</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Остывание и созревание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Мармелад остывает до комнатной температуры, и уже тогда с ним можно работать. В профессиональной практике залитый пласт оставляют созревать на 10 часов — так текстура получается идеальной, но для дома достаточно полного остывания.
+                <span class="source-badge">⏱ Урок 1: 58:15–58:48</span>
+              </p>
+              <div class="warning-box">
+                <strong>Если вылили слишком поздно:</strong> масса, которая уже начала схватываться в сотейнике, ляжет рыхло и не даст гладкой поверхности — заливать нужно сразу.
+                <span class="source-badge">⏱ Урок 3: 02:06–02:43</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Остывание: <strong>до комнатной</strong></span>
+              <span class="param-pill">⏱ Созревание: <strong>профи — 10 ч</strong></span>
+              <span class="param-pill">🚫 Холодильник: <strong>не нужен</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 11 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Извлечение из форм</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Силикон выворачивайте как угодно, а изделие старайтесь не травмировать. Из формы со съёмным дном пласт выходит сам, если просто поднять дно; рамку достаточно раздвинуть — мармелад отходит от стенок.
+                <span class="source-badge">⏱ Урок 3: 04:39–12:38</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Силикон: <strong>выворачивать, не рвать изделие</strong></span>
+              <span class="param-pill">🍰 Пласт: <strong>выходит сам</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 12 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Нарезка конфет</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Пласт нарежьте брусочками: у автора высота и ширина по 1 см, длина 7 см, а затем каждую заготовку режут пополам — конфета получается 3,5 см. Нож каждый раз вытирают влажной тряпочкой, чтобы срез был чистым.
+                <span class="source-badge">⏱ Урок 3: 13:39–17:04</span>
+              </p>
+              <div class="tip-box">
+                <strong>Крупные куски идут в сахар, а не в шоколад:</strong> слишком большие мармеладины автор просто обваливает в сахаре — в глазури они получаются неаккуратными и сладкими.
+                <span class="source-badge">⏱ Урок 3: 08:22–08:39</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Брусок: <strong>1 × 1 × 7 см</strong></span>
+              <span class="param-pill">✂ Пополам: <strong>конфета ~3,5 см</strong></span>
+              <span class="param-pill">🧻 Нож: <strong>вытирать влажной тканью</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 13 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Обваливание в сахаре</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Обваляйте мармелад в мелкокристаллическом сахаре — он ложится ровно и не оставляет крупных крупинок. Крахмалом мармелад не обсыпают: это приём для зефира.
+                <span class="source-badge">⏱ Урок 3: 03:00–03:43</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍬 Сахар: <strong>мелкокристаллический</strong></span>
+              <span class="param-pill">🚫 Крахмал: <strong>не для мармелада</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 14 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Темперирование методом посева</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                200 г тёмного шоколада разделите: 160 г в одну миску, 40 г (20%) оставьте калетками. Шоколад грейте пульсами — сначала 30 секунд, затем ещё 30, потом по 15 и по 10. Между включениями обязательно перемешивайте: за один раз греть нельзя, шоколад начнёт отсекать.
+                <span class="source-badge">⏱ Урок 3: 19:04–21:51</span>
+              </p>
+              <p>
+                В растопленный шоколад всыпьте калетки и мешайте до их полного растворения. Целые кристаллы какао-масла помогают шоколаду выстроить новую кристаллическую решётку — и он застывает с блеском.
+                <span class="source-badge">⏱ Урок 3: 25:21–27:03</span>
+              </p>
+              <div class="warning-box">
+                <strong>Метод посева — только для тёмного шоколада:</strong> в молочном и белом мало какао-масла, и результат непредсказуем — нет гарантии, что шоколад не перегрели на первом этапе.
+                <span class="source-badge">⏱ Урок 3: 27:09–27:50</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Нагрев: <strong>160 г, пульсами</strong></span>
+              <span class="param-pill">🌱 Посев: <strong>40 г калетками</strong></span>
+              <span class="param-pill">🌡 Работа: <strong>прохладное помещение</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 15 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">15</span>
+                <h3 class="step-title">Покрытие шоколадом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Опускайте мармеладку в шоколад и купайте со всех сторон. Доставайте вилкой: ею удобно состучать лишний шоколад и снять его о край, а затем выложить конфету на решётку.
+                <span class="source-badge">⏱ Урок 3: 28:10–30:22</span>
+              </p>
+              <div class="tip-box">
+                <strong>Если шоколад густеет:</strong> добавьте в него около 10 г какао-масла — масса станет жиже, а корпус конфеты тоньше. Слишком слабо нагретый шоколад, наоборот, даёт мало времени на работу.
+                <span class="source-badge">⏱ Урок 3: 31:25–31:54</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍴 Инструмент: <strong>вилка</strong></span>
+              <span class="param-pill">🧊 Застывание: <strong>на решётке</strong></span>
+              <span class="param-pill">🫗 Остаток: <strong>вылить на силикон, использовать повторно</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 16 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">16</span>
+                <h3 class="step-title">Полоски и хранение</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Для декора автор растапливает шоколад 54% и 72% и наносит на конфеты тонкие полоски. Готовый мармелад хранится 2 месяца при комнатной температуре в тёмном месте, в плотно закрытом контейнере, каждый слой прокладывается пергаментом.
+                <span class="source-badge">⏱ Урок 3: 35:04–36:19</span>
+              </p>
+              <div class="warning-box">
+                <strong>В холодильнике хранить нельзя.</strong> При комнатной температуре (18–22 °C) мармелад остаётся упругим; в холоде он отсыревает и теряет вид.
+                <span class="source-badge">⏱ Урок 1: 23:49–24:12</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📅 Хранение: <strong>2 месяца</strong></span>
+              <span class="param-pill">🌡 Условия: <strong>18–22 °C, темнота, контейнер</strong></span>
+              <span class="param-pill">🚫 Холодильник: <strong>нельзя</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Только яблочный (жёлтый) пектин:</strong> цитрусовый и NH нужной текстуры не дадут.</li>
+                <li><strong>Пектин — в холодное пюре:</strong> холоднее 40 °C, дождём и при постоянном помешивании.</li>
+                <li><strong>Пектин смешивают с сахаром:</strong> иначе он комкуется.</li>
+                <li><strong>Сироп глюкозы — консервант:</strong> именно он даёт два месяца срока годности вместо недели.</li>
+                <li><strong>Чем кислее ягода, тем выше температура:</strong> малина и вишня 106 °C, абрикос 105 °C, черника и чёрная смородина — 107 °C и 8 г пектина.</li>
+                <li><strong>Две проверки готовности:</strong> термометр и нестекающая капля на блюдце.</li>
+                <li><strong>Кислота в самом конце:</strong> фиксирует густоту и восполняет разрушенную при варке.</li>
+                <li><strong>Толщина 8–12 мм:</strong> и не делать мармеладки слишком большими — очень сладко.</li>
+                <li><strong>Варить за один раз:</strong> пектин необратим, повторный нагрев только разжижает.</li>
+                <li><strong>Низкий огонь:</strong> на высоком масса брызгается и пригорает.</li>
+                <li><strong>Метод посева:</strong> 20% шоколада калетками — самый простой способ темперировать тёмный шоколад дома.</li>
+                <li><strong>Хранить при комнатной температуре:</strong> в холодильнике мармелад портится.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Пектин всыпали в горячее пюре:</strong> комки, и пектин не работает.</li>
+                <li><strong>Пектин всыпали комом и не мешали:</strong> масса с комками, гладкой текстуры не будет.</li>
+                <li><strong>Недоварили:</strong> капля стекает, мармелад остаётся мягким и не держит форму.</li>
+                <li><strong>Переварили или перегрели повторно:</strong> пектин теряет свойства, масса течёт.</li>
+                <li><strong>Забыли кислоту:</strong> густота не фиксируется, при остывании выделяется вода.</li>
+                <li><strong>Варили на высоком огне:</strong> брызги, пригорание, неровная температура.</li>
+                <li><strong>Заливали остывающую массу:</strong> рыхлая консистенция вместо гладкой.</li>
+                <li><strong>Слой толще 12 мм:</strong> слишком сладко и неудобно есть.</li>
+                <li><strong>Грели шоколад за один раз:</strong> он отсекается; нужны короткие пульсы с перемешиванием.</li>
+                <li><strong>Темперировали молочный или белый шоколад посевом:</strong> результат непредсказуем.</li>
+                <li><strong>Убрали мармелад в холодильник:</strong> он отсыревает и «мокнет».</li>
+                <li><strong>Делали мармелад с детьми:</strong> сироп прилипает к коже и вызывает ожоги; обычные перчатки только усугубляют.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> вебинар Надежды Зубовой «Мармелад в шоколаде» (Тортомафия, месяц 2), три части: урок 1 — теория и варка трёх видов, урок 2 — вишнёвый мармелад, урок 3 — извлечение, нарезка, обсыпка и покрытие шоколадом; плюс DOCX «Рецептура для приготовления мармелада» с граммовками и инвентарём.</li>
+              <li><strong>Расхождения — лимонная кислота в абрикосовом мармеладе:</strong> в карте 5 г кислоты + 5 г сока, на видео автор называет «5,5» и уточняет: «5 сока, 5 кислоты». На странице значения карты.</li>
+              <li><strong>Расхождения — температура абрикоса:</strong> на видео сначала звучит «105 градусов ниже, чем малина», то есть 105 °C, и это же значение повторено позже. В карте температура не указана — на странице 105 °C по видео.</li>
+              <li><strong>Расхождения — созревание:</strong> на видео упомянуто профессиональное правило «10 часов до извлечения», но автор говорит, что для дома достаточно полного остывания. На странице приведены оба варианта.</li>
+              <li><strong>Пробелы — точный выход:</strong> ни карта, ни видео не дают вес готового мармелада и число конфет. Указано только, что из 200 г шоколада получается «достаточно много» конфет, а конфеты режут 1 × 1 × 7 см и пополам.</li>
+              <li><strong>Пробелы — таблица ягод:</strong> автор обещала отдельную таблицу с температурами и пропорциями для других ягод и фруктов; в материалах урока её нет. Из видео известны только черника и чёрная смородина — 107 °C, 8 г пектина и 25 г сахара.</li>
+              <li><strong>Пробелы — виноград, ревень, экзотика:</strong> на вопросы о них автор отвечает неуверенно или не рекомендует; в рецептуру эти варианты не включены.</li>
+              <li><strong>Пробелы — количество сахара для обсыпки:</strong> не нормируется, «по вкусу».</li>
+              <li><strong>Фото:</strong> снимка в папке нет — на странице кадр из урока 3 (33:00): конфеты в тёмном шоколаде на решётке и пласты мармелада в сахарной обсыпке.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

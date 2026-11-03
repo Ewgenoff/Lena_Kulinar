@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Шоколадный чизкейк «Леопард» с бланмаже из чиа — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Двухслойный шоколадный чизкейк Надежды Зубовой: двухцветная основа из сабле с какао, шоколадный и кофейный сырные слои, бейлис по желанию и бланмаже из сметаны с семенами чиа.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="chizkeyk-shokoladnyy">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться к каталогу рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Шоколадный чизкейк «Леопард» с бланмаже из чиа</h1>
+      <p class="recipe-lead">
+        Двухслойный чизкейк из той же серии, что «Нью-Йорк» и «Ореховый», но плотнее: сахара и сливок здесь меньше, чтобы слои держали друг друга. Внизу — шоколадная сырная масса, сверху — кофейная с бейлисом, а снаружи основа собрана из двух цветов крошки, за что её и прозвали леопардовой. Финал — бланмаже из сметаны с семенами чиа, отлитое в кольцо Ø14 см.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~1 ч 30 мин (сабле, основа, две массы)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~2 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Стабилизация сабле 2 ч – ночь, выпечка 1 ч 40 мин – 1 ч 50 мин, ночь в холодильнике, бланмаже до застывания</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">2 дня</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 чизкейк Ø17–18 см, высота 6–7 см + бланмаже Ø14 см</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/chizkeyk-shokoladnyy.jpg" alt="Двухслойный шоколадный чизкейк в кольце: тёмный шоколадный слой под кофейным, поверх песочной основы" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 чизкейк)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">чизкейк</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База калькулятора — один чизкейк Ø17–18 см высотой 6–7 см с бланмаже Ø14 см. Тесто сабле дано полным замесом: на чизкейк уходит 310 г выпеченного печенья.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> чизкейк</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на сабле, двухцветную основу, две сырные массы и бланмаже с чиа. Ликёр бейлис — по желанию, на результат без него рецепт не меняется.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧈 Тесто, масло, яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Полный замес сабле; на основу уходит 310 г выпеченного печенья</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5 %</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Холодное, в тесто. Крошку восстанавливают сливками</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="95" data-unit="г">95 г</span>
+                <span class="shopping-hint">В тесто</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Миндальная мука</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Можно смолоть миндаль в блендере</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца С1</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span>
+                <span class="shopping-hint">1 шт. (60 г) в тесто + 3 шт. в сырную массу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="г">3 г</span>
+                <span class="shopping-hint">В тесто</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Шоколад, сыр, сметана</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творожный сыр</strong>:
+                <span class="shopping-qty" data-base-amount="500" data-unit="г">500 г</span>
+                <span class="shopping-hint">Типа Philadelphia: Hochland, Violette, Almette сливочный</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 33 %</strong>:
+                <span class="shopping-qty" data-base-amount="220" data-unit="г">220 г</span>
+                <span class="shopping-hint">80–100 г в основу + 120 г в сырную массу; 2 ч. л. нужны, чтобы развести кофе</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="180" data-unit="г">180 г</span>
+                <span class="shopping-hint">120 г в сырную массу + 60 г в бланмаже</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шоколад тёмный</strong>:
+                <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                <span class="shopping-hint">В меньшую часть сырной массы</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао-порошок</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">В тёмную половину основы</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кофе растворимый</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span>
+                <span class="shopping-hint">Без горки; развести в 2 ч. л. сливок</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ликёр бейлис</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">Можно не добавлять: алкоголь выгорает при выпечке, вкус остаётся</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сметана</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">В бланмаже; чем жирнее, тем вкуснее</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ванильный сахар</strong>:
+                <span class="shopping-qty" data-base-amount="7" data-unit="г">7 г</span>
+                <span class="shopping-hint">В бланмаже</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="г">4 г</span>
+                <span class="shopping-hint">В бланмаже, замочить в 20 г холодной воды</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Семена чиа</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="ст. л.">1 ст. л.</span>
+                <span class="shopping-hint">Залить 5 ст. л. кипятка и дать превратиться в гель</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — кольцо или разъёмная форма Ø17–18 см, кольцо Ø14 см, пергамент, плёнка, кондитерский мешок
+                <span class="shopping-hint">Для бланмаже кольцо затягивают плёнкой снизу</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Песочное тесто сабле</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Масло сливочное (холодное)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="95" data-unit="г">95 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Миндальная мука
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Яйца
+              <span class="ingredient-note">Примерно одно яйцо С1</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Двухцветная основа</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="310" data-unit="г">310 г</span> — Печенье сабле выпеченное
+              <span class="ingredient-note">Разделить на две равные части</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Какао-порошок
+              <span class="ingredient-note">В тёмную половину крошки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сливки 33 %
+              <span class="ingredient-note">По рецепту 80–100 г: половина в тёмную крошку, половина в светлую</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Сырная масса</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="500" data-unit="г">500 г</span> — Творожный сыр
+              <span class="ingredient-note">Комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Сахар
+              <span class="ingredient-note">Меньше, чем в «Нью-Йорк»: слои должны держать друг друга</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span> — Яйца С1
+              <span class="ingredient-note">По одному</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Сливки 33 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Шоколад тёмный
+              <span class="ingredient-note">Растопить, в меньшую часть массы</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Кофе растворимый
+              <span class="ingredient-note">Без горки, развести в 2 ч. л. сливок</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Ликёр бейлис
+              <span class="ingredient-note">Опционально, в кофейную часть</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Бланмаже с чиа</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сметана
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Ванильный сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="г">4 г</span> — Желатин
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Вода для желатина
+              <span class="ingredient-note">Холодная</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ст. л.">1 ст. л.</span> — Семена чиа
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="ст. л.">5 ст. л.</span> — Вода горячая
+              <span class="ingredient-note">Кипяток, для замачивания чиа</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Сабле: сухие ингредиенты, масло и яйцо</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Смешайте в процессоре 250 г муки, 95 г сахарной пудры, 30 г миндальной муки и 3 г соли. Добавьте 150 г холодного масла кубиком, распределив его по сухим ингредиентам, и пробейте пульсами до мелкой крошки. Введите 60 г яйца и работайте быстро. Тесто останется крошкой — так и должно быть.
+                <span class="source-badge">⏱ Урок 1: 00:00:26–00:03:32</span>
+              </p>
+              <div class="warning-box">
+                <strong>Тесто без вкусовых добавок:</strong> автор не кладёт в сабле ни какао, ни орехов — какао появится здесь при восстановлении крошки, чтобы не печь отдельное шоколадное печенье.
+                <span class="source-badge">⏱ Урок 1: 00:01:08–00:01:48</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>Комбайн или нож</strong></span>
+              <span class="param-pill">🌾 Крошка: <strong>Мелкая, масло полностью в сухих</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Раскатка 3 мм и стабилизация</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Соберите тесто в комок, разделите на две части и раскатайте каждую между двумя листами пергамента до 3 мм. Мукой не припыляйте. Уберите в холодильник минимум на 2 часа, лучше на ночь, либо в морозилку на час.
+                <span class="source-badge">⏱ Урок 1: 00:03:47–00:07:44</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> раскатанное тесто хранится до 14 дней в холодильнике и до 2 месяцев в морозилке — его удобно держать про запас под всю серию чизкейков.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Толщина: <strong>3 мм</strong></span>
+              <span class="param-pill">🧊 Холод: <strong>2 ч / ночь или 1 ч в морозилке</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Выпечка сабле при 170 °C</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте пласт 20–25 минут при 170 °C с конвекцией, прокалывать не нужно. Остудите до комнатной температуры — дальше сабле идёт в крошку.
+                <span class="source-badge">⏱ Урок 1: 00:07:57–00:08:45</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Выпечка: <strong>170 °C, конвекция</strong></span>
+              <span class="param-pill">⏱ Время: <strong>20–25 минут</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Основа «леопард»: две части крошки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Измельчите остывшее сабле в блендере и отвесьте 310 г. Разделите крошку на две равные части. В первую добавьте 15 г какао и половину сливок — 40–50 г, во вторую только половину сливок. Перемелите и перемешайте каждую до однородной массы, которая лепится.
+                <span class="source-badge">⏱ Урок 2: 00:00:01–00:00:31</span>
+              </p>
+              <div class="tip-box">
+                <strong>Пропорция сливок:</strong> по DOCX на основу идёт 80–100 г сливок, то есть по 40–50 г в каждую половину. Ориентируйтесь на способность крошки собираться в комок.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ Крошка: <strong>310 г, две равные части</strong></span>
+              <span class="param-pill">🍫 Какао: <strong>15 г в тёмную часть</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Двухцветная форма: борта, потом дно</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Крошку не высыпайте в форму сразу: выкладывайте поочерёдно тёмную и светлую и прижимайте — так на борту получится рисунок. Сначала формируйте борта, только потом дно: даже если на дне цвета перемешаются, это уже не видно. Остатки смело высыпайте на дно, утрамбуйте рукой, затем догладьте борта стаканом, чтобы толщина стенки была одинаковой. Уберите в холодильник, чтобы основа застыла и стала плотнее.
+                <span class="source-badge">⏱ Урок 2: 00:00:33–00:02:54</span>
+              </p>
+              <div class="warning-box">
+                <strong>Порядок важен:</strong> борта — первыми, потому что на дне перемешанные цвета не страшны, а на стенке рисунок виден.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Форма: <strong>Ø17–18 см</strong></span>
+              <span class="param-pill">📐 Высота чизкейка: <strong>6–7 см</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Сырная масса: сыр, сахар, яйца, сливки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Смешайте 500 г творожного сыра со 120 г сахара на минимальной скорости миксера или лопаткой. Введите по одному три яйца, а в конце — 120 г сливок. Затем постучите миской об стол, чтобы поднялись и лопнули пузыри воздуха.
+                <span class="source-badge">⏱ Урок 3: 00:00:31–00:01:43</span>
+              </p>
+              <div class="warning-box">
+                <strong>Масса плотнее, чем в «Нью-Йорк»:</strong> сахара и сливок здесь меньше — иначе слои не удержат друг друга.
+                <span class="source-badge">⏱ Урок 3: 00:00:12–00:00:31</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Миксер: <strong>Минимальная скорость или лопатка</strong></span>
+              <span class="param-pill">🥚 Яйца: <strong>По одному, 3 шт.</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Две части и кофе с бейлисом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разложите сырную массу на две части — почти пополам, одна чуть меньше. В меньшую пойдёт шоколад, в большую — кофе. Отделите 550 г в большую часть, разведите 1 ч. л. растворимого кофе в 2 ч. л. сливок и вмешайте вместе с 15 г бейлиса. Цвет почти не изменится, останется слегка кремовым.
+                <span class="source-badge">⏱ Урок 3: 00:01:49–00:02:37</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> с кофе не перебарщивайте — иначе он перебьёт вкус шоколада. Бейлис отлично сочетается и с кофе, и с шоколадом, а алкоголь за время выпечки не остаётся.
+                <span class="source-badge">⏱ Урок 3: 00:02:23–00:02:36</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ Кофейная часть: <strong>550 г</strong></span>
+              <span class="param-pill">☕ Кофе: <strong>1 ч. л. на 2 ч. л. сливок</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Шоколад в меньшую часть — с нюансом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Растопите 70 г тёмного шоколада. Не выливайте его сразу в сырную массу: возьмите столовую ложку меньшей части, добавьте в шоколад и быстро-быстро перемешайте. И только эту шоколадную массу введите в остаток — тоже быстро.
+                <span class="source-badge">⏱ Урок 3: 00:02:36–00:03:25</span>
+              </p>
+              <div class="warning-box">
+                <strong>Почему наоборот нельзя:</strong> в холодной сырной массе шоколад свернётся крупинками — получится эффект «натёртого» шоколада, а нужна равномерная шоколадная масса.
+                <span class="source-badge">⏱ Урок 3: 00:02:49–00:03:17</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Шоколад: <strong>70 г, растопить</strong></span>
+              <span class="param-pill">⚡ Темп: <strong>Быстро, не остывая</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Сборка: шоколад внизу, кофе сверху</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выложите шоколадную массу на дно формы — она плотнее, поэтому логично идёт первой. Кофейную переложите в кондитерский мешок, отрежьте носик и выкладывайте сверху, не вдавливая: шоколадный слой её удержит. Сначала дайте слою распределиться само собой, потом поправьте палеткой. Форму придерживайте вместе с дном, чтобы не разрушить песочную основу.
+                <span class="source-badge">⏱ Урок 3: 00:03:33–00:06:41</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> первый слой можно раскладывать без мешка — он всё равно зальёт дно ровно. Мешок нужен именно для второго слоя, чтобы граница осталась чистой.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>Кондитерский мешок, палетка</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Ровная граница слоёв</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Выпечка и ночь в холодильнике</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте без конвекции: 30 минут при 160 °C, затем 70–80 минут при 110–120 °C. После выпечки остудите до комнатной температуры и уберите в холодильник на ночь. Срок хранения — 5 суток в холодильнике.
+                <em style="font-size: 13px; color: var(--text-muted);">Источник: DOCX «Чизкейк_шоколадный»</em>
+              </p>
+              <div class="warning-box">
+                <strong>Время второй ступени короче</strong>, чем у «Нью-Йорка»: 70–80 минут вместо 60–90 — масса здесь плотнее и меньше по объёму.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Этап 1: <strong>160 °C — 30 минут</strong></span>
+              <span class="param-pill">🌡 Этап 2: <strong>110–120 °C — 70–80 минут</strong></span>
+              <span class="param-pill">🚫 Конвекция: <strong>Выключена</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Бланмаже с чиа</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Залейте 1 ст. л. семян чиа 5 ст. л. крутого кипятка и оставьте набухать, пока не получится гель, затем дайте остыть до комнатной температуры. Желатин замочите в 20 г холодной воды. Сметану смешайте с 60 г сахара и 7 г ванильного сахара миксером, введите растопленный желатин и быстро перемешайте, а в самом конце лопаткой вмешайте чиа.
+                <span class="source-badge">⏱ Урок 4: 00:00:05–00:03:05</span>
+              </p>
+              <div class="warning-box">
+                <strong>Почему чиа, а не мак:</strong> семена чиа при набухании образуют гелевую оболочку и держатся в массе, а мак осел бы на дно — равномерной хрустящей фактуры не получилось бы.
+                <span class="source-badge">⏱ Урок 4: 00:03:08–00:03:35</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">💧 Чиа: <strong>1 ст. л. на 5 ст. л. кипятка</strong></span>
+              <span class="param-pill">🧊 Желатин: <strong>4 г на 20 г холодной воды</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Форма Ø14 см и сборка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Вылейте бланмаже в кольцо Ø14 см, затянутое плёнкой снизу, — слой можно сделать ощутимым, он даёт свой вкус. Уберите в морозилку или холодильник до полного застывания, затем снимите кольцо и перенесите бланмаже на охлаждённый чизкейк.
+                <span class="source-badge">⏱ Урок 4: 00:03:36–00:03:58</span>
+              </p>
+              <div class="tip-box">
+                <strong>Декор:</strong> остальные чизкейки серии автор украшает ягодами на растопленном шоколаде; у этого рисунок уже есть снаружи и сверху, поэтому бланмаже обычно достаточно.
+                <span class="source-badge">⏱ Урок 5: 00:00:31–00:01:21</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Кольцо: <strong>Ø14 см</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>5 суток в холодильнике</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Плотнее классики:</strong> в двухслойном чизкейке меньше сахара и сливок — иначе слои поплывут.</li>
+                <li><strong>Шоколад через ложку массы:</strong> так он вводится без крупинок; обратный порядок даёт «натёртый» шоколад.</li>
+                <li><strong>Шоколадный слой вниз:</strong> он плотнее и хорошо держит кофейный.</li>
+                <li><strong>Кофе — чуть-чуть:</strong> его задача подчеркнуть шоколад, а не перебить.</li>
+                <li><strong>Бейлис:</strong> отлично сочетается с кофе и шоколадом; алкоголь выгорает при выпечке, детям такой чизкейк можно.</li>
+                <li><strong>Рисунок снаружи:</strong> тёмную и светлую крошку выкладывают поочерёдно, начиная с бортов.</li>
+                <li><strong>Чиа вместо мака:</strong> гелевая оболочка не даёт семенам осесть на дно.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Шоколад сразу в холодную массу:</strong> сворачивается крупинками.</li>
+                <li><strong>Медленная сборка:</strong> шоколадная масса густеет, слои сложнее выровнять.</li>
+                <li><strong>Слишком много кофе:</strong> вкус шоколада теряется.</li>
+                <li><strong>Дно раньше бортов:</strong> рисунок на стенке смазывается, а дно всё равно не видно.</li>
+                <li><strong>Взбивание сырной массы:</strong> пузыри и пористая текстура.</li>
+                <li><strong>Не отстучали массу:</strong> стучать миской можно только до заливки в форму.</li>
+                <li><strong>Горячий желатин в сметану:</strong> крупинки; желатин должен стать жидким, но не кипеть.</li>
+                <li><strong>Мак вместо чиа:</strong> осядет на дно, равномерной фактуры не будет.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Сабле:</strong> готовое песочное печенье вместо домашнего.</li>
+                <li><strong>Бейлис:</strong> можно не добавлять.</li>
+                <li><strong>Шоколад:</strong> тёмный по рецепту; молочный даст более мягкий вкус.</li>
+                <li><strong>Сметана в бланмаже:</strong> подойдёт и 10 %, но чем жирнее, тем вкуснее; вместо сметаны допустимы очень жирные сливки.</li>
+                <li><strong>Бланмаже:</strong> можно не делать — чизкейк самодостаточен и с одним рисунком основы.</li>
+                <li><strong>Форма:</strong> кольцо или разъёмная форма Ø17–18 см, для бланмаже — кольцо Ø14 см.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 (сабле — 00:00:02–00:08:45); Урок_02.mp4 (двухцветная основа — 00:00:01–00:02:54); Урок_03.mp4 (сырная масса, кофе, шоколад, сборка — 00:00:01–00:06:41); Урок_04.mp4 (бланмаже с чиа — 00:00:01–00:03:58); Урок_05.mp4 (общий урок декора ягодами — 00:00:31–00:01:21); DOCX «Чизкейк_шоколадный» — граммовки, режимы и хранение.</li>
+              <li><strong>Выход сабле:</strong> в DOCX для этого чизкейка указано 310 г печенья (у «Орехового» — 300 г, у «Нью-Йорка» — 300 г).</li>
+              <li><strong>Сливки в основу:</strong> в DOCX 80–100 г на всю основу, то есть по 40–50 г в каждую половину крошки; в видео количество делят на глаз.</li>
+              <li><strong>Отделение 550 г:</strong> в DOCX сказано отделить 550 г сырной массы под кофейную часть — это большая часть. Вес меньшей, шоколадной части не указан, в видео её определяют на глаз «почти пополам».</li>
+              <li><strong>Бейлис и кофе:</strong> в DOCX 15 г ликёра и 1 ч. л. кофе на 2 ч. л. сливок, в видео те же количества проговариваются словами.</li>
+              <li><strong>Время выпечки:</strong> 30 минут при 160 °C и 70–80 минут при 110–120 °C — только по DOCX, в видео режим не проговаривается.</li>
+              <li><strong>Пробелы:</strong> вес готового чизкейка не назван; вес бланмаже и толщина слоя не указаны; время застывания бланмаже автор описывает как «до полного застывания» без точного времени.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_03.mp4 (00:06:30) с двумя кольцами на этапе выравнивания кофейного слоя, обрезанный по краям записи.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

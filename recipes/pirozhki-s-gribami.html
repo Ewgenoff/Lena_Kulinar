@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пирожки с грибами — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Пирожки с грибами Надежды Зубовой: дрожжевое тесто холодным способом, начинка из обжаренных шампиньонов, солёных груздей, огурца и лука, фигурная формовка с косичкой-пояском, выпечка при 170 °C с конвекцией 25 минут.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="pirozhki-s-gribami">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Пирожки с грибами</h1>
+      <p class="recipe-lead">
+        Грибная начинка с ярким вкусом: обжаренные шампиньоны, пюрированные до кашеобразного состояния, солёные грузди, солёный огурец и жареный лук. Тесто — холодным способом, на ночь в холодильнике. Пирожки необычной формы: начинку закрывают не до конца, оставляют «язычок», разрезают его на три части и заплетают косичкой-пояском.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч 10 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Тесто в холодильнике 8–24 ч, согревание теста, расстойка 20 мин, выпечка 25 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~10–26 ч с ночью на тесто</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">10 пирожков по DOCX (50 г теста + 35 г начинки)</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/pirozhki-s-gribami.jpg" alt="Готовые пирожки с грибами с косичкой-пояском из теста, румяные, на противне" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 замес)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">замес (10 пирожков)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База калькулятора — один замес теста по DOCX (выход ≈2 кг) и вся грибная начинка. DOCX ориентирует на 10 пирожков по 50 г теста + 35 г начинки: начинки при этом хватает примерно на 20 штук, а теста — на 40. Остальное тесто хранится 48 часов в холодильнике или месяц в морозилке.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> замес</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на один замес теста (≈2 кг) и всю грибную начинку: бакалея и молочное в первой колонке, грибы, огурец и лук — во второй.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Бакалея, молочное, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная (Макфа)</strong>:
+                <span class="shopping-qty" data-base-amount="1000" data-unit="г">1000 г</span>
+                <span class="shopping-hint">Килограммовый пакет, вся мука идёт в тесто</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Дрожжи прессованные</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Свежие, слоистые — проверяются «на пластилин»</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">Комнатной температуры, не подогревать</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Размягчённое, вводится порциями в конце замеса</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="120" data-unit="г">120 г</span>
+                <span class="shopping-hint">В тесто</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="20" data-unit="г">20 г</span>
+                <span class="shopping-hint">В тесто; начинка солится осторожно — грузди и огурец уже солёные</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Растительное масло</strong>:
+                <span class="shopping-hint">Для обжарки шампиньонов и лука, количество автор не называет</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — пищевая плёнка, пергамент
+                <span class="shopping-hint">Плёнка на тесто в холодильник, пергамент на противень</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍄 Грибы, огурец, лук, яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шампиньоны свежие</strong>:
+                <span class="shopping-qty" data-base-amount="400" data-unit="г">400 г</span>
+                <span class="shopping-hint">Крупно нарезать и обжарить, затем пюрировать блендером</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Грузди солёные</strong>:
+                <span class="shopping-qty" data-base-amount="160" data-unit="г">160 г</span>
+                <span class="shopping-hint">В DOCX 150–170 г. Подойдут любые солёные или консервированные грибы</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Огурец солёный</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">Мелко порезать в начинку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лук репчатый</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">В начинку идёт примерно половина обжаренной луковицы</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="6" data-unit="шт." data-piece="true">6 шт.</span>
+                <span class="shopping-hint">250 г (≈5 шт.) в тесто + одно на смазку; для самого яркого цвета — желток</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Перец чёрный</strong>:
+                <span class="shopping-hint">Свежемолотый, по вкусу</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Тесто холодным способом</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1000" data-unit="г">1000 г</span> — Мука пшеничная (Макфа)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Дрожжи прессованные
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Молоко комнатной температуры
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Яйца (≈5 шт.)
+              <span class="ingredient-note">Комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сливочное масло размягчённое
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка грибная</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="400" data-unit="г">400 г</span> — Шампиньоны
+              <span class="ingredient-note">Крупно нарезать, обжарить, пюрировать блендером</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Грузди солёные
+              <span class="ingredient-note">В DOCX 150–170 г; можно любые солёные или консервированные грибы</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span> — Огурец солёный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span> — Лук репчатый
+              <span class="ingredient-note">Обжарить; в начинку идёт примерно половина луковицы</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Растительное масло — по потребности
+              <span class="ingredient-note">Для обжарки шампиньонов и лука</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Соль и перец — по вкусу
+              <span class="ingredient-note">Солить осторожно: грузди и огурец уже солёные</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Для смазки</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Яйцо или желток — для смазки
+              <span class="ingredient-note">Можно сладким крепким чаем; самый яркий цвет даёт желток</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Холодный замес: сухие и влага</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Всю муку высыпьте в дежу, раскрошите дрожжи, добавьте сахар и соль. Проверьте дрожжи: свежие имеют слоистую текстуру и лепятся как пластилин.
+                <span class="source-badge">⏱ Урок 1: 00:01–00:58</span>
+              </p>
+              <p>
+                На низкой скорости влейте молоко комнатной температуры, затем введите яйца. Дайте тесту впитать всю влагу — на это уходит около минуты. Только после этого добавляйте масло.
+                <span class="source-badge">⏱ Урок 1: 00:58–02:46</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Порядок: <strong>Сухие → молоко и яйца → масло</strong></span>
+              <span class="param-pill">⏱ Увлажнение: <strong>~1 минута</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Масло порциями, тесто собирается</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Размягчённое масло добавляйте понемногу, давая каждой порции войти в тесто. Если тесто разжижилось — просто помешайте ещё немного, оно соберётся, и тогда можно добавлять следующую порцию. На весь процесс уходит около 5 минут.
+                <span class="source-badge">⏱ Урок 1: 02:46–04:47</span>
+              </p>
+              <p>
+                Больше не вымешивайте. Тесто мягкое и слегка рыхлое, без натянутой глютеновой плёнки, но держится и не рвётся. Выход — примерно 2 кг.
+                <span class="source-badge">⏱ Урок 1: 04:47–05:45</span>
+              </p>
+              <div class="warning-box">
+                <strong>Масло не всё сразу:</strong> иначе тесто мгновенно разжижится и покажется, что не хватает муки.
+                <span class="source-badge">⏱ Урок 1: 03:09–03:24</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Масло: <strong>~5 минут, порциями</strong></span>
+              <span class="param-pill">⚖ Выход: <strong>~2 кг теста</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Ночь в холодильнике</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Соберите тесто в комок, верните в дежу, затяните пищевой плёнкой и уберите в холодильник на 8 часов, максимум на 24. Выпекать будете на следующий день — тесто поднимется и в холоде.
+                <span class="source-badge">⏱ Урок 1: 05:45–06:10</span>
+              </p>
+              <p>
+                Хранение готового теста: 48 часов в холодильнике, месяц в морозилке. Размораживают при комнатной температуре.
+                <span class="source-badge">⏱ DOCX</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Охлаждение: <strong>8–24 часа</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>48 ч в холодильнике, 1 мес в морозилке</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Согревание, деление, подкатка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Тесто достаньте из дежи, выложите на стол, накройте тряпочкой и оставьте до комнатной температуры. Затем нарежьте скребком и взвесьте кусочки по 50–55 г.
+                <span class="source-badge">⏱ Урок 2: 00:01–00:49</span>
+              </p>
+              <p>
+                Края каждого кусочка подверните внутрь, оставив снаружи гладкую поверхность, положите складками вниз на 15 минут и подкатайте ладошкой по столу — тесто натянется, получится аккуратный комочек.
+                <span class="source-badge">⏱ Урок 2: 00:49–02:31</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Тесто: <strong>50–55 г на пирожок</strong></span>
+              <span class="param-pill">⏱ Отдых комочков: <strong>15 минут</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Шампиньоны обжариваем и пюрируем</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Шампиньоны нарежьте крупно — на 4 части — и обжарьте. Сначала грибы отдадут жидкость, продолжайте жарить. Всего 4–5 минут, до готовности. Дайте немного остыть.
+                <span class="source-badge">⏱ Урок 3: 00:24–01:14</span>
+              </p>
+              <p>
+                Измельчите обжаренные грибы погружным блендером в кашеобразную массу — не в «суп». Слишком мелко и долго блендерить не нужно.
+                <span class="source-badge">⏱ Урок 3: 01:14–01:34</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> грибные пирожки особенно хороши в пост — вкус у начинки яркий, грибной, совсем не пресный.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍄 Обжарка: <strong>4–5 минут</strong></span>
+              <span class="param-pill">🥣 Текстура: <strong>Кашеобразная, не «суп»</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Собираем грибную начинку</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                К пюрированным шампиньонам добавьте мелко порезанные солёные грузди (подойдут любые консервированные солёные грибы), нарезанный солёный огурец и обжаренный лук — примерно половину луковицы.
+                <span class="source-badge">⏱ Урок 3: 01:34–02:12</span>
+              </p>
+              <p>
+                Перемешайте, попробуйте и только потом солите — грузди и огурец уже солёные. Добавьте свежемолотый перец. Начинку охладите.
+                <span class="source-badge">⏱ Урок 3: 02:12–02:37</span>
+              </p>
+              <div class="warning-box">
+                <strong>Солите после пробы:</strong> солёные грибы и огурец легко пересолят начинку. Горячую начинку на тесто не кладут.
+                <span class="source-badge">⏱ Урок 3: 02:29–02:37</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧅 Лук: <strong>~½ луковицы обжаренной</strong></span>
+              <span class="param-pill">🥒 Огурец: <strong>1 солёный, мелко</strong></span>
+              <span class="param-pill">🧂 Соль: <strong>Только после пробы</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Формовка с «язычком»</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Раскатайте лепёшку и выложите начинку на её дальний край. Заклейте начинку так, чтобы с другой стороны остался свободный «язычок» теста. Защипывайте плотно, по середине пирожка.
+                <span class="source-badge">⏱ Урок 4: 00:02–00:40</span>
+              </p>
+              <p>
+                Оставшийся язычок разрежьте на три части и заплетите косичку, которой оберните пирожок как пояском.
+                <span class="source-badge">⏱ Урок 4: 00:44–02:05</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> заклеивайте начинку довольно плотно и старайтесь, чтобы шов не раскрылся во время выпечки — тогда поясок ляжет ровно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍄 Начинка: <strong>35 г на пирожок</strong></span>
+              <span class="param-pill">🎀 Декор: <strong>Косичка-поясок из язычка теста</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Проколы и смазка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Пирожки красивые, поэтому автор прокалывает их ножом, а не вилкой, — под декор. Длинные пирожки прокалывают дважды, прямо до дна, чтобы выходил лишний воздух.
+                <span class="source-badge">⏱ Урок 4: 02:05–02:22</span>
+              </p>
+              <p>
+                Смажьте яйцом, желтком или сладким крепким чаем. Самый яркий цвет даёт желток. Смазывайте так, чтобы вся поверхность была покрыта, но с пирожка не стекало.
+                <span class="source-badge">⏱ Урок 4: 02:23–02:51</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔪 Проколы: <strong>Ножом, до дна</strong></span>
+              <span class="param-pill">🥚 Смазка: <strong>Яйцо, желток или сладкий чай</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Расстойка и выпечка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Пирожки расстоялись 20 минут — и в разогретую духовку.
+                <span class="source-badge">⏱ Урок 4: 03:08–03:14</span>
+              </p>
+              <p>
+                Выпекайте при 170 °C с конвекцией 25 минут. Альтернативный режим из DOCX — 180 °C верх-низ; время зависит от размера изделия и силы духовки. Готовые изделия храните 2 дня при комнатной температуре в бумажном пакете или под полотенцем, до 7 дней — в холодильнике в плёнке.
+                <span class="source-badge">⏱ Урок 4: 03:14–03:25</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Расстойка: <strong>20 минут</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>170 °C конвекция или 180 °C верх-низ</strong></span>
+              <span class="param-pill">⏱ Выпечка: <strong>25 минут</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Грибы в кашу, но не в «суп»:</strong> пюре должно держать форму, иначе начинка потечёт.</li>
+                <li><strong>Два вида грибов:</strong> обжаренные шампиньоны дают объём, солёные грузди — яркий вкус.</li>
+                <li><strong>Солёный огурец:</strong> даёт начинке кислоту и сочность, как в рассольниках.</li>
+                <li><strong>Солить после пробы:</strong> грузди и огурец уже солёные.</li>
+                <li><strong>Холодное тесто — без долгого замеса:</strong> 5 минут на масло и ночь в холодильнике.</li>
+                <li><strong>Прокол ножом:</strong> на красивых пирожках след от ножа аккуратнее, чем от вилки; колоть нужно под декор.</li>
+                <li><strong>Желток для цвета:</strong> самый румяный результат даёт смазка желтком.</li>
+                <li><strong>Постный вариант:</strong> начинка сама по себе постная — остаётся только тесто.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Слишком мелко смололи грибы:</strong> начинка становится жидкой и вытекает.</li>
+                <li><strong>Пересолили:</strong> забыли, что грузди и огурец солёные. Пробуйте до соли.</li>
+                <li><strong>Слабый шов:</strong> пирожок раскрывается, поясок сползает.</li>
+                <li><strong>Не прокололи до дна:</strong> пар разрывает тесто.</li>
+                <li><strong>Холодная начинка не остужена до конца:</strong> нельзя класть горячую — тесто поплывёт.</li>
+                <li><strong>Масло всё сразу в тесто:</strong> тесто разжижается и кажется, что мало муки.</li>
+                <li><strong>Передержали в духовке:</strong> грибная начинка тёмная, по цвету готовность не определить — ориентируйтесь на время.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> серия Надежды Зубовой — Урок_01.mp4 (холодный замес теста), Урок_02.mp4 (согревание, деление, подкатка), Урок_03.mp4 (грибная начинка), Урок_04.mp4 (фигурная формовка, проколы, смазка, выпечка); расшифровка с таймкодами; файл «Пирожки_с_грибами.docx» с точными граммовками. Таймкоды на странице — реальные, из расшифровки.</li>
+              <li><strong>Выход:</strong> DOCX ориентирует на 10 пирожков (50 г теста + 35 г начинки). По факту начинки из 400 г шампиньонов, 150–170 г груздей, огурца и лука хватает примерно на 20 пирожков, а замеса теста (≈2 кг) — примерно на 40. Поэтому база калькулятора — один замес, а не 10 пирожков.</li>
+              <li><strong>Грузди:</strong> в DOCX 150–170 г, на странице взято 160 г — середина диапазона, чтобы работал калькулятор.</li>
+              <li><strong>Лук и огурец:</strong> в DOCX одна луковица и один огурец без веса; в видео в начинку идёт примерно половина обжаренной луковицы. Количество в списке покупок — целое.</li>
+              <li><strong>Выпечка:</strong> в видео 170 °C с конвекцией 25 минут. DOCX дополнительно даёт режим 180 °C верх-низ и оговаривает, что время зависит от размера изделия и силы духовки.</li>
+              <li><strong>Расстойка:</strong> в видео 20 минут после формовки; DOCX говорит про 15–20 минут. На странице — 20 минут, как в уроке.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице стоит кадр из Урок_04.mp4 (00:03:29) — уже испечённые пирожки с косичкой-пояском на противне.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

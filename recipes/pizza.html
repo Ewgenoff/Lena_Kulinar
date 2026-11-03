@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пицца на холодном тесте: Маргарита, три сыра, пепперони — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Пицца Надежды Зубовой на холодном дрожжевом тесте из муки «00»: замес не дольше 10 минут, расстойка 24–48 часов в холодильнике при +4 °C. Домашний томатный соус с орегано и три начинки — Маргарита, три сыра и пепперони. Выпечка при 200 °C с конвекцией 13–15 минут.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="pizza">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Основные блюда</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Пицца на холодном тесте: Маргарита, три сыра, пепперони</h1>
+      <p class="recipe-lead">
+        Тесто для пиццы на муке «00» и ледяной воде: короткий замес не дольше 10 минут, а дальше холод — от 24 до 48 часов в холодильнике. За это время тесто не просто поднимается, а ферментируется: раскрываются глютеновые цепи, и пицца получается с хрустящей корочкой, но кусочек держит форму и не провисает. К тесту — простой домашний томатный соус с орегано и три классические начинки: «Маргарита», «Три сыра» и «Пепперони».
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~40 мин (плюс сборка пицц)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Расстойка 24–48 ч в холодильнике, выпечка 13–15 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">1–2 суток с расстойкой</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">≈5 пицц Ø30–33 см (1,64 кг теста, по 300 г)</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/pizza.jpg" alt="Три готовые пиццы на противне: «Маргарита» с базиликом, «Три сыра» и «Пепперони», только что из духовки" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (5 пицц)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="5">5</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">пицц Ø30–33 см</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База калькулятора — один замес теста по DOCX (1,64 кг): этого хватает примерно на 5 пицц по 300 г. Тесто и соус даны на весь замес, начинки — на 5 пицц одного выбранного варианта. В видео автор испекла три пиццы по 300 г (по одной каждого вида), остальное тесто может ждать в холодильнике до 48 часов.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">5</span> пицц</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Список на один замес теста и соус на весь замес: бакалея и томаты в первой колонке, сыр и начинка — во второй. Начинки даны по вариантам, выбирайте один — количества вариантов не суммируются.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Бакалея, томаты, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука для пиццы «00»</strong>:
+                <span class="shopping-qty" data-base-amount="1000" data-unit="г">1000 г</span>
+                <span class="shopping-hint">1 кг. Если берёте Макфу, муки может понадобиться чуть больше: она хуже впитывает воду</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Дрожжи прессованные (живые)</strong>:
+                <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+                <span class="shopping-hint">Свежие. Дрожжей в рецепте намеренно мало — тесто созревает в холоде</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="25" data-unit="г">25 г</span>
+                <span class="shopping-hint">В тесто; соус солится отдельно</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">10 г в тесто + 20 г в томатный соус</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло оливковое Extra Virgin</strong>:
+                <span class="shopping-qty" data-base-amount="25" data-unit="г">25 г</span>
+                <span class="shopping-hint">В тесто, в самом конце замеса. Нужно ароматное, хорошее</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Помидоры очищенные в собственном соку</strong>:
+                <span class="shopping-qty" data-base-amount="800" data-unit="г">800 г</span>
+                <span class="shopping-hint">Банка 800 г; можно заменить свежими помидорами без кожицы</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Чеснок</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span>
+                <span class="shopping-hint">В соус в самом конце, через пресс</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Орегано, чёрный перец</strong> — по вкусу
+                <span class="shopping-hint">Орегано — обязательная пряность соуса, базилик в него не идёт</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Крахмал кукурузный (опционально)</strong>:
+                <span class="shopping-qty" data-base-amount="20" data-unit="г">20 г</span>
+                <span class="shopping-hint">Если хотите соус погуще: развести в 50 г холодной воды</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — растительное масло, пищевая плёнка или крышка, пергамент
+                <span class="shopping-hint">Растительным маслом смазать контейнер и тесто, чтобы не образовалась корочка</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧀 Сыр и начинка (один вариант)</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>«Маргарита»: моцарелла</strong>:
+                <span class="shopping-qty" data-base-amount="750" data-unit="г">750 г</span>
+                <span class="shopping-hint">По 150 г на пиццу; в DOCX 100–170 г на пиццу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>«Три сыра»: моцарелла</strong>:
+                <span class="shopping-qty" data-base-amount="600" data-unit="г">600 г</span>
+                <span class="shopping-hint">По 120 г на пиццу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сыр с голубой плесенью (дорблю, горгонзола)</strong>:
+                <span class="shopping-qty" data-base-amount="350" data-unit="г">350 г</span>
+                <span class="shopping-hint">Только для «Трёх сыров», по 70 г на пиццу. Не любите — регулируйте или возьмите сыр с белой плесенью</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пармезан</strong>:
+                <span class="shopping-qty" data-base-amount="400" data-unit="г">400 г</span>
+                <span class="shopping-hint">«Три сыра», по 80 г на пиццу. Для «Пепперони» — 300 г (по 60 г на пиццу)</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>«Пепперони»: колбаса пепперони</strong>:
+                <span class="shopping-qty" data-base-amount="500" data-unit="г">500 г</span>
+                <span class="shopping-hint">По 100 г на пиццу, нарезать тонкими ломтиками</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Базилик</strong> — по вкусу
+                <span class="shopping-hint">Свежий — на готовую пиццу; сушёный — тонким слоем до выпечки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шампиньоны свежие (опционально)</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">К «Пепперони», в DOCX 60–80 г на пиццу; нарезать и разложить до пармезана</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Тесто (1 замес ≈ 1,64 кг)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1000" data-unit="г">1000 г</span> — Мука для пиццы «00»
+              <span class="ingredient-note">Или Макфа, но тогда муки может понадобиться чуть больше</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="570" data-unit="г">570 г</span> — Вода ледяная
+              <span class="ingredient-note">Держите её в морозилке до начала замеса</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Соль
+              <span class="ingredient-note">Друг глютена: помогает развить глютеновые цепи</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Дрожжи живые (прессованные)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Масло оливковое Extra Virgin
+              <span class="ingredient-note">Вводится в самом конце замеса</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Сколько уйдёт — Растительное масло
+              <span class="ingredient-note">Для смазки контейнера и поверхности теста</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Томатный соус (выход ≈ 1 л)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="800" data-unit="г">800 г</span> — Помидоры без кожицы в собственном соку
+              <span class="ingredient-note">Или свежие помидоры без кожицы</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Сахар
+              <span class="ingredient-note">Регулирует кислотность помидоров</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              10–17 г — Соль
+              <span class="ingredient-note">10 г для консервированных помидоров, 17 г для свежих — по DOCX</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span> — Чеснок
+              <span class="ingredient-note">Добавить в конце, когда соус уже снят с огня — по видео</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Орегано, чёрный перец
+              <span class="ingredient-note">Орегано — обязательное, но не перебарщивайте: пряность душная. Можно добавить острый или копчёный перец</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Крахмал кукурузный (опционально)
+              <span class="ingredient-note">Развести в 50 г холодной воды, если соус жидкий</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">«Маргарита» — на 5 пицц</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="750" data-unit="г">750 г</span> — Томатный соус
+              <span class="ingredient-note">По 150 г на пиццу</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="750" data-unit="г">750 г</span> — Моцарелла
+              <span class="ingredient-note">По 150 г на пиццу; в DOCX 100–170 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Базилик
+              <span class="ingredient-note">Свежего может не быть — подойдёт сушёный тонким слоем</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">«Три сыра» — на 5 пицц</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="650" data-unit="г">650 г</span> — Томатный соус
+              <span class="ingredient-note">По 130 г на пиццу</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="600" data-unit="г">600 г</span> — Моцарелла
+              <span class="ingredient-note">По 120 г на пиццу</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="350" data-unit="г">350 г</span> — Сыр с голубой плесенью (дорблю, горгонзола)
+              <span class="ingredient-note">По 70 г на пиццу, порезать кусочками</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="400" data-unit="г">400 г</span> — Пармезан
+              <span class="ingredient-note">По 80 г на пиццу</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">«Пепперони» — на 5 пицц</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="650" data-unit="г">650 г</span> — Томатный соус
+              <span class="ingredient-note">По 130 г на пиццу</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="600" data-unit="г">600 г</span> — Моцарелла
+              <span class="ingredient-note">По 120 г на пиццу</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="500" data-unit="г">500 г</span> — Пепперони
+              <span class="ingredient-note">По 100 г на пиццу</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Пармезан
+              <span class="ingredient-note">По 60 г на пиццу</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Шампиньоны свежие (опционально)
+              <span class="ingredient-note">В DOCX 60–80 г на пиццу; нарезать ломтиками</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Замес: вода первой, масло последним</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В дежу миксера налейте ледяную воду, затем высыпьте всю муку по рецепту. Порядок важен: сначала вода, потом мука — так же и руками, в миске.
+                <span class="source-badge">⏱ Урок 1: 02:41–03:03</span>
+              </p>
+              <p>
+                На маленькой скорости вмешайте раскрошенные руками дрожжи, сахар и всю соль. Дождитесь, пока мука впитает влагу и тесто соберётся в комок — только тогда тонкой струйкой вводите оливковое масло.
+                <span class="source-badge">⏱ Урок 1: 03:20–04:35</span>
+              </p>
+              <p>
+                Мешайте ровно до того момента, как масло полностью войдёт, а тесто перестанет блестеть и снова станет матовым комком. По консистенции оно похоже на плотный пластилин.
+                <span class="source-badge">⏱ Урок 1: 04:56–05:43</span>
+              </p>
+              <div class="warning-box">
+                <strong>Замес — не дольше 10 минут:</strong> можно месить и дольше, но тесто от этого станет очень жёстким. В помещении должно быть прохладно, иначе ледяная вода быстро согреется.
+                <span class="source-badge">⏱ Урок 1: 03:52–04:02</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> тесто довольно плотное, руками его вымешивать непросто. Планетарный миксер справится лучше — но и вручную получится, если не спешить.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Замес: <strong>не более 10 минут</strong></span>
+              <span class="param-pill">🌡 Вода: <strong>ледяная, из морозилки</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Матовый комок, масло вошло полностью</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Холодная расстойка 24–48 часов</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Скатайте тесто в шар и положите в пластиковый контейнер, смазанный растительным маслом. Сверху тоже смажьте маслом — иначе образуется корочка. Закройте крышкой (или затяните миску пищевой плёнкой) и уберите в холодильник.
+                <span class="source-badge">⏱ Урок 1: 05:48–07:27</span>
+              </p>
+              <p>
+                Холод — только плюс для дрожжевого теста: за 24–48 часов пройдёт не просто подъём, а ферментация. Заработают крахмалы муки, раскроются глютеновые цепи — отсюда и текстура, и корочка.
+                <span class="source-badge">⏱ Урок 1: 06:43–07:07</span>
+              </p>
+              <div class="warning-box">
+                <strong>Температура в холодильнике — +4 °C и выше:</strong> при 0…+3 °C дрожжи впадают в анабиоз и тесто не растёт. Если холодильник холоднее, держите тесто в самой тёплой зоне.
+                <span class="source-badge">⏱ Урок 1: 07:07–07:22</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Расстойка: <strong>24–48 часов</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>+4 °C и выше</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Тесто заметно выросло и стало гладким</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Томатный соус с орегано</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Помидоры в собственном соку прогрейте в сотейнике, разминая лопаткой, и доведите до кипения. Сильно уваривать не нужно, если соус уже густой. Прогрейте и пробейте погружным блендером — но не в пюре: кусочки помидоров должны встречаться.
+                <span class="source-badge">⏱ Урок 2: 01:16–01:45</span>
+              </p>
+              <p>
+                Добавьте орегано (немного — пряность душная), чёрный перец и соль, затем сахар, чтобы сбалансировать кислотность. Перемешайте и дайте соусу остыть, а в самом конце пропустите через пресс чеснок и ещё раз перемешайте.
+                <span class="source-badge">⏱ Урок 2: 01:52–02:53</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> зимой вкусные помидоры найти сложно, поэтому проще взять банку очищенных томатов в собственном соку. И ещё: в соус для пиццы идёт именно орегано, а не базилик, как часто пишут.
+              </div>
+              <div class="warning-box">
+                <strong>Если соус жидкий:</strong> 20 г кукурузного крахмала разведите в 50 г холодной воды, введите при помешивании венчиком и прогрейте — соус станет гуще.
+                <span class="source-badge">⏱ DOCX</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍅 Выход: <strong>≈1 л соуса</strong></span>
+              <span class="param-pill">🧄 Чеснок: <strong>2 зубчика, в конце</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Соус прогрелся, специи раскрылись</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Шары по 300 г и раскатка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Достаньте тесто из холодильника и дайте ему нагреться до комнатной температуры. Обомните, выложите на припылённый мукой стол и разделите на шары по 300 г — этого хватает на пиццу Ø30–33 см.
+                <span class="source-badge">⏱ Урок 2: 00:08–03:51</span>
+              </p>
+              <p>
+                Каждый шар скруглите и раскатайте скалкой (скалку тоже припудрите). Тесто тугое и больше растягивается, чем раскатывается: профессионалы крутят его на пальцах, но скалкой получается надёжнее.
+                <span class="source-badge">⏱ Урок 2: 04:04–04:37</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> хотите пиццу больше — берите теста больше, хотите тоньше — меньше. Ориентир автора: 250–300 г теста на пиццу Ø30–33 см.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Тесто: <strong>250–300 г на пиццу</strong></span>
+              <span class="param-pill">🥣 Формовка: <strong>Скалкой, стол припылить мукой</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Пласт ровный, без разрывов</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Соус, бортик и начинка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите пласт на противень и налейте соус, размазывая его по поверхности. Оставьте около 2 см от края без соуса — это будущий бортик.
+                <span class="source-badge">⏱ Урок 2: 04:37–04:59</span>
+              </p>
+              <p>
+                «Маргарита»: соус, моцарелла и больше ничего, сверху немного базилика. «Три сыра»: соус, моцарелла, кусочки дорблю (можно добавить горгонзолу), пармезан. «Пепперони»: соус, моцарелла, ломтики колбасы, при желании шампиньоны, сверху пармезан.
+                <span class="source-badge">⏱ Урок 2: 05:05–07:08</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> не превращайте пиццу в винегрет. Три вида мяса, пять видов сыра и всё сразу — это не классика; лучше держаться аутентичных сочетаний. Сыр с плесенью кладут по вкусу: если не любите, уменьшите или возьмите более нейтральный с белой плесенью.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Соус: <strong>130–150 г на пиццу, минус 2 см от края</strong></span>
+              <span class="param-pill">🧀 Сыр: <strong>Моцарелла — база для всех трёх</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Выпечка при 200 °C</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте в заранее разогретой духовке при 200 °C с конвекцией 13–15 минут. Традиционно пиццу печёт при 200–220 °C около 15 минут, но ориентируйтесь на свою духовку.
+                <span class="source-badge">⏱ Урок 2: 07:16–07:49</span>
+              </p>
+              <div class="warning-box">
+                <strong>Если духовка «злая»:</strong> бывает, что выше 180 °C она сжигает всё напрочь — тогда пеките при 180 °C и просто регулируйте время. В DOCX: 200 °C, конвекция, 13–15 минут.
+                <span class="source-badge">⏱ Урок 2: 07:26–07:35</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> хорошие пузыри на тесте и зарумянившийся бортик — признак того, что тесто хорошо сработало и корочка получилась.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>200 °C конвекция</strong></span>
+              <span class="param-pill">⏱ Время: <strong>13–15 минут</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Румяный бортик, пузыри, тянется сыр</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Подача и проверка на «держит форму»</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Готовую пиццу нарежьте и добавьте свежую зелень: базилик, маргольд — что есть. Подавайте сразу, пока горячая.
+                <span class="source-badge">⏱ Урок 2: 08:11–08:39</span>
+              </p>
+              <p>
+                Тест на качество теста: возьмите кусочек на руку. Сыр должен тянуться, а кусок — держать форму и не провисать, даже если это самая «жидкая» «Маргарита».
+                <span class="source-badge">⏱ Урок 2: 08:45–09:26</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> «Маргарита» — самый честный тест для теста: соуса много, начинки мало. Если она не течёт и держит форму, значит, тесто удалось.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍽 Подача: <strong>Сразу, со свежей зеленью</strong></span>
+              <span class="param-pill">🔍 Тест: <strong>Кусок держит форму, сыр тянется</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Мука «00»:</strong> делается из мягких сортов пшеницы, проходит высокую степень очистки и содержит много белка — до 13 г на 100 г. Белок даёт прочные глютеновые цепи, а значит структуру и текстуру.</li>
+                <li><strong>Зачем сила тесту:</strong> чтобы корочка была красивой, а кусочек не провисал и начинка не отваливалась, даже если тесто тонкое.</li>
+                <li><strong>Макфа:</strong> подойдёт, но она хуже впитывает воду, поэтому муки может понадобиться чуть больше. Следите, чтобы тесто не было слишком липким.</li>
+                <li><strong>Мало дрожжей — мало сахара, много соли:</strong> соль друг глютена, она помогает развивать глютеновые цепи; сахара совсем немного, а дрожжей мало, потому что основную работу делает холод.</li>
+                <li><strong>Масло в конце:</strong> оливковое Extra Virgin с ароматом вводится последним, когда тесто уже собралось в комок.</li>
+                <li><strong>Холод:</strong> 24–48 часов при +4 °C и выше — это ферментация, а не просто подъём. Ниже +4 °C дрожжи засыпают.</li>
+                <li><strong>Соус:</strong> орегано обязательно, базилик — нет. Сахар регулирует кислотность, чеснок идёт в конце, когда соус уже снят с огня.</li>
+                <li><strong>Запас теста:</strong> остатки теста спокойно ждут в холодильнике до 48 часов — можно печь пиццу два дня подряд.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Долгий замес:</strong> больше 10 минут — и тесто становится жёстким. Останавливайтесь, как только масло вошло.</li>
+                <li><strong>Тёплая вода:</strong> вода должна быть ледяной, иначе тесто начнёт бродить ещё до холодильника.</li>
+                <li><strong>Слишком холодный холодильник:</strong> при 0…+3 °C дрожжи в анабиозе, тесто не поднимется.</li>
+                <li><strong>Тесто без масла сверху:</strong> образуется корочка, которая потом мешает раскатке.</li>
+                <li><strong>Соус до самого края:</strong> оставляйте 2 см — иначе бортик не поднимется и начинка потечёт.</li>
+                <li><strong>Перегруз начинкой:</strong> «винегрет» из всего подряд утяжеляет пиццу и мешает тесту пропечься.</li>
+                <li><strong>Холодное тесто в раскатку:</strong> дайте шару согреться до комнатной температуры, иначе он будет стягиваться обратно.</li>
+                <li><strong>Печь без разогрева:</strong> духовку разогревают заранее, иначе тесто не даст пузырей.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 (замес теста, холодная расстойка — 00:00–07:32), урок_02.mp4 (томатный соус, деление и раскатка, начинки, выпечка, подача — 00:00–09:28); расшифровка с таймкодами «Расшифровка Пицца.csv»; файл «Пицца.docx» с точными граммовками теста, соуса и трёх начинок. Таймкоды на странице — реальные, из расшифровки.</li>
+              <li><strong>Опечатка в DOCX:</strong> в рецептуре теста указано «1000 кг муки» — по смыслу и по остальным пропорциям это 1000 г (1 кг). На странице — 1000 г.</li>
+              <li><strong>Выход:</strong> DOCX даёт замес из 1 кг муки и 570 г воды (≈1,64 кг теста) и просит 250–300 г теста на пиццу Ø30–33 см — это примерно 5 пицц. В видео автор делит тесто на шары по 300 г и печёт три пиццы, по одной каждого вида; остальное тесто может храниться в холодильнике до 48 часов. База калькулятора — 5 пицц, начинки даны на 5 пицц одного варианта.</li>
+              <li><strong>Соль в соусе:</strong> DOCX даёт 10 г для консервированных помидоров и 17 г для свежих; в видео соль добавляется на глаз. На странице оставлен диапазон 10–17 г без пересчёта.</li>
+              <li><strong>Чеснок:</strong> в DOCX его нет, в видео автор добавляет два зубчика через пресс в конце, когда соус уже снят с огня. На странице указан по видео.</li>
+              <li><strong>Температура выпечки:</strong> в видео названы и 200–220 °C на 15 минут, и предупреждение, что слабая духовка сжигает всё выше 180 °C; автор печёт при 200 °C и следит за временем. В DOCX — 200 °C, конвекция, 13–15 минут. На странице — 200 °C с конвекцией.</li>
+              <li><strong>Пробелы:</strong> автор не называет точный вес готовой пиццы и точное время жарки/выпечки для каждой начинки отдельно; температура соуса и его точный выход (≈1 л) в DOCX не зафиксированы.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице стоит кадр из урок_02.mp4 с готовыми пиццами. Пользователь сообщил, что фото в любом случае переделает.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

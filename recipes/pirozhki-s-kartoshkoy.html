@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пирожки с картошкой — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Пирожки с картошкой Надежды Зубовой: дрожжевое тесто холодным способом (8–24 ч в холодильнике), начинка из сухого картофельного пюре с обжаренным луком и сырокопчёным беконом, формовка лодочкой и косичка-декор из того же теста.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="pirozhki-s-kartoshkoy">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Лёгкая</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Пирожки с картошкой</h1>
+      <p class="recipe-lead">
+        Универсальное дрожжевое тесто холодным способом: всё складывается в дежу, масло вводится в конце, а дальше тесто уходит в холодильник на ночь — долго вымешивать его не нужно. Начинка — картофельное пюре без единой капли жидкости, с обжаренным луком и сырокопчёным беконом. Пирожки формуют классической лодочкой, а сверху укладывают косичку из того же теста.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Тесто в холодильнике 8–24 ч, согревание теста, расстойка 15–20 мин, выпечка 20–25 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~10–26 ч с ночью на тесто</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">≈20 пирожков (50 г теста + 35–40 г начинки)</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/pirozhki-s-kartoshkoy.jpg" alt="Сформированные пирожки с картошкой на противне: вытянутые заготовки и две с косичкой-декором из теста, до выпечки" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 замес)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">замес (≈20 пирожков)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База калькулятора — один замес теста по DOCX (выход ≈2 кг) и начинка на 20 пирожков: по 50 г теста + 35–40 г начинки. Из двух килограммов теста при 50 г на пирожок выходит около 40 заготовок, так что часть теста останется — оно хранится 48 часов в холодильнике или месяц в морозилке.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> замес</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на один замес теста (≈2 кг) и начинку на 20 пирожков: бакалея и молочное в первой колонке, картофель, лук и бекон — во второй.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Бакалея, молочное, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная (Макфа)</strong>:
+                <span class="shopping-qty" data-base-amount="1000" data-unit="г">1000 г</span>
+                <span class="shopping-hint">Килограммовый пакет, вся мука идёт в тесто. Подпыл не нужен</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Дрожжи прессованные</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Свежие: проверяются на пластилин — кусочек должен лепиться</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">Комнатной температуры, не подогревать</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Только в тесто, комнатной температуры. Две пачки по 100 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="120" data-unit="г">120 г</span>
+                <span class="shopping-hint">В тесто</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="20" data-unit="г">20 г</span>
+                <span class="shopping-hint">В тесто; начинка солится отдельно по вкусу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Растительное масло</strong>:
+                <span class="shopping-hint">Для обжарки лука и бекона, количество автор не называет</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — пищевая плёнка, пергамент
+                <span class="shopping-hint">Плёнка на тесто в холодильник, пергамент на противень</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥔 Картофель, лук, бекон, яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Картофель</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span>
+                <span class="shopping-hint">Средние клубни, ~600–700 г: варится и разминается в пюре без жидкости</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лук репчатый</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">Крупная луковица: примерно четверть обжаривается в начинку, остальное — на другие нужды</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Бекон сырокопчёный</strong>:
+                <span class="shopping-qty" data-base-amount="40" data-unit="г">40 г</span>
+                <span class="shopping-hint">3–4 полоски. Подойдёт и варёно-копчёный, и сырой — но с копчёным вкус ярче</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="6" data-unit="шт." data-piece="true">6 шт.</span>
+                <span class="shopping-hint">250 г (≈5 шт.) в тесто + одно на смазку пирожков</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль, перец</strong>:
+                <span class="shopping-hint">В начинку по вкусу</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Тесто холодным способом</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1000" data-unit="г">1000 г</span> — Мука пшеничная (Макфа)
+              <span class="ingredient-note">Вся мука уходит в дежу сразу</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Дрожжи прессованные
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Молоко комнатной температуры
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Яйца (≈5 шт.)
+              <span class="ingredient-note">Комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сливочное масло размягчённое
+              <span class="ingredient-note">Вводится понемногу в самом конце</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Ваниль — по желанию
+              <span class="ingredient-note">Только если из этого теста печёте сладкие плюшки</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка картофельная</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span> — Картофель
+              <span class="ingredient-note">Сварить и размять в пюре. Жидкость не добавлять</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span> — Лук репчатый
+              <span class="ingredient-note">Обжарить; в начинку идёт примерно четверть крупной луковицы</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Бекон сырокопчёный (3–4 полоски)
+              <span class="ingredient-note">Нарезать соломкой и обжарить до золотистой корочки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Растительное масло — по потребности
+              <span class="ingredient-note">Для обжарки лука и бекона</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Соль и перец — по вкусу
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Для смазки и декора</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Яйцо — 1 шт. для смазки
+              <span class="ingredient-note">Или яйцо с молоком, желток, желток с водой, сладкий крепкий чай, молоко</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Холодный замес: сухие и влага</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Тесто делается холодным способом — вымешивать его долго не нужно. Всю муку по рецепту высыпьте в дежу. Дрожжи раскрошите в муку: слоистая текстура и способность лепиться как пластилин — признак свежести.
+                <span class="source-badge">⏱ Урок 1: 00:01–00:58</span>
+              </p>
+              <p>
+                Добавьте сахар и соль, включите низкую скорость. Влейте молоко комнатной температуры, затем яйца. Дайте тесту впитать влагу: вся мука должна войти в тесто, на это уходит около минуты.
+                <span class="source-badge">⏱ Урок 1: 00:58–02:39</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Порядок: <strong>Мука, дрожжи, сахар, соль → молоко → яйца → масло</strong></span>
+              <span class="param-pill">⏱ Увлажнение: <strong>~1 минута</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Масло в конце и сборка теста</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Как только влага и мука соединились, добавляйте размягчённое сливочное масло понемногу. Не высыпайте всё сразу: тесто быстро разжижится и покажется, что не хватает муки.
+                <span class="source-badge">⏱ Урок 1: 02:39–03:16</span>
+              </p>
+              <p>
+                Если тесто расслабилось и разжижилось — дайте ему собраться, просто помешайте ещё немного, и только потом добавляйте следующую порцию. На введение масла уходит около 5 минут, больше вымешивать не нужно.
+                <span class="source-badge">⏱ Урок 1: 03:16–04:47</span>
+              </p>
+              <div class="warning-box">
+                <strong>Ничего тёплого:</strong> молоко не подогревают, яйца берут комнатной температуры. Тесту не нужна температура выше окружающей среды — процесс всё равно запустится в холодильнике.
+                <span class="source-badge">⏱ Урок 1: 04:54–05:10</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Масло: <strong>~5 минут, порциями</strong></span>
+              <span class="param-pill">⚖ Выход: <strong>~2 кг теста</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Ночь в холодильнике</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Соберите тесто в комок и верните в дежу, затяните пищевой плёнкой и уберите в холодильник на 8 часов, максимум на 24. Несмотря на отсутствие тёплых ингредиентов, тесто поднимется и на холоде.
+                <span class="source-badge">⏱ Урок 1: 05:37–06:10</span>
+              </p>
+              <p>
+                Готовое тесто хранится 48 часов в холодильнике и месяц в морозилке; размораживают при комнатной температуре.
+                <span class="source-badge">⏱ DOCX</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Охлаждение: <strong>8–24 часа</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>48 ч в холодильнике, 1 мес в морозилке</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Тесто согревается</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Тесто после ночи достаньте из дежи, выложите на стол, накройте тряпочкой и оставьте нагреваться до комнатной температуры. К рукам оно почти не липнет.
+                <span class="source-badge">⏱ Урок 2: 00:01–00:27</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Тесто: <strong>До комнатной температуры</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Деление и подкатка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Нарезайте тесто пластиковым скребком — ножом автор не рекомендует. Каждый кусочек взвешивайте: на небольшой пирожок идёт 50–55 г. Подверните края внутрь, оставив снаружи гладкую поверхность, и положите комочек складками вниз на 15 минут.
+                <span class="source-badge">⏱ Урок 2: 00:28–01:46</span>
+              </p>
+              <p>
+                Затем подкатайте: прижмите комочек ладошкой к столу и покатайте — почувствуете, как тесто натягивается. Можно двумя руками сразу.
+                <span class="source-badge">⏱ Урок 2: 01:46–02:31</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Тесто: <strong>50–55 г на пирожок</strong></span>
+              <span class="param-pill">🔧 Инструмент: <strong>Пластиковый скребок</strong></span>
+              <span class="param-pill">⏱ Отдых комочков: <strong>15 минут</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Картофельное пюре для начинки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Картофель сварите и разомните в пюре. Жидкость не добавляйте — начинка должна быть довольно сухой, иначе она размягчит тесто изнутри.
+                <span class="source-badge">⏱ Урок 3: 00:09–00:15</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥔 Пюре: <strong>Без молока и жидкости</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Бекон и лук</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Бекон нарежьте тонкой соломкой и обжарьте до хорошей золотистой корочки. Подойдёт варёно-копчёный или сырокопчёный, можно и сырой — но вкус копчёности здесь важен.
+                <span class="source-badge">⏱ Урок 3: 00:16–00:57</span>
+              </p>
+              <p>
+                Лук порежьте кубиком и обжарьте отдельно. Дайте бекону немного остыть.
+                <span class="source-badge">⏱ Урок 3: 00:16–01:03</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥓 Бекон: <strong>40 г, соломкой</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Золотистая корочка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Собираем начинку</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                К картофельному пюре добавьте обжаренный лук (примерно четверть крупной луковицы) и бекон, поперчите и перемешайте ложкой. Попробуйте и досолите по вкусу.
+                <span class="source-badge">⏱ Урок 3: 01:03–01:38</span>
+              </p>
+              <div class="warning-box">
+                <strong>Начинка холодная:</strong> только остывшую начинку кладут на тесто.
+                <span class="source-badge">⏱ DOCX</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧅 Лук: <strong>~¼ крупной луковицы</strong></span>
+              <span class="param-pill">🥓 Бекон: <strong>Всё количество в начинку</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Раскатка и классическая формовка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Муку для подпыла автор не использует — тесто не липнет ни к скалке, ни к столу. Раскатайте комочек в лепёшку и обязательно сразу переверните её: гладкая сторона должна оказаться снаружи, а складки — внутри пирожка.
+                <span class="source-badge">⏱ Урок 4: 00:02–00:48</span>
+              </p>
+              <p>
+                Выложите 35–40 г начинки (первые два раза проверьте на весах). Скрепите края сильно, сжимая пальцами, чтобы пирожок не раскрылся. Оставшиеся краешки подожмите вверх, чтобы носики были аккуратными, и слегка приподнимите пирожок — вбок он расползётся сам.
+                <span class="source-badge">⏱ Урок 4: 00:48–01:41</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> перевёрнутая лепёшка — главный секрет ровных пирожков. Складки прячутся внутрь, а снаружи остаётся гладкая поверхность.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥔 Начинка: <strong>35–40 г на пирожок</strong></span>
+              <span class="param-pill">🥣 Форма: <strong>Классическая лодочка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Косичка-декор</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Для декора раскатайте тесто тоньше, чем на пирожок, и дайте ему полежать пару минут — иначе оно сожмётся. Нарежьте полоску и сделайте насечки с одной стороны, затем с другой: чем чаще и мельче, тем интереснее рисунок.
+                <span class="source-badge">⏱ Урок 4: 02:06–02:59</span>
+              </p>
+              <p>
+                Нарежьте косичку на отрезки по длине пирожка и уложите сверху — не на весь пирожок, а на его часть.
+                <span class="source-badge">⏱ Урок 4: 03:00–03:08</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🎀 Декор: <strong>Косичка из теста на часть пирожка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Расстойка, смазка и выпечка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Дайте изделиям расстояться 15–20 минут, затем смажьте яйцом (или яйцом с молоком, желтком, желтком с водой, сладким крепким чаем либо молоком) и проколите вилкой или ножом.
+                <span class="source-badge">⏱ DOCX</span>
+              </p>
+              <p>
+                Выпекайте в заранее разогретой духовке: 170 °C с конвекцией (можно сразу несколько противней) или 180 °C верх-низ. Маленькие пирожки — 20–25 минут. Готовые изделия храните 2 дня при комнатной температуре в бумажном пакете или под полотенцем, до 7 дней — в холодильнике в плёнке.
+                <span class="source-badge">⏱ DOCX</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Расстойка: <strong>15–20 минут</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>170 °C конвекция или 180 °C верх-низ</strong></span>
+              <span class="param-pill">⏱ Выпечка: <strong>20–25 минут</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Холодное тесто — без долгого замеса:</strong> 5 минут на масло и в холодильник. Тесто само доходит за ночь.</li>
+                <li><strong>Проверка дрожжей:</strong> свежие имеют слоистую текстуру и лепятся как пластилин.</li>
+                <li><strong>Молоко не греем:</strong> в этом тесте не нужны тёплые ингредиенты, комнатной температуры достаточно.</li>
+                <li><strong>Сухое пюре:</strong> без молока и жидкости — иначе начинка размягчит тесто и пирожок «поплывёт».</li>
+                <li><strong>Копчёный бекон:</strong> вкус копчёности и есть изюминка этой начинки.</li>
+                <li><strong>Скребок вместо ножа:</strong> тесто не сминается и не тянется.</li>
+                <li><strong>Перевернуть лепёшку:</strong> складки уходят внутрь, поверхность остаётся гладкой.</li>
+                <li><strong>Косичка на часть пирожка:</strong> так декор читается, а шов не мешает.</li>
+                <li><strong>Ваниль:</strong> если из этого же теста печёте сладкие плюшки — щепотка ванили придётся к месту.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Всё масло сразу:</strong> тесто разжижается. Вводите порциями, давая каждой войти.</li>
+                <li><strong>Подогрели молоко:</strong> для холодного способа это лишнее, тесто начинает вести себя непредсказуемо.</li>
+                <li><strong>Жидкое пюре:</strong> начинка вытекает и рвёт пирожок при выпечке.</li>
+                <li><strong>Слабые защипы:</strong> пирожок раскрывается в духовке. Сжимайте пальцами сильно.</li>
+                <li><strong>Не перевернули лепёшку:</strong> складки оказываются снаружи, поверхность получается неровной.</li>
+                <li><strong>Не прокололи:</strong> пар разрывает тесто. Прокалывайте до дна.</li>
+                <li><strong>Холодное тесто сразу в работу:</strong> оно рвётся и плохо формуется — сначала доведите до комнатной температуры.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> серия Надежды Зубовой — Урок_01.mp4 (холодный замес теста), Урок_02.mp4 (согревание, деление, подкатка), Урок_03.mp4 (картофельная начинка с беконом), Урок_04.mp4 (раскатка, формовка, косичка-декор); расшифровка с таймкодами; файл «Пирожки с картошкой.docx» с точными граммовками. Таймкоды на странице — реальные, из расшифровки.</li>
+              <li><strong>Выход:</strong> DOCX просит рассчитать граммовки на 20 пирожков по 50 г теста + 35–40 г начинки. Начинки из 4 картофелин, луковицы и 40 г бекона как раз хватает на 20 пирожков, а полного замеса (≈2 кг) при 50 г на пирожок — примерно на 40. Поэтому база калькулятора — один замес.</li>
+              <li><strong>Вес теста:</strong> в видео автор отвешивает 50–55 г, в DOCX — 50 г. На странице оба значения.</li>
+              <li><strong>Лук:</strong> в DOCX указана целая луковица, в видео в начинку идёт примерно четверть крупной обжаренной луковицы. В списке покупок стоит 1 шт., в начинку — по видео.</li>
+              <li><strong>Ваниль:</strong> автор упоминает её как опцию для сладких плюшек из этого же теста, в рецептуру пирожков она не входит.</li>
+              <li><strong>Выпечка:</strong> в видео выпечка не показана — режимы и время взяты из DOCX: 170 °C с конвекцией или 180 °C верх-низ, 20–25 минут.</li>
+              <li><strong>Фото:</strong> готовых снимков и кадров выпечки в исходниках нет. На странице стоит кадр из Урок_04.mp4 (00:03:35) — сформированные пирожки с косичкой на противне до выпечки.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

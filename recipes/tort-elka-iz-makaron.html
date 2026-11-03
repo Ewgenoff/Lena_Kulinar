@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Торт «Ёлка» из макаронс — башня из крышечек 10–3 см | CookBook</title>
+  <meta name="description" content="Торт-ёлка из макаронс: крышечки диаметром 10–3 см скрепляются ганашем манго-маракуйя или грецкий орех с сыром с голубой плесенью, декор посыпкой с хрустящим рисом или шоколадным велюром. Пошаговая сборка башни от большого к меньшему, хранение 72 ч в холодильнике и месяц в морозилке.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body data-recipe-id="tort-elka-iz-makaron">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог кулинарных рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Торт «Ёлка» из макаронс</h1>
+      <p class="recipe-lead">
+        Целый торт, собранный стопкой из крышечек макаронс: снизу самая большая, 10 см, сверху — крошечная, 3 см. Каждый ярус скрепляется ганашем, а между крышечками видно начинку, поэтому ёлка получается «пушистой» без единого грамма крема снаружи. Автор делает две версии: с манго-маракуйей и с грецким орехом и сыром с голубой плесенью. Готовую ёлку весом около 350 г украшают посыпкой с хрустящим рисом или шоколадным велюром и упаковывают в прозрачный тубус — размеры подобраны именно так, чтобы десерт встал в него как родной.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">крышечки заранее</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~30 мин сборка</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">от нескольких часов</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Хранение</span>
+          <span class="fact-value">72 ч в холоде, 1 мес в морозилке</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 ёлка ≈ 350 г</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-elka-iz-makaron.jpg" alt="Зелёная торт-ёлка из макаронс разного диаметра на золотой подложке, рядом новогодняя ёлка из безе и прозрачный тубус с десертом" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 торт)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">торт (ёлка)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Одна порция — это одна готовая ёлка весом около 350 г: восемь крышечек макаронс диаметром 10, 9, 8, 7, 6, 5, 4 и 3 см, поставленных друг на друга от большей к меньшей. Вес зависит от щедрости начинки ганашем, поэтому точных граммовок у автора нет.
+          </p>
+        </div>
+
+        <!-- Переключатель источников и таймкодов видео -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Основной контент: Ингредиенты + Технология -->
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> торт</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сам торт — это только сборка: крышечки макаронс выпекаются заранее по отдельному рецепту, а здесь перечислено то, что нужно купить под начинку и упаковку. Ганаши — взаимоисключающие варианты: на одну ёлку делайте какой-то один, количества не суммируются.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: начинка -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Ганаш и начинка (один вариант)</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Вариант 1. Пюре манго</strong>
+                <span class="shopping-hint">Ганаш манго-маракуйя из первого урока; в этой папке пропорции не названы — берите готовый рецепт начинки «манго-маракуйя» из урока о макаронс</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре маракуйя</strong>
+                <span class="shopping-hint">Вторая половина той же начинки; продаётся в кондитерском отделе или банками для коктейлей без сахара</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Белый шоколад</strong>
+                <span class="shopping-hint">Основа обоих ганашей: на белом шоколаде ганаш стабильнее. Смотрите содержание какао-масла на упаковке</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Вариант 2. Грецкие орехи</strong>
+                <span class="shopping-qty">сколько уйдёт</span>
+                <span class="shopping-hint">Обжаренные, рубленые — топятся прямо в ганаш, чтобы не выступали над крышечкой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сыр с голубой плесенью</strong>
+                <span class="shopping-qty">сколько уйдёт</span>
+                <span class="shopping-hint">Дорблю или горгонзола. Автор предупреждает: переусердствовать не надо, это десерт, а не закуска</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 33–35%</strong> (опционально)
+                <span class="shopping-hint">Если ганаш варите сами на белом шоколаде — для кремообразной текстуры под сборку</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: декор и упаковка -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍬 Декор, посыпка, упаковка</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Посыпка с хрустящим рисом</strong>
+                <span class="shopping-qty">сколько уйдёт</span>
+                <span class="shopping-hint">Крупные шарики и сахарные жемчужины; рис даёт хруст между крышечками</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шоколадный велюр</strong> (опционально)
+                <span class="shopping-hint">Какао-масло с тёртым какао под напыление. Автор называет покрытие велюром как второй способ отделки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Подложка под торт</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">Золотой или серебряный картон; большая крышечка приклеивается к ней ганашем, чтобы торт не съехал</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Прозрачный тубус для упаковки</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">Готовая цилиндрическая коробка — те же тубусы, в которых продают шоколадные ёлки. Диаметры макаронс подобраны под этот размер</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кондитерский мешок и насадка № 34</strong>
+                <span class="shopping-hint">Закрытая маленькая звезда — ей автор отсаживает окружность ганаша по краю крышечки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Плёнка и контейнер для хранения</strong>
+                <span class="shopping-hint">Для холодильника и морозилки; замораживать можно вместе с декором</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Крышечки макаронс</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="8" data-unit="шт." data-piece="true">8 шт.</span> — Крышечки макаронс разного диаметра
+              <span class="ingredient-note">По одной на ярус: 10, 9, 8, 7, 6, 5, 4 и 3 см. Сами крышечки выпекаются по отдельному рецепту — на швейцарской меренге, он живёт отдельной страницей каталога; здесь только сборка</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Ганаш для скрепления (любой один)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Сколько уйдёт — Ганаш манго-маракуйя
+              <span class="ingredient-note">Первый, классический вариант. Автор берёт его невзбитым, кремообразным — так крышечки лучше ложатся. Пропорции — в уроке о начинках макаронс</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Сколько уйдёт — Обжаренный грецкий орех
+              <span class="ingredient-note">Второй вариант, «деликатесный». Орехи утапливаются в ганаш, чтобы не мешали ровной сборке</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Сколько уйдёт — Сыр с голубой плесенью
+              <span class="ingredient-note">Добавляется не в каждый слой, а выборочно: немного, чтобы осталось десертом</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Декор и отделка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Сколько уйдёт — Посыпка с хрустящим рисом
+              <span class="ingredient-note">Ею украшают ёлку снаружи; рис хрустит, когда торт режут</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Шоколадный велюр (опционально)
+              <span class="ingredient-note">Второй способ отделки: торт можно покрыть велюром вместо посыпки</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Основа и упаковка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span> — Подложка под торт
+              <span class="ingredient-note">На неё сажается нижняя, самая большая крышечка</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span> — Прозрачный тубус
+              <span class="ingredient-note">Упаковка для продажи и подарка; ёлка собрана ровно под такой тубус</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Зачем нужны крышечки разных диаметров</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Все большие макаронс выпекаются заранее, и именно из них собирается ёлка — каждый ярус ниже предыдущего, как у настоящей ели.
+                <span class="source-badge">⏱ Урок 1: 00:00–00:08</span>
+              </p>
+              <p>
+                Размеры автор подобрала специально: готовая ёлка должна входить в прозрачный тубус, те самые красивые цилиндры, в которых продают маленькие шоколадные ёлочки. Под одну упаковку помещается и то, и другое.
+                <span class="source-badge">⏱ Урок 1: 00:08–00:27</span>
+              </p>
+              <div class="tip-box">
+                <strong>Предел диаметра:</strong> макаронс больше 12 см делать не стоит — по словам автора, они уже плохо держат форму. К стандартному набору можно добавить ещё один ярус на 2 см, если очень хочется.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Диаметры: <strong>10–9–8–7–6–5–4–3 см</strong></span>
+              <span class="param-pill">🚫 Максимум: <strong>Не больше 12 см</strong></span>
+              <span class="param-pill">⚖ Вес ёлки: <strong>≈ 350 г</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Сортировка и пропитка крышечек</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разложите крышечки по диаметрам, от самой большой к самой маленькой: сборка идёт строго в этом порядке, и под рукой всё должно лежать так же.
+              </p>
+              <p>
+                Ёлка собирается из макаронс, которые уже пропитались начинкой. После пропитки они, по словам автора, «станут настоящими тортами» — и торт при этом будет полностью состоять из макаронс.
+                <span class="source-badge">⏱ Урок 1: 00:27–00:35</span>
+              </p>
+              <div class="tip-box">
+                <strong>Как резать:</strong> готовую ёлку автор подаёт разрезанной на четыре части или пополам — она хорошо поддаётся нарезанию именно потому, что крышечки уже пропитались и стали мягкими.
+                <span class="source-badge">⏱ Урок 1: 00:38–00:48</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔢 Ярусов: <strong>8 (по числу диаметров)</strong></span>
+              <span class="param-pill">↕ Порядок: <strong>От большого к меньшему</strong></span>
+              <span class="param-pill">🍰 Подача: <strong>Режется на 2 или 4 части</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Фиксация основания</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Нижнюю, самую большую крышечку автор прилепляет на ганаш прямо к подложке — так торт никуда не съедет и его можно будет переносить вместе с картоном.
+                <span class="source-badge">⏱ Урок 1: 00:48–00:57</span>
+              </p>
+              <p>
+                Дальше в работу идёт насадка № 34 — маленькая закрытая звезда. Ею по краю крышечки отсаживается ровная окружность ганаша: этот край пойдёт в основу и будет виден снаружи.
+                <span class="source-badge">⏱ Урок 1: 00:57–01:20</span>
+              </p>
+              <div class="tip-box">
+                <strong>Порядок важнее красоты:</strong> сначала окружность по кромке, и только потом заполнение середины — любым способом и любой насадкой.
+                <span class="source-badge">⏱ Урок 1: 01:11–01:20</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧰 Насадка: <strong>№ 34 (закрытая звезда)</strong></span>
+              <span class="param-pill">📌 Фиксация: <strong>Ганаш к подложке</strong></span>
+              <span class="param-pill">⚪ Рисунок: <strong>Окружность по краю</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Первый ганаш и первый ярус</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Ганаш берётся тот, что с начинкой: у автора это манговый ганаш, который они не взбивали, — он накладывается кремообразным, как крем.
+                <span class="source-badge">⏱ Урок 1: 01:41–01:59</span>
+              </p>
+              <p>
+                Первый макаронс кладётся на отсаженное кольцо ровно, по центру, и чуть-чуть прижимается — ровно настолько, чтобы ганаш вышел к краю и ярус сел устойчиво.
+                <span class="source-badge">⏱ Урок 1: 02:00–02:14</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥭 Ганаш: <strong>Манго, невзбитый</strong></span>
+              <span class="param-pill">🎯 Центровка: <strong>Ровно по окружности</strong></span>
+              <span class="param-pill">🖐 Нажим: <strong>Слегка, до выхода ганаша</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Способ «капельки по краю»</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Второй способ выкладки: по краю крышечки отсаживаются капельки, а у каждой капельки хвостик смахивается в середину. Так по всему периметру получается видимый бортик — именно он создаёт «пушистость» ёлки.
+                <span class="source-badge">⏱ Урок 1: 02:12–02:26</span>
+              </p>
+              <p>
+                Середину можно заполнить проще и быстрее — её всё равно не видно, она уходит под следующую крышечку.
+                <span class="source-badge">⏱ Урок 1: 02:35–02:45</span>
+              </p>
+              <div class="tip-box">
+                <strong>Главное — край:</strong> автор прямо говорит, что важен краешек, а что внутри — уже не так важно. Начинку на ярусе можно раскладывать любой насадкой, лишь бы кромка выглядела аккуратно.
+                <span class="source-badge">⏱ Урок 1: 03:42–03:47</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">💧 Форма: <strong>Капельки с хвостиком внутрь</strong></span>
+              <span class="param-pill">👀 Акцент: <strong>Видимый бортик</strong></span>
+              <span class="param-pill">⚪ Центр: <strong>Любой насадкой</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Способ «маленькие окружности»</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Третий способ: отсаживаются совсем маленькие-маленькие колечки — в середине и по кругу — по тому же принципу, что и раньше. Ярус после этого ставится на место и придавливается.
+                <span class="source-badge">⏱ Урок 1: 02:46–02:54</span>
+              </p>
+              <p>
+                Такой рисунок даёт много мелких «завитков» ганаша по кромке — ёлка выглядит наряднее, если у вас не хватает времени на крупные капельки.
+                <span class="source-badge">⏱ Урок 1: 03:12–03:28</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⭕ Рисунок: <strong>Мелкие окружности</strong></span>
+              <span class="param-pill">📍 Место: <strong>Центр + периметр</strong></span>
+              <span class="param-pill">🖐 После: <strong>Придавить ярус</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Способ «смазывание по периметру»</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Четвёртый, самый быстрый способ: ганаш просто смазывается прямо по периметру крышечки — ровной полосой, без капель и колечек.
+                <span class="source-badge">⏱ Урок 1: 03:31–03:39</span>
+              </p>
+              <p>
+                Дальше — снова манговый ганаш в середину, и ярус отправляется на ёлку. Способы автор чередует по всей высоте, чтобы фактура не повторялась.
+                <span class="source-badge">⏱ Урок 1: 03:48–03:56</span>
+              </p>
+              <div class="tip-box">
+                <strong>Чередуйте приёмы:</strong> четыре способа выкладки — это не четыре рецепта, а четыре варианта одного действия. Разная фактура по ярусам и делает ёлку «живой».
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🖌 Способ: <strong>Полоса по периметру</strong></span>
+              <span class="param-pill">⏱ Скорость: <strong>Самый быстрый вариант</strong></span>
+              <span class="param-pill">🔁 Чередование: <strong>4 приёма по высоте</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Сборка башни</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Каждый следующий ярус меньше предыдущего и ставится по центру, со слегка прижатым ганашем. Башня сужается от 10 см внизу до 3 см на макушке — форма ёлки получается сама, если соблюдать порядок диаметров.
+                <span class="source-badge">⏱ Урок 1: 03:06–04:05</span>
+              </p>
+              <p>
+                Между ярусами видно начинку: именно она читается как «лапы» ёлки, поэтому смазывать верхнюю крышечку целиком не нужно — только кромку под следующую.
+                <span class="source-badge">⏱ Урок 1: 04:02–04:05</span>
+              </p>
+              <div class="warning-box">
+                <strong>Каждый ярус проверяйте на ровность:</strong> автор после каждой установки отходит и смотрит, ровно ли встал ярус, и только потом придавливает. Башня из восьми уровней не прощает наклона на первых двух.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🏗 Форма: <strong>Усечённый конус, 8 ярусов</strong></span>
+              <span class="param-pill">📐 Центр: <strong>Каждый ярус по центру</strong></span>
+              <span class="param-pill">👁 Контроль: <strong>Ровность после каждого слоя</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Второй вариант: орех и сыр с плесенью</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Та же ёлка собирается по тому же принципу, но в ганаш добавляются обжаренные грецкие орехи и сыр с голубой плесенью. Получается «деликатесно и интересно» — но начинки кладутся не в каждый слой.
+                <span class="source-badge">⏱ Урок 1: 04:25–04:47</span>
+              </p>
+              <p>
+                Сыр добавляется в ганаш умеренно, орехи после этого слегка утапливаются — ровно так, чтобы они не выпирали над крышечкой и не мешали ставить следующий ярус.
+                <span class="source-badge">⏱ Урок 1: 04:48–05:20</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не переусердствовать:</strong> автор повторяет, что перебарщивать тут точно не надо — вы делаете десерт, а не закуску. Орехи и сыр нужны акцентом, а не начинкой на всю высоту.
+                <span class="source-badge">⏱ Урок 1: 05:02–05:12</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌰 Орех: <strong>Обжаренный, утопленный в ганаш</strong></span>
+              <span class="param-pill">🧀 Сыр: <strong>С плесенью, немного</strong></span>
+              <span class="param-pill">🎚 Слои: <strong>Не в каждый ярус</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Декор ёлки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Собранную ёлку автор украшает посыпкой, внутри которой хрустящий рис: шарики ложатся на выступающий ганаш и держатся между крышечками.
+                <span class="source-badge">⏱ Урок 1: 04:05–04:17</span>
+              </p>
+              <p>
+                Второй вариант отделки — шоколадный велюр: ёлку можно покрыть им целиком, вместо посыпки. Работайте до того, как ганаш затянется корочкой.
+              </p>
+              <div class="tip-box">
+                <strong>Праздничность:</strong> автор называет такую ёлку «очень праздничной» и советует не скупиться на декор — это подарок и точка продажи одновременно.
+                <span class="source-badge">⏱ Урок 1: 04:15–04:21</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">✨ Посыпка: <strong>С хрустящим рисом</strong></span>
+              <span class="param-pill">🎨 Велюр: <strong>Альтернатива посыпке</strong></span>
+              <span class="param-pill">⏱ Момент: <strong>Пока ганаш не застыл</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 11 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Хранение</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В холодильнике ёлка живёт 72 часа — это предельный срок годности. В морозилке — до 1 месяца, причём замораживать можно прямо вместе с декором, разбирать торт не нужно.
+              </p>
+              <p>
+                Отдавайте торт на стол «пропитавшимся»: глазури и начинке нужно время, чтобы крышечки размягчились, и только тогда ёлка ведёт себя как настоящий торт при разрезании.
+                <span class="source-badge">⏱ Урок 1: 00:27–00:35</span>
+              </p>
+              <div class="warning-box">
+                <strong>Ганаш с сыром короче:</strong> в уроке о макаронс начинки хранятся 5 дней в холодильнике и месяц в морозилке, но собранный торт автор ограничивает 72 часами в холоде — для версии с сыром и орехом ориентируйтесь на этот общий срок.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Холодильник: <strong>72 часа</strong></span>
+              <span class="param-pill">❄️ Морозилка: <strong>1 месяц</strong></span>
+              <span class="param-pill">🎁 Заморозка: <strong>Можно с декором</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 12 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Упаковка и подача</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Ёлка ставится в прозрачный тубус вместе с подложкой — упаковка продаётся та же, что под шоколадные ёлки. Переносите торт, держа за картонную основу, а не за верхние крышечки.
+                <span class="source-badge">⏱ Урок 1: 00:08–00:27</span>
+              </p>
+              <p>
+                Для подарочной упаковки такого размера автор оценивает стоимость готовой ёлки в 1500 рублей — цифра пригодится, если вы продаёте новогодние десерты.
+              </p>
+              <div class="tip-box">
+                <strong>Подача:</strong> разрезайте ёлку на четыре части или пополам — она хорошо режется, а вид разреза показывает чередование начинки между крышечками.
+                <span class="source-badge">⏱ Урок 1: 00:38–00:48</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📦 Упаковка: <strong>Прозрачный тубус</strong></span>
+              <span class="param-pill">💰 Цена: <strong>≈ 1500 ₽ за ёлку</strong></span>
+              <span class="param-pill">🍰 Подача: <strong>2 или 4 части</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Диаметры подобраны под упаковку:</strong> ряд 10–9–8–7–6–5–4–3 см рассчитан на стандартный прозрачный тубус, поэтому ёлку и шоколадную ёлку можно паковать одинаково.</li>
+                <li><strong>Больше 12 см не берите:</strong> слишком крупные крышечки теряют стабильность, и башня ведёт себя хуже. Запас — один ярус на 2 см.</li>
+                <li><strong>Насадка № 34 — на кромку:</strong> маленькая закрытая звезда даёт аккуратное кольцо по краю, и именно этот край виден между ярусами.</li>
+                <li><strong>Четыре способа выкладки:</strong> окружность по краю, капельки, мелкие колечки и просто полоса по периметру. Чередуйте их — торт выглядит объёмнее.</li>
+                <li><strong>Невзбитый ганаш:</strong> манго-маракуйя идёт в сборку кремом, без взбивания: так крышечки ложатся ровно и не выдавливают начинку.</li>
+                <li><strong>Орехи утапливать:</strong> обжаренный грецкий орех частично топится в ганаше, чтобы не выступать и не мешать следующему ярусу.</li>
+                <li><strong>Сыр — акцент:</strong> с голубой плесенью работает только в меру, иначе десерт превращается в закуску.</li>
+                <li><strong>Замораживать можно с декором:</strong> это экономит место и время перед продажей; в холоде торт хранится 72 часа.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Неровная башня:</strong> каждый ярус нужно примерить и проверить на глаз по центру — наклон снизу «падает» вниз всей высоты.</li>
+                <li><strong>Каждый ярус с начинкой:</strong> для версии с орехом и сыром это лишнее, автор добавляет их выборочно.</li>
+                <li><strong>Слишком много сыра:</strong> вкус уходит в солёное, и десерт перестаёт быть десертом.</li>
+                <li><strong>Сухие крышечки:</strong> без пропитки торт крошится и не режется аккуратно — дайте ганашу время размягчить макаронс.</li>
+                <li><strong>Не тот диаметр:</strong> если нарушить порядок и поставить большую крышечку выше меньшей, ёлка становится «перевёрнутой» и неустойчивой.</li>
+                <li><strong>Долгое хранение:</strong> больше 72 часов в холодильнике торт не держим — для длительного хранения только морозилка.</li>
+                <li><strong>Перенос за крышечки:</strong> торт держат за подложку, иначе верхние ярусы разъезжаются.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источник:</strong> урок Надежды Зубовой о торте-ёлке из макаронс (файл Урок_01.mp4, 6 мин 10 с), его расшифровка с таймкодами и текст-конспект в DOCX. Видео — практическая сборка; конкретика по диаметрам, весу, срокам и цене есть только в DOCX.</li>
+              <li><strong>Рецептура самих макаронс в этой папке не приводится:</strong> ни в видео, ни в DOCX нет ни граммовки миндальной муки, ни меренги, ни ганашей. Крышечки выпекаются по отдельному уроку на швейцарской меренге — он идёт отдельной страницей каталога. Здесь только сборка и сборные данные.</li>
+              <li><strong>Ганаш манго-маракуйя:</strong> в этой папке он назван только по имени («манговый ганаш, который мы не взбивали»). Пропорции нашлись в соседнем уроке о начинках макаронс, но в этот рецепт они не перенесены, чтобы не дублировать чужую страницу.</li>
+              <li><strong>Количества ганаша и посыпки:</strong> автор нигде не взвешивает начинку — вес ёлки «примерно 350 г, зависит от щедрости начинения ганашем». Поэтому в раскладке у этих позиций стоит «сколько уйдёт», а не число.</li>
+              <li><strong>Время:</strong> в источниках нет ни времени сборки, ни времени пропитки. Указано только хранение: 72 часа в холодильнике и 1 месяц в морозилке. Активное время «около 30 минут» на странице оценено по продолжительности видео-сборки, а не взято у автора.</li>
+              <li><strong>Сыр и орехи:</strong> в видео не названы ни сорт сыра, ни количество орехов, ни конкретные слои, в которые кладётся начинка. Оставлены формулировки «сколько уйдёт» и «не в каждый слой».</li>
+              <li><strong>Велюр:</strong> покрытие упомянуто одной фразой, без рецепта и без расходов. На странице оно помечено как опция.</li>
+              <li><strong>Диаметры:</strong> в DOCX сказано «10-9-8-7-6-5-4-3 см, можно ещё 2 см добавить»; в видео второй ряд звучит как «большие макаронс разного диаметра». Взяты конкретные значения из DOCX.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет, только видео 848×484. На странице стоит кадр из готового результата на 00:06:00, обрезанный по чёрным и белым полосам плеера (crop 839×474 с левого верхнего угла 3:0) и увеличенный до 1000 px.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

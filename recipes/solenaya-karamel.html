@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Солёная карамель и три вкуса на её основе — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Солёная карамель мокрым способом по мотивам Поля Эрме: сахар, сливки, масло и соль. Плюс три версии на её основе — шоколадная, ореховая и взбитая ягодная с желатином. Температуры, цвет и густота по лопатке.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body data-recipe-id="solenaya-karamel">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться к каталогу рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Конфеты и сладости</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Солёная карамель и три вкуса на её основе</h1>
+      <p class="recipe-lead">
+        Базовая солёная карамель мокрым способом — почти по рецепту Поля Эрме: сахар с водой, сливки, сливочное масло и соль. Из половины партии собираются три версии: шоколадная, ореховая и взбитая ягодная с желатином, которая по консистенции становится похожа на суфле. Готовится за полчаса, живёт в холодильнике 2–3 недели и годится и в торт, и в чизкейк, и в баночку на подарок.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">10 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">~40 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~1 ч 20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">500 мл (5 баночек по 100 мл)</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/solenaya-karamel.jpg" alt="Три миски с карамелью: шоколадная, солёная и ореховая" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (5 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="5">5</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">баночек</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — 500 мл карамели, то есть 5 баночек по 100 мл. Добавки к трём вкусам (шоколад, орехи, пюре с желатином) рассчитаны на половину партии — примерно 250 мл.
+          </p>
+        </div>
+
+        <!-- Переключатель источников -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">5</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех продуктов с учетом выбранного масштаба. Всё сразу нужно только для полного набора вкусов — базовую карамель можно сварить и без добавок.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: сливки и масло -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Сливки и масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 20–35%</strong>:
+                <span class="shopping-qty" data-base-amount="335" data-unit="г">335 г</span>
+                <span class="shopping-hint">Перед вливанием нагреть до кипения — холодные дадут бурную реакцию и брызги</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное</strong>:
+                <span class="shopping-qty" data-base-amount="65" data-unit="г">65 г</span>
+                <span class="shopping-hint">Размягчённое, комнатной температуры</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: бакалея и добавки -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧂 Сахар, соль, добавки</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">Обычный песок; коричневый даст другой, более выраженный вкус</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span>
+                <span class="shopping-hint">Без горки, мелкая; количество регулируется по вкусу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Вода</strong>:
+                <span class="shopping-qty" data-base-amount="75" data-unit="г">75 г</span>
+                <span class="shopping-hint">60 г в сироп + 15 г холодной на замачивание желатина</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шоколад тёмный или молочный</strong>:
+                <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+                <span class="shopping-hint">На шоколадную версию — половина партии; тёмный даёт более ощутимый вкус</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Орехи обжаренные</strong>:
+                <span class="shopping-qty" data-base-amount="40" data-unit="г">40 г</span>
+                <span class="shopping-hint">Любые, порубленные; можно заменить пралине или ореховой пастой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ягодное пюре</strong>:
+                <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                <span class="shopping-hint">Чёрная смородина у автора; подойдёт любое пюре или протёртые ягоды</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="г">3 г</span>
+                <span class="shopping-hint">Нужен только для взбитой ягодной карамели — держит форму</span>
+              </div>
+            </li>
+            <li class="shopping-item" style="border-style: dashed;"><div class="shopping-item-content">
+                <strong>Баночки для подарка</strong> (опционально)
+                <span class="shopping-hint">По 100 мл с крышкой — карамель и продают, и дарят</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Солёная карамель (база, 500 мл)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Сахар-песок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Вода
+              <span class="ingredient-note">Для мокрого способа варки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="335" data-unit="г">335 г</span> — Сливки 20–35%
+              <span class="ingredient-note">Нагреть до кипения перед добавлением</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="65" data-unit="г">65 г</span> — Масло сливочное
+              <span class="ingredient-note">Размягчённое</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Соль
+              <span class="ingredient-note">Без горки; дальше по вкусу</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Шоколадная (на 250 мл карамели)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Шоколад тёмный или молочный
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Ореховая (на 250 мл карамели)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Орехи обжаренные, порубленные
+              <span class="ingredient-note">Вместо орехов можно пралине или ореховую пасту</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Взбитая ягодная (на 250 мл карамели)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Ягодное пюре
+              <span class="ingredient-note">Чёрная смородина у автора</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Желатин
+              <span class="ingredient-note">Замочить в 15 г холодной воды заранее</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Вода для желатина
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка продуктов</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Всё взвесьте заранее: карамель варится быстро, отходить от плиты будет некогда. Сливки нагрейте до кипения в отдельном сотейнике, масло оставьте размягчённым при комнатной температуре. Если делаете ягодную версию — залейте желатин 15 г холодной воды, чтобы он набух. Орехи обжарьте и порубите.
+                <span class="source-badge">⏱ Урок 1: 00:05–00:05</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сливки должны быть горячими:</strong> холодные при попадании в карамель дают бурную реакцию с брызгами. И варить эту карамель с детьми — плохая затея: масса «ругается» и плюётся.
+                <span class="source-badge">⏱ Урок 1: 00:05–00:06</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥛 Сливки: <strong>до кипения</strong></span>
+              <span class="param-pill">🧈 Масло: <strong>размягчённое</strong></span>
+              <span class="param-pill">💧 Желатин: <strong>3 г + 15 г воды</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Сахар и вода: только до намокания</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В сотейник отправьте сахар и воду. Перемешайте лопаткой ровно до того момента, пока весь сахар не намокнет, — и остановитесь. Дальше только ждём: карамель должна закипеть и дойти до нужного цвета.
+                <span class="source-badge">⏱ Урок 1: 00:03–00:03</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем мокрый способ:</strong> с водой сахар плавится медленнее, и у вас есть время проследить за цветом и консистенцией. Сухой способ такого запаса времени не даёт.
+                <span class="source-badge">⏱ Урок 1: 00:03–00:03</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍬 Сахар: <strong>300 г</strong></span>
+              <span class="param-pill">💧 Вода: <strong>60 г</strong></span>
+              <span class="param-pill">🥄 Мешать: <strong>только до намокания</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Варка до карамельного цвета</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Дождитесь активного кипения и следите за цветом. Сверху будет образовываться плёнка, которую очень хочется помешать, — держитесь. Максимум, что можно, — слегка подрагивать сотейником и разгребать массу, чтобы увидеть цвет.
+                <span class="source-badge">⏱ Урок 1: 00:03–00:05</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не перемешивать до ввода масла:</strong> сахар — полимер и стремится к кристаллизации. При перемешивании кристаллы цепляют соседей, и в итоге вы получите целые камни сахара вместо карамели.
+                <span class="source-badge">⏱ Урок 1: 00:01–00:02</span>
+              </div>
+              <div class="tip-box">
+                <strong>Цвет — до масла:</strong> если влить сливочное слишком рано, вкус останется пресным, а цвет бледным. Дождитесь насыщенного карамельного оттенка — можно мысленно сосчитать до десяти.
+                <span class="source-badge">⏱ Урок 1: 00:04–00:05</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Нагрев: <strong>сильный, до закипания</strong></span>
+              <span class="param-pill">👀 Ориентир: <strong>насыщенный карамельный цвет</strong></span>
+              <span class="param-pill">🥄 Лопатка: <strong>мощная, с длинной ручкой</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Сливочное масло</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Добавьте размягчённое масло и теперь мешайте интенсивно. Масса начнёт «ругаться» и подниматься — поэтому и нужна лопатка с длинной ручкой: руки должны быть далеко.
+                <span class="source-badge">⏱ Урок 1: 00:05–00:05</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Масло: <strong>65 г</strong></span>
+              <span class="param-pill">🌀 Мешать: <strong>интенсивно</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Горячие сливки по чуть-чуть</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Уменьшите нагрев и вводите сливки очень аккуратно, небольшими порциями, каждый раз перемешивая. Когда войдут все сливки, доведите массу до кипения.
+                <span class="source-badge">⏱ Урок 1: 00:05–00:06</span>
+              </p>
+              <div class="warning-box">
+                <strong>Только горячие и только понемногу:</strong> холодные сливки в раскалённой карамели — это практически взрыв. Ожог получить очень легко.
+                <span class="source-badge">⏱ Урок 1: 00:05–00:05</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥛 Сливки: <strong>335 г, горячие</strong></span>
+              <span class="param-pill">🔥 Нагрев: <strong>убавить</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>однородная масса</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Соль и нужная густота</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Когда сливки объединились с карамелью, добавьте соль и перемешайте. Дальше уваривайте под свои задачи: для соуса плиту можно выключать сразу, для густой карамели — 3–5 минут, для ириски — 7–10 минут. Автор ориентируется на лопатку: сначала карамель стекает с неё свободно, а готовая задерживается.
+                <span class="source-badge">⏱ Урок 1: 00:06–00:07</span>
+              </p>
+              <div class="tip-box">
+                <strong>Соль по вкусу:</strong> на одинарную порцию — чайная ложка без горки. Дальше пробуйте и регулируйте: солёная карамель должна быть солёной, но не пересоленной.
+                <span class="source-badge">⏱ Урок 1: 00:06–00:07</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧂 Соль: <strong>1 ч. л. без горки</strong></span>
+              <span class="param-pill">⏱ Соус: <strong>сразу</strong></span>
+              <span class="param-pill">⏱ Густая: <strong>3–5 мин</strong></span>
+              <span class="param-pill">⏱ Ириска: <strong>7–10 мин</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Деление на три части</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Снимите сотейник с плиты, дайте карамели перестать кипеть и разлейте её по мискам на равные части по весу — так все три вкуса получатся одинаково густыми. Каждую часть сразу перемешайте с добавкой.
+                <span class="source-badge">⏱ Урок 1: 00:08–00:08</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Части: <strong>равные по весу</strong></span>
+              <span class="param-pill">🍫 Шоколад: <strong>60 г</strong></span>
+              <span class="param-pill">🌰 Орехи: <strong>40 г</strong></span>
+              <span class="param-pill">🍇 Пюре и желатин: <strong>70 г + 3 г</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Шоколадная карамель</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Вылейте карамель на шоколад и перемешайте от центра, как ганаш, — пока масса не станет абсолютно однородной. Тёмный шоколад даёт довольно ощутимый вкус, молочный — мягче и слаще.
+                <span class="source-badge">⏱ Урок 1: 00:09–00:10</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не кипящую:</strong> на шоколад нельзя лить карамель прямо с плиты — шоколад получит «супер-шок», может сгореть и не разойтись в массе. Дайте ей секунды, чтобы перестать кипеть.
+                <span class="source-badge">⏱ Урок 1: 00:08–00:08</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Шоколад: <strong>60 г</strong></span>
+              <span class="param-pill">🥄 Мешать: <strong>от центра</strong></span>
+              <span class="param-pill">🌡 Карамель: <strong>не кипящая</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Ореховая карамель</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Тёплые обжаренные орехи перемешайте с карамелью. Получается готовая заготовка для «Сникерса» или начинка, которой можно залить чизкейк. Вместо орехов работает пралине или ореховая паста.
+                <span class="source-badge">⏱ Урок 1: 00:10–00:10</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌰 Орехи: <strong>40 г</strong></span>
+              <span class="param-pill">🔥 Орехи: <strong>тёплые, обжаренные</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Ягодная карамель с желатином</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Горячую карамель вылейте на ягодное пюре и перемешайте. Затем введите набухший желатин и вымешивайте, пока он полностью не разойдётся в массе. Желатин нужен именно для того, чтобы карамель можно было взбить и она держала форму.
+                <span class="source-badge">⏱ Урок 1: 00:08–00:09</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍇 Пюре: <strong>70 г</strong></span>
+              <span class="param-pill">🧊 Желатин: <strong>3 г набухшего</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>желатин растворился</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 11 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Взбивание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Дождитесь, пока карамель остынет до комнатной температуры, и только тогда взбивайте на большой скорости миксера. Масса увеличится примерно в полтора раза и посветлеет, а на лопатке будет видна разница «до и после».
+                <span class="source-badge">⏱ Урок 1: 00:10–00:11</span>
+              </p>
+              <div class="tip-box">
+                <strong>Пузырьки останутся:</strong> после взбивания переложите карамель в ту ёмкость, где она будет храниться, и уберите в холодильник. Воздух никуда не денется, и по консистенции карамель станет похожа на суфле.
+                <span class="source-badge">⏱ Урок 1: 00:11–00:11</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Перед взбиванием: <strong>комнатная температура</strong></span>
+              <span class="param-pill">🌀 Скорость: <strong>большая</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>объём +50%, цвет светлее</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 12 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Хранение и где использовать</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Карамель хранится в холодильнике 2–3 недели. Загустевшую можно нагреть — она снова станет жидкой и удобной в работе. Из базовой карамели получается начинка для капкейков и тартов, заливка для чизкейка, соус к сырникам, блинам и запеканке — вкуснее сгущёнки.
+                <span class="source-badge">⏱ Урок 1: 00:00–00:01</span>
+              </p>
+              <div class="tip-box">
+                <strong>Это ещё и подарок:</strong> баночка карамели с крышкой — готовый презент, который вполне можно и продавать. По этой же причине солёную карамель стоит уметь готовить каждому.
+                <span class="source-badge">⏱ Урок 1: 00:01–00:01</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📦 Хранение: <strong>2–3 недели в холодильнике</strong></span>
+              <span class="param-pill">♨ Нагрев: <strong>допускается</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Соль плюс сахар — взрыв вкуса:</strong> рецепт почти по Полю Эрме. Соль обостряет рецепторы, и карамель ощущается гораздо ярче.</li>
+                <li><strong>Мокрый способ прощает:</strong> с водой есть время увидеть цвет и консистенцию. Сухой способ требует гораздо больше опыта.</li>
+                <li><strong>Не мешать до масла:</strong> единственное перемешивание — в самом начале, пока сахар намокает, и потом, когда уже добавлено что-то сливочное.</li>
+                <li><strong>Плёнку сверху не трогать:</strong> она образуется при кипении, и мешать из-за неё нельзя. Достаточно подрагивать сотейником.</li>
+                <li><strong>Лопатка с длинной ручкой:</strong> карамель с маслом и сливками активно поднимается и брызгается.</li>
+                <li><strong>Густота — по лопатке:</strong> свободно стекает — ещё жидкая; задерживается и стекает медленно — то, что надо.</li>
+                <li><strong>Три вкуса из одной базы:</strong> базу можно оставить как есть — солёная карамель уже самодостаточна.</li>
+                <li><strong>Желатин для взбитой:</strong> любой вид карамели можно взбить, но без желатина она не удержит воздух. С желатином — держит весь срок годности.</li>
+                <li><strong>Взбивать только остывшую:</strong> до комнатной температуры, иначе результат непредсказуем.</li>
+                <li><strong>Карамель универсальна:</strong> тарты, чизкейки, капкейки, блины, сырники, запеканка.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Мешали сироп:</strong> сахар закристаллизовался, вместо карамели — камни.</li>
+                <li><strong>Добавили масло слишком рано:</strong> цвет и вкус остались бледными, «карамельности» нет.</li>
+                <li><strong>Холодные сливки:</strong> бурная реакция и брызги, можно обжечься.</li>
+                <li><strong>Лили сливки сразу все:</strong> масса поднимается и выплёскивается, вводить нужно понемногу.</li>
+                <li><strong>Кипящая карамель на шоколад:</strong> шоколад сгорает и не расходится, остаётся крупинками.</li>
+                <li><strong>Не уварили:</strong> получился соус, хотя нужна густая начинка. И наоборот — переварили до ириски.</li>
+                <li><strong>Взбивали горячую:</strong> карамель не держит воздух и оседает.</li>
+                <li><strong>Забыли про соль:</strong> получается просто сладкая карамель, весь смысл рецепта теряется.</li>
+                <li><strong>Оставили без присмотра:</strong> карамель мгновенно уходит из нужного цвета в горелый.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение</h4>
+              <ul>
+                <li><strong>В холодильнике:</strong> 2–3 недели в закрытой банке.</li>
+                <li><strong>Перед использованием:</strong> прогреть — станет жиже и удобнее.</li>
+                <li><strong>Взбитая ягодная:</strong> держит форму весь срок хранения за счёт желатина.</li>
+                <li><strong>Ореховая и шоколадная:</strong> хранятся так же, перед подачей можно слегка подогреть.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> вебинар Надежды Зубовой «Карамель» (Тортомафия, месяц 2) — расшифровка урока и технологическая карта с граммовками.</li>
+              <li><strong>Расхождения — уварка:</strong> в карте «уварить примерно 3 минуты», на видео 3–5 минут для густой карамели, 7–10 для ириски и «сразу» для соуса. На странице приведены все три варианта.</li>
+              <li><strong>Расхождения — температура шоколада:</strong> в карте «горячую карамель вылить на шоколад», на видео — не кипящую, иначе шоколад может сгореть. На странице взята версия с чуть остывшей карамелью.</li>
+              <li><strong>Расхождения — соль:</strong> в карте 1 ч. л. на порцию, на видео у автора полуторная партия и «чуть больше чайной ложки», а на одинарную — ложка без горки. Значения совпадают, на странице ложка без горки.</li>
+              <li><strong>Уточнение — баночки:</strong> карта даёт выход «1/2 литра карамели». Деление на 5 баночек по 100 мл — это оформление для калькулятора порций, а не авторская фасовка.</li>
+              <li><strong>Пробелы — время:</strong> общее и активное время автор не называет; значения на странице оценены по ходу урока.</li>
+              <li><strong>Пробелы — вид ягод:</strong> в карте просто «ягодное пюре», на видео — чёрная смородина.</li>
+              <li><strong>Фото:</strong> отдельного снимка в папке нет — используется кадр из урока (00:02:35) с тремя видами карамели.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

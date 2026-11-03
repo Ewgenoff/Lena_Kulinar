@@ -1,0 +1,870 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Торт «Ёлка» — 3D-торт из крошки с орехами, сухофруктами и велюром | CookBook</title>
+  <meta name="description" content="Новогодний 3D-торт «Ёлка»: песочная крошка из сметанного теста, масляный крем на варёной сгущёнке с ромом, 600 г орехов и сухофруктов, самодельная форма-конус радиусом 30 см и шоколадный велюр. Пошаговая технология с граммовками.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body data-recipe-id="tort-elka">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Торт «Ёлка»</h1>
+      <p class="recipe-lead">
+        Новогодний 3D-торт в виде ёлки: внутри «богатый муравейник» — песочная крошка на сметане, масляный крем на варёной сгущёнке с ромом и 600 г грецкого ореха, фисташки, чернослива, кураги и вяленой вишни. Собирается он не в кольце, а в самодельном конусе из плёнки радиусом 30 см, который автор сворачивает за пару минут и заклеивает скотчем. Верх отделана шоколадным велюром: белый уходит на кончик и «снег», зелёный — лёгкой дымкой. Украшение — макаронс на тёмном шоколаде.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">20 мин + 1–2 ч охлаждение теста</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">1 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">2–3 ч (выпечка, охлаждение, застывание)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~5 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">2 ёлки по ~1,5 кг (у автора вышло 1,25 кг и 1,75 кг, после выравнивания — 2,05 кг)</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-elka.jpg" alt="Готовый торт «Ёлка» в виде конуса: белый и зелёный велюр, разноцветные макаронс и золотые шарики на поверхности, рядом рука кондитера с кистью" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 ёлка)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">ёлок</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Одна базовая порция — это одна ёлка весом около 1,5 кг: под неё в рецептуре уже пересчитаны крошка, крем и наполнитель (600 г орехов и сухофруктов). У автора граммовки даны сразу на две ёлки, поэтому в исходнике всё вдвое больше. Рецептура крема авторская: 450 г масла и 760 г варёной сгущёнки хватает на 2 ёлки по 1,5 кг и ещё на выравнивание одной — при делении мой крем на одну ёлку расходуется не весь, остаток идёт на выравнивание и на пенёк. Форму (радиус 30 см) и велюр (80 г какао-масла) калькулятор не масштабирует: это расходники на замес.
+          </p>
+        </div>
+
+        <!-- Переключатель источников и таймкодов видео -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> ёлку</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Продукты и расходники на одну ёлку около 1,5 кг. Количество уже поделено по калькулятору: у автора в DOCX всё рассчитано на две ёлки, здесь — половина. Плёнку для формы и малярный скотч держите под рукой: без них торт не собрать.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1 -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥚 Молочное, яйца, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82%</strong> (крошка + крем):
+                <span class="shopping-qty" data-base-amount="315" data-unit="г">315 г</span>
+                <span class="shopping-hint">Половина авторской нормы: 90 г в крошку и 225 г в крем. Берите сразу пачку 450 г — остаток пойдёт на второй замес</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сметана</strong>:
+                <span class="shopping-qty" data-base-amount="75" data-unit="г">75 г</span>
+                <span class="shopping-hint">Любой жирности, автор подчёркивает: подойдёт любая. Важно, чтобы была комнатной температуры</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С0</strong>:
+                <span class="shopping-qty" data-base-amount="0.5" data-unit="шт." data-piece="true">0,5 шт.</span>
+                <span class="shopping-hint">По DOCX — 1 яйцо С0 (60 г) на две ёлки, то есть половина яйца на ёлку. Возьмите одно целое и используйте половину веса; вторую половину пустите на что-то другое</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сгущённое молоко</strong> (варёное):
+                <span class="shopping-qty" data-base-amount="380" data-unit="г">380 г</span>
+                <span class="shopping-hint">Две банки по 360–380 г, если не найти большой. Автор берёт хорошее варёное — в крем с ним вкус сливочно-карамельный. Обычная сгущёнка тоже допустима</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2 -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌰 Мука, орехи, сухофрукты, декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">По DOCX 600 г на две ёлки. Плюс разрыхлитель 3,5 г и щепотка соли — они идут в муку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Только в крошку, в крем сахар не идёт</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Грецкий орех</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Обжаренный, крупно порубленный — на разрезе должны чувствоваться кусочки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Фисташка очищенная</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Берите самые зелёные; солить и жарить не нужно</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Чернослив</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Режется пополам — попутно проверяете, не осталась ли косточка</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Курага</strong>:
+                <span class="shopping-qty" data-base-amount="75" data-unit="г">75 г</span>
+                <span class="shopping-hint">Каждую половинку режете на 4 части; выбирайте не слишком сухую</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Вяленая вишня</strong>:
+                <span class="shopping-qty" data-base-amount="75" data-unit="г">75 г</span>
+                <span class="shopping-hint">Именно вяленая, а не цукаты — она даёт новогоднюю кислинку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Тёмный шоколад 70%</strong>:
+                <span class="shopping-hint">На подложку и на приклеивание макаронс — он быстро застывает и крепко держит. Точное количество в источниках не названо, нужно несколько плиток</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Макаронс готовые</strong>:
+                <span class="shopping-hint">Украшение верхнего яруса; количество в источниках не названо — ориентируйтесь на размер ёлки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ром или коньяк</strong>:
+                <span class="shopping-qty" data-base-amount="1.5" data-unit="ст. л.">1,5 ст. л.</span>
+                <span class="shopping-hint">В DOCX — 3 ст. л. на две ёлки. Автор берёт тёмный ром и добавляет его в крем, сухофрукты не замачивает</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="shopping-grid">
+        <!-- Колонка 3 -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🎨 Велюр и жирорастворимые красители</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао-масло</strong>:
+                <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span>
+                <span class="shopping-hint">Велюр варится на замес, его не делят пополам — на одну ёлку норма та же. Хранится при комнатной температуре очень долго и используется много раз</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Белый шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Тоже на весь замес велюра. Из него и какао-масла получается базовая (жёлтая) масса</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Диоксид титана</strong>
+                <span class="shopping-hint">Нужен, чтобы велюр стал белым: изначально он жёлтый. Продаётся в кондитерских магазинах</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Жирорастворимый краситель</strong> (зелёный)
+                <span class="shopping-hint">Велюр красится только жирорастворимыми красителями — это тот редкий случай в кондитерке. Сначала работают белым, потом добавляют зелёный</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Одноразовые стаканчики</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span>
+                <span class="shopping-hint">Под белый и зелёный велюр; мешок автор не советует — его затягивает в колбу краскопульта</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 4 -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧰 Расходники и форма</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ацетатная (гитарная) плёнка или калька</strong>
+                <span class="shopping-hint">Лист примерно 60 × 40 см на конус; подойдёт и ватман А3, и гибкий картон. Большинство таких форм одноразовые</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Малярный скотч</strong>
+                <span class="shopping-hint">Заклеивать шов конуса, чтобы он не размотался в процессе. Подойдёт и обычный скотч</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пищевая плёнка</strong>
+                <span class="shopping-hint">В неё заворачиваются комки теста для холодильника; ей же застилают картонный конус</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кольцо Ø 10 см</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">Для пенька под ёлкой; внутри — полоска ацетатной плёнки, чтобы пенёк вышел из кольца</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Прочная подложка</strong>
+                <span class="shopping-hint">У автора фанера под основание ёлки и отдельная подложка под саму ёлку. Под сложные конструкции подложка нужна очень сильная, на ней не экономят</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Палочки для суши</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span>
+                <span class="shopping-hint">Три одинаковые палочки — каркас в пеньке, плюс длинная центральная мачта, соединяющая пенёк и ёлку</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Основа для ёлки (крошка)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Мука
+              <span class="ingredient-note">По DOCX 600 г на две ёлки. Сразу перемешайте с разрыхлителем и солью — вводить всё сухое можно за один раз</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="90" data-unit="г">90 г</span> — Масло сливочное
+              <span class="ingredient-note">Размягчённое; взбивается с сахаром до посветления и увеличения в объёме</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="75" data-unit="г">75 г</span> — Сметана
+              <span class="ingredient-note">Комнатной температуры, жирность любая. Холодная сметана свернёт масло</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="0.5" data-unit="шт." data-piece="true">0,5 шт.</span> — Яйцо, категория С0 (60 г)
+              <span class="ingredient-note">Половина яйца по весу: в DOCX одно целое идёт на две ёлки. Яйцо обязательно комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3.5" data-unit="г">3,5 г</span> — Разрыхлитель
+              <span class="ingredient-note">Половина от 7 г на две ёлки; смешивается с мукой, а не добавляется отдельно</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Щепотка — Соль
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="225" data-unit="г">225 г</span> — Масло сливочное
+              <span class="ingredient-note">Хорошо размягчённое, комнатной температуры — как и сгущёнка, иначе крем расслоится</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="380" data-unit="г">380 г</span> — Сгущённое молоко варёное (или обычное)
+              <span class="ingredient-note">Вводится постепенно в хорошо взбитое масло. Половина от 760 г на две ёлки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1.5" data-unit="ст. л.">1,5 ст. л.</span> — Коньяк или ром
+              <span class="ingredient-note">Добавляется в самый конец и ещё раз пробивается миксером. Сухофрукты им не замачивают</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Наполнитель — 600 г на две ёлки</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Грецкий орех обжаренный
+              <span class="ingredient-note">Крупно порубить: на разрезе должны читаться кусочки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Чернослив
+              <span class="ingredient-note">Порезать пополам — заодно проверите, не осталась ли косточка</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="75" data-unit="г">75 г</span> — Курага
+              <span class="ingredient-note">Каждую ягоду на 4 части</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="75" data-unit="г">75 г</span> — Вяленая вишня
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Фисташка
+              <span class="ingredient-note">Можно брать практически любые орехи и сухофрукты — важно выдержать общий вес</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Декор и сборка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Какао-масло
+              <span class="ingredient-note">Для велюра; норму не делят на число ёлок — велюр хранится и используется повторно</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Шоколад белый
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Диоксид титана
+              <span class="ingredient-note">Отбеливает велюр: без него он жёлтый</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Жирорастворимый краситель
+              <span class="ingredient-note">Зелёный — для второго прохода по ёлке</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Шоколад тёмный 70%
+              <span class="ingredient-note">Клей для макаронс и для установки ёлки на подложку</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Макаронс готовые
+              <span class="ingredient-note">Клеятся на тёмный шоколад, держатся на нём несколько секунд</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Почему именно «муравейник»</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В основе 3D-тортов всегда идут очень плотные торты: медовик, трюфельные с кремом на тёмном шоколаде, «муравейник». Автор берёт «муравейник» — привычный с советских времён — и делает его богатым и по-настоящему новогодним по вкусу.
+                <span class="source-badge">⏱ Урок 1: 00:09–00:39</span>
+              </p>
+              <p>
+                Замах у урока простой: ёлка из крошки, без выпечки коржей и без ровных срезов. Всё, что нужно, — крошка, крем, орехи и сухофрукты, конус и краскопульт.
+                <span class="source-badge">⏱ Урок 1: 00:40–00:56</span>
+              </p>
+              <div class="tip-box">
+                <strong>Начинку можно менять:</strong> «вы можете брать любые в рамках веса» — вместо указанных орехов и сухофруктов подойдут свои, но общий вес наполнителя держите около 600 г на две ёлки (300 г на одну).
+                <span class="source-badge">⏱ Урок 1: 00:56–01:00</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🎄 Тип торта: <strong>Плотный, крошечный (3D)</strong></span>
+              <span class="param-pill">🍬 Начинка: <strong>Орехи и сухофрукты, 600 г на 2 ёлки</strong></span>
+              <span class="param-pill">🍶 Алкоголь: <strong>Тёмный ром, только в крем</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Тесто-крошка: масло, яйцо, сметана, мука</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Размягчённое масло взбейте с сахаром до пышности и изменения цвета: жёлтое должно посветлеть, а объём — вырасти. Тогда добавляйте яйцо. Оно здесь одно, поэтому «постепенно» речь не идёт, но температура важна: все продукты должны быть плюс-минус одинаковыми по температуре.
+                <span class="source-badge">⏱ Урок 1: 01:17–01:49</span>
+              </p>
+              <p>
+                Взбивайте до момента, когда яйцо полностью войдёт в масло — масса густая, ничего не отделилось. Введите сметану комнатной температуры до объединения, затем всю муку за один раз с разрыхлителем и солью, на низкой скорости, чтобы мука не летела.
+                <span class="source-badge">⏱ Урок 1: 01:50–02:36</span>
+              </p>
+              <p>
+                Получается крошка. Соберите её в 4–5 комков, заверните в пищевую плёнку и уберите в холодильник на час-два. Можно поставить на ночь, а можно в морозилку на 40–60 минут — тесто схватится так же хорошо.
+                <span class="source-badge">⏱ Урок 1: 02:43–03:40</span>
+              </p>
+              <div class="warning-box">
+                <strong>Температура решает:</strong> если сметана или яйцо холодные, масса свернётся и пойдёт «хлопьями». Автор специально подчёркивает, что масса должна быть густой и однородной — без кусочков не вошедшей жидкости.
+                <span class="source-badge">⏱ Урок 1: 01:41–02:30</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Взбивание масла: <strong>До посветления</strong></span>
+              <span class="param-pill">🥚 Яйцо: <strong>1 шт. С0 на 2 ёлки, комнатной t°</strong></span>
+              <span class="param-pill">🧊 Охлаждение: <strong>1–2 ч в холодильнике или 40–60 мин в морозилке</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Выпечка крошки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Схватившиеся комки натрите на крупной тёрке — или пропустите через мясорубку, как делали раньше. Разровняйте по противню и выпекайте в заранее разогретой духовке до готовности.
+                <span class="source-badge">⏱ Урок 1: 03:48–04:11</span>
+              </p>
+              <p>
+                Ориентир — <strong>170 °C и 15–20 минут</strong> (в видео «примерно 20 минут», в DOCX 15–20). Затем полностью остудите и крошите: кусочки получаются примерно сантиметр-полтора.
+                <span class="source-badge">⏱ Урок 1: 04:11–04:16</span>
+              </p>
+              <div class="tip-box">
+                <strong>Крошка не должна быть пылью:</strong> «муравьи» у автора были «конкретные» — кусочки покрупнее читаются на разрезе, а пыль слипается в крем и делает торт плотнее, чем нужно.
+                <span class="source-badge">⏱ Урок 3: 01:34–01:51</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>170 °C</strong></span>
+              <span class="param-pill">⏱ Время: <strong>15–20 минут</strong></span>
+              <span class="param-pill">🧩 Кусочки: <strong>1–1,5 см</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Самодельная форма-конус</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Для елки нужен конус. Его делает каждый сам: ацетатная плёнка, калька, гибкий картон, ватман А3, даже заготовка конуса, застеленная пищевой плёнкой. Большинство таких форм одноразовые.
+                <span class="source-badge">⏱ Урок 2: 00:02–00:25</span>
+              </p>
+              <p>
+                Автор берёт кусок плёнки примерно 60 × 40 см, намечает середину и циркулем рисует полукруг — <strong>это радиус 30 см, диаметр 60 см</strong>. Вырезает, переворачивает изнанкой, чтобы маркер не отпечатался на изделии, и сворачивает в конус: диаметр основания получается 15 см.
+                <span class="source-badge">⏱ Урок 2: 00:25–01:39</span>
+              </p>
+              <p>
+                Готовый конус заклейте по шву малярным скотчем или просто скотчем, чтобы он не размотался во время приготовления торта.
+                <span class="source-badge">⏱ Урок 2: 01:39–01:52</span>
+              </p>
+              <div class="warning-box">
+                <strong>Диаметр одного полукруга — это ещё не диаметр основания конуса:</strong> в DOCX записано «радиус конуса 30 см, диаметр 60 см» — речь о заготовке. Свёрнутая в конус, она даёт основание Ø 15 см, как показывает автор в кадре.
+                <span class="source-badge">⏱ Урок 2: 01:20–01:39</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📐 Заготовка: <strong>Полукруг R 30 см / Ø 60 см</strong></span>
+              <span class="param-pill">📐 Конус: <strong>Основание Ø 15 см</strong></span>
+              <span class="param-pill">📎 Крепление: <strong>Скотч или малярный скотч</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Крем на варёной сгущёнке с ромом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Хорошо размягчённое масло взбейте до пышности — почти добела, как показывает автор. Затем постепенно добавляйте сгущёнку: смысл в том, чтобы масло и сгущёнка были одинаковой комнатной температуры, тогда крем выйдет гладким и стабильным.
+                <span class="source-badge">⏱ Урок 3: 00:26–01:04</span>
+              </p>
+              <p>
+                В конце влейте ром (три столовые ложки на большой замес, как у автора) и ещё раз пробейте миксером.
+                <span class="source-badge">⏱ Урок 3: 01:15–01:34</span>
+              </p>
+              <div class="tip-box">
+                <strong>Расход крема:</strong> 900 г крем идёт в две ёлки по 1,5 кг, 300 г откладывается на выравнивание одной ёлки. Пенёк выравнивать не нужно — он только велюрится.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Масло: <strong>До пышности и побледнения</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>У масла и сгущёнки одинаковая, комнатная</strong></span>
+              <span class="param-pill">🍶 Ром: <strong>3 ст. л. на замес, в конце</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Сухофрукты: подготовка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Курагу порежьте на 4 части, чернослив — на 2. Режется он не ради аккуратности: так видно, не осталась ли внутри косточка, которой в черносливе быть не должно.
+                <span class="source-badge">⏱ Урок 3: 00:11–00:24</span>
+              </p>
+              <p>
+                Орехи рубите крупно — автор любит, когда на разрезе чувствуются кусочки. Если любите мельче, тоже можно.
+                <span class="source-badge">⏱ Урок 3: 02:02–02:12</span>
+              </p>
+              <div class="tip-box">
+                <strong>Ромом сухофрукты не замачиваем:</strong> весь алкоголь уходит только в крем.
+                <span class="source-badge">⏱ Урок 1: 01:00–01:06</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍑 Курага: <strong>На 4 части</strong></span>
+              <span class="param-pill">🌰 Чернослив: <strong>Пополам</strong></span>
+              <span class="param-pill">⚖ Вес наполнителя: <strong>600 г</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Сборка массы и наполнение конуса</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В крем добавьте крошку, затем грецкий орех, фисташку, вишню и сухофрукты. Перемешивайте лопаткой, чтобы сухофрукты и крошка не намотались на венчик и не поломались; автор честно признаётся, что сложное удобнее перемешать рукой.
+                <span class="source-badge">⏱ Урок 3: 01:52–02:46</span>
+              </p>
+              <p>
+                Масса должна быть воздушной: её не трамбуют в кулак. Наполняйте конус рукой, начиная с самого кончика — внизу совсем чуть-чуть, чтобы кончик заполнился. Крепко трамбовать не нужно: торт должен потом хорошо разрезаться, а форму он всё равно держит благодаря масляному крему.
+                <span class="source-badge">⏱ Урок 3: 02:46–03:28</span>
+              </p>
+              <p>
+                Отдельно — пенёк: кольцо Ø 10 см с ацетатной плёнкой внутри, выкладываем точно так же, без сильной трамбовки. Всё в холодильник минимум на час; можно в морозилку, чтобы схватилось быстрее.
+                <span class="source-badge">⏱ Урок 3: 03:46–04:18</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не трамбуйте:</strong> излишним давлением легко повредить конус из плёнки или бумаги, и форма поведёт. Плотность даст крем, а не палка.
+                <span class="source-badge">⏱ Урок 3: 03:25–03:28</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Перемешивание: <strong>Лопаткой или рукой</strong></span>
+              <span class="param-pill">⛰ Конус: <strong>Наполнять от кончика, без трамбовки</strong></span>
+              <span class="param-pill">🧊 Охлаждение: <strong>Не менее 1 часа</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Выравнивание елки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Застывшую ёлку освободите от плёнки и поставьте на подложку, вырезанную под её основание. Крем для выравнивания — в мешок с отрезанным соплом около 5 мм: тонким слоем заполняйте пустоты, потом разравнивайте лопаткой.
+                <span class="source-badge">⏱ Урок 4: 00:13–02:31</span>
+              </p>
+              <p>
+                Пузырь воздуха в крошке автора не смущает — сверху всё равно будет декор. После первого прохода сразу видно, где крема не хватает: такие отверстия заполняйте и продолжайте выравнивать.
+                <span class="source-badge">⏱ Урок 4: 02:05–02:31</span>
+              </p>
+              <div class="tip-box">
+                <strong>Можно остановиться:</strong> уже на этой стадии торт красив, а неровности могут имитировать заснеженную хвою. Можно просто прилепить на подложку кремом и сразу велюрить — но автор идёт дальше и выравнивает.
+                <span class="source-badge">⏱ Урок 4: 00:55–01:24</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥄 Сопло мешка: <strong>≈ 5 мм</strong></span>
+              <span class="param-pill">🧈 Крем: <strong>Масляный, на нём же держится декор</strong></span>
+              <span class="param-pill">🔪 Выравнивание: <strong>Лопаткой, в два прохода</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Каркас и установка ёлки на пенёк</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                На основную подложку нанесите растопленный в микроволновке шоколад и прилепите её к основанию. Под сложные конструкции подложка нужна очень сильная — автор берёт фанеру и на ней не экономит.
+                <span class="source-badge">⏱ Урок 4: 02:50–03:11</span>
+              </p>
+              <p>
+                Посередине на подушку из крема поставьте пенёк, проверьте центровку, снимите кольцо и удалите плёнку. Чтобы ёлка не накренилась на пеньке, вбейте три палочки для суши — близко к краю их втыкать нельзя, иначе пенёк разрушится. Плюс длинная центральная ось, соединяющая пенёк и ёлку.
+                <span class="source-badge">⏱ Урок 4: 03:09–04:09</span>
+              </p>
+              <p>
+                Верх пенька обильно смажьте кремом и разровняйте — не выравнивайте, а именно разравнивайте. Проделайте отверстие в основании елки, вставьте мачту до дна, проверьте, ровно ли стоит, и аккуратно опустите ёлку на палочки. Всё — в холодильник, чтобы застыло.
+                <span class="source-badge">⏱ Урок 4: 04:09–05:27</span>
+              </p>
+              <div class="warning-box">
+                <strong>Палочки — по краю:</strong> все три должны быть одинаковыми, тогда ёлка встанет прямо. Если вбить их слишком близко к краю пенька, пенёк развалится.
+                <span class="source-badge">⏱ Урок 4: 03:40–03:55</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Клей-подложка: <strong>Растопленный тёмный шоколад</strong></span>
+              <span class="param-pill">🍢 Укрепление: <strong>3 палочки для суши + центральная ось</strong></span>
+              <span class="param-pill">🧊 До велюра: <strong>В холодильнике</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Шоколадный велюр</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Какао-масло растопите в микроволновке, добавьте белый шоколад, при необходимости подогрейте ещё раз. Добавьте диоксид титана и пробейте блендером; перед использованием можно пропустить через сито. Перелейте в одноразовый стаканчик, дайте застыть, а перед нанесением нагрейте и перемешайте.
+                <span class="source-badge">⏱ Урок 5: 01:25–01:42</span>
+              </p>
+              <p>
+                Велюр окрашивается только жирорастворимыми красителями. Сначала работают белым цветом, потом по мере необходимости добавляют интенсивность: белый, затем зелёный — так и не приходится мыть краскопульт.
+                <span class="source-badge">⏱ Урок 5: 01:54–02:08</span>
+              </p>
+              <p>
+                Очень важно, чтобы торт был прямо из холодильника. Ёлку поставьте в коробку-ельник и велюрьте: лучше несколько раз пройтись по одному месту, чем позволить велюру потечь каплями.
+                <span class="source-badge">⏱ Урок 5: 03:04–03:44</span>
+              </p>
+              <div class="tip-box">
+                <strong>Краскопульт:</strong> у автора Wagner V100 — простой в эксплуатации, надёжный и не требует большого компрессора, работает не громче пылесоса. После использования его моют горячей водой с фейри. Крупность капель регулируется болтом на шкале «минус-плюс».
+                <span class="source-badge">⏱ Урок 5: 00:06–00:24</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Велюр: <strong>80 г какао-масла + 100 г белого шоколада</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>Велюр горячий, торт — прям из холодильника</strong></span>
+              <span class="param-pill">🎨 Порядок: <strong>Сначала белый, потом зелёный</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 11 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Макаронс и финальная отделка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Второй проход — лёгким зелёным оттенком по ёлке, отдельно чуть-чуть на пенёк. Пенёк автор не выравнивает, только велюрит: так видна его фактура, и он выглядит бело-коричневым.
+                <span class="source-badge">⏱ Урок 5: 03:44–05:22</span>
+              </p>
+              <p>
+                Макаронс клеятся на тёмный шоколад 70%: он очень быстро застывает и крепко держит. Нанесли шоколад, приложили макарон, подержали несколько секунд — и можно отпускать. На другой шоколад — только с фрезером.
+                <span class="source-badge">⏱ Урок 5: 05:44–06:17</span>
+              </p>
+              <div class="tip-box">
+                <strong>Подача:</strong> получается «ёлка с претензией на архитектурность». Готовый торт храните в холодильнике: внутри масляный крем и свежие сухофрукты, на поверхности — хрупкий шоколадный велюр.
+                <span class="source-badge">⏱ Урок 5: 06:44–06:46</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Клей: <strong>Тёмный шоколад 70%</strong></span>
+              <span class="param-pill">🍪 Макаронс: <strong>Подержать несколько секунд</strong></span>
+              <span class="param-pill">🧊 Хранение: <strong>В холодильнике</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Одинаковая температура всего:</strong> масло, яйцо и сметана в крошке, масло и сгущёнка в креме — разница температур расслаивает и тесто, и крем. Это повторяющаяся мысль автора.</li>
+                <li><strong>Масляный крем — половина успеха:</strong> он держит форму конуса без плотной трамбовки и служит основанием для велюра.</li>
+                <li><strong>Не трамбовать:</strong> масса воздушная, торт от этого лучше режется; конус из плёнки при сильном давлении можно повредить.</li>
+                <li><strong>Крупные «муравьи» и крупно порезанные орехи</strong> — на разрезе должен читаться состав, а не паста.</li>
+                <li><strong>Сильная подложка:</strong> «под все торты сложных конструкций нужна очень сильная подложка, на этом не экономить» — автор использует фанеру.</li>
+                <li><strong>Велюр хранится очень долго</strong> при комнатной температуре и используется много раз: перед применением его просто растапливают в микроволновке или на водяной бане.</li>
+                <li><strong>Светлый цвет первым:</strong> начали с белого — потом перешли на зелёный, не моя оборудование между замесами.</li>
+                <li><strong>Торт из холодильника, велюр горячий и однородный</strong> — иначе сопло забьётся, а капли потекут.</li>
+                <li><strong>Тёмный шоколад для макаронс:</strong> на 70% они держатся намертво и за секунды.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Холодные продукты в крошку:</strong> масса свернётся, яйцо или сметана не войдут в масло, останутся «хлопья».</li>
+                <li><strong>Пыльная крошка вместо кусочков:</strong> торт выйдет плотным и слипшимся, на разрезе не будет структуры.</li>
+                <li><strong>Утрамбованная масса:</strong> повреждается конус, и торт тяжелее разрезать.</li>
+                <li><strong>Крем не пошёл:</strong> сгущёнка была холодной или вводилась слишком быстро — крем пойдёт крупинками.</li>
+                <li><strong>Палочки близко к краю:</strong> разрушают пенёк, ёлка стоит криво.</li>
+                <li><strong>Велюрили неохлаждённый торт:</strong> капли текут и ложатся некрасиво.</li>
+                <li><strong>Забитое сопло:</strong> велюр был недостаточно горячим или неоднородным.</li>
+                <li><strong>Мешок вместо стаканчика:</strong> мешок затягивает в колбу краскопульта — автор работает исключительно со стаканчиками.</li>
+                <li><strong>Обычные красители в велюре:</strong> нужны только жирорастворимые, водные в какао-масле не диспергируются.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> папка «Торт_Елка» — DOCX с точными граммовками, расшифровка пять уроков (Урок_01–Урок_05) с таймкодами и сами видео. Граммовки, температура, время выпечки и размеры формы взяты из DOCX; порядок действий, приёмы и признаки готовности — из видео.</li>
+              <li><strong>Что из DOCX:</strong> крошка (600 г муки на 2 ёлки), крем (450 г масла, 760 г сгущёнки, 3 ст. л. рома), наполнитель 600 г, велюр 80 г какао-масла и 100 г белого шоколада, выпечка 15–20 мин при 170 °C, «радиус конуса 30 см, диаметр 60 см».</li>
+              <li><strong>Что из видео:</strong> «примерно 20 минут» при 170 °C, охлаждение теста 1–2 ч в холодильнике или 40–60 мин в морозилке, холодильник для собранного торта не менее часа, полукруг радиусом 30 см сворачивается в конус с основанием Ø 15 см, кольцо Ø 10 см для пенька, диаметр сопла около 5 мм, три палочки для суши, модели краскопульта Wagner V100.</li>
+              <li><strong>Расхождение по времени выпечки:</strong> в DOCX 15–20 минут, в видео «примерно 20 минут». На странице указано 15–20 минут — ориентируйтесь на сухую крошку.</li>
+              <li><strong>Расхождение по форме:</strong> в DOCX «радиус конуса 30 см, диаметр 60 см», в видео заготовка — полукруг радиусом 30 см (есть и фраза про диаметр 30 см в расшифровке), а готовый конус получается с основанием 15 см. На странице указаны оба числа из DOCX — как заготовка — и фактический конус из видео.</li>
+              <li><strong>Расхождение по весу готовых ёлок:</strong> DOCX считает 2 ёлки по 1,5 кг, но у автора вышло 1,25 кг и 1,75 кг, а после выравнивания вторая ёлка весила 2,05 кг. Это допустимый разброс — количество крошки и крема не подгонялось.</li>
+              <li><strong>Базовая порция:</strong> на странице за базу взята одна ёлка, потому что одна посуда, один конус и один краскопульт — калькулятор на «две ёлки» был бы неудобен. Все граммовки в ингредиентах — это ровно половина DOCX; вместо этого единственная не дробящаяся ячейка — крем: его норма сокращена пропорционально, как в DOCX (900 г в торты + 300 г на выравнивание при весе 2 × 1,5 кг).</li>
+              <li><strong>Чего в источниках нет:</strong> точное количество шоколада для клейки макаронс и подложки, количество макаронс, точное количество велюра на одну ёлку (в DOCX только состав), время охлаждения после велюра, срок хранения готового торта. На странице эти величины не выдумывались: там, где их нет, написано «по вкусу» и «сколько уйдёт».</li>
+              <li><strong>Не в источнике:</strong> декор в виде золотых шариков и кисти, которыми украшают ёлку в кадре — это приём показанный, но без граммовок и указаний; на странице отнесено к декору «по вкусу».</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет, только видео. На странице — кадр из Урок_05 в 06:50: готовая ёлка в белом и зелёном велюре с макаронс и золотыми шариками, в кадре рука кондитера с кистью.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

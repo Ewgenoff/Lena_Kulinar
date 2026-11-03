@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Террин из красной рыбы с сырным кремом — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Террин из слабосолёной красной рыбы Надежды Зубовой: форма 550 мл, выстланная ломтиками рыбы, сырный крем с зеленью и чесноком на желатине, слои каперсов и запечённой рыбы, гнёт на ночь. Пошаговая технология, декор и срок хранения.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="terrin-iz-krasnoy-ryby">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться к каталогу рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Основные блюда</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Террин из красной рыбы с сырным кремом</h1>
+      <p class="recipe-lead">
+        Холодная закуска из того же вебинара, что и шоколадный чизкейк: прямоугольная форма объёмом 550 мл выстилается тонкими ломтиками слабосолёной рыбы, внутрь идёт сырный крем с зеленью и чесноком на желатине, слои каперсов и кусочки запечённой рыбы. Ночь под гнётом — и получается ровный «кирпич», который режется красивыми ломтиками. По вкусу автор сравнивает его с большим роллом.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~30 мин (замочить желатин, нарезать рыбу)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">6–12 ч в холодильнике под гнётом</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">Сутки (с ночью в холодильнике)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 террин в форме 550 мл (10–12 ломтиков)</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/terrin-iz-krasnoy-ryby.jpg" alt="Сборка террина: на ломтики красной рыбы выдавливается зелёный сырный крем из кондитерского мешка" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 террин)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">террин</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База калькулятора — один террин в форме 550 мл, как в видео. Если форма больше, ингредиентов понадобится пропорционально больше: при том же количестве крема рыбы может не хватить на верх.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> террин</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Список на один террин в форме 550 мл. Каперсы и запечённую рыбу можно заменить или убрать — на технологию это не влияет.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🐟 Рыба и молочное</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Красная рыба слабосолёная</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">Лучше целым куском, а не нарезкой: её нужно нарезать самому на 1,5–2 мм. Яркая покупная рыба даёт нужный цвет</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Красная рыба запечённая</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Или запечь кусок сами: нужна только красная часть без костей</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творожный сыр</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">Типа Philadelphia: Hochland, Violette, Almette сливочный. Не плавленый и не маскарпоне</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 33 %</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Если только 22 %, автор советует взять 70 г, чтобы крем остался плотным</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин</strong>:
+                <span class="shopping-qty" data-base-amount="7" data-unit="г">7 г</span>
+                <span class="shopping-hint">Сильный, 210–220 блюм (Доктор Эдкер). Листового 150–160 блюм понадобится больше</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Вода для желатина</strong>:
+                <span class="shopping-qty" data-base-amount="35" data-unit="г">35 г</span>
+                <span class="shopping-hint">Холодная</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌿 Зелень, специи, расходники</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Зелень (укроп и петрушка)</strong> — 1 небольшой пучок, по вкусу
+                <span class="shopping-hint">Идёт в блендер вместе с сыром, поэтому стебли тоже подойдут</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Чеснок</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="зубчик" data-piece="true">1 зубчик</span>
+                <span class="shopping-hint">Свежий, не сушёный</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Каперсы</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Можно заменить маслинами или оливками; без них террин тоже получится</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль и смесь перцев</strong> — по вкусу
+                <span class="shopping-hint">Творожные сыры солят по-разному, поэтому массу пробуют и досаливают</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — форма 550 мл (например, 5,5 × 5,5 × 21 см), пищевая плёнка, доска-гнёт, погружной блендер, кондитерский мешок, открытая насадка-звезда
+                <span class="shopping-hint">Подойдёт и одноразовая прямоугольная форма или пластиковый контейнер такого объёма</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Рыба</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Красная рыба слабосолёная
+              <span class="ingredient-note">Нарезать на 1,5–2 мм: подмороженная режется тоньше</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Красная рыба запечённая
+              <span class="ingredient-note">Разобрать на пластинки, косточки убрать; подойдёт и слабосолёная кубиком</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Сырный крем</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Творожный сыр
+              <span class="ingredient-note">Комнатной температуры, чтобы крем собрался блендером</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сливки 33 %
+              <span class="ingredient-note">С 22 % — 70 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="зубчик" data-piece="true">1 зубчик</span> — Чеснок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Укроп и петрушка
+              <span class="ingredient-note">Небольшой пучок, вместе со стеблями</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Соль и смесь перцев
+              <span class="ingredient-note">Смесь с кориандром, белым и красным перцем</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Желатин</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Желатин
+              <span class="ingredient-note">220 блюм; листового 150–160 блюм нужно больше</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="35" data-unit="г">35 г</span> — Вода холодная
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Прослойка и декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Каперсы
+              <span class="ingredient-note">Можно заменить маслинами или оливками, можно не добавлять</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Остатки сырного крема, каперсы, зелень
+              <span class="ingredient-note">Около 100 г крема остаётся на «пупочки» и зелень</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Форма 550 мл и пищевая плёнка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Возьмите прямоугольную форму объёмом 550 мл — у автора это 5,5 см в высоту, 5,5 см в ширину и 21 см в длину. Подойдёт любая форма примерно такого объёма: одноразовая, пластиковый контейнер, круглая (тогда террин режут секторами). Слегка смочите форму водой и выстелите пищевой плёнкой так, чтобы она плотно прилегала и свисала по краям.
+                <span class="source-badge">⏱ Урок 1: 00:03:35–00:04:35, 00:38:37–00:43:15</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> влажная форма держит плёнку — она не тянется обратно и не отходит. Чем ровнее и аккуратнее вы застелете форму, тем красивее будет готовый террин.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Форма: <strong>550 мл, ≈5,5×5,5×21 см</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Пищевая плёнка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Выстилаем форму ломтиками рыбы</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Нарежьте 300 г слабосолёной рыбы тонкими ломтиками по 1,5–2 мм. Выкладывайте их поочерёдно на дно и на бока так, чтобы они свисали через край: форма должна быть закрыта сплошным слоем, без пробелов. Работайте без перчаток — в перчатках ломтики прилипают.
+                <span class="source-badge">⏱ Урок 1: 00:43:31–00:49:15, 00:54:07–00:55:13</span>
+              </p>
+              <div class="warning-box">
+                <strong>Низ — это верх:</strong> когда террин перевернут, всё, что вы положили на дно, окажется на виду. Поэтому дну уделяют максимум внимания, а свисающие края потом закроют начинку сверху.
+                <span class="source-badge">⏱ Урок 1: 00:48:05–00:48:15</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> чтобы нарезать тонко, чуть подморозьте рыбу и возьмите очень острый нож. Слишком тонкие, почти прозрачные ломтики уложить не получится — они рвутся.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Толщина: <strong>1,5–2 мм</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Сплошной слой без пробелов</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Сырный крем с зеленью и чесноком</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сложите в чашу 300 г творожного сыра, пучок укропа и петрушки, зубчик чеснока и 100 г сливок 33 %. Пробейте погружным блендером до однородности, посолите и поперчите по вкусу — творожные сыры солят по-разному, поэтому пробуйте массу.
+                <span class="source-badge">⏱ Урок 1: 00:55:19–01:01:37</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> крема получится с небольшим запасом — около 100 г останется на декор верха. Остаток можно просто съесть на бутербродах, это очень вкусно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>Погружной блендер</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Однородная масса с крапинками зелени</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Желатин вводим горячим, в самом конце</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Залейте 7 г желатина 35 г холодной воды и оставьте набухать. Перед сборкой расплавьте его в микроволновке — хватает 20–25 секунд, — и сразу отправьте горячим в сырную массу. Перемешайте лопаткой, если масса тёплая, или миксером, если сыр был из холодильника.
+                <span class="source-badge">⏱ Урок 1: 00:44:28–00:45:43, 01:06:14–01:09:09</span>
+              </p>
+              <div class="warning-box">
+                <strong>Желатин — последним:</strong> его добавляют в самый последний момент перед сборкой, иначе масса начнёт схватываться раньше времени. Если работаете на листовом желатине, пересчитайте по силе: 220 блюм против 150–160.
+                <span class="source-badge">⏱ Урок 1: 00:45:21–00:46:22, 01:05:32</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Желатин: <strong>Горячим, расплавленным</strong></span>
+              <span class="param-pill">⏱ Микроволновка: <strong>20–25 секунд</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Запечённая рыба пластинками</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отвесьте 100 г запечённой рыбы и разберите её на аккуратные пластинки. Берите в основном яркую красную часть — она красиво смотрится в разрезе, — и уберите все косточки, если они попадаются. Вместо запечённой можно взять слабосолёную и порезать кубиком.
+                <span class="source-badge">⏱ Урок 1: 01:03:19–01:05:27</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> запечённая рыба предпочтительнее ещё и потому, что она распадается на волокна — террин потом режется ровнее.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак: <strong>Пластинки без костей</strong></span>
+              <span class="param-pill">⚖️ Вес: <strong>Ровно 100 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Сборка: крем, каперсы, рыба, крем горкой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите крем в кондитерский мешок, отрежьте отверстие 1,5–2 см. Заполните дно, сильно продавливая мешок в углы, — пустот остаться не должно. Смешайте запечённую рыбу с частью крема и выложите слой, затем слой каперсов, снова крем, ещё каперсы и закончите кремом.
+                <span class="source-badge">⏱ Урок 1: 01:07:03–01:13:21</span>
+              </p>
+              <p>
+                Последнюю порцию крема выкладывайте горкой — выше края формы: её потом утрамбуют, и после гнёта террин станет ровным.
+                <span class="source-badge">⏱ Урок 1: 01:13:34–01:14:16</span>
+              </p>
+              <div class="warning-box">
+                <strong>Каперсов не должно быть много:</strong> это пряность, а не начинка. Если каперсы не любите, замените оливками или не добавляйте вовсе — на технологию это не влияет.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Мешок: <strong>Отверстие 1,5–2 см</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Крем горкой выше края</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Закрываем верх рыбой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Накройте начинку свисающими ломтиками рыбы, подворачивая их к центру. Этой рыбы обычно не хватает, поэтому добавьте ещё несколько ломтиков сверху. Мелкие дырочки заделайте отдельными кусочками — верх должен получиться плотным и ровным.
+                <span class="source-badge">⏱ Урок 1: 01:14:18–01:17:02</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак: <strong>Плотная поверхность без просветов</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Плёнка, холодильник и гнёт на ночь</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Закройте террин плёнкой сверху — так он не заветрится и лучше спрессуется — и уберите в холодильник. Когда желатин схватится, положите сверху разделочную доску как гнёт. Минимум 6 часов, удобнее всего оставить до утра.
+                <span class="source-badge">⏱ Урок 1: 01:17:20–01:18:24, 01:41:47–01:43:06</span>
+              </p>
+              <div class="warning-box">
+                <strong>Гнёт — разумный:</strong> автора спрашивали, не ставит ли она трёхлитровую кастрюлю с водой. Нет: достаточно обычной доски, на которой режут. Задача — слегка придавить, а не расплющить.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Холодильник: <strong>Минимум 6 часов</strong></span>
+              <span class="param-pill">⚖️ Гнёт: <strong>Разделочная доска</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Извлечение: ровный «кирпич»</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Снимите гнёт и раскройте плёнку. Положите сверху доску или подложку и переверните террин на неё. Уберите форму и аккуратно снимите плёнку, придерживая её, чтобы не повредить поверхность. В итоге получается ровный кирпич с рыбным рисунком по всем сторонам.
+                <span class="source-badge">⏱ Урок 2: 00:51:55–00:53:09</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак: <strong>Форма держится без плёнки</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Доска или подложка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Декор остатками крема и каперсами</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разомните оставшийся крем рукой, чтобы он стал пластичным, и отправьте его в мешок с открытой насадкой-звездой. Закрытая насадка здесь не подойдёт: кусочки рыбы и укропа будут забиваться и дадут рваный рисунок. Отсадите небольшие «пупочки» по верху.
+                <span class="source-badge">⏱ Урок 2: 00:53:28–00:56:47</span>
+              </p>
+              <p>
+                Сверху добавьте по капельке каперсов и зелень — по одному листику или каперсу рядом с каждым «пупочком». Если декора не хочется, террин можно оставить как есть: он красив и без него.
+                <span class="source-badge">⏱ Урок 2: 00:57:02–00:58:59</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> крем после холодильника застывает, поэтому его обязательно разминают перед отсаживанием — иначе он ляжет некрасиво. Тесто для декора не нужно, всё держится на самом креме и влаге поверхности.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Насадка: <strong>Открытая звезда</strong></span>
+              <span class="param-pill">🌿 Декор: <strong>Каперсы и зелень</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Хранение и подача</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Террин хранится 72 часа в холодильнике — срок автор отсчитывает с момента приготовления. Подавайте охлаждённым, нарезая ломтиками толщиной около сантиметра: это закуска, и одного террина хватает на большое застолье.
+                <span class="source-badge">⏱ Урок 1: 00:51:23–00:51:34, 01:00:34–01:00:53</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не замораживать:</strong> после разморозки рыба и сырный крем потеряют текстуру и дадут воду. Террин — блюдо на два-три дня.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📦 Холодильник: <strong>72 часа</strong></span>
+              <span class="param-pill">🔪 Нарезка: <strong>Ломтики ≈1 см</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Покупная рыба — ради цвета:</strong> автор специально купила слабосолёную рыбу, потому что домашняя засолка даёт не такой яркий оттенок, а террин должен выглядеть нарядно.</li>
+                <li><strong>Нарезка:</strong> подмороженная рыба и очень острый нож дают ломтики по 1,5–2 мм. Слишком тонкие ломтики рвутся при укладывании.</li>
+                <li><strong>Крем с запасом:</strong> около 100 г остаётся на декор — на бутерброды или на «пупочки».</li>
+                <li><strong>Гнёт:</strong> достаточно доски сверху; тяжёлый груз не нужен.</li>
+                <li><strong>Желатин по силе:</strong> 7 г сухого 220 блюм. Листового 150–160 блюм понадобится больше — пересчёт идёт по блюмам.</li>
+                <li><strong>Соль по вкусу:</strong> творожные сыры отличаются по солёности, поэтому массу обязательно пробуют.</li>
+                <li><strong>Форма:</strong> не берите слишком большую — с ней сложно и долго работать, а закуски столько не съедят.</li>
+                <li><strong>Круглая форма тоже подойдёт:</strong> тогда террин режут секторами или полосками.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Сухая форма:</strong> плёнка не держится и сползает — форму нужно смочить водой.</li>
+                <li><strong>Пробелы в рыбном слое:</strong> крем выступит наружу, и террин будет выглядеть неаккуратно.</li>
+                <li><strong>Слишком тонкие ломтики:</strong> рвутся и не закрывают форму.</li>
+                <li><strong>Желатин добавлен заранее:</strong> масса схватывается до сборки, разложить её ровно уже не получится.</li>
+                <li><strong>Слабый желатин:</strong> террин не держит форму и разваливается при нарезке.</li>
+                <li><strong>Много каперсов:</strong> перебивают вкус рыбы и крема.</li>
+                <li><strong>Закрытая насадка для декора:</strong> кусочки рыбы и зелени забивают её, рисунок получается рваным.</li>
+                <li><strong>Холодный неразмятый крем:</strong> ложится комками, «пупочки» не держат форму.</li>
+                <li><strong>Заморозка:</strong> после разморозки террин течёт и теряет текстуру.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Рыба:</strong> любая красная слабосолёная; запечённую можно заменить слабосолёной, нарезанной кубиком.</li>
+                <li><strong>Каперсы:</strong> маслины, оливки или ничего.</li>
+                <li><strong>Зелень:</strong> укроп и петрушка, можно взять только один вид.</li>
+                <li><strong>Сливки:</strong> 22 % — тогда 70 г; 33 % — 100 г.</li>
+                <li><strong>Желатин:</strong> сухой 220 блюм или листовой с пересчётом от 150–160 блюм.</li>
+                <li><strong>Форма:</strong> прямоугольная 550 мл, одноразовая, пластиковый контейнер или круглая — технология та же.</li>
+                <li><strong>Подача:</strong> как холодная закуска, ломтиками; хорошо идёт под крепкие напитки и на праздничный стол.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 (форма — 00:03–00:04, 00:38–00:43, укладывание рыбы — 00:43–00:55, сырный крем — 00:55–01:01, запечённая рыба — 01:03–01:05, желатин — 00:44–00:46, 01:06–01:09, сборка — 01:07–01:17, плёнка и гнёт — 01:17–01:18, 01:41–01:43); Урок_02.mp4 (извлечение — 00:51–00:53, декор — 00:53–00:59); «Чизкейки для мужчин.docx» — граммовки; «Расшифровка Чизкейк_для_мужчин.csv» — таймкоды и технология.</li>
+              <li><strong>Желатин:</strong> в DOCX — 7 г и 35 г воды. В видео автор отдельно проговаривает пересчёт по блюмам и говорит, что у неё вышло примерно 10–11 г, — это пересчёт листового желатина, а не увеличение рецептурного количества. На странице — 7 г сухого 220 блюм, как в DOCX.</li>
+              <li><strong>Сливки:</strong> DOCX и видео — 100 г 33 %. В видео есть уточнение: если сливки только 22 %, их берут 70 г, иначе крем будет жидким.</li>
+              <li><strong>Форма:</strong> в DOCX — только объём 550 мл, размеры (5,5 × 5,5 × 21 см) названы в видео.</li>
+              <li><strong>Запечённая рыба:</strong> автор берёт уже готовую; температура и время её запекания в источниках не указаны.</li>
+              <li><strong>Пробелы:</strong> точный вес готового террина не назван; количество зелени в граммах не измеряется — «пучок»; соль и перец — по вкусу.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице стоит кадр из Урок_01.mp4 (01:14:00) с моментом сборки террина, обрезанный по краям. Кадр готового террина в записи есть только общим планом, поэтому выбран кадр сборки.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

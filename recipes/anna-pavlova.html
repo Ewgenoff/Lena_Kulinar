@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пирожное «Анна Павлова» с маскарпоне — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Пирожное «Анна Павлова» Надежды Зубовой: французская меренга с крахмалом и уксусом, выпечка при 100 °C с приоткрытой дверцей, крем из маскарпоне и взбитых сливок и свежие ягоды. Классическая подача и подача с малиновым конфи.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body data-recipe-id="anna-pavlova">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Пирожное «Анна Павлова» с маскарпоне</h1>
+      <p class="recipe-lead">
+        Хрустящее облако из французской меренги с крахмалом и уксусом — они дают иллюзию бисквита и тот самый хруст. Сверху крем из маскарпоне и взбитых сливок и свежие ягоды. Десерт делают в день подачи: меренга слишком быстро пропитывается, но с маскарпоне в креме она остаётся хрустящей сутки.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">15 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">40 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">1 ч 20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~2 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">6 пирожных 11 см (по карте)</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/anna-pavlova.jpg" alt="Пирожное «Анна Павлова»: хрустящая меренга с кремом из маскарпоне и свежими ягодами" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (6 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="6">6</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">пирожных</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — рецептура карты: 6 больших пирожных диаметром 11 см. На видео автор делает меньшую порцию меренги и отсаживает заготовки 7,5 см, а часть меренги выпекает полусферами — если повторяете видео, белка и сахара уйдёт меньше.
+          </p>
+        </div>
+
+        <!-- Переключатель источников и таймкодов видео -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">6</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Белок отделяют от яиц категории С0 — четырех штук хватает ровно на рецептуру карты.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: молочное, яйца -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное и яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С0</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span>
+                <span class="shopping-hint">Нужны только белки — 160 г. Можно заменить готовым альбумином</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Маскарпоне</strong>:
+                <span class="shopping-qty" data-base-amount="270" data-unit="г">270 г</span>
+                <span class="shopping-hint">Не заменять творожным сыром: его соленый оттенок плохо сочетается с меренгой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 33–35%</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Жирные, предназначенные для взбивания: от них зависит, удержит ли крем форму</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: бакалея, ягоды, декор -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍓 Бакалея, ягоды и декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="320" data-unit="г">320 г</span>
+                <span class="shopping-hint">Пропорция к белку 2:1; в карте допустимо до 350 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span>
+                <span class="shopping-hint">В крем, обязательно просеянная</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кукурузный крахмал</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="ст. л.">2 ст. л.</span>
+                <span class="shopping-hint">В меренгу, в самом конце; даёт иллюзию бисквита</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Уксус столовый</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="ст. л.">1 ст. л.</span>
+                <span class="shopping-hint">Добавляет меренге хруст</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ваниль</strong> (опционально)
+                <span class="shopping-hint">В карте — вместе с крахмалом и уксусом, в самом конце</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Водка Finlandia на чёрной смородине</strong> (опционально)
+                <span class="shopping-qty" data-base-amount="1" data-unit="ст. л.">1 ст. л.</span>
+                <span class="shopping-hint">Автор берёт именно эту; на других ягодах, по её словам, не подойдёт</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ягоды свежие</strong>
+                <span class="shopping-hint">По вкусу: малина, клубника, голубика — автор украшает ими пирожное</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Зелень для декора</strong>
+                <span class="shopping-hint">По вкусу: мята, мелисса</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Малиновое конфи</strong> (опционально)
+                <span class="shopping-hint">Для второй подачи — внутрь пирожного, поверх крема</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — пергамент, насадка 856 для меренги, насадка 855 для крема, кондитерские мешки, силиконовая форма для полусфер
+                <span class="shopping-hint">Форма нужна только для второго способа — полусфер</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Меренга — основа (на 6 пирожных 11 см)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Белок
+              <span class="ingredient-note">От 4 яиц С0, комнатной температуры; можно альбумин</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="320" data-unit="г">320 г</span> — Сахар-песок
+              <span class="ingredient-note">Пропорция 2 части сахара на 1 часть белка; можно до 350 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="ст. л.">2 ст. л.</span> — Кукурузный крахмал
+              <span class="ingredient-note">В самом конце, после готовой меренги</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ст. л.">1 ст. л.</span> — Уксус столовый
+              <span class="ingredient-note">Тоже в конце; на видео — половина ложки, потому что порция меньше</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Ваниль
+              <span class="ingredient-note">В карте указана вместе с крахмалом и уксусом</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем (на 6 пирожных)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="270" data-unit="г">270 г</span> — Маскарпоне
+              <span class="ingredient-note">Хорошо охлаждённое</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Сахарная пудра
+              <span class="ingredient-note">Просеянная</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сливки жирные
+              <span class="ingredient-note">Взбиваются отдельно, до рисунка от венчика</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ст. л.">1 ст. л.</span> — Водка Finlandia на чёрной смородине
+              <span class="ingredient-note">По желанию; автор настаивает именно на этой</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Подача</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Свежие ягоды
+              <span class="ingredient-note">Малина, клубника, голубика</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Зелень
+              <span class="ingredient-note">Мята или мелисса</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Малиновое конфи
+              <span class="ingredient-note">Для подачи с начинкой внутри</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Меренга: сначала белок, потом сахар</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Белок должен быть комнатной температуры — это важно. Начните взбивать его 30 секунд на низкой скорости, затем переключите на максимальную. Сахар добавляйте только тогда, когда белок уже взбит: если всыпать его сразу, меренгу придётся взбивать бесконечно долго, и она всё равно останется жидкой и нерельефной.
+                <span class="source-badge">⏱ Урок 1: 01:35–02:29</span>
+              </p>
+              <p>
+                Признак готовности белка: пик держится и не загибается, пузыри мелкие, на дне миски нет жидкости. Тогда начинайте вводить сахар понемногу, не переставая взбивать. Меренга должна стать блестящей — это знак, что с ней всё хорошо.
+                <span class="source-badge">⏱ Урок 1: 02:50–04:03</span>
+              </p>
+              <p>
+                Самую небольшую порцию сахара оставьте на конец — она делает меренгу ещё гуще, и взбивайте ещё около пяти минут. Автор не ждёт исключительно стоячих пиков: умеренно густая меренга, которая не вытекает из миски и не падает с венчика, её вполне устраивает.
+                <span class="source-badge">⏱ Урок 1: 04:03–04:43</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сахар в начале взбивания:</strong> белок не успевает насытиться воздухом, и меренга получается жидкой, без рельефа. Сначала — плотный белок, потом сахар.
+                <span class="source-badge">⏱ Урок 1: 02:00–02:15</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Белок: <strong>160 г, комнатной температуры</strong></span>
+              <span class="param-pill">🍬 Сахар: <strong>320 г, в 2 раза больше белка</strong></span>
+              <span class="param-pill">⏱ Взбивание: <strong>~5 мин после сахара</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Крахмал, уксус и ваниль</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В готовую меренгу добавьте кукурузный крахмал, уксус и ваниль и быстро перемешайте лопаткой — долго мешать не нужно. Масса в процессе чуть-чуть разжижится, это нормально.
+                <span class="source-badge">⏱ Урок 1: 04:47–05:28</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем это всё:</strong> крахмал создаёт иллюзию бисквита — не зря бисквит тоже делается на основе меренги, а уксус добавляет дополнительный хруст. На видео автор кладёт одну ложку крахмала и половину ложки уксуса, потому что порция меренги меньше рецептуры карты.
+                <span class="source-badge">⏱ Урок 1: 05:12–05:23</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌽 Крахмал: <strong>2 ст. л. (на видео 1)</strong></span>
+              <span class="param-pill">🍶 Уксус: <strong>1 ст. л. (на видео 0,5)</strong></span>
+              <span class="param-pill">🥄 Мешать: <strong>быстро, лопаткой</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Отсадка основы</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите меренгу в кондитерский мешок с насадкой 856. Нарисуйте карандашом окружность нужного диаметра — у автора 7,5 см — и переверните пергамент рисунком вниз. Отсадите половину: бортик по кругу с рельефом, как на фото.
+                <span class="source-badge">⏱ Урок 1: 05:30–06:23</span>
+              </p>
+              <div class="tip-box">
+                <strong>Диаметр:</strong> по карте пирожные 11 см, на видео — 7,5 см. Ориентируйтесь на свою подачу: чем меньше заготовка, тем быстрее она просохнет.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧰 Насадка: <strong>856</strong></span>
+              <span class="param-pill">📐 Диаметр: <strong>7,5 см на видео, 11 см по карте</strong></span>
+              <span class="param-pill">📄 Основа: <strong>пергамент</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Выпечка меренги</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте при 100 °C в режиме конвекции с приоткрытой дверцей — так меренга сохнет, а не печётся. Заготовки-полусферы у автора стоят около часа, мелкие фигурки — примерно 40 минут.
+                <span class="source-badge">⏱ Урок 1: 06:23–06:36</span>
+              </p>
+              <p>
+                По карте температура 100–110 °C и время 60–90 минут, авторское время — 80 минут. Если противень глубокий, его переворачивают. Без конвекции включают режим «верх-низ», а в газовой духовке противень ставят максимально высоко.
+                <span class="source-badge">⏱ Урок 1: 07:39–07:44</span>
+              </p>
+              <div class="tip-box">
+                <strong>Хотите полностью хрустящие пирожные:</strong> выпекайте меньше — тогда внутри не останется мягкого слоя.
+                <span class="source-badge">⏱ Урок 1: 07:45–07:53</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>100–110 °C</strong></span>
+              <span class="param-pill">🔄 Режим: <strong>конвекция, дверца приоткрыта</strong></span>
+              <span class="param-pill">⏱ Время: <strong>60–90 мин (автор 80)</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Второй способ: полусферы</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Силиконовую форму сбрызните маслом — можно просто пройтись кисточкой. Оставшуюся меренгу переложите в мешок, отрежьте кончик диаметром 0,5 см и отсадите по кругу вокруг полусфер, делая фигурки через одну, чтобы они не склеились. Выпекайте примерно 40 минут.
+                <span class="source-badge">⏱ Урок 1: 06:37–07:39</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем второй способ:</strong> это ещё один вариант подачи — полусферы удобно ставить на подложку, а внутрь прятать крем и начинку.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">✂ Кончик мешка: <strong>0,5 см</strong></span>
+              <span class="param-pill">⏱ Выпечка: <strong>~40 мин</strong></span>
+              <span class="param-pill">🧁 Форма: <strong>силиконовая, сбрызнуть маслом</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Проверка готовности</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Готовые заготовки хорошо высохли, не липнут и полностью хрустят — внутри у полусфер остаётся совсем немного мягкой меренги. Если она липнет к пальцам, верните противень в духовку и досушите.
+                <span class="source-badge">⏱ Урок 1: 08:03–08:20</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак: <strong>сухая, не липкая, хрустит</strong></span>
+              <span class="param-pill">🍬 Внутри: <strong>чуть мягкая — это норма</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Крем из маскарпоне и сливок</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Соедините маскарпоне с просеянной сахарной пудрой и взбейте: сначала на небольшой скорости, чтобы пудра не разлеталась, затем на максимальной. Сливки взбейте отдельно до рисунка от венчика и только потом объедините с основной массой — так крем не расслоится.
+                <span class="source-badge">⏱ Урок 1: 08:20–10:08</span>
+              </p>
+              <p>
+                В конце добавьте ложку водки Finlandia на чёрной смородине и перемешайте недолго. Внутри пирожного будет ягодный вкус, а сверху — свежие ягоды.
+                <span class="source-badge">⏱ Урок 1: 10:18–10:39</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не берите творожный сыр:</strong> у него соленый оттенок вкуса, который плохо сочетается с меренгой. Если маскарпоне нет, второй подходящий вариант — крем типа «масло-сгущёнка».
+                <span class="source-badge">⏱ Урок 1: 08:35–09:04</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧀 Маскарпоне: <strong>270 г</strong></span>
+              <span class="param-pill">🍦 Сливки: <strong>150 г, взбить до рисунка</strong></span>
+              <span class="param-pill">🍬 Пудра: <strong>80 г</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Классическая подача</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отсадите крем на меренгу, повторяя тот рельеф, который вы делали при отсадке основы, — спиралью от центра. Сверху выложите свежие ягоды и зелень. Пирожное получается воздушным, красивым и нежным.
+                <span class="source-badge">⏱ Урок 1: 10:51–11:32</span>
+              </p>
+              <div class="tip-box">
+                <strong>Почему держится хруст:</strong> в креме не только сливки, но и маскарпоне — благодаря этому пирожное остаётся хрустящим 24 часа.
+                <span class="source-badge">⏱ Урок 1: 11:33–11:43</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧰 Насадка: <strong>855</strong></span>
+              <span class="param-pill">🍓 Декор: <strong>свежие ягоды и зелень</strong></span>
+              <span class="param-pill">⏱ Хруст: <strong>до 24 часов</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Подача с малиновым конфи</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Второй вариант — с начинкой. Положите на дно меренги большое количество крема, внутрь отсадите немного малинового конфи, снова заполните кремом и украсьте ягодами. Так пирожное выглядит иначе и внутри появляется ягодная прослойка.
+                <span class="source-badge">⏱ Урок 1: 11:45–12:26</span>
+              </p>
+              <div class="warning-box">
+                <strong>Собирайте прямо перед подачей:</strong> конфи жидкое и начинает пропитывать меренгу, поэтому такую подачу не делают заранее.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥄 Крем: <strong>много, на дно</strong></span>
+              <span class="param-pill">🍓 Конфи: <strong>немного, внутрь</strong></span>
+              <span class="param-pill">⏱ Подача: <strong>сразу после сборки</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Хранение</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Пирожное делают в день подачи — не потому, что оно испортится, а потому что меренга может слишком пропитаться и потерять хруст. Крем можно приготовить заранее: он хранится 72 часа. Собранное пирожное тоже стоит до 72 часов, но лучше съесть его в течение 24 часов, пока оно хрустит.
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Крем: <strong>до 72 ч</strong></span>
+              <span class="param-pill">🍰 Собранное: <strong>до 72 ч, лучше 24 ч</strong></span>
+              <span class="param-pill">📅 Сборка: <strong>в день подачи</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Пропорция 1:2:</strong> на одну часть белка — две части сахара, поэтому пересчитать меренгу под любое количество яиц очень просто.</li>
+                <li><strong>Белок комнатной температуры:</strong> только так он взбивается в плотную рельефную массу.</li>
+                <li><strong>Сахар — после белка:</strong> если всыпать сразу, меренга останется жидкой.</li>
+                <li><strong>Блеск — признак успеха:</strong> когда меренга заблестела, значит белок «принял» сахар правильно.</li>
+                <li><strong>Крахмал и уксус в конце:</strong> они дают хруст и лёгкую «бисквитную» текстуру.</li>
+                <li><strong>Приоткрытая дверца:</strong> меренга сохнет, а не зарумянивается.</li>
+                <li><strong>Маскарпоне вместо творожного сыра:</strong> соленый сыр разрушает вкус меренги.</li>
+                <li><strong>Сливки отдельно:</strong> взбиваются до рисунка и только потом соединяются с маскарпоне.</li>
+                <li><strong>Водка Finlandia на чёрной смородине:</strong> именно эта марка — на других ягодах, по словам автора, не подойдёт.</li>
+                <li><strong>Насадки:</strong> 856 для меренги, 855 для крема.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Сахар всыпали в начале:</strong> взбивать приходится очень долго, меренга всё равно жидкая и нерельефная.</li>
+                <li><strong>Белок холодный:</strong> он плохо держит воздух, меренга получается нестабильной.</li>
+                <li><strong>Не досушили заготовки:</strong> липкая меренга осядет под кремом.</li>
+                <li><strong>Слишком высокая температура:</strong> меренга румянится снаружи и остаётся сырой внутри.</li>
+                <li><strong>Творожный сыр в креме:</strong> соленый оттенок спорит с меренгой.</li>
+                <li><strong>Сливки взбивали вместе с маскарпоне:</strong> крем легче расслаивается; надёжнее взбить их отдельно.</li>
+                <li><strong>Собрали заранее:</strong> меренга пропиталась и перестала хрустеть.</li>
+                <li><strong>Фигурки отсажены вплотную:</strong> при выпечке они склеиваются.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> вебинар Надежды Зубовой «Пирожные Анна Павлова» (Тортомафия, месяц 2) — расшифровка урока и технологическая карта с точными граммовками.</li>
+              <li><strong>Расхождения — пропорция:</strong> в карте 160 г белка и 320 г сахара на 6 пирожных 11 см; на видео автор делает меньшую порцию и отсаживает заготовки 7,5 см, поэтому кладёт 1 ст. л. крахмала и 0,5 ст. л. уксуса. На странице приведена рецептура карты, вариант с видео указан в шагах 2 и 3.</li>
+              <li><strong>Расхождения — выход:</strong> по карте 6 пирожных 11 см, на видео пирожные меньше и часть меренги уходит на полусферы; точное число штук с видео не названо.</li>
+              <li><strong>Расхождения — температура и время:</strong> в карте 100–110 °C и 60–90 минут (авторское время 80 минут), на видео 100 °C и «примерно час» для полусфер, 40 минут для мелких фигурок. На странице указан диапазон карты.</li>
+              <li><strong>Расхождения — насадки:</strong> для меренги на видео названа насадка 856, для крема в карте — 855.</li>
+              <li><strong>Пробелы:</strong> точный вес крахмала и уксуса в граммах автор не приводит — только ложки.</li>
+              <li><strong>Пробелы:</strong> граммовки декора, ягод и конфи не указаны — всё «по вкусу».</li>
+              <li><strong>Пробелы:</strong> конец фразы о том, как автор укладывает пирожное с конфи (на бок или иначе), распознан неразборчиво — на странице описан только сам порядок сборки.</li>
+              <li><strong>Фото:</strong> отдельного снимка в папке нет — на странице стоит сгенерированное изображение пирожного, присланное владельцем сайта.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

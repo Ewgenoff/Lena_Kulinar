@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Чизкейки-эскимо с черникой и шоколадом — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Чизкейки-эскимо Надежды Зубовой: сырная масса на творожном сыре и сгущёнке, шоколадная половина с крошкой орео, черничная начинка на желатине и три вида глазури — цветная, шоколадная «гурмэ» и чёрная зеркальная.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body data-recipe-id="chizkejk-eskimo">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Чизкейки-эскимо с черникой и шоколадом</h1>
+      <p class="recipe-lead">
+        Два пирожных на одной палочке: сырная масса на творожном сыре и сгущёнке, половина с молочным шоколадом и крошкой орео, половина с черничной начинкой на желатине. Всё заливается в форму для эскимо и уходит в морозилку, а потом окунается в глазурь — цветную «гурмэ», шоколадную или чёрную зеркальную.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~50 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">4 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~6 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">8 эскимо по 33 г (форма автора)</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/chizkejk-eskimo.jpg" alt="Готовые чизкейки-эскимо на палочках в шоколадной, сиреневой и розовой глазури с посыпкой, рядом кейк-попсы на подставке" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (8 эскимо)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="8">8</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">эскимо</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — форма автора на 8 отделений, 33 г сырной массы в каждом (264 г, коэффициент 1,26 к рецептуре). Если ваша форма меньше или больше, пересчитайте по весу воды: сколько воды вошло в отделения, столько граммов массы и нужно. Глазурь указана на полную партию — её всегда остаётся, и она хранится.
+          </p>
+        </div>
+
+        <!-- Переключатель источников и таймкодов видео -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">8</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Глазури даны в трех вариантах — количества в них не суммируются, берите тот, который будете делать.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: молочное, сыр, шоколад -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧀 Сыр, молочное, шоколад</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творожный сыр</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Любой стабильный творожный сыр без растительных жиров; автор берёт прямо из холодильника</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сгущённое молоко</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Натуральное, без добавления растительных жиров</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 30–35%</strong>:
+                <span class="shopping-qty" data-base-amount="185" data-unit="г">185 г</span>
+                <span class="shopping-hint">35 г в сырную массу + 150 г в чёрную глазурь, если будете её делать. Только жирные, предназначенные для взбивания</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шоколад для сырной массы</strong>:
+                <span class="shopping-qty" data-base-amount="40" data-unit="г">40 г</span>
+                <span class="shopping-hint">В карте — тёмный, на видео автор топит молочный. Берите тот, чей вкус ближе</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Тёмный шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">В шоколадную глазурь «гурмэ»; нужен только для этого варианта</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молочный шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Второй шоколад в глазурь «гурмэ»</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Белый шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Для цветной глазури «гурмэ»</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: ягоды, бакалея, декор -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🫐 Ягоды, бакалея, декор и расходники</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Черника (пюре или замороженная)</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Пюре или ягода по весу; подойдут смородина и клубника, не подойдут ананас и киви</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок (всего)</strong>:
+                <span class="shopping-qty" data-base-amount="155" data-unit="г">155 г</span>
+                <span class="shopping-hint">65 г в черничный соус + 90 г в чёрную глазурь</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин</strong>:
+                <span class="shopping-qty" data-base-amount="21" data-unit="г">21 г</span>
+                <span class="shopping-hint">7 г в сырную массу + 7 г в соус + 7 г в чёрную глазурь. Автор берёт Dr. Oetker платиновой серии</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Печенье орео</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span>
+                <span class="shopping-hint">В карте 2–3 штуки, на видео хватило одной — зависит от того, сколько крошки хочется</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао алкализованное чёрное</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Только для чёрной зеркальной глазури: обычное какао такого цвета не даст</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло растительное без запаха</strong>:
+                <span class="shopping-qty" data-base-amount="90" data-unit="г">90 г</span>
+                <span class="shopping-hint">40 г в цветную глазурь + 50 г в шоколадную. Лучше виноградное, подойдёт рафинированное кукурузное</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Орехи обжаренные рубленые</strong>:
+                <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span>
+                <span class="shopping-hint">30–40 г в цветную глазурь + 30–40 г в шоколадную: посыпка и добавка в глазурь</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Красители жирорастворимые и диоксид титана</strong> (опционально)
+                <span class="shopping-hint">Только для шоколадной глазури: водорастворимые для неё не подходят. Диоксид титана делает цвет чище</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Декор</strong> (опционально)
+                <span class="shopping-hint">Посыпки, кандурин, сусальное золото — по вкусу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — форма для эскимо, палочки, кондитерские мешки, мягкие одноразовые стаканчики
+                <span class="shopping-hint">Стаканчик нужен для глазури: в нём удобно окунать эскимо</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Сырная база (на 8 эскимо)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Творожный сыр
+              <span class="ingredient-note">Можно прямо из холодильника</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сгущённое молоко
+              <span class="ingredient-note">Без растительных жиров</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="35" data-unit="г">35 г</span> — Сливки 30–35%
+              <span class="ingredient-note">Нагреваются до кипения, в них растворяется желатин</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Желатин
+              <span class="ingredient-note">Платиновая серия, Dr. Oetker</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="35" data-unit="г">35 г</span> — Вода холодная
+              <span class="ingredient-note">Для замачивания желатина</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              1 ч. л. — Ванильная паста
+              <span class="ingredient-note">По желанию; можно ваниль или цедру лимона</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Шоколадная половина</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Шоколад
+              <span class="ingredient-note">В карте тёмный, на видео молочный — оба работают</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span> — Печенье орео
+              <span class="ingredient-note">2–3 штуки; крошка должна быть мелкой, чтобы прошла через мешок</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Черничный соус-начинка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Пюре черники
+              <span class="ingredient-note">Или замороженная ягода ровно тем же весом</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="65" data-unit="г">65 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Желатин
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="35" data-unit="г">35 г</span> — Вода холодная
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Глазурь цветная «гурмэ» (на полную партию)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Белый шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Растительное масло без запаха
+              <span class="ingredient-note">Виноградное или рафинированное кукурузное</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Красители жирорастворимые и диоксид титана
+              <span class="ingredient-note">Цвет доводят постепенно, до нужного оттенка</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Орехи обжаренные рубленые
+              <span class="ingredient-note">30–40 г, для посыпки</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Глазурь шоколадная «гурмэ» (альтернатива)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Тёмный шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Молочный шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Кукурузное масло
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Орехи обжаренные рубленые
+              <span class="ingredient-note">30–40 г, идут прямо в глазурь</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Глазурь чёрная зеркальная (альтернатива)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сливки 33–35%
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="90" data-unit="г">90 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Какао алкализованное чёрное
+              <span class="ingredient-note">Даёт цвет без красителей: около 1,5 ст. л. с горкой</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Желатин
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="35" data-unit="г">35 г</span> — Вода холодная
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Расчёт под свою форму</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Формы для эскимо у всех разные, поэтому сначала считаем, сколько сырной массы нужно именно вам. Поставьте на весы доску, на неё форму, сбросьте на ноль и налейте воду в отделения: вес воды равен весу сырной массы. У автора одно эскимо — 33 г, в форме 8 отделений, значит нужно 264 г массы.
+              </p>
+              <p>
+                Дальше считаем коэффициент: 264 г делим на 210 г (вес одной половины массы по карте) и получаем 1,26. На этот коэффициент умножают каждый ингредиент рецепта. Если форма меньше авторской, коэффициент будет меньше единицы.
+              </p>
+              <div class="tip-box">
+                <strong>Проще через воду:</strong> не обязательно считать в граммах рецепта — достаточно знать, что 200 г творожного сыра дают примерно 264 г массы на 8 эскимо по 33 г.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ На 1 эскимо: <strong>33 г массы</strong></span>
+              <span class="param-pill">🔢 В форме автора: <strong>8 отделений</strong></span>
+              <span class="param-pill">✖ Коэффициент: <strong>264 / 210 = 1,26</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Желатин для сырной массы</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Когда в рецепте есть желатин, с него и начинают: пока он набухает, можно делать всё остальное. Поставьте одноразовый стаканчик на весы, сверху положите ложку — с ней весы точнее отвешивают малые веса. Отвесьте 7 г желатина и долейте 35 г холодной воды.
+                <span class="source-badge">⏱ Урок 1: 01:26–01:53</span>
+              </p>
+              <p>
+                Перемешайте ложкой, не взбивая: нужно «взъерошить» массу, чтобы на дне не осталось сухого желатина. Поднимите стаканчик и проверьте, что со дна всё поднято. Оставьте набухать на 5–10 минут.
+                <span class="source-badge">⏱ Урок 1: 01:53–02:20</span>
+              </p>
+              <div class="warning-box">
+                <strong>Взбивать не нужно:</strong> от взбивания в желатине появляется пена и пузыри, а нам нужна просто однородная набухшая масса.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Желатин: <strong>7 г</strong></span>
+              <span class="param-pill">💧 Вода: <strong>35 г холодной</strong></span>
+              <span class="param-pill">⏱ Набухание: <strong>5–10 мин</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Черничный соус-начинка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Вторые 7 г желатина замочите в 35 г холодной воды так же, как первые. Отвесьте 200 г черничного пюре и отправьте к нему 65 г сахара — порции микроскопические, начинки для эскимо нужно совсем немного, ещё и останется.
+                <span class="source-badge">⏱ Урок 1: 02:20–03:12</span>
+              </p>
+              <p>
+                Доведите пюре с сахаром до кипения, помешивая, но не кипятите: пошли пузыри — выключайте. Сразу введите набухший желатин и размешайте до полного растворения, затем переложите массу в кондитерский мешок и уберите в холодильник на стабилизацию.
+                <span class="source-badge">⏱ Урок 1: 03:13–04:59</span>
+              </p>
+              <div class="tip-box">
+                <strong>Почему именно желатин:</strong> эскимо проходят заморозку, а желатин обратимый — после морозилки начинка не превращается в жидкость и не портит вкус. Домашняя замороженная черника даёт более густую массу, покупное профессиональное пюре — жидкое, потому что очищено от косточек и перепонок.
+                <span class="source-badge">⏱ Урок 1: 03:32–04:47</span>
+              </div>
+              <p>
+                Вместо черники подойдут смородина и клубника — любые ягоды, кроме ананаса и киви. Остатки соуса можно заморозить и хранить до двух месяцев.
+                <span class="source-badge">⏱ Урок 1: 02:51–03:05</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🫐 Пюре: <strong>200 г</strong></span>
+              <span class="param-pill">🍬 Сахар: <strong>65 г</strong></span>
+              <span class="param-pill">⏱ Нагреть: <strong>до кипения, не кипятить</strong></span>
+              <span class="param-pill">🧊 Хранение остатков: <strong>до 2 месяцев</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Сырная масса</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В чашу отправьте творожный сыр и сгущённое молоко и взбивайте миксером три минуты. Автор берёт сыр прямо из холодильника и не доводит его до комнатной температуры — масса всё равно получается однородной.
+                <span class="source-badge">⏱ Урок 1: 05:20–06:01</span>
+              </p>
+              <div class="tip-box">
+                <strong>Сгущёнка имеет значение:</strong> берите натуральное молоко без растительных жиров — от него зависит и вкус, и стабильность массы.
+                <span class="source-badge">⏱ Урок 1: 05:27–05:37</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧀 Сыр: <strong>200 г</strong></span>
+              <span class="param-pill">🥛 Сгущёнка: <strong>150 г</strong></span>
+              <span class="param-pill">⏱ Взбивать: <strong>3 мин</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Желатин в массу и ваниль</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Нагрейте 35 г сливок в микроволновке до кипения и растворите в них набухший желатин. Если весь не разошёлся, прогрейте ещё раз в микроволновке. Тёплые сливки с желатином влейте в сырную массу и взбейте всё вместе — масса станет нежной и воздушной.
+                <span class="source-badge">⏱ Урок 1: 06:01–07:16</span>
+              </p>
+              <p>
+                Добавьте чайную ложку ванильной пасты, лопаткой соберите массу со стенок чаши и ещё раз пробейте миксером. По карте желатин можно растворить отдельно и влить в массу, а вместе с ним добавить ваниль или цедру лимона.
+                <span class="source-badge">⏱ Урок 1: 07:16–08:04</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сливки: <strong>до кипения</strong></span>
+              <span class="param-pill">🍦 Ваниль: <strong>1 ч. л. пасты</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Нежная однородная масса</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Деление массы и шоколад</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отделите половину сырной массы — по карте это 210 г. Она пойдёт с черничной начинкой. Во вторую половину введите шоколад: растопите 40 г в микроволновке пульсами и отправьте в массу тёплым, чтобы желатин внутри не встал раньше времени. Объедините миксером.
+                <span class="source-badge">⏱ Урок 1: 08:04–08:48</span>
+              </p>
+              <div class="warning-box">
+                <strong>Шоколад не должен быть холодным или горячим:</strong> холодный схватит желатин комками, слишком горячий поведёт себя непредсказуемо с сырной массой. Тёплый, текучий — то, что нужно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Половина: <strong>210 г</strong></span>
+              <span class="param-pill">🍫 Шоколад: <strong>40 г, тёплый</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Однородный шоколадный цвет</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Орео и мешки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Раскрошите печенье орео и добавьте в шоколадную массу — так получится чизкейк орео. Крошка должна быть довольно мелкой, иначе она не пройдёт через мешок и забьёт отверстие. На количество эскимо в форме автора хватает одной печеньки, по карте — 2–3.
+                <span class="source-badge">⏱ Урок 1: 08:48–09:41</span>
+              </p>
+              <p>
+                Переложите обе массы в кондитерские мешки и отрежьте кончик побольше — внутри крошка. Если к моменту отсадки масса застыла, прогрейте её в микроволновке пульсами по 3–4 секунды.
+                <span class="source-badge">⏱ Урок 1: 09:41–10:16</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍪 Орео: <strong>1–3 шт., мелко</strong></span>
+              <span class="param-pill">✂ Отверстие: <strong>пошире, из-за крошки</strong></span>
+              <span class="param-pill">♨ Застыло: <strong>пульсы 3–4 с</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Отсадка шоколадных эскимо и палочки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Залейте шоколадную массу в отделения плотно и до самого верха. Постучите формой по столу, чтобы масса распределилась, и помогите себе палеткой — она аккуратно заполнит все уголки. Лишнее уберите.
+                <span class="source-badge">⏱ Урок 1: 10:16–11:27</span>
+              </p>
+              <p>
+                Вставьте палочки и продавите примерно на две трети глубины — тогда пирожное будет плотно сидеть на палочке. Следите, чтобы все палочки стояли на одном уровне.
+                <span class="source-badge">⏱ Урок 1: 11:27–12:04</span>
+              </p>
+              <div class="tip-box">
+                <strong>Не жалейте времени на палетку:</strong> крошка орео распределяется неравномерно, а пирожное должно быть заполнено везде одинаково.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Палочка: <strong>на 2/3 глубины</strong></span>
+              <span class="param-pill">🥄 Инструмент: <strong>палетка</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Форма заполнена до верха</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Черничные эскимо с начинкой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Черничную массу заливайте не до верха: нужно оставить место, куда попадёт начинка. Затем просто уведите черничный соус внутрь, сравняйте поверхность палеткой и вставьте палочки так же, на две трети.
+                <span class="source-badge">⏱ Урок 1: 12:04–13:39</span>
+              </p>
+              <div class="warning-box">
+                <strong>Перелили массу:</strong> отберите немного обратно, иначе начинке некуда будет лечь и она останется на поверхности.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🫐 Начинка: <strong>внутрь, под поверхность</strong></span>
+              <span class="param-pill">📏 Палочка: <strong>на 2/3 глубины</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Ровная поверхность</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Заморозка и извлечение</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отправьте форму в морозилку не менее чем на 4 часа. Извлекать можно только полностью замороженные эскимо, и не так, как вы их устанавливали: тяните за саму эскимошку, а не за палочку.
+                <span class="source-badge">⏱ Урок 1: 13:39–13:43</span>
+              </p>
+              <p>
+                Неровности по краям срежьте ножом. Выходят они абсолютно безболезненно — форму можно немного выгнуть. Дальше декорируйте, пока эскимо не начали оттаивать.
+                <span class="source-badge">⏱ Урок 2: 03:11–03:44</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Морозилка: <strong>не менее 4 ч</strong></span>
+              <span class="param-pill">🤲 Извлекать: <strong>за эскимо, не за палочку</strong></span>
+              <span class="param-pill">🔪 Неровности: <strong>срезать ножом</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 11 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Цветная глазурь «гурмэ»</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Растопите 150 г белого шоколада пульсами в микроволновке, добавьте 40 г растительного масла и подтопите вместе с ним. Сначала масса будет ещё густой — просто перемешайте. Лучше всего виноградное масло, подойдёт любое рафинированное дезодорированное; чтобы масла вообще не чувствовалось, берите кукурузное.
+                <span class="source-badge">⏱ Урок 2: 00:02–01:06</span>
+              </p>
+              <p>
+                Добавьте жирорастворимый краситель и диоксид титана — он делает цвет чище. Автор смешивает краситель чёрной смородины с капелькой розового, чтобы уйти не в фиолетовый, а в сиреневый. Доведите до нужного оттенка, перемешайте и пробейте погружным блендером, чтобы краситель полностью вошёл.
+                <span class="source-badge">⏱ Урок 2: 01:12–03:05</span>
+              </p>
+              <p>
+                Перелейте глазурь в мягкий одноразовый стаканчик — так удобно окунать. По ходу работы массу можно подогревать в микроволновке.
+              </p>
+              <div class="warning-box">
+                <strong>Жирорастворимые красители — только для шоколада:</strong> даже в масляные кремы идут водорастворимые. В шоколадную глазурь водорастворимый краситель добавлять нельзя — масса расслоится.
+                <span class="source-badge">⏱ Урок 2: 01:14–01:31</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Белый шоколад: <strong>150 г</strong></span>
+              <span class="param-pill">🛢 Масло: <strong>40 г</strong></span>
+              <span class="param-pill">🎨 Краситель: <strong>жирорастворимый</strong></span>
+              <span class="param-pill">🥤 Посуда: <strong>одноразовый стаканчик</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 12 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Глазировка и декор</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Окуните замороженное эскимо в глазурь, дайте лишнему стечь и сразу, пока глазурь не застыла, посыпьте орехами или декором. Положите на пергамент — глазурь схватывается быстро, а на бумаге не остаётся следов.
+                <span class="source-badge">⏱ Урок 2: 03:54–05:13</span>
+              </p>
+              <p>
+                Ждать полного застывания не нужно: автор даёт шоколаду схватиться совсем немного, чтобы пирожное осталось аппетитным и не потекло на бумагу.
+                <span class="source-badge">⏱ Урок 3: 00:18–00:27</span>
+              </p>
+              <div class="tip-box">
+                <strong>Глазурь держите под рукой в стаканчике:</strong> если она начала густеть, 10–15 секунд в микроволновке возвращают рабочую консистенцию.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌰 Посыпка: <strong>сразу, пока не застыло</strong></span>
+              <span class="param-pill">📄 Подложка: <strong>пергамент</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Глазурь схватилась, не течёт</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 13 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Шоколадная и чёрная зеркальная глазури</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                <strong>Шоколадная «гурмэ»:</strong> растопите 150 г тёмного и 150 г молочного шоколада, добавьте 50 г кукурузного масла и 30–40 г обжаренных рубленых орехов прямо в глазурь. Этим же способом делают цветную глазурь на белом шоколаде — отличие только в красителе.
+              </p>
+              <p>
+                <strong>Чёрная зеркальная:</strong> соедините 150 г сливок 33–35%, 90 г сахара и 30 г чёрного алкализованного какао и доведите до кипения, помешивая, чтобы сахар разошёлся. Снимите с огня, введите набухший желатин (7 г в 35 г воды) и размешайте до однородности. По карте массу проваривают 3 минуты — на видео автор только доводит до кипения и выключает.
+                <span class="source-badge">⏱ Урок 4: 00:47–02:31</span>
+              </p>
+              <p>
+                Остудите глазурь до 33–31 °C — на этой температуре она глазирует ровно и остаётся глянцевой. Окуните эскимо, постучите палочкой, чтобы убрать излишки, и снимите пузырьки зубочисткой или лопаткой. При 30 °C глазурь уже густеет — прогрейте её в микроволновке.
+                <span class="source-badge">⏱ Урок 4: 02:33–04:08</span>
+              </p>
+              <div class="tip-box">
+                <strong>Чёрный цвет без красителей:</strong> его даёт алкализованный какао сильного очищения — из особо насыщенных какао-бобов.
+                <span class="source-badge">⏱ Урок 4: 01:39–01:51</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Глазировать при: <strong>33–31 °C</strong></span>
+              <span class="param-pill">🍫 «Гурмэ»: <strong>150 + 150 г шоколада, 50 г масла</strong></span>
+              <span class="param-pill">🖤 Чёрная: <strong>сливки 150 г, сахар 90 г, какао 30 г</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Малые веса — с ложкой:</strong> бытовые весы плохо чувствуют 7 г, поэтому стаканчик ставят на весы, а ложку кладут сверху: так вес отмеряется точнее.</li>
+                <li><strong>Желатин — потому что обратимый:</strong> эскимо замораживают, и только желатин возвращает начинке стабильность после морозилки.</li>
+                <li><strong>Сыр можно не согревать:</strong> автор берёт творожный сыр прямо из холодильника, хотя карта просит комнатной температуры, — масса всё равно взбивается однородно.</li>
+                <li><strong>Застыла масса при отсадке:</strong> пульсы по 3–4 секунды в микроволновке, и можно продолжать.</li>
+                <li><strong>Любые ягоды, кроме ананаса и киви:</strong> смородина, клубника, черника — всё подойдёт для соуса.</li>
+                <li><strong>Остатки не выбрасывают:</strong> соус хранится в морозилке до двух месяцев, глазурь — в стаканчике, с подогревом по мере надобности.</li>
+                <li><strong>Тёплый шоколад в массу:</strong> только так желатин не встанет раньше времени.</li>
+                <li><strong>Палочка на две трети:</strong> иначе пирожное не будет держаться на палочке.</li>
+                <li><strong>Диоксид титана:</strong> делает цвет глазури чище, особенно на белом шоколаде.</li>
+                <li><strong>Чёрная глазурь многофункциональна:</strong> в неё окунают и кейк-попсы, и эскимо, ею заливают муссовые торты — она ведёт себя как обычная зеркальная.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Начинка без желатина:</strong> после морозилки она разжижается и портит вкус эскимо.</li>
+                <li><strong>Желатин взбивали ложкой до пены:</strong> в массе остаются пузыри, а на дне — сухие крупинки.</li>
+                <li><strong>Желатин не разошёлся в сливках:</strong> остались крупинки — прогрейте массу ещё раз в микроволновке.</li>
+                <li><strong>Холодный шоколад в сырной массе:</strong> желатин схватывается комками.</li>
+                <li><strong>Крупная крошка орео:</strong> забивает мешок и рвёт его при отсадке.</li>
+                <li><strong>Палочка не на две трети:</strong> пирожное съезжает с палочки.</li>
+                <li><strong>Извлекали недомороженное:</strong> эскимо ломается; ждите минимум 4 часа.</li>
+                <li><strong>Водорастворимый краситель в шоколадную глазурь:</strong> масса расслаивается и не окрашивается.</li>
+                <li><strong>Не пробили глазурь блендером:</strong> остаются не растворившиеся крупинки красителя.</li>
+                <li><strong>Слишком холодная глазурь:</strong> при 30 °C она густеет и ложится толстым слоем — подогрейте.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> вебинар Надежды Зубовой «Чизкейки-эскимо» (Тортомафия, месяц 2) — расшифровка четырёх уроков (Урок 1: сырная масса и черничный соус, Урок 2: цветная глазурь и глазировка, Урок 3: готовые эскимо, Урок 4: чёрная зеркальная глазурь) и две технологические карты с точными граммовками — «Чизкейки Эскимо» и «Глазурь для чизкейков».</li>
+              <li><strong>Расхождения — шоколад в сырной массе:</strong> в карте 40 г тёмного шоколада, на видео автор называет молочный и топит молочный. На странице оставлены оба варианта с пометкой в ингредиентах.</li>
+              <li><strong>Расхождения — ввод желатина:</strong> карта предлагает растопить желатин отдельно и влить в сырную массу; на видео желатин растворяют в горячих сливках и вводят вместе с ними. На странице основной вариант — как на видео, карточный указан в шаге 5.</li>
+              <li><strong>Расхождения — температура продуктов:</strong> карта требует комнатной температуры для сыра, сгущёнки и сливок; на видео автор берёт сыр прямо из холодильника.</li>
+              <li><strong>Расхождения — набухание желатина:</strong> в карте 10 минут, на видео 5–10 минут.</li>
+              <li><strong>Расхождения — чёрная глазурь:</strong> в карте массу проваривают 3 минуты, на видео автор доводит до кипения и выключает, не кипятя.</li>
+              <li><strong>Расхождения — орео:</strong> в карте 2–3 печенья, на видео автору хватило одной на всю форму.</li>
+              <li><strong>Расхождения — название начинки:</strong> карта называет её «черничный соус», на видео — «конфи»; количество и технология совпадают.</li>
+              <li><strong>Пробелы:</strong> точные граммовки красителей не приводятся — цвет доводят на глаз, до нужного оттенка.</li>
+              <li><strong>Пробелы:</strong> общее и активное время приготовления автор не называет — время на странице оценено по видео и указано ориентировочно.</li>
+              <li><strong>Пробелы:</strong> ошибки распознавания в расшифровке («эскимол», «калитки не растворились») прочитаны по смыслу и в рецепт не перенесены.</li>
+              <li><strong>Фото:</strong> отдельного снимка в папке нет — используется кадр из Урока 2 (05:25) с готовыми эскимо и кейк-попсами.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

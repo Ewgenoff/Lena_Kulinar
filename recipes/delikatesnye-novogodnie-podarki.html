@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Деликатесные новогодние подарки — паштет, масло, бисквит, брауни, колбаски и карамель | CookBook</title>
+  <meta name="description" content="Набор из шести новогодних заготовок по вебинару Надежды Зубовой: паштет из печени индейки под масляной заливкой, три вида деликатесного масла, бисквит с малиной и миндалём, брауни с глазурью гурмэ, колбаски «несалями» и «немортаделла» на сабле и солёная карамель с малиной в баночках. Граммовки, температуры, сроки хранения и упаковка подарка.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body data-recipe-id="delikatesnye-novogodnie-podarki">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Конфеты и сладости</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Деликатесные новогодние подарки</h1>
+      <p class="recipe-lead">
+        Шесть заготовок, из которых собирается один подарочный набор: паштет из печени индейки под заливкой из масла с розмарином, три вида деликатесного масла из одной пачки, миндально-малиновый бисквит длительного хранения, брауни с глазурью гурмэ, две «колбаски» на песочном сабле — «несалями» и «немортаделла» — и солёная карамель с малиной в баночках. Половина работы здесь держится на двух приёмах: паштет пробивают, пока печень ещё горячая, а карамель не трогают до появления цвета.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">40 мин (отвесы)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">3 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">12–24 часа</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">1,5–2 суток</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 набор: паштет ≈550 г, масло ≈450 г, бисквит 20×30, брауни 20×25, 4 колбаски ≈400 г, 2 банки карамели по 250 г</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/delikatesnye-novogodnie-podarki.jpg" alt="Нарезанные кубики брауни с глазурью на тарелке и рядом обёрнутые в упаковочную бумагу колбаски «несалями» и «немортаделла» на столе" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 набор)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (наборов)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Один набор — это по одной порции каждой из шести заготовок: паштета, трёх видов масла, бисквита, брауни, четырёх колбасок и двух баночек карамели. Рецепты считаются отдельно, но пересчитываются целиком: два набора — это двойные граммовки во всех шести раскладках сразу.
+          </p>
+        </div>
+
+        <!-- Переключатель источников и таймкодов видео -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Основной контент: Ингредиенты + Технология -->
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> набор</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на весь набор: количества сложены по шести заготовкам, чтобы не считать пачку масла шесть раз. Расходники — плёнка, крахмал, бечёвка, баночки и упаковка — идут отдельными строками.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: мясное, масло, яйца -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥩 Мясное, масло, яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Печень индейки</strong>:
+                <span class="shopping-qty" data-base-amount="400" data-unit="г">400 г</span>
+                <span class="shopping-hint">Главный продукт паштета. Чистим от перепонок и плёнок — чем чище, тем нежнее консистенция. Подойдёт и куриная, и гусиная</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="1385" data-unit="г">1385 г</span>
+                <span class="shopping-hint">Почти 1,4 кг на весь набор: 180 г в паштет, 450 г в деликатесные масла, остальное в бисквит, брауни, сабле, колбаски и карамель. Берите 4 пачки по 450 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С0</strong>:
+                <span class="shopping-qty" data-base-amount="14" data-unit="шт." data-piece="true">14 шт.</span>
+                <span class="shopping-hint">Считаем целыми яйцами по весу: бисквит — 8 яиц (150 г желтков и 170 г белков), брауни — 5 (100 г желтков и 160 г белков), сабле — 1 целое. Лишние белки, примерно 100–150 г, останутся — на безе или омлет</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 33%</strong>:
+                <span class="shopping-qty" data-base-amount="350" data-unit="г">350 г</span>
+                <span class="shopping-hint">Только в карамель, и только горячими: холодные начнут плеваться и обожгут</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко сгущённое</strong>:
+                <span class="shopping-qty" data-base-amount="260" data-unit="г">260 г</span>
+                <span class="shopping-hint">По 130 г в каждую колбаску. Натуральное — на банке должно быть написано только «молоко сгущённое с сахаром»; хватит одной банки 380 г</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: шоколад, бакалея, сухофрукты -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Шоколад, бакалея, сухофрукты</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шоколад тёмный 54%</strong>:
+                <span class="shopping-qty" data-base-amount="400" data-unit="г">400 г</span>
+                <span class="shopping-hint">300 г в брауни и 100 г в «несалями». Без наполнителей; из магазинных лучше всего ведёт себя «Россия» 54–55%</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шоколад молочный</strong>:
+                <span class="shopping-qty" data-base-amount="130" data-unit="г">130 г</span>
+                <span class="shopping-hint">70 г в глазурь гурмэ и 60 г в шоколадную карамель</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шоколад белый</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Только в «немортаделлу» — именно он даёт светлую колбаску</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао алкализованное</strong>:
+                <span class="shopping-qty" data-base-amount="20" data-unit="г">20 г</span>
+                <span class="shopping-hint">Тёмное, «плен арома» или Dr. Oetker. С обычным «Золотым ярлыком» берите вдвое больше и не ждите насыщенного цвета</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="570" data-unit="г">570 г</span>
+                <span class="shopping-hint">110 г в бисквит, 160 г в брауни, 300 г в карамель; ещё щепотка на карамелизацию лука</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="235" data-unit="г">235 г</span>
+                <span class="shopping-hint">140 г в бисквит (можно заменить сахаром) и 95 г в сабле</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная</strong>:
+                <span class="shopping-qty" data-base-amount="445" data-unit="г">445 г</span>
+                <span class="shopping-hint">125 г в бисквит, 70 г в брауни, 250 г в сабле. Автор работает на «Макфе»</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Миндальная мука</strong>:
+                <span class="shopping-qty" data-base-amount="170" data-unit="г">170 г</span>
+                <span class="shopping-hint">140 г в бисквит и 30 г в сабле. Можно смолоть миндаль самим — это тот же сухой жир</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Миндаль рубленый или лепестки</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">На верх бисквита; сырой, он дойдёт в духовке</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Грецкие орехи</strong>:
+                <span class="shopping-qty" data-base-amount="310" data-unit="г">310 г</span>
+                <span class="shopping-hint">Обжарить заранее: 150 г в брауни, 30 г в глазурь, 100 г в «несалями» и около 30 г в «немортаделлу» к фисташке</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Фисташка очищенная</strong>:
+                <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                <span class="shopping-hint">В «немортаделлу» — зелёные точки на разрезе. Спокойно заменяется тыквенными семечками</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сухофрукты (чернослив, курага, вяленая вишня)</strong>:
+                <span class="shopping-qty" data-base-amount="160" data-unit="г">160 г</span>
+                <span class="shopping-hint">80 г на «несалями» (чернослив и курага) и 80 г на «немортаделлу» (вишня и курага). Только помыть и обсушить, не замачивать</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Вяленые томаты</strong>:
+                <span class="shopping-qty" data-base-amount="55" data-unit="г">50–60 г</span>
+                <span class="shopping-hint">В томатно-оливковое масло; половина идёт в блендер, половина — кусочками</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Оливки без косточек</strong>:
+                <span class="shopping-qty" data-base-amount="0.5" data-unit="банки">0,5 банки</span>
+                <span class="shopping-hint">Половину — в блендер, половину порезать кусочками</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Малина замороженная</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100–150 г</span>
+                <span class="shopping-hint">На верх бисквита, не размороженная: она должна утонуть и провориться, а не раскиснуть</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре малины</strong>:
+                <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                <span class="shopping-hint">В малиновую карамель; можно протереть замороженную малину и убрать косточки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="г">3 г</span>
+                <span class="shopping-hint">Всего 3 г, но без него взбитая карамель осядет и не переживёт пересылку. Замачивается в 15 г холодной воды</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Крахмал</strong>
+                <span class="shopping-hint">Сколько уйдёт — на обвалку колбасок. Он же впитывает лишнюю влагу и продлевает им жизнь</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Коньяк, ром или бренди</strong>:
+                <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+                <span class="shopping-hint">По 25–30 г в каждую колбаску. Вводится самым последним, чтобы не размокло печенье</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Вино красное сухое</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">В винно-луковое масло: спирт полностью выпаривается, остаётся аромат и сиреневый цвет</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Зелень: укроп, петрушка, кинза</strong>:
+                <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+                <span class="shopping-hint">По 20 г каждого вида в зелёное масло; твёрдые стебли удалить</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Чеснок</strong>: 3 зубчика
+                <span class="shopping-hint">Один — в томатное масло, два — в зелёное</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лук репчатый</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">Большая луковица в паштет, крупная нарезка</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Красный лук</strong>:
+                <span class="shopping-qty" data-base-amount="0.5" data-unit="шт.">0,5 шт.</span>
+                <span class="shopping-hint">В винное масло, порезать как можно мельче; можно взять обычный</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Специи и приправы</strong>
+                <span class="shopping-hint">Соль, смесь перцев, мускатный орех, сухая паприка, сахар для лука — всё по вкусу. Мускатного ореха нужно совсем немного: он раскроется в масле</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — пищевая плёнка, бечёвка (шпагат), 2 баночки по 250 г, пергамент, упаковочная бумага и этикетки
+                <span class="shopping-hint">Плёнка и бечёвка — для колбасок: плёнка держит форму, бумага идёт поверх, бечёвка стягивает и делает «настоящую» обвязку. Баночки — под карамель и паштет, этикетки клеятся прямо на колбаску</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Паштет из печени птицы</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="400" data-unit="г">400 г</span> — Печень птицы (индейки)
+              <span class="ingredient-note">Очистить от перепонок и плёнок. Подойдёт куриная, свиная, говяжья и даже лосиная — количество не меняется</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span> — Лук репчатый, большая луковица
+              <span class="ingredient-note">Режется крупно: всё равно пойдёт в блендер, но обжарить его нужно до готовности</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="140" data-unit="г">140 г</span> — Масло сливочное 82,5%, в паштет
+              <span class="ingredient-note">Размягчённое, не растопленное: просто полежавшее без холодильника</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Масло сливочное, на заливку
+              <span class="ingredient-note">Растопить с веточкой розмарина и залить баночки сверху. В тексте рецептуры стоит 30 г — арифметика даёт 40 г, и в видео автор говорит про 40 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span> — Веточка свежего розмарина
+              <span class="ingredient-note">Идёт в масло для заливки и остаётся в баночке</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Соль, перец, мускатный орех, сахар
+              <span class="ingredient-note">Соль — в самом конце, когда в паштете уже всё сложено. Сахаром посыпают лук в конце обжарки</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Деликатесное масло</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="450" data-unit="г">450 г</span> — Масло сливочное 82,5%
+              <span class="ingredient-note">Ровно пачка: по 150 г на каждый из трёх видов. Нужно состояние «масло-помада» — выложить из холодильника на ночь</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span> — Чеснок, зубчики
+              <span class="ingredient-note">Один зубчик в томатное масло, два — в зелёное</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Укроп
+              <span class="ingredient-note">Твёрдые стебли удалить, они дают грубую текстуру</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Петрушка
+              <span class="ingredient-note">Можно не добавлять, если хочется чистого вкуса укропа и кинзы</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Кинза
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="55" data-unit="г">50–60 г</span> — Вяленые томаты
+              <span class="ingredient-note">Часть пробьётся с маслом, часть пойдёт кусочками — так видны вкрапления</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="0.5" data-unit="банки">0,5 банки</span> — Оливки без косточек
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="0.5" data-unit="шт.">0,5 шт.</span> — Красный лук (или обычный)
+              <span class="ingredient-note">Порезать как можно мельче и карамелизовать — он отдаст маслу цвет и сладость</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Мёд (можно заменить сахаром)
+              <span class="ingredient-note">Функция одна — карамелизация лука, поэтому сахара берут столько же</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Вино красное сухое, насыщенное
+              <span class="ingredient-note">В видео наливают «на глазок» грамм 50. Спирт выпаривается полностью, остаётся аромат</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Соль, перец, сухая паприка
+              <span class="ingredient-note">Зелёное масло автор обычно не солит; томатное и винное — солить обязательно</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Бисквит с малиной и миндалём</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="140" data-unit="г">140 г</span> — Миндальная мука
+              <span class="ingredient-note">Перемолотый миндаль, можно не просеивать</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="140" data-unit="г">140 г</span> — Сахарная пудра
+              <span class="ingredient-note">Можно заменить сахаром: на бане она всё равно растворится</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Желтки
+              <span class="ingredient-note">У автора 8 желтков из яиц С1 — но ориентироваться нужно на вес</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Масло сливочное
+              <span class="ingredient-note">Вводится горячим, растопленным, разлитым по всей поверхности</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="170" data-unit="г">170 г</span> — Белки
+              <span class="ingredient-note">Комнатной температуры. Это единственный разрыхлитель в рецепте</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="110" data-unit="г">110 г</span> — Сахар в меренгу
+              <span class="ingredient-note">Добавляется весь сразу, но только когда белок уже взбит до мелких пузырей</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100–150 г</span> — Малина замороженная
+              <span class="ingredient-note">Не размораживать: ягода должна утонуть в поднимающемся тесте и провориться</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Миндаль рубленый или лепестки
+              <span class="ingredient-note">Сырой: он дойдёт в духовке. Малина хорошо дружит и с фундуком</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Порошок сублимированной малины
+              <span class="ingredient-note">Финальная присыпка после нарезки — единственный декор этого бисквита</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Брауни с глазурью гурмэ</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Шоколад тёмный 54%
+              <span class="ingredient-note">Без наполнителей. Из магазинных отлично работает «Россия» 54–55%</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Масло сливочное
+              <span class="ingredient-note">Растапливается отдельно от шоколада: температуры плавления разные</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Желтки
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сахар в желтки
+              <span class="ingredient-note">Вместе со щепотью соли — она усиливает вкус шоколада</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Белки
+              <span class="ingredient-note">Взбиваются до плотной меренги: другого разрыхления в брауни нет</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар в белки
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Мука пшеничная
+              <span class="ingredient-note">Всего 70 г на 300 г шоколада — это каркас, а не основа</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Грецкие орехи, рубленые и обжаренные
+              <span class="ingredient-note">В тесте они не дойдут, поэтому обжарить заранее: 15 минут при 140 °C с конвекцией</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Молочный шоколад (глазурь)
+              <span class="ingredient-note">Молочный, а не тёмный: иначе брауни получится слишком «брутальным»</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Растительное масло без запаха (глазурь)
+              <span class="ingredient-note">Кукурузное или виноградной косточки. Именно оно даёт глазури пластичность на разрезе</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Орехи рубленые обжаренные (глазурь)
+              <span class="ingredient-note">Мельче, чем в тесте: крупные куски в глазури выглядят неопрятно</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Колбаски несалями и немортаделла (с песочным тестом сабле)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Мука высшего сорта (сабле)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Масло сливочное 82,5%, холодное (сабле)
+              <span class="ingredient-note">Порезать кубиками и держать в холодильнике до последнего момента</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="95" data-unit="г">95 г</span> — Сахарная пудра (сабле)
+              <span class="ingredient-note">В видео автор берёт сахар — на результат это не влияет</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Соль (сабле)
+              <span class="ingredient-note">Обязательна: оттеняет вкус и не даёт печенью казаться приторным</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Миндальная мука (сабле)
+              <span class="ingredient-note">Можно смолоть 30 г обжаренного миндаля или исключить</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span> — Яйцо С0 (сабле)
+              <span class="ingredient-note">Около 60 г, из холодильника. Нужно только связать крошку</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Выпеченное сабле или печенье («несалями»)
+              <span class="ingredient-note">Две трети — мелкая крошка, одна треть — кусочки 5–8 мм. Можно взять «Юбилейное»</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="130" data-unit="г">130 г</span> — Сгущённое молоко («несалями»)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Масло сливочное, размягчённое («несалями»)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Какао («несалями»)
+              <span class="ingredient-note">Алкализованное. «Экстрабрюд» — хватит 15 г, «Золотой ярлык» — можно все 40 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Шоколад тёмный 54% («несалями»)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Чернослив и курага, порезанные («несалями»)
+              <span class="ingredient-note">У автора 60 г чернослива и 20 г кураги. Только помыть и обсушить</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Орехи обжаренные, грецкие («несалями»)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25–30 г</span> — Крепкий алкоголь: коньяк, бренди, ром («несалями»)
+              <span class="ingredient-note">Вводится последним, после шоколада и масла, иначе печенье размокнет</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="270" data-unit="г">270 г</span> — Выпеченное сабле или печенье («немортаделла»)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="130" data-unit="г">130 г</span> — Сгущённое молоко («немортаделла»)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Масло сливочное, размягчённое («немортаделла»)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Шоколад белый («немортаделла»)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Вяленая вишня и курага («немортаделла»)
+              <span class="ingredient-note">Крупные вишни — на 4 части, мелкие — пополам. Вишню можно заменить клюквой</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Орехи обжаренные: фисташка и немного грецкого («немортаделла»)
+              <span class="ingredient-note">Фисташку не рубить — она даёт зелёные точки на разрезе</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25–30 г</span> — Крепкий алкоголь или фруктовая водка («немортаделла»)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Сколько уйдёт — Пищевая плёнка, крахмал, бечёвка
+              <span class="ingredient-note">Крахмал — на обвалку, плёнка и бечёвка — на формовку и «настоящую» обвязку</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Солёная карамель с малиной</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Сахар-песок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Вода
+              <span class="ingredient-note">Мокрый способ: с водой карамель не нужно караулить, как сухую</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="65" data-unit="г">65 г</span> — Масло сливочное, размягчённое
+              <span class="ingredient-note">Вводится первым, сразу после цвета, и только потом сливки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="350" data-unit="г">350 г</span> — Сливки жирные 33%, горячие
+              <span class="ingredient-note">Нагреть почти до кипения, но не кипятить. Холодные дадут сильные брызги и ожог</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Соль
+              <span class="ingredient-note">Без горки на пол-литра карамели; солится вся карамель, и шоколадная, и малиновая</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Шоколад молочный
+              <span class="ingredient-note">На него выливается половина карамели — он растворяется от её температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Пюре малины
+              <span class="ingredient-note">Можно протереть замороженную малину и убрать косточки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Желатин
+              <span class="ingredient-note">Разводится 1 к 5. Держит малиновую карамель в состоянии суфле и не даёт осесть</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Вода для желатина
+              <span class="ingredient-note">Холодная. Замачивать заранее, распускать на водяной бане</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span> — Баночки по 250 г
+              <span class="ingredient-note">Одна под шоколадную карамель, вторая под малиновую</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Паштет из печени птицы</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Печень индейки очистите от перепонок и плёнок — чем чище, тем нежнее будет паштет, потому что дальше всё решает блендер. Нарежьте, посолите и поперчите прямо на доске: соль автор добавляет ещё до сковороды, а окончательно досаливает уже готовую массу.
+                <span class="source-badge">⏱ Урок 1: 36:19–36:49</span>
+                <span class="source-badge">⏱ Урок 1: 41:23–41:54</span>
+              </p>
+              <p>
+                Сковороду разогрейте хорошо, добавьте растительное масло и обжаривайте печень быстро, на 7 из 9. Готовность проверяйте ножом: внутри должен остаться розовый соус, а не красное мясо. Пережаривать нельзя — иначе паштет будет жёстким.
+                <span class="source-badge">⏱ Урок 1: 40:13–41:20</span>
+                <span class="source-badge">⏱ Урок 1: 42:49–43:12</span>
+                <span class="source-badge">⏱ Урок 1: 48:01–48:18</span>
+              </p>
+              <p>
+                Лук порежьте крупно и обжаривайте на среднем огне до готовности, в конце присыпьте сахаром — он даст карамельную нотку. Огонь большой не нужен: пригоревший лук в паштете слышен сразу. Розмарин в лук не идёт, он пойдёт в масло для заливки.
+                <span class="source-badge">⏱ Урок 1: 44:48–45:18</span>
+                <span class="source-badge">⏱ Урок 1: 49:14–49:32</span>
+                <span class="source-badge">⏱ Урок 1: 51:25–51:43</span>
+              </p>
+              <p>
+                Горячие печень и лук переложите в чашу блендера и сразу пробивайте. Это главный секрет: с остывшей печенью хорошей консистенции уже не получить. Если блендер слабый — сначала комбайн, потом блендер.
+                <span class="source-badge">⏱ Урок 1: 53:39–54:03</span>
+                <span class="source-badge">⏱ Урок 1: 57:09–57:16</span>
+              </p>
+              <p>
+                Когда масса станет кремовой и остынет примерно до 40–50 °C, добавьте 140 г размягчённого масла, мускатный орех на кончике ножа и пробейте ещё раз. Мускатного ореха нужно совсем мало: в масле и жире он раскроется позже.
+                <span class="source-badge">⏱ Урок 1: 59:19–01:00:14</span>
+                <span class="source-badge">⏱ Урок 1: 01:01:05–01:01:28</span>
+              </p>
+              <p>
+                Разложите паштет по баночкам (у автора вышло 250 и 300 г), оставшиеся 40 г масла растопите на сковороде с веточкой розмарина и залейте сверху. Веточку оставьте в баночке. Срок годности — 7 дней в холодильнике, если брать паштет чистым прибором; в морозилке — до месяца, но консистенция после разморозки становится крупинчатой.
+                <span class="source-badge">⏱ Урок 1: 01:05:53–01:06:01</span>
+                <span class="source-badge">⏱ Урок 1: 01:08:04–01:08:39</span>
+                <span class="source-badge">⏱ Урок 1: 50:01–51:03</span>
+              </p>
+              <div class="tip-box">
+                <strong>По вкусу:</strong> в паштет можно добавить около 30 г коньяка — с лосиной печенью это сочетание особенно хорошее. И обязательно попробуйте массу на соль до того, как разложить её по банкам.
+                <span class="source-badge">⏱ Урок 1: 01:07:04–01:07:13</span>
+                <span class="source-badge">⏱ Урок 1: 01:09:16–01:09:26</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥩 Печень: <strong>400 г, обжарить быстро</strong></span>
+              <span class="param-pill">🧈 Масло: <strong>140 г внутрь + 40 г на заливку</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>7 дней / 1 месяц в морозилке</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Деликатесное масло: три вида из одной пачки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Масло заранее выложите из холодильника на ночь — оно должно быть в состоянии «масло-помада», тогда с ним просто работать. Всю пачку 450 г делите на три части по 150 г: томатно-оливковую, зелёную и винно-луковую — от мягкого вкуса к самому насыщенному.
+                <span class="source-badge">⏱ Урок 1: 01:11:20–01:11:37</span>
+                <span class="source-badge">⏱ Урок 1: 01:10:14–01:12:41</span>
+              </p>
+              <p>
+                <strong>Томатно-оливковое:</strong> в стакан блендера — 150 г масла, зубчик чеснока, часть оливок и вяленых томатов. Пробить, затем вмешать лопаткой оставшиеся оливки и томаты кусочками и посолить по вкусу.
+                <span class="source-badge">⏱ Урок 1: 01:12:51–01:14:09</span>
+              </p>
+              <p>
+                <strong>Зелёное:</strong> 150 г масла, 2 зубчика чеснока, кинза и укроп (можно петрушку). Твёрдые стебли удалить, пробить до полностью однородной текстуры — кусочки зелени здесь нежелательны. Это масло автор обычно не солит.
+                <span class="source-badge">⏱ Урок 1: 01:18:47–01:20:52</span>
+              </p>
+              <p>
+                <strong>Винно-луковое:</strong> красный лук порезать очень мелко и карамелизовать с чайной ложкой сахара или мёда, влить примерно 50 г красного вина и полностью выпарить жидкость. Лук остудить, чтобы масло не поплыло, соединить с последними 150 г масла, посолить и перемешать лопаткой.
+                <span class="source-badge">⏱ Урок 1: 01:21:03–01:28:31</span>
+              </p>
+              <p>
+                Каждую порцию выложите на пищевую плёнку и заверните цилиндром, придавая форму руками. Из одной порции получается два «подарочных» цилиндра: свернуть, охладить в морозилке и разрезать пополам. Хранится масло 10 дней в холодильнике и 2 месяца в морозилке.
+                <span class="source-badge">⏱ Урок 1: 01:16:27–01:18:43</span>
+              </p>
+              <div class="tip-box">
+                <strong>Куда идёт:</strong> на хлеб и брускетту, на горячий стейк, в отварной картофель, а ещё — смазать курицу или утку в конце выпекания. Аромат при этом остаётся в квартире надолго.
+                <span class="source-badge">⏱ Урок 1: 01:14:44–01:15:16</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Масло: <strong>450 г = 3 × 150 г</strong></span>
+              <span class="param-pill">🧄 Чеснок: <strong>1 + 2 зубчика</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>10 дней / 2 месяца в морозилке</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Бисквит с малиной и миндалём</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Начните с меренги, чтобы не мыть венчики дважды. Белки комнатной температуры взбейте сначала на низкой скорости, потом на максимальной — до мелких пузырей одного размера, когда масса уже держит форму. И только тогда всыпьте весь сахар сразу и взбивайте до плотных пиков: меренга должна блестеть и не течь с перевёрнутого ковша.
+                <span class="source-badge">⏱ Урок 1: 06:18–09:41</span>
+                <span class="source-badge">⏱ Урок 1: 10:54–11:35</span>
+              </p>
+              <p>
+                Миндальную муку и сахарную пудру соедините в чаше и поставьте на кипящую водяную баню — дно не должно касаться воды. Добавьте все желтки и, помешивая на низкой скорости, нагрейте примерно до 60 °C, минуты за три: масса сначала разжижается, потом светлеет и становится пышной, как макаронаж. Выше 60 °C желтки денатурируют, и бисквит выйдет жёстким.
+                <span class="source-badge">⏱ Урок 1: 12:22–13:40</span>
+                <span class="source-badge">⏱ Урок 1: 16:20–18:47</span>
+                <span class="source-badge">⏱ Урок 1: 19:49–20:07</span>
+              </p>
+              <p>
+                Снимите с бани, слегка взбейте и влейте горячее растопленное масло тонкой струёй по всей поверхности, чтобы массу «не шокировало» температурой. Дальше работайте только лопаткой: сначала введите муку, затем треть меренги — она размягчит тесто, — а потом оставшиеся две трети поднимающими движениями снизу вверх.
+                <span class="source-badge">⏱ Урок 1: 24:15–24:43</span>
+                <span class="source-badge">⏱ Урок 1: 25:31–26:47</span>
+                <span class="source-badge">⏱ Урок 1: 27:31–28:36</span>
+              </p>
+              <p>
+                Рамку 20×30 см оберните фольгой, иначе тесто вытечет, и застелите пергаментом. Тесто разровняйте — у автора слой получается около 2,5 см при высоте рамки 5 см. Сверху разложите замороженную малину (она утонет и проворится) и щедро посыпьте рубленым миндалём: это не столько декор, сколько вкус.
+                <span class="source-badge">⏱ Урок 1: 22:41–22:58</span>
+                <span class="source-badge">⏱ Урок 1: 29:30–31:32</span>
+                <span class="source-badge">⏱ Урок 1: 31:48–33:44</span>
+              </p>
+              <p>
+                Выпекайте при 170 °C, режим «вверх-вниз» (можно конвекцию), 35–40 минут. Готовность — сухая зубочистка. Оставьте бисквит остывать в приоткрытой духовке, затем нарежьте и присыпьте пудрой сублимированной малины.
+                <span class="source-badge">⏱ Урок 1: 22:06–22:39</span>
+                <span class="source-badge">⏱ Урок 1: 34:24–34:41</span>
+                <span class="source-badge">⏱ Урок 1: 01:11:02–01:11:22</span>
+              </p>
+              <div class="warning-box">
+                <strong>Ни соды, ни разрыхлителя:</strong> поднимает бисквит только меренга, то есть физическое разрыхление. Заодно прогретые желтки и миндаль, который автор называет «сухим жиром», держат влагу — именно поэтому бисквит относится к изделиям длительного хранения.
+                <span class="source-badge">⏱ Урок 1: 11:44–12:03</span>
+                <span class="source-badge">⏱ Урок 1: 28:22–28:51</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Выпечка: <strong>170 °C, 35–40 мин</strong></span>
+              <span class="param-pill">📐 Рамка: <strong>20×30 см, слой ~2,5 см</strong></span>
+              <span class="param-pill">🥚 Нагрев желтков: <strong>до 60 °C на бане</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Брауни с глазурью гурмэ</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Шоколад и масло растопите отдельно: у них разная температура плавления, вместе они могут пойти хлопьями. Шоколад — пульсами в микроволновке с перемешиванием, масло — тоже пульсами; затем соедините, пока шоколад горячий, и мешайте от центра к краям. Масса должна остаться тёплой.
+                <span class="source-badge">⏱ Урок 2: 29:57–30:12</span>
+                <span class="source-badge">⏱ Урок 2: 36:11–36:16</span>
+                <span class="source-badge">⏱ Урок 2: 38:44–39:20</span>
+              </p>
+              <p>
+                Белки взбейте до мелких пузырей и только потом добавляйте 100 г сахара — в два приёма, до очень плотной меренги с «птичьим клювом», который смотрит вверх. Желтки с 60 г сахара и щепотью соли начинайте мешать сразу, иначе они свернутся комочками; взбивайте до светлой массы, которая увеличится раза в три.
+                <span class="source-badge">⏱ Урок 2: 41:26–45:13</span>
+                <span class="source-badge">⏱ Урок 2: 48:11–48:36</span>
+                <span class="source-badge">⏱ Урок 2: 49:29–51:17</span>
+              </p>
+              <p>
+                В взбитые желтки влейте тёплую шоколадно-масляную массу и перемешайте лопаткой, затем введите 70 г муки. Меренгу добавляйте в два-три приёма, каждый раз поднимающими движениями: лопатка входит ребром в центр, проходит по дну и накрывает массу сверху. В самом конце — обжаренные орехи, и только пару движений.
+                <span class="source-badge">⏱ Урок 2: 52:47–53:32</span>
+                <span class="source-badge">⏱ Урок 2: 54:10–56:26</span>
+                <span class="source-badge">⏱ Урок 2: 56:32–01:00:14</span>
+              </p>
+              <p>
+                Форму 20×25 см (годится и 25×25) застелите бумагой «чашей» с запасом по бортам. Разровняйте тесто, чтобы края не остались пустыми, и выпекайте при 170 °C около 45 минут с конвекцией; без конвекции — тот же режим «вверх-вниз», а в газовой духовке противень ставят максимально высоко и снизу добавляют противень с водой. Готовность — сухие крошки и влажная середина: перепекать нельзя.
+                <span class="source-badge">⏱ Урок 2: 01:00:48–01:04:08</span>
+                <span class="source-badge">⏱ Урок 2: 01:04:46–01:05:13</span>
+                <span class="source-badge">⏱ Урок 3: 18:08–18:55</span>
+              </p>
+              <p>
+                Для глазури гурмэ растопите 70 г молочного шоколада, добавьте 30 г мелко рубленого обжаренного ореха и 10 г растительного масла без запаха — оно даст пластичность, чтобы брауни потом резался, а не ломался. Нанесите на полностью остывший бисквит, разровняйте и уберите в морозилку до схватывания.
+                <span class="source-badge">⏱ Урок 4: 21:15–22:25</span>
+                <span class="source-badge">⏱ Урок 4: 24:36–25:18</span>
+                <span class="source-badge">⏱ Урок 4: 27:49–30:08</span>
+              </p>
+              <p>
+                Режьте на кубики примерно 3×3 см большим ножом, подрезая корочку вверх. Глазурь — не только вкус, но и корочка от высыхания, поэтому брауни долго остаётся свежим; хранить его можно и в холодильнике, и в морозилке под плёнкой.
+                <span class="source-badge">⏱ Урок 5: 21:02–22:16</span>
+                <span class="source-badge">⏱ Урок 5: 21:47–21:55</span>
+                <span class="source-badge">⏱ Урок 2: 39:20–39:34</span>
+              </p>
+              <div class="tip-box">
+                <strong>Бонус:</strong> на этом же тесте получается шоколадный фондан — в керамических креманках, 15–20 минут: снаружи корочка, внутри жидкая середина. Сырое тесто можно заморозить и печь позже.
+                <span class="source-badge">⏱ Урок 2: 29:02–29:25</span>
+                <span class="source-badge">⏱ Урок 2: 39:40–40:00</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Выпечка: <strong>170 °C, ~45 мин</strong></span>
+              <span class="param-pill">📐 Форма: <strong>20×25 см</strong></span>
+              <span class="param-pill">✂ Нарезка: <strong>Кубики 3×3 см</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Сабле и две колбаски: «несалями» и «немортаделла»</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сабле собирается в комбайне: холодное масло кубиками, мука, сахарная пудра, соль и миндальная мука — пульсами до крошки без крупных кусков масла. И только потом добавляется холодное яйцо. Крошка должна получиться 5–8 мм, а тесто — не нагреться выше 25 °C.
+                <span class="source-badge">⏱ Урок 2: 12:11–12:55</span>
+                <span class="source-badge">⏱ Урок 2: 16:44–17:33</span>
+                <span class="source-badge">⏱ Урок 2: 19:38–20:13</span>
+              </p>
+              <p>
+                Раскатайте пласт примерно 5 мм, выпекайте при 170 °C с конвекцией 15 минут (для более румяного — 17–20). Готовность проверяется рукой: впадинки от пальца восстанавливаются. Остудите и разломайте: две трети — в мелкую крошку, одна треть — кусочками 5–8 мм.
+                <span class="source-badge">⏱ Урок 2: 20:25–22:37</span>
+                <span class="source-badge">⏱ Урок 2: 38:02–38:25</span>
+                <span class="source-badge">⏱ Урок 2: 01:11:19–01:11:51</span>
+              </p>
+              <p>
+                <strong>«Несалями»:</strong> 250 г крошки, 120 г размягчённого масла, 130 г сгущёнки, 20 г какао, 100 г растопленного тёмного шоколада, 80 г чернослива с курагой и 100 г орехов. Массу мешайте рукой до объединения, а алкоголь вводите в самом конце — так печенье не размокнет.
+                <span class="source-badge">⏱ Урок 2: 01:15:45–01:19:44</span>
+                <span class="source-badge">⏱ Урок 3: 11:27–12:11</span>
+              </p>
+              <p>
+                <strong>«Немортаделла»:</strong> 270 г крошки, 120 г масла, 130 г сгущёнки, 100 г растопленного белого шоколада, 80 г вяленой вишни с курагой и 100 г орехов (фисташка и немного грецкого). Шоколад здесь единственный тёплый компонент.
+                <span class="source-badge">⏱ Урок 2: 01:22:35–01:23:09</span>
+                <span class="source-badge">⏱ Урок 2: 01:31:36–01:32:17</span>
+              </p>
+              <p>
+                Каждую массу заверните в пищевую плёнку и туго скрутите «конфетой» — этот способ пришёл из Франции: берётесь за хвостики и затягиваете, колбаска уплотняется и становится похожей на настоящую. Длина — 23–25 см, из одного замеса выходит две колбаски, всего четыре.
+                <span class="source-badge">⏱ Урок 3: 05:28–07:06</span>
+                <span class="source-badge">⏱ Урок 3: 10:35–10:48</span>
+                <span class="source-badge">⏱ Урок 5: 10:19–10:37</span>
+              </p>
+              <p>
+                Охлаждённые колбаски обваляйте в крахмале — он даёт тот самый белый налёт и впитывает лишнюю влагу, — затем плотно заверните в плёнку, поверх в упаковочную бумагу и обвяжите шпагатом. Хранятся они 10 дней в холодильнике и месяц в морозилке; из морозилки режутся идеально.
+                <span class="source-badge">⏱ Урок 5: 01:15–08:15</span>
+                <span class="source-badge">⏱ Урок 5: 09:55–10:19</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сабле можно не печь:</strong> автор разрешает заменить его обычным печеньем — «Юбилейным», «Топлёным молоком» и даже «Марией». Но на домашнем сабле вкус другой, и себестоимость при этом почти не меняется.
+                <span class="source-badge">⏱ Урок 2: 11:03–11:28</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сабле: <strong>170 °C, 15 мин</strong></span>
+              <span class="param-pill">🌭 Выход: <strong>4 колбаски ≈400 г</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>10 дней / 1 месяц в морозилке</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Солёная карамель с малиной</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сахар и воду соедините в сотейнике с высокими стенками и поставьте на огонь. Мешать нельзя до появления цвета — иначе пойдут крупные кристаллы. Если очень хочется, покачивайте сотейник. Образующаяся сверху корочка — не беда, это уловка природы.
+                <span class="source-badge">⏱ Урок 3: 15:37–16:05</span>
+                <span class="source-badge">⏱ Урок 3: 20:13–20:44</span>
+                <span class="source-badge">⏱ Урок 3: 23:09–23:35</span>
+              </p>
+              <p>
+                Параллельно нагрейте 350 г сливок почти до кипения, но не кипятите: холодные сливки при вливании дадут сильные брызги, а карамель прилипает к коже. В отдельные миски отрежьте молочный шоколад и отвесьте пюре малины.
+                <span class="source-badge">⏱ Урок 3: 17:15–18:04</span>
+                <span class="source-badge">⏱ Урок 3: 23:48–24:38</span>
+              </p>
+              <p>
+                Дождитесь цвета «ирисок Toffifee» — европейская карамель тёмная, но не коричневая: рано — получится цвет сгущёнки, поздно — «коричневый мишка». Убавьте огонь, введите 65 г масла (теперь мешать можно сколько угодно), затем понемногу горячие сливки.
+                <span class="source-badge">⏱ Урок 3: 26:12–28:07</span>
+                <span class="source-badge">⏱ Урок 3: 26:42–26:54</span>
+              </p>
+              <p>
+                Добавьте чайную ложку соли без горки и уваривайте ещё около 5 минут: готовность — карамель остаётся слоем на лопатке, а не стекает. Разлейте по 250 г в две миски: одну — на пюре малины, вторую — на молочный шоколад, и перемешайте до растворения.
+                <span class="source-badge">⏱ Урок 3: 28:30–29:44</span>
+                <span class="source-badge">⏱ Урок 3: 30:29–30:50</span>
+                <span class="source-badge">⏱ Урок 3: 32:25–34:06</span>
+              </p>
+              <p>
+                Желатин (3 г) замочите в 15 г холодной воды и распустите на тёплой бане, затем вмешайте в малиновую карамель и уберите её в холодильник. Взбивать можно только полностью остывшую: миксером она побелеет и превратится в суфле. Переложите через кондитерский мешок в две баночки по 250 г.
+                <span class="source-badge">⏱ Урок 4: 14:34–16:20</span>
+                <span class="source-badge">⏱ Урок 4: 32:50–34:08</span>
+                <span class="source-badge">⏱ Урок 5: 29:36–30:34</span>
+                <span class="source-badge">⏱ Урок 5: 36:13–39:11</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем желатин:</strong> взбитая карамель без стабилизатора со временем осядет, а с желатином останется суфле надолго — хоть почтой отправляй. Шоколадная карамель и без него схватится за счёт какао-масла, а хранить её можно при комнатной температуре до 5 дней.
+                <span class="source-badge">⏱ Урок 5: 31:04–31:36</span>
+                <span class="source-badge">⏱ Урок 4: 16:37–17:23</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍬 Карамель: <strong>300 г сахара + 350 г сливок</strong></span>
+              <span class="param-pill">🎨 Цвет: <strong>Как у ирисок Toffifee</strong></span>
+              <span class="param-pill">📦 Выход: <strong>2 баночки по 250 г</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Сборка набора, упаковка и сроки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Брауни режут на кубики и перекладывают в коробку на пергамент: бумагу слегка смять, чтобы кубики не бились друг о друга, сверху накрыть листом и закрыть коробку. Подойдёт упаковка для шести капкейков.
+                <span class="source-badge">⏱ Урок 1: 39:38–39:58</span>
+                <span class="source-badge">⏱ Урок 5: 21:02–22:16</span>
+              </p>
+              <p>
+                Колбаски обваливают в крахмале, заворачивают в плёнку (первый оборот — только плёнкой, чтобы бумага не касалась продукта), затем в упаковочную бумагу шириной около 12 см, каждый оборот подтягивая на себя. Концы формируют «конфетой» и обвязывают шпагатом: сначала узелок вокруг узла из плёнки, потом несколько витков вокруг колбаски.
+                <span class="source-badge">⏱ Урок 5: 02:15–08:15</span>
+                <span class="source-badge">⏱ Урок 4: 34:29–35:56</span>
+              </p>
+              <p>
+                В каждую колбаску можно вложить этикетку с названием или поздравлением — распечатанную или написанную от руки. Масло отдают цилиндрами в пергаменте, паштет — баночками с масляной заливкой и розмарином, карамель — двумя банками с бумажкой и ленточкой.
+                <span class="source-badge">⏱ Урок 4: 34:29–34:45</span>
+                <span class="source-badge">⏱ Урок 5: 40:40–40:50</span>
+              </p>
+              <p>
+                Сроки по набору: паштет — 7 дней в холодильнике (до месяца в морозилке), масло — 10 дней в холодильнике и 2 месяца в морозилке, колбаски — 10 дней в холодильнике и месяц в морозилке, шоколадная карамель — до 5 дней при комнатной температуре, малиновая — в холодильнике. Бисквит и брауни относятся к изделиям длительного хранения.
+                <span class="source-badge">⏱ Урок 5: 09:55–10:19</span>
+                <span class="source-badge">⏱ Урок 4: 16:37–17:23</span>
+              </p>
+              <div class="tip-box">
+                <strong>Расчёт на подарки:</strong> из одного набора выходит два цилиндра каждого вида масла, четыре колбаски и две банки карамели — то есть несколько небольших подарков, а паштет удобнее разложить в баночки поменьше.
+                <span class="source-badge">⏱ Урок 1: 01:16:31–01:16:37</span>
+                <span class="source-badge">⏱ Урок 1: 01:08:34–01:08:39</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📦 Упаковка: <strong>Плёнка + бумага + шпагат</strong></span>
+              <span class="param-pill">🏷 Декор: <strong>Этикетки с поздравлением</strong></span>
+              <span class="param-pill">🧊 Логистика: <strong>Колбаски и масло — в холод</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Паштет пробивают горячим:</strong> все манипуляции — с только что обжаренной печенью и горячим луком. Остывшую печень придётся нагревать, она станет жёстче, и кремовой консистенции уже не будет.</li>
+                <li><strong>Печень чистим тщательно:</strong> перепонки и плёнки блендер не берёт, а именно они дают крупинки в готовом паштете.</li>
+                <li><strong>Масло только 82,5%:</strong> и для паштета, и для деликатесных масел, и для сабле. Масло 72,5% и старое масло испортят и вкус, и текстуру.</li>
+                <li><strong>Масло-помада:</strong> деликатесные масла делаются только из масла, выложенного из холодильника на ночь. Из холодного не получится однородной текстуры.</li>
+                <li><strong>Меренга — единственный разрыхлитель:</strong> ни соды, ни разрыхлителя нет ни в бисквите, ни в брауни. Поэтому белки взбиваются до плотных пиков, а вводятся лопаткой.</li>
+                <li><strong>Шоколад и масло — отдельно:</strong> у них разная температура плавления. Соединяют их уже после растапливания, пока шоколад тёплый.</li>
+                <li><strong>Карамель не мешают до цвета:</strong> мокрый способ со 60 г воды даёт запас времени. Мешать можно только после введения масла.</li>
+                <li><strong>Желатин — стабилизатор:</strong> 3 г держат малиновую карамель в состоянии суфле и удерживают влагу пюре, которое иначе пришлось бы уваривать и терять аромат.</li>
+                <li><strong>Крахмал на колбасках:</strong> белый налёт делает их похожими на настоящую салями и впитывает лишнюю влагу.</li>
+                <li><strong>Упаковка как часть рецепта:</strong> плёнка, бумага, шпагат и этикетка превращают «сладость» в подарок, который выглядит дорого.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Обжарить печень и оставить её остывать:</strong> паштет выйдет крупинчатым. Второй раз нагревать бессмысленно.</li>
+                <li><strong>Пережарить печень:</strong> внутри не должно быть красного мяса, но и полностью сухой кусок даст жёсткую массу.</li>
+                <li><strong>Сырой лук в паштете:</strong> резко сокращает срок годности, а вкус становится «непаштетным».</li>
+                <li><strong>Желтки выше 60 °C:</strong> начинается денатурация, они сворачиваются, и бисквит получается жёстким.</li>
+                <li><strong>Масло в бисквит не по всей поверхности:</strong> масса «шок-нётся» от температуры, и эмульсия разойдётся.</li>
+                <li><strong>Венчик вместо лопатки при вводе меренги:</strong> воздух уходит, и поднимать тесто становится нечем.</li>
+                <li><strong>Сахар в белки слишком рано:</strong> он растворяется в жидкости белка и мешает взбиванию; нужны сначала мелкие пузыри одного размера.</li>
+                <li><strong>Тёплое тесто сабле:</strong> от трения в комбайне масло плывёт — если тесто нагрелось выше 25 °C, его нужно охладить, иначе печенье будет плотным.</li>
+                <li><strong>Алкоголь в колбаски в начале:</strong> печенье размокает. Только последним, после шоколада и масла.</li>
+                <li><strong>Мешать карамель до цвета:</strong> образуются крупные кристаллы, и карамель уже не сварится однородно.</li>
+                <li><strong>Холодные сливки:</strong> сильные брызги и ожоги — карамель прилипает к коже и не даёт быстро снять температуру.</li>
+                <li><strong>Взбивать неостывшую карамель:</strong> она не побелеет и не будет держать форму; с желатином это критично.</li>
+                <li><strong>Перепечь брауни:</strong> он должен остаться влажным внутри, крошки при проверке сухие — этого достаточно.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> рецептура «Деликатесные новогодние подарки» (DOCX) с точными граммовками и расшифровка пяти уроков вебинара Надежды Зубовой (файлы Урок_01.mp4 — Урок_05.mp4). Граммовки взяты из DOCX, порядок действий, температуры, признаки готовности и таймкоды — из видео.</li>
+              <li><strong>Порции:</strong> автор не считает набор порциями, поэтому базой калькулятора принят один набор — по одной порции каждой из шести заготовок. Пересчёт масштабирует все шесть раскладок одновременно.</li>
+              <li><strong>Паштет, заливка:</strong> в DOCX «оставшиеся 30 г масла», но 180 − 140 = 40 г, и в видео автор отдельно уточняет, что это не опечатка и речь о 40 г. На странице — 40 г.</li>
+              <li><strong>Вино в масле:</strong> количества в DOCX нет, в видео наливают «на глазок» около 50 г на порцию масла. На странице указано 50 г как ориентир.</li>
+              <li><strong>Крошка для колбасок:</strong> в DOCX 270 г сабле на «немортаделлу», в видео на неё идёт 280 г. В таблице оставлено значение из рецептуры.</li>
+              <li><strong>Срок колбасок:</strong> в третьем уроке названо 7 дней в холодильнике, в пятом — 10 дней. На странице — 10 дней как более позднее уточнение автора.</li>
+              <li><strong>Бисквит:</strong> в DOCX 35–40 минут, в видео автор ставит таймер на 30 минут и добавляет ещё 5. Итоговый ориентир — 35–40 минут при 170 °C. Рамка у автора 20×28 см, в рецептуре — 20×30 см.</li>
+              <li><strong>Малина в бисквите:</strong> в DOCX 100–150 г, точного веса в видео нет — ягоду раскладывают «хорошо так». В калькуляторе базой взято 100 г.</li>
+              <li><strong>«По вкусу»:</strong> соль, перец, мускатный орех, паприка, сахар для лука и пудра сублимированной малины нигде не взвешиваются — оставлены без количества, чтобы не выдумывать цифры.</li>
+              <li><strong>Выход:</strong> паштет — 550 г (две баночки 250 и 300 г), масло — около 450 г (шесть цилиндров), сабле — 435 г готового печенья вместо расчётных 565 г (уходит влага), колбаски — по 387 и 440 г, карамель — две банки по 250 г плюс немного остатка.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет, только видео. На странице — кадр из Урок_05.mp4 на 00:23:06: нарезанные кубики брауни на тарелке и рядом обёрнутые колбаски. Белые поля записи по краям срезаны, водяной знак канала убран частичной обрезкой низа кадра.</li>
+              <li><strong>Не переносилось:</strong> рекламные блоки вебинара (онлайн-курсы по французским пирогам, скидки, розыгрыши) и расчёты себестоимости подарков — к приготовлению они не относятся.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Торт «Ванильный» с арахисом и кремом из творожного сыра — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Бюджетный ванильный торт Надежды Зубовой на том же бисквите, что «Красный бархат», но с ванилью вместо красителя: коржи 30×40 см по 8–10 минут при 170 °C, универсальный крем из творожного сыра со сливками и прослойка из дроблёного обжаренного арахиса.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tort-vanilnyy">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться к каталогу рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Торт «Ванильный» с арахисом</h1>
+      <p class="recipe-lead">
+        Третий торт той же серии, что «Красный бархат» и шоколадный: один и тот же бисквит на сгущённом молоке и сметане, только вместо красителя — ваниль. Прослойка здесь не ягодная, а из дроблёного обжаренного арахиса, крем — универсальный, из творожного сыра со сливками. Собирается в рамке 20×30 см, замораживается на ночь и декорируется сахарной картинкой.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~40 мин (тесто и крем)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Выпечка 8–10 мин, остывание коржей, ночь в морозилке</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">2 дня</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 торт 20×30 см, 4 слоя бисквита</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-vanilnyy.jpg" alt="Сборка ванильного торта: на крем в рамке 20×30 см посыпают дроблёный обжаренный арахис" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 торт)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">торт</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База калькулятора — один торт 20×30 см: два коржа 30×40 см, разрезанных пополам. Крем — 750 г, по 250 г в три прослойки. Арахис в DOCX не взвешен: в видео на слой уходит порция около 70 г.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> торт</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на коржи, крем, арахисовую прослойку и декор. Рецепт бюджетный: сгущёнка подойдёт любая, сметана — самая простая, глазурь нужна только для изоляции картинки.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное и яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сгущённое молоко</strong>:
+                <span class="shopping-qty" data-base-amount="500" data-unit="г">500 г</span>
+                <span class="shopping-hint">Можно с заменителем молочного жира — для бисквита это не критично</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сметана 15 %</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Заменяет сливочное масло из «Молочной девочки»</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творожный сыр</strong>:
+                <span class="shopping-qty" data-base-amount="450" data-unit="г">450 г</span>
+                <span class="shopping-hint">Холодный; подойдёт Cremette и подобные</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 30 % и выше</strong>:
+                <span class="shopping-qty" data-base-amount="170" data-unit="г">170 г</span>
+                <span class="shopping-hint">Холодные, в крем</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца С1</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span>
+                <span class="shopping-hint">По весу — около 200 г</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥜 Арахис, бакалея, декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Арахис обжаренный</strong>:
+                <span class="shopping-qty" data-base-amount="210" data-unit="г">210 г</span>
+                <span class="shopping-hint">Дроблёный, на три прослойки и верх. В DOCX вес не указан: в видео на слой идёт порция около 70 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="230" data-unit="г">230 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Разрыхлитель</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">Обязателен; добавляется в муку перед замесом</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="130" data-unit="г">130 г</span>
+                <span class="shopping-hint">В крем. Обычный сахар, а не пудра: экономия вдвое</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="0.25" data-unit="ч. л.">0,25 ч. л.</span>
+                <span class="shopping-hint">Щепотка на торт</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ванильный сахар</strong>:
+                <span class="shopping-qty" data-base-amount="0.5" data-unit="пакетика">0,5 пакетика</span>
+                <span class="shopping-hint">Или кристаллический ванилин — по вкусу</span>
+              </div>
+            </li>
+            <li class="shopping-item" style="border-style: dashed;"><div class="shopping-item-content">
+                <strong>Сахарная бумага и белая шоколадная глазурь (опционально)</strong> — по вкусу
+                <span class="shopping-hint">Картинку печатают на сахарной бумаге, глазурь идёт тонким слоем</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — раздвижная рамка 20×30 см, пергамент, линейка и нож-пила
+                <span class="shopping-hint">Рамка может быть самой простой, китайской</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Коржи</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="500" data-unit="г">500 г</span> — Сгущённое молоко
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span> — Яйца С1
+              <span class="ingredient-note">Около 200 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сметана 15 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="230" data-unit="г">230 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="0.25" data-unit="ч. л.">0,25 ч. л.</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Ваниль — по вкусу
+              <span class="ingredient-note">Полпакетика ванильного сахара или кристаллический ванилин</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="450" data-unit="г">450 г</span> — Творожный сыр
+              <span class="ingredient-note">Холодный</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="130" data-unit="г">130 г</span> — Сахар
+              <span class="ingredient-note">Обычный, не пудра</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="170" data-unit="г">170 г</span> — Сливки 30 % и выше
+              <span class="ingredient-note">Холодные</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Прослойка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Арахис обжаренный дроблёный — по вкусу
+              <span class="ingredient-note">В видео — порция около 70 г на слой, вес на весь торт не назван</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Сахарная бумага с картинкой
+              <span class="ingredient-note">Размер подгоняют под торт</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Белая шоколадная глазурь
+              <span class="ingredient-note">Для изоляции картинки, тонким слоем</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Тесто: сгущёнка, яйца и сметана</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Смешайте 500 г сгущённого молока, 4 яйца С1 (около 200 г), 100 г сметаны 15 % и 0,25 ч. л. соли и взбивайте 3 минуты миксером. Масса получится однородной и очень жидкой — так и должно быть.
+                <em style="font-size: 13px; color: var(--text-muted);">Источник: DOCX «Торт_Ванильный»</em>
+              </p>
+              <div class="warning-box">
+                <strong>Жидкую базу в этом уроке не показывают:</strong> ванильный замес делали сразу после красного, поэтому запись Урок_01 начинается уже с муки. Пропорции и порядок — по DOCX, они полностью совпадают с «Красным бархатом».
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Яйца: <strong>4 шт. ≈ 200 г</strong></span>
+              <span class="param-pill">🥛 Сметана: <strong>15 %, самая простая</strong></span>
+              <span class="param-pill">⏱ Взбивание: <strong>3 минуты</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Мука, разрыхлитель и ваниль</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В жидкую базу добавьте 230 г муки по весу и 15 г разрыхлителя. Перемешайте их между собой, чтобы разрыхлитель распределился равномерно, и добавьте полпакетика ванильного сахара — или кристаллический ванилин. Перемешайте венчиком до однородности.
+                <span class="source-badge">⏱ Урок 1: 00:00:01–00:01:19</span>
+              </p>
+              <div class="warning-box">
+                <strong>Красителя здесь нет:</strong> в DOCX осталась строка «добавить краситель» от «Красного бархата». В ванильном торте краситель не нужен — его место занимает ваниль.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌾 Мука: <strong>230 г</strong></span>
+              <span class="param-pill">🌿 Ваниль: <strong>Полпакетика сахара или ванилин</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Раскладка по двум противням</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разделите тесто по весу на два противня 30×40 см, застеленных пергаментом, и распределите палеткой ровно по всей площади. Бумага не должна просвечивать: чем ровнее слой, тем одинаковее по высоте получатся коржи.
+                <span class="source-badge">⏱ Урок 1: 00:01:19–00:02:27</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> из двух коржей 30×40 см после разрезания пополам получаются четыре коржа 20×30 см — ровно на один торт в рамке.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Противень: <strong>30×40 см</strong></span>
+              <span class="param-pill">⚖️ Тесто: <strong>Пополам по весу</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Выпечка 8–10 минут при 170 °C</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте при 170 °C в режиме конвекции 8–10 минут. Готовность проверяют лёгким нажатием пальцев: корж должен восстанавливаться. Следите, чтобы он не зарумянивался.
+                <span class="source-badge">⏱ Урок 1: 00:02:28–00:02:49</span>
+              </p>
+              <div class="warning-box">
+                <strong>Газовая духовка или нет конвекции:</strong> коржи выпекают по очереди, по одному. Тесто спокойно ждёт своей очереди до 60 минут.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>170 °C</strong></span>
+              <span class="param-pill">⏱ Время: <strong>8–10 минут</strong></span>
+              <span class="param-pill">💨 Режим: <strong>Конвекция</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Остывание и хранение коржей</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Коржи должны остыть до комнатной температуры — только после этого торт собирают. Если оставляете их на время, закройте плёнкой, чтобы не засохли.
+                <em style="font-size: 13px; color: var(--text-muted);">Источник: DOCX «Торт_Ванильный»</em>
+              </p>
+              <div class="tip-box">
+                <strong>Один бисквит — три торта:</strong> база у «Красного бархата», шоколадного и ванильного одна. В красный идёт краситель, в шоколадный — какао, в ванильный — ваниль.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Остывание: <strong>До комнатной температуры</strong></span>
+              <span class="param-pill">🎞 Хранение: <strong>Под плёнкой</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Крем из сыра, сахара и сливок</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отвесьте 450 г холодного творожного сыра, 130 г сахара и 170 г холодных сливок 30 % и выше. Перемешайте на маленькой скорости, чтобы сливки не разлетались, затем взбивайте на максимальной 2–3 минуты до густого крема.
+                <span class="source-badge">⏱ Урок 2: 00:01:49–00:03:09</span>
+              </p>
+              <div class="warning-box">
+                <strong>Из практики автора:</strong> если сгущёнка плохо расходится в сливках и крем приходится взбивать 5–7 минут, есть риск перебить сливки. Проще сначала пробить сгущёнку миксером отдельно, а потом объединять — тогда процесс занимает меньше минуты.
+                <span class="source-badge">⏱ Урок 3: 00:00:02–00:00:23</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ На торт: <strong>750 г крема</strong></span>
+              <span class="param-pill">🥣 Взбивание: <strong>2–3 минуты на максимуме</strong></span>
+              <span class="param-pill">📦 Срок: <strong>72 часа</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Снять бумагу и разрезать коржи</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Корж нельзя срывать с пергамента: переверните его и аккуратно снимите бумагу — так он останется целым. Затем разрежьте оба коржа 30×40 см пополам, чтобы получились четыре коржа 20×30 см.
+                <span class="source-badge">⏱ Урок 3: 00:00:23–00:01:03</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> резать удобнее сразу два коржа, даже если один ещё на бумаге, — это не мешает.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📐 Коржи: <strong>4 шт. по 20×30 см</strong></span>
+              <span class="param-pill">🔧 Инструмент: <strong>Линейка и нож-пила</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Первый слой: крем и арахис</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Первый корж подровняйте в рамке 20×30 см ограничителем и отвесьте на него крем. Распределите лопаточкой, а затем палеткой — ровным слоем. Сверху посыпьте дроблёным обжаренным арахисом и накройте вторым коржом, обязательно прижав его («массаж»).
+                <span class="source-badge">⏱ Урок 3: 00:01:08–00:02:18</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> этот крем нежнее шоколадного и великолепно подойдёт для «Наполеона». Орехи дают не только вкус, но и структуру — торт получается «аппетитным».
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ Крем в слой: <strong>250 г</strong></span>
+              <span class="param-pill">🥜 Арахис: <strong>≈70 г на слой</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Остальные слои, верх и морозилка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Повторите слои: крем — третий корж — крем с арахисом — четвёртый корж. Остатки крема и орехов распределите по верхнему коржу и посыпьте арахисом. Прижмите торт и отправьте в морозилку на ночь, чтобы он полностью замёрз.
+                <span class="source-badge">⏱ Урок 3: 00:02:21–00:03:16</span>
+              </p>
+              <div class="warning-box">
+                <strong>Крем в каждый слой — по весу:</strong> 250 г, иначе торт перекосится. Верх посыпают орехом до заморозки, чтобы он схватился с кремом.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Прослоек: <strong>3 кремовые + арахис</strong></span>
+              <span class="param-pill">🧊 Морозилка: <strong>Ночь</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Сахарная картинка и глазурь</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Достаньте замороженный торт, отделите от бумаги и переверните ровной стороной вверх. Картинку, напечатанную на сахарной бумаге, изолируйте тонким слоем хорошо разогретой белой шоколадной глазури — уходит её минимум, и это дешевле шоколада. Подложка — обычный пергамент.
+                <span class="source-badge">⏱ Урок 4: 00:00:25–00:04:24</span>
+              </p>
+              <div class="warning-box">
+                <strong>Безопасный срок картинки — 24 часа:</strong> при разморозке торт выделяет влагу, и картинка может пострадать. Выкладывайте её непосредственно перед передачей клиенту.
+                <span class="source-badge">⏱ Урок 4: 00:00:41–00:01:22</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🖼 Картинка: <strong>Сахарная бумага</strong></span>
+              <span class="param-pill">🍫 Изоляция: <strong>Белая глазурь, тонко</strong></span>
+              <span class="param-pill">⏱ Срок: <strong>До 24 часов</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Нарезка: торт, бенто и пирожные</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Из одной заготовки выходят торт, бенто 10×12 см и пирожные 9×3,5 см. Режут подмороженный торт по линейке, с усилием, а после каждого разреза вытирают нож. Бюджетные торты с боков не подрезают — срез и так аккуратный. Порции переносят на пергамент и укладывают в коробку или капсулу.
+                <span class="source-badge">⏱ Урок 4: 00:04:36–00:10:10</span>
+              </p>
+              <div class="tip-box">
+                <strong>Если картинку распечатать негде:</strong> испеките дополнительный бисквит, сделайте из него крошку и обсыпьте края и верх по принципу медовика.
+                <em style="font-size: 13px; color: var(--text-muted);">Источник: DOCX «Торт_Ванильный»</em>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍰 Пирожное: <strong>9×3,5 см</strong></span>
+              <span class="param-pill">🎁 Бенто: <strong>10×12 см</strong></span>
+              <span class="param-pill">🧊 Резать: <strong>Подмороженным</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Сметана вместо масла:</strong> в основе лежит «Молочная девочка», где дорогое сливочное масло заменено бюджетной сметаной 15 %.</li>
+                <li><strong>Одна база — три вкуса:</strong> в красный бархат идёт краситель, в шоколадный какао, в ванильный ваниль.</li>
+                <li><strong>Ваниль на выбор:</strong> полпакетика ванильного сахара или кристаллический ванилин.</li>
+                <li><strong>Ровный слой теста:</strong> чем ровнее распределено тесто, тем одинаковее коржи по высоте.</li>
+                <li><strong>Сахар вместо пудры в креме:</strong> экономия вдвое, крупинок не чувствуется.</li>
+                <li><strong>Сгущёнку пробить отдельно:</strong> так крем взбивается меньше минуты.</li>
+                <li><strong>Арахис в каждый слой:</strong> даёт структуру и «аппетитность», верх тоже посыпается.</li>
+                <li><strong>Картинка — в последний момент:</strong> безопасный срок на торте 24 часа.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Краситель по привычке:</strong> в DOCX он остался от «Красного бархата»; ванильному торту он не нужен.</li>
+                <li><strong>Корж срывают с бумаги:</strong> он ломается; переворачивайте и снимайте бумагу.</li>
+                <li><strong>Неровный слой теста:</strong> коржи разной высоты, торт перекошен.</li>
+                <li><strong>Долгое взбивание крема:</strong> риск перебить сливки, если сгущёнка не расходится.</li>
+                <li><strong>Крем на глаз:</strong> слои разной толщины, торт ведёт.</li>
+                <li><strong>Не прижали корж:</strong> слои не схватятся и торт развалится при нарезке.</li>
+                <li><strong>Картинка положена заранее:</strong> за сутки может пострадать от влаги.</li>
+                <li><strong>Режут размороженный торт:</strong> ровного среза не будет.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Арахис:</strong> можно взять другой обжаренный орех, но именно арахис даёт бюджетный «медовиковый» вкус.</li>
+                <li><strong>Ваниль:</strong> ванильный сахар, ванилин или ванильный экстракт.</li>
+                <li><strong>Крем:</strong> универсальный — в него добавляют варёную сгущёнку, карамель или шоколад.</li>
+                <li><strong>Декор:</strong> сахарная картинка или бисквитная крошка по принципу медовика.</li>
+                <li><strong>Формат:</strong> торт 20×30 см, бенто 10×12 см, пирожные 9×3,5 см.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 (сухие ингредиенты, ваниль, раскладка и выпечка — 00:00:01–00:02:49); Урок_02.mp4 (крем — 00:01:49–00:03:09); Урок_03.mp4 (коржи, сборка с арахисом, морозилка — 00:00:23–00:03:16); Урок_04.mp4 (декор картинкой и нарезка — 00:00:25–00:10:10); DOCX «Торт_Ванильный» — граммовки и режимы.</li>
+              <li><strong>Краситель в DOCX:</strong> в тексте осталась строка «добавить краситель» — копия описания из «Красного бархата». В ванильном торте его заменяет ваниль, что видно в уроке.</li>
+              <li><strong>Жидкая база:</strong> запись Урок_01 начинается с муки, потому что ванильное тесто замешивали сразу после красного. Пропорции жидкой части даны по DOCX.</li>
+              <li><strong>Арахис:</strong> в DOCX прослойка не описана вообще, вес не указан. В видео автор говорит про порцию около 70 г на слой; общий расход на торт не назван, поэтому в раскладке орехи идут «по вкусу», а в калькуляторе — ориентировочно 210 г на три прослойки и верх.</li>
+              <li><strong>Крем и декор:</strong> полностью совпадают с «Красным бархатом» — те же 450/130/170 г и та же порция 250 г в слой.</li>
+              <li><strong>Пробелы:</strong> время остывания коржей и полной заморозки не названо («на ночь»); вес готового торта и пирожных не указан; количество глазури на картинку автор не отвешивает.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_03.mp4 (00:01:58) со сборкой: на крем в рамке 20×30 см посыпают арахис.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

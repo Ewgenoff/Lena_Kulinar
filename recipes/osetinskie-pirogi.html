@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Осетинские пироги и хачапури — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Осетинские пироги Надежды Зубовой на сыворотке: пять начинок по 350 г — капуста, картошка с сыром, мясо, шпинат и вишня, плюс порционные хачапури с сулугуни. Тесто без долгого брожения, формовка в мешочек и растягивание, выпечка при 200 °C.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="osetinskie-pirogi">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Основные блюда</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Осетинские пироги</h1>
+      <p class="recipe-lead">
+        Осетинские пироги на сыворотке — тесто без долгого брожения, эластичное и без лишней кислоты. Пять разных начинок (капуста, картошка с сыром, мясо, шпинат и вишня), каждая по 350 граммов. Кроме пирогов автор показывает и порционные хачапури на том же принципе. Пироги не расстаивают — сразу отправляют в сильно разогретую духовку, а горячим смазывают сливочным маслом.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Опара 10–15 мин, тесто ~1,5 ч, выпечка ~1,5 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~3–4 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">5 пирогов по 700 г (Ø30 см) + 10 порционных хачапури</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/osetinskie-pirogi.jpg" alt="Гора осетинских пирогов разного разреза: бордовая вишневая, белая сырная со шпинатом, мясная и светлая картофельная начинки, сложенных стопкой на подносе" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 замес)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">замес (5 пирогов)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База калькулятора — один замес теста на 5 осетинских пирогов + тесто на 10 хачапури. Тесто для пирогов и для хачапури замешиваются отдельно: у пирогов своя рецептура на сыворотке, у хачапури — сдобное на молоке. Хачапури порционные, по 110 г теста и ~105 г начинки. Граммовки начинок масштабируются вместе со всем рецептом.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> замес</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на один замес: тесто на 5 пирогов и 10 хачапури плюс начинки. Молочное, мясо и яйца — в первой колонке, овощи, сыры и бакалея — во второй. Начинки для пирогов и хачапури перечислены по факту.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, мясо, яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сыворотка</strong>:
+                <span class="shopping-qty" data-base-amount="650" data-unit="г">650 г</span>
+                <span class="shopping-hint">Для теста пирогов. Останется после приготовления творога или продаётся в магазине; можно заменить кефир+вода 1:1</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Для теста хачапури</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сметана 15%</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">50 г в тесто пирогов (2 ст. л.), 50 г в тесто хачапури — в хачапури сметана обязательна</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло</strong>:
+                <span class="shopping-qty" data-base-amount="230" data-unit="г">230 г</span>
+                <span class="shopping-hint">100 г в тесто хачапури, 30 г в капустную начинку, 30 г в начинку хачапури, остальное на смазывание готовых пирогов</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мясо говядина (или баранина)</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">Отваренное и измельчённое или фарш. Аутентичные пироги делают с бараниной</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лук репчатый</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">1 маленькая луковица (~50 г) в капусту и 50 г в мясо; для мяса обжаривается</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span>
+                <span class="shopping-hint">2 желтка в тесто хачапури + 2 желтка в начинку на 2 хачапури. Много белков останется</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца перепелиные</strong> (для подачи)
+                <span class="shopping-hint">Вместо куриных в готовое хачапури — у перепелиных нет сальмонеллёза. Опционально</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥕 Овощи, сыры, бакалея</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="1630" data-unit="г">1630 г</span>
+                <span class="shopping-hint">400 г + 580 г в пироги (часть на подпил), 550 г + 70 г в хачапури. Запас нужен на раскатку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Дрожжи прессованные</strong>:
+                <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+                <span class="shopping-hint">40 г в опару пирогов, 20 г в хачапури. Можно сухие: в 3 раза меньше по весу, в муку без опары</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="90" data-unit="г">90 г</span>
+                <span class="shopping-hint">60 г в пироги (скрадывает кислинку сыворотки), 30 г в хачапури</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>
+                <span class="shopping-hint">Чайная ложка с горкой в пироги, 5 г в хачапури, начинки солить по вкусу чуть солонее</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло растительное без запаха</strong>:
+                <span class="shopping-qty" data-base-amount="35" data-unit="г">35 г</span>
+                <span class="shopping-hint">В тесто пирогов в самом конце; плюс для жарки капусты</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Капуста белокочанная</strong>:
+                <span class="shopping-qty" data-base-amount="400" data-unit="г">400 г</span>
+                <span class="shopping-hint">Мелким кубиком, обжаривается с луком до лёгкой хрустинки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Картофель</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Отваренный, натёртый на крупной тёрке</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шпинат</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Обдать кипятком или слегка обжарить. Можно замороженный или мангольд</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Вишня замороженная без косточки</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">Для начинки; важно загустить крахмалом, иначе пирог порвётся</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Крахмал картофельный</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="ст. л.">2 ст. л.</span>
+                <span class="shopping-hint">В вишнёвую начинку; кукурузного нужно на треть больше</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сыр сулугуни</strong>:
+                <span class="shopping-qty" data-base-amount="230" data-unit="г">230 г</span>
+                <span class="shopping-hint">30 г в картофельную начинку, 100 г в шпинатную, 100 г в начинку на 2 хачапури (+30 г в капусту по желанию)</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сыр адыгейский</strong>:
+                <span class="shopping-qty" data-base-amount="170" data-unit="г">170 г</span>
+                <span class="shopping-hint">70 г в картофельную, 100 г в шпинатную начинку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сыр «Российский» или типа ламбер</strong>:
+                <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                <span class="shopping-hint">В начинку на 2 хачапури</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Тесто для осетинских пирогов (на 5 шт.)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="650" data-unit="г">650 г</span> — Сыворотка
+              <span class="ingredient-note">Нагреть до ~30 °C</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Дрожжи прессованные
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="400" data-unit="г">400 г</span> — Мука (часть 1, в опару)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сахар
+              <span class="ingredient-note">Можно меньше, сахар скрадывает кислинку сыворотки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сметана 15% (2 ст. л.)
+              <span class="ingredient-note">Можно не добавлять, но с ней вкуснее</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Соль (чайная ложка с горкой)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="580" data-unit="г">580 г</span> — Мука (часть 2, на замес)
+              <span class="ingredient-note">Вводить в два-три приёма, до нужной консистенции. Часть уходит на подпыл</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="35" data-unit="г">35 г</span> — Растительное масло без запаха
+              <span class="ingredient-note">Добавить в самом конце, всё вмешать</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Тесто для хачапури (на 10 шт.)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Молоко
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Дрожжи прессованные
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="550" data-unit="г">550 г</span> — Мука
+              <span class="ingredient-note">Плюс ~70 г на подпыл при формовке</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сметана 15%
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="г">5 г</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сливочное масло размягчённое
+              <span class="ingredient-note">Ввести в 2 приёма после основной муки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span> — Желтки (2 шт.)
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинки для пирогов</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="400" data-unit="г">400 г</span> — Капуста белокочанная
+              <span class="ingredient-note">Мелким кубиком, для начинки «Капуста»</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Сливочное масло (для капусты)
+              <span class="ingredient-note">В конце жарки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Картофель отварной
+              <span class="ingredient-note">Для начинки «Картошка с сыром»</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Адыгейский сыр
+              <span class="ingredient-note">В картофельную начинку</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Сулугуни
+              <span class="ingredient-note">В картофельную начинку; натереть на крупной тёрке</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Мясной фарш обжаренный
+              <span class="ingredient-note">Говядина или баранина, для начинки «Мясо»</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Лук обжаренный (для мяса)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Шпинат
+              <span class="ingredient-note">Для начинки «Шпинат»; +100 г адыгейского и 100 г сулугуни</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Вишня замороженная без косточки
+              <span class="ingredient-note">Для начинки «Вишня»</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сахар (для вишни)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="ст. л.">2 ст. л.</span> — Крахмал картофельный
+              <span class="ingredient-note">Кукурузного нужно на треть больше</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сливочное масло для смазывания готовых пирогов
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка для хачапури (на 2 шт.)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сулугуни
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Сыр «Российский»
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Сливочное масло размягчённое
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span> — Желтки (в начинку)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Чеснок (по желанию)
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Опара для осетинских пирогов</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сыворотку нагрейте до ~30 °C (чуть теплее пальца). Раскрошите 40 г дрожжей, перемешайте рукой или лопаткой. Введите первую часть муки — 400 г, добейтесь консистенции густой сметаны. Густой опара быть не должна.
+                <span class="source-badge">⏱ Серия 1: 00:12–00:20</span>
+              </p>
+              <p>
+                Оставьте при комнатной температуре на 10–15 минут до работы дрожжей. Не закрывайте плотно, тесту нужен воздух. Появятся пузыри — опара готова.
+                <span class="source-badge">⏱ Серия 1: 00:20–00:30</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сыворотка: <strong>~30 °C</strong></span>
+              <span class="param-pill">⏱ Опара: <strong>10–15 минут</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Пузыри, рыхлая масса</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Замес теста пирогов</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В опару добавьте соль, сахар и сметану, перемешайте. Затем введите остальную муку в два-три приёма: сначала 300 г, потом ещё 200–280 г, до консистенции — тесто жиже, чем на русские пироги. Мы не вымешиваем долго, просто соединяем до однородности.
+                <span class="source-badge">⏱ Серия 1: 00:31–00:39</span>
+              </p>
+              <p>
+                В самом конце влейте 35 г растительного масла и всё вмешайте — масло не должно плавать. Присыпьте мукой и соберите тесто в комок. Оно немного липнет к рукам — это норма.
+                <span class="source-badge">⏱ Серия 1: 00:37–00:41</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не перенасытите мукой:</strong> тесто для осетинских пирогов должно хорошо растягиваться. Мучную пыль потом убирают, а избыток муки делает пирог жёстким.
+                <span class="source-badge">⏱ Серия 1: 00:39–00:40</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Замес: <strong>Соединить, не вымешивать долго</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Тесто плотное, но жиже русского дрожжевого</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Опара и тесто для хачапури</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Пока подходит тесто пирогов, сделайте хачапури. Молоко нагрейте до ~30 °C, растворите 20 г дрожжей и половину муки (250 г из 550). Оставьте опару подойти ~15 минут.
+                <span class="source-badge">⏱ Серия 1: 00:20–00:27</span>
+              </p>
+              <p>
+                Добавьте сметану, сахар, соль, 2 желтка и оставшуюся муку. Введите размягчённое сливочное масло 100 г в два приёма после основной муки. Тесто для хачапури заметно круче и плотнее, чем для пирогов.
+                <span class="source-badge">⏱ Серия 1: 00:43–00:53</span>
+              </p>
+              <div class="tip-box">
+                <strong>Хачапури подходят медленнее:</strong> бóльшая сдоба требует более серьёзной работы дрожжей. Их делают последними, чемпион промедления.
+                <span class="source-badge">⏱ Серия 1: 00:47–00:53</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Молоко: <strong>~30 °C</strong></span>
+              <span class="param-pill">🔍 Тесто: <strong>Круче пирогов, слаще</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Начинка с капустой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Капусту нарежьте мелким кубиком 5×5 мм, лук — мелким кубиком. Обжарьте лук и капусту на растительном масле до лёгкой хрустинки, капуста не должна поменять цвет. В конце посолите, поперчите и добавьте 30 г сливочного масла.
+                <span class="source-badge">⏱ DOCX</span>
+              </p>
+              <p>
+                По желанию вмешайте ~30 г сулугуни. Готовая начинка должна весить 350 г — капуста при жарке ужаривается, поэтому отмеряйте уже готовую начинку.
+                <span class="source-badge">⏱ Серия 1: 00:08–00:10</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍳 Жарка: <strong>До лёгкой хрустинки</strong></span>
+              <span class="param-pill">⚖ Готовая начинка: <strong>350 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Начинка с картошкой и сыром</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Картофель отварите в подсоленной воде, остудите и натрите на крупной тёрке. Добавьте 70 г адыгейского сыра и 30 г сулугуни, натёртых на крупной тёрке. Посолите и поперчите — начинка должна быть чуть солонее, чем вы бы ели просто так.
+                <span class="source-badge">⏱ Серия 2: 00:01–00:03</span>
+              </p>
+              <p>
+                Это самый простой пирог для формовки: картофельная начинка эластичная, отлично растягивается.
+                <span class="source-badge">⏱ Серия 2: 00:01–00:03</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥔 Картофель: <strong>Отварной, натёртый</strong></span>
+              <span class="param-pill">⚖ Готовая начинка: <strong>350 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Начинка с мясом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Мясо (говядину или баранину) отварите и измельчите, или обжарьте фарш. Лук мелко порежьте и обжарьте. Соедините, посолите, поперчите.
+                <span class="source-badge">⏱ DOCX</span>
+              </p>
+              <p>
+                Начинка с мясом — одна из самых сложных в формовке: она грубее и хуже растягивается. Формируйте пирог аккуратно, помните о мешочке из теста.
+                <span class="source-badge">⏱ Серия 2: 00:36–00:37</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥩 Мясо: <strong>Говядина или баранина</strong></span>
+              <span class="param-pill">⚖ Готовая начинка: <strong>350 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Начинка со шпинатом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Шпинат 100 г залейте кипятком (ошпарьте) или слегка обжарьте — термическая обработка обязательна, со свежим листом пирог рваться будет. Отожмите и дайте остыть.
+                <span class="source-badge">⏱ Серия 2: 00:55–01:02</span>
+              </p>
+              <p>
+                Соедините шпинат со 100 г адыгейского сыра и 100 г сулугуни (натёртых), посолите и поперчите. Адыгейский не солёный, шпинат не солёный, поэтому соли требуется заметно.
+                <span class="source-badge">⏱ Серия 2: 01:05–01:07</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥬 Шпинат: <strong>Ошпарить или обжарить</strong></span>
+              <span class="param-pill">⚖ Готовая начинка: <strong>350 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Начинка с вишней (густая, на крахмале)</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                300 г замороженной вишни без косточки чуть припустите. Смешайте 50 г сахара с 2 ст. ложками картофельного крахмала, всыпьте в вишню. Уваривайте на среднем огне, помешивая, пока крахмал не заработает: масса из матовой станет прозрачной и густой, как кисель. Остудите полностью.
+                <span class="source-badge">⏱ Серия 1: 00:59–01:09</span>
+              </p>
+              <div class="warning-box">
+                <strong>Крахмала здесь много нарочно:</strong> всю жидкость нужно связать. Если начинка жидкая, она порвёт пирог паром при выпечке. Густой кисель — залог целого пирога.
+                <span class="source-badge">⏱ Серия 1: 01:00–01:00</span>
+              </div>
+              <div class="tip-box">
+                <strong>Не блендируйте:</strong> пусть вишня остаётся ягодками целиком — так вкуснее. Перемолотое пюре можно, если уж хочется, но красивее с ягодами.
+                <span class="source-badge">⏱ Серия 1: 01:09–01:10</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍒 Вишня: <strong>300 г + 50 г сахара + 2 ст. л. крахмала</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Прозрачный густой сироп</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Делим тесто на 5 частей</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Через ~1,5 часа тесто пирогов увеличится в три раза. Присыпьте стол мукой, осадите тесто и разделите на 5 частей по 350 г — столько же весит каждая начинка. Хорошо, когда начинки и теста поровну по весу.
+                <span class="source-badge">⏱ Серия 2: 00:10–00:13</span>
+              </p>
+              <p>
+                Подворачивая края, собирайте каждый кусок в гладкий шар: складочки внутри, снаружи ровная поверхность. Осетинские пироги традиционно пекут не меньше трёх штук.
+                <span class="source-badge">⏱ Серия 2: 00:13–00:15</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Тесто: <strong>5×350 г, начинка 5×350 г</strong></span>
+              <span class="param-pill">🔍 Признак подъёма: <strong>×3 за 1,5 ч</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Формовка: мешочек и растягивание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Каждый шар раскатайте скалкой в лепёшку — глютен будет тянуться обратно, это норма. Переверните складками вверх, выложите 350 г начинки горкой в центр.
+                <span class="source-badge">⏱ Серия 2: 00:16–00:18</span>
+              </p>
+              <p>
+                Соберите края теста в мешочек вокруг начинки, слепите. Приплюсните и растягивайте руками от центра к краям до диаметра ~30 см. Работайте скалкой и руками, тесто натягивается — чем тоньше пирог, тем выше мастерство.
+                <span class="source-badge">⏱ Серия 2: 00:20–00:23</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не рвите тесто скалкой:</strong> не держите за ручки и не тащите вперёд — вы рвёте глютен. Скалкой нужно катать. Разрывы некрасиво смотрятся на пироге.
+                <span class="source-badge">⏱ Серия 2: 00:43–00:44</span>
+              </div>
+              <div class="tip-box">
+                <strong>Эталон — подложка Ø30 см:</strong> пирог растягивайте до ~30 см, этого хватает. «Лучшее — враг хорошего», излишне тонкий пирог легко порвать.
+                <span class="source-badge">⏱ Серия 2: 00:18–00:22</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Диаметр: <strong>~30 см</strong></span>
+              <span class="param-pill">🥣 Формовка: <strong>Мешочек, растягивание от центра</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Тонкое, полупрозрачное тесто</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Дырочка и выпечка пирогов</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Пальцем сделайте в центре дырочку — из неё выходит пар, пирог не лопнет. Сразу, без расстойки, переложите на противень с пергаментом и отправьте в духовку. Осетинские пироги не расстаивают.
+                <span class="source-badge">⏱ Серия 2: 00:22–00:23</span>
+              </p>
+              <p>
+                Выпекайте при 200 °C с конвекцией 15–20 минут. Не смазывайте ничем перед выпечкой. Пирог готов, когда слегка румяный (не зажаристый).
+                <span class="source-badge">⏱ Серия 2: 00:23–00:40</span>
+              </p>
+              <p>
+                Горячим выложите на блюдо и обильно смажьте сливочным маслом — так компенсируете малую сдобу теста.
+                <span class="source-badge">⏱ Серия 2: 00:32–00:33</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>200 °C, конвекция</strong></span>
+              <span class="param-pill">⏱ Время: <strong>15–20 минут</strong></span>
+              <span class="param-pill">🧈 После: <strong>Смазать сливочным маслом</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Хачапури: деление и начинка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Когда тесто хачапури дошло до верха, осадите его, разделите на куски по 110 г (порционные). Сформируйте гладкие шарики.
+                <span class="source-badge">⏱ Серия 2: 01:03–01:05</span>
+              </p>
+              <p>
+                Для начинки на 2 шт. соедините 100 г сулугуни, 70 г сыра «Российский» (можно ламбер), 30 г размягчённого сливочного масла и 2 желтка. Все начинки перемешиваются руками — это аутентичный способ. По желанию — чуть чеснока. Всего начинки выходит ~210 г, по 105 г на хачапури.
+                <span class="source-badge">⏱ Серия 1: 00:43, Серия 2: 01:13–01:17</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Тесто: <strong>10×110 г</strong></span>
+              <span class="param-pill">⚖ Начинка: <strong>2×105 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Формовка хачапури «рулетом»</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Раскатайте лепёшку Ø20 см, переверните. Начинку выложите и распределите, разделив визуально на три части — две по краям, третью на середину. Классическим способом хачапури лепят, закатывая тесто рулетом под углом.
+                <span class="source-badge">⏱ Серия 2: 01:18–01:25</span>
+              </p>
+              <p>
+                Каждый край закручивайте рулетом, подтягивая тесто, чтобы в самых краешках встречался сыр. Обе половины соедините, слепите плотно — тесто упругое, будет тянуть. Сделайте «лодочку».
+                <span class="source-badge">⏱ Серия 2: 01:22–01:28</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Формовка: <strong>Рулетом, сыр в края</strong></span>
+              <span class="param-pill">📏 Диаметр: <strong>~20 см</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Выпечка и подача хачапури</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Смажьте хачапури яйцом (можно перепелиным) и отправьте в разогретую до 200 °C духовку с конвекцией на ~15 минут, до румяности.
+                <span class="source-badge">⏱ Серия 2: 01:32–01:33</span>
+              </p>
+              <p>
+                В центр горячего хачапури положите желток (у автора — перепелиный, для детей — безопасный) и присыпьте зеленью. Едят горячим, прямо ложкой обмакивая кусок теста в желток.
+                <span class="source-badge">⏱ Серия 2: 01:36–01:37, 01:49–01:50</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>200 °C, конвекция</strong></span>
+              <span class="param-pill">⏱ Время: <strong>~15 минут</strong></span>
+              <span class="param-pill">🍳 В центр: <strong>Желток после выпечки</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Сыворотка для эластичности:</strong> тесто на сыворотке не даёт излишней кислоты и отлично тянется — главная задача этого теста.</li>
+                <li><strong>Муку просеивайте:</strong> разбивает комочки и приближает к влажности воздуха — мука «ленится» в тесте меньше.</li>
+                <li><strong>Сыр на крупной тёрке от раскатывания:</strong> натирайте сыры на крупную тёрку и не перемешивайте сорта заранее — каждый идёт в свою начинку.</li>
+                <li><strong>Начинку готовой взвешивайте по 350 г:</strong> капуста при жарке сильно ужаривается, поэтому отмеряйте уже готовую массу.</li>
+                <li><strong>Начинка чуть солонее:</strong> в пироге она будет звучать правильно. Пробуйте и досаливайте.</li>
+                <li><strong>Крахмал в вишню обильный:</strong> именно густой кисель не даёт пирогу порваться, ошибаться в меньшую сторону нельзя.</li>
+                <li><strong>Сливочное масло после выпечки:</strong> тесто малосдобное, масло снаружи добавляет сдобу извне.</li>
+                <li><strong>Заморозка теста:</strong> до 2 месяцев (а при закрытой морозилке дольше). Размораживайте в холодильнике, просто доведите до комнатной температуры — не давайте подойти.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Густая опара:</strong> сыворотки 650 г, муки 400 г, дрожжей 40 г — остальное неверный вес. Опара консистенции густой сметаны.</li>
+                <li><strong>Перенасыт мукой:</strong> тесто станет жёстким, потеряет эластичность. Вводите муку частями, до нужной консистенции.</li>
+                <li><strong>Лишний сахар в пирогах:</strong> можно и без него, но с сахаром нет явной кислинки сыворотки.</li>
+                <li><strong>Свежая зелень без термической обработки:</strong> пирог рвётся. Шпинат обязательно ошпарить или обжарить.</li>
+                <li><strong>Жидкая вишнёвая начинка:</strong> недостаточно крахмала — влага превратится в пар и порвёт тесто. Делайте дырочку пошире.</li>
+                <li><strong>Долгая расстойка форм:</strong> осетинские пироги не расстаивают, их сразу отправляют в горячую духовку, иначе тесто расползётся.</li>
+                <li><strong>Скалка рывками:</strong> тащишь вперёд — рвёшь глютен. Нужно катать.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> двухсерийный вебинар Надежды Зубовой — Урок_01.mp4 (опара и замес обоих тест, вишнёвая начинка), Урок_02.mp4 (остальные начинки, формовка, выпечка пирогов и хачапури); расшифровка с таймкодами; файл «Осетинские пироги.docx» с точными граммовками и списком начинок. В DOCX даны и тесто для пирогов, и тесто для хачапури, и начинки.</li>
+              <li><strong>Порция:</strong> DOCX прямо указывает «перецепт рассчитан на 5 пирогов» и отдельно «тесто для хачапури на 10 штук». База калькулятора — один замес: 5 пирогов + 10 хачапури. Хачапури считаются порционно (по 110 г теста и ~105 г начинки), поэтому на странице они как отдельная строка.</li>
+              <li><strong>Сметана:</strong> в DOCX сметаны в списке теста пирогов нет, но в видео автор явно добавляет 2 ст. ложки (50 г) и повторяет, что она желанна. На странице сметана включена в тесто пирогов с пометкой «можно не добавлять» из видео.</li>
+              <li><strong>Мука в хачапури:</strong> DOCX даёт 550 г + 70 г. В видео автор оставила около 100 г из 550 не добавленными, контролируя консистенцию — на странице указана полная рецептура по DOCX, а в подсказке отмечено, что муку регулируют.</li>
+              <li><strong>Сыр для хачапури:</strong> DOCX даёт начинку «на 2 шт.» из 100 г сулугуни, 70 г «Российского», 30 г масла и 2 желтков. Видео совпадает; чеснок — личная добавка автора. Начинки на 10 хачапури на странице нет — в исходниках дана только на 2 шт.</li>
+              <li><strong>Выпечка хачапури:</strong> точное время в видео не называется, «температура та же, 200 °C, 15 минут и посмотрим». Пироги — 15–20 минут. На странице указаны диапазоны.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице стоит кадр из Урок_02.mp4 — гора разрезанных осетинских пирогов на подносе (кадр 01:35:50). Пользователь сообщил, что фото в любом случае переделает.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

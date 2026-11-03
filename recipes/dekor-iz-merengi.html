@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Декор из меренги — заварная швейцарская меренга и зимние фигурки | CookBook</title>
+  <meta name="description" content="Заварная швейцарская меренга для декора: белок и сахар 1:2, лимонная кислота, водяная баня до устойчивых пиков. Безе сохнет без духовки за сутки. Пошаговая отсадка пуансеттии, шишки, еловых веточек, ёлочек, снеговика и леденцов с номерами насадок.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body data-recipe-id="dekor-iz-merengi">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Декор из меренги: заварная швейцарская меренга и зимние фигурки</h1>
+      <p class="recipe-lead">
+        Белковый крем, из которого отсаживаются пуансеттия, еловая лапка, шишка, ёлочки, снеговик в рожке и леденцы на палочке. Меренга варится на водяной бане: сахара ровно в два раза больше белка, лимонная кислота идёт в сахар, а взбивается всё до пиков, которые смотрят строго вверх и не падают с перевёрнутого ковша. Главный приём автора — этот декор вообще не нужно выпекать: за сутки на воздухе он высыхает сам, поэтому не трескается и не желтеет.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">15 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">1 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">12–24 часа</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~1 сутки</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 замес ≈ 360 г меренги</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/dekor-iz-merengi.jpg" alt="Капкейк, украшенный меренговыми пуансеттией, шишкой, еловой лапкой, ягодками и листьями" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 замес)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (замесов)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Одна порция — это один замес: 120 г белка и 240 г сахара. Все граммовки масштабируются пропорционально: на два замеса берите 240 г белка (около 6 яиц С0) и 480 г сахара.
+          </p>
+        </div>
+
+        <!-- Переключатель источников и таймкодов видео -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Основной контент: Ингредиенты + Технология -->
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> замес</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Продукты и расходники для одного замеса меренги и полного зимнего набора декора. Красители, посыпка и насадки покупаются один раз и служат для многих партий.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: яйца, сахар, бакалея -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥚 Яйца, сахар, бакалея</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С0</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span>
+                <span class="shopping-hint">Нужны только белки — 120 г из трёх яиц С0. Желтки в меренгу не идут, пустите их на другой десерт</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="240" data-unit="г">240 г</span>
+                <span class="shopping-hint">Самый обычный; сахара всегда ровно в два раза больше, чем белка</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимонная кислота</strong>:
+                <span class="shopping-qty" data-base-amount="0.25" data-unit="ч. л.">0,25 ч. л.</span>
+                <span class="shopping-hint">Маленький пакетик. Меньше класть нельзя — меренга не высохнет, больше — станет кислой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Хлебные палочки</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span>
+                <span class="shopping-hint">Основа для леденцов; берите тонкие, без глазури и соли</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Зубочистки</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span>
+                <span class="shopping-hint">Втыкаются в мороженое и леденцы, чтобы декор стоял на торте</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ликёр или ароматизатор</strong> (опционально)
+                <span class="shopping-hint">Столовая ложка Бейлиса, Куантро или Лимончелло на замес — белок отлично держит аромат</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: красители, посыпка, инвентарь -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🎨 Красители, посыпка, инвентарь</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Гель-красители водорастворимые</strong>
+                <span class="shopping-hint">Набор: красный, коричневый, зелёный, мятный, голубой, розовый, жёлтый, чёрный. Автор работает на AmeriColor, подойдут Credo и ColorGel</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кондитерская посыпка</strong>
+                <span class="shopping-hint">Белая и серебряная «снежная», плюс цветная для палочек и снеговика. Продаётся в кондитерских магазинах большими пакетами</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кондитерские насадки</strong>
+                <span class="shopping-hint">Номера для этого набора: 70, 101, 349, 352, 12, 104, 853, 824, 865 и 4. Вместо 104 можно взять 125 — ёлка выйдет крупнее</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кондитерские мешки</strong>:
+                <span class="shopping-qty" data-base-amount="8" data-unit="шт." data-piece="true">8 шт.</span>
+                <span class="shopping-hint">Отдельный мешок под каждый цвет, лучше с переходниками</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пергамент для выпечки</strong>
+                <span class="shopping-hint">На нём сушатся фигурки; для ёлочек на трафарете нужен лист поплотнее</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — ножницы, рюмки или стаканы, контейнер с крышкой
+                <span class="shopping-hint">Ножницы с тонкими кончиками — снимать декор с пергамента, рюмки — сушить леденцы стоймя</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Заварная швейцарская меренга</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Белок яичный
+              <span class="ingredient-note">Это 3 яйца категории С0. Нужно больше меренги — 4 белка, меньше — 2; пропорция важнее объёма</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="240" data-unit="г">240 г</span> — Сахар-песок
+              <span class="ingredient-note">Ровно в два раза больше веса белка — весь расчёт только на весах</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="0.25" data-unit="ч. л.">0,25 ч. л.</span> — Лимонная кислота
+              <span class="ingredient-note">Всыпать в сахар, а не в белок: в белке она свернёт его</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Цвет и отделка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Гель-красители водорастворимые
+              <span class="ingredient-note">Красный, коричневый, зелёный, мятный, голубой, розовый, жёлтый, чёрный. Сухие красители разводите водой, не водкой</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Кондитерская посыпка
+              <span class="ingredient-note">Белая и серебряная «снежная» — на цветы и ёлки, цветная — на снеговика и палочки</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Основа для съедобных фигурок</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span> — Хлебные палочки
+              <span class="ingredient-note">Для леденцов; отломите кончик с расширением, чтобы палочка прошла в насадку</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span> — Зубочистки
+              <span class="ingredient-note">Вставляются в мороженое и леденцы, пока меренга ещё мягкая</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Пропорция и подготовка посуды</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Меренга бывает французская, итальянская, швейцарская и австралийская, и каждая годится для своего. Французская — самая вкусная как самостоятельный десерт и для «Анны Павловой», итальянская — база для кремов, муссов и макарон, а для декора автор берёт швейцарскую: она плотная и лучше держит рельеф.
+                <span class="source-badge">⏱ Серия 1: 06:12–07:15</span>
+              </p>
+              <p>
+                Отвесьте белок и возьмите сахара ровно в два раза больше. У автора 120 г белка (три яйца С0) и 240 г сахара. Всё только на весах: они важнее миксера, планетарного миксера и духовки вместе взятых.
+                <span class="source-badge">⏱ Серия 1: 13:33–17:49</span>
+              </p>
+              <p>
+                Посуда должна быть чистой и обезжиренной — вымытой хотя бы с фейри или в посудомоечной машине, протирать спиртом не нужно. Ковш берите глубокий и вместимый, металлический или из жаропрочного стекла: объём меренги вырастет в несколько раз.
+                <span class="source-badge">⏱ Серия 1: 15:05–15:21</span>
+              </p>
+              <div class="warning-box">
+                <strong>Ни капли желтка:</strong> желток — это жир, он окутывает молекулы белка и не даёт им принимать воздух. Меренга получится нестабильной, поплывёт и плохо высохнет. А вот капля воды на дне ковша не страшна: белок на 98% состоит из воды.
+                <span class="source-badge">⏱ Серия 1: 14:24–16:54</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Пропорция: <strong>белок : сахар = 1 : 2</strong></span>
+              <span class="param-pill">🥚 Белок: <strong>120 г (3 яйца С0)</strong></span>
+              <span class="param-pill">🥣 Посуда: <strong>Глубокий ковш, металл или жаропрочное стекло</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Водяная баня: растворяем сахар</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Поставьте греться водяную баню. В ковш отправьте белок, сахар и лимонную кислоту — кислоту обязательно сначала вмешайте в сахар, иначе в белке она его свернёт. Слегка перемешайте.
+                <span class="source-badge">⏱ Серия 1: 18:06–19:09</span>
+              </p>
+              <p>
+                Взбивайте на маленькой скорости, пока сахар полностью не растворится. Проверка — пальцем по стенке ковша: крупинок быть не должно, только пузырьки воздуха. Оббивайте стенки ковша, иначе на них останется омлет. Не оставляйте ковш на бане с остановленным миксером.
+                <span class="source-badge">⏱ Серия 1: 21:19–23:57</span>
+              </p>
+              <p>
+                Как только сахар растворился, увеличьте скорость до максимума и взбивайте дальше на бане.
+                <span class="source-badge">⏱ Серия 1: 23:57–27:15</span>
+              </p>
+              <div class="tip-box">
+                <strong>Норы и дыры:</strong> когда на поверхности массы начинают появляться крупные «дыры», дело идёт к готовности. Точного времени нет: оно зависит от интенсивности бани и от влажности белка, то есть от категории яиц.
+                <span class="source-badge">⏱ Серия 1: 27:15–28:50</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Нагрев: <strong>Водяная баня</strong></span>
+              <span class="param-pill">🌀 Скорость: <strong>Сначала минимум, потом максимум</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Нет крупинок на стенке</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Взбивание до устойчивых пиков</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Готовность проверяйте по пикам на венчике: сначала они склоняются, и это ещё не то. Нужно, чтобы пики смотрели чётко вверх. Меренга при этом блестящая и гладкая, без крупинок сахара.
+                <span class="source-badge">⏱ Серия 1: 28:50–29:24</span>
+              </p>
+              <p>
+                Финальная проверка — перевернуть ковш: из готовой меренги ничего не выльется. Ориентируйтесь не на минуты, а на пики и на этот перевёрнутый ковш.
+                <span class="source-badge">⏱ Серия 1: 30:33–32:20</span>
+              </p>
+              <div class="warning-box">
+                <strong>Перебитая меренга:</strong> при долгом взбивании уходит лишняя влага — именно поэтому безе потом сохнет без духовки, но время работы сокращается с 40 минут до 10–15. Перевзбитую меренгу видно по крупинке, которая пошла внутри массы.
+                <span class="source-badge">⏱ Серия 1: 34:00–34:38</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Взбивание: <strong>~10 мин на максимуме</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Пики смотрят вверх, ковш не течёт</strong></span>
+              <span class="param-pill">⏳ Работать: <strong>В течение ~40 минут</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Почему такую меренгу не пекут</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Заварную швейцарскую меренгу не нужно выпекать. Так декор не трескается и не меняет цвет — в духовке при высокой температуре он желтеет, а трещины всё равно появляются.
+                <span class="source-badge">⏱ Серия 1: 07:27–07:59</span>
+              </p>
+              <p>
+                Заготовка, которая сутки пролежала просто на открытом воздухе, абсолютно сухая: к рукам не липнет, рельеф чёткий, цвет остаётся нежным. Нужно только подождать.
+                <span class="source-badge">⏱ Серия 1: 08:01–08:54</span>
+              </p>
+              <div class="tip-box">
+                <strong>Безопасность:</strong> меренгу взбивают на нагреве, в сотейнике температура выше 84 °C — при такой температуре белок пастеризуется. Поэтому сырую меренгу из этого рецепта можно есть без опаски, даже если она не побывала в духовке.
+                <span class="source-badge">⏱ Серия 1: 12:45–13:12</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>Выше 84 °C на бане</strong></span>
+              <span class="param-pill">🚫 Духовка: <strong>Не нужна</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Сухая на ощупь заготовка</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Окрашивание и насадки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Красители берите водорастворимые гелевые. Цвет мешайте прямо в мешке: нанесите краситель зубочисткой по стенкам и на саму насадку, а потом заполните мешок меренгой — так получаются переливы, а не плоский цвет. Сухой краситель предварительно разведите водой.
+                <span class="source-badge">⏱ Серия 1: 36:47–46:26</span>
+              </p>
+              <p>
+                Меренгу раскладывайте по мешкам сразу и закрывайте их, чтобы не испарялась влага и крем дольше оставался рабочим. Отрезанные кончики мешков сразу выбрасывайте со стола.
+                <span class="source-badge">⏱ Серия 1: 49:40–52:35</span>
+              </p>
+              <div class="warning-box">
+                <strong>Краситель меняет не только цвет:</strong> розовые и красные красители часто «разжижают» меренгу, и рельеф плывёт. Вкус у них тоже есть, и на меренге он слышен отчётливо. Зелёный и жёлтый у нормальных фирм вкуса не имеют и консистенцию не меняют — с них удобно начинать.
+                <span class="source-badge">⏱ Серия 1: 38:27–42:42</span>
+              </div>
+              <p>
+                Для аромата в готовую меренгу можно добавить столовую ложку ликёра — Бейлиса, Куантро или Лимончелло — либо пищевой ароматизатор: клубнику, вишню, малину, фисташку. Белковый крем очень благодарно всё это принимает.
+                <span class="source-badge">⏱ Серия 1: 53:00–53:29</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🎨 Красители: <strong>Водорастворимые гелевые</strong></span>
+              <span class="param-pill">🥃 Аромат: <strong>1 ст. л. ликёра на замес</strong></span>
+              <span class="param-pill">⏳ Работать: <strong>~40 минут, пока тёплая</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Еловая веточка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Зелёную меренгу отправьте в мешок с насадкой № 349 — это очень маленькая «галочка». Начинайте с верхушки веточки и отсаживайте хвоинки вокруг центральной линии, одну за другой.
+                <span class="source-badge">⏱ Серия 1: 56:20–58:53</span>
+              </p>
+              <p>
+                Насадку сначала прижмите к основанию и не двигайте, потом чуть протяните и отрывайте ровно в момент давления — так у иголочек получается острый кончик. Слишком длинные хвоинки начинают загибаться.
+                <span class="source-badge">⏱ Серия 1: 57:16–57:35</span>
+              </p>
+              <div class="tip-box">
+                <strong>Как снять с пергамента:</strong> не тяните веточку руками, возьмите ножницы, прихватите декор и доведите почти до дна — так хвоя не поломается.
+                <span class="source-badge">⏱ Серия 1: 59:06–59:13</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧰 Насадка: <strong>№ 349 («галочка»)</strong></span>
+              <span class="param-pill">🎨 Цвет: <strong>Зелёный</strong></span>
+              <span class="param-pill">✂ Снятие: <strong>Ножницами, почти до дна</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Пуансеттия</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Красную меренгу отправьте в мешок с насадкой № 70. Наметьте на пергаменте «знак Мерседеса» — три линии из одной точки: это схема, по которой лягут первые лепестки. Насадку держите горизонтально.
+                <span class="source-badge">⏱ Серия 1: 1:03:53–1:04:09</span>
+              </p>
+              <p>
+                Отсаживайте лепесток, давая ему время раскрыться и стать ажурным: давите, держите, потом останавливаете давление и вытаскиваете. Первые три лепестка — между линиями наметки, вторые три — в промежутках, всего шесть. В центр добавьте один-два маленьких лепестка.
+                <span class="source-badge">⏱ Серия 1: 1:04:09–1:05:36</span>
+              </p>
+              <p>
+                Пока меренга липкая, присыпьте цветок посыпкой. Края можно подрисовать: наберите красный краситель на шило или кисточку и пройдите по кончикам лепестков — цветок станет ярче и «живее».
+                <span class="source-badge">⏱ Серия 1: 1:05:39–1:17:40</span>
+              </p>
+              <div class="tip-box">
+                <strong>Лёгкое подрагивание руки</strong> при отсадке даёт лепесткам естественную неровность — так цветок выглядит живым. Это самый простой цветок из набора: он получается даже у тех, у кого раньше не выходило.
+                <span class="source-badge">⏱ Серия 1: 1:05:17–1:07:03</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧰 Насадка: <strong>№ 70</strong></span>
+              <span class="param-pill">🌺 Лепестки: <strong>6 + 1–2 в центре</strong></span>
+              <span class="param-pill">🎨 Цвет: <strong>Насыщенный красный</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Шишка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Коричневую меренгу — в мешок с насадкой № 101. У неё широкая «попа» и узкий носик, работать нужно носиком. Основа шишки — основательный шарик: если «попа» будет маленькой, шишка не удержится на месте.
+                <span class="source-badge">⏱ Серия 1: 1:07:57–1:08:23</span>
+              </p>
+              <p>
+                Сверху сделайте три закрытые чешуйки движением от себя. Дальше в шахматном порядке спускайтесь рядами, каждый следующий — примерно на миллиметр ниже предыдущего, и отсаживайте небольшие арочки. Нахлёстов быть не должно: каждая чешуйка отдельная.
+                <span class="source-badge">⏱ Серия 1: 1:08:29–1:09:48</span>
+              </p>
+              <div class="warning-box">
+                <strong>Прижимайте насадку к поверхности шишки:</strong> тогда чешуйки не раскрываются. Нам нужна плотная закрытая зимняя шишка, а не весенняя, которая раскрывается от жары.
+                <span class="source-badge">⏱ Серия 1: 1:09:31–1:09:52</span>
+              </div>
+              <p>
+                Готовую шишку сажайте на «площадку» — небольшую кляксу меренги в нужном месте композиции — и снимайте с пергамента ножницами.
+                <span class="source-badge">⏱ Серия 1: 1:10:10–1:13:29</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧰 Насадка: <strong>№ 101</strong></span>
+              <span class="param-pill">🎨 Цвет: <strong>Шоколадно-коричневый</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Плотные закрытые чешуйки</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Ягодки и листья</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Белые ягодки отсаживайте насадкой № 12: прижмите, выдавите шарик и смажьте меренгу вниз, чтобы не осталось «пупсика» — следа от насадки. Сверху каждую ягодку дополните чёрной точечкой. Три-четыре ягодки в композиции достаточно.
+                <span class="source-badge">⏱ Серия 1: 1:13:44–1:14:51</span>
+              </p>
+              <p>
+                Листья — насадка № 352, та же «галочка». Зелёный цвет в композиции работает разделителем: им отделяют красный цветок от белых ягод, иначе декор сливается в одно пятно. По краю капкейка добавьте пару листиков «для живости».
+                <span class="source-badge">⏱ Серия 1: 1:15:16–1:16:11</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧰 Насадки: <strong>№ 12 (ягоды), № 352 (листья)</strong></span>
+              <span class="param-pill">🍒 Ягод: <strong>3–4 шт.</strong></span>
+              <span class="param-pill">🎨 Цвет: <strong>Белый + чёрные точки, зелёный</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Леденцы на палочке</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Подберите насадку, в которую палочка входит и выходит свободно, — это открытая звезда № 824 (в закрытую звезду она войдёт, а обратно уже с трудом). Вложите палочку в насадку, отломите у неё кончик с расширением.
+                <span class="source-badge">⏱ Серия 1: 1:18:24–1:20:26</span>
+              </p>
+              <p>
+                Окрасьте мешок изнутри полосой другого цвета, вставьте насадку, введите палочку и, не торопясь, отсаживайте меренгу, поворачивая палочку: чем равномернее вращение, тем ровнее леденец. Пока меренга липкая, присыпьте посыпкой.
+                <span class="source-badge">⏱ Серия 1: 1:19:44–1:22:18</span>
+              </p>
+              <div class="tip-box">
+                <strong>Как сушить:</strong> поставьте леденец палочкой вниз в рюмку — тогда он круглый. Если положить на пергамент, одна сторона будет приплюснутой; впрочем, автор говорит, что и так сойдёт.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧰 Насадка: <strong>№ 824 (открытая звезда)</strong></span>
+              <span class="param-pill">🍭 Основа: <strong>Хлебная палочка</strong></span>
+              <span class="param-pill">🔄 Приём: <strong>Отсаживать с поворотом</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 11 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Ёлочки по трафарету</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Нарисуйте силуэт ёлочки на пергаменте, переверните лист и работайте по просвечивающему контуру. Насадка № 104: «попа» толстая, носик тонкий, носик всегда сверху, «попа» — на плоскости. Есть насадка крупнее, № 125, — ёлка получится больше.
+                <span class="source-badge">⏱ Серия 1: 1:22:20–1:22:56</span>
+              </p>
+              <p>
+                Вводите насадку плотно к поверхности и ведите полоски так, чтобы они соприкасались друг с другом: тогда ёлку можно будет снять с пергамента без потерь. Слишком тонкую ёлку не делайте — её трудно достать, меренги должно быть достаточно.
+                <span class="source-badge">⏱ Серия 1: 1:23:15–1:24:22</span>
+              </p>
+              <p>
+                Сухими ёлочками украшают борта торта: их можно ставить на ганаш, масляный крем или просто на кекс — на всё сухое.
+                <span class="source-badge">⏱ Серия 1: 1:24:22–1:24:43</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧰 Насадка: <strong>№ 104 (или № 125)</strong></span>
+              <span class="param-pill">📄 Основа: <strong>Трафарет на пергаменте</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Полоски соприкасаются</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 12 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Снеговик в мороженом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Голову отсаживайте без насадки, просто отрезанным мешком — так она выходит круглой. Мешок ведите сбоку, чтобы не было видно следа от вытаскивания. Сверху добавьте шапочку, а под голову поставьте рожок мороженого насадкой № 104.
+                <span class="source-badge">⏱ Серия 1: 1:25:45–1:27:15</span>
+              </p>
+              <p>
+                Глазки, морковку-нос и ротик делайте насадкой № 4 или тонко отрезанным мешком. Само мороженое отсаживайте насадкой № 853 от центра, розовым или зелёным — как цветок. Верхушку и «шапку» снеговика посыпьте белой или серебряной посыпкой.
+                <span class="source-badge">⏱ Серия 1: 1:27:50–1:31:12</span>
+              </p>
+              <div class="tip-box">
+                <strong>На палочке:</strong> мороженое довольно крупное, поэтому зубочистку вставьте в центр, пока меренга не застыла, — потом декор простоит на торте.
+                <span class="source-badge">⏱ Серия 1: 1:31:13–1:31:30</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧰 Насадки: <strong>№ 104, № 853, № 4</strong></span>
+              <span class="param-pill">🥕 Детали: <strong>Глаза, нос, рот</strong></span>
+              <span class="param-pill">🦷 Фиксация: <strong>Зубочистка в центр</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 13 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Сушка, хранение и сборка декора</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Оставьте фигурки сохнуть на пергаменте при комнатной температуре — в среднем на сутки. Во влажном помещении, например если рядом сушится бельё, процесс может затянуться до 24 часов и дольше: чем суше воздух, тем быстрее.
+                <span class="source-badge">⏱ Серия 1: 1:35:18–1:35:34</span>
+              </p>
+              <p>
+                Высохшая меренга хранится как безе: в тёмном месте, в пакете, около месяца, а через два месяца с ней тоже ничего не случится. Если декор нужен влажным и мягким — например, на капкейках — держите изделие в холодильнике в закрытой коробке или под плёнкой, так крем останется мягким до 72 часов.
+                <span class="source-badge">⏱ Серия 1: 1:01:17–1:03:14</span>
+              </p>
+              <p>
+                Замораживать лучше не крем, а уже украшенные изделия: разморозьте в холодильнике за час-полтора. После заморозки вкус крема становится похож на пломбир.
+                <span class="source-badge">⏱ Серия 1: 1:03:14–1:03:39</span>
+              </p>
+              <p>
+                Собирайте композицию так: сначала цветок и шишка на «площадках», между ними — ягодки, а зелёные листья разделяют цвета. Палочки и ёлочки ставьте по краю — из них можно устроить на торте целый лес.
+                <span class="source-badge">⏱ Серия 1: 1:06:20–1:07:03</span>
+              </p>
+              <div class="tip-box">
+                <strong>Подача:</strong> сухая меренга не размокает — хлебные палочки внутри леденцов остаются хрустящими. А вот лимонный сок или концентрат вместо лимонной кислоты добавлять не стоит: это лишняя влага, и поведение мелких деталей предсказать уже нельзя.
+                <span class="source-badge">⏱ Серия 1: 1:02:10–1:02:38</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Сушка: <strong>~24 часа на воздухе</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>Тёмное место, пакет, до 1–2 месяцев</strong></span>
+              <span class="param-pill">🧊 Крем: <strong>72 часа в холодильнике</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Весы важнее миксера:</strong> пропорция белка и сахара — единственное, что нельзя определять на глаз, поэтому весь замес строится на весах.</li>
+                <li><strong>Кислота только в сахар:</strong> всыпанная прямо в белок лимонная кислота свернёт его. И уменьшать её количество нельзя — меренга перестанет высыхать.</li>
+                <li><strong>Никакой духовки:</strong> заварная швейцарская меренга сохнет на воздухе, и именно поэтому декор не трескается и не желтеет.</li>
+                <li><strong>Краситель — на стенки мешка:</strong> так цвет выходит с переливами, а не плоским. Зубочистка помогает добрать краситель до самой насадки.</li>
+                <li><strong>Зелёный и жёлтый — безопасные цвета:</strong> они не меняют ни вкус, ни консистенцию, поэтому с них удобно начинать окрашивание.</li>
+                <li><strong>Аромат по желанию:</strong> столовая ложка ликёра или пищевой ароматизатор на замес — белок отлично держит запах.</li>
+                <li><strong>Дольше работать помогает глюкоза:</strong> сироп глюкозы продлевает время отсадки, но требует уже определённого уровня — с ним меренга может выйти пожиже.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Желток попал в белок:</strong> меренга нестабильна, плохо держит форму и не сохнет. Капля воды, наоборот, не мешает.</li>
+                <li><strong>Сахар не растворился до конца:</strong> крупинки останутся в меренге, декор будет шершавым, а при отсадке застрянет в насадке.</li>
+                <li><strong>Ковш снят с бани вместе с остановленным миксером:</strong> белок схватится омлетом; стенки ковша нужно постоянно оббивать.</li>
+                <li><strong>Слишком долгое взбивание:</strong> уходит влага, и работать с меренгой остаётся не 40 минут, а 10–15.</li>
+                <li><strong>Меренга остыла:</strong> сахар начинает кристаллизоваться, пузыри укрупняются, гладкой отсадки уже не будет.</li>
+                <li><strong>Красный или розовый краситель:</strong> часто разжижает меренгу и придаёт горьковатый вкус — вводите его по капле.</li>
+                <li><strong>Фруктоза и другие сахара:</strong> с ними такая плотная, качественная меренга не получится — автор говорит об этом прямо.</li>
+                <li><strong>Тонкая ёлочка:</strong> её невозможно снять с пергамента целой; полоски должны соприкасаться и меренги должно быть достаточно.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источник:</strong> вебинар Надежды Зубовой «Декор из меренги» (файл Урок_01.mp4) и его расшифровка с таймкодами. Точных граммовок в видео немного — пропорция, кислота и список насадок названы голосом, остальное показано руками.</li>
+              <li><strong>Пропорция:</strong> в видео 120 г белка и 240 г сахара, лимонной кислоты — четверть чайной ложки «на такое количество». При масштабировании калькулятор пересчитывает и кислоту.</li>
+              <li><strong>Выход:</strong> автор не взвешивает готовый декор. Указано расчётное значение одного замеса — около 360 г меренги до отсадки (120 г белка + 240 г сахара).</li>
+              <li><strong>Время сушки:</strong> в видео указаны сутки на открытом воздухе и отдельно — что во влажном помещении процесс может идти до 24 часов и дольше. Точный интервал зависит от влажности.</li>
+              <li><strong>Насадки:</strong> номера названы голосом (70, 101, 349, 352, 12, 104, 853, 824, 865, 4) и обещаны фото в группе; на странице перечислены только те, что прозвучали в эфире.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет, только видео. На странице стоит кадр из записи (01:17:48) — украшенный капкейк из этого урока.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

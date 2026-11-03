@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Чизкейк «Малина — молочный улун» с чайным ганашем — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Двухслойный чизкейк Надежды Зубовой: основа из восстановленного сабле с сублимированной малиной, малиновый слой на пюре с крахмалом, слой на сливках, настоянных на молочном улуне, и взбитый чайный ганаш на белом шоколаде.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="chizkeyk-malina-ulun">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться к каталогу рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Чизкейк «Малина — молочный улун» с чайным ганашем</h1>
+      <p class="recipe-lead">
+        Двухслойный чизкейк из вебинара Надежды Зубовой: сливки настаивают на молочном улуне, а потом ароматизируют ими одну часть сырной массы, пока вторая уходит в малину. Малиновое пюре предварительно уваривают с крахмалом, поэтому слои держат границу и красиво смотрятся на разрезе. Сверху — взбитый чайный ганаш на белом шоколаде лепестками и пудра из сублимированной малины с матчей.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~1 ч (тесто, настой на чае, пюре)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~2 ч на два дня</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Стабилизация теста, выпечка 1 ч 40 мин – 1 ч 50 мин, ночь в холодильнике</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">2 дня</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 чизкейк Ø17–18 см, высота 6–7 см</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/chizkeyk-malina-ulun.jpg" alt="Чизкейк «Малина — молочный улун» с белым чайным ганашем, отсаженным лепестками" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 чизкейк)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">чизкейк</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База калькулятора — один чизкейк Ø17–18 см высотой 6–7 см. Тесто сабле дано полным замесом: на чизкейк уходит 310 г выпеченного печенья, остальное тесто можно заморозить и использовать позже.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> чизкейк</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на сабле, основу, две сырные массы и чайный ганаш. Сливки и сахар суммированы по всем компонентам.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧈 Тесто, масло, яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">На полный замес сабле; в чизкейк уходит 310 г выпеченного печенья</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5 %</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Холодное, кубиками; качество сабле зависит именно от масла</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="95" data-unit="г">95 г</span>
+                <span class="shopping-hint">В тесто</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Миндальная мука</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Можно смолоть миндаль в блендере; она даёт тесту удобность и жир</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца С1</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span>
+                <span class="shopping-hint">1 шт. (60 г) в тесто + 3 шт. в сырную массу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="г">3 г</span>
+                <span class="shopping-hint">В тесто: оттеняет сладость</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧀 Сыр, чай, малина, шоколад</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творожный сыр</strong>:
+                <span class="shopping-qty" data-base-amount="500" data-unit="г">500 г</span>
+                <span class="shopping-hint">Типа Philadelphia: Hochland, Violette, Almette сливочный</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 33 %</strong>:
+                <span class="shopping-qty" data-base-amount="480" data-unit="г">480 г</span>
+                <span class="shopping-hint">80–100 г в основу + 170 г на настой с чаем (из них 70 г в массу и 75 г в ганаш) + 30 г в малиновую часть + 180 г холодных в ганаш</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="130" data-unit="г">130 г</span>
+                <span class="shopping-hint">120 г в сырную массу + 10 г в малиновое пюре</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Чай молочный улун</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">Крупнолистовой: россыпь потом трудно вынуть из сливок</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре малины</strong>:
+                <span class="shopping-qty" data-base-amount="120" data-unit="г">120 г</span>
+                <span class="shopping-hint">Без косточек, можно из замороженной малины</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сублимированная малина</strong> — 2 ст. л.
+                <span class="shopping-hint">Гранулами удобнее, чем целыми ягодами; сублимированную вишню автор брать не советует</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Крахмал кукурузный</strong>:
+                <span class="shopping-qty" data-base-amount="9" data-unit="г">9 г</span>
+                <span class="shopping-hint">Смешать с сахаром, чтобы не было комочков</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Белый шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="120" data-unit="г">120 г</span>
+                <span class="shopping-hint">25,9 % какао-продуктов, в видео — Callebaut Вельвет (для ганаша на чае)</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сироп глюкозы</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">В ганаш, вместе с инвертным сахаром</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Инвертный сахар</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">В ганаш; без него структура и срок хранения будут хуже</span>
+              </div>
+            </li>
+            <li class="shopping-item" style="border-style: dashed;"><div class="shopping-item-content">
+                <strong>Матча зелёный чай (опционально)</strong> — 1 ч. л.
+                <span class="shopping-hint">Для цвета и вкуса; бывает и голубая матча</span>
+              </div>
+            </li>
+            <li class="shopping-item" style="border-style: dashed;"><div class="shopping-item-content">
+                <strong>Краситель зелёный водорастворимый (опционально)</strong> — по вкусу
+                <span class="shopping-hint">Если цвета матчи недостаточно</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — кольцо или форма со съёмным дном Ø17–18 см, пергамент, кондитерские мешки, насадка №682, узкий стакан для взбивания ганаша
+                <span class="shopping-hint">Взбивать ганаш нужно в узкой таре, иначе он размазывается по стенкам</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Песочное тесто сабле</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Масло сливочное (холодное)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="95" data-unit="г">95 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Миндальная мука
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Яйца
+              <span class="ingredient-note">Примерно одно яйцо С1</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Основа чизкейка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="310" data-unit="г">310 г</span> — Печенье сабле выпеченное
+              <span class="ingredient-note">Измельчить в крошку в блендере</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              2 ст. л. — Сублимированная малина
+              <span class="ingredient-note">Гранулы или ягоды, структуру слегка сломать</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сливки 33 %
+              <span class="ingredient-note">По рецепту 80–100 г: добавлять по консистенции</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Сырная масса</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="500" data-unit="г">500 г</span> — Творожный сыр
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span> — Яйца С1
+              <span class="ingredient-note">Вводить по одному</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Сливки, ароматизированные чаем
+              <span class="ingredient-note">Холодные; из 170 г настоя</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Сливки обычные 33 %
+              <span class="ingredient-note">В малиновую часть</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Пюре малины
+              <span class="ingredient-note">Уваренное с крахмалом и сахаром, холодное</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="9" data-unit="г">9 г</span> — Крахмал кукурузный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Сахар для пюре
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              1 ч. л. — Матча зелёный чай
+              <span class="ingredient-note">Опционально, для цвета; можно заменить красителем</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Чайные сливки и ганаш</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Чай молочный улун
+              <span class="ingredient-note">На 170 г сливок: нагреть, остудить, процедить</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Белый шоколад 25,9 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="180" data-unit="г">180 г</span> — Сливки 33 % холодные
+              <span class="ingredient-note">Вводятся в эмульсию в конце</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Сироп глюкозы
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Инвертный сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Пудра малины и матча для посыпки
+              <span class="ingredient-note">Из сублимированной малины и матчи; наносить над салфеткой</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Сабле: сухие ингредиенты, масло, яйца</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Засыпьте в процессор 250 г муки, 95 г сахарной пудры, 30 г миндальной муки и 3 г соли, перемешайте. Добавьте 150 г холодного масла и пробейте до мелкой крошки. Затем введите 60 г яйца и перемешивайте быстро, чтобы масло не начало таять.
+                <span class="source-badge">⏱ Урок 1: 00:00:26–00:04:30</span>
+              </p>
+              <div class="warning-box">
+                <strong>Тесто не собирается в шар в процессоре:</strong> оно остаётся крошкой — так и должно быть. Комок формируют руками уже на бумаге.
+                <span class="source-badge">⏱ Урок 1: 00:02:09–00:04:50</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> миндальная мука повышает «удобность» теста: она сухая, но почти на 100 % состоит из жира. Соль нужна, чтобы оттенить сладость хрустящего теста.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>Комбайн или нож и доска</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Мелкая крошка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Раскатка 3 мм, стабилизация и выпечка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Соберите тесто в комок, разделите на две части и раскатайте каждую между двумя листами пергамента до 3 мм. Мукой не припыляйте — её достаточно в рецепте. Отправьте пласты на стабилизацию в холодильник (лучше на ночь, минимум 2 часа) или в морозилку на час.
+                <span class="source-badge">⏱ Урок 1: 00:04:50–00:07:41</span>
+              </p>
+              <p>
+                Выпекайте на противне 20 минут при 170 °C с конвекцией и дайте полностью остыть до комнатной температуры.
+                <span class="source-badge">⏱ Урок 1: 00:07:57–00:08:45</span>
+              </p>
+              <div class="warning-box">
+                <strong>Зачем стабилизация:</strong> если масло не «сцепится» с мукой, при выпечке оно будет отсекаться и вытекать. Тесто в таком виде хранится до 2 недель в холодильнике и до 2 месяцев в морозилке.
+                <span class="source-badge">⏱ Урок 1: 00:07:05–00:07:54</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Толщина: <strong>3 мм</strong></span>
+              <span class="param-pill">🌡 Выпечка: <strong>170 °C, конвекция, 20 минут</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Основа: сабле, сублимированная малина, сливки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Измельчите выпеченное сабле в блендере и отвесьте 310 г. Добавьте 2 столовые ложки сублимированной малины — сначала сломайте структуру ягод или гранул. Влейте 80 г сливок, перемешайте и оцените консистенцию: при необходимости долейте до 100 г.
+                <span class="source-badge">⏱ Урок 2: 00:00:02–00:00:48</span>
+              </p>
+              <p>
+                Сформируйте основу в кольце Ø17–18 см: сначала борта, потом дно. Утрамбуйте и уберите в холодильник или морозилку на стабилизацию.
+                <span class="source-badge">⏱ Урок 2: 00:00:55–00:01:14</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> гранулы подходят лучше целых ягод — целые слишком крупные для основы. Сублимированную вишню в эту основу автор брать не советует.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ Крошка: <strong>310 г</strong></span>
+              <span class="param-pill">🥛 Сливки: <strong>80–100 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Чайные сливки: 15 г улуна на 170 г сливок</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Налейте 170 г сливок в сотейник, добавьте 15 г молочного улуна и доведите до кипения. Снимите с огня и оставьте остывать до комнатной температуры, затем уберите в холодильник — максимальный аромат сливки наберут, если простоят там ночь. Перед использованием процедите через сито.
+                <span class="source-badge">⏱ Урок 3: 00:00:02–00:00:57, 00:02:28–00:02:50</span>
+              </p>
+              <div class="warning-box">
+                <strong>Берите крупнолистовой чай:</strong> из россыпи листья потом очень трудно извлечь. Тем же способом ароматизируют сливки мятой, лимонным тимьяном, листьями смородины.
+                <span class="source-badge">⏱ Урок 3: 00:00:47–00:01:07</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> при нагревании в духовке аромат чая усилится. Часть сливок пойдёт в чизкейк, часть — в ганаш.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Настой: <strong>Ночь в холодильнике</strong></span>
+              <span class="param-pill">🌿 Чай: <strong>15 г на 170 г сливок</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Малиновое пюре с крахмалом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Смешайте 9 г кукурузного крахмала с 10 г сахара. Поставьте 120 г пюре малины нагреваться, введите в тёплое пюре сахар с крахмалом и уваривайте при помешивании до прозрачности и загустения. Снимите с огня и остудите до комнатной температуры.
+                <span class="source-badge">⏱ Урок 3: 00:01:17–00:02:10</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не переварить:</strong> как только пюре стало прозрачным и закипело, уваривать дальше бессмысленно. Остывшее пюре должно быть густым и холодным — тёплое в сырную массу добавлять нельзя.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак: <strong>Прозрачное, густое</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Сотейник, венчик</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Сырная масса без сливок</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Соедините 500 г творожного сыра со 120 г сахара и перемешайте на минимальной скорости миксера — не взбивайте. Затем вводите три яйца С1 строго по одному: каждое следующее только после того, как предыдущее полностью войдёт в массу.
+                <span class="source-badge">⏱ Урок 3: 00:03:04–00:03:26; Урок 4: 00:00:03–00:00:15</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сливки пока не добавляем:</strong> в этом рецепте массу сначала делят на две части, и только потом в каждую идут свои сливки. Это принципиальное отличие от обычного чизкейка.
+                <span class="source-badge">⏱ Урок 3: 00:03:04–00:03:16</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Яйца: <strong>По одному, 3 шт.</strong></span>
+              <span class="param-pill">🥣 Миксер: <strong>Минимальная скорость</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Две части: чайная и малиновая</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разделите массу на две части — побольше и поменьше. В большую введите 70 г холодных чайных сливок и 1 чайную ложку матчи, вмешивая лопаткой поднимающими движениями. В меньшую — малиновое пюре и 30 г обычных сливок.
+                <span class="source-badge">⏱ Урок 4: 00:00:15–00:02:21</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сливки обязательно холодные:</strong> тёплые разжижают массу и разрушают структуру. Если цвета матчи не хватает, добавьте каплю водорастворимого зелёного красителя — слои должны отличаться по цвету.
+                <span class="source-badge">⏱ Урок 4: 00:00:55–00:01:31</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> матча бывает и голубой — её тоже можно использовать. Вмешивать можно и миксером на низкой скорости, и лопаткой: результат одинаковый.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍵 Чайная часть: <strong>Большая, + матча</strong></span>
+              <span class="param-pill">🍓 Малиновая: <strong>Меньшая, + 30 г сливок</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Сборка слоями: малина внизу, чай сверху</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Малиновую массу выложите прямо в основу и разровняйте — это нижний слой. Чайную переложите в кондитерский мешок и отсадите сверху: аккуратно положить её иначе не получится. Форму придерживайте и распределяйте массу по всей поверхности.
+                <span class="source-badge">⏱ Урок 4: 00:02:21–00:03:20</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> если массы слишком жидкие и верхний слой не держится, подморозьте заготовку с первым слоем, а потом выкладывайте второй. Этот чизкейк расходится отлично — подравнивать его почти не придётся.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>Кондитерский мешок</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Ровная граница слоёв</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Выпечка: 160 °C, затем 110–120 °C без конвекции</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте 30 минут при 160 °C, затем снизьте температуру до 110–120 °C и допекайте 70–80 минут. Режим — без конвекции, на водяной бане.
+                <span class="source-badge">⏱ Урок 4: 00:03:21–00:03:25; DOCX: «Чизкейк_Малина-Улун»</span>
+              </p>
+              <div class="warning-box">
+                <strong>Правила те же, что для любого выпечного чизкейка:</strong> первые полчаса при 160 °C, потом температура снижается, и чизкейк доходит до готовности. Готовность определяют по упругой, но подрагивающей середине.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Этап 1: <strong>160 °C — 30 минут</strong></span>
+              <span class="param-pill">🌡 Этап 2: <strong>110–120 °C — 70–80 минут</strong></span>
+              <span class="param-pill">🚫 Конвекция: <strong>Выключена</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Остывание и ночь в холодильнике</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Остудите чизкейк до комнатной температуры и уберите в холодильник на ночь. Срок хранения готового чизкейка — 5 суток в холодильнике.
+                <em style="font-size: 13px; color: var(--text-muted);">Источник: DOCX «Чизкейк_Малина-Улун»</em>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Холодильник: <strong>Ночь</strong></span>
+              <span class="param-pill">📦 Срок: <strong>5 суток</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Чайный ганаш на белом шоколаде</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В чашу блендера отвесьте 15 г сиропа глюкозы, 15 г инвертного сахара и 75 г чайных сливок (если их не хватает — долейте обычных 33 % до нужного веса). Нагрейте в микроволновке, добавьте 120 г белого шоколада и перемешайте, помогая погружным блендером, пока масса не станет гладкой.
+                <span class="source-badge">⏱ Урок 5: 00:00:07–00:02:22</span>
+              </p>
+              <p>
+                Введите 180 г холодных сливок, пробейте блендером, накройте плёнкой в контакт и уберите в холодильник на ночь — минимум на 6 часов.
+                <span class="source-badge">⏱ Урок 5: 00:02:22–00:03:07</span>
+              </p>
+              <div class="warning-box">
+                <strong>Холодные сливки — в конце:</strong> сначала делают эмульсию из горячих ароматизированных сливок и шоколада, и только потом пробивают массу с холодными сливками. Иначе эмульсия расслоится.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Холодильник: <strong>Ночь, минимум 6 часов</strong></span>
+              <span class="param-pill">🍫 Шоколад: <strong>Белый 25,9 %</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Взбивание, лепестки и посыпка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Взбивайте ганаш в узкой таре — например, в стакане блендера — на большой скорости миксера. Следите за моментом, когда масса начнёт визуально уменьшаться в объёме: через пару секунд после этого пойдёт крупка, и исправить уже ничего нельзя.
+                <span class="source-badge">⏱ Урок 6: 00:00:02–00:01:45</span>
+              </p>
+              <p>
+                Переложите ганаш в мешок с насадкой №682: кончик мешка подрезают на верхушке насадки и делают V-образное отверстие, иначе насадка выскочит при отсаживании. Отсадите лепестки по всей поверхности, затем посыпьте пудрой малины и матчей — над салфеткой, а не над тортом.
+                <span class="source-badge">⏱ Урок 6: 00:01:45–00:04:54</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> сначала нанесите немного ганаша на поверхность — остальные лепестки будут лучше прилипать. Ягоды крепят на растопленный шоколад: в общем уроке декора первый слой ягод обязательно ставят к бортику.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Насадка: <strong>№682</strong></span>
+              <span class="param-pill">⚠️ Признак перевзбивания: <strong>Крупинка</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Один вид сабле на все чизкейки:</strong> какао, орехи и кунжут автор добавляет не в тесто, а при восстановлении крошки — так из одного запаса получаются разные вкусы.</li>
+                <li><strong>Запас теста:</strong> сабле хранится раскатанным до 2 недель в холодильнике и до 2 месяцев в морозилке; после застывания на него можно ставить посуду, экономя место.</li>
+                <li><strong>Чай крупнолистовой:</strong> россыпь трудно извлечь из сливок. Вместо улуна подойдут мята, лимонный тимьян, листья смородины.</li>
+                <li><strong>Настой на ночь:</strong> максимальная ароматизация — если сливки с чаем простоят в холодильнике ночь.</li>
+                <li><strong>Слои по цвету:</strong> чайную часть подкрашивают матчей или водорастворимым красителем, малиновая получает цвет от пюре.</li>
+                <li><strong>Порядок сборки:</strong> сначала делят массу без сливок, и только потом вводят разные сливки в разные части.</li>
+                <li><strong>Взбивание ганаша:</strong> только в узкой таре и с постоянным контролем — перевзбитый ганаш не спасти.</li>
+                <li><strong>Пудра над салфеткой:</strong> малину и матчу смешивают над посторонней поверхностью, чтобы не испачкать торт.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Тёплые ароматизированные сливки:</strong> разрушают структуру сырной массы.</li>
+                <li><strong>Тёплое малиновое пюре:</strong> масса расслаивается, слой плывёт.</li>
+                <li><strong>Плохое процеживание чая:</strong> листья остаются в чизкейке.</li>
+                <li><strong>Слишком жидкие массы:</strong> слои смешиваются — нужна подморозка первой части.</li>
+                <li><strong>Верхний слой без мешка:</strong> аккуратно уложить его невозможно.</li>
+                <li><strong>Взбивание ганаша в широкой таре:</strong> он размазывается по стенкам и не взбивается.</li>
+                <li><strong>Перевзбитый ганаш:</strong> идёт крупкой, восстановить нельзя.</li>
+                <li><strong>Срез мешка под насадку:</strong> насадка выскакивает при отсаживании лепестков.</li>
+                <li><strong>Пудра над тортом:</strong> пятна на ганаше, которые уже не убрать.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Основа:</strong> готовое песочное печенье вместо домашнего сабле.</li>
+                <li><strong>Чай:</strong> молочный улун, зелёный чай, мята, лимонный тимьян, листья смородины.</li>
+                <li><strong>Ягода:</strong> пюре малины можно заменить другим ягодным пюре, но сублимированную вишню в основу автор брать не советует.</li>
+                <li><strong>Шоколад:</strong> белый 25,9 % (Вельвет); сливки в эмульсии — 33 %.</li>
+                <li><strong>Цвет:</strong> матча или водорастворимый краситель.</li>
+                <li><strong>Форма:</strong> кольцо или разъёмная форма с дном Ø17–18 см.</li>
+                <li><strong>Декор:</strong> лепестки ганаша, ягоды на шоколаде, пудра малины и матча.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 (сабле — 00:00:02–00:08:45); Урок_02.mp4 (основа с малиной — 00:00:02–00:01:14); Урок_03.mp4 (чайные сливки — 00:00:02–00:00:57, 00:02:28–00:02:50; пюре — 00:01:17–00:02:10; сырная масса — 00:03:04–00:03:26); Урок_04.mp4 (слои — 00:00:15–00:03:20; выпечка — 00:03:21–00:03:25); Урок_05.mp4 (ганаш — 00:00:01–00:03:07); Урок_06.mp4 (взбивание и декор — 00:00:02–00:04:54); Урок_07.mp4 (общий урок декора ягодами — 00:00:31–00:01:17); DOCX «Чизкейк_Малина-Улун» — граммовки и режимы.</li>
+              <li><strong>Количество сливок:</strong> в списке DOCX указано 200 г сливок на чизкейк, а по тексту рецепта используется 70 г ароматизированных + 30 г обычных. На странице в ингредиентах стоят 70 и 30 г, в списке покупок — суммарная потребность с учётом настоя (170 г) и ганаша (180 г).</li>
+              <li><strong>Деление массы:</strong> в DOCX сказано «отделить 300 г» на малиновую часть; в видео — часть с малиной меньше, часть с чаем больше. На странице — по видео.</li>
+              <li><strong>Ганаш:</strong> в DOCX 75 г чайных сливок советуют довести обычными до нужного веса, если своих не хватает; в видео так и делают.</li>
+              <li><strong>Выпечка:</strong> температуры 160 °C и 110–120 °C названы в DOCX; в видео — только «первые полчаса 160, потом снижаем и допекаем до готовности».</li>
+              <li><strong>Сабле:</strong> в DOCX указано «рассчитать граммовки так, чтобы выход теста был 310 г», но сам список продуктов дан на полный замес. На странице — полный замес и 310 г выпеченного печенья на основу.</li>
+              <li><strong>Пробелы:</strong> вес готового чизкейка не назван; время полной стабилизации перед подачей — «ночь»; количество ягод для декора не указано.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице стоит кадр из Урок_06.mp4 (00:02:30) с чизкейком под чайным ганашом, обрезанный по краям.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

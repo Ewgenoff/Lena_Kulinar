@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каравай — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Свадебный двухъярусный каравай Надежды Зубовой: высокосдобное дрожжевое тесто на опаре, формовка «ромашкой» из центральной булочки и 12 шариков, выпечка при 160 °C, декор тестом-«пластилином» и айсингом цвета выпечки через трафарет.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="karavay">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Каравай</h1>
+      <p class="recipe-lead">
+        Праздничный двухъярусный каравай из очень сладкого и воздушного сдобного теста на опаре. Тесто мягкое, долго остаётся свежим — до месяца в холодильнике. Каравай выпекается «ромашкой» из 12 булочек вокруг центральной и оформляется выпеченным декором из теста-«пластилина» и трафаретным рисунком айсингом, подкрашенным в цвет выпечки, так что каравай выглядит будто испечён вместе со всем декором.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~2 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Опapa 35 мин, тесто 3 ч, расстойка форм 2 ч, выпечка ~1 ч, застывание декора</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~10–12 ч (при расстойке 40 °C меньше)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 двухъярусный каравай (нижний Ø22 см 1900 г, верхний Ø16 см 750 г)</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/karavay.jpg" alt="Готовый двухъярусный каравай: румяные ярусы с гроздью винограда, розами, листьями и трафаретным растительным узором из теста" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 каравай)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">каравай</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Одна порция — один двухъярусный каравай: нижний ярус Ø22 см из 1900 г теста и верхний Ø16 см из 750 г, всего 2750 г теста по DOCX. Граммовки теста, айсинга и декора масштабируются пропорционально. Каравай можно сделать и одноярусным, взяв одну порцию формовки.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> каравай</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на один двухъярусный каравай: молочные продукты, яйца и масла в первой колонке, мука, сахар и декор — во второй. Включены тесто для лепки и айсинг для оформления.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масла</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко</strong>:
+                <span class="shopping-qty" data-base-amount="500" data-unit="г">500 г</span>
+                <span class="shopping-hint">Опара: комнатной температуры, можно просто достать из холодильника заранее</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сметана 20–30%</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Жирная, от 20% — в тесто</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Размягчённое для ручного замеса; для миксера можно холодное</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="9" data-unit="шт." data-piece="true">9 шт.</span>
+                <span class="shopping-hint">5 желтков (≈90 г) в тесто, 3 белка (≈90 г) в айсинг, 1 яйцо на смазку. Оставшиеся белки уйдут на смазку или безе</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Мука, сахар, декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с (Макфа)</strong>:
+                <span class="shopping-qty" data-base-amount="1600" data-unit="г">1600 г</span>
+                <span class="shopping-hint">300 г в опару + 1000 г в тесто + 600 г в тесто для лепки. Килограммовый пакет понадобится не один, запас на подпыл</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Дрожжи прессованные</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Свежие, в опару. Проверьте срок годности</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="420" data-unit="г">420 г</span>
+                <span class="shopping-hint">20 г в опару + 400 г в тесто</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ванильный сахар</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">Можно заменить экстрактом ванили, ванильной пастой или ванилином</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="500" data-unit="г">500 г</span>
+                <span class="shopping-hint">В айсинг. Для двухъярусного каравая хватит примерно половины порции</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">В тесто, отвесить вместе с мукой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимонный сок</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="ч. л.">2 ч. л.</span>
+                <span class="shopping-hint">В айсинг для быстрого высыхания, можно заменить лимонной кислотой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Растительное масло</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Для смазывания шариков при формовке и декора</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Красители водорастворимые</strong> — жёлтый и коричневый
+                <span class="shopping-hint">Для подкрашивания айсинга в цвет выпечки. Можно только коричневым или только жёлтым</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Зубочистки и длинные палочки</strong>
+                <span class="shopping-hint">Зубочистки — для крепления декора и трафарета, палочки — для скрепления ярусов</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — пищевая плёнка, фольга, пергамент, формы-кольца
+                <span class="shopping-hint">Плёнка — на тесто, фольга — на декор и валики для выпечки, кольца — нарастить высоту формы каравая</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Опара</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Дрожжи прессованные
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="500" data-unit="г">500 г</span> — Молоко
+              <span class="ingredient-note">Комнатной температуры, 20–21 °C</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Мука пшеничная
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Тесто</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="90" data-unit="г">90 г</span> — Желтки (≈5 шт.)
+              <span class="ingredient-note">Комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="400" data-unit="г">400 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Сахар ванильный
+              <span class="ingredient-note">Если нет — экстракт ванили или ванилин</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сметана 20–30%
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Соль
+              <span class="ingredient-note">Отвесить, добавить к муке</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1000" data-unit="г">1000 г</span> — Мука пшеничная в/с
+              <span class="ingredient-note">Макфа или другая высокобелковая</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сливочное масло 82,5%
+              <span class="ingredient-note">Размягчённое, вводят в 2–3 приёма. Для миксера — холодное</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Растительное масло для смазывания шариков
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Тесто для лепки (декор)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="600" data-unit="г">600 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Вода холодная
+              <span class="ingredient-note">Пропорция примерно 3 : 1 (мука : вода). Количество муки регулируется</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Яйцо, смешанное с водой 1 : 1, для смазки декора
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Айсинг для оформления</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="90" data-unit="г">90 г</span> — Белок яичный (≈3 шт.)
+              <span class="ingredient-note">Можно пастеризованный из бутылки или сухой альбумин</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="500" data-unit="г">500 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="ч. л.">2 ч. л.</span> — Лимонный сок
+              <span class="ingredient-note">Для быстрого высыхания айсинга</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Водорастворимые красители (жёлтый, коричневый)
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Опара: дрожжи, молоко, сахар, мука</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Подогрейте молоко до комнатной температуры 20–21 °C (достаточно просто заранее достать из холодильника). В молоко раскрошите 50 г свежих дрожжей, добавьте 2 столовые ложки сахара и перемешайте до растворения дрожжей и сахара.
+                <span class="source-badge">⏱ Урок 1: 00:18–00:36</span>
+              </p>
+              <p>
+                Просейте в молоко 300 г муки. Тесто должно получиться жидким — не как на блины, а как на оладьи. Перемешайте и оставьте подходить: можно накрыть плёнкой, полотенцем или фольгой, в тёплое место не ставить.
+                <span class="source-badge">⏱ Урок 1: 01:46–02:26</span>
+              </p>
+              <div class="warning-box">
+                <strong>Перемешивайте рукой или лопаткой, не венчиком:</strong> в дрожжевом высокосдобном тесте важно не рвать глютеновые цепи. Венчик их разрушает.
+                <span class="source-badge">⏱ Урок 1: 03:28–03:55</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Опара подходит: <strong>~35 минут</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Объём вырос раз в 4, сплошные пузыри</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Соединяем опару с жидкими ингредиентами</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В подошедшую опару выложите все жидкие ингредиенты: сметану и желтки, перемешайте рукой или лопаткой. Затем добавьте ванильный сахар (можно экстракт ванили или ваниль из стручков) и весь сахарный песок, снова перемешайте.
+                <span class="source-badge">⏱ Урок 1: 02:45–04:29</span>
+              </p>
+              <p>
+                Все ингредиенты должны быть комнатной температуры.
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Смешивание: <strong>Рука или лопатка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Муку, соль и сливочное масло вводим в два приёма</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Введите сразу всю муку (1000 г) с солью. Сначала перемешивайте лопаткой, потом рукой — поднимающими движениями, пока тесто не соберётся в комок и не будет видно сухих ингредиентов. Тесто липкое — это нормально.
+                <span class="source-badge">⏱ Урок 1: 04:30–05:40</span>
+              </p>
+              <p>
+                Теперь вводите размягчённое сливочное масло в два приёма (при работе миксером можно холодное). Вымешивайте, пока тесто не станет отлипать от рук и стола. Всего ручной замес занимает 10–12 минут.
+                <span class="source-badge">⏱ Урок 1: 05:41–07:18</span>
+              </p>
+              <div class="tip-box">
+                <strong>Помогайте себе скребком:</strong> собирайте тесто со стола, переворачивайте и продолжайте вымешивать — так поверхность получается гладкой.
+                <span class="source-badge">⏱ Урок 1: 06:50–07:07</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Замес: <strong>10–12 минут</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Тесто гладкое, не липнет к рукам</strong></span>
+              <span class="param-pill">⚖ Выход теста: <strong>2750 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Первая расстойка теста</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Накройте тесто полотенцем или плёнкой и оставьте подходить. Тесто поднимается долго — это нормально для высокосдобного теста. Это считается второй обминкой: первая была, когда поднялась опара.
+                <span class="source-badge">⏱ Урок 2: 00:02–00:30</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ При комнатной: <strong>3 часа</strong></span>
+              <span class="param-pill">⏱ При 40 °C: <strong>1 час</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Тесто гладкое, не липнет</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Формовка: 12 шариков и центральная булочка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Подготовьте формы: нарастите кольца, чтобы каравай имел цилиндрическую форму. Разделите тесто точно: для верхнего яруса возьмите 750 г (1/3 — центральная булочка 250 г, 2/3 — 12 шариков по 41 г); для нижнего — 1900 г (центральная булочка 630 г, 12 шариков по 105 г).
+                <span class="source-badge">⏱ Урок 2: 00:35–02:55</span>
+              </p>
+              <p>
+                Каждый кусок подкатайте в ровный колобок, загибая все складочки внутрь. Отвешивайте точно, с точностью до грамма, — от этого зависит ровность каравая.
+                <span class="source-badge">⏱ Урок 2: 00:56–02:47</span>
+              </p>
+              <div class="warning-box">
+                <strong>Весите очень ровно:</strong> плюс-минус один грамм допустим, но не больше. Разная масса шариков даст неровный каравай.
+                <span class="source-badge">⏱ Урок 2: 01:46–01:52</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Верхний ярус: <strong>1×250 г + 12×41 г = 750 г</strong></span>
+              <span class="param-pill">⚖ Нижний ярус: <strong>1×630 г + 12×105 г = 1900 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Выкладываем «ромашку» и расстаиваем</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Смажьте комочки растительным маслом, чтобы при долгой расстойке сверху не образовалась корочка. Выкладывайте 12 шариков плотно по периметру формы, затем в центр поместите большую булочку и вдавите её кулаком, чтобы не слишком выпирала.
+                <span class="source-badge">⏱ Урок 2: 02:55–04:36</span>
+              </p>
+              <p>
+                Так же выложите маленький каравай: шарики плотно к краю, в центр — придавленную булочку. Отправьте всё на расстойку.
+                <span class="source-badge">⏱ Урок 2: 04:36–05:21</span>
+              </p>
+              <div class="tip-box">
+                <strong>Почему в заранее разогретой духовке до 40 °C:</strong> каравай иначе будет подходить очень долго, до 4 часов. При 40 °C — около часа.
+                <span class="source-badge">⏱ Урок 2: 03:03–03:24</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Расстойка: <strong>2 ч (комнатные) или 1 ч (40 °C)</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Тесто подошло, шарики срослись в «ромашку»</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Выпечка: 160 °C, затем 145 °C</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Перед выпечкой проколите каравай шпажкой, чтобы он не треснул: центральную булочку 3 раза, маленькие — по одному. Так выйдет лишний воздух и не будет трещин.
+                <span class="source-badge">⏱ Урок 3: 00:02–00:21</span>
+              </p>
+              <p>
+                Выпекайте в заранее разогретой духовке: 160 °C 20 минут без конвекции (можно и с), затем смажьте яйцом и снизьте до 145 °C ещё примерно на 40 минут. Каравай Ø20–24 см требует дополнительно 15 минут при 150 °C. Готовность — по сухой шпажке.
+                <span class="source-badge">⏱ Урок 3: 00:22–01:13</span>
+              </p>
+              <div class="warning-box">
+                <strong>Чем больше каравай, тем дольше выпечка:</strong> время зависит от диаметра. Проверяйте шпажкой, она должна выходить сухой.
+                <span class="source-badge">⏱ Урок 3: 00:55–01:11</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>160 °C 20 мин, затем 145 °C ~40 мин</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Сухая шпажка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Тесто-«пластилин» и лепка декора</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Для декора замешайте очень крутое тесто из 600 г муки и 200 г холодной воды (пропорция примерно 1 : 3, вода : мука). Уберите в плёнку и дайте полежать 30 минут – 2 часа при комнатной температуре.
+                <span class="source-badge">⏱ Урок 5: 00:05–00:53</span>
+              </p>
+              <p>
+                Раскатывайте тесто как можно тоньше — маленькими кусочками, иначе оно подсохнет. Оно ведёт себя как детский пластилин и хорошо держит вырубку. Вырезайте листья, розы, полоски-веточки, катайте шарики для гроздей винограда.
+                <span class="source-badge">⏱ Урок 4: 00:08–05:09</span>
+              </p>
+              <p>
+                Розу лепите на скатанный овал: приклейте лепестки, закрывая середину бутоном, доращивайте до розы, лишнее отрежьте. Лепестки прячьте под силиконом, чтобы не подсыхали.
+                <span class="source-badge">⏱ Урок 4: 00:26–04:18</span>
+              </p>
+              <div class="tip-box">
+                <strong>Декор делайте впрок:</strong> готовый выпеченный декор хранится до 6 месяцев при комнатной температуре. Выделите день и слепите сразу много — на 100 караваев.
+                <span class="source-badge">⏱ Урок 7: 00:10–00:15</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Тесто для лепки: <strong>Мука : вода = 3 : 1</strong></span>
+              <span class="param-pill">⏱ Отдых: <strong>30 мин – 2 ч</strong></span>
+              <span class="param-pill">📦 Хранение теста: <strong>до 10 дней в холодильнике, декор до 6 мес.</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Выпечка декора</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выложите декор на импровизированные валики из фольги (пустотелые, неплотно свёрнутые), чтобы придать листьям и розам объём. Смажьте весь декор яйцом с водой 1 : 1 тонким слоем.
+                <span class="source-badge">⏱ Урок 4: 00:28–05:09</span>
+              </p>
+              <p>
+                Выпекайте в заранее разогретой духовке: тонкие листья вынимайте раньше, розы и шарики оставьте ещё на 5 минут. Готовность — по виду и цвету. Смотрите по видео: тонкий декор выходит быстрее.
+                <span class="source-badge">⏱ Урок 4: 05:09–05:59</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зубочистка в дно горячей розы:</strong> воткните сразу после выпечки — за неё потом удобно крепить розу на каравай.
+                <span class="source-badge">⏱ Урок 4: 05:51–06:03</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Смазка: <strong>Яйцо : вода = 1 : 1</strong></span>
+              <span class="param-pill">🌡 Выпечка: <strong>Разное время для листьев и роз</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Айсинг: взбитый белок с сахарной пудрой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Взбейте 90 г белка до состояния, когда на дне нет жидкости. Добавьте всю сахарную пудру, сначала взбивайте на низкой скорости, пока пудра не войдёт в массу, затем на максимальной — до плотности. Взбиваю ручным миксером 7 минут на максимальной скорости.
+                <span class="source-badge">⏱ Урок 6: 02:04–04:12</span>
+              </p>
+              <p>
+                В конце добавьте чуть больше чайной ложки лимонного сока и взбейте — это закрепит свойства и ускорит высыхание. Айсинг получится плотным, блестящим, белым.
+                <span class="source-badge">⏱ Урок 6: 00:22–04:43</span>
+              </p>
+              <p>
+                Подкрасьте в цвет выпечки: капните на край чаши немного жёлтого и коричневого водорастворимых красителей и вмешайте. Айсинг стал бежевым, под цвет сдобы. Переложите в кондитерский мешок.
+                <span class="source-badge">⏱ Урок 6: 04:43–05:50</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Взбивание: <strong>~7 минут на максимуме</strong></span>
+              <span class="param-pill">🍋 В конце: <strong>Лимонный сок для высыхания</strong></span>
+              <span class="param-pill">📦 Айсинг: <strong>до 10 дней в холодильнике</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Сборка двухъярусного каравая</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выберите «лицо» каравая — самую ровную сторону, которую повернёте к гостям. При необходимости срежьте высокую шапку ножом, придерживая крыжечку.
+                <span class="source-badge">⏱ Урок 7: 00:02–01:40</span>
+              </p>
+              <p>
+                Скрепите ярусы двумя длинными палочками под углом, протыкая насквозь: одна палочка позволит верхушке вертеться, две под углом держат надёжно при транспортировке.
+                <span class="source-badge">⏱ Урок 7: 02:11–03:31</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔪 Лицо: <span>Самая ровная сторона</span></span>
+              <span class="param-pill">🥢 Крепление: <strong>2 палочки под углом</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Трафаретный рисунок и крепление декора</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Начните с верхнего яруса. Приложите трафарет к «лицу», закрепите зубочистками, плотно прижав к караваю — чем меньше зазор, тем чётче рисунок. Нанесите айсинг, распределите палетой, снимите лишнее скребком. Дорисуйте вокруг.
+                <span class="source-badge">⏱ Урок 7: 03:32–06:14</span>
+              </p>
+              <p>
+                Дайте рисунку подсохнуть (айсинг с лимонным соком сохнет за 3–5 минут). Крепите декор на айсинг: розы — за заранее вставленные зубочистки, листья, веточки и грозди винограда — прямо на айсинг. Делайте композицию в несколько слоёв.
+                <span class="source-badge">⏱ Урок 7: 11:01–14:28</span>
+              </p>
+              <div class="warning-box">
+                <strong>Коряшки-лозы не переусердствуйте:</strong> твёрдые веточки на верхушке могут попасть в глаза, когда будут кусать каравай. Крепите их умеренно, на верхушке.
+                <span class="source-badge">⏱ Урок 7: 13:39–14:03</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Рисунок: <strong>Чёткий, без проплешин</strong></span>
+              <span class="param-pill">✨ Декор: <strong>На айсинг, быстро высыхает</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Можно одноярусным:</strong> каравай не обязательно делать двухъярусным — одна порция формовки даёт красивый одноярусный каравай с трафаретным рисунком и цветами.</li>
+                <li><strong>Дрожжевое тесто берегите:</strong> никаких венчиков и блендеров, только рука, лопатка или крюк миксера.</li>
+                <li><strong>Декор впрок на 6 месяцев:</strong> выпеченные листья и розы хранятся при комнатной температуре до полугода.</li>
+                <li><strong>Смазывайте шарики маслом:</strong> при долгой расстойке без масла сверху появится корочка.</li>
+                <li><strong>Айсинг в цвет выпечки:</strong> подкрасьте бежевым, и декор будет выглядеть так, будто каравай испечён вместе с ним целиком. Можно и ярко-белым.</li>
+                <li><strong>Айсинг можно купить готовый:</strong> продаётся в порошке, разводится по инструкции на упаковке и взбивается.</li>
+                <li><strong>Два яруса скрепляйте двумя палочками:</strong> под углом, насквозь — так ярус не провернётся даже при транспортировке.</li>
+                <li><strong>Ставить на ручник удобно:</strong> каравай выносят на полотенце-ручнике, прямо на подложке.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Разный вес шариков:</strong> каравай получится неровным. Отвешивайте точно, до грамма.</li>
+                <li><strong>Венчик в высокосдобном тесте:</strong> рвутся глютеновые цепи, тесто грубеет.</li>
+                <li><strong>Слишком долгая расстойка без духовки:</strong> без подогрева каравай подходит до 4 часов. Подогрейте духовку до 40 °C.</li>
+                <li><strong>Не прокололи перед выпечкой:</strong> каравай треснет. Колите шпажкой центральную булочку 3 раза, остальные по разу.</li>
+                <li><strong>Не подкрасили айсинг:</strong> белая меренга будет сильно контрастировать с румяной коркой.</li>
+                <li><strong>Трафарет закреплён неплотно:</strong> рисунок расплывётся. Верхний ярус расписывайте первым, чтобы не повредить готовый рисунок.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> серия Надежды Зубовой — Урок_01.mp4 (опара, замес теста), Урок_02.mp4 (подъём, формовка, расстойка), Урок_03.mp4 (прокол, выпечка), Урок_04.mp4 (лепка декора, выпечка декора), Урок_05.mp4 (тесто для лепки), Урок_06.mp4 (айсинг), Урок_07.mp4 (сборка, трафарет, декор); расшифровка с таймкодами; файл «Каравай.docx» с точными граммовками. Таймкоды на странице — реальные, из расшифровки.</li>
+              <li><strong>Порция:</strong> DOCX даёт выход теста 2750 г и разбивку: нижний ярус 1900 г (1×630 г + 12×105 г), верхний 750 г (1×250 г + 12×41 г). База калькулятора — один двухъярусный каравай из всей рецептуры теста.</li>
+              <li><strong>Температура выпечки:</strong> в видео автор говорит «160 °C 20 минут, затем 145 °C», при этом в одном месте оговорка «360 градусов». В DOCX указано 160 °C затем 150 °C. На странице взят вариант из DOCX (160/145–150 °C) и оговорка про 15 минут дополнительно для Ø20–24 см. Расхождение температур описан в видео оговоркой.</li>
+              <li><strong>Температура расстойки формы:</strong> видео — 40 °C ~1 час, DOCX даёт 2 часа при комнатной. На странице даны оба варианта.</li>
+              <li><strong>Время выпечки декора:</strong> точное время автор не озвучивает, только порядок — листья раньше, розы и шарики ещё на 5 минут. Количество и точное время на странице не фиксируются.</li>
+              <li><strong>Айсинг на двухъярусный:</strong> DOCX сообщает, что для оформления двухъярусного каравая требуется 1/2 порции айсинга. Полная порция (90 г белка + 500 г пудры) дана в рецепте; излишек можно хранить в холодильнике до 10 дней.</li>
+              <li><strong>Граммовки карамели:</strong> не применимо — каравай не требует карамели.</li>
+              <li><strong>Выход:</strong> DOCX указывает, что готовый оформленный двухъярусный каравай весит примерно 2,8 кг. Фото на странице — кадр из Урок_07.mp4 (финальный вид каравая), обрезанный по центру, чтобы убрать руки и инвентарь.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© CookBook — Автономная кулинарная библиотека.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

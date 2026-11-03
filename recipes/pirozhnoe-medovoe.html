@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пирожное «Медовое» с клубничным конфи — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Медовое пирожное Надежды Зубовой: тонкие коржи на карамели из мёда, сметанный крем с белым шоколадом, клубничное конфи на пектине NH и кремовая шапочка. Два рулета по 30 см, 12–20 пирожных.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body data-recipe-id="pirozhnoe-medovoe">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Пирожное «Медовое» с клубничным конфи</h1>
+      <p class="recipe-lead">
+        Мягкое медовое пирожное, собранное в рулет: тонкие коржи на карамели из жжёного сахара и мёда, сметанный крем с белым шоколадом, клубничное конфи на пектине и кремовая шапочка сверху. Пирожное обваливают в крошке от обрезков, поэтому ничего не пропадает. Из одной партии выходит два рулета по 30 см.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">1 ч 20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">2 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~3 ч 40 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">12 пирожных (2 рулета по 30 см)</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/pirozhnoe-medovoe.jpg" alt="Медовые пирожные-пеньки: рулеты в крошке с шапочкой крема и малиной" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (12 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="12">12</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">пирожных</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — 12 пирожных: два рулета по 30 см, нарезанные по 5 см. Если режете по 3–4 см, пирожных будет до 20, а крема и конфи на каждое уйдёт меньше — учтите это при пересчёте.
+          </p>
+        </div>
+
+        <!-- Переключатель источников и таймкодов видео -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">12</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на 12 пирожных: коржи, сметанный крем, клубничное конфи и декор. Отдельно указан крем для шапочки — его готовят по рецепту «Крем «Шантильи»».
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: молочное, яйца -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное и яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span>
+                <span class="shopping-hint">Взбиваются с сахаром и тёплым мёдом не меньше 10 минут</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="65" data-unit="г">65 г</span>
+                <span class="shopping-hint">Хорошо размягчённое, идёт в карамель</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творожный сыр</strong>:
+                <span class="shopping-qty" data-base-amount="180" data-unit="г">180 г</span>
+                <span class="shopping-hint">Для сметанного крема; берите плотный, не текучий</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сметана 25–30%</strong>:
+                <span class="shopping-qty" data-base-amount="110" data-unit="г">110 г</span>
+                <span class="shopping-hint">В карте 25% и выше, на видео — 30%</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Вводятся в крем в самом конце; должны хорошо взбиваться</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: мёд, шоколад, ягоды -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍯 Мёд, шоколад и ягоды</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мёд</strong>:
+                <span class="shopping-qty" data-base-amount="90" data-unit="г">90 г</span>
+                <span class="shopping-hint">30 г — в яйца, 60 г — в карамель; оба раза тёплый или горячий</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="170" data-unit="г">170 г</span>
+                <span class="shopping-hint">80 г в яйца, 40 г в карамель, 50 г в конфи</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Смешать с разрыхлителем и ввести в тесто за один приём</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Разрыхлитель</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="г">4 г</span>
+                <span class="shopping-hint">Обязательно перемешать с мукой до ввода</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Белый шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+                <span class="shopping-hint">Растапливается пульсами в микроволновке</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре клубники</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Можно заменить пюре смородины или малины — рецепт конфи тот же</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сироп глюкозы</strong>:
+                <span class="shopping-qty" data-base-amount="40" data-unit="г">40 г</span>
+                <span class="shopping-hint">В конфи, вместе с холодным пюре</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пектин NH</strong>:
+                <span class="shopping-qty" data-base-amount="6" data-unit="г">6 г</span>
+                <span class="shopping-hint">Смешать с сахаром и всыпать в пюре холоднее 40 °C</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимонная кислота</strong>:
+                <span class="shopping-qty" data-base-amount="0.25" data-unit="ч. л.">0,25 ч. л.</span>
+                <span class="shopping-hint">В карте 1/4 ч. л., на видео — половина; добавляется в конце, фиксирует густоту</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Малина для декора</strong>
+                <span class="shopping-hint">По вкусу, по одной ягоде на пирожное</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Крем для шапочки</strong> — по рецепту «Крем «Шантильи»»
+                <span class="shopping-qty" data-base-amount="360" data-unit="г">360 г</span>
+                <span class="shopping-hint">Из расчёта 30 г готового крема на пирожное; продукты — по отдельному рецепту</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — пергамент, пищевая плёнка, кондитерский мешок и насадка-звезда
+                <span class="shopping-hint">Плёнка нужна для рулета, мешок — для шапочки</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Коржи — на 2 рулета по 30 см</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span> — Яйца категории С1
+              <span class="ingredient-note">Взбиваются с сахаром и мёдом не меньше 10 минут</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Сахар в яйца
+              <span class="ingredient-note">Первая группа ингредиентов</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Мёд в яйца
+              <span class="ingredient-note">Тёплый: растопить в микроволновке или на водяной бане, добавлять в процессе взбивания</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Сахар в карамель
+              <span class="ingredient-note">Расплавляется сухим способом</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Мёд в карамель
+              <span class="ingredient-note">Горячий и жидкий, добавляется после расплава сахара</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="65" data-unit="г">65 г</span> — Масло сливочное 82,5%
+              <span class="ingredient-note">Хорошо размягчённое, вводится в карамель последним</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Мука
+              <span class="ingredient-note">Вводится одной порцией, лопаткой снизу вверх</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="г">4 г</span> — Разрыхлитель
+              <span class="ingredient-note">Обязательно перемешать с мукой заранее</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Сметанный крем</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="180" data-unit="г">180 г</span> — Творожный сыр
+              <span class="ingredient-note">Плотный, без лишней влаги</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сахарная пудра
+              <span class="ingredient-note">Всыпается сразу вся</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="110" data-unit="г">110 г</span> — Сметана 25–30%
+              <span class="ingredient-note">В карте 25% и выше, на видео — 30%</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Белый шоколад
+              <span class="ingredient-note">Растопить пульсами, вводить тёплым</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сливки
+              <span class="ingredient-note">Добавляются в самом конце, отдельно не взбиваются</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Клубничное конфи</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Пюре клубники
+              <span class="ingredient-note">Можно заменить на смородину или малину</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Сироп глюкозы
+              <span class="ingredient-note">Сразу в холодное пюре</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сахар
+              <span class="ingredient-note">Смешать с пектином</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="6" data-unit="г">6 г</span> — Пектин NH
+              <span class="ingredient-note">Вводится дождём в смесь холоднее 40 °C</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="0.25" data-unit="ч. л.">0,25 ч. л.</span> — Лимонная кислота
+              <span class="ingredient-note">В самом конце, после «нестекающей капли»</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Шапочка и декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="360" data-unit="г">360 г</span> — Крем для шапочки
+              <span class="ingredient-note">Из урока «Капкейки» — готовый «Шантильи», 30 г на пирожное; рецепт — на странице «Крем «Шантильи»»</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Малина
+              <span class="ingredient-note">По одной ягоде на пирожное, как на фото</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Яйца с сахаром и тёплым мёдом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В дежу высыпьте сахар и добавьте все яйца, начинайте взбивать. Мёд растопите в микроволновке или на водяной бане и вливайте тёплым в процессе взбивания — с ним яйца взбиваются лучше.
+                <span class="source-badge">⏱ Урок 1: 01:01–01:30</span>
+              </p>
+              <p>
+                Взбивайте не меньше 10 минут на высокой скорости: автор говорит о 10–15 минутах и подчёркивает — время не сокращать. Правильная масса пышная, воздушная, объёмная и светлая.
+                <span class="source-badge">⏱ Урок 1: 01:38–01:56</span>
+              </p>
+              <div class="warning-box">
+                <strong>Время взбивания не трогаем:</strong> «написано 10 минут — значит взбиваем 10 минут». Недобитая масса не удержит карамель и муку, и корж получится плотным.
+                <span class="source-badge">⏱ Урок 1: 01:52–01:56</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Яйца: <strong>3 шт. С1</strong></span>
+              <span class="param-pill">🍬 Сахар: <strong>80 г</strong></span>
+              <span class="param-pill">🍯 Мёд: <strong>30 г, тёплый</strong></span>
+              <span class="param-pill">⏱ Взбивание: <strong>10–15 мин на высокой</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Карамель сухим способом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В сотейник отправьте весь сахар для карамели и расплавляйте сухим способом. Мешать в процессе не нужно — можно подёргать сотейником или размять лопаткой крупные куски. Ждите, когда расплавятся все кристаллы и карамель станет золотистой.
+                <span class="source-badge">⏱ Урок 1: 01:57–02:54</span>
+              </p>
+              <p>
+                Добавьте горячий жидкий мёд, перемешайте, слегка убавьте температуру и введите размягчённое сливочное масло. Когда масло разойдётся, карамель готова.
+                <span class="source-badge">⏱ Урок 1: 02:59–03:58</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не перемешивайте сахар при плавлении:</strong> от активного вмешивания он кристаллизуется. Двигайте сотейник или разминайте комки, но не мешайте ложкой.
+                <span class="source-badge">⏱ Урок 1: 02:17–02:32</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍬 Сахар: <strong>40 г</strong></span>
+              <span class="param-pill">🍯 Мёд: <strong>60 г, горячий</strong></span>
+              <span class="param-pill">🧈 Масло: <strong>65 г, размягчённое</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Карамель в яичную массу</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Перед вводом дайте кипению уняться, чтобы не было пузырьков, но добавляйте карамель всё равно горячей. Вводите в два приёма и перемешивайте экстремально быстро: первый приём — энергично вмешали, затем остатки.
+                <span class="source-badge">⏱ Урок 1: 03:39–04:28</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем так быстро:</strong> горячая карамель — тяжёлая и вязкая. Если мешать медленно, она осядет на дно и не вмешается в пышную массу.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Карамель: <strong>горячая</strong></span>
+              <span class="param-pill">🥄 Приёмов: <strong>два</strong></span>
+              <span class="param-pill">⚡ Темп: <strong>экстремально быстро</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Мука и разрыхлитель</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Муку обязательно перемешайте с разрыхлителем и введите всю сразу, одной порцией. Вмешивайте лопаткой поднимающими движениями снизу вверх и недолго — лишь бы мука вошла в тесто.
+                <span class="source-badge">⏱ Урок 1: 04:31–04:54</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌾 Мука: <strong>150 г</strong></span>
+              <span class="param-pill">🥄 Разрыхлитель: <strong>4 г</strong></span>
+              <span class="param-pill">🔄 Движения: <strong>снизу вверх, недолго</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Тонкие коржи на двух противнях</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Распределите тесто на два противня визуально пополам и размажьте тонко-тонко, ровным слоем. Часть теста пойдёт на сами пирожные, часть — на крошку для обсыпки.
+                <span class="source-badge">⏱ Урок 1: 05:00–05:48</span>
+              </p>
+              <p>
+                Выпекайте при 170 °C в режиме конвекции около 5 минут; если корж не готов, допеките ещё 3 минуты. По карте общее время — 8 минут.
+                <span class="source-badge">⏱ Урок 1: 05:43–06:16</span>
+              </p>
+              <div class="tip-box">
+                <strong>Тонко и ровно:</strong> толщина слоя напрямую влияет на то, как легко будет сворачиваться рулет. Чем тоньше и однороднее пласт, тем лучше он гнётся.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>170 °C</strong></span>
+              <span class="param-pill">🔄 Режим: <strong>конвекция</strong></span>
+              <span class="param-pill">⏱ Время: <strong>5 мин + 3 мин (8 мин по карте)</strong></span>
+              <span class="param-pill">🍽 Противни: <strong>два</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Крошка из обрезков</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Полностью остывшие коржи переверните и аккуратно снимите бумагу. Обрежьте все неровности — они нужны для обсыпки: крошки потребуется много, и отходов должно быть много. Центральную ровную часть оставьте под рулеты.
+                <span class="source-badge">⏱ Урок 1: 06:17–07:12</span>
+              </p>
+              <p>
+                Крошку можно раскрошить руками или в блендере. Из двух пластов получаются два рулета.
+                <span class="source-badge">⏱ Урок 1: 06:56–07:12</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍰 Пласты: <strong>2</strong></span>
+              <span class="param-pill">🥣 Крошка: <strong>руками или в блендере</strong></span>
+              <span class="param-pill">🔍 Бумага: <strong>снимать с остывшего коржа</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Сметанный крем с белым шоколадом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В ёмкость высыпьте пудру, добавьте творожный сыр и сметану — всё по весу. Взбивайте сначала на небольшой скорости, чтобы пудра не разлеталась, затем на максимальной, но недолго: массе достаточно соединиться и стать однородной.
+                <span class="source-badge">⏱ Урок 4: 00:27–01:09</span>
+              </p>
+              <p>
+                Белый шоколад растопите пульсами в микроволновке. Возьмите столовую ложку готового крема, добавьте в шоколад и перемешайте на небольшой скорости, а затем эту шоколадную массу введите обратно в общий крем. В конце добавьте сливки и пробейте всё на большой скорости.
+                <span class="source-badge">⏱ Урок 4: 01:18–02:08</span>
+              </p>
+              <div class="warning-box">
+                <strong>Почему шоколад «разбавляют» кремом:</strong> иначе он схватится в холодной массе крупинками. Крем должен остаться гладким и однородным.
+                <span class="source-badge">⏱ Урок 4: 01:39–01:48</span>
+              </div>
+              <div class="tip-box">
+                <strong>Готовность:</strong> крем в меру плотный и в меру мягкий, с лопатки не стекает — именно такой нужен для сборки рулета.
+                <span class="source-badge">⏱ Урок 4: 02:18–02:28</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧀 Сыр: <strong>180 г</strong></span>
+              <span class="param-pill">🥛 Сметана: <strong>110 г</strong></span>
+              <span class="param-pill">🍫 Шоколад: <strong>60 г белого</strong></span>
+              <span class="param-pill">🍦 Сливки: <strong>50 г</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Клубничное конфи на пектине</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В холодное пюре добавьте сироп глюкозы. Сахар смешайте с пектином NH и всыпьте дождём в пюре, которое ещё холоднее 40 °C, непрерывно помешивая.
+                <span class="source-badge">⏱ Урок 3: 00:42–01:30</span>
+              </p>
+              <p>
+                Варите, помешивая, примерно 3–4 минуты — до «нестекающей капли»: капля хочет стечь, но не стекает. Тогда добавьте лимонную кислоту, перемешайте и снимите с огня.
+                <span class="source-badge">⏱ Урок 3: 01:46–02:39</span>
+              </p>
+              <div class="warning-box">
+                <strong>Пектин — только в холодную смесь:</strong> если ввести его в массу горячее 40 °C, он закомкуется и не раскроет загущающие свойства.
+                <span class="source-badge">⏱ Урок 3: 01:03–01:26</span>
+              </div>
+              <div class="tip-box">
+                <strong>Лимонная кислота — фиксатор:</strong> она закрепляет ту густоту, до которой вы доварили конфи, и сразу даёт красивый ягодный цвет.
+                <span class="source-badge">⏱ Урок 3: 02:15–02:29</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍓 Пюре: <strong>250 г</strong></span>
+              <span class="param-pill">🍬 Сахар: <strong>50 г</strong></span>
+              <span class="param-pill">🧪 Пектин NH: <strong>6 г</strong></span>
+              <span class="param-pill">⏱ Варка: <strong>3–4 мин до нестекающей капли</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Крем на пласт и подморозка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Нанесите сметанный крем на медовый пласт ровным слоем, оставив немного крема на обмазку рулета снаружи. Отправьте в морозилку, чтобы крем схватился, минимум на 30–40 минут.
+                <span class="source-badge">⏱ Урок 1: 07:13–07:33</span>
+              </p>
+              <div class="warning-box">
+                <strong>Порядок не случайный:</strong> сначала крем должен впитаться в корж и размягчить его, иначе рулет не свернётся. Густое конфи корж пропитать не сможет, поэтому оно идёт вторым слоем.
+                <span class="source-badge">⏱ Урок 1: 07:37–07:55</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥄 Крем: <strong>на пласт, немного оставить</strong></span>
+              <span class="param-pill">🧊 Морозилка: <strong>30–40 мин</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>крем не липнет к пальцам</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Клубничное конфи поверх крема</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выложите половину конфи и распределите лопаточкой ровным слоем — вторая половина уйдёт на второй рулет. Подморозка нужна именно для того, чтобы крем не смешался с конфи и слои читались.
+                <span class="source-badge">⏱ Урок 1: 08:00–08:30</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍓 Конфи: <strong>половина на рулет</strong></span>
+              <span class="param-pill">🥄 Слой: <strong>ровный, лопаточкой</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 11 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Сворачивание рулета</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Начинайте закручивать рулет, помогая себе бумагой. Он будет ломаться — это нормально и предсказуемо: первый закрут обязательно выйдет поломанным, и пугаться этого не нужно, просто продолжайте.
+                <span class="source-badge">⏱ Урок 1: 08:33–09:28</span>
+              </p>
+              <p>
+                Свернутый рулет заверните в пищевую плёнку и уберите в холодильник хотя бы на час-два, можно на ночь.
+                <span class="source-badge">⏱ Урок 1: 09:33–09:40</span>
+              </p>
+              <div class="tip-box">
+                <strong>Ломкий корж — не брак:</strong> медовый пласт тонкий и хрупкий, после пропитки кремом он становится мягче, но при сворачивании всё равно трескается. На срезе это не видно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧻 Помощь: <strong>бумага</strong></span>
+              <span class="param-pill">🧊 Холодильник: <strong>1–2 ч или на ночь</strong></span>
+              <span class="param-pill">🎬 Упаковка: <strong>пищевая плёнка</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 12 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Крем снаружи и обсыпка крошкой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Застывший рулет обмажьте тонким-тонким слоем оставшегося крема и обваляйте в крошке — сначала с одной стороны, затем с другой. Получается плотный «пенёк» в крошке, а крошка закрывает все трещины от сворачивания.
+                <span class="source-badge">⏱ Урок 1: 09:47–10:26</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥄 Крем: <strong>тонкий слой</strong></span>
+              <span class="param-pill">🍞 Крошка: <strong>обвалять со всех сторон</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 13 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Нарезка пирожных</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отрежьте краешек и нарезайте рулет «пеньками» — высота 3–5 см, в зависимости от того, какие пирожные нужны. Разрез получается слоистым: корж, крем, полоса конфи.
+                <span class="source-badge">⏱ Урок 1: 10:39–11:08</span>
+              </p>
+              <div class="tip-box">
+                <strong>Рулет — это тоже вариант подачи:</strong> можно вообще не нарезать и оставить одним рулетом, но в нарезке пирожное удобнее есть и оно лучше смотрится на витрине.
+                <span class="source-badge">⏱ Урок 1: 10:39–10:46</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Высота: <strong>3–5 см</strong></span>
+              <span class="param-pill">🔢 Выход: <strong>12–20 пирожных</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 14 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Шапочка крема и малина</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Шапочку отсаживают кремом из урока «Капкейки» — это стабильный «Шантильи» из расчёта 30 г на одно пирожное. Отсаживайте мешком с насадкой-звездой и украсьте малиной.
+                <span class="source-badge">⏱ Урок 1: 11:27–11:35</span>
+              </p>
+              <div class="warning-box">
+                <strong>Шапочка ниже, чем у капкейка:</strong> пирожное маленькое и низкое, поэтому крем отсаживают умеренно, иначе шапка перевесит.
+                <span class="source-badge">⏱ Урок 1: 11:33–11:35</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧁 Крем: <strong>30 г на пирожное</strong></span>
+              <span class="param-pill">⭐ Насадка: <strong>звезда</strong></span>
+              <span class="param-pill">🍓 Декор: <strong>малина</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 15 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">15</span>
+                <h3 class="step-title">Хранение</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Срок годности — 72 часа в холодильнике или 1 месяц в морозилке. Замораживают пирожные в виде рулета или в нарезке, но без шапочки крема: её отсаживают после разморозки.
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📅 Холодильник: <strong>72 ч</strong></span>
+              <span class="param-pill">❄️ Морозилка: <strong>1 месяц</strong></span>
+              <span class="param-pill">🧁 Шапочка: <strong>после разморозки</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Три подгруппы ингредиентов:</strong> яйца с сахаром и мёдом, карамель из сахара, мёда и масла, мука с разрыхлителем. Так проще не ошибиться в замесе.</li>
+                <li><strong>Тёплый мёд в яйца:</strong> с ним яйца взбиваются лучше и быстрее набирают объём.</li>
+                <li><strong>10 минут — значит 10 минут:</strong> время взбивания сокращать нельзя, это главное условие пышности.</li>
+                <li><strong>Карамель не мешать:</strong> при плавлении сахар только подёргивают сотейником, иначе он кристаллизуется.</li>
+                <li><strong>Карамель вводить горячей и быстро:</strong> в два приёма, энергичными движениями.</li>
+                <li><strong>Сначала крем, потом конфи:</strong> крему нужно впитаться и размягчить корж, конфи такой корж уже не пропитает.</li>
+                <li><strong>Подморозка крема:</strong> 30–40 минут в морозилке сохраняют слоистость и не дают крему смешаться с конфи.</li>
+                <li><strong>Ломающийся рулет — норма:</strong> первый закрут всегда трескается, крошка и крем потом всё скрывают.</li>
+                <li><strong>Пектин в холодное:</strong> только в смесь холоднее 40 °C, всыпать дождём вместе с сахаром.</li>
+                <li><strong>Лимонная кислота в конфи:</strong> фиксирует густоту и улучшает цвет.</li>
+                <li><strong>Шоколад в крем через ложку крема:</strong> так он не схватывается крупинками.</li>
+                <li><strong>Шапочка из «Шантильи»:</strong> берут готовый крем из урока про капкейки, по 30 г на пирожное.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Недобили яйца с мёдом:</strong> масса не удержит карамель, корж выйдет плотным и низким.</li>
+                <li><strong>Мешали сахар при плавлении:</strong> карамель кристаллизуется и пойдёт комками.</li>
+                <li><strong>Вводили карамель медленно:</strong> она оседает на дно и плохо вмешивается.</li>
+                <li><strong>Долго мешали тесто с мукой:</strong> корж становится жёстким, а не мягким.</li>
+                <li><strong>Толстый слой теста:</strong> пласт плохо гнётся и ломается сильнее.</li>
+                <li><strong>Нанесли конфи сразу на корж:</strong> густое конфи не пропитывает корж, и рулет не свернуть.</li>
+                <li><strong>Ввели пектин в горячую массу:</strong> комки, и конфи не загустевает как надо.</li>
+                <li><strong>Переварили конфи:</strong> вместо нестекающей капли получится плотная масса, которая рвёт корж.</li>
+                <li><strong>Шоколад вводили прямо в холодный крем:</strong> он схватывается крупинками, крем неоднородный.</li>
+                <li><strong>Отсадили высокую шапку:</strong> крем перевешивает низкое пирожное.</li>
+                <li><strong>Заморозили с шапочкой:</strong> по карте пирожные замораживают без крема сверху.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> четыре урока Надежды Зубовой (Тортомафия, месяц 2): урок 1 — коржи и сборка, урок 2 — крем с маскарпоне, урок 3 — клубничное конфи, урок 4 — сметанный крем; плюс технологическая карта с граммовками и фото пирожного из неё.</li>
+              <li><strong>Расхождения — время выпечки:</strong> в карте 8 минут при 170 °C на конвекции, на видео 5 минут и затем ещё 3 минуты допекания. На странице приведены оба значения.</li>
+              <li><strong>Расхождения — лимонная кислота:</strong> в карте 1/4 ч. л., на видео автор дважды называет половину чайной ложки. На странице стоит значение карты, вариант с видео указан в шаге 8.</li>
+              <li><strong>Расхождения — жирность сметаны:</strong> в карте «25% и выше», на видео — сметана 30%. Влияет только на плотность крема.</li>
+              <li><strong>Расхождения — второй крем:</strong> в уроке 2 показан крем с маскарпоне и творожным сыром для этого же пирожного, но граммовок в уроке нет и в карту он не попал. На странице приведён сметанный крем из карты и урока 4.</li>
+              <li><strong>Расхождения — выход:</strong> в карте 12–20 пирожных в зависимости от нарезки (высота 3–5 см). За базу калькулятора взято 12 — нарезка по 5 см из двух рулетов по 30 см.</li>
+              <li><strong>Пробелы — время сборки:</strong> в источниках нет таймингов, кроме подморозки 30–40 минут и холодильника 1–2 часа; общее время на странице рассчитано по этим ориентирам.</li>
+              <li><strong>Пробелы — крем для шапочки:</strong> его состав и приготовление — в уроке «Капкейки» (рецепт «Крем «Шантильи»» на сайте), здесь только норма 30 г на пирожное.</li>
+              <li><strong>Пробелы — декор:</strong> малина без граммовок; других украшений автор не показывает.</li>
+              <li><strong>Фото:</strong> снимок взят из технологической карты (DOCX) — это единственное настоящее фото пирожного в папке; кадры видео не использовались.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

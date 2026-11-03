@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пирожки с мясом — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Маленькие треугольные пирожки с мясом Надежды Зубовой: сдобное дрожжевое тесто со сметаной ручного замеса, начинка из отварного мяса с обжаренным луком, сельдереем и морковью, формовка «значком Мерседеса», смазка яйцом и кунжут.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="pirozhki-s-myasom">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Пирожки с мясом</h1>
+      <p class="recipe-lead">
+        Сдобное дрожжевое тесто со сметаной, замешанное руками: молочная кислота делает его похожим на песочное — появляется лёгкая слоистость и ощущение сдобы. Начинка из отварного мяса с большим количеством обжаренного лука, морковью и сельдереем. Пирожки формуют треугольниками, смазывают яйцом и посыпают кунжутом.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч 20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Расстойка теста, расстойка изделий 15–20 мин, выпечка 18–25 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~3 ч работы + время на расстойку теста</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">≈20 пирожков (50 г теста + 25–40 г начинки)</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/pirozhki-s-myasom.jpg" alt="Готовые треугольные пирожки с мясом, смазанные яйцом и посыпанные кунжутом, на противне" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 замес)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">замес (≈20 пирожков)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База калькулятора — один замес теста по DOCX (≈1,9 кг) и вся мясная начинка. Автор просит рассчитать граммовки так, чтобы вышло примерно 20 пирожков по 50 г теста и 25–30 г начинки: начинки как раз хватает на 20 пирожков, а из полного замеса по 50 г получается около 37 штук — остальное тесто хранится в холодильнике до 48 часов или в морозилке до месяца.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> замес</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на один замес теста (≈1,9 кг) и начинку на 20 пирожков: бакалея и молочное в первой колонке, мясо и овощи — во второй.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Бакалея, молочное, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="950" data-unit="г">950 г</span>
+                <span class="shopping-hint">Килограммовый пакет. В DOCX 900–950 г, вся мука идёт в тесто</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Дрожжи прессованные</strong>:
+                <span class="shopping-qty" data-base-amount="40" data-unit="г">40 г</span>
+                <span class="shopping-hint">Свежие. Хорошие дрожжи лепятся как пластилин</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко</strong>:
+                <span class="shopping-qty" data-base-amount="400" data-unit="г">400 г</span>
+                <span class="shopping-hint">Комнатной температуры, в тесто</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сметана 15–25%</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Небольшая баночка. Даёт тесту слоистость</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло</strong>:
+                <span class="shopping-qty" data-base-amount="170" data-unit="г">170 г</span>
+                <span class="shopping-hint">120 г в тесто + 50 г на обжарку сельдерея и лука. Две пачки по 100 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="130" data-unit="г">130 г</span>
+                <span class="shopping-hint">В тесто</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">В тесто; начинка солится по вкусу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кунжут</strong>:
+                <span class="shopping-hint">Для посыпки, маленькая упаковка</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — пергамент, пищевая плёнка
+                <span class="shopping-hint">Пергамент на противень, плёнка на миску с тестом</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥩 Мясо, овощи, яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мясо для отваривания</strong>:
+                <span class="shopping-qty" data-base-amount="500" data-unit="г">500 г</span>
+                <span class="shopping-hint">Свинина, говядина, лосятина или индейка. Лучше комбинировать постное мясо со свиной грудинкой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лук репчатый</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span>
+                <span class="shopping-hint">200 г: одна луковица целиком в бульон, вторая обжаренная — в начинку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Морковь</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">100 г, варится в бульоне и потом режется в начинку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сельдерей стеблевой</strong>:
+                <span class="shopping-hint">1–2 стебля: один варится с мясом, остальное обжаривается в начинку. В DOCX количество не указано</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span>
+                <span class="shopping-hint">150 г (≈3 шт.) в тесто + одно на смазку пирожков</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лавровый лист, перец</strong>:
+                <span class="shopping-hint">В бульон и начинку по вкусу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Растительное масло</strong>:
+                <span class="shopping-hint">Для обжарки лука и сельдерея, количество автор не называет</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Тесто ручного замеса со сметаной</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="950" data-unit="г">950 г</span> — Мука пшеничная
+              <span class="ingredient-note">В DOCX 900–950 г, просеянная, вся в тесто</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="400" data-unit="г">400 г</span> — Молоко
+              <span class="ingredient-note">Комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Яйца (≈3 шт.)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="130" data-unit="г">130 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Дрожжи прессованные
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сметана 15–25%
+              <span class="ingredient-note">Вводится в два приёма</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Сливочное масло комнатной температуры
+              <span class="ingredient-note">Вводится порциями в самом конце, после сметаны</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка мясная</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="500" data-unit="г">500 г</span> — Мясо
+              <span class="ingredient-note">Свинина, говядина, лосятина или индейка; постное мясо хорошо комбинировать со свиной грудинкой</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Лук репчатый (2 шт.)
+              <span class="ingredient-note">Одна луковица в бульон, вторая обжаренная — в начинку</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Морковь
+              <span class="ingredient-note">Варится с мясом, потом режется в начинку</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сливочное масло
+              <span class="ingredient-note">Для обжарки сельдерея</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Сельдерей стеблевой — по вкусу
+              <span class="ingredient-note">1–2 стебля: варится с мясом и обжаривается в начинку. В списке DOCX его нет, но в технологии он есть</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Растительное масло — по потребности
+              <span class="ingredient-note">Для обжарки лука и сельдерея, количество не указано</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Соль, перец, лавровый лист — по вкусу
+              <span class="ingredient-note">В бульон и в готовую начинку</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Бульон — по потребности
+              <span class="ingredient-note">Если начинка получилась сухой</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Для смазки и посыпки</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Яйцо — 1 шт. для смазки
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Кунжут — по вкусу
+              <span class="ingredient-note">Белое или чёрное кунжутное семя</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Зачем в тесте сметана</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Ещё один вид теста — безопарный, руками. Сметана содержит молочную кислоту: когда она попадает в тесто, оно ведёт себя немного как сдобное песочное — появляется лёгкая слоистость и ощущение сдобы.
+                <span class="source-badge">⏱ Урок 1: 00:02–00:33</span>
+              </p>
+              <p>
+                Из этого теста автор делает кулебяки и пирожки.
+                <span class="source-badge">⏱ Урок 1: 00:34–00:40</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Способ: <strong>Безопарный, ручной замес</strong></span>
+              <span class="param-pill">🎯 Что даёт: <strong>Слоистость и сдобу</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Сухие ингредиенты и влага</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В миску просейте муку, добавьте соль, сахар и дрожжи. Перемешайте всё сухое руками.
+                <span class="source-badge">⏱ Урок 1: 00:40–01:01</span>
+              </p>
+              <p>
+                Введите молоко и яйца. Начните замешивать в миске, затем переложите тесто на стол и продолжайте на столе. Сметану и сливочное масло пока не добавляйте — задача сейчас собрать сухие ингредиенты в большой комок.
+                <span class="source-badge">⏱ Урок 1: 01:03–01:37</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Порядок: <strong>Сухие → молоко и яйца → сметана → масло</strong></span>
+              <span class="param-pill">🌾 Мука: <strong>Просеянная обязательно</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Сметана в два приёма</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сметану введите в два приёма: сначала первую часть замешайте в тесто, затем вторую. Сметана слегка разжижает тесто, поэтому порциями легче поймать нужную консистенцию. Мешайте до однородности.
+                <span class="source-badge">⏱ Урок 1: 01:46–02:11</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥄 Сметана: <strong>100 г, в два приёма</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Масло порциями и вымешивание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Тесто липкое и неоднородное — начинайте вводить сливочное масло комнатной температуры и вымешивать. Весь процесс займёт 15–20 минут. Масло добавляйте небольшими порциями и только после того, как предыдущая полностью войдёт в тесто.
+                <span class="source-badge">⏱ Урок 1: 02:24–03:05</span>
+              </p>
+              <p>
+                Готовое тесто не очень крутое, но муку больше не добавляйте. Если у вас мука Макфа 12% белка, тесто будет отставать от рук — это нормально.
+                <span class="source-badge">⏱ Урок 1: 03:11–03:24</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не подсыпайте муку:</strong> тесто должно остаться мягким. Лишняя мука сделает пирожки плотными и сухими.
+                <span class="source-badge">⏱ Урок 1: 03:14–03:19</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Вымешивание: <strong>15–20 минут</strong></span>
+              <span class="param-pill">🧈 Масло: <strong>120 г, комнатной температуры</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Расстойка теста</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отправьте тесто на расстойку в той же миске, в которой начинали вымешивать, и закройте полотенцем. Точное время автор не называет — ориентируйтесь на то, что тесто должно подойти.
+                <span class="source-badge">⏱ Урок 1: 03:25–03:34</span>
+              </p>
+              <p>
+                Дальше с тестом работают так же, как с холодным: его можно убрать в холодильник на 8 часов (максимум на 24), а перед формовкой довести до комнатной температуры. Готовое тесто хранится 48 часов в холодильнике и месяц в морозилке.
+                <span class="source-badge">⏱ DOCX</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🕒 Расстойка: <strong>До подхода теста, под полотенцем</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>48 ч в холодильнике, 1 мес в морозилке</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Мясо для начинки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Мясо отварите вместе со стеблем сельдерея, луком и морковью до мягкости. Одна луковица уходит целиком в бульон, морковь потом пойдёт в начинку.
+                <span class="source-badge">⏱ Урок 2: 00:01–00:11</span>
+              </p>
+              <p>
+                Варёное мясо измельчите в мясорубке или в комбайне.
+                <span class="source-badge">⏱ Урок 2: 00:38–00:45</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥩 Мясо: <strong>500 г, варить до мягкости</strong></span>
+              <span class="param-pill">🔪 Измельчение: <strong>Мясорубка или комбайн</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Сельдерей и лук обжариваем</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сельдерей нарежьте довольно мелко и обжарьте на растительном масле с добавлением сливочного. Жарьте чуть посильнее, затем добавьте сливочное масло и тушите до мягкости. Посолите, поперчите и остудите.
+                <span class="source-badge">⏱ Урок 2: 00:11–01:26</span>
+              </p>
+              <p>
+                Лук порежьте кубиком и обжарьте. Сельдерей очень хорошо сочетается с мясом, поэтому автор не жалеет его в начинке.
+                <span class="source-badge">⏱ Урок 2: 00:45–00:54</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Масло: <strong>Растительное + 50 г сливочного</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Сельдерей мягкий, лук золотистый</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Собираем мясную начинку</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Соедините провернутое мясо, обжаренный сельдерей, две крупные обжаренные луковицы и отварную морковь. Морковь с сельдереем очень хорошо работают вместе.
+                <span class="source-badge">⏱ Урок 2: 01:27–01:55</span>
+              </p>
+              <p>
+                Поперчите, досолите по вкусу. Если начинка получается очень сухой, несмотря на приличное количество лука, добавьте бульон, в котором варилось мясо. Для нелюбителей лука его можно провернуть в мясорубке.
+                <span class="source-badge">⏱ Урок 2: 01:55–02:21</span>
+              </p>
+              <div class="warning-box">
+                <strong>Начинка должна быть холодной:</strong> горячую начинку на тесто не кладут — она утяжелит заготовки и испортит расстойку.
+                <span class="source-badge">⏱ DOCX</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧅 Лук: <strong>2 крупные обжаренные луковицы</strong></span>
+              <span class="param-pill">🥕 Морковь: <strong>Отварная, в начинку</strong></span>
+              <span class="param-pill">💧 Если сухо: <strong>Добавить бульон</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Тесто на пирожки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Каждый кусочек теста взвесьте: на пирожок идёт 50 г теста. Начинки — примерно 30 г, можно чуть больше, до 40: начинки должно быть достаточно.
+                <span class="source-badge">⏱ Урок 3: 00:00–00:16</span>
+              </p>
+              <p>
+                В DOCX граммовки начинки на пирожок указаны как 25–30 г — берите по видео 30–40 г, если хотите пирожки с плотной начинкой.
+                <span class="source-badge">⏱ DOCX</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Тесто: <strong>50 г на пирожок</strong></span>
+              <span class="param-pill">🥩 Начинка: <strong>30–40 г (в DOCX 25–30 г)</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Треугольная формовка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Раскатайте лепёшку, выложите начинку. Возьмите тесто в трёх местах через равные расстояния — получится «значок Мерседеса». Защипните края, переверните пирожок, и он будет ровным.
+                <span class="source-badge">⏱ Урок 3: 00:16–00:55</span>
+              </p>
+              <p>
+                Защипы делайте крупными: так шов не разойдётся при выпечке.
+                <span class="source-badge">⏱ Урок 3: 00:57–01:12</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> секрет ровных треугольных пирожков — три равных расстояния между точками защипа. Сначала защипните, потом переверните швом вниз.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔺 Форма: <strong>Треугольник</strong></span>
+              <span class="param-pill">🎯 Приём: <strong>Три точки через равные расстояния</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Смазка, проколы, кунжут</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Смажьте пирожки яйцом. Обязательно проколите их ножом или вилкой — прямо до дна, чтобы выходил воздух. Делать это нужно быстро. Затем посыпьте кунжутом.
+                <span class="source-badge">⏱ Урок 3: 01:20–01:52</span>
+              </p>
+              <p>
+                После формовки дайте изделиям расстояться 15–20 минут.
+                <span class="source-badge">⏱ DOCX</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Смазка: <strong>Яйцо</strong></span>
+              <span class="param-pill">⏱ Расстойка: <strong>15–20 минут</strong></span>
+              <span class="param-pill">🌰 Посыпка: <strong>Кунжут</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Выпечка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте в заранее разогретой духовке: 170 °C с конвекцией (можно сразу на нескольких противнях) или 180 °C в режиме верх-низ. Маленькие пирожки — 18–25 минут.
+                <span class="source-badge">⏱ DOCX</span>
+              </p>
+              <p>
+                Готовые изделия храните 2 дня при комнатной температуре в бумажном пакете, холщовом мешочке или под полотенцем, в холодильнике — до 7 дней в плёнке.
+                <span class="source-badge">⏱ DOCX</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>170 °C конвекция или 180 °C верх-низ</strong></span>
+              <span class="param-pill">⏱ Время: <strong>18–25 минут</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>2 дня при комнатной температуре, до 7 дней в холодильнике</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Сметана — не только вкус:</strong> молочная кислота делает тесто похожим на сдобное песочное, появляется лёгкая слоистость.</li>
+                <li><strong>Сметана в два приёма:</strong> она разжижает тесто, поэтому вторую половину вводят, когда первая уже вмешана.</li>
+                <li><strong>Масло только в конце:</strong> каждая порция должна полностью войти в тесто, иначе оно расползётся.</li>
+                <li><strong>Тесто не крутое:</strong> если оно отстаёт от рук (например, на муке Макфа 12% белка) — так и должно быть, муку не подсыпают.</li>
+                <li><strong>Мясо со свиной грудинкой:</strong> постное мясо в начинке сухое, грудинка даёт сочность.</li>
+                <li><strong>Сельдерей усиливает мясо:</strong> овощ из бульона и обжаренный стебель дают начинке объём и аромат.</li>
+                <li><strong>Бульон вместо жира:</strong> если начинка сухая, её разбавляют бульоном от варки мяса, а не маслом.</li>
+                <li><strong>Взвешивайте тесто:</strong> одинаковые кусочки по 50 г — залог ровной выпечки.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Добавили муку «до крутого»:</strong> тесто становится плотным, пирожки — сухими. Оно должно оставаться мягким.</li>
+                <li><strong>Масло сразу всё:</strong> тесто разжижается, и кажется, что не хватает муки. Вводите порциями.</li>
+                <li><strong>Горячая начинка:</strong> её нельзя класть на тесто — заготовки расплывутся.</li>
+                <li><strong>Мелкие защипы:</strong> шов расходится при выпечке. Защипывайте крупно и плотно.</li>
+                <li><strong>Не прокололи пирожки:</strong> пар разрывает тесто. Прокалывайте ножом или вилкой до дна.</li>
+                <li><strong>Мало начинки:</strong> пирожок получается «пустым». Автор кладёт 30–40 г на 50 г теста.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> серия Надежды Зубовой — Урок_01.mp4 (замес теста со сметаной руками), Урок_02.mp4 (мясная начинка), Урок_03.mp4 (формовка треугольников, смазка, кунжут); расшифровка с таймкодами; файл «Пирожки с мясом.docx» с точными граммовками. Таймкоды на странице — реальные, из расшифровки.</li>
+              <li><strong>Мука:</strong> в DOCX диапазон 900–950 г. На странице взято 950 г — верхняя граница, чтобы калькулятор считал от одного числа.</li>
+              <li><strong>Сельдерей:</strong> в списке ингредиентов DOCX его нет, но в описании технологии он варится с мясом и обжаривается в начинку. В видео сельдерею уделено много времени. Поэтому на странице он есть с пометкой «по вкусу» и без граммовки.</li>
+              <li><strong>Начинка на пирожок:</strong> DOCX — 25–30 г, в видео автор говорит «примерно по 30 грамм, может чуть побольше, может по 40». На странице 30–40 г, оба варианта указаны.</li>
+              <li><strong>Выход:</strong> DOCX просит рассчитать граммовки так, чтобы вышло около 20 пирожков (50 г теста + 25–30 г начинки). Начинки действительно хватает примерно на 20 штук, а полного замеса теста (≈1,9 кг) при 50 г на пирожок — примерно на 37. Поэтому база калькулятора — один замес, а не 20 пирожков.</li>
+              <li><strong>Расстойка теста:</strong> в видео тесто закрывают полотенцем и оставляют подходить, но точное время не называют. В DOCX сказано, что выпечка и хранение — как для теста машинного замеса (8–24 ч в холодильнике, 48 ч хранения, месяц в морозилке).</li>
+              <li><strong>Выпечка:</strong> в Урок_03 выпечка не показана, режимы взяты из DOCX и общей технологии теста: 170 °C с конвекцией или 180 °C верх-низ, 18–25 минут.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице стоит кадр из Урок_03.mp4 (00:02:30) — готовые треугольные пирожки с кунжутом на противне.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

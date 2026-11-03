@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Синабоны с корицей, яблоком и маком — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Синабоны Надежды Зубовой на опаре: тесто на ночь в холодильник, раскатка 3 мм в пласт 45 × 50 см, три начинки — корица, яблоко и мак. Выпечка при 180 °C с конвекцией 25–30 минут, соус на маскарпоне с сахарной пудрой и сливками.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="sinabony">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Синабоны с корицей, яблоком и маком</h1>
+      <p class="recipe-lead">
+        Синабоны на опаре из одного замеса — сразу три вида: классические с корицей и сливочным маслом, с тушёным яблоком и с маком. Тесто уходит в холодильник минимум на 6 часов, поэтому его не нужно долго вымешивать до гладкости. Раскатка тонкая, 3 мм, в пласт 45 × 50 см; рулет скручивают плотно и режут на 12 частей. После выпечки — соус на маскарпоне и обжаренный рубленый орех.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~30 мин (плюс опара 15–20 мин)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч (замес, начинки, формовка, соус)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Холод 6–14 ч, расстойка 10–15 мин, выпечка 25–30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">8–16 ч с холодным брожением</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">12 синабонов из одной порции теста</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/sinabony.jpg" alt="Противень с готовыми синабонами, покрытыми белым соусом на маскарпоне, рядом тарелка с булками и посыпка из орехов" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (12 синабонов)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="12">12</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">синабонов</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База калькулятора — одна порция теста по DOCX: из неё выходит ровно 12 больших булок. Начинки даны каждая на полную порцию — если печёте все три вида из одного замеса, тесто делят на три части, и каждой начинки нужно примерно треть. Соуса одной порции хватает на один замес, при умеренном покрытии — на два.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">12</span> синабонов</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Список на одну порцию теста, соус и все три начинки: бакалея и молочное в первой колонке, яблоки, мак и орехи — во второй. Если делаете только один вид, берите соответствующую начинку.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Бакалея, молочное, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="520" data-unit="г">520 г</span>
+                <span class="shopping-hint">В DOCX 520–550 г: на Макфе уходит 500–530 г, всё зависит от влажности муки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Дрожжи прессованные</strong>:
+                <span class="shopping-qty" data-base-amount="18" data-unit="г">18 г</span>
+                <span class="shopping-hint">Или 5 г сухих инстантных — но с ними схема работы другая, опара не нужна</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">80 г в тесто + 80 г с корицей + 70 г с маком + 30 г в яблоки; ещё 50 г — на посыпку яблочного пласта</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар коричневый</strong>:
+                <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span>
+                <span class="shopping-hint">Для начинки с корицей; в DOCX 80–120 г — 120 г для очень сладких булок</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="8" data-unit="г">8 г</span>
+                <span class="shopping-hint">Соли в рецепте довольно много — она держит глютен, уменьшать не стоит</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Любой жирности; для опары нужно тёплое, около 36 °C</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span>
+                <span class="shopping-hint">100 г без скорлупы, комнатной температуры</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">80 г в тесто + 65 г с корицей + 70 г с маком + 85 г с яблоком. Жирность и свежесть принципиальны</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Маскарпоне</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Для соуса; можно заменить творожным сыром, но пудры тогда больше</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                <span class="shopping-hint">В соус, просеять</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки</strong>:
+                <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                <span class="shopping-hint">Любой жирности. Замена: 60 г сметаны или 50 г молока — соус будет жиже</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍏 Яблоки, мак, орехи</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яблоки зелёные крупные</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span>
+                <span class="shopping-hint">На всю порцию с яблоком; если делите замес на три вида — хватит одного яблока</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Корица молотая</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="г">5 г</span>
+                <span class="shopping-hint">В DOCX 3–5 г; корицу можно исключить совсем</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мак сухой</strong>:
+                <span class="shopping-qty" data-base-amount="25" data-unit="г">25 г</span>
+                <span class="shopping-hint">Не замачивать; в DOCX 25–30 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ванильный сахар</strong>:
+                <span class="shopping-qty" data-base-amount="7" data-unit="г">7 г</span>
+                <span class="shopping-hint">В яблочную начинку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Орехи для посыпки</strong> — по вкусу
+                <span class="shopping-hint">Обжаренные, рубленые; посыпают уже покрытые соусом булки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Крепкий алкоголь (опционально)</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="ст. л.">2 ст. л.</span>
+                <span class="shopping-hint">В яблочную начинку — ром, коньяк, бренди или виски. Спирт выпаривается, остаётся пряный аромат</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — пергамент, пищевая плёнка
+                <span class="shopping-hint">Плёнкой накрывают тесто на ночь, пергамент — на противень (смазывать не нужно)</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Тесто (12 булок)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="520" data-unit="г">520 г</span> — Мука пшеничная в/с
+              <span class="ingredient-note">Просейте заранее; в DOCX 520–550 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span> — Яйца (100 г)
+              <span class="ingredient-note">Комнатной температуры, взбить венчиком до однородности</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="8" data-unit="г">8 г</span> — Соль
+              <span class="ingredient-note">Обычная каменная, не уменьшать: она помогает глютену</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Молоко
+              <span class="ingredient-note">Любой жирности; для опары — тёплое, около 36 °C</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Масло сливочное 82,5%
+              <span class="ingredient-note">Размягчённое, вводится последним</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="18" data-unit="г">18 г</span> — Дрожжи прессованные
+              <span class="ingredient-note">Или 5 г сухих — тогда опару не делают, дрожжи вводят в муку</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка с корицей</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="65" data-unit="г">65 г</span> — Масло сливочное размягчённое
+              <span class="ingredient-note">Масло-помада: мажется, но не течёт</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Сахар коричневый
+              <span class="ingredient-note">В DOCX 80–120 г: 120 г — для любителей очень сладкого</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="г">5 г</span> — Корица молотая
+              <span class="ingredient-note">В DOCX 3–5 г. Корицу можно исключить совсем</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка с яблоком</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span> — Яблоки зелёные крупные
+              <span class="ingredient-note">Резать мелким кубиком; кожицу можно оставить</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="85" data-unit="г">85 г</span> — Масло сливочное размягчённое
+              <span class="ingredient-note">На смазку пласта; часть идёт на обжарку яблок</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Сахар в яблоки
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сахар на посыпку пласта
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Ванильный сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="ст. л.">2 ст. л.</span> — Крепкий алкоголь (опционально)
+              <span class="ingredient-note">Ром, коньяк, бренди или виски; полностью выпаривается</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка с маком</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Масло сливочное размягчённое
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Мак сухой
+              <span class="ingredient-note">Не замачивать; в DOCX 25–30 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Сахар
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Соус и посыпка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Маскарпоне
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Сливки
+              <span class="ingredient-note">Или 60 г сметаны, или 50 г молока — соус будет жиже</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Орехи обжаренные рубленые
+              <span class="ingredient-note">Посыпать сверху соуса</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Опара: тёплое молоко, дрожжи, мука</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отлейте часть молока (на одну порцию — примерно 50 г), подогрейте до 36 °C, добавьте сахар и раскрошенные дрожжи, размешайте. Всыпьте часть муки — около 45 г — и перемешайте. По консистенции получится густая сметана; комочки муки и дрожжей — нормально, дрожжи сами с ними разберутся.
+                <span class="source-badge">⏱ Урок 1: 09:28–10:24</span>
+              </p>
+              <p>
+                Оставьте при комнатной температуре на 15–20 минут, никуда не убирая и не подогревая. Опара должна увеличиться примерно вдвое и «дышать» пузырями.
+                <span class="source-badge">⏱ Урок 1: 10:31–23:35</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не ставьте опару на батарею и в тёплую духовку:</strong> дрожжи — живой организм, им достаточно комнатной температуры, даже если в комнате всего 20 °C.
+                <span class="source-badge">⏱ Урок 1: 10:31–10:51</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Молоко: <strong>около 36 °C</strong></span>
+              <span class="param-pill">⏱ Опара: <strong>15–20 минут</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Выросла вдвое, пузырится</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Сахар, соль, молоко, половина муки, яйца</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В опару высыпьте весь сахар и соль, влейте оставшееся молоко и перемешайте — нужно, чтобы сахар разошёлся и опара «слушалась». Затем всыпьте примерно половину муки и размешайте лопаткой.
+                <span class="source-badge">⏱ Урок 1: 23:45–27:34</span>
+              </p>
+              <p>
+                Добавьте взбитые яйца и продолжайте вводить муку — но не всю: часть оставьте, она пойдёт после масла.
+                <span class="source-badge">⏱ Урок 1: 28:56–31:02</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> работайте лопаткой, а не венчиком: венчик рвёт глютеновые цепи, и тесто получается с «рваной» текстурой. С планетарным миксером замешивайте крюком.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Инструмент: <strong>Лопатка, затем руки</strong></span>
+              <span class="param-pill">🥚 Яйца: <strong>Комнатной температуры, сразу все</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Масло в конце замеса</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Когда мука почти вся вошла и тесто держится, введите всё размягчённое масло по рецепту — 80 г. Вымешивайте, пока масло не соединится с тестом; на это уходит 15–20 минут, а тесто должно стать гладким и отлипать от рук.
+                <span class="source-badge">⏱ Урок 1: 34:45–35:31; Урок 2: 06:42–06:50</span>
+              </p>
+              <div class="warning-box">
+                <strong>Почему масло последним:</strong> если жир окутает муку раньше, влага «запечатается» внутри, и выпечка после остывания станет жёсткой и начнёт отсекать масло. Порядок: жидкость и мука — потом жир.
+                <span class="source-badge">⏱ Урок 1: 17:08–17:45</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Масло: <strong>80 г, 82,5%, размягчённое</strong></span>
+              <span class="param-pill">⏱ Замес: <strong>15–20 минут</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Гладкое, отлипает от рук</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Холодильник минимум на 6 часов</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Накройте миску пищевой плёнкой и уберите в холодильник минимум на 6 часов. Автор оставляет тесто на ночь и работает с ним утром: за это время дрожжи сделают свою работу, а вымешивать до глютенового окна не придётся.
+                <span class="source-badge">⏱ Урок 1: 56:00–56:39</span>
+              </p>
+              <p>
+                Достаньте тесто, дайте ему нагреться до комнатной температуры и разделите на части — по одной на каждый вид начинки. Складки от подкатки прячьте вниз: снаружи должна остаться гладкая сторона.
+                <span class="source-badge">⏱ Урок 2: 00:06–00:11; 24:09–24:27</span>
+              </p>
+              <div class="warning-box">
+                <strong>Температура в холодильнике +4 °C и выше:</strong> при +2 °C дрожжи впадают в анабиоз и тесто не поднимется. Проверьте свой холодильник — это частая причина неудач.
+                <span class="source-badge">⏱ Урок 2: 21:27–21:47</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Холод: <strong>минимум 6 часов</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>+4 °C и выше</strong></span>
+              <span class="param-pill">📦 Дальше: <strong>До комнатной температуры</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Раскатка: пласт 45 × 50 см, 3 мм</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Раскатайте тесто в прямоугольник — автор ориентируется на 45 × 50 см при весе куска около 670 г и толщине 3 мм. Муки для подпыла берите минимум, только чтобы скалка шла легко.
+                <span class="source-badge">⏱ Урок 2: 18:55–27:12</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> стремитесь именно к прямоугольнику — тогда не придётся обрезать края и все булки получатся ровными. Если тесто «шевелится» назад при раскатке, это хороший признак: глютен развился.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Пласт: <strong>45 × 50 см</strong></span>
+              <span class="param-pill">📐 Толщина: <strong>3 мм</strong></span>
+              <span class="param-pill">⚖ Кусок теста: <strong>≈670 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Классическая начинка: масло, сахар, корица</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Размягчённое масло (65 г) распределите по всему пласту — оно даёт сдобу и не даёт слоям слипаться. Сверху равномерно рассыпьте коричневый сахар, затем корицу: её нужно немного, иначе она забьёт вкус.
+                <span class="source-badge">⏱ Урок 2: 29:00–34:31</span>
+              </p>
+              <div class="warning-box">
+                <strong>Классические синабоны часто слишком сладкие:</strong> в среднем рецепте на такое количество теста идёт около 150 г сахара. Автор даёт 80–120 г — 80 г для умеренно сладких булок, 120 г для очень сладких.
+                <span class="source-badge">⏱ Урок 2: 31:08–31:54</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> вместо сливочного масла можно взять растительное, но примерно вдвое меньше — слои тоже не слипнутся, хотя это будет уже не совсем синабон.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Масло: <strong>65 г, масло-помада</strong></span>
+              <span class="param-pill">🍬 Сахар: <strong>80–120 г</strong></span>
+              <span class="param-pill">🌿 Корица: <strong>3–5 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Скрутка и нарезка на 12 частей</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Скручивайте с дальнего края, плотно: сначала маленький валик, потом подкатывайте — тесто само захочет свернуться. Ничего не защипывайте, иначе получится не синабон, а розочка, и тесто начнёт раскрываться.
+                <span class="source-badge">⏱ Урок 2: 34:39–36:22</span>
+              </p>
+              <p>
+                Нарежьте рулет на 12 частей и выложите вертикально, с запасом между булками: им нужно место, чтобы расти. Высота каждой булки — 3,5–4 см. Ставьте на противень с пергаментом или в кольцо/форму — разницы нет.
+                <span class="source-badge">⏱ Урок 2: 37:08–38:50</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> хотите булки поменьше — делите на большее число частей и раскатывайте сильнее. Бумагу смазывать не нужно; если прилипает, дело в бумаге.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔪 Частей: <strong>12 из полной порции</strong></span>
+              <span class="param-pill">📏 Высота булки: <strong>3,5–4 см</strong></span>
+              <span class="param-pill">🍩 Посадка: <strong>Вертикально, с запасом</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Начинка с яблоком: притушить, остудить</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Яблоки нарежьте мелким кубиком — крупно нельзя, булки получатся некрасивыми. Припустите их на сливочном масле на среднем огне, присыпьте ванильным сахаром и сахаром, добавьте пару ложек крепкого алкоголя и дайте ему выпариться. Кусочки должны остаться, а жидкости на дне — не быть.
+                <span class="source-badge">⏱ Урок 1: 59:01–01:12:45</span>
+              </p>
+              <p>
+                Полностью остудите. Остывшую начинку выложите на пласт, смазанный маслом и посыпанный сахаром, и распределите ровным слоем.
+                <span class="source-badge">⏱ Урок 2: 01:02:45–01:03:28</span>
+              </p>
+              <div class="warning-box">
+                <strong>Горячую начинку в тесто нельзя:</strong> она начнёт печь тесто и запустит ненужное брожение. Только полностью остывшая.
+                <span class="source-badge">⏱ Урок 2: 01:11:02–01:11:11</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> кожицу можно оставить — тогда яблоко чувствуется плотнее; хотите мягкую, почти неощутимую начинку — очистите. Алкоголь необязателен, он нужен только «для взрослого» пряного оттенка.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍏 Яблоки: <strong>Мелкий кубик</strong></span>
+              <span class="param-pill">🔥 Огонь: <strong>Средний, до испарения жидкости</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Кусочки целы, на дне сухо</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Начинка с маком</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Пласт смажьте размягчённым маслом (70 г), посыпьте сахаром (70 г) и сухим маком (25–30 г). Мак не замачивают — он идёт как есть.
+                <span class="source-badge">⏱ Урок 1: 08:32–08:56</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> вместо мака и яблок можно взять курагу, изюм, орехи или чернослив. И даже просто масло с сахаром — тоже будет отлично.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌰 Мак: <strong>25–30 г, сухой</strong></span>
+              <span class="param-pill">🧈 Масло: <strong>70 г</strong></span>
+              <span class="param-pill">🍬 Сахар: <strong>70 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Расстойка и выпечка при 180 °C</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Дайте булкам расстояться 10–15 минут — они должны увеличиться примерно в полтора раза. Духовку разогрейте до 180 °C с конвекцией; без конвекции — 180 °C «верх-вниз».
+                <span class="source-badge">⏱ Урок 2: 01:01:34–01:01:47; 01:16:27</span>
+              </p>
+              <p>
+                Выпекайте 25 минут. Синабоны с яблоком пекутся дольше — не менее 30 минут, потому что начинка влажная.
+                <span class="source-badge">⏱ Урок 2: 01:27:03–01:27:18</span>
+              </p>
+              <div class="warning-box">
+                <strong>В газовой духовке:</strong> пеките только на одном противне. С конвекцией можно ставить два противня сразу.
+                <span class="source-badge">⏱ Урок 2: 01:07:08–01:07:11</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Расстойка: <strong>10–15 минут</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>180 °C конвекция</strong></span>
+              <span class="param-pill">⏱ Время: <strong>25 мин; с яблоком — 30 мин</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Соус на маскарпоне</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Взбейте 200 г маскарпоне с 70 г просеянной сахарной пудры, затем влейте 70 г сливок и объедините в соус. Если получилось слишком густо — добавьте ещё сливок, сметаны или молока.
+                <span class="source-badge">⏱ Урок 3: 06:44–13:12</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не перебейте маскарпоне:</strong> от долгого взбивания он «встаёт» и становится крупинками. Взбивайте на небольшой скорости и недолго.
+                <span class="source-badge">⏱ Урок 3: 10:59–11:01</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> маскарпоне — потому что он не кислый и не солёный. Творожный сыр тоже подойдёт, но пудры тогда нужно больше. Сливки можно заменить сметаной (60 г) или молоком (50 г) — соус будет жиже. Хранится соус 72 часа в холодильнике.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧀 Маскарпоне: <strong>200 г</strong></span>
+              <span class="param-pill">🍬 Пудра: <strong>70 г, просеять</strong></span>
+              <span class="param-pill">🥛 Сливки: <strong>70 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Покрытие, орехи и подача</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Синабоны должны полностью остыть — только тогда наносите соус. Намазывайте так, чтобы рисунок булки угадывался, а соус стекал по виткам. Сверху посыпьте обжаренным рубленым орехом.
+                <span class="source-badge">⏱ Урок 3: 17:21–18:19</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> одной порции соуса хватает на целый замес, если поливать от души; при умеренном покрытии — на два замеса. Застывший соус остаётся сверху и почти не пачкает руки.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Булки: <strong>Полностью остывшие</strong></span>
+              <span class="param-pill">🥜 Посыпка: <strong>Обжаренный рубленый орех</strong></span>
+              <span class="param-pill">📦 Соус: <strong>72 часа в холодильнике</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Три группы ингредиентов:</strong> сухие, влажные и жир. Сначала жидкость с мукой, солью, сахаром и яйцами, жир — в самом конце.</li>
+                <li><strong>Соль не уменьшать:</strong> она помогает глютену стать прочным, а сахар даёт румяную корочку и срок годности.</li>
+                <li><strong>Яйца — это жидкость:</strong> жира в них мало, поэтому они вводятся на первом этапе вместе с молоком.</li>
+                <li><strong>Опара только для прессованных дрожжей:</strong> с сухими опару не делают — дрожжи сразу соединяют с мукой, остальные количества те же.</li>
+                <li><strong>Холод вместо вымешивания:</strong> минимум 6 часов в холодильнике заменяют долгое вымешивание до глютенового окна.</li>
+                <li><strong>Масло-помада:</strong> для начинки масло должно мазаться, но не течь. Если оно холодное — прогрейте импульсами по 10 секунд.</li>
+                <li><strong>Плотная скрутка:</strong> серединка булки должна быть без дырки, поэтому рулет скручивают туго и не защипывают.</li>
+                <li><strong>Место для роста:</strong> булки ставят вертикально с промежутками — иначе слипнутся в один пирог.</li>
+                <li><strong>Соус только на остывшие:</strong> на горячих булках он растечётся и впитается.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Греть опару на батарее:</strong> дрожжи гибнут или работают слишком быстро.</li>
+                <li><strong>Мешать венчиком:</strong> рвутся глютеновые цепи, текстура получается «рваной».</li>
+                <li><strong>Масло в начале замеса:</strong> выпечка после остывания жёсткая и отсекает масло.</li>
+                <li><strong>Холодильник холоднее +4 °C:</strong> тесто не поднимется.</li>
+                <li><strong>Толстый пласт:</strong> вместо 3 мм получается 6–7 мм — булки не пропекутся и будут клёклыми.</li>
+                <li><strong>Защипнуть край рулета:</strong> получатся «розочки», а не синабоны.</li>
+                <li><strong>Горячая яблочная начинка:</strong> тесто начинает печься и мокнет.</li>
+                <li><strong>Мало места между булками:</strong> они слипаются и не пропекаются равномерно.</li>
+                <li><strong>Долгое взбивание маскарпоне:</strong> соус становится крупинками.</li>
+                <li><strong>Соус на горячие булки:</strong> стекает и впитывается, декор теряется.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 (опара, замес, яблочная начинка), Урок_02.mp4 (раскатка, начинки, скрутка, выпечка), Урок_03.mp4 (соус, покрытие); расшифровка с таймкодами «Расшифровка Синабоны.csv»; файл «Синабоны.docx» с граммовками теста, трёх начинок и соуса. Таймкоды на странице — реальные, из расшифровки.</li>
+              <li><strong>Опара:</strong> в DOCX её нет отдельной строкой — она собирается из общего количества продуктов. В видео автор на двойную порцию берёт 100 г молока, столовую ложку сахара, 36 г дрожжей и 90 г муки; на одну порцию это половина. На странице количества опары даны как часть общего веса, а не дополнительно.</li>
+              <li><strong>Мука:</strong> DOCX — 520–550 г; в видео автор уточняет, что на Макфе уходит 500–530 г, и берёт с запасом, потому что влажность муки разная. На странице база 520 г.</li>
+              <li><strong>Сахар с корицей:</strong> DOCX — 80–120 г, видео — «взяла 100 г, среднее между 80 и 120». На странице 80 г как база с пометкой диапазона.</li>
+              <li><strong>Масло в яблочной начинке:</strong> DOCX даёт 85 г размягчённого масла; в видео около 20 г идёт на обжарку яблок, остальное — на смазку пласта. Точного разделения автор не называет.</li>
+              <li><strong>Яблочный сахар:</strong> 30 г добавляется при обжарке, 50 г — на посыпку пласта (в видео: «30 граммов в начинку, 50 граммов — в саму начинку»).</li>
+              <li><strong>Дрожжи:</strong> DOCX — 18 г прессованных или 5 г сухих, но с сухими «работать по-другому», без опары. В видео: на двойной замес 36 г прессованных.</li>
+              <li><strong>Время выпечки:</strong> 25 минут для корицы и мака, не менее 30 — для яблока. Первый противень автор ставит на 25 минут, второй — на 30.</li>
+              <li><strong>Пробелы:</strong> точный вес готовой булки не назван; в DOCX нет времени расстойки — 10–15 минут взяты из видео; вес куска теста (≈670 г) и высота булки (3,5–4 см) названы только в видео.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице стоит кадр из Урок_03.mp4 с противнем готовых синабонов под соусом. Пользователь сообщил, что фото в любом случае переделает.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

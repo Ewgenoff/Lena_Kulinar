@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Школьные песочные пирожные с шоколадной помадкой — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Песочные пирожные как в школьной столовой, только на сливочном масле: рассыпчатый пласт с джемом, шоколадная сахарная помадка и декор американским айсингом. Технология с граммовками, температурами и варкой помадки до 115 °C.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body data-recipe-id="shkolnye-pesochnye-pirozhnye">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Школьные песочные пирожные с шоколадной помадкой</h1>
+      <p class="recipe-lead">
+        Те самые пирожные из школьной столовой, только на сливочном масле и сахарной пудре — поэтому они нежнее и рассыпаются во рту, а не стоят колом. Пласт песочного теста печётся одним коржом, режется пополам, прослаивается джемом, сверху ложится шоколадная сахарная помадка и нехитрые цветочки из американского айсинга. Из авторской раскладки выходит 12 пирожных.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">25 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~50 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">~2 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~3 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">12 пирожных</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/pesochnye-pirozhnye.jpg" alt="Три песочных пирожных с шоколадной помадкой, украшенных кремовыми цветком, ягодой и подсолнухом" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (12 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="12">12</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">пирожных</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Все граммовки пересчитываются от 12 пирожных. База — один противень 30×40 см: пласт раскатывается целиком, печётся одним коржом, режется пополам и потом на 12 частей. Для другого количества нужен пропорционально больший противень.
+          </p>
+        </div>
+
+        <!-- Переключатель источников -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">12</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех продуктов с учетом выбранного масштаба. Позиции, которые идут в два компонента (масло, пудра), уже сложены и расписаны в подсказках.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: масло, яйца, молоко -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧈 Масло, яйца, молоко</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="450" data-unit="г">450 г</span>
+                <span class="shopping-hint">270 г в тесто + 180 г в американский айсинг; всё комнатной температуры</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С0</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span>
+                <span class="shopping-hint">Обязательно комнатной температуры — холодные застывают масло и ломают эмульсию</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="ст. л.">1 ст. л.</span>
+                <span class="shopping-hint">В айсинг; на видео автор льёт две ложки — можно добавить ещё по консистенции</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: бакалея, джем, декор -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧂 Мука, сахар, джем, декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="450" data-unit="г">450 г</span>
+                <span class="shopping-hint">Берите муку с белком не больше 10 г на 100 г — тесто будет нежнее</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра (всего)</strong>:
+                <span class="shopping-qty" data-base-amount="530" data-unit="г">530 г</span>
+                <span class="shopping-hint">170 г в тесто + 360 г в айсинг. В тесто пудру можно заменить сахаром, но пирожные будут ниже</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">Только в сахарную помадку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Разрыхлитель</strong>:
+                <span class="shopping-qty" data-base-amount="8" data-unit="г">8 г</span>
+                <span class="shopping-hint">Идёт в муку вместе с щепоткой соли</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Джем или повидло</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Хороший покупной: яблоко-абрикос, без лишних добавок. Густой подогрейте перед нанесением</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="ч. л.">2 ч. л.</span>
+                <span class="shopping-hint">В помадку для цвета; лучше алкализованное, подойдёт и «Золотой ярлык»</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимонный сок</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="ч. л.">2 ч. л.</span>
+                <span class="shopping-hint">Вводится в сироп при 110 °C; можно заменить лимонной кислотой, растворённой в воде</span>
+              </div>
+            </li>
+            <li class="shopping-item" style="border-style: dashed;"><div class="shopping-item-content">
+                <strong>Соль и ваниль</strong> (опционально)
+                <span class="shopping-hint">Щепотка соли в муку; ваниль — паста, экстракт, ванильный сахар или ванилин</span>
+              </div>
+            </li>
+            <li class="shopping-item" style="border-style: dashed;"><div class="shopping-item-content">
+                <strong>Расходники</strong> (опционально) — пергамент, два кондитерских мешка, насадки
+                <span class="shopping-hint">Французская звезда 8 мм, лист № 69–70, «галочка» № 350, № 89 — по желанию</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Песочное тесто</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="270" data-unit="г">270 г</span> — Масло сливочное 82,5%
+              <span class="ingredient-note">Очень хорошо размягчённое, комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="170" data-unit="г">170 г</span> — Сахарная пудра
+              <span class="ingredient-note">Просеянная; можно заменить сахаром, но пудра даёт более пышное тесто</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span> — Яйца категории С0
+              <span class="ingredient-note">Комнатной температуры, вводятся по одному</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="450" data-unit="г">450 г</span> — Мука пшеничная в/с
+              <span class="ingredient-note">Белок не более 10 г на 100 г муки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="8" data-unit="г">8 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Щепотка — Соль
+              <span class="ingredient-note">Без количества: не пересчитывается</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Ваниль или ванилин
+              <span class="ingredient-note">Паста, экстракт, ванильный сахар — разницы для теста нет</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Джем или повидло
+              <span class="ingredient-note">Густой джем подогрейте, чтобы легче распределялся</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Сахарная помадка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Сахар-песок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Вода
+              <span class="ingredient-note">Плюс ледяная вода в миске для резкого охлаждения сотейника</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="ч. л.">2 ч. л.</span> — Лимонный сок
+              <span class="ingredient-note">Вводится при 110 °C</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="ч. л.">2 ч. л.</span> — Какао
+              <span class="ingredient-note">1–2 ч. л. по желаемой интенсивности цвета</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Американский айсинг (декор)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="180" data-unit="г">180 г</span> — Масло сливочное
+              <span class="ingredient-note">Комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="360" data-unit="г">360 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ст. л.">1 ст. л.</span> — Молоко
+              <span class="ingredient-note">На видео — две ложки; ориентируйтесь на консистенцию</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка и духовка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Поставьте разогреваться духовку: 200 °C с конвекцией. Если конвекции нет — режим «верх-вниз», тоже 200 °C. Масло и яйца заранее достаньте, чтобы они были комнатной температуры: это не формальность, а условие нормального теста. Пергамент вырежьте под свой противень — стандартный размер 30×40 см.
+                <span class="source-badge">⏱ Урок 1: 00:12–00:13</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем греть заранее:</strong> пласт выпекается всего 10–12 минут, духовка должна быть полностью прогрета к моменту, когда тесто ляжет на противень.
+                <span class="source-badge">⏱ Урок 1: 00:13–00:13</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Духовка: <strong>200 °C</strong></span>
+              <span class="param-pill">🔄 Режим: <strong>конвекция или верх-вниз</strong></span>
+              <span class="param-pill">📐 Противень: <strong>30×40 см</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Масло с пудрой до бела</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В миске соедините размягчённое сливочное масло и просеянную сахарную пудру. Сначала размешайте на небольшой скорости — иначе пудра разлетится, — а затем включите максимальную и взбивайте до бела. Ручного миксера достаточно; у планетарного работайте насадкой-лопатой.
+                <span class="source-badge">⏱ Урок 1: 00:16–00:20</span>
+              </p>
+              <div class="tip-box">
+                <strong>Почему масса белеет:</strong> не из-за химической реакции, а потому что в масло набивается воздух. Именно он потом даёт пышность и нежность пирожным.
+                <span class="source-badge">⏱ Урок 1: 00:20–00:20</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Масло: <strong>270 г</strong></span>
+              <span class="param-pill">🍬 Пудра: <strong>170 г</strong></span>
+              <span class="param-pill">🌀 Скорость: <strong>от малой к максимальной</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Яйца по одному — эмульсия</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Добавьте первое яйцо и взбивайте до полного объединения: жидкости на дне быть не должно, масса остаётся густой. Только после этого вводите второе яйцо. В этот момент и готовится эмульсия — соединение масла и воды, которую несёт яйцо.
+                <span class="source-badge">⏱ Урок 1: 00:20–00:22</span>
+              </p>
+              <div class="warning-box">
+                <strong>Холодное яйцо всё испортит:</strong> попав в масло, оно начнёт его застывать, и однородной системы не получится. Поэтому и масло, и яйца — только комнатной температуры.
+                <span class="source-badge">⏱ Урок 1: 00:21–00:22</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Яйца: <strong>2 шт. по одному</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>жидкости на дне нет</strong></span>
+              <span class="param-pill">🌀 Миксер: <strong>до полного объединения</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Сухие ингредиенты</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Муку соедините с солью и разрыхлителем и перемешайте — лучше сразу просейте всё вместе. Добавьте ваниль. Высыпьте сухую смесь в масляную массу за один приём и объедините миксером на небольшой скорости.
+                <span class="source-badge">⏱ Урок 1: 00:23–00:23</span>
+              </p>
+              <div class="warning-box">
+                <strong>Мешайте недолго:</strong> как только мука начнёт намокать, тесто станет липнуть, и захочется подсыпать ещё муки. Этого делать не нужно — иначе тесто забьётся и пирожные выйдут жёсткими.
+                <span class="source-badge">⏱ Урок 1: 00:24–00:24</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Мука: <strong>450 г</strong></span>
+              <span class="param-pill">🥄 Разрыхлитель: <strong>8 г</strong></span>
+              <span class="param-pill">🧂 Соль: <strong>щепотка</strong></span>
+              <span class="param-pill">🌀 Миксер: <strong>низкая скорость</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Комок теста и отдых в холоде</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Когда тесто собралось в разрозненные частички, домешайте его руками и слепите комок — он должен быть мягким, податливым и не липнуть к рукам. Заверните в пищевую плёнку и уберите в холодильник на 30 минут, в идеале на час.
+                <span class="source-badge">⏱ Урок 1: 00:25–00:25</span>
+              </p>
+              <div class="tip-box">
+                <strong>Можно и дольше:</strong> тесто спокойно живёт в холодильнике до суток и не превращается в камень. Его же можно заморозить, а потом печь прямо из морозилки, без размораживания.
+                <span class="source-badge">⏱ Урок 1: 00:32–00:32</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Отдых: <strong>30 мин – 1 ч</strong></span>
+              <span class="param-pill">❄ Хранение: <strong>до суток в холодильнике</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>тесто не липнет</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Раскатка между пергаментами</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Раскатайте тесто между двумя листами пергамента в пласт по размеру противня — 30×40 см, толщиной примерно 1 см. Пергамент можно приподнимать во время раскатки, а излишки теста с краёв переносить туда, где его не хватает. Затем уберите пласт вместе с бумагой в холодильник минут на 10.
+                <span class="source-badge">⏱ Урок 1: 00:28–00:30</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем два листа:</strong> так не нужно подсыпать муку, и тесто не забивается. А охлаждение стабилизирует масло — иначе при выпечке оно вытечет из пласта.
+                <span class="source-badge">⏱ Урок 1: 00:30–00:33</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Толщина: <strong>~1 см</strong></span>
+              <span class="param-pill">📐 Размер: <strong>30×40 см</strong></span>
+              <span class="param-pill">❄ Охлаждение: <strong>10 мин</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Выпечка пласта</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Снимите верхний пергамент и отправьте пласт в разогретую духовку. Выпекайте 10–12 минут при 200 °C с конвекцией; в газовой духовке — около 15 минут. Сильного румянца ждать не нужно: готовый корж светлый, с лёгким загаром.
+                <span class="source-badge">⏱ Урок 1: 00:43–00:43</span>
+              </p>
+              <p>
+                Проверка готовности: надавите пальцем — след медленно восстанавливается. В бисквите он пружинит сильнее, у песочного теста реакция слабее, но корж уже готов.
+                <span class="source-badge">⏱ Урок 1: 00:54–00:54</span>
+              </p>
+              <div class="warning-box">
+                <strong>Смотрите, чтобы не пригорело:</strong> пласт тонкий, и лишние две минуты делают его сухим и горьким. Лучше вынуть раньше и проверить.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>200 °C</strong></span>
+              <span class="param-pill">⏱ Время: <strong>10–12 мин (газ ~15)</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>лёгкий румянец, след восстанавливается</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Остывание и сборка с джемом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Остывший пласт разрежьте пополам. Одну половину переверните гладкой стороной вверх — на неё удобнее ложится помадка, — распределите 250 г джема и накройте второй половиной. Придавите, чтобы коржи схватились, и уберите в холодильник минимум на час: за это время пирожное стабилизируется и станет плотным.
+                <span class="source-badge">⏱ Урок 1: 00:44–00:48</span>
+              </p>
+              <div class="tip-box">
+                <strong>Джем — покупной:</strong> автор специально берёт качественный готовый джем, как в тех самых школьных пирожных на подварке. Густой, например сливовый, подогрейте на водяной бане или в микроволновке.
+                <span class="source-badge">⏱ Урок 1: 00:45–00:46</span>
+              </div>
+              <div class="warning-box">
+                <strong>Джема не больше 250 г:</strong> если положить 400–500 г, он полезет по краям, и пирожное будет некрасиво нарезать. 250 г и так больше, чем клали в советские пирожные.
+                <span class="source-badge">⏱ Урок 1: 00:47–00:47</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍓 Джем: <strong>250 г</strong></span>
+              <span class="param-pill">❄ Стабилизация: <strong>минимум 1 ч</strong></span>
+              <span class="param-pill">🌙 Можно: <strong>на ночь под плёнкой</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Варка сахарной помадки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сахар и воду соедините в сотейнике и нагревайте, помешивая, пока сахар не растворится, — к моменту закипания крупинок быть не должно. Доведите сироп до 110 °C, влейте две чайные ложки лимонного сока, перемешайте и варите до 115 °C. Сразу снимите сотейник и поставьте его в миску с ледяной водой на 2–3 минуты, чтобы температура пошла вниз и сироп не переварился.
+                <span class="source-badge">⏱ Урок 1: 00:50–00:59</span>
+              </p>
+              <div class="warning-box">
+                <strong>Без термометра — никак:</strong> помадку на глаз варят только те, кто делает это каждый день. Нагрели выше 115 °C — помадка не закристаллизуется правильно; если сомневаетесь в градуснике, лучше снять раньше, чем позже.
+                <span class="source-badge">⏱ Урок 1: 00:58–00:58</span>
+              </div>
+              <div class="tip-box">
+                <strong>Это по сути инвертный сахар:</strong> уварка сахара с водой и кислотой. Лимонную кислоту использовать можно, но её нужно заранее растворить в небольшом количестве воды.
+                <span class="source-badge">⏱ Урок 1: 00:56–00:57</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍬 Сахар и вода: <strong>300 г / 100 г</strong></span>
+              <span class="param-pill">🌡 Этапы: <strong>110 °C → сок → 115 °C</strong></span>
+              <span class="param-pill">❄ Охлаждение: <strong>2–3 мин в ледяной воде</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Взбивание помадки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Тёплый сироп (около 80–90 °C) взбивайте ручным миксером. Сначала он просто густеет и остаётся прозрачным, потом начинает белеть, а ближе к концу лезет вверх по венчикам — это признак, что почти готово. Готово, когда помадка стала белой, матовой и тянется с венчика нитями.
+                <span class="source-badge">⏱ Урок 1: 01:01–01:06</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не блендером:</strong> к концу помадка густеет настолько, что блендер можно сжечь. Нужен именно миксер.
+                <span class="source-badge">⏱ Урок 1: 01:02–01:02</span>
+              </div>
+              <div class="tip-box">
+                <strong>Помадка «встала»:</strong> она мгновенно кристаллизуется и становится твёрдой — намазать её сразу не получится, и это нормально. По-хорошему её надо выдержать 4–6 часов в холодильнике под плёнкой, но можно работать и сразу, как на уроке.
+                <span class="source-badge">⏱ Урок 1: 01:06–01:09</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌀 Инструмент: <strong>ручной миксер</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>белая, матовая, тянется нитями</strong></span>
+              <span class="param-pill">❄ Выдержка: <strong>4–6 ч в холодильнике</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 11 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Шоколадная помадка и глазировка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите помадку в миску, добавьте 1–2 чайные ложки воды и прогрейте в микроволновке, чтобы она размякла, — комочки разбейте. Введите какао и перемешайте до ровного шоколадного цвета. Наносите на заготовку палеткой быстро, по всей поверхности: помадка схватывается буквально на глазах. В конце чуть-чуть постучите противнем, чтобы слой стал глаже.
+                <span class="source-badge">⏱ Урок 1: 01:06–01:20</span>
+              </p>
+              <div class="warning-box">
+                <strong>Грейте смелее:</strong> если помадка прохладная и густая, ровного слоя не получится — она ляжет комками и начнёт схватываться под палеткой. Лишние 1–2 чайные ложки воды и микроволновка решают эту проблему.
+                <span class="source-badge">⏱ Урок 1: 01:12–01:14</span>
+              </div>
+              <div class="tip-box">
+                <strong>Какао имеет значение:</strong> лучше алкализованное, «Золотой ярлык» тоже подойдёт. «Аромаплен» даёт аромат и вкус, «Экстрабрюд» — более интенсивный цвет.
+                <span class="source-badge">⏱ Урок 1: 01:11–01:11</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Какао: <strong>1–2 ч. л.</strong></span>
+              <span class="param-pill">💧 Вода: <strong>1–2 ч. л. + прогрев</strong></span>
+              <span class="param-pill">🥄 Инструмент: <strong>палетка</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 12 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Нарезка на 12 пирожных</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Обрежьте неровные края и подтёки помадки, затем разрежьте заготовку пополам и каждую половину — на три части. Итого 12 пирожных, 6 и 6. Нож каждый раз протирайте мокрой тряпочкой, тогда разрез будет чистым.
+                <span class="source-badge">⏱ Урок 1: 01:20–01:23</span>
+              </p>
+              <div class="tip-box">
+                <strong>Края — самое приятное:</strong> их можно съесть сразу, они не пойдут в коробку. Главное — не лениться протирать нож, иначе помадка потянется за лезвием.
+                <span class="source-badge">⏱ Урок 1: 01:21–01:21</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔢 Выход: <strong>12 пирожных</strong></span>
+              <span class="param-pill">🔪 Схема: <strong>пополам, затем на 3</strong></span>
+              <span class="param-pill">🧻 Нож: <strong>протирать каждый раз</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 13 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Американский айсинг</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Для декора взбейте до бела масло комнатной температуры с сахарной пудрой и молоком. Белка в этом креме нет — именно поэтому он хорошо дружит с сахарной помадкой, глазурью, обычным айсингом и белково-заварным кремом.
+                <span class="source-badge">⏱ Урок 1: 01:24–01:25</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Масло: <strong>180 г</strong></span>
+              <span class="param-pill">🍬 Пудра: <strong>360 г</strong></span>
+              <span class="param-pill">🥛 Молоко: <strong>1 ст. л.</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 14 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Декор: цветок, подсолнух или просто крем</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                <strong>Цветочек:</strong> французская звезда 8 мм, насадку держите строго вертикально над пирожным. <strong>Листики:</strong> насадка-лист № 69 (подойдут 68 и 70), с лёгким тремором руки — так лист получает красивую форму. <strong>Подсолнух:</strong> насадкой «галочка» № 350 сначала наметьте «значок Мерседеса» — три луча, затем отсадите шесть лепестков и добавьте второй, меньший слой между ними. Серединку заполните растопленным шоколадом каплями-семечками.
+                <span class="source-badge">⏱ Урок 1: 01:29–01:33</span>
+              </p>
+              <p>
+                Если цветы не хочется, отсадите крем через насадку № 89 — получится не менее нарядно.
+                <span class="source-badge">⏱ Урок 1: 01:33–01:33</span>
+              </p>
+              <div class="tip-box">
+                <strong>Шоколад для серединки:</strong> растопите его в кондитерском мешке в микроволновке — так удобно ставить капли точно в центр цветка.
+                <span class="source-badge">⏱ Урок 1: 01:26–01:27</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⭐ Цветок: <strong>звезда 8 мм</strong></span>
+              <span class="param-pill">🍃 Лист: <strong>№ 69 / 68 / 70</strong></span>
+              <span class="param-pill">🌻 Подсолнух: <strong>№ 350 + шоколад</strong></span>
+              <span class="param-pill">💧 Просто крем: <strong>№ 89</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 15 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">15</span>
+                <h3 class="step-title">Хранение и подача</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Готовые пирожные в холодильнике стоят до 7 суток — их можно приготовить сильно заранее. В коробке с прозрачной крышкой получается готовый подарок учителю: 12 пирожных — это четыре небольших набора или два набора и один себе.
+                <span class="source-badge">⏱ Урок 1: 00:31–00:31</span>
+              </p>
+              <div class="tip-box">
+                <strong>Заготовки впрок:</strong> испечённый корж хранится в холодильнике до 10 дней и до 2 месяцев в морозилке. Помадку под плёнкой держите в холодильнике до 2 недель.
+                <span class="source-badge">⏱ Урок 1: 01:00–01:10</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📦 В сборе: <strong>до 7 суток</strong></span>
+              <span class="param-pill">❄ Корж: <strong>10 дней / 2 месяца</strong></span>
+              <span class="param-pill">🍫 Помадка: <strong>до 2 недель</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Только сливочное масло:</strong> на нём пирожные нежнее и рассыпаются во рту; на маргарине, как в советских столовых, они держатся «колом». Для экономии маргарин допустим, но результат будет другим.</li>
+                <li><strong>Пудра, а не сахар:</strong> она быстрее превращает масло в светлую пышную массу, и пирожные получаются выше и нежнее. Сахар тоже работает, но хуже.</li>
+                <li><strong>Все продукты комнатной температуры:</strong> это главное условие эмульсии. Холодное яйцо застывает масло, и масса расслаивается.</li>
+                <li><strong>Жидкое — до муки:</strong> яйца вводятся в масло, а не после сухих ингредиентов. Это и есть отличие рассыпчатого песочного теста.</li>
+                <li><strong>Раскатка между пергаментами:</strong> тесто не забивается мукой и остаётся нежным.</li>
+                <li><strong>Охлаждение перед выпечкой:</strong> 10 минут в холодильнике стабилизируют масло, и оно не вытекает из пласта.</li>
+                <li><strong>Джем — покупной и качественный:</strong> без посторонних ингредиентов, с большим количеством фруктов. Густой подогревается перед нанесением.</li>
+                <li><strong>Термометр для помадки обязателен:</strong> 110 °C → лимонный сок → 115 °C → резкое охлаждение. Это весь секрет.</li>
+                <li><strong>Помадку греть перед нанесением:</strong> прогретая с ложкой воды, она ложится ровно; холодная — комками.</li>
+                <li><strong>Красители — водорастворимые:</strong> ягодный сок не подойдёт, он добавляет влагу и помадка не застынет.</li>
+                <li><strong>Помадка шире одного рецепта:</strong> ею глазируют ромовую бабу, куличи и эклеры.</li>
+                <li><strong>Насадка строго вертикально:</strong> только так цветок и лепестки лягут симметрично.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Маргарин вместо масла:</strong> пирожные дубовые, а не рассыпчатые.</li>
+                <li><strong>Холодные яйца:</strong> масса расслаивается, эмульсия не собирается.</li>
+                <li><strong>Долго мешали тесто:</strong> мука намокла, тесто липнет, и появляется соблазн подсыпать муки — так тесто забивается.</li>
+                <li><strong>Раскатка с подпылом мукой:</strong> лишняя мука делает пласт жёстким.</li>
+                <li><strong>Пласт сразу в духовку:</strong> масло вытекает, корж получается сухим и ломким.</li>
+                <li><strong>Передержали пласт:</strong> 10–12 минут достаточно, лишнее время сушит и подгорает.</li>
+                <li><strong>Слишком много джема:</strong> вылезает по краям и портит нарезку.</li>
+                <li><strong>Помадку переварили или недогрели:</strong> она либо не кристаллизуется, либо ложится комками. Если градусник врёт, снимайте раньше.</li>
+                <li><strong>Густая холодная помадка:</strong> не распределяется палеткой и схватывается пятнами.</li>
+                <li><strong>Разрезали грязным ножом:</strong> рваные края и подтёки; нож нужно протирать перед каждым разрезом.</li>
+                <li><strong>Собирали горячим:</strong> джем растекается, корж ломается. Сборка — только на остывшем пласте.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение</h4>
+              <ul>
+                <li><strong>Готовые пирожные:</strong> до 7 суток в холодильнике.</li>
+                <li><strong>Пласт без джема:</strong> до 10 дней в холодильнике, до 2 месяцев в морозилке.</li>
+                <li><strong>Тесто:</strong> до суток в холодильнике; можно замораживать и печь без размораживания.</li>
+                <li><strong>Помадка:</strong> под плёнкой в холодильнике до 2 недель.</li>
+                <li><strong>Сборка:</strong> минимум 1 час в холодильнике, можно оставить на ночь под плёнкой.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> вебинар Надежды Зубовой «Песочные школьные пирожные» (Тортомафия, месяц 2) — расшифровка урока с таймкодами и технологическая карта с граммовками.</li>
+              <li><strong>Расхождения — молоко в айсинге:</strong> в карте 1 ст. л., на видео автор говорит про две ложки. На странице взято 1 ст. л. по карте, с пометкой о втором варианте.</li>
+              <li><strong>Расхождения — время выпечки:</strong> в карте 10 минут при 200 °C, на видео 10–12 минут, для газовой духовки — около 15. На странице указан диапазон 10–12 минут.</li>
+              <li><strong>Расхождения — отдых теста:</strong> в карте 30 минут, на видео 30 минут — 1 час. На странице оба значения.</li>
+              <li><strong>Расхождения — выдержка помадки:</strong> в карте 4–6 часов в холодильнике, на видео «не менее 6 часов». На странице 4–6 часов, работать можно сразу.</li>
+              <li><strong>Расхождения — какао в помадку:</strong> в карте 1–2 ч. л., на видео добавляется на глаз до нужного цвета. На странице 2 ч. л. как верхняя граница.</li>
+              <li><strong>Пробелы — время:</strong> общее и активное время автор не называет; значения на странице оценены по ходу урока.</li>
+              <li><strong>Пробелы — рецепт джема:</strong> в карте только количество, сам джем автор покупает готовым. Рецепт начинки не выдуман.</li>
+              <li><strong>Фото:</strong> отдельного снимка в папке нет — используется кадр из урока (01:33:30) с готовыми пирожными.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

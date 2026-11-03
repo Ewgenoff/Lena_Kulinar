@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Чизкейк «Ореховый» с солёной карамелью — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Ореховый чизкейк Надежды Зубовой: основа из сабле с жареным фундуком на сливках, сырная масса с фундучным пралине, выпечка 30 минут при 160 °C и 60–90 минут при 110–120 °C, солёная карамель мокрым способом.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="chizkeyk-orehovyy">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться к каталогу рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Чизкейк «Ореховый» с солёной карамелью</h1>
+      <p class="recipe-lead">
+        Ореховая версия классики: та же песочная основа сабле, но восстановленная жирными сливками и с жареным рубленым фундуком, а в сырную массу идёт фундучное пралине, разведённое в сливках. Сверху — солёная карамель, сваренная мокрым способом, и ягоды, которые крепят к бортику. Пралине можно взять любое, а фундук заменить миндалём, кешью или фисташкой.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~1 ч (сабле, основа, сырная масса)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Стабилизация сабле 2 ч – ночь, выпечка 1 ч 30 мин – 2 ч, ночь в холодильнике</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">2 дня</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 чизкейк Ø17–18 см, высота 6–7 см + ~500 мл карамели</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/chizkeyk-orehovyy.jpg" alt="Ореховый чизкейк в кольце: сырная масса с пралине залита в основу из крошки сабле с жареным фундуком" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 чизкейк)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">чизкейк</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База калькулятора — один чизкейк Ø17–18 см высотой 6–7 см. Солёная карамель дана полной порцией: из неё получается около 500 мл, на чизкейк уходит часть.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> чизкейк</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на сабле, ореховую основу, сырную массу с пралине и солёную карамель. Карамель сваривается с запасом — около полулитра.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧈 Тесто, масло, яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Полный замес сабле; на основу уходит 300 г выпеченного печенья</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5 %</strong>:
+                <span class="shopping-qty" data-base-amount="215" data-unit="г">215 г</span>
+                <span class="shopping-hint">150 г холодного в тесто + 65 г в карамель. Крошку восстанавливают сливками, масло в основу не идёт</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="95" data-unit="г">95 г</span>
+                <span class="shopping-hint">В тесто</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Миндальная мука</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Можно смолоть миндаль в блендере</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца С1</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span>
+                <span class="shopping-hint">1 шт. (60 г) в тесто + 3 шт. в сырную массу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="г">3 г</span>
+                <span class="shopping-hint">В тесто. Для карамели нужна отдельная чайная ложка без горки</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥜 Орехи, сыр, карамель</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творожный сыр</strong>:
+                <span class="shopping-qty" data-base-amount="500" data-unit="г">500 г</span>
+                <span class="shopping-hint">Типа Philadelphia: Hochland, Violette, Almette сливочный</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 33 %</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">80 г в основу + 120 г в сырную массу (в них разводят пралине)</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 20–35 %</strong>:
+                <span class="shopping-qty" data-base-amount="335" data-unit="г">335 г</span>
+                <span class="shopping-hint">В солёную карамель; перед добавлением довести до кипения</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="420" data-unit="г">420 г</span>
+                <span class="shopping-hint">120 г в сырную массу + 300 г в карамель</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Фундук жареный</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Рубленый, в основу. Можно обжарить сырой в духовке</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пралине фундучное</strong>:
+                <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span>
+                <span class="shopping-hint">Подойдёт любое ореховое пралине</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль для карамели</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span>
+                <span class="shopping-hint">Без горки; количество регулируют по вкусу</span>
+              </div>
+            </li>
+            <li class="shopping-item" style="border-style: dashed;"><div class="shopping-item-content">
+                <strong>Ягоды для декора (опционально)</strong> — по вкусу
+                <span class="shopping-hint">Первый слой крепят к бортику, иначе поплывут вместе с карамелью</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — кольцо или разъёмная форма Ø17–18 см, пергамент, высокий сотейник и лопатка с длинной ручкой для карамели
+                <span class="shopping-hint">Карамель сильно пенится — сотейник нужен с запасом</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Песочное тесто сабле</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Масло сливочное (холодное)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="95" data-unit="г">95 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Миндальная мука
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Яйца
+              <span class="ingredient-note">Примерно одно яйцо С1</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Ореховая основа</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Печенье сабле выпеченное
+              <span class="ingredient-note">Перемолоть в крошку</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Фундук жареный
+              <span class="ingredient-note">Рубленый</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Сливки 33 %
+              <span class="ingredient-note">Вливать понемногу — «сколько возьмёт» крошка</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Сырная масса</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="500" data-unit="г">500 г</span> — Творожный сыр
+              <span class="ingredient-note">Комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span> — Яйца С1
+              <span class="ingredient-note">По одному</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Сливки 33 %
+              <span class="ingredient-note">В них разводят пралине</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Пралине фундучное
+              <span class="ingredient-note">Или любое другое пралине</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Солёная карамель</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Вода
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="335" data-unit="г">335 г</span> — Сливки 20–35 %
+              <span class="ingredient-note">Нагреть до кипения перед добавлением</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="65" data-unit="г">65 г</span> — Масло сливочное
+              <span class="ingredient-note">Размягчённое</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Соль
+              <span class="ingredient-note">Без горки; по вкусу можно больше</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Ягоды для декора
+              <span class="ingredient-note">Первый слой крепят к бортику</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Сабле: сухие ингредиенты, масло и яйцо</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Смешайте в процессоре 250 г муки, 95 г сахарной пудры, 30 г миндальной муки и 3 г соли. Добавьте 150 г холодного масла кубиком, распределив его так, чтобы оно не лежало поверх сухих ингредиентов, и пробейте пульсами до мелкой крошки. Введите 60 г яйца и работайте быстро, чтобы масло не таяло: в шар тесто в деже не собирается, и это правильно.
+                <span class="source-badge">⏱ Урок 1: 00:00:26–00:03:32</span>
+              </p>
+              <div class="warning-box">
+                <strong>Один вид теста на всю серию:</strong> автор не добавляет в сабле ни какао, ни орехов — вкус появляется при восстановлении крошки. Так из одного замеса выходят классическая, шоколадная и ореховая основы.
+                <span class="source-badge">⏱ Урок 1: 00:01:08–00:01:48</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>Комбайн или нож</strong></span>
+              <span class="param-pill">🌾 Крошка: <strong>Мелкая, масло полностью в сухих</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Раскатка 3 мм и стабилизация</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Соберите тесто в комок и разделите на две части — половины замеса хватает на противень 30×40 см. Раскатайте между двумя листами пергамента до 3 мм, мукой не припыляйте: её достаточно в рецепте. Уберите пласты в холодильник минимум на 2 часа, лучше на ночь, либо в морозилку на час.
+                <span class="source-badge">⏱ Урок 1: 00:03:47–00:07:44</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем холод:</strong> при выпечке масло должно быть уже сцеплено с мукой, иначе оно вытекает. Раскатанное тесто хранится до 14 дней в холодильнике и до 2 месяцев в морозилке.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Толщина: <strong>3 мм</strong></span>
+              <span class="param-pill">🧊 Холод: <strong>2 ч / ночь или 1 ч в морозилке</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Выпечка сабле при 170 °C</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Снимите верхний лист пергамента, переложите пласт на противень и выпекайте 20–25 минут при 170 °C с конвекцией — так можно печь сразу два противня. Прокалывать тесто не нужно. Готовое сабле остудите до комнатной температуры.
+                <span class="source-badge">⏱ Урок 1: 00:07:57–00:08:45</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Выпечка: <strong>170 °C, конвекция</strong></span>
+              <span class="param-pill">⏱ Время: <strong>20–25 минут</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Ореховая основа на сливках</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Измельчите остывшее сабле в блендере и отвесьте 300 г. Добавьте 50 г жареного рубленого фундука и вливайте 80 г сливок 33 % понемногу — столько, сколько возьмёт крошка. Перемешайте и проверьте: сжатая в горсть масса должна держать комок.
+                <span class="source-badge">⏱ Урок 2: 00:00:01–00:00:37</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> вместо масла крошку здесь восстанавливают сливками — ореховая основа получается более сливочной по вкусу. Сливки добавляют постепенно, ориентируясь на консистенцию, а не строго по весу.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ Крошка: <strong>300 г</strong></span>
+              <span class="param-pill">🥜 Фундук: <strong>50 г, жареный</strong></span>
+              <span class="param-pill">🥛 Сливки: <strong>80 г «сколько возьмёт»</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Форма: борта вручную, финал стаканом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выложите всю крошку в кольцо или разъёмную форму Ø17–18 см с пергаментом на дне. Борта начинайте формировать рукой, а на финальной стадии доглаживайте стаканом — стенка должна быть гладкой и одинаковой толщины. Дно сформируйте плотно, затем опустите борт до нужной высоты и утрамбуйте. Отправьте основу на стабилизацию в холодильник или морозилку.
+                <span class="source-badge">⏱ Урок 2: 00:00:37–00:01:34</span>
+              </p>
+              <div class="warning-box">
+                <strong>Форма на сливках:</strong> крошка влажнее, чем на масле, поэтому борта удобнее начинать руками, а не стаканом — иначе стенка «поедет».
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Форма: <strong>Ø17–18 см</strong></span>
+              <span class="param-pill">📐 Высота чизкейка: <strong>6–7 см</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Сырная масса: сыр, сахар и яйца</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Смешайте 500 г творожного сыра со 120 г сахара на минимальной скорости миксера, затем введите по одному три яйца С1. Сахар с сыром только объединяют — взбивать массу не нужно.
+                <span class="source-badge">⏱ Урок 3: 00:00:42–00:01:06</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Миксер: <strong>Минимальная скорость</strong></span>
+              <span class="param-pill">🥚 Яйца: <strong>По одному, 3 шт.</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Пралине в сливках</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отвесьте 120 г сливок и выложите в них 80 г фундучного пралине. Перемешайте: пралине неравномерное по текстуре, крупные частички останутся. Прогрейте массу в микроволновке, чтобы пралине разошлось, и остудите до комнатной температуры — горячие сливки в сырную массу вливать нельзя.
+                <span class="source-badge">⏱ Урок 3: 00:01:06–00:01:55</span>
+              </p>
+              <div class="warning-box">
+                <strong>Температура важна:</strong> если сливки с пралине горячие, дождитесь, пока они остынут, иначе масса расслоится.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 В массу: <strong>Только комнатной температуры</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Пралине растворилось</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Сборка: ореховые сливки в сыр</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Введите ореховые сливки в сырную массу лопаткой до однородности. Вылейте массу в ореховую основу — чизкейк не нужно выравнивать, он ляжет ровно сам.
+                <span class="source-badge">⏱ Урок 3: 00:01:55–00:02:54</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> вместо фундука в основу и пралине можно взять миндаль, кешью или фисташку — выбирайте вкус, который больше нравится.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>Лопатка</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Поверхность ровная без палетки</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Выпечка: 160 °C, затем 110–120 °C</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте без конвекции: 30 минут при 160 °C, затем ориентировочно 60–90 минут при 110–120 °C.
+                <em style="font-size: 13px; color: var(--text-muted);">Источник: DOCX «Чизкейк Ореховый»</em>
+              </p>
+              <div class="warning-box">
+                <strong>Две ступени температуры</strong> — общее правило выпечных чизкейков серии: сначала 160 °C, затем досушка при 110–120 °C.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Этап 1: <strong>160 °C — 30 минут</strong></span>
+              <span class="param-pill">🌡 Этап 2: <strong>110–120 °C — 60–90 минут</strong></span>
+              <span class="param-pill">🚫 Конвекция: <strong>Выключена</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Остывание и ночь в холодильнике</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Остудите чизкейк до комнатной температуры в форме и уберите в холодильник на ночь. Срок хранения готового чизкейка — 5 суток в холодильнике.
+                <em style="font-size: 13px; color: var(--text-muted);">Источник: DOCX «Чизкейк Ореховый»</em>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Холодильник: <strong>Ночь</strong></span>
+              <span class="param-pill">📦 Срок: <strong>5 суток</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Солёная карамель мокрым способом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В сотейник отправьте 300 г сахара и 60 г воды. Перемешивайте только до тех пор, пока весь сахар не намокнет, — дальше карамель не мешают, можно лишь слегка подрагивать сотейником. Дождитесь нужного цвета: если добавить сливочное раньше, цвет останется бледным.
+                <span class="source-badge">⏱ Урок 4: 00:00:08–00:01:59</span>
+              </p>
+              <p>
+                Добавьте 65 г размягчённого масла и интенсивно перемешайте — масса будет сильно пениться. Затем вливайте 335 г сливок, нагретых до кипения, по чуть-чуть и аккуратно, продолжая мешать. Доведите до кипения, добавьте 1 ч. л. соли без горки и уварите 3–5 минут, пока карамель не начнёт задерживаться на лопатке.
+                <span class="source-badge">⏱ Урок 4: 00:02:09–00:04:44</span>
+              </p>
+              <div class="warning-box">
+                <strong>Безопасность:</strong> карамель «ругается» — брызгает и пенится, поэтому нужен высокий сотейник и лопатка с длинной ручкой. С холодными сливками смесь буквально взрывается, а варить карамель с детьми — плохая затея.
+                <span class="source-badge">⏱ Урок 4: 00:02:44–00:02:58</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍯 Густота: <strong>Соус — выключить после соли; 3–5 мин — гуще; 7–10 мин — ирис</strong></span>
+              <span class="param-pill">⚖️ Выход: <strong>≈500 мл</strong></span>
+              <span class="param-pill">🧂 Соль: <strong>1 ч. л. без горки</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Декор ягодами на карамель</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Залейте охлаждённый чизкейк карамелью и выложите ягоды. Первый слой ягод обязательно крепите к бортику: если просто положить их на карамель, при комнатной температуре они поплывут вместе с ней.
+                <span class="source-badge">⏱ Урок 5: 00:00:31–00:01:21</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> загустевшую карамель можно подогреть — она снова станет текучей. «Ореховый» и «Нью-Йорк» кофейни охотно берут и без декора.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍓 Крепление: <strong>К бортику</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>5 суток в холодильнике</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Основа на сливках:</strong> ореховая крошка восстанавливается не маслом, а жирными сливками — так вкус мягче, а сливки вливают «сколько возьмёт».</li>
+                <li><strong>Пралине разводят в сливках:</strong> оно неравномерное по текстуре, поэтому массу прогревают и размешивают до однородности, а потом остужают.</li>
+                <li><strong>Орехи заменяемы:</strong> фундук в основе и пралине можно заменить миндалём, кешью или фисташкой.</li>
+                <li><strong>Карамель мокрым способом:</strong> так есть время среагировать на цвет — сахар с водой дают более предсказуемый результат.</li>
+                <li><strong>Мешать карамель нельзя:</strong> только до намокания сахара, иначе она кристаллизуется. Сливочное масло — первый момент, когда перемешивание разрешено.</li>
+                <li><strong>Густота по желанию:</strong> соус, карамель для холодильника или ирис — разница в 3–10 минутах уваривания.</li>
+                <li><strong>Ягоды к бортику:</strong> иначе они сползают вместе с карамелью в тепле.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Перемешивание карамели:</strong> кристаллы сахара и крупчатая масса.</li>
+                <li><strong>Раннее добавление масла:</strong> цвет останется бледным, вкуса карамели не будет.</li>
+                <li><strong>Холодные сливки:</strong> бурная реакция и риск ожога; сливки греют до кипения заранее.</li>
+                <li><strong>Слишком маленький сотейник:</strong> карамель пенится и убегает.</li>
+                <li><strong>Горячие ореховые сливки в сыр:</strong> масса расслаивается.</li>
+                <li><strong>Взбивание сырной массы:</strong> чизкейк получается пористым.</li>
+                <li><strong>Стакан на влажной крошке:</strong> борта деформируются; начинайте руками.</li>
+                <li><strong>Ягоды без крепления к бортику:</strong> сползают при комнатной температуре.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Сабле:</strong> готовое песочное печенье вместо домашнего.</li>
+                <li><strong>Орехи:</strong> миндаль, кешью, фисташка — и в основу, и в пралине.</li>
+                <li><strong>Пралине:</strong> подойдёт любое, в том числе миндальное.</li>
+                <li><strong>Карамель:</strong> варится с запасом около 500 мл; остаток хранят в холодильнике и подогревают.</li>
+                <li><strong>Декор:</strong> ягоды на карамели или чистый чизкейк без декора.</li>
+                <li><strong>Форма:</strong> кольцо или разъёмная форма Ø17–18 см.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 (сабле — 00:00:02–00:08:45); Урок_02.mp4 (ореховая основа и форма — 00:00:01–00:01:34); Урок_03.mp4 (сырная масса, пралине, сборка — 00:00:01–00:02:54); Урок_04.mp4 (солёная карамель — 00:00:03–00:04:44); Урок_05.mp4 (общий урок декора ягодами — 00:00:31–00:01:21); DOCX «Чизкейк_Ореховый» — граммовки, режимы и хранение.</li>
+              <li><strong>Уваривание карамели:</strong> в DOCX «уварить примерно 3 минуты», в видео — «проварить примерно 5 минут» и отдельная градация: соус — выключать сразу, густая карамель — 3–5 минут, ирис — 7–10 минут. На странице диапазон 3–5 минут с оговоркой про более плотные варианты.</li>
+              <li><strong>Количество пралине и сливок:</strong> в DOCX пралине 80 г и сливки 120 г; в видео автор добавляет пралине в сливки и прогревает, пока оно не разойдётся, — вес не перепроверяется.</li>
+              <li><strong>Сливки в основу:</strong> в DOCX 80 г «сколько возьмёт»; в видео количество регулируется на глаз по способности крошки лепиться.</li>
+              <li><strong>Карамель в видео:</strong> автор варила полуторную порцию, поэтому соли у неё «чуть больше чайной ложки». На одинарную порцию — 1 ч. л. без горки.</li>
+              <li><strong>Пробелы:</strong> вес готового чизкейка не назван; количество ягод и вес карамели на один чизкейк не указаны — в DOCX дан только общий выход около 500 мл.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_03.mp4 (00:03:30) с залитым в кольцо чизкейком, обрезанный по краям записи.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

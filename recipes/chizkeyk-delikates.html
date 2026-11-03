@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Чизкейк «Деликатес» с вишней и ягодным ганашем — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Чизкейк «Деликатес» Надежды Зубовой: сырный крем на основе крем-англез с творожным сыром и камамбером, песочная основа сабле в перфорированном кольце, вишнёвая прослойка и ягодный ганаш на белом шоколаде. Технология на два дня, срок хранения и заморозка.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="chizkeyk-delikates">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться к каталогу рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Чизкейк «Деликатес» с вишней и ягодным ганашем</h1>
+      <p class="recipe-lead">
+        Испанский чизкейк, который Надежда Зубова называет конкурентом «Нью-Йорка»: основа сырной массы — крем-англез на сливках и желтках, который уваривают до 82–84 °C, а затем резко охлаждают творожным сыром. В одну половину массы идёт камамбер со счищенной корочкой, вторая остаётся ванильной — поэтому из одного замеса получаются два разных чизкейка. Десерт собирают в два дня: сначала сабле и сырная масса вызревают, потом основа, вишнёвая прослойка, шапочки крема и ягодный ганаш.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~30 мин (отвесы, желатин, духовка)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~2 ч 30 мин на два дня</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Тесто 12–24 ч, сырная масса 12–24 ч, основа в морозилке</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">2 дня с вызреванием</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">2 чизкейка Ø18 см (по ~500 г сырной массы)</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/chizkeyk-delikates.jpg" alt="Чизкейк «Деликатес» в песочной основе с розовым ягодным ганашем на чёрной подложке" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (2 чизкейка)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="2">2</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">чизкейка</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База калькулятора — два чизкейка Ø18 см, как в видео: из этого количества сырного крема получается ≈1 кг массы, её делят пополам. Песочное тесто дано двойной порцией (в DOCX — одинарная на один чизкейк), часть теста остаётся в запас: оно отлично хранится в морозилке.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">2</span> чизкейка</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на песочную основу, сырный крем, вишнёвую прослойку и ягодный ганаш. Сыры с активным вкусом взаимозаменяемы — берите один.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧀 Молочное и сыры</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творожный сыр</strong>:
+                <span class="shopping-qty" data-base-amount="500" data-unit="г">500 г</span>
+                <span class="shopping-hint">Creme Bonjour Hochland, Violette, Almette сливочный, Hochland для выпечки. Не плавленый сыр и не маскарпоне</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сыр с активным вкусом</strong>:
+                <span class="shopping-qty" data-base-amount="40" data-unit="г">40 г</span>
+                <span class="shopping-hint">Камамбер, бри, дор блю или горгонзола. Корочку обязательно счистить</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 33 %</strong>:
+                <span class="shopping-qty" data-base-amount="390" data-unit="г">390 г</span>
+                <span class="shopping-hint">300 г в крем + 60–80 г для восстановления крошки + 30 г в ганаш. Должны взбиваться</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5 %</strong>:
+                <span class="shopping-qty" data-base-amount="320" data-unit="г">320 г</span>
+                <span class="shopping-hint">300 г в сабле + 20 г в ганаш. Качество сабле зависит именно от масла</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С0</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span>
+                <span class="shopping-hint">Холодные, в сабле. Желтки для крема считаются отдельно</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желтки</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span>
+                <span class="shopping-hint">70 г — это 3–4 желтка С0 по 18–20 г. Можно пастеризованные</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Миндальная мука</strong>:
+                <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+                <span class="shopping-hint">Можно смолоть миндаль в блендере: её немного</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍒 Ягоды, шоколад, бакалея</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="500" data-unit="г">500 г</span>
+                <span class="shopping-hint">Двойная порция сабле: в DOCX на один чизкейк идёт 250 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="190" data-unit="г">190 г</span>
+                <span class="shopping-hint">В сабле; просеивать не обязательно</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="180" data-unit="г">180 г</span>
+                <span class="shopping-hint">90 г в крем + 90 г в вишнёвый соус</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="6" data-unit="г">6 г</span>
+                <span class="shopping-hint">В сабле, обязательно: соль сильно оттеняет вкус</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин</strong>:
+                <span class="shopping-qty" data-base-amount="13" data-unit="г">13 г</span>
+                <span class="shopping-hint">7 г в крем + 6 г в вишню. Сила 220 блюм; листового понадобится больше</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Вишня без косточек</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">Можно замороженную — она есть в любом магазине. Подойдут и другие ягоды</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Крахмал кукурузный</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">Картофельного нужно в полтора раза меньше</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Белый шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="90" data-unit="г">90 г</span>
+                <span class="shopping-hint">Calibaut Вельвет или Зефир — в них больше 30 % какао-продуктов, ганаш стабилизируется быстрее</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ягодное пюре</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Вишнёвое, малиновое, ежевичное, смородиновое или черничное, лучше с 10 % сахара и без консервантов</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ваниль, ванильный сахар или ванильная паста</strong> — по вкусу
+                <span class="shopping-hint">В крем; если добавляете ванильный сахар, сахар уменьшают на его вес</span>
+              </div>
+            </li>
+            <li class="shopping-item" style="border-style: dashed;"><div class="shopping-item-content">
+                <strong>Бренди, ром или коньяк (опционально)</strong> — по вкусу
+                <span class="shopping-hint">В вишнёвый соус, «пьяная вишня». Автор добавляет бренди на перце</span>
+              </div>
+            </li>
+            <li class="shopping-item" style="border-style: dashed;"><div class="shopping-item-content">
+                <strong>Краситель розовый (опционально)</strong> — по вкусу
+                <span class="shopping-hint">Автор использует Electric Pink: без него ганаш выходит сиреневым</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — перфорированное кольцо Ø18 см (или раздвижное), пергамент, игольчатый термометр, кондитерские мешки, насадки №806 и №682
+                <span class="shopping-hint">Без перфорации подойдёт обычное кольцо, тогда основа будет восстановленной из крошки</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Песочная основа (сабле)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="500" data-unit="г">500 г</span> — Мука пшеничная
+              <span class="ingredient-note">Двойная порция: в DOCX на один чизкейк — 250 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Масло сливочное 82,5 %
+              <span class="ingredient-note">Холодное, кубиками; в жару можно подморозить</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Миндальная мука
+              <span class="ingredient-note">Или мелко рубленые орехи</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="190" data-unit="г">190 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span> — Яйца С0
+              <span class="ingredient-note">Холодные, вводятся после крошки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="6" data-unit="г">6 г</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Сливки 33 % для восстановления крошки
+              <span class="ingredient-note">Диапазон от 60 до 80 г: добавлять по консистенции, пока крошка не начнёт лепиться</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Сырный крем</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="500" data-unit="г">500 г</span> — Творожный сыр
+              <span class="ingredient-note">Hochland Creme Bonjour, Violette, Almette сливочный. Плавленый и маскарпоне не подойдут</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Сливки 33 %
+              <span class="ingredient-note">Те, что априори взбиваются: массу потом взбивают</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="90" data-unit="г">90 г</span> — Сахар
+              <span class="ingredient-note">Это минимум для такого объёма: чизкейк задуман малосладким</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Желтки
+              <span class="ingredient-note">3–4 желтка С0</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Желатин
+              <span class="ingredient-note">Замочить в 35 г ледяной воды</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="35" data-unit="г">35 г</span> — Вода ледяная для желатина
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Сыр с активным вкусом
+              <span class="ingredient-note">Камамбер, бри, дор блю или горгонзола. Корочку счистить обязательно</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Ваниль, ванильный сахар или ванильная паста
+              <span class="ingredient-note">Если ванильный сахар — сахар уменьшают на его вес</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Вишнёвый соус</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Вишня без косточек
+              <span class="ingredient-note">Можно замороженную; подойдут и другие ягоды</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="90" data-unit="г">90 г</span> — Сахар
+              <span class="ingredient-note">Меньше — если вишня сладкая</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Крахмал кукурузный
+              <span class="ingredient-note">Смешать с сахаром, чтобы не было комочков</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="6" data-unit="г">6 г</span> — Желатин
+              <span class="ingredient-note">Замочить в 30 г ледяной воды</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Вода ледяная для желатина
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По желанию — Бренди, ром, коньяк, цедра лайма, ваниль
+              <span class="ingredient-note">Вишня хорошо дружит с алкоголем; автор добавляет бренди на перце</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Ягодный ганаш</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="90" data-unit="г">90 г</span> — Белый шоколад
+              <span class="ingredient-note">Вельвет или Зефир. С другим шоколадом сливок берут 20 г вместо 30</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Масло сливочное размягчённое
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Сливки 33 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Ягодное пюре
+              <span class="ingredient-note">Вишня, малина, ежевика, смородина, черника</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По желанию — Розовый краситель
+              <span class="ingredient-note">Капля, чтобы угадывалась малина</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Сабле: сначала сухие с маслом, потом яйца</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Смешайте муку, миндальную муку, сахарную пудру и соль. Добавьте холодное масло кубиками и порубите в комбайне или ножом на доске до крупной крошки — однородного теста добиваться не нужно.
+                <span class="source-badge">⏱ Урок 1: 00:18:10–00:29:31</span>
+              </p>
+              <p>
+                Затем введите два холодных яйца и перемешайте до состояния «рваного» теста с крупными кусками. Комок собирать не нужно: тесто должно остаться прохладным.
+                <span class="source-badge">⏱ Урок 1: 00:29:31–00:31:40</span>
+              </p>
+              <div class="warning-box">
+                <strong>Яйца — строго после масла:</strong> сначала все сухие ингредиенты растираются с маслом, и только потом добавляется жидкость. Жидкость в начале замеса даёт клейкое тесто вместо рассыпчатого.
+                <span class="source-badge">⏱ Урок 1: 00:18:39–00:18:51</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Тесто: <strong>Прохладное</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Крупная крошка, «рваное» тесто</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Комбайн или нож и доска</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Раскатка 3 мм между листами пергамента</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разделите тесто на четыре части. Каждую раскатайте между двумя листами пергамента до толщины примерно 3 мм — тоньше не нужно, иначе будут проблемы с выпечкой. Через бумагу рукой хорошо чувствуется, где пласт толще.
+                <span class="source-badge">⏱ Урок 1: 00:33:26–00:37:06</span>
+              </p>
+              <p>
+                Пласты уберите в морозилку (или в холодильник минимум на час), не снимая бумагу. Один пласт пойдёт целиком под выпечку в перфорированном кольце, остальные — на крошку и в запас.
+                <span class="source-badge">⏱ Урок 1: 00:37:08–00:39:36</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> если делать сабле на один чизкейк, хватит и маленького блендера с мельницей. Тесто прекрасно хранится: 10 дней в холодильнике и до 3 месяцев в морозилке — его можно заготовить заранее.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Толщина: <strong>3 мм для выпечных пластов</strong></span>
+              <span class="param-pill">🧊 Отдых: <strong>Морозилка или холодильник</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Стабилизация теста — 12 часов минимум</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Песочное тесто требует стабилизации: масло, которое вы «потревожили» при замесе, должно прийти в себя, иначе оно потечёт в духовке. Полной стабилизацией считается 24 часа в морозилке или 1,5–2 дня в холодильнике, а минимум — 12 часов.
+                <span class="source-badge">⏱ Урок 1: 00:42:24–00:43:54</span>
+              </p>
+              <p>
+                Если тесто стабилизировано плохо, основа в духовке сжимается и между ней и кольцом появляется зазор — в него вытечет сырная масса, если вы печёте чизкейк целиком на сабле.
+                <span class="source-badge">⏱ Урок 1: 00:44:05–00:45:03</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Минимум: <strong>12 часов</strong></span>
+              <span class="param-pill">🧊 Полная: <strong>24 ч в морозилке, 1,5–2 дня в холодильнике</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Замачиваем желатин в ледяной воде</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Залейте 7 г желатина 35 г ледяной воды (автор добавляет в воду кубики льда), 6 г желатина для вишни — 30 г ледяной воды. Перемешайте, чтобы весь сухой желатин поднялся со дна: растворять его сейчас не нужно.
+                <span class="source-badge">⏱ Урок 1: 00:46:07–00:49:26</span>
+              </p>
+              <p>
+                Желатин должен постоять не меньше 7–10 минут. За это время он превращается в плотную «силиконовую» массу, а потом её расплавляют в микроволновке.
+                <span class="source-badge">⏱ Урок 1: 00:49:42–00:49:51</span>
+              </p>
+              <div class="warning-box">
+                <strong>Только ледяная вода:</strong> в жару вода из-под крана теплее, чем зимой, и желатин работает хуже — вместо силикона получается кисель, и масса не держит форму. По-серьёзному желатин заливают водой около 6 °C.
+                <span class="source-badge">⏱ Урок 1: 00:46:23–00:48:18</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Вода: <strong>Ледяная, 6 °C</strong></span>
+              <span class="param-pill">⏱ Набухание: <strong>Не меньше 7–10 минут</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Крем-англез до 82–84 °C</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Соедините 300 г сливок, 90 г сахара, ваниль и 70 г желтков. Сливки нагрейте, частью горячих залейте желтки, перемешайте — чтобы у желтков не было шока, — и верните всё в сотейник.
+                <span class="source-badge">⏱ Урок 1: 00:54:01–01:04:36</span>
+              </p>
+              <p>
+                Уваривайте на минимальном огне при постоянном помешивании до 82–84 °C. Ориентир без термометра — первый «бульк»: как только масса забулькала, сразу снимайте и продолжайте мешать, чтобы не пригорело. Консистенция — жидкая сгущёнка.
+                <span class="source-badge">⏱ Урок 1: 01:06:17–01:07:47</span>
+              </p>
+              <div class="warning-box">
+                <strong>Довести до кипения, но не кипятить:</strong> задача этого этапа — пастеризация желтка. Перегреете — желток свернётся, и масса пойдёт комками.
+                <span class="source-badge">⏱ Урок 1: 01:06:17–01:06:28</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> сахар в крем-англез кладут в том числе для того, чтобы сливки не пригорали. И именно быстрое охлаждение после варки — температура англеза — продлевает срок его хранения: официально до 72 часов, а по факту до пяти суток.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Уваривание: <strong>82–84 °C</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Первый бульк, жидкая сгущёнка</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Сотейник, венчик, термометр</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Сыр, камамбер без корочки и желатин</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В горячий англез введите творожный сыр — сначала небольшую часть, чтобы она просто вошла в массу, затем остальной. Мешайте до гладкости: мелкие комочки разойдутся, если продолжать. Сыр одновременно резко охлаждает массу.
+                <span class="source-badge">⏱ Урок 1: 01:07:48–01:10:41</span>
+              </p>
+              <p>
+                Расплавьте набухший желатин в микроволновке и вмешайте в сырную массу. Если делаете деликатесный вариант, счистите с 40 г камамбера белую корочку, подплавите сыр 20 секунд в микроволновке и введите венчиком в половину массы.
+                <span class="source-badge">⏱ Урок 1: 01:12:25–01:20:50</span>
+              </p>
+              <div class="warning-box">
+                <strong>Корочку с плесенью счищать обязательно:</strong> на ней живут грибки, которые дают сыру вкус. В холодной массе за ночь они «вырастят» в чизкейке большой бри — творожный сыр превратится в камамбер, и появится горечь. По той же причине много такого сыра не добавляют.
+                <span class="source-badge">⏱ Урок 1: 01:19:56–01:22:02</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧀 Камамбер: <strong>40 г на всю массу</strong></span>
+              <span class="param-pill">🌡 Масса: <strong>Остывает до комнатной</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Гладкая, блестящая, без комочков</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Вызревание сырной массы 12–24 часа</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Накройте массу плёнкой в контакт — так на плёнке не образуется конденсат и не капает в чизкейк, а консистенцию можно проверить пальцем через плёнку. Уберите в холодильник: в идеале почти на 24 часа, минимум на 12.
+                <span class="source-badge">⏱ Урок 1: 01:22:11–01:24:31</span>
+              </p>
+              <p>
+                Готовая масса упругая, как холодец. Если делаете две разные массы, подпишите их или запомните, где какая: на вкус камамбер слышно сразу.
+                <span class="source-badge">⏱ Урок 2: 00:02:22–00:02:47, 00:22:20–00:22:37</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Вызревание: <strong>12–24 часа</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Упругая, как холодец</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Вишнёвый соус на крахмале и желатине</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Прогрейте 300 г вишни без косточек, добавьте сахар, смешанный с 15 г крахмала (так не будет комочков), и уваривайте, пока масса не станет прозрачной — это значит, что крахмал заработал. Сразу снимите с огня.
+                <span class="source-badge">⏱ Урок 1: 01:25:20–01:28:33</span>
+              </p>
+              <p>
+                В горячую массу положите расплавленный желатин и перемешайте до полного растворения. По желанию добавьте бренди, ром или коньяк. Остудите и переложите в кондитерский мешок — до сборки соус хранится в холодильнике.
+                <span class="source-badge">⏱ Урок 1: 01:29:33–01:30:54</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> для гурманов в вишню можно потереть немного лайма, добавить ваниль — и получится «пьяная вишня». Кислую вишню уравновешивают 90 г сахара, для сладкой можно взять меньше.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Готовность: <strong>Масса стала прозрачной</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Сотейник, кондитерский мешок</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Основа в кольце: полоски, дно, обрезка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Из замороженного пласта нарежьте полоски высотой с кольцо (около 3 см) — удобно линейкой. Выложите их по бортику и прижимайте строго вниз, чтобы низ соединился с бортом без зазора. Дно вырежьте по кольцу и срежьте лишнее от центра к краю.
+                <span class="source-badge">⏱ Урок 1: 01:36:32–01:43:16</span>
+              </p>
+              <p>
+                Готовую форму отправьте в морозилку до выпечки — с ней можно работать и на следующий день. Точно так же собирается маленькая порционная основа Ø8 см.
+                <span class="source-badge">⏱ Урок 1: 01:43:20–01:43:46</span>
+              </p>
+              <div class="warning-box">
+                <strong>Прижимать вниз, а не вбок:</strong> если вдавливать тесто в бок, через перфорацию оно выйдет наружу, и вытащить основу будет очень сложно. Именно на этом чаще всего «прилипает».
+                <span class="source-badge">⏱ Урок 1: 01:41:23–01:41:47</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Борт: <strong>≈3 см, под высоту кольца</strong></span>
+              <span class="param-pill">🧊 До выпечки: <strong>Морозилка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Выпечка основы: 20 минут при 170 °C</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разогрейте духовку до 170 °C с конвекцией (или 180 °C верх-низ; в газовой — 180 °C). Выпекайте основу 20 минут до золотистого цвета: перфорированную форму — на перфорированном коврике, обычную — на бумаге.
+                <span class="source-badge">⏱ Урок 1: 00:41:34–00:42:03, 01:15:28–01:15:42</span>
+              </p>
+              <p>
+                Готовую основу не вынимайте из формы, пока она горячая: дайте полностью остыть, можно при открытой дверце духовки, и только потом снимайте кольцо. Пока основа горячая, сырную массу в неё класть нельзя — чизкейк поплывёт.
+                <span class="source-badge">⏱ Урок 2: 00:08:28–00:08:47, 00:28:33–00:28:44</span>
+              </p>
+              <div class="warning-box">
+                <strong>Бортики не выше 3 см:</strong> если поднять тесто на 6–8 см, оно стечёт вниз. Высокий борт допустим только для выпечного чизкейка на сабле.
+                <span class="source-badge">⏱ Урок 2: 00:06:39–00:07:03</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Режим: <strong>170 °C конвекция / 180 °C верх-низ</strong></span>
+              <span class="param-pill">⏱ Выпечка: <strong>20 минут</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Золотистый цвет</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Восстановленная основа из крошки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпеченный пласт измельчите в крошку (удобно в блендере). Возьмите 250 г крошки на кольцо Ø18 см, смажьте кольцо сливочным маслом и всыпьте крошку. Влейте 40 г сливок и перемешайте: задача — чтобы крошка лепилась в комок.
+                <span class="source-badge">⏱ Урок 2: 00:08:58–00:12:23</span>
+              </p>
+              <p>
+                Если не лепится — добавляйте сливки по 10–20 г, максимум до 80 г. Утрамбуйте рукой, затем стаканом с ровным дном: уплотнить нужно очень хорошо, иначе основа развалится. Бортик — 7 мм (допустимо 5–10 мм), край опустите на 5 мм ниже формы, высота чизкейка — около 4 см.
+                <span class="source-badge">⏱ Урок 2: 00:12:29–00:18:31</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> восстанавливают именно сливками, а не маслом: масла в сабле и так очень много, и от масла основа стала бы жирной, а не хрустящей. Перед холодильником пройдите по краю тонким ножом на сантиметр вглубь — так форму будет легче снять, а сама основа отправится в морозилку на стабилизацию.
+                <span class="source-badge">⏱ Урок 2: 00:10:32–00:10:51, 00:19:05–00:19:53</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Крошка: <strong>250 г на Ø18 см</strong></span>
+              <span class="param-pill">🥛 Сливки: <strong>60–80 г, по консистенции</strong></span>
+              <span class="param-pill">📏 Бортик: <strong>5–10 мм, оптимально 7 мм</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Взбивание сырной массы</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Холодную массу переложите в узкую посуду — стакан блендера или охлаждённую чашу планетарного миксера — и взбивайте на максимальной скорости около 5 минут. Масса увеличится на 10–15 % и станет густой: за венчиком тянется «птичий клюв».
+                <span class="source-badge">⏱ Урок 2: 00:20:34–00:28:18</span>
+              </p>
+              <p>
+                Переложите во кондитерский мешок: масса с камамбером — без насадки, она нужна для ровной заливки. Если масса кажется жидковатой, уберите мешок в холодильник — желатин её укрепит.
+                <span class="source-badge">⏱ Урок 2: 00:29:03–00:35:22</span>
+              </p>
+              <div class="warning-box">
+                <strong>Только в узкой таре:</strong> в широкой миске венчик «гоняет» массу по кругу, и она взбивается неравномерно — в одном месте, потом в другом. В узком стакане вся масса постоянно в движении.
+                <span class="source-badge">⏱ Урок 2: 00:21:16–00:22:11</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Взбивание: <strong>≈5 минут</strong></span>
+              <span class="param-pill">🥣 Посуда: <strong>Узкая и холодная</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>«Птичий клюв» с венчика</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Сборка: вишня на дно, крем, шапочки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Снимите кольцо с застывшей основы (при необходимости пройдитесь ножом по кругу) и выровняйте борт овощечисткой. На дно отсадите вишнёвый соус — он даст прослойку и не будет виден снаружи, только в разрезе.
+                <span class="source-badge">⏱ Урок 3: 00:02:00–00:08:20</span>
+              </p>
+              <p>
+                Сырную массу отсаживайте с насадкой №806 (круглая, 1 см) строго вертикально вверх, начиная от краёв: давление на мешок прекращают до того, как убрать насадку, иначе вместо шапочек получатся «уставшие зефирки». Без насадки просто отрежьте мешок — шапочки будут круглыми, но менее ровными.
+                <span class="source-badge">⏱ Урок 3: 00:09:00–00:10:30</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> вишню можно не добавлять — ягодная шапка будет сверху. Но если соус остался, пустите его на дно. Потереть сверху цедру лимона — исключительно для аромата и красоты.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Насадка: <strong>№806, 1 см</strong></span>
+              <span class="param-pill">🍒 Вишня: <strong>На дно, под крем</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Ягодный ганаш на белом шоколаде</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Растопите 90 г белого шоколада с 30 г сливок в микроволновке пульсами по 15 секунд, каждый раз перемешивая. Пюре (30 г) прогрейте отдельно 10 секунд: температуры масс должны быть примерно одинаковыми.
+                <span class="source-badge">⏱ Урок 2: 00:40:14–00:43:49</span>
+              </p>
+              <p>
+                Соедините шоколад и пюре, перемешайте, добавьте 20 г размягчённого масла и мешайте до гладкости. Если масло идёт плохо, прогрейте массу не более 10 секунд. По желанию добавьте каплю розового красителя.
+                <span class="source-badge">⏱ Урок 2: 00:44:07–00:46:37</span>
+              </p>
+              <div class="warning-box">
+                <strong>Шоколад с содержанием какао-продуктов более 30 %:</strong> Вельвет или Зефир стабилизируются быстро. С обычным белым шоколадом сливок берут на 10 г меньше, то есть 20 г, — иначе ганаш будет стабилизироваться очень долго.
+                <span class="source-badge">⏱ Урок 2: 00:39:08–00:40:09</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Пульсы: <strong>15 секунд, с перемешиванием</strong></span>
+              <span class="param-pill">🍫 Сливки: <strong>30 г (20 г с другим шоколадом)</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Течёт, но не сваривается кусками</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">15</span>
+                <h3 class="step-title">Заливка ганашем и шоколадный декор</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сырную массу в кольце разровняйте палеткой, не доходя до верха: сверху должен поместиться ганаш. Слегка подогрейте ганаш, чтобы он стал более текучим, и вылейте на чизкейк — распределится он сам, разравнивать палеткой не нужно.
+                <span class="source-badge">⏱ Урок 3: 00:13:55–00:16:38</span>
+              </p>
+              <p>
+                Растопите тёмный шоколад и нанесите тонкие полосы поверх ганаша. Ведите линию с запасом за пределы чизкейка: если рисовать строго над ним, полосы выйдут разной толщины.
+                <span class="source-badge">⏱ Урок 3: 00:15:04–00:20:26</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> для второго чизкейка можно отсадить крем насадкой-листом №682 горизонтальными полосами — получится другая фактура. А можно залить ганашем оба: крема тогда уйдёт меньше.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Ганаш: <strong>Текучий, тёплый</strong></span>
+              <span class="param-pill">🎨 Декор: <strong>Тонкие полосы шоколада</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">16</span>
+                <h3 class="step-title">Стабилизация и хранение</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Чизкейк с шапочками можно есть сразу, а вот залитый ганашем отправьте на ночь в холодильник: если резать сразу, ганаш потечёт. По правилам десерт хранится 72 часа, по факту — до пяти суток.
+                <span class="source-badge">⏱ Урок 3: 00:22:29–00:26:16</span>
+              </p>
+              <p>
+                Замораживать можно целиком: и сырная масса, и вишня, и ганаш содержат желатин и сахар, поэтому разморозка проходит без потери качества. В морозилке готовый чизкейк лежит месяц.
+                <span class="source-badge">⏱ Урок 3: 00:23:11–00:23:34</span>
+              </p>
+              <div class="warning-box">
+                <strong>Морозить правильно:</strong> сначала дайте чизкейку замёрзнуть «в камень», потом заверните в плёнку или уберите в коробку и в плёнку. Ничего постороннего сверху не ставьте.
+                <span class="source-badge">⏱ Урок 3: 00:23:22–00:23:34</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📦 Холодильник: <strong>72 часа, по факту до 5 суток</strong></span>
+              <span class="param-pill">🧊 Морозилка: <strong>До месяца</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Крем-англез как основа:</strong> быстрая температура после варки увеличивает срок хранения с 48 до 72 часов, а на практике — до пяти суток.</li>
+                <li><strong>Сыр охлаждает массу:</strong> творожного сыра почти столько же, сколько крема, поэтому температура падает до комнатной сразу — это и есть «резкое охлаждение» англеза.</li>
+                <li><strong>Корочку с плесенью счищают:</strong> иначе грибки за ночь «переработают» творожный сыр и превратят его в камамбер с горчинкой.</li>
+                <li><strong>Малосладкий вкус:</strong> 90 г сахара на всю массу — это минимум. Чизкейк задуман как замена сырной тарелке, поэтому сахар уменьшать не советуют.</li>
+                <li><strong>Соль в сабле:</strong> сильно оттеняет вкус, без неё песочная основа плоская.</li>
+                <li><strong>Тесто можно заготовить:</strong> 10 дней в холодильнике, 3 месяца в морозилке, а восстановленную основу можно собрать за день-два до подачи.</li>
+                <li><strong>Желатин и заморозка:</strong> благодаря желатину и сахару чизкейк спокойно переносит замораживание и не теряет качество.</li>
+                <li><strong>Вариации вкуса:</strong> шоколадный — 100 г тёмного шоколада на общую массу; лимонный — сок и цедра по вкусу; ореховый — ореховая паста, пралине, даже нутелла.</li>
+                <li><strong>Красители:</strong> сырную массу можно красить водорастворимыми красителями в любой цвет.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Плавленый сыр или маскарпоне:</strong> у маскарпоне другая природа, при нагреве масло растопится и результат будет неудачным; плавленый даёт привкус майонеза.</li>
+                <li><strong>Сыр с растительными жирами:</strong> никакая ваниль и камамбер не перебьют привкус майонеза.</li>
+                <li><strong>Тёплая вода для желатина:</strong> вместо силикона получается кисель, масса не держит форму.</li>
+                <li><strong>Перегрев англеза:</strong> желток сворачивается, масса идёт комками.</li>
+                <li><strong>Корочка камамбера в массе:</strong> чизкейк горчит и «созревает» не туда.</li>
+                <li><strong>Крем в горячую основу:</strong> чизкейк плывёт. Основа должна полностью остыть.</li>
+                <li><strong>Вдавливание теста в бок кольца:</strong> через перфорацию оно выходит наружу, и основу невозможно вытащить.</li>
+                <li><strong>Недотрамбованная крошка:</strong> основа разваливается при нарезке.</li>
+                <li><strong>Сливки вместо масла при восстановлении:</strong> наоборот — основа становится жирной и не хрустит.</li>
+                <li><strong>Взбивание в широкой миске:</strong> масса взбивается неравномерно.</li>
+                <li><strong>Нарезка чизкейка с ганашем сразу:</strong> ганаш течёт, разрез некрасивый — нужна ночь в холодильнике.</li>
+                <li><strong>Нож для снятия кольца:</strong> нужен самый тонкий, иначе борт рвётся.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Творожный сыр:</strong> Hochland Creme Bonjour, Violette, Almette сливочный, Hochland для выпечки в красных пачках; хвалят также «Чудское озеро».</li>
+                <li><strong>Сыр с активным вкусом:</strong> камамбер, бри, дор блю, горгонзола, козьи сыры. Не любите яркий вкус — делайте просто на творожном сыре.</li>
+                <li><strong>Ягоды:</strong> вместо вишни — любые замороженные или свежие.</li>
+                <li><strong>Пюре для ганаша:</strong> вишнёвое, малиновое, ежевичное, смородиновое, черничное. Замороженные ягоды сначала пробивают блендером.</li>
+                <li><strong>Крахмал:</strong> картофельного берут в полтора раза меньше.</li>
+                <li><strong>Желатин:</strong> листовой можно, но с пересчётом силы — 220 блюм против 160 или даже 140.</li>
+                <li><strong>Форма:</strong> перфорация не обязательна — подойдёт обычное кольцо или раздвижное, тогда основа будет восстановленной.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 (сабле — 00:18–00:39, стабилизация теста — 00:42–00:45, желатин — 00:46–00:49, крем-англез — 00:49–01:07, сыр и камамбер — 01:07–01:22, вишнёвый соус — 01:25–01:30, основа в кольце — 01:31–01:43); Урок_02.mp4 (выпечка основы — 00:05–00:08, восстановленная основа — 00:08–00:19, взбивание массы — 00:20–00:35, ягодный ганаш — 00:35–00:49); Урок_03.mp4 (сборка и отсаживание — 00:01–00:13, заливка и декор — 00:13–00:20, хранение — 00:21–00:26); расшифровка с таймкодами «Расшифровка Чизкейк_Деликатес.csv»; файл «Чизкейк_Деликатес.docx» с граммовками. Таймкоды на странице — реальные, из расшифровки.</li>
+              <li><strong>Порция сабле:</strong> в DOCX песочная основа рассчитана на один чизкейк (250 г муки), а автор делает двойную порцию на два чизкейка. На странице — двойная, как в видео; одинарная указана в пояснении.</li>
+              <li><strong>Количество чизкейков:</strong> в DOCX сырный крем дан одним набором, но в видео из него получается ≈1 кг массы, которую делят пополам на два чизкейка по ~498 г. На странице база — два чизкейка.</li>
+              <li><strong>Сливки в сабле:</strong> DOCX — 60–80 г. В видео автор добавляет 42 г, затем ещё 20 г, итого 60 г, и говорит, что у всех количество будет разным — зависит от влажности воздуха.</li>
+              <li><strong>Ягодный ганаш:</strong> указан на один чизкейк, как говорит автор. Сливок 30 г для шоколада с содержанием какао-продуктов более 30 % (Вельвет, Зефир, Valrhona), 20 г — для остального белого шоколада.</li>
+              <li><strong>Время выпечки основы:</strong> в видео 20 минут; для маленькой основы Ø8 см время то же. Точная температура замера не названа — автор ориентируется на золотистый цвет.</li>
+              <li><strong>Температура англеза:</strong> DOCX её не приводит, в видео — 82–84 °C, с оговоркой, что достаточно дождаться первого булька и не кипятить.</li>
+              <li><strong>Сахар в креме:</strong> 90 г. Автор подчёркивает, что это минимум, и уменьшать его не советует — в DOCX то же количество.</li>
+              <li><strong>Пробелы:</strong> точный вес одного чизкейка автор называет приблизительно («около килограмма» на всю массу), время полной стабилизации ганаша в минутах не названо — «на ночь в холодильник».</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице стоит кадр из Урок_03.mp4 (00:16:30) с готовым чизкейком под ягодным ганашем, обрезанный по краям.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

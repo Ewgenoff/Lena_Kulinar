@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пирожное макаронс на швейцарской меренге — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Макаронс на швейцарской меренге: макаронаж из миндальной муки и пудры, меренга на водяной бане, отсадка и подсушка, четыре режима выпечки по типу духовки. Семь начинок: белый и молочный ганаш, ягодный с пюре йогурта, манго-маракуйя и конфи на пектине NH. Плюс фигурные макаронс по трафаретам.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body data-recipe-id="pirozhnoe-makaron">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Пирожное макаронс на швейцарской меренге</h1>
+      <p class="recipe-lead">
+        Пирожное из двух миндальных крышечек с юбочкой и кремовой начинкой внутри. Автор называет макаронс капризным десертом и сразу говорит, откуда берутся почти все проблемы: лишняя влага и духовка. Поэтому замес — на швейцарской меренге: не нужен градусник, не нужно заваривать белки с сиропом, не нужен сухой альбумин, а лишняя влага выпаривается прямо на водяной бане. В рецептуре один макаронаж и одна меренга, но автор обычно делает двойной замес: два цветных макаронажа и одна меренга на удвоенных ингредиентах, по 160 г в каждый. Начинок семь — базовый ганаш на белом шоколаде и четыре аромата на его основе, молочный ганаш, ягодный с пюре йогурта, манго-маракуйя и конфи на пектине NH.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">10–12 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">12–14 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 замес: 355 г макаронажа + ~180 г меренги</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/pirozhnoe-makaron.jpg" alt="Готовые макаронс: розовое с фисташковым ганашем и белое с начинкой, рядом разноцветные крышечки на столе" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 замес)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (замесов)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Одна порция — это один замес автора: макаронаж из 150 г миндальной муки, 150 г сахарной пудры и 55 г белка плюс меренга из 60 г белка и 120 г сахара. Обычно автор делает двойной замес: два макаронажа разных цветов и одна меренга, ингредиенты которой удвоены, — в каждый макаронаж идёт по 160 г меренги. Начинки в рецептуре даны отдельными порциями и масштабируются вместе с замесом; автор разрешает делать и половину.
+          </p>
+        </div>
+
+        <!-- Переключатель источников и таймкодов видео -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Основной контент: Ингредиенты + Технология -->
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> замес</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Продукты на один замес и на одну порцию каждой из семи начинок — количества по компонентам сведены, чтобы не покупать дважды. Самое важное здесь — белый шоколад с 32% какао-масла и пектин NH: от них зависит, встанут ли фруктовые начинки.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: яйца, сливки, шоколад -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥚 Яйца, сливки, шоколад</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С0</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span>
+                <span class="shopping-hint">Нужно 115 г белка: 55 г в макаронаж и 60 г в меренгу, это примерно 3 яйца С0. Желтки в макаронс не идут — пустите их на другой десерт; если белка вышло меньше, разбейте ещё одно яйцо</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 33–35%</strong>:
+                <span class="shopping-qty" data-base-amount="340" data-unit="г">340 г</span>
+                <span class="shopping-hint">130 г на ганаш на белом шоколаде, 130 г на молочный и 80 г на ягодный. Жирность ниже не подойдёт — начинка не встанет</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Белый шоколад 32%</strong>:
+                <span class="shopping-qty" data-base-amount="550" data-unit="г">550 г</span>
+                <span class="shopping-hint">210 г в базовый ганаш, 160 г в ягодный и 180 г в манго-маракуйю. Нужен именно белый шоколад с 32% какао-масла: на обычном 25,9% фруктовые ганаши могут не получиться</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молочный шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="180" data-unit="г">180 г</span>
+                <span class="shopping-hint">Только для молочного ганаша; автор берёт профессиональный Callebaut</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Вводится в молочный ганаш мягким, когда масса остыла до 40–45 °C</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: миндальная мука, пюре, стабилизаторы -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌰 Миндальная мука, пюре, стабилизаторы</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Миндальная мука</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Метрошеф, Орехпродукт или Арамона — то, что советует автор. Обязательно просейте</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Обычная «Роспак»; пудра не должна быть влажной, иначе макаронаж поплывёт</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="135" data-unit="г">135 г</span>
+                <span class="shopping-hint">120 г в меренгу — ровно в два раза больше веса белка, и 15 г в конфи</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимонная кислота</strong>:
+                <span class="shopping-qty" data-base-amount="0.5" data-unit="ч. л.">0,5 ч. л.</span>
+                <span class="shopping-hint">0,25 ч. л. в меренгу (вместе с сахаром) и 0,25 ч. л. в конфи. Вместо неё можно взять винный камень</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ваниль</strong> — паста или стручок бурбон
+                <span class="shopping-hint">Идёт в сливки для ганаша; на баночке ванильного экстракта далеко не уедешь, но паста подойдёт любая</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре клубничное</strong>:
+                <span class="shopping-qty" data-base-amount="180" data-unit="г">180 г</span>
+                <span class="shopping-hint">80 г в ягодный ганаш и 100 г в конфи. Можно сделать из замороженных ягод — профессиональное пюре не обязательно</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре манго</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Для ганаша манго-маракуйя</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре маракуйи</strong>:
+                <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+                <span class="shopping-hint">Чистую маракуйю в конфи автор брать не советует — слишком кисло, а в паре с манго она как раз работает</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пектин NH</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="г">2 г</span>
+                <span class="shopping-hint">Только NH — другой пектин в этой технологии не работает. Маленький пакетик уйдёт на несколько партий</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="г">5 г</span>
+                <span class="shopping-hint">2 г на ягодный ганаш и 3 г на манго-маракуйю; замачивать в холодной воде — 10 г и 15 г соответственно</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пудра йогурта</strong> (опционально):
+                <span class="shopping-qty" data-base-amount="1" data-unit="ст. л.">1 ст. л.</span>
+                <span class="shopping-hint">Редкий ингредиент, но именно он превращает клубничный ганаш в йогуртовый. Без него начинка будет просто клубничной</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Красители и диоксид титана</strong> — по вкусу
+                <span class="shopping-hint">Сухой водорастворимый краситель идёт в макаронаж, гелевый — в меренгу. Для белых макаронс нужен диоксид титана: без красителя крышечки выходят серо-бежевыми</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — коврики, насадка № 12, мешки, плёнка, контейнер
+                <span class="shopping-hint">Силиконовые или тефлоновые коврики (на пергаменте дно выйдет волнистым), насадка № 12, мешки под каждый цвет, пищевая плёнка для ганашей и контейнер для крышечек</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Марципан (макаронаж)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Миндальная мука
+              <span class="ingredient-note">Метрошеф, Орехпродукт или Арамона — рекомендация автора. Просеять вместе с пудрой</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сахарная пудра
+              <span class="ingredient-note">«Роспак» подойдёт; пудра не должна быть влажной</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="55" data-unit="г">55 г</span> — Белок яичный
+              <span class="ingredient-note">Отдельный белок для макаронажа; в меренгу идёт другой — не перепутайте при взвешивании</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Сухой водорастворимый краситель
+              <span class="ingredient-note">Добавляется прямо в белок: так цвет не приносит в макаронаж лишнюю влагу. Гелевый сюда нельзя</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Швейцарская меренга</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Белок яичный
+              <span class="ingredient-note">Комнатной температуры, без капли желтка</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Сахар-песок
+              <span class="ingredient-note">Ровно в два раза больше веса белка</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="0.25" data-unit="ч. л.">0,25 ч. л.</span> — Лимонная кислота
+              <span class="ingredient-note">Вмешать в сахар, а не в белок. Можно заменить винным камнем</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Ганаш на белом шоколаде</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="130" data-unit="г">130 г</span> — Сливки 33–35%
+              <span class="ingredient-note">Нагреть почти до кипения, автор греет примерно до 80 °C</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="210" data-unit="г">210 г</span> — Белый шоколад
+              <span class="ingredient-note">32% какао-масла — именно на нём начинки получаются стабильными</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Ваниль
+              <span class="ingredient-note">Паста или стручок бурбон, добавляется в сливки до нагрева</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Ганаш на молочном шоколаде</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="130" data-unit="г">130 г</span> — Сливки 33–35%
+              <span class="ingredient-note">Здесь греются только до 40–50 °C — до тёплого состояния</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="180" data-unit="г">180 г</span> — Молочный шоколад
+              <span class="ingredient-note">Подтапливается пульсами в микроволновке до 45 °C</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Сливочное масло 82,5%
+              <span class="ingredient-note">Мягкое, вводится при 40–45 °C, иначе эмульсия расслоится</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Ягодный ганаш</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Сливки 33–35%
+              <span class="ingredient-note">Довести до кипения</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Белый шоколад
+              <span class="ingredient-note">32% какао-масла; на обычном нужен желатин, он в рецепте уже есть</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Ягодное пюре
+              <span class="ingredient-note">У автора клубника; можно выдавить из замороженных ягод</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ст. л.">1 ст. л.</span> — Пудра йогурта (опционально)
+              <span class="ingredient-note">Без неё начинка получится просто клубничной</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Желатин
+              <span class="ingredient-note">Залить холодной водой заранее, пока греются сливки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Вода
+              <span class="ingredient-note">Холодная, для замачивания желатина</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Водорастворимый краситель
+              <span class="ingredient-note">Клубника даёт бежево-серый цвет, капля красного или розового делает оттенок тёплым</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Манго-маракуйя</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Пюре маракуйи
+              <span class="ingredient-note">В паре с манго кислотность уходит в нужную сторону</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Пюре манго
+              <span class="ingredient-note">Нагреть с маракуйей до кипения, но не кипятить</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="180" data-unit="г">180 г</span> — Белый шоколад
+              <span class="ingredient-note">При шоколаде 32% автор желатин не добавляла вовсе</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Желатин
+              <span class="ingredient-note">Нужен, если белый шоколад обычный — для дополнительной стабилизации</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Вода
+              <span class="ingredient-note">Холодная, для замачивания желатина</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Конфи</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Ягодное или фруктовое пюре
+              <span class="ingredient-note">Подойдёт клубника, малина, черника, ежевика; чистую маракуйю автор не советует — слишком кисло</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Сахар-песок
+              <span class="ingredient-note">Смешивается с пектином до ввода, иначе пектин пойдёт комками</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Пектин NH
+              <span class="ingredient-note">Только NH: другой пектин здесь не сработает</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="0.25" data-unit="ч. л.">0,25 ч. л.</span> — Лимонная кислота
+              <span class="ingredient-note">Вводится после снятия с огня</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+<!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Почему именно швейцарская меренга</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Макаронс — французский десерт из двух миндальных хрустящих крышечек с кремовой начинкой. Это реально капризный десерт, и почти все вопросы в нём — это крышечки с их юбочками. Проблемы возникают по двум причинам: лишняя влага и духовка.
+                <span class="source-badge">⏱ Урок 1: 00:00–00:13</span>
+              </p>
+              <p>
+                Швейцарская меренга выбрана не случайно. Во-первых, не нужен градусник и не нужно заваривать белки с сиропом — можно обойтись ручным миксером. Во-вторых, макаронс на ней быстро сохнут, и пропустить момент, когда образовалась корочка, довольно сложно. В-третьих, именно при выпечке случаются 90% ошибок, а здесь их меньше всего.
+                <span class="source-badge">⏱ Урок 1: 00:16–00:48</span>
+              </p>
+              <p>
+                И главное: лишняя влага, которая для макаронс всегда проблема, выпаривается прямо во время нагревания меренги на водяной бане. Поэтому же не нужен сухой альбумин, который довольно сложно найти.
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🛠 Инструмент: <strong>Ручной миксер, градусник не нужен</strong></span>
+              <span class="param-pill">🌡 Влага: <strong>Выпаривается на водяной бане</strong></span>
+              <span class="param-pill">🎯 Главный риск: <strong>Выпечка (90% ошибок)</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Макаронаж: миндальная мука, пудра, белок</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Просейте миндальную муку и сахарную пудру и перемешайте. У автора мука Метрошеф, Орехпродукт или Арамона, пудра «Роспак» — главное, чтобы она не была влажной.
+              </p>
+              <p>
+                Отвесьте 55 г белка и вылейте его в муку. Если боитесь класть его сразу, добавляйте столовой ложкой — так спокойнее. Затем добавьте сухой водорастворимый краситель именно в белок, а не в меренгу: сухой краситель не приносит в макаронаж лишнюю влагу.
+                <span class="source-badge">⏱ Урок 1: 00:48–02:13</span>
+              </p>
+              <p>
+                Всыпьте всю сахарную пудру по рецепту и объединяйте массу разминающими движениями, чтобы миндальная мука смочилась белком. Лопатка нужна основательная, с деревянной ручкой: пластиковую на этом деле легко сломать. Мешаем недолго — как только мука вся смочена, прекращаем.
+                <span class="source-badge">⏱ Урок 1: 02:20–03:12</span>
+              </p>
+              <div class="tip-box">
+                <strong>Белые макаронс:</strong> без красителя крышечки выходят серо-бежевого оттенка. Чтобы они были белыми, в белок добавляют порошок диоксида титана и дают ему намокнуть 5–10 минут, прежде чем мешать макаронаж.
+                <span class="source-badge">⏱ Урок 4: 00:04–00:52</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Макаронаж: <strong>150 г муки + 150 г пудры + 55 г белка</strong></span>
+              <span class="param-pill">🎨 Краситель: <strong>Сухой, в белок</strong></span>
+              <span class="param-pill">🥄 Мешать: <strong>Пока мука не станет влажной</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Меренга на водяной бане: растворяем сахар</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В сотейник, который пойдёт на водяную баню, отвесьте белок, на него — сахар, а в сахар добавьте лимонную кислоту. Кислоту всыпают в сахар, а не в белок, чтобы белок не сворачивался, и слегка размешивают.
+                <span class="source-badge">⏱ Урок 1: 01:12–01:49</span>
+              </p>
+              <p>
+                Поставьте сотейник на слабо кипящую водяную баню и перемешивайте на низкой скорости миксера, пока весь сахар не растворится. Проверять пальцем по стенке: кристаллика быть не должно, меренга гладкая. У автора этот процесс занял 3 минуты, причём она пару раз возвращала сотейник на баню ещё на две минуты, если пальцем чувствовались крупинки.
+                <span class="source-badge">⏱ Урок 1: 03:12–04:22</span>
+              </p>
+              <div class="warning-box">
+                <strong>Оббивайте стенки и дно:</strong> миксер должен «шуметь» по всей стенке и по дну — громко и шумно, как у автора. Если этого не делать, на стенке останется омлет, и меренга выйдет неровной.
+                <span class="source-badge">⏱ Урок 1: 03:39–03:54</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Баня: <strong>Слабое кипение</strong></span>
+              <span class="param-pill">🌀 Скорость: <strong>Низкая</strong></span>
+              <span class="param-pill">⏱ Растворение: <strong>~3 мин у автора</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Взбивание: 7 минут до эластичных пиков</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сахар растворился — снимайте меренгу с огня и увеличивайте скорость до максимума. У автора взбивание заняло 7 минут, по часам она ориентируется на 7–10.
+                <span class="source-badge">⏱ Урок 1: 04:24–04:29</span>
+              </p>
+              <p>
+                Готовая меренга очень эластичная: с лопатки не течёт, но если зачерпнуть — оставляет мягкие эластичные пики, которые загибаются. Именно такая тягучая консистенция и нужна.
+                <span class="source-badge">⏱ Урок 1: 04:49–05:02</span>
+              </p>
+              <p>
+                Если сухого красителя под рукой нет, гелевый водорастворимый можно подкрасить в меренгу — обычно это делают уже после снятия с бани.
+                <span class="source-badge">⏱ Урок 1: 00:01:05–00:01:11</span>
+              </p>
+              <div class="tip-box">
+                <strong>Размер посуды:</strong> для одинарного замеса берите сотейник примерно на 1,5 литра. В большой кастрюле меренга размажется по стенкам и плохо взобьётся.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌀 Скорость: <strong>Максимум</strong></span>
+              <span class="param-pill">⏱ Взбивание: <strong>7 мин (ориентир 7–10)</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Мягкие эластичные пики</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Соединение: одинарный и двойной замес</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                <strong>Одинарный замес:</strong> всю меренгу отправляйте сразу в макаронаж, не деля её на части. Перемешивайте разминающими движениями, пока масса не начнёт стекать с лопатки лентой. Лучше немного недомешать, чем перемешать: совсем жидким тесто станет уже в мешке, когда вы будете отсаживать.
+                <span class="source-badge">⏱ Урок 1: 05:04–06:05</span>
+              </p>
+              <p>
+                <strong>Двойной замес</strong> — то, как автор работает обычно: два макаронажа разных цветов и меренга в один замес на удвоенных ингредиентах. Меренгу делят по весу пополам и кладут в каждый макаронаж по 160 г.
+                <span class="source-badge">⏱ Урок 2: 00:01–00:13</span>
+              </p>
+              <p>
+                Небольшой остаток меренги — это нормально. Чем горячее баня на первом этапе, тем больше влаги испаряется, и тем меньше меренги останется; на мягком нагреве её окажется больше.
+                <span class="source-badge">⏱ Урок 2: 00:01:13–00:01:40</span>
+              </p>
+              <div class="warning-box">
+                <strong>Лопата — деревянная ручка:</strong> перемешивать плотный макаронаж на самом деле не очень просто, и пластиковая лопатка на этом деле ломается. Автор работает лопаткой с деревянной ручкой.
+                <span class="source-badge">⏱ Урок 1: 05:36–05:49</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">1️⃣ Одинарный: <strong>Вся меренга в макаронаж</strong></span>
+              <span class="param-pill">2️⃣ Двойной: <strong>По 160 г меренги на макаронаж</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Тесто стекает лентой</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Отсадка и отстукивание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите макаронаж в кондитерский мешок с насадкой № 12 — это просто насадка на срезе. Отверните манжету, заполните мешок (удобно ставить его в высокий стакан или в чашу блендера) и отрежьте верх так, чтобы при давлении насадку не выдавило.
+                <span class="source-badge">⏱ Урок 1: 06:07–06:53</span>
+              </p>
+              <p>
+                Отсаживайте по контуру, если под ковриком лежит лист с разметкой, или по счёту — «раз, два, три петельки» на одну макаронину: так круглые выходят одинаковыми. Насадку держите строго вертикально, не под наклоном и не сбоку.
+                <span class="source-badge">⏱ Урок 1: 06:59–07:33</span>
+              </p>
+              <p>
+                Снимать насадку с макаронажа вверх нельзя — капелька сверху потом очень тяжело убирается. Уходите вбок резким движением или делайте петельку, как автор. Сразу после отсадки отстучите коврик, чтобы неровности разошлись и поверхность стала гладкой: если макаронс постоят и присохнут, выровнять их уже не получится.
+                <span class="source-badge">⏱ Урок 1: 07:34–08:48</span>
+              </p>
+              <div class="warning-box">
+                <strong>Юбочка только с одной стороны:</strong> если макаронина прилипла к коврику, юбочка с этого края не образуется. Автор каждый раз, вне зависимости от того, кажется ей прилипание или нет, выгибает коврик и отлепляет макаронс — по всей поверхности и в двух плоскостях.
+                <span class="source-badge">⏱ Урок 2: 00:02:09–00:03:07</span>
+              </div>
+              <div class="tip-box">
+                <strong>Маленькие макаронс для декора:</strong> их делают вдвое меньше обычных, но печь на одном противне с большими не стоит — маленькие быстрее высохнут и станут менять цвет. Сажайте их отдельно или так, чтобы размеры отличались незначительно.
+                <span class="source-badge">⏱ Урок 1: 10:13–10:37</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧰 Насадка: <strong>№ 12</strong></span>
+              <span class="param-pill">📐 Положение: <strong>Строго вертикально</strong></span>
+              <span class="param-pill">🥁 Отстучать: <strong>Сразу после отсадки</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Подсушка: 30–40 минут до корочки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отсаженные макаронс оставьте подсыхать на 30–40 минут. В видео автор уточняет, что на швейцарской меренге корочка образуется очень быстро — бывает достаточно 15–20 минут; у неё партия стояла около 15 минут.
+                <span class="source-badge">⏱ Урок 1: 11:00</span>
+              </p>
+              <p>
+                Проверка одна: проведите пальцем по поверхности — к пальцу ничего не прилипает, липкого слоя больше нет. Значит, можно в духовку.
+                <span class="source-badge">⏱ Урок 2: 00:01:41–00:02:08</span>
+              </p>
+              <p>
+                Коврик — силиконовый или тефлоновый, особых требований нет. На хорошем силиконизированном пергаменте тоже можно, только дно макаронс выйдет чуть волнистым.
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏳ Подсушка: <strong>30–40 мин (бывает 15–20)</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>К пальцу не липнет</strong></span>
+              <span class="param-pill">🧰 Коврик: <strong>Силикон или тефлон</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Выпечка по типу духовки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте в заранее разогретой духовке — и помните, что режим для электрической, газовой и конвекционной печи разный. Автор выпекает в электрической духовке при 145 °C без конвекции, противень ставит посередине и переворачивает его другой стороной.
+                <span class="source-badge">⏱ Урок 1: 11:06–11:19</span>
+              </p>
+              <p>
+                Режимы из рецептуры:
+              </p>
+              <p>
+                <strong>Электрическая духовка с конвекцией:</strong> 135–145 °C, уровень посередине, 16–17 минут.<br>
+                <strong>Электрическая без конвекции (верх-низ):</strong> 140–150 °C, уровень посередине, 17–18 минут.<br>
+                <strong>Газовая:</strong> 140–150 °C, уровень максимально вверху, 16–20 минут; нужен дополнительный градусник внутри духовки.<br>
+                <strong>Газовая на высокой температуре:</strong> 230–240 °C, верхний или средний уровень, поставить макаронс и сразу выключить духовку, оставить на 10 минут, проверить готовность и при необходимости додержать в выключенной духовке ещё 5 минут.
+              </p>
+              <p>
+                В видео автор приводит для электрической духовки без конвекции 145 °C и 15–16 минут, для конвекции — 135 °C и 14–15 минут. Ориентируйтесь на силу и мощность своей духовки.
+                <span class="source-badge">⏱ Урок 1: 11:48–12:33</span>
+              </p>
+              <div class="warning-box">
+                <strong>Проверка готовности:</strong> возьмите печеньку и подвигайте вперёд-назад. Если юбочка и печенка на ней ещё двигаются — пеките ещё пару минут; когда не двигаются, макарон готов.
+                <span class="source-badge">⏱ Урок 1: 11:19–11:42</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 С конвекцией: <strong>135–145 °C, 16–17 мин</strong></span>
+              <span class="param-pill">🌡 Без конвекции: <strong>140–150 °C, 17–18 мин</strong></span>
+              <span class="param-pill">🔥 Газовая: <strong>140–150 °C, 16–20 мин, верх</strong></span>
+              <span class="param-pill">⚡ Газовая 230–240 °C: <strong>Выключить, 10 + 5 мин</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Остывание и хранение крышечек</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сняв противень из духовки, обязательно переложите коврик с макаронсами с горячего противня, чтобы они не грелись дальше. Снимать макаронс с коврика можно только после полного остывания — оставьте и забудьте их примерно на час.
+                <span class="source-badge">⏱ Урок 1: 12:35–12:55</span>
+              </p>
+              <p>
+                Готовые крышечки хранятся в контейнере в холодильнике 15–20 дней, в морозилке — до 2 месяцев. Поэтому партию можно отпечь заранее, а начинить за день до подачи.
+              </p>
+              <div class="tip-box">
+                <strong>Как проверить начинку внутри:</strong> разломите остывшую макаронину — у автора она получается «мясной», без полостей. Полость внутри крышечки — признак проблем с вымешиванием или выпечкой.
+                <span class="source-badge">⏱ Урок 1: 12:55–13:10</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Холодильник: <strong>15–20 дней</strong></span>
+              <span class="param-pill">❄ Морозилка: <strong>2 месяца</strong></span>
+              <span class="param-pill">⏳ Остывание: <strong>~1 час, потом снимать</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Базовый ганаш на белом шоколаде и четыре вкуса</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Нагрейте 130 г сливок 33–35% до кипения вместе с ванилью, поставьте 210 г белого шоколада в стакан и залейте горячими сливками. Дайте шоколаду «подумать», затем пробейте погружным блендером до эмульсии. Перелейте в ёмкость, накройте плёнкой в контакт — так, чтобы она легла на поверхность ганаша, — и уберите в холодильник на стабилизацию минимум на 8 часов.
+                <span class="source-badge">⏱ Урок 5: 00:00:02–00:04:06</span>
+              </p>
+              <p>
+                На этой базе легко сделать другие начинки, ароматизировав сливки: кофейную (1 ч. л. сублимированного кофе растворить в горячих сливках), ореховую (50 г пралине или ореховой пасты растворить в тёплых сливках), лаймовую (цедра и сок 1 небольшого лайма плюс капля зелёного красителя — в уже готовый ганаш перед стабилизацией). В видео к кофейной добавляют ещё и немного ликёра.
+                <span class="source-badge">⏱ Урок 5: 00:01:16–00:04:46</span>
+              </p>
+              <div class="tip-box">
+                <strong>Порядок и посуда:</strong> все четыре вкуса на белом шоколаде автор делает в одном стакане и готовит их по мере возрастания силы вкуса — сначала ваниль, потом пралине, кофе и лайм. Так не приходится мыть посуду между партиями.
+                <span class="source-badge">⏱ Урок 5: 00:02:19–00:04:06</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Ганаш: <strong>130 г сливок + 210 г белого шоколада</strong></span>
+              <span class="param-pill">⏱ Стабилизация: <strong>Минимум 8 ч</strong></span>
+              <span class="param-pill">🍦 Вкусы: <strong>Ваниль, пралине, кофе, лайм</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 11 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Ганаш на молочном шоколаде</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Здесь принцип другой. Нагрейте 130 г сливок до 40–50 °C, а 180 г молочного шоколада подтопите в микроволновке до 45 °C — пульсами: первый 15 секунд, дальше по 10, после каждой дверцы перемешивайте лопаткой. Шоколад не должен быть растоплен полностью, плавление только начинается.
+                <span class="source-badge">⏱ Урок 6: 00:00:14–00:00:50</span>
+              </p>
+              <p>
+                Залейте шоколад тёплыми сливками, дайте постоять и перемешайте до объединения; если чувствуете, что масса холодная, немного прогрейте в микроволновке. Когда всё объединилось, введите мягкое сливочное масло — при температуре примерно 40–45 °C — и пробейте блендером.
+                <span class="source-badge">⏱ Урок 6: 00:00:59–00:01:30</span>
+              </p>
+              <p>
+                Переложите в ёмкость, накройте плёнкой в контакт и уберите в холод стабилизироваться на 4–5 часов.
+              </p>
+              <div class="warning-box">
+                <strong>Горячий ганаш с маслом:</strong> если масса слишком горячая, когда вы добавляете масло, эмульсия может расслоиться. Ориентир автора — 40–45 °C.
+                <span class="source-badge">⏱ Урок 6: 00:01:26–00:01:33</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сливки: <strong>40–50 °C</strong></span>
+              <span class="param-pill">🍫 Шоколад: <strong>180 г, до 45 °C пульсами</strong></span>
+              <span class="param-pill">⏱ Стабилизация: <strong>4–5 ч</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 12 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Ягодный ганаш</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Залейте 2 г желатина 10 г холодной воды и оставьте набухать. Нагрейте 80 г сливок до кипения, поставьте 160 г белого шоколада в стакан, залейте горячими сливками, выдержите несколько секунд, добавьте пудру йогурта и пробейте блендером.
+                <span class="source-badge">⏱ Урок 7: 00:00:02–00:00:46</span>
+              </p>
+              <p>
+                Нагрейте 80 г клубничного пюре до 40–50 °C, распустите в нём желатин и введите пюре в ганаш. В видео автор прогревает пюре примерно до 40 °C, добавляет ложку сока лайма (или 1 г лимонной кислоты) и уже потом объединяет с растопленным шоколадом.
+                <span class="source-badge">⏱ Урок 7: 00:00:46–00:01:23</span>
+              </p>
+              <p>
+                Клубника даёт бежево-серый цвет — добавьте каплю красного или розового красителя до тёплого розового оттенка. Перелейте тонким слоем в ёмкость, накройте плёнкой в контакт и уберите в холодильник на 8 часов и больше.
+                <span class="source-badge">⏱ Урок 7: 00:02:11–00:02:51</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍓 Пюре: <strong>80 г, тёплое 40–50 °C</strong></span>
+              <span class="param-pill">🧊 Желатин: <strong>2 г на 10 г воды</strong></span>
+              <span class="param-pill">⏱ Стабилизация: <strong>Не менее 8 ч</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 13 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Начинка манго-маракуйя</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Залейте 3 г желатина 15 г холодной воды. Сложите 60 г пюре маракуйи и 100 г пюре манго в сотейник и нагрейте до кипения, но не кипятите.
+                <span class="source-badge">⏱ Урок 7: 00:03:03–00:03:14</span>
+              </p>
+              <p>
+                Поставьте 180 г белого шоколада в стакан, залейте горячим пюре, дайте пару секунд и пробейте блендером. Переложите в ёмкость, накройте плёнкой в контакт и уберите в холодильник на 8 часов и дольше.
+                <span class="source-badge">⏱ Урок 7: 00:03:14–00:03:41</span>
+              </p>
+              <div class="tip-box">
+                <strong>Про желатин:</strong> на шоколаде 32% автор желатин не использовала вовсе — начинка и так стабильная. Если белый шоколад обычный, желатин нужен для дополнительной стабилизации; с ним ганаш можно взбить.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥭 Пюре: <strong>60 г маракуйи + 100 г манго</strong></span>
+              <span class="param-pill">🌡 Нагрев: <strong>До кипения, не кипятить</strong></span>
+              <span class="param-pill">⏱ Стабилизация: <strong>Не менее 8 ч</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 14 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Универсальное конфи на пектине NH</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Смешайте 15 г сахара с 2 г пектина NH и введите «дождиком» в 100 г пюре, активно мешая венчиком. Пюре должно быть не выше 45 °C — в холодное или прохладное: в горячем пектин не сработает, придётся ждать, пока остынет.
+                <span class="source-badge">⏱ Урок 8: 00:00:52–00:01:15</span>
+              </p>
+              <p>
+                Прогрейте массу, постоянно помешивая, минуту-две после закипания. Количество небольшое, поэтому загустеет быстро: появятся ощутимые пузырики, но «вау-эффекта» от 100 г пюре не ждите.
+                <span class="source-badge">⏱ Урок 8: 00:01:22–00:02:11</span>
+              </p>
+              <p>
+                Снимите с огня, введите 0,25 ч. л. лимонной кислоты и проверьте на нестекающую каплю: она хочет упасть, но не падает. Если вышло жидко, можно вернуть на огонь и доварить. Горячее конфи сразу переложите в кондитерский мешок — в нём же оно и остынет; использовать можно только хорошо охлаждённое.
+                <span class="source-badge">⏱ Урок 8: 00:02:11–00:02:56</span>
+              </p>
+              <div class="warning-box">
+                <strong>Только пектин NH:</strong> другой пектин в этой технологии использовать нельзя. И пропорции менять не нужно: рецепт работает с любым ягодным или фруктовым пюре, а чистую маракуйю автор брать не советует — слишком кисло.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Конфи: <strong>100 г пюре + 15 г сахара + 2 г NH</strong></span>
+              <span class="param-pill">🌡 Пюре при вводе: <strong>Не выше 45 °C</strong></span>
+              <span class="param-pill">🍮 Признак: <strong>Нестекающая капля</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 15 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">15</span>
+                <h3 class="step-title">Взбивание и сборка макаронс</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Одно общее правило у всех семи начинок: перед использованием они должны быть стабилизированы, шоколад должен загустить массу. Минимум 8 часов в холодильнике, лучше 12 — сделать и оставить на ночь.
+                <span class="source-badge">⏱ Урок 9: 00:00:08–00:00:28</span>
+              </p>
+              <p>
+                Плотные ганаши — на молочном шоколаде, а также с кофе, пралине и лаймом — взбивают ручным миксером на высокой скорости в узкой посуде; планетарным миксером максимальную скорость ставить не нужно. Мягкие фруктовые ганаши не взбивают: их просто перекладывают в мешок. Взбитый ганаш светлеет и блестит; если он у вас жидкий и не собирается, значит, стабилизировали недостаточно.
+                <span class="source-badge">⏱ Урок 10: 00:00:01–00:01:29</span>
+              </p>
+              <p>
+                Отсадите ганаш насадкой № 12 по кругу, оставляя место в центре. Конфи выкладывайте в середину мешком с отверстием около 4 мм — ровным слоем. Накройте второй крышечкой и слегка прижмите, чтобы начинка распределилась.
+                <span class="source-badge">⏱ Урок 10: 00:01:43–00:02:34</span>
+              </p>
+              <div class="warning-box">
+                <strong>Почему фрукты только в центре:</strong> ягодная начинка, даже густая, размачивает крышечки — они перестают хрустеть. Поэтому макаронс целиком не начиняют конфи: основа — шоколадный ганаш, а ягодный центр в середине.
+                <span class="source-badge">⏱ Урок 9: 00:00:49–00:01:16</span>
+              </div>
+              <div class="tip-box">
+                <strong>Сроки начинок:</strong> ганаши хранятся в холодильнике 5 дней, в морозилке — 1 месяц. Манго-маракуйя и конфи — 72 часа в холодильнике и 1 месяц в морозилке.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧰 Насадка: <strong>№ 12, конфи — отверстие 4 мм</strong></span>
+              <span class="param-pill">🌀 Взбивать: <strong>Плотные ганаши, узкая посуда</strong></span>
+              <span class="param-pill">🥄 Сборка: <strong>Ганаш по кругу, конфи в центр</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 16 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">16</span>
+                <h3 class="step-title">Фигурные макаронс: сердечки, ракушки, мишки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Фигурные макаронс делают из того же макаронажа — он может быть на французской, итальянской или швейцарской меренге. Нужен трафарет и силиконовый коврик, который чуть просвечивает: трафарет кладут под коврик и сдвигают его для каждой следующей партии. Весь рисунок состоит только из точек и запятых, других фигур нет, а макаронаж должен быть хорошо вымешан.
+                <span class="source-badge">⏱ Варианты форм: 00:00:31–00:00:42</span>
+              </p>
+              <p>
+                <strong>Сердечки.</strong> Отсаживайте точку за точкой в выпуклую верхнюю часть, а затем смахивайте вниз, уменьшая давление, — получается запятая. Верх получается толще, острый край тоньше. Сразу после отсадки проработайте кончик, пока макаронаж не подсох.
+                <span class="source-badge">⏱ Формы, файл 3: 00:00:17–00:00:52</span>
+              </p>
+              <p>
+                <strong>Ракушки.</strong> Весь рисунок — из семи запятых: давление, давление, давление, потом «выхожу на нет» и смазываю вниз; последнее движение горизонтальное, «хвостик» заводится наверх. Ракушки не отстукивают — нужен рельеф, он остаётся и после выпечки.
+                <span class="source-badge">⏱ Формы, файл 7: 00:00:59–00:01:19</span>
+              </p>
+              <p>
+                <strong>Мишки.</strong> Рисунок из точек, трафарет необязателен. Сначала мелкие детали — ушки, чтобы потом крупная серединка с ними соединилась в одно целое: иначе всё останется по отдельности. Мишек чуть-чуть отстукивают, чтобы рисунок разгладился и можно было нарисовать лицо.
+                <span class="source-badge">⏱ Формы, файл 8: 00:00:24–00:01:24</span>
+              </p>
+              <div class="tip-box">
+                <strong>Сборка фигурных:</strong> начинку отсаживают по тем же правилам — больше с толстой выпуклой части и меньше с тонкого края, у мишек равномерно. Фигурные макаронс тяжелее обычных, расход выше. В приоткрытую ракушку автором кладётся «жемчужина».
+                <span class="source-badge">⏱ Формы, файл 11: 00:00:29–00:01:12</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📄 Основа: <strong>Трафарет под силиконовым ковриком</strong></span>
+              <span class="param-pill">✍ Техника: <strong>Только точки и запятые</strong></span>
+              <span class="param-pill">🥁 Отстукивание: <strong>Сердечки и мишки — да, ракушки — нет</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Вся борьба — с влагой:</strong> лишняя влага и духовка дают почти все проблемы с крышечками. Швейцарская меренга выигрывает тем, что выпаривает влагу уже на водяной бане.</li>
+                <li><strong>Кислота в сахар:</strong> лимонная кислота, всыпанная в белок, сворачивает его. И именно она даёт крышечкам быстро схватиться без духовки.</li>
+                <li><strong>Сухой краситель — в белок:</strong> он не добавляет макаронажу влаги, а цвет проявляется в процессе перетирания. Гелевый краситель идёт в меренгу.</li>
+                <li><strong>Стабильность начинки начинается в магазине:</strong> белый шоколад 32% какао-масла держит фруктовые ганаши, на обычном 25,9% они могут не получиться. Не берите сливки ниже 33%.</li>
+                <li><strong>Сухой кофе, не эспрессо:</strong> сублимированный кофе не добавляет начинке лишней воды. Пралине можно заменить пастой любого ореха в той же пропорции.</li>
+                <li><strong>Плёнка в контакт:</strong> обязательна для каждого ганаша — иначе на поверхности образуется плёнка и корочка.</li>
+                <li><strong>Пастельные оттенки проще:</strong> автор советует начинать с тёплых нежных цветов — насыщенные красители дают больше влаги и вкуса.</li>
+                <li><strong>Половина порции начинки:</strong> если нужен только один вкус, ганаш можно варить вдвое меньше — рецепт это допускает.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Лишняя влага</strong> — главная причина. Влажная сахарная пудра, гелевый краситель в макаронаже, капли воды в меренге, не выпаренная на бане влага.</li>
+                <li><strong>Духовка</strong> — вторая причина, на неё приходится до 90% ошибок. Перегрев и конвекция в неподходящем режиме дают трещины и недопечённые крышечки.</li>
+                <li><strong>Юбочка только с одной стороны</strong> — или отсадка насадкой сбоку и под наклоном, или макаронина прилипла к коврику. Отстукивание и отлепление коврика решают второе.</li>
+                <li><strong>Насадку вынули вверх</strong> — на макаронине остаётся капелька, которую потом очень трудно убрать. Уходить нужно вбок или петелькой.</li>
+                <li><strong>Перемешали тесто</strong> — лучше недомешать: совсем жидким макаронаж станет уже в мешке, и отсадка поплывёт.</li>
+                <li><strong>Не оббили стенки</strong> при растворении сахара — на стенке остаётся омлет, меренга получается с крупинками.</li>
+                <li><strong>Начинку не стабилизировали</strong> — она разжижается при взбивании и не собирается. Нужны минимум 8 часов, лучше 12.</li>
+                <li><strong>Масло в горячий ганаш</strong> — молочный ганаш расслаивается, если температура при вводе масла выше 40–45 °C.</li>
+                <li><strong>Пектин не NH или горячее пюре</strong> — конфи либо не встанет, либо пойдёт комками. Пектин вводится «дождиком» в сахар и только в прохладное пюре.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> курс «Тортомафия» Надежды Зубовой, месяц 3 — DOCX «Макаронс на швейцарской меренге» с граммовками и расшифровка десяти видеоуроков (Урок_01–Урок_10). Раздел про фигурные макаронс — отдельный мини-мастер-класс: 13 коротких видео и две расшифровки в папке «Варианты_форм_для_макаронс». Шаблоны (ракушки, мишки, сердечки) лежат в файлах ракушки.docx и PDF.</li>
+              <li><strong>База калькулятора:</strong> один замес автора — без цвета и без начинок. Автор говорит, что обычно делает двойной: два макаронажа на разные цвета и меренга на удвоенных ингредиентах; в каждый макаронаж идёт по 160 г меренги.</li>
+              <li><strong>Расхождение по времени выпечки:</strong> рецептура даёт 135–145 °C и 16–17 минут с конвекцией и 140–150 °C и 17–18 минут без конвекции, а в видео для той же духовки без конвекции прозвучало 145 °C и 15–16 минут, с конвекцией — 135 °C и 14–15 минут. На странице взяты значения из рецептуры как более поздние; ориентируйтесь также на проверку подвижности юбочки.</li>
+              <li><strong>Расхождение по подсушке:</strong> рецептура — 30–40 минут, в видео корочка образуется за 15–20 минут, у автора партия стояла около 15. В шаге указаны оба ориентира.</li>
+              <li><strong>Расхождение по молочному ганашу:</strong> в рецептуре время стабилизации 4–5 часов, в видео автор просит не менее 8 часов. На странице взято значение из рецептуры, общее правило «8 часов, лучше 12» описано в шагах начинок.</li>
+              <li><strong>Кофейная начинка:</strong> в рецептуре — 1 ч. л. кофе в горячих сливках, в видео — половина чайной ложки сублимированного кофе в холодные сливки до нагрева, с добавлением ликёра. Количество кофе разнится, на странице приведены оба варианта.</li>
+              <li><strong>Значения без точных граммовок:</strong> ваниль, пудра йогурта в ягодном ганаше, количество ликёра и красителя в видео не взвешиваются — на странице они даны «по вкусу» или с оговоркой «опционально».</li>
+              <li><strong>Выход:</strong> автор не взвешивает готовые макаронс и не называет их количество: размер пирожного зависит от диаметра отсадки. Крышечки хранятся 15–20 дней в холодильнике, 2 месяца в морозилке.</li>
+              <li><strong>Состав начинок:</strong> в уроке 5 начинка с пралине и с кофе делается на базовом ганаше, в уроке 7 — отдельный ягодный ганаш, в уроке 8 — конфи. Пропорции пралине и кофе в голосе не называются, кроме 50 г пралине из рецептуры.</li>
+              <li><strong>Фото:</strong> готовых фотографий в папке нет, только видео. На странице стоит кадр из Урок_10.mp4, 00:02:44 — готовые макаронс из урока, обрезанный по краям плеера.</li>
+              <li><strong>Пробелы:</strong> в исходниках нет данных о весе готового макаронс и о количестве штук из одного замеса; трафареты фигурных форм приложены файлами и на странице не воспроизводятся.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Новогодний декор из шоколадной глазури — ёлочные игрушки, снежинки и шары | CookBook</title>
+  <meta name="description" content="Новогодний декор из готовой шоколадной глазури без темперирования: заливка поликарбонатных, силиконовых и пластиковых форм, полые шары и петельки, декор без форм — мятый пласт, соты, прожекторы и серпантин, отделка кандурином и сборка игрушек на торте. Глазурь не греется выше 40 °C, а формам перед заливкой нужен спирт.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body data-recipe-id="novogodniy-dekor-iz-glazuri">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Лёгкая</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Новогодний декор из шоколадной глазури: ёлочные игрушки, снежинки и шары</h1>
+      <p class="recipe-lead">
+        Ёлочные шарики, снежинки, ёлочки, олени, колокольчики, шахматы и «лего» — всё из готовой шоколадной глазури, которую не нужно темперировать. Автор строит урок на одном правиле: глазурь топится не выше 40 °C, а дальше её просто разливают по формам или размазывают по бумаге, плёнке и пупырке. Половина декора делается вообще без форм — из бумажных полосок, ацетатной ленты и обычной пузырчатой плёнки, а готовые фигурки доводятся кандурином до серебра, золота и бронзы. Весь набор весит около 50 граммов — меньше 5% двухкилограммового торта, поэтому на вкус десерта он не влияет.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">15 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~2 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">15–30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~2 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">набор декора на 1 торт (≈50 г)</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/novogodniy-dekor-iz-glazuri.jpg" alt="Готовый новогодний декор из шоколадной глазури на столе: зелёные ёлочки, снежинки, сиреневые олени, колокольчики, медальки, красные и жёлтые фигурки, чёрные шары" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 партия)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (партий глазури)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Одна порция — это одна партия (замес) глазури: столько, сколько нужно, чтобы залить формы и нарисовать петельки для одного набора декора на торт. Веса автор не называет: в уроке покупается готовая глазурь, поэтому граммовок на странице нет — они не выдуманы. На два набора просто растопите вдвое больше глазури.
+          </p>
+        </div>
+
+        <!-- Переключатель источников и таймкодов видео -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Основной контент: Ингредиенты + Технология -->
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> партию</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        В этом уроке нет ни одного веса: автор покупает готовую глазурь и добавляет красители «на глаз». Поэтому расход указан словами «сколько уйдёт» — масштабировать нечего, а формы, кандурин и посыпка покупаются один раз и служат для многих партий.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: глазурь и красители -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Глазурь и красители</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шоколадная глазурь тёмная</strong>:
+                <span class="shopping-hint">Сколько уйдёт. Основа для шаров, шахмат, петелек и прожекторов. Автор работает на «Мастер Мартини», подойдут Callebaut, «Белколат» и другие — важна именно глазурь, а не шоколад</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шоколадная глазурь белая</strong>:
+                <span class="shopping-hint">Сколько уйдёт. Белую глазурь проще всего красить, и по вкусу она ближе всего к белому шоколаду</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Цветная глазурь фабричная</strong> (опционально)
+                <span class="shopping-hint">Со вкусом банана, апельсина, ежевики, клубники, яблока, плюс голубая. Готовая цветная — лучший вариант: не надо ничего смешивать</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Жирорастворимые красители</strong> (с пометкой «лак»)
+                <span class="shopping-hint">Основной краситель для глазури. Фирма не важна — у автора самый дешёвый за 80–90 рублей. Сухие, идут в белую глазурь и в цветную для усиления цвета</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Гель-краситель водорастворимый</strong> (если нет жирорастворимого)
+                <span class="shopping-hint">Только по капле: это вода, а глазурь — жир. От перебора эмульсия рушится и глазурь сворачивается комом</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: формы, плёнка, отделка -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧰 Формы, плёнки, отделка</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Формы для глазури</strong>
+                <span class="shopping-hint">Поликарбонат, профессиональный силикон или простые пластиковые со снежинками, ёлками, шахматами, «лего», колокольчиками, оленями. Дешёвые формы за 100–200 рублей работают так же, разница только в глянце и ровности края</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кандурины кондитерские</strong>
+                <span class="shopping-hint">Серебряный, золотой, розовый и бронзовый: шары, снежинки, патина на шахматах и бронзовая «пимпочка»</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кондитерская посыпка</strong>
+                <span class="shopping-hint">Сколько уйдёт. Сыплется на глазурь, пока она ещё липкая: в середину прожекторов и на края</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пергамент для выпечки</strong>
+                <span class="shopping-hint">На нём рисуются петельки, сушится мятый пласт и прожекторы. Из полоски пергамента можно сделать серпантин, если нет ацетатной ленты</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ацетатная лента или гитарная плёнка</strong> (опционально)
+                <span class="shopping-hint">Даёт глянец и легко снимается: на ней и серпантин, и глянцевые прожекторы</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пузырчатая плёнка</strong>
+                <span class="shopping-hint">Чистая, вымытая. На ней отливаются «соты» — фактура пузырьков остаётся на глазури</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Стаканчики одноразовые</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span>
+                <span class="shopping-hint">Для кандурина: в уроке шарики красятся в двух стаканчиках — розовом и золотом. Серебряный кандурин — в третьем, по желанию</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Коктейльные палочки</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span>
+                <span class="shopping-hint">Заготовки для «пимпочек» на шарах: палочка разрезается вдоль и заливается глазурью. Автор советует делать чуть больше, чем нужно, — при извлечении они ломаются</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Бумажные гофрированные формочки</strong>
+                <span class="shopping-hint">Маленькие, продаются даже в «Магните». На них отливаются фактурные чашечки-прожекторы</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Спирт и бумажные салфетки</strong>
+                <span class="shopping-hint">Протереть поликарбонат и профессиональный силикон до блеска. Пластиковую форму достаточно просто чисто вымыть</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — кондитерские мешки, кисточка, шпатель или палета, ножницы
+                <span class="shopping-hint">Мешок — под каждый цвет, топить можно прямо в нём. Кисточка разравнивает кандурин, шпатель — пласт глазури</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Основа — готовая шоколадная глазурь</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty">Сколько уйдёт</span> — Глазурь шоколадная тёмная
+              <span class="ingredient-note">Готовая, не шоколад: какао-масло в ней заменено кондитерским жиром, поэтому темперировать не нужно</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty">Сколько уйдёт</span> — Глазурь шоколадная белая
+              <span class="ingredient-note">База для всех цветных фигурок: белую глазурь можно покрасить в любой цвет</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Цвет</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty">По вкусу</span> — Глазурь цветная фабричная
+              <span class="ingredient-note">Банан, апельсин, ежевика, клубника, яблоко, голубая. Аромат остаётся в готовом декоре и перебивает запах жира</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty">По вкусу</span> — Краситель жирорастворимый («лак»)
+              <span class="ingredient-note">Основной вариант для глазури. Именно им автор сделала красную из клубничной и насыщенную зелёную из яблочной</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty">Совсем немного</span> — Краситель гелевый водорастворимый
+              <span class="ingredient-note">Запасной вариант, если нет жирорастворимого. Переборщить нельзя: глазурь свернётся</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Отделка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty">По вкусу</span> — Кандурины кондитерские
+              <span class="ingredient-note">Серебро, золото, розовый, бронза. Наносятся на уже застывшие фигурки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty">По вкусу</span> — Посыпка кондитерская
+              <span class="ingredient-note">Сыплется только на липкую глазурь, иначе не прилипнет</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Оснастка для отливки</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty">Сколько уйдёт</span> — Формы поликарбонатные, силиконовые или пластиковые
+              <span class="ingredient-note">Шары, снежинки, ёлки, шахматы, «лего», колокольчики, олени. Полые фигурки выходят только из жёстких форм</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty">Сколько уйдёт</span> — Пергамент, ацетатная лента, пузырчатая плёнка
+              <span class="ingredient-note">Всё, что нужно для декора без форм: петельки, мятый пласт, соты, прожекторы, серпантин</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span> — Стаканчики одноразовые
+              <span class="ingredient-note">Для кандурина: шарик бросается в стаканчик и встряхивается — так он окрашивается равномерно</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span> — Коктейльные палочки
+              <span class="ingredient-note">Разрезать вдоль, залить глазурью и нарезать — получаются «пимпочки» для шаров</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Почему глазурь, а не шоколад</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Шоколадная глазурь отличается от шоколада одним: какао-масло из рецептуры исключено и заменено кондитерским жиром — кокосовым, пальмовым, другими растительными маслами. Именно поэтому глазурь не надо темперировать и именно поэтому она спокойно застывает после расплавления.
+                <span class="source-badge">⏱ Урок 1: 22:16–22:37</span>
+                <span class="source-badge">⏱ Урок 1: 36:00–36:20</span>
+              </p>
+              <p>
+                Для декора это принципиально: ради одного ёлочного шарика никто не готов темперировать шоколад, покупать градусник, мраморную плиту, какао-масло и Mycryo. Автор строит весь урок на том, что декор должен готовиться легко и быстро, а глазурь ещё и недорога — испортить её не страшно, «хотя испортить будет очень сложно».
+                <span class="source-badge">⏱ Урок 1: 17:52–18:36</span>
+                <span class="source-badge">⏱ Урок 1: 20:37–20:52</span>
+              </p>
+              <p>
+                Про вес: самый маленький торт у автора весит 2 кг, а декор из глазури — граммов 50. Это меньше 5% веса десерта, поэтому на вкус торта глазурь не влияет никак, зато эффект даёт «вау». Если вы умеете темперировать шоколад — работайте на шоколаде, вся технология ниже та же, только сначала темперирование.
+                <span class="source-badge">⏱ Урок 1: 18:46–19:27</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Основа: <strong>Глазурь, не шоколад</strong></span>
+              <span class="param-pill">⚖ Вес декора: <strong>≈50 г, меньше 5% торта</strong></span>
+              <span class="param-pill">🌡 Темперирование: <strong>Не нужно</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Какую глазурь брать и чем её красить</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Минимальный набор — тёмная и белая глазурь: белую можно покрасить в любой цвет. Но лучше покупать уже окрашенную на производстве: у автора в работе банановая, апельсиновая, ежевичная, клубничная, яблочная и голубая глазурь. Клубничную она подкрасила жирорастворимым красным и получила красную, яблочную — зелёным, и цвет стал насыщеннее.
+                <span class="source-badge">⏱ Урок 1: 22:43–25:02</span>
+              </p>
+              <p>
+                Красить глазурь можно двумя способами. Жирорастворимые красители — сухие, с пометкой «лак» на упаковке; автор советует именно их, и фирма тут совершенно не важна: работает и самый дешёвый за 80–90 рублей. Водорастворимые гелевые тоже годятся — но это вода в жире, поэтому только капля.
+                <span class="source-badge">⏱ Урок 1: 22:54–24:18</span>
+              </p>
+              <div class="warning-box">
+                <strong>Почему глазурь сворачивается:</strong> гелевый краситель — это вода, а глазурь — жир. Если налить его слишком много, эмульсия разрушается, система становится неустойчивой и глазурь идёт комками. Капельку — можно, ложку — нельзя. Свернувшуюся глазурь, как и свернувшийся шоколад, остаётся только выбросить.
+                <span class="source-badge">⏱ Урок 1: 31:03–31:34</span>
+                <span class="source-badge">⏱ Урок 1: 56:11–56:21</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🎨 Краситель: <strong>Жирорастворимый «лак»</strong></span>
+              <span class="param-pill">💧 Гель: <strong>Только по капле</strong></span>
+              <span class="param-pill">🍓 Лучше: <strong>Готовая цветная глазурь</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Растопить: не выше 40 °C</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Главное правило урока: глазурь не топить больше 40 °C. Ниже можно, выше нельзя. Глазурь удобно пересыпать прямо в кондитерский мешок и топить в нём — так с ней и работать. Если в мешке неудобно, сначала растопите в мисочке на водяной бане, а потом переложите в мешок.
+                <span class="source-badge">⏱ Урок 1: 27:04–27:15</span>
+                <span class="source-badge">⏱ Урок 1: 29:28–29:42</span>
+                <span class="source-badge">⏱ Урок 1: 51:52–51:57</span>
+              </p>
+              <p>
+                В микроволновке — только пульсами: первый раз 30 секунд, второй раз 30 секунд, дальше по 15 секунд до результата, и после каждого пульса перемешать или размять мешок. Вариант того же ритма, который автор называет следом: 30 секунд — перемешать, 20 секунд — перемешать, 15 секунд — помешать. Микроволновки нет — водяная баня, постоянно помешивая.
+                <span class="source-badge">⏱ Урок 1: 27:15–27:21</span>
+                <span class="source-badge">⏱ Урок 1: 29:43–30:42</span>
+              </p>
+              <p>
+                Мешать нужно больше, чем греть. Если температура уже набрана, а комочки остались, их вымешивают, а не греют дальше. Чтобы глазурь не застывала во время работы, поставьте миску с горячей водой и держите мешок с глазурью на этой импровизированной бане.
+                <span class="source-badge">⏱ Урок 1: 30:06–30:30</span>
+                <span class="source-badge">⏱ Урок 1: 47:16–47:41</span>
+              </p>
+              <div class="warning-box">
+                <strong>Перегрев:</strong> если глазурь при разогреве собирается комом, значит её перегрели — вернуть её уже нельзя. Вторая причина комков — мокрая посуда. Всё, что сворачивается, идёт в помойку, поэтому проще не доводить.
+                <span class="source-badge">⏱ Урок 1: 53:04–53:25</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Предел: <strong>40 °C, не выше</strong></span>
+              <span class="param-pill">⏱ Пульсы: <strong>30 / 30 / 15 с</strong></span>
+              <span class="param-pill">🥣 Альтернатива: <strong>Водяная баня</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Подготовка форм</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Поликарбонатные формы и профессиональный силикон протираются спиртом, а потом натираются бумажной салфеткой до блеска. Это не про гигиену, а про глянец: чем чище и теплее поверхность, тем зеркальнее выйдет фигурка.
+                <span class="source-badge">⏱ Урок 1: 27:43–28:23</span>
+                <span class="source-badge">⏱ Урок 1: 29:09–29:25</span>
+              </p>
+              <p>
+                Простые пластиковые формы спиртом не обрабатывают — их достаточно чисто вымыть. Натяните бумагу для выпечки на рабочее место: глазурь остывает быстро, и возиться с ней придётся немедленно.
+                <span class="source-badge">⏱ Урок 1: 1:02:03–1:02:09</span>
+                <span class="source-badge">⏱ Урок 1: 28:23–28:28</span>
+              </p>
+              <div class="tip-box">
+                <strong>Любая форма — рабочая:</strong> поликарбонат, профессиональный силикон, дешёвый силикон и обычный пластик. Разница будет только в глянце и в ровности края, а не в том, получится декор или нет. И половину урока автор делает декор вообще без форм.
+                <span class="source-badge">⏱ Урок 1: 20:52–21:32</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧽 Поликарбонат: <strong>Спирт + салфетка до блеска</strong></span>
+              <span class="param-pill">🧰 Пластик: <strong>Просто чисто вымыть</strong></span>
+              <span class="param-pill">📄 Стол: <strong>Застелить пергаментом</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Поликарбонат: заливка и полые фигурки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отрежьте у мешка кончик и наливайте глазурь до самого верха формы. Дальше — постучать: выходят пузыри воздуха, а поверхность становится гладкой. Переверните форму над пергаментом, выстучите лишнее и снимите его шпателем или палетой заподлицо с краем.
+                <span class="source-badge">⏱ Урок 1: 31:40–33:16</span>
+                <span class="source-badge">⏱ Урок 1: 40:01–40:13</span>
+              </p>
+              <p>
+                Для полых фигурок глазурь не заливается доверху, а размазывается по стенкам пальцем в перчатке: задача — чтобы не было просветов и чтобы аккуратно сформировалась верхушка. Стенки должны быть достаточной толщины, иначе фигурка развалится. Именно из таких полусфер получаются ёлочные шарики с «пимпочкой» и петелькой.
+                <span class="source-badge">⏱ Урок 1: 40:19–41:32</span>
+              </p>
+              <p>
+                Стекающие излишки не выбрасывайте: если глазурь не перегрета, её можно греть и использовать снова, по правилам — до трёх раз. Ограничение не про свойства глазури, а про гигиену: каждый раз она соприкасается с новой поверхностью, и в неё попадает всё, что летает по кухне.
+                <span class="source-badge">⏱ Урок 1: 33:55–34:47</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Глазурь: <strong>Сразу из мешка, горячая</strong></span>
+              <span class="param-pill">🔨 Приём: <strong>Постучать, срезать заподлицо</strong></span>
+              <span class="param-pill">🔄 Нагрев: <strong>До 3 раз</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Петельки, пимпочки и палочки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Петельки рисуйте той же тёмной глазурью прямо на пергаменте или на силиконе — можно сердечки и вообще что угодно. Рисуйте их всегда больше, чем нужно: при снятии с пергамента часть обязательно поломается. Готовую петельку подрезают ножом, убирая лишнее.
+                <span class="source-badge">⏱ Урок 1: 44:18–45:24</span>
+              </p>
+              <p>
+                «Пимпочка» — та самая шляпка на ёлочном шарике — делается из обычной коктейльной палочки: разрезать её по всей длине, налить внутрь глазурь, дать застыть, извлечь и нарезать ножом или нарубалкой на кусочки чуть длиннее, чем нужно. Целиком палочку сохранять не надо, она всё равно сломается при извлечении.
+                <span class="source-badge">⏱ Урок 1: 1:37:04–1:38:22</span>
+              </p>
+              <div class="tip-box">
+                <strong>Когда вешать петельку:</strong> автор советует крепить её в самом конце, когда шарик уже покрыт кандурином. Но можно и сразу, как она делает в уроке, — тогда просто подождите дольше, пока стык схватится.
+                <span class="source-badge">⏱ Урок 1: 1:41:45–1:42:17</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">➰ Петельки: <strong>Тёмная глазурь на пергаменте</strong></span>
+              <span class="param-pill">🥢 Пимпочка: <strong>Разрезанная коктейльная палочка</strong></span>
+              <span class="param-pill">✂ Запас: <strong>Рисовать с избытком</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Пластик и силикон: толщина и глянец</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В пластиковых и силиконовых формах заливают снежинки, ёлки, оленей, колокольчики, медальки, свечки и сапожки. Толщину фигурки вы регулируете сами: сколько налили — такая и будет. Старайтесь не переливать за края, иначе край получится рваным.
+                <span class="source-badge">⏱ Урок 1: 56:27–59:10</span>
+              </p>
+              <p>
+                «Лего» заливают в два приёма: сначала мешочком заполняют все дырочки на выступах, иначе внутри останется воздух, и только потом заливают деталь целиком. Высоту детали тоже можно регулировать количеством глазури.
+                <span class="source-badge">⏱ Урок 1: 1:04:02–1:04:13</span>
+              </p>
+              <p>
+                Глянец зависит не от глазури, а от поверхности, на которую её льют: силикон и бумага дают матовый эффект, глянцевая форма поликарбоната, ацетатная лента и гитарная плёнка — глянцевый. Из мягких форм полые фигурки не сделать: по ним не постучишь и шпателем ровно не проведёшь.
+                <span class="source-badge">⏱ Урок 1: 1:03:00–1:04:01</span>
+                <span class="source-badge">⏱ Урок 1: 1:09:18–1:09:48</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Толщина: <strong>Сколько налили</strong></span>
+              <span class="param-pill">✨ Глянец: <strong>Зависит от поверхности</strong></span>
+              <span class="param-pill">🧱 «Лего»: <strong>Сначала дырочки, потом заливка</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Морозилка и извлечение</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Заполненные формы отправляйте в морозилку — можно и в холодильник. Пятнадцати минут вполне достаточно, можно и меньше: держать нужно до застывания. Но сразу из морозилки с фигурками ничего не делайте — они невероятно хрупкие, дайте им постоять при комнатной температуре и отойти.
+                <span class="source-badge">⏱ Урок 1: 1:06:51–1:07:28</span>
+              </p>
+              <p>
+                Правило извлечения одно: деформируем форму, а декор не трогаем. Форму можно гнуть как угодно, полусферу — нельзя, иначе останутся отпечатки или она треснет. Работать лучше в тканевых перчатках, но с глазурью автор позволяет себе и голые руки.
+                <span class="source-badge">⏱ Урок 1: 1:29:04–1:30:14</span>
+              </p>
+              <div class="warning-box">
+                <strong>Шахматам — обязательно постоять:</strong> если вынимать их сразу после морозилки, они все сломаются. Это уже проверенный факт, а не предположение. Всё, что не выходит легко, просто оставьте на столе ещё на несколько минут.
+                <span class="source-badge">⏱ Урок 1: 1:34:18–1:34:25</span>
+                <span class="source-badge">⏱ Урок 1: 1:36:00–1:36:06</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Морозилка: <strong>~15 мин</strong></span>
+              <span class="param-pill">⏳ После: <strong>Дать постоять при комнатной</strong></span>
+              <span class="param-pill">🤲 Приём: <strong>Гнуть форму, не декор</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Без форм: мятый пласт</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Налейте тёмную глазурь на лист пергамента и разровняйте палетой или шпателем. Слишком тонко нельзя — пласт развалится, но и слишком толсто плохо: тяжёлый кусок потом трудно закрепить на торте. Пробелы и «лысые» места замазывайте, пока глазурь тёплая.
+                <span class="source-badge">⏱ Урок 1: 1:15:16–1:15:44</span>
+              </p>
+              <p>
+                Дальше самое интересное: возьмите лист и заново его подсоберите, помните — на глазури останется рельеф. Оставьте застывать при комнатной температуре. Получится золотая мятая пластина, которой украшают борт торта.
+                <span class="source-badge">⏱ Урок 1: 1:15:44–1:16:31</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📄 Основа: <strong>Пергамент</strong></span>
+              <span class="param-pill">🔪 Слой: <strong>Средний, не тонкий</strong></span>
+              <span class="param-pill">✨ Рельеф: <strong>Смять бумагу по глазури</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Соты из пузырчатой плёнки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Если нет ни форм, ни ацетата, ни фактурной бумаги — есть пупырка. Плёнку нужно вымыть, нанести на неё глазурь ровным слоем и оставить остывать. На выходе получаются «соты» — фактурные пластины, которые потом крошат на кусочки или кладут целиком.
+                <span class="source-badge">⏱ Урок 1: 1:16:31–1:16:59</span>
+              </p>
+              <div class="tip-box">
+                <strong>Идея автора:</strong> из «сот», если сделать их крупнее, получаются чашечки — в них на Новый год можно насыпать конфеты. Дети от такого торта приходят в восторг.
+                <span class="source-badge">⏱ Урок 1: 1:23:45–1:23:52</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🫧 Основа: <strong>Чистая пузырчатая плёнка</strong></span>
+              <span class="param-pill">📏 Слой: <strong>Ровный</strong></span>
+              <span class="param-pill">🍬 Идея: <strong>Чашечки под конфеты</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 11 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Прожекторы из бумажных полосок</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                На обычную бумагу, полосками по краям, нанесите глазурь и распределите её равномерно. Краешки сделайте чуть толще — именно за них потом будете вынимать, и тонкий край обязательно сломается. Форму потом можно свернуть в конус.
+                <span class="source-badge">⏱ Урок 1: 1:17:00–1:17:39</span>
+              </p>
+              <p>
+                Пока глазурь ещё липкая, посыпьте её посыпкой — по краям и в середину. Когда застынет, отправьте в морозилку, а потом просто оторвите бумагу: деформируем основу, декор не трогаем.
+                <span class="source-badge">⏱ Урок 1: 1:18:27–1:20:12</span>
+                <span class="source-badge">⏱ Урок 1: 1:44:01–1:44:15</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📄 Основа: <strong>Обычная бумага</strong></span>
+              <span class="param-pill">✂ Края: <strong>Потолще</strong></span>
+              <span class="param-pill">🍬 Посыпка: <strong>Пока липкая</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 12 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Серпантин из ацетатной ленты</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Возьмите кусочек ацетатной ленты — или вырежьте полоску из обычного пергамента — и нанесите на неё белую глазурь. Размазать удобно вилкой, ничего специального не нужно. Слой опять же не тонкий и не толстый.
+                <span class="source-badge">⏱ Урок 1: 1:20:39–1:21:19</span>
+                <span class="source-badge">⏱ Урок 1: 1:45:51</span>
+              </p>
+              <p>
+                Придайте полоске скруглённую форму — и сразу в морозилку прямо в таком виде. Глазурь ведёт себя не совсем так, как шоколад, поэтому форму нужно зафиксировать заранее. Снимать потом аккуратно, не задевая сами спиральки.
+                <span class="source-badge">⏱ Урок 1: 1:22:18–1:22:39</span>
+                <span class="source-badge">⏱ Урок 1: 1:45:21–1:45:30</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🎞 Основа: <strong>Ацетат или полоска пергамента</strong></span>
+              <span class="param-pill">🍴 Инструмент: <strong>Вилка</strong></span>
+              <span class="param-pill">🧊 Фиксация: <strong>Скруглить и в морозилку</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 13 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Кандурин: серебро, золото, патина</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Чтобы шарик стал серебряным, нужен одноразовый стаканчик: насыпьте туда немного кандурина, бросьте шарик и встряхните. Краситель ложится ровно и быстро. Для бубенцов автор готовит сразу два стаканчика — с розовым и с золотым кандурином.
+                <span class="source-badge">⏱ Урок 1: 1:47:02–1:48:15</span>
+                <span class="source-badge">⏱ Урок 1: 1:49:40–1:50:23</span>
+              </p>
+              <p>
+                Шахматы целиком не красят: кандурином только подчёркивают рельеф, чтобы получилась патина. Снежинки оттеняют золотым, бронзовым или серебряным — всё смотрится органично. «Пимпочку» на шарике можно сделать бронзовой, как у настоящей ёлочной игрушки.
+                <span class="source-badge">⏱ Урок 1: 54:39–55:05</span>
+                <span class="source-badge">⏱ Урок 1: 1:56:25–1:56:38</span>
+              </p>
+              <div class="tip-box">
+                <strong>Кисточка и руки:</strong> кандурин на шарике разравнивают кисточкой — так он ложится без комков. А сами кандурины, в отличие от других красителей, легко отмываются, поэтому автор спокойно работает руками.
+                <span class="source-badge">⏱ Урок 1: 1:58:08–1:58:10</span>
+                <span class="source-badge">⏱ Урок 1: 1:50:40–1:50:45</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥤 Ёмкость: <strong>Одноразовый стаканчик</strong></span>
+              <span class="param-pill">🖌 Разровнять: <strong>Кисточкой</strong></span>
+              <span class="param-pill">♟ Шахматы: <strong>Патина, не полная покраска</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 14 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Склейка шаров и шахмат</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Полусферы склеиваются горячим: нагрейте дно кастрюли и прижмите к нему края деталей. Прижимать можно обе поверхности, а можно одну — как удобнее. В перчатках это не получится, работать придётся голыми руками, и будет горячо.
+                <span class="source-badge">⏱ Урок 1: 1:38:52–1:40:31</span>
+              </p>
+              <p>
+                К готовому шарику приклейте «пимпочку»: поднесите её к нагретому дну, прижмите к шарику и оплавьте лишнее. Так же склеиваются шахматы. Идеальных шаров из силикона не будет — там остаются дырочки и неровный край, но в оформлении этого не видно.
+                <span class="source-badge">⏱ Урок 1: 1:41:22–1:41:40</span>
+                <span class="source-badge">⏱ Урок 1: 1:40:37–1:40:44</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Нагрев: <strong>Дно кастрюли</strong></span>
+              <span class="param-pill">🤲 Руки: <strong>Без перчаток</strong></span>
+              <span class="param-pill">⚪ Итог: <strong>Шар + пимпочка</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 15 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">15</span>
+                <h3 class="step-title">Сборка на торте и хранение</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Кандуриновые шарики вешают на ёлку-торт или сажают на торт как обычные ёлочные игрушки. Крупный прожектор можно посадить чуть вглубь, а можно воткнуть в торт или поломать и разложить кусочками — всё работает.
+                <span class="source-badge">⏱ Урок 1: 1:47:56–1:48:15</span>
+                <span class="source-badge">⏱ Урок 1: 2:00:29–2:00:46</span>
+              </p>
+              <p>
+                Саму глазурь хранят не в холодильнике, а как шоколад — при комнатной температуре, но комнатная здесь 18–21 °C, а не 25. В плотно закрытом контейнере она спокойно лежит не меньше полугода, шесть месяцев.
+                <span class="source-badge">⏱ Урок 1: 43:21–43:30</span>
+                <span class="source-badge">⏱ Урок 1: 52:41–52:58</span>
+              </p>
+              <div class="tip-box">
+                <strong>Готовый декор — сухой:</strong> он не липнет и не пачкает руки, поэтому игрушки можно делать заранее и хранить до сборки. А если шарик сажают на диск-подвеску, стык подплавляют; без специального прибора просто подождите, пока глазурь схватится сама.
+                <span class="source-badge">⏱ Урок 1: 1:57:02–1:57:22</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Хранение глазури: <strong>18–21 °C</strong></span>
+              <span class="param-pill">📦 Срок: <strong>6 месяцев в контейнере</strong></span>
+              <span class="param-pill">🚫 Холодильник: <strong>Нельзя</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>40 °C — это потолок:</strong> ниже можно, выше нельзя. Перегретая глазурь собирается комом и уже не спасается.</li>
+                <li><strong>Мешать больше, чем греть:</strong> если температура набрана, а комочки остались, их вымешивают, а не догревают.</li>
+                <li><strong>Пульсы, а не непрерывный нагрев:</strong> 30 / 30 / 15 секунд с перемешиванием после каждого. Мощность около 500 Вт, но ориентир всё равно на 40 °C.</li>
+                <li><strong>Водяная баня под рукой:</strong> миска с горячей водой, на ней мешок — глазурь не застывает, пока вы творите.</li>
+                <li><strong>Спирт и салфетка до блеска:</strong> подготовка поликарбоната и профессионального силикона. Пластик просто моют.</li>
+                <li><strong>Постучать по форме:</strong> выходят пузыри и поверхность становится гладкой — это половина красоты фигурки.</li>
+                <li><strong>Глянец выбирает поверхность:</strong> ацетат и жёсткий поликарбонат дают зеркало, силикон и бумага — мат. Глазурь тут ни при чём.</li>
+                <li><strong>Дешёвые формы работают:</strong> 100–200 рублей против дорогого поликарбоната. Разница только в глянце и ровности края.</li>
+                <li><strong>Рисуйте с запасом:</strong> петелек и прожекторов делайте больше, чем нужно, — часть ломается при снятии с основы.</li>
+                <li><strong>Шахматы — только патина:</strong> полная покраска убивает рельеф, кандурином подчёркивают грани.</li>
+                <li><strong>Глазурь дешевле шоколада и forgiving:</strong> не бойтесь испортить, излишки можно перетопить — по правилам до трёх раз.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Перегрев выше 40 °C:</strong> глазурь сворачивается комом и уходит в мусор. Вторая причина того же — мокрая посуда.</li>
+                <li><strong>Много гелевого красителя:</strong> вода разрушает эмульсию, глазурь идёт хлопьями. Только капля.</li>
+                <li><strong>Глазурь в холодильнике:</strong> она хранится при 18–21 °C, как шоколад, а не на полке холодильника.</li>
+                <li><strong>Работа сразу из морозилки:</strong> фигурки невероятно хрупкие. Особенно шахматы — их обязательно нужно дать постоять.</li>
+                <li><strong>Тянуть за сам декор при извлечении:</strong> гнуть нужно форму, а не деталь, иначе отпечатки и трещины.</li>
+                <li><strong>Слишком тонкие края:</strong> у прожекторов и серпантина они ломаются при снятии с бумаги. Края делайте толще.</li>
+                <li><strong>Залить «лего», не заполнив дырочки:</strong> внутри останется воздух и деталь выйдет бракованной.</li>
+                <li><strong>Перелить глазурь за край формы:</strong> край получится рваным, фигурку будет стыдно ставить на торт.</li>
+                <li><strong>Медленная работа:</strong> глазурь, нагретая ниже 40 °C, остывает быстро — тянуть нельзя, иначе она застынет в мешке.</li>
+                <li><strong>Полые фигурки в мягкой форме:</strong> силикон не даёт выстучать и срезать лишнее, полыми получаются только жёсткие формы.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источник:</strong> вебинар Надежды Зубовой «Новогодний декор из глазури» (файл Урок_01.mp4, запись от 25 ноября) и его расшифровка с таймкодами. DOCX, технологической карты и PDF в папке нет — единственный текстовый источник это CSV, поэтому всё, что автор не проговорила голосом, в уроке отсутствует.</li>
+              <li><strong>Состав:</strong> рецепта глазури в уроке нет. Автор покупает готовую глазурь — у неё «Мастер Мартини», а вообще подойдут Callebaut, «Белколат» и другие производители. Поэтому в ингредиентах нет ни одного веса: глазурь, красители и кандурин идут «сколько уйдёт» и «по вкусу».</li>
+              <li><strong>Количества и калькулятор:</strong> за базу взята одна партия (замес) глазури, потому что веса автор не называет. Единственные числа в уроке — два одноразовых стаканчика под кандурин и две коктейльные палочки под «пимпочки»; они и получили пересчёт.</li>
+              <li><strong>Время:</strong> 15 минут в морозилке и «полтора-два часа» на весь вебинар названы прямо. Активное время (~2 ч) и подготовка (15 мин) — оценка по ходу урока, точного хронометража автор не даёт.</li>
+              <li><strong>Температура и режимы:</strong> 40 °C как предел, пульсы 30/30/15 секунд, три допустимых нагрева глазури, хранение готовой глазури при 18–21 °C до 6 месяцев — всё это есть в записи дословно.</li>
+              <li><strong>«Фризер»:</strong> так автор называет прибор, которым подплавляет стык шарика с диском. Что это за устройство, в уроке не объясняется; на странице дан безопасный вариант — подождать, пока глазурь схватится сама.</li>
+              <li><strong>Не входит в урок:</strong> рецепт безе и сборка торта-ёлки, декор из изомальта, веточки розмарина на торте — всё это автор отсылает в онлайн-курс. Розыгрыши, промокоды и экскурсия к ёлке в страницу не переносились.</li>
+              <li><strong>Сложность:</strong> поставлена «Лёгкая» по словам автора — «ничего сложного», «готовится легко», «испортить будет очень сложно». Формально в уроке много формочек и кандурина, но все приёмы повторяются с первого раза.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет, только видео. На странице — кадр 01:34:07: разложенный на столе готовый декор (ёлочки, снежинки, олени, колокольчики, медальки, чёрные шары), обрезанный по краям плеера.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

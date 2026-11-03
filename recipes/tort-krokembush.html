@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Торт «Крокембуш» — профитроли с кракелином, три крема и карамельная башня | CookBook</title>
+  <meta name="description" content="Крокембуш Надежды Зубовой: заварное тесто на молоке и воде с 5 яйцами С0, кракелин двух цветов, заварной крем на сливках, разделённый на ванильный, лимонный и фисташковый, и сборка башни-ёлки на карамели в конусе из ватмана. Пошагово с граммовками, температурами и таймкодами.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body data-recipe-id="tort-krokembush">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Торт «Крокембуш»</h1>
+      <p class="recipe-lead">
+        Французский крокембуш, собранный как новогодняя ёлка: профитроли с кракелином в красную и зелёную клетку, три вида заварного крема на сливках — ванильный, лимонный с соком лайма и фисташковый — и карамель сухим способом вместо всякого крепления. Конус автор скручивает из ватмана и сажает профитроли рядами, чередуя цвета, а потом просто снимает бумагу: торт держится сам. Внутри каждого профитроля пустота, поэтому крем входит легко, а кракелин сверху отвечает за цвет и хруст.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~3 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">4–5 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~7–9 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 башня ≈ 45 профитролей</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-krokembush.jpg" alt="Готовый крокембуш: башня-конус из красных и зелёных профитролей с кракелином, скреплённых карамелью, на золотой подложке" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 торт)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (тортов)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Одна порция — это один целый крокембуш из полной раскладки: всё тесто, весь кракелин на два цвета, весь заварной крем и вся башня. Автор делит тесто на две части только для того, чтобы сравнить две насадки, — торт всё равно получается один. По её расчёту профитролей выходит примерно по 15 штук каждого вкуса, около 45 на башню, поэтому «два торта» означает удвоение всей раскладки, а не вторую половину заварного теста.
+          </p>
+        </div>
+
+        <!-- Переключатель источников и таймкодов видео -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Основной контент: Ингредиенты + Технология -->
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> торт</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводные суммы по всему торту: молоко и масло посчитаны вместе с кремом, яйца — вместе с тестом. Муку берите с запасом на подпыл, а сахар — с расчётом на карамель: точного количества для карамели автор не называет. Насадки, мешки и ватман покупаются один раз и живут долго.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: молочное, яйца, масла -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масла</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко 3,2%</strong>:
+                <span class="shopping-qty" data-base-amount="760" data-unit="г">760 г</span>
+                <span class="shopping-hint">160 г в заварное тесто и 600 г в крем. Берите обычное, не топлёное и не ультрапастеризованное «долгого» хранения, если есть выбор</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="450" data-unit="г">450 г</span>
+                <span class="shopping-hint">150 г в тесто, 100 г в кракелин (холодным), 200 г в крем. Нужны две пачки: 250 г + 200 г, масло должно быть настоящим, без растительных примесей</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 33%</strong>:
+                <span class="shopping-qty" data-base-amount="400" data-unit="г">400 г</span>
+                <span class="shopping-hint">Одна упаковка 400–500 мл. Жирность важна: на 20% крем выйдет жидким, берите 33% или 35%</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С0</strong>:
+                <span class="shopping-qty" data-base-amount="9" data-unit="шт." data-piece="true">9 шт.</span>
+                <span class="shopping-hint">5 штук в тесто (280–300 г, комнатной температуры) и 4 штуки в крем. Берите отборные или С0: от категории зависит вес, а он в тесте принципиален</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="7" data-unit="г">7 г</span>
+                <span class="shopping-hint">Совсем немного, но убирать нельзя — соль влияет на результат теста. Обычная мелкая поваренная</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимон</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">Нужна только цедра — с целого лимона или с половины, как больше нравится. Сок не понадобится</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лайм</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">Из него 10 г сока в лимонный крем. Мелкий лайм даёт примерно 20–25 г сока, так что одного хватит</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: бакалея, орехи, инвентарь -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Бакалея, орехи, инвентарь</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная</strong>:
+                <span class="shopping-qty" data-base-amount="285" data-unit="г">285 г</span>
+                <span class="shopping-hint">160 г в тесто и 125 г в кракелин. Автор берёт высокобелковую (манитоба, нордик), но обычная тоже подойдёт — берите пачку 1 кг</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="315" data-unit="г">315 г</span>
+                <span class="shopping-hint">10 г в тесто, 125 г в кракелин, 180 г в крем. Сверху нужен ещё сахар на карамель — его количество автор не называет, поэтому берите килограммовую пачку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Крахмал кукурузный</strong>:
+                <span class="shopping-qty" data-base-amount="55" data-unit="г">55 г</span>
+                <span class="shopping-hint">Только кукурузный, не картофельный: картофельный даёт крем с крахмальным привкусом. Хватит маленького пакетика</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Фисташковая паста</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Чистая паста из фисташек, без сахара и без белого шоколада в составе. Крем-фисташка из кондитерского отдела даст приторный вкус</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ванильная паста, ванильный сахар или экстракт</strong>
+                <span class="shopping-hint">Что найдёте: у автора ванильная паста. Ванилин берите по инструкции на упаковке, иначе крем горчит</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Гелевые красители</strong> — красный и зелёный
+                <span class="shopping-hint">На красную порцию кракелина у автора ушло 6 капель. Сухие красители не годятся, нужны гелевые</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кондитерские мешки</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="шт." data-piece="true">5 шт.</span>
+                <span class="shopping-hint">Два под тесто (автор делит его на две насадки) и три под кремы разных вкусов. Плюс один запасной не помешает</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ватман и малярный скотч</strong>
+                <span class="shopping-hint">Из ватмана скручивается конус-каркас, скотч держит его по шву и снимается потом без следов. Ватман от горячей карамели может загореться — держите на виду</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Перфорированный коврик или пергамент</strong>
+                <span class="shopping-hint">Автор печёт на перфорированном коврике, силиконовый ковёр тоже подойдёт; пергамент — крайний вариант. Ещё два листа нужны, чтобы раскатать кракелин</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кондитерские насадки</strong>
+                <span class="shopping-hint">Французская звезда № 12 и круглая № 12 для профитролей, маленькая звезда № 199 — прокалывать дырочки под крем. Вместо звезды можно просто отрезать мешок</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Подложка под торт</strong>
+                <span class="shopping-hint">Золотой картон Ø 25–30 см, как у автора, или обычная плоская тарелка. Переставлять готовый крокембуш почти нельзя — карамель хрупкая</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Заварное тесто для профитролей</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Молоко 3,2%
+              <span class="ingredient-note">Если молока нет, тесто можно сделать полностью на воде — вкус профитролей изменится совсем немного</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Вода
+              <span class="ingredient-note">Воду и молоко отвешивайте на весах: стаканы и ложки дают слишком большой разброс</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сливочное масло 82,5%
+              <span class="ingredient-note">Нарезать кусочками, чтобы успело растопиться к моменту закипания жидкости</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Сахар
+              <span class="ingredient-note">Совсем чуть-чуть, только для вкуса и цвета корочки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Соль
+              <span class="ingredient-note">По меркам заварного теста это много, но именно столько нужно: соль влияет на результат</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Мука пшеничная
+              <span class="ingredient-note">Высокобелковая (манитоба, нордик) или обычная. Просеивать обязательно — муку будем заваривать</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="шт." data-piece="true">5 шт.</span> — Яйца С0, комнатной температуры
+              <span class="ingredient-note">Это 280–300 г. Вводить понемногу на минимальной скорости; автор берёт пастеризованные, но обычные тоже подойдут</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Кракелин двух цветов</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сливочное масло 82,5%, холодное
+              <span class="ingredient-note">Обязательно холодное и кубиком, иначе не получится крошка</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Сахар
+              <span class="ingredient-note">Обычный песок, тот же, что в тесто</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Мука
+              <span class="ingredient-note">Просеять прямо в чашу с маслом и сахаром</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Гель-красители: красный и зелёный
+              <span class="ingredient-note">На одну порцию кракелина автор потратила 6 капель красного. Краситель добавляется в крошку до того, как она соберётся в комок</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Заварной крем</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="400" data-unit="г">400 г</span> — Сливки 33%
+              <span class="ingredient-note">Нагреваются вместе с молоком; ваниль идёт туда же</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="600" data-unit="г">600 г</span> — Молоко
+              <span class="ingredient-note">Самая большая часть крема: заварная основа получается довольно жидкой и уваривается до первого булька</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span> — Яйца отборные С0
+              <span class="ingredient-note">Смешиваются с крахмалом до однородности, а горячее молоко вливается в них тонкой струйкой при постоянном помешивании</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="55" data-unit="г">55 г</span> — Крахмал кукурузный
+              <span class="ingredient-note">Только кукурузный: он даёт шелковистую текстуру и не глушит вкус сливок</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="180" data-unit="г">180 г</span> — Сахар
+              <span class="ingredient-note">Идёт в молоко со сливками, а не в яйца</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сливочное масло 82,5%
+              <span class="ingredient-note">Размягчённое, взбивается до бела, а заварная часть вводится в него по ложке</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Ванильная паста, экстракт или ванильный сахар
+              <span class="ingredient-note">У автора ванильная паста; она же красит ванильную треть крема</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Три вкуса крема</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Фисташковая паста
+              <span class="ingredient-note">В третью часть крема; пробить миксером до однородного цвета</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Сок лайма
+              <span class="ingredient-note">Во вторую часть вместе с цедрой лимона. Сока ровно 10 г — на весах</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Цедра лимона
+              <span class="ingredient-note">С целого лимона или с половины — зависит от того, насколько кислым вы любите крем</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Сборка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Сколько уйдёт — Сахар для карамели
+              <span class="ingredient-note">Плавится сухим способом прямо в сотейнике. Точного количества автор не называет: «небольшое количество», с подогревом по ходу сборки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="лист">1 лист</span> — Ватман для конуса
+              <span class="ingredient-note">Из него скручивается каркас-конус; крепится малярным скотчем и потом снимается</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Продукты и главный инструмент — весы</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Заварное тесто не прощает приблизительности: воду и молоко, сахар, соль и муку отвешивают на весах. Стаканы и столовые ложки не подойдут — разброс слишком большой, а от него зависит, поднимется профитроль или останется плоским.
+                <span class="source-badge">⏱ Урок 1: 00:00:57–00:01:12</span>
+              </p>
+              <p>
+                Муку автор берёт высокобелковую — манитобу; подойдут нордик или обычная мука из магазина, с ней тоже всё получается. Яйца нужны комнатной температуры, крупные, категории С0: пять штук весят 280–300 г.
+                <span class="source-badge">⏱ Урок 1: 00:00:15–00:00:23</span>
+              </p>
+              <div class="tip-box">
+                <strong>Молоко можно заменить:</strong> если молока дома нет, тесто делается полностью на воде. Вкус профитролей изменится совсем чуть-чуть, форма и подъём — нет.
+                <span class="source-badge">⏱ Урок 1: 00:00:44–00:00:55</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Точность: <strong>Только на весах</strong></span>
+              <span class="param-pill">🌾 Мука: <strong>Высокобелковая или обычная</strong></span>
+              <span class="param-pill">🥚 Яйца: <strong>5 шт. С0, 280–300 г</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Завариваем муку и просушиваем тесто</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В сотейник отправьте воду, молоко, нарезанное масло, сахар и соль и поставьте на средний огонь. Пока жидкость греется, просейте муку — её мы будем заваривать, поэтому комки недопустимы. Помешивайте, чтобы масло успело растопиться до закипания.
+                <span class="source-badge">⏱ Урок 1: 00:00:34–00:01:43</span>
+              </p>
+              <p>
+                Дождитесь сильного кипения, снимите с огня и высыпьте всю муку сразу. Мешайте активно и жёстко — лучше деревянной лопаткой, силиконовую можно сломать. Мешаете ровно до того момента, пока не намокнут все комочки: у автора это заняло две минуты.
+                <span class="source-badge">⏱ Урок 1: 00:03:17–00:04:19</span>
+              </p>
+              <p>
+                Верните сотейник на тот же огонь и просушите тесто 2–3 минуты, постоянно помешивая. Тесто соберётся в комок, а на дне появится корочка — это и есть признак готовности. На тефлоновой посуде корочки может не быть, тогда ориентируйтесь на время.
+                <span class="source-badge">⏱ Урок 1: 00:04:19–00:05:19</span>
+              </p>
+              <div class="warning-box">
+                <strong>Корочка на дне — не в тесте:</strong> она остаётся на сотейнике, и соскабливать её в миску не нужно. Переложите тесто, не стараясь собрать всё до последней крошки.
+                <span class="source-badge">⏱ Урок 1: 00:05:19–00:05:34</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Огонь: <strong>Средний, тот же, что для молока</strong></span>
+              <span class="param-pill">⏱ Просушка: <strong>2–3 минуты до комка</strong></span>
+              <span class="param-pill">🥄 Лопатка: <strong>Деревянная или жёсткая</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Вводим яйца и выбиваем воздух</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Тесто должно остыть примерно до 50 °C, иначе яйца свернутся. Простой ориентир от автора: перестал идти пар — можно добавлять. Пять яиц вводите небольшими порциями, каждый раз дожидаясь, пока порция полностью войдёт в массу.
+                <span class="source-badge">⏱ Урок 1: 00:05:37–00:06:17</span>
+              </p>
+              <p>
+                Мешайте на самой маленькой скорости миксера, какая есть; на планетарном подойдёт насадка-весло. Задача — не взбить, а перемешать, поэтому скорость не увеличивают ни в коем случае.
+                <span class="source-badge">⏱ Урок 1: 00:06:18–00:07:16</span>
+              </p>
+              <p>
+                Когда последняя порция вошла, миксер отложите и поработайте лопаткой: собирайте тесто со стенок и разминайте, выгоняя пузыри воздуха. Тесто от этого становится блестящим и гладким, а консистенция у него довольно густая.
+                <span class="source-badge">⏱ Урок 1: 00:07:16–00:07:44</span>
+              </p>
+              <div class="tip-box">
+                <strong>Это тесто любят руки:</strong> автор говорит, что заварное тесто «любит, когда с ним занимаются» — чем тщательнее вы его промнёте лопаткой, тем ровнее поднимется профитроль.
+                <span class="source-badge">⏱ Урок 1: 00:07:29–00:07:40</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Готовность к яйцам: <strong>~50 °C, пар ушёл</strong></span>
+              <span class="param-pill">🌀 Миксер: <strong>Минимум, не взбивать</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Блестящее, гладкое, густое</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Отдых теста в холодильнике: 1–2 часа</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите тесто в кондитерский мешок и уберите в холодильник на час-другой. Там оно станет гуще, и отсаживать профитроли будет заметно удобнее.
+                <span class="source-badge">⏱ Урок 1: 00:07:46–00:09:07</span>
+              </p>
+              <p>
+                Кладите тесто в мешок по одной стенке и аккуратно, чтобы внутрь не попал воздух: крупные пузыри потом испортят поверхность профитроля. Максимально тесто может лежать в холодильнике 12–18 часов, дольше не стоит.
+                <span class="source-badge">⏱ Урок 1: 00:08:32–00:08:44</span>
+              </p>
+              <div class="tip-box">
+                <strong>Пока тесто отдыхает:</strong> самое время заняться кракелином — его всё равно нужно будет заморозить. Автор так и делает: тесто в холодильнике, а руки — на крошке.
+                <span class="source-badge">⏱ Урок 2: 00:00:01–00:00:06</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏳ Отдых: <strong>1–2 часа</strong></span>
+              <span class="param-pill">⌛ Максимум: <strong>12–18 часов</strong></span>
+              <span class="param-pill">📍 Где: <strong>В мешке, в холодильнике</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Отсадка профитролей размером с монету</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отсаживайте на перфорированном коврике, силиконовом ковре или, в крайнем случае, на пергаменте. Насадка — французская звезда № 12 или просто отрезанный мешок; автор делит тесто на две части, чтобы сравнить оба варианта.
+                <span class="source-badge">⏱ Урок 1: 00:09:11–00:09:33</span>
+              </p>
+              <p>
+                Ориентир размера — пятирублёвая монета: чем мельче профитроли, тем аккуратнее и ровнее выйдет башня. Отсаживайте в шахматном порядке и оставляйте между заготовками большое расстояние, иначе они слипнутся.
+                <span class="source-badge">⏱ Урок 1: 00:09:44–00:10:21</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не отрезайте мешок низко:</strong> режьте верхнюю треть. Если отрезать пополам или ниже, вязкое тесто выдавит насадку наружу — придётся перебирать мешок и пачкать всё вокруг.
+                <span class="source-badge">⏱ Урок 1: 00:09:25–00:09:42</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧰 Насадка: <strong>Звезда № 12 или срез мешка</strong></span>
+              <span class="param-pill">📏 Размер: <strong>С монету 5 рублей</strong></span>
+              <span class="param-pill">📐 Порядок: <strong>В шахматном порядке</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Кракелин: крошка, цвет и раскатка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Кракелин — тонкий слой песочного теста поверх профитроля: он даёт и цвет, и хруст. Холодное масло режется кубиком, к нему идут сахар и просеянная мука, и всё это перемешивается миксером на маленькой скорости до крошки разного размера.
+                <span class="source-badge">⏱ Урок 2: 00:00:06–00:01:34</span>
+              </p>
+              <p>
+                Краситель добавляется в тот момент, когда крошка уже явно пытается собраться в комок. На красную порцию у автора ушло 6 капель гелевого красителя, дальше массу просто мнут руками до однородного цвета.
+                <span class="source-badge">⏱ Урок 2: 00:01:02–00:01:59</span>
+              </p>
+              <p>
+                Раскатайте тесто между двумя листами пергамента толщиной около 1,5 мм и отправьте замораживаться — в морозилку или на балкон. Тесто должно быть очень холодным, иначе кружки не получатся.
+                <span class="source-badge">⏱ Урок 2: 00:02:03–00:02:50</span>
+              </p>
+              <div class="tip-box">
+                <strong>Два цвета — две порции:</strong> автор делает красную и зелёную порции отдельно, каждая по полной раскладке 100/125/125. Чередование этих цветов потом и даёт эффект ёлки.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Масло: <strong>Холодное, кубиком</strong></span>
+              <span class="param-pill">📏 Толщина: <strong>~1,5 мм</strong></span>
+              <span class="param-pill">🎨 Краситель: <strong>Гелевый, 6 капель в красную</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Кружки кракелина на профитроли</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Замороженный пласт нарубается кружками — автор делает это обратной стороной насадки. Нужно что-то круглое, диаметром примерно как профитроль: тогда кракелин ляжет ровной шапочкой.
+                <span class="source-badge">⏱ Урок 2: 00:02:53–00:03:11</span>
+              </p>
+              <p>
+                Кругляши аккуратно снимаются и укладываются сверху на отсаженные профитроли — так можно покрыть все заготовки. Если кракелин начал размораживаться и липнуть, верните его в холод.
+                <span class="source-badge">⏱ Урок 2: 00:02:59–00:03:51</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⭕ Диаметр: <strong>По размеру профитроля</strong></span>
+              <span class="param-pill">🧊 Состояние: <strong>Замороженный пласт</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Выпечка: 150–160 °C, конвекция, 50–60 минут</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Ставьте противень в разогретую до 150–160 °C духовку в режиме конвекции и пеките 50–60 минут. Первые 40 минут духовку открывать нельзя: от этого зависит, останутся профитроли ровными или потрескаются.
+                <span class="source-badge">⏱ Урок 2: 00:03:51–00:04:00</span>
+              </p>
+              <p>
+                Автор честно предупреждает: к своей духовке придётся подстроиться. Ориентируйтесь на внешний вид — профитроли должны быть сухими, ровными и не осевшими, как на её противне.
+                <span class="source-badge">⏱ Урок 2: 00:04:27–00:04:45</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не открывайте первые 40 минут:</strong> это главное правило выпечки профитролей. Даже быстрый взгляд на противень выпускает пар и температура падает — заготовки трескаются и оседают.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>150–160 °C</strong></span>
+              <span class="param-pill">🌀 Режим: <strong>Конвекция</strong></span>
+              <span class="param-pill">⏱ Время: <strong>50–60 минут</strong></span>
+              <span class="param-pill">🚫 Не открывать: <strong>Первые 40 минут</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Заварная основа крема</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Крем автор берёт классический заварной — тот же, что шёл в «Наполеон», он идеально подходит для наполнения профитролей. Молоко и сливки с сахаром и ванилью ставятся нагреваться, яйца тем временем смешиваются с кукурузным крахмалом.
+                <span class="source-badge">⏱ Урок 3: 00:00:48–00:01:34</span>
+              </p>
+              <p>
+                Как только молоко со сливками закипит, тонкой струйкой влейте его в яйца с крахмалом, непрерывно помешивая, — иначе яйца свернутся. Затем верните всю массу в сотейник и уваривайте при постоянном помешивании.
+                <span class="source-badge">⏱ Урок 3: 00:02:07–00:02:40</span>
+              </p>
+              <p>
+                Готовность — первый бульк. Пошли пузыри, сразу снимайте с огня и продолжайте мешать ещё немного, чтобы крем не свернулся. Дальше он остывает до 28–30 °C.
+                <span class="source-badge">⏱ Урок 3: 00:02:50–00:03:34</span>
+              </p>
+              <div class="tip-box">
+                <strong>Всё, что ванильное:</strong> подойдёт ванильная паста, ванильный сахар, экстракт — что найдёте. У автора паста, и она идёт прямо в нагревающееся молоко со сливками.
+                <span class="source-badge">⏱ Урок 3: 00:00:56–00:01:02</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Остывание: <strong>До 28–30 °C</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Первый бульк</strong></span>
+              <span class="param-pill">🥛 Состав: <strong>600 г молока + 400 г сливок</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Взбиваем масло и вводим заварную часть</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Размягчённое масло взбивайте до бела — это займёт пару минут. Затем начинайте вводить остывшую заварную часть по столовой ложке, каждый раз дожидаясь, пока очередная порция полностью войдёт в масло.
+                <span class="source-badge">⏱ Урок 3: 00:04:07–00:04:53</span>
+              </p>
+              <p>
+                Так понемногу уходит весь крем. Готовый крем густой, однородный, гладкой текстуры и блестящий — именно то, что нужно для профитролей, и в нём видно ваниль.
+                <span class="source-badge">⏱ Урок 3: 00:05:16–00:05:28</span>
+              </p>
+              <div class="warning-box">
+                <strong>Температура имеет значение:</strong> заварная часть должна быть тёплой, 28–30 °C, а масло — размягчённым. С холодным маслом крем расслоится, с горячей заварной основой масло поплывёт.
+                <span class="source-badge">⏱ Урок 3: 00:03:27–00:03:42</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Масло: <strong>200 г, взбить до бела</strong></span>
+              <span class="param-pill">🥄 Ввод: <strong>По столовой ложке</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Густой, гладкий, блестящий</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 11 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Три вкуса: ваниль, фисташка, лимон с лаймом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Готовый крем делится на три равные части. Первая остаётся ванильной — ваниль уже внутри. Во вторую идёт фисташковая паста, и эту часть автор пробивает миксером до однородного цвета.
+                <span class="source-badge">⏱ Урок 3: 00:05:27–00:05:43</span>
+              </p>
+              <p>
+                В третью часть натирается цедра лимона — с целого лимона или с половины, зависит от того, насколько кислым вы любите крем, — и добавляется ровно 10 г сока лайма.
+                <span class="source-badge">⏱ Урок 3: 00:05:43–00:06:26</span>
+              </p>
+              <p>
+                Каждый крем перекладывается в отдельный мешок с простой круглой насадкой — так удобнее наполнять профитроли. Три мешка, три вкуса, и ни один не повторяется.
+                <span class="source-badge">⏱ Урок 3: 00:06:42–00:06:48</span>
+              </p>
+              <div class="tip-box">
+                <strong>Смысл крокембуша:</strong> фишка этого торта в том, что профитроли внутри разные — ванильный, ореховый и лимонный крем идут вперемешку, и каждый профитроль попадается со своим вкусом.
+                <span class="source-badge">⏱ Урок 3: 00:00:19–00:00:48</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍦 Ваниль: <strong>Треть без добавок</strong></span>
+              <span class="param-pill">🌰 Фисташка: <strong>50 г пасты</strong></span>
+              <span class="param-pill">🍋 Лимон: <strong>Цедра + 10 г сока лайма</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 12 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Дырочки и наполнение профитролей</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В каждом профитроле нужно сделать отверстие — автор прокалывает их маленькой французской звездой № 199, но подойдёт любая узкая насадка или просто тонкий срез мешка. Внутри профитроля полость пустая: это видно, если посмотреть в дырочку.
+                <span class="source-badge">⏱ Урок 3: 00:07:06–00:07:37</span>
+              </p>
+              <p>
+                Дальше — наполнение: насадка вставляется в отверстие, и профитроль заполняется кремом до упора. Задача — сделать одинаковое количество профитролей с каждой начинкой: у автора это примерно по 15 штук.
+                <span class="source-badge">⏱ Урок 3: 00:07:43–00:08:26</span>
+              </p>
+              <div class="tip-box">
+                <strong>Раскладка по вкусам:</strong> 15 с ванильным, 15 с фисташковым, 15 с лимонным — так при сборке получается ровное чередование, и вкусы не заканчиваются в середине башни.
+                <span class="source-badge">⏱ Урок 3: 00:07:47–00:07:59</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧰 Насадка: <strong>Маленькая звезда № 199</strong></span>
+              <span class="param-pill">🍦 Наполнение: <strong>До полной полости</strong></span>
+              <span class="param-pill">⚖ Баланс: <strong>~15 шт. каждого вкуса</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 13 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Конус-каркас из ватмана</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Торт собирается в виде правильного конуса, и помогает в этом ватман. Гигантского циркуля у автора нет, зато есть ручка на верёвочке: ею рисуется полукруг в одну сторону и в другую, а из полученной детали скручивается конус.
+                <span class="source-badge">⏱ Урок 4: 00:00:02–00:00:43</span>
+              </p>
+              <p>
+                Размер автор выбрала максимальный, который могла себе позволить, так что высота башни зависит только от листа. Конус держится на малярном скотче — он потом снимается легко и без следов.
+                <span class="source-badge">⏱ Урок 4: 00:06:29–00:06:37</span>
+              </p>
+              <div class="warning-box">
+                <strong>Ватман — это бумага:</strong> старайтесь не пачкать его карамелью, он может загореться. Сотейник с карамелью держите подальше от каркаса.
+                <span class="source-badge">⏱ Урок 4: 00:07:35–00:07:48</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📐 Форма: <strong>Правильный конус</strong></span>
+              <span class="param-pill">📄 Материал: <strong>Ватман + малярный скотч</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 14 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Карамель сухим способом и техника безопасности</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Крепить профитроли автор будет на карамель — всё как в классическом крокембуше. Сахар плавится сухим способом, без воды, на маленьком огне, чтобы карамель не сгорела. Готовность — нежный янтарный цвет.
+                <span class="source-badge">⏱ Урок 4: 00:00:43–00:01:16</span>
+              </p>
+              <p>
+                Дальше температуру нужно просто поддерживать, чтобы карамель оставалась жидкой и «сухой»: сотейник долго держит жар, поэтому сахар продолжают помешивать. Периодически карамель подогревают прямо по ходу сборки.
+                <span class="source-badge">⏱ Урок 4: 00:01:16–00:03:24</span>
+              </p>
+              <div class="warning-box">
+                <strong>Это самый опасный этап:</strong> карамель очень горячая, прилипает к коже и смыть её нельзя — ожог получается серьёзный. Автор собирает руками без перчаток именно поэтому: карамель прожжёт перчатку и всё равно попадёт на руку. И не делайте это вместе с детьми — пусть лучше смотрят.
+                <span class="source-badge">⏱ Урок 4: 00:01:36–00:01:50</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Способ: <strong>Сухой, без воды</strong></span>
+              <span class="param-pill">🎨 Цвет: <strong>Нежно-янтарный</strong></span>
+              <span class="param-pill">⚠ Безопасность: <strong>Без перчаток, не с детьми</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 15 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">15</span>
+                <h3 class="step-title">Сборка башни: чередование и карамель</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Самая маленькая и аккуратная профитроль идёт в самый верх. Первую профитроль автор опускает на дно конуса без карамели — просто ровно помещает, не вдавливая.
+                <span class="source-badge">⏱ Урок 4: 00:01:20–00:02:00</span>
+              </p>
+              <p>
+                Дальше две профитроли склеиваются карамелью между собой, обмакиваются в карамель ещё раз и крепятся на ту, что уже лежит в конусе. Так башня и растёт — важно, чтобы она повторяла форму конуса, а не громоздилась как попало.
+                <span class="source-badge">⏱ Урок 4: 00:02:00–00:02:49</span>
+              </p>
+              <p>
+                Цвета чередуются: красная, зелёная, красная, зелёная. Внешний слой — тот, что смотрит на зрителя, — выкладывается особенно тщательно, а внутренние профитроли уже не так важны. Собирать нужно, пока не закончатся профитроли или конус.
+                <span class="source-badge">⏱ Урок 4: 00:02:49–00:04:44</span>
+              </p>
+              <div class="tip-box">
+                <strong>Залить и схватиться:</strong> когда башня собрана, автор заливает её небольшим количеством карамели сверху, чтобы всё взялось, и только потом снимает конус.
+                <span class="source-badge">⏱ Урок 4: 00:04:44–00:05:04</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⬆ Верх: <strong>Самая маленькая профитроль</strong></span>
+              <span class="param-pill">🔴🟢 Ритм: <strong>Красная — зелёная</strong></span>
+              <span class="param-pill">🪣 Фиксация: <strong>Карамель, заливка сверху</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 16 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">16</span>
+                <h3 class="step-title">Снятие конуса, волосы Венеры и подача</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Когда карамель застыла, конус раскрепляется: скотч снимается, ватман аккуратно разворачивается, и торт остаётся стоять сам. Делать это нужно медленно — карамель очень хрупкая.
+                <span class="source-badge">⏱ Урок 4: 00:06:28–00:07:12</span>
+              </p>
+              <p>
+                Переставить крокембуш на подложку или тарелку нужно одним движением и очень осторожно. У автора он переезжает на золотую подложку уже собранным.
+                <span class="source-badge">⏱ Урок 4: 00:07:04–00:07:26</span>
+              </p>
+              <p>
+                Из остатков карамели можно сделать волосы Венеры: набрать карамель на вилку и дать ей затянуться сладкими нитями вокруг башни. Автор показывает приём, но сама торт ими не украшает — красота живёт буквально час, а во влажном воздухе нити быстро «заплачут» и потекут.
+                <span class="source-badge">⏱ Урок 4: 00:05:04–00:06:10</span>
+              </p>
+              <div class="tip-box">
+                <strong>Подача:</strong> готовый крокембуш — центр новогоднего стола, и резать его нужно, разбирая по профитролю: карамельные связи ломаются, а крем внутри остаётся.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔓 Конус: <strong>Снять после застывания</strong></span>
+              <span class="param-pill">🍬 Волосы Венеры: <strong>Опционально, живут ~час</strong></span>
+              <span class="param-pill">🍽 Подложка: <strong>Золотой картон или тарелка</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Соль не убирать:</strong> 7 г на эту раскладку — много по меркам заварного теста, но именно столько нужно, соль прямо влияет на результат.</li>
+                <li><strong>Корочка на дне сотейника:</strong> главный признак, что тесто просушилось. На тефлоновой посуде её может не быть — тогда держите 2–3 минуты по времени.</li>
+                <li><strong>Пар ушёл — можно яйца:</strong> тесто должно остыть примерно до 50 °C; проверка простая, пар над миской перестал идти.</li>
+                <li><strong>Мешать, а не взбивать:</strong> яйца вводятся на минимальной скорости, иначе тесто наберёт воздух и профитроли выйдут неровными.</li>
+                <li><strong>Профитроль с монету:</strong> чем мельче заготовки, тем аккуратнее башня. Ориентир автора — монета 5 рублей.</li>
+                <li><strong>Кракелин строго холодным:</strong> масло из холодильника, пласт — в морозилку. Разморозившийся кракелин не рубится кружками и плывёт на профитроле.</li>
+                <li><strong>Крем по ложке:</strong> заварная часть вводится в взбитое масло порциями, иначе крем расслоится и пойдёт крупинками.</li>
+                <li><strong>Три вкуса — поровну:</strong> по 15 профитролей каждого вида, чтобы чередование не сбилось на середине башни.</li>
+                <li><strong>Карамель на маленьком огне:</strong> сухой сахар легко перегреть, а перегретая карамель горчит. Держите нежно-янтарный цвет и поддерживайте температуру, а не «дожимайте» её.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Духовку открыли в первые 40 минут:</strong> профитроли трескаются и оседают. Это правило важнее любых градусов.</li>
+                <li><strong>Яйца в горячее тесто:</strong> свернутся в омлет. Ждите, пока уйдёт пар.</li>
+                <li><strong>Слишком низкий срез мешка:</strong> вязкое тесто выдавит насадку наружу, и мешок придётся перебирать заново.</li>
+                <li><strong>Профитроли вплотную:</strong> слипнутся при выпечке, и разделить их уже не получится.</li>
+                <li><strong>Горячее молоко в яйца без помешивания:</strong> яйца с крахмалом свернутся хлопьями, крем придётся выбрасывать.</li>
+                <li><strong>Крем переварили:</strong> после первого булька огонь нужно выключать сразу, иначе крем станет зернистым.</li>
+                <li><strong>Карамель на перчатках:</strong> прожжёт перчатку и попадёт на руку. Автор собирает голыми руками и просит держать детей подальше.</li>
+                <li><strong>Карамель на ватмане:</strong> бумага может загореться — не пачкайте каркас и держите его в стороне от сотейника.</li>
+                <li><strong>Торт переставляли несколько раз:</strong> карамельные связи очень хрупкие, готовая башня переезжает на подложку один раз и навсегда.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «Торт_Крокембуш» с точными граммовками и расшифровка четырёх видеоуроков (урок_01 — заварное тесто и отсадка, Урок_02 — кракелин и выпечка, Урок_03 — заварной крем и наполнение, Урок_04 — сборка на карамели). Все граммовки взяты из DOCX, порядок действий и приёмы — из видео.</li>
+              <li><strong>База калькулятора:</strong> один крокембуш из полной раскладки. В видео автор делит тесто на две части, но только чтобы сравнить две насадки (французская звезда и простой срез мешка) — торт собирается один.</li>
+              <li><strong>Число профитролей:</strong> точное количество автор не называет. В уроке 3 она говорит «допустим, 15 с одной, 15 с другой, 15 с третьей», то есть около 45 штук на башню — это ориентир, а не измерение.</li>
+              <li><strong>Карамель:</strong> в источниках есть только способ — сухой сахар на маленьком огне, «небольшое количество». Граммовки сахара для карамели нет ни в DOCX, ни в видео, поэтому в рецепте он идёт как «сколько уйдёт» и не пересчитывается калькулятором.</li>
+              <li><strong>Размер конуса:</strong> не указан. Автор говорит, что взяла максимальный размер, который могла себе позволить, и высота башни зависит от листа ватмана.</li>
+              <li><strong>Время:</strong> общее и активное время в источниках не названо — значения на карточке расчётные, по сумме этапов (отдых теста 1–2 ч, две партии выпечки по 50–60 мин, остывание крема).</li>
+              <li><strong>Температура и время выпечки</strong> есть только в DOCX: 150–160 °C, конвекция, 50–60 минут, первые 40 минут не открывать. В видео автор обещает «всё написать» и на экран режим не выводит.</li>
+              <li><strong>Хранение и сроки</strong> в источниках не описаны. Отдельно сказано только про волосы Венеры: они живут около часа и во влажном воздухе тают. Сколько стоит сам торт — не уточняется.</li>
+              <li><strong>Расхождения в записи:</strong> в DOCX кракелин, в расшифровке — «крокелин»; в DOCX крокембуш, в расшифровке — «Крокенбуш». Это ошибки распознавания речи, на странице используются правильные названия.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице стоит кадр из Урок_04 (00:07:55) — собранный крокембуш на золотой подложке; белые поля плеера по краям кадра срезаны.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

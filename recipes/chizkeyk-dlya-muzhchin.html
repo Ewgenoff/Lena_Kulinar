@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Шоколадный чизкейк с острым перцем и трюфелями — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Брутальный шоколадный чизкейк Надежды Зубовой: основа из песочной крошки с бородинским хлебом и какао, сырная масса на тёмном шоколаде, выпечка 30 минут при 160 °C и 65 минут при 110 °C, крем-«чаша», ганаш с острым перцем и виски, домашние трюфели и декор ягодами.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="chizkeyk-dlya-muzhchin">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться к каталогу рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Шоколадный чизкейк с острым перцем и трюфелями</h1>
+      <p class="recipe-lead">
+        Чизкейк «для мужчин» из вебинара Надежды Зубовой: плотная шоколадная сырная масса на песочной крошке, в которую добавлены какао и крошка бородинского хлеба. Десерт собирают в два дня — в первый выпекают и остужают основу и заваривают трюфельную массу, во второй готовят крем, выравнивают им бортики в виде импровизированной чаши, заливают ганашем с виски и острым перцем и украшают домашними трюфелями и ягодами. Остринка здесь работает на удивление, а не на жгучесть.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~40 мин (крошка, форма, отвесы)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~2 ч на два дня</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Выпечка 1 ч 35 мин, остывание, 6–24 ч в холодильнике</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">2 дня</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 чизкейк Ø18 см + 9–10 трюфелей</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/chizkeyk-dlya-muzhchin.jpg" alt="Шоколадный чизкейк с ганашем, трюфелями, клубникой и малиной на светлой подложке" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 чизкейк)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">чизкейк</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База калькулятора — один чизкейк Ø18 см и заготовка трюфелей из того же количества шоколада, как в видео. Диаметр формы можно взять 18–20 см: рецептура рассчитана на этот диапазон.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> чизкейк</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на основу, сырную массу, крем, ганаш, трюфели и декор. Количества шоколада и сливок суммированы по всем компонентам — считайте по этому списку, а не по каждому блоку отдельно.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧀 Молочное и сыр</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творожный сыр</strong>:
+                <span class="shopping-qty" data-base-amount="700" data-unit="г">700 г</span>
+                <span class="shopping-hint">500 г в чизкейк + 200 г в крем. Hochland Creme Bonjour, Violette, Almette сливочный, Hochland для выпечки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 33 %</strong>:
+                <span class="shopping-qty" data-base-amount="370" data-unit="г">370 г</span>
+                <span class="shopping-hint">40–60 г в основу + 120 г в массу + 40 г в крем + 100 г в ганаш + 50 г в трюфели. Нужны жирные, 30 % и выше</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С0</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span>
+                <span class="shopping-hint">Именно С0: с другой категорией яйца пересчитывают по весу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5 %</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">В трюфельную массу, размягчённое</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Шоколад, бакалея, декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Тёмный шоколад 54 %</strong>:
+                <span class="shopping-qty" data-base-amount="390" data-unit="г">390 г</span>
+                <span class="shopping-hint">100 г в массу + 100 г в ганаш + 40 г в крем + 150 г в трюфели. Подойдёт и плитка «Россия»</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао-порошок</strong>:
+                <span class="shopping-qty" data-base-amount="48" data-unit="г">48 г</span>
+                <span class="shopping-hint">18 г в основу + ≈30 г для обваливания трюфелей. Автор берёт Barry Extra Brute или «Плёнка рома»</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Печенье песочное («Юбилейное»)</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Половина стандартной пачки, смолоть в крошку блендером</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Хлеб бородинский</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Мякиш без корки, самый тёмный из доступных: чем темнее, тем отчётливее вкус</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="120" data-unit="г">120 г</span>
+                <span class="shopping-hint">Только в сырную массу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="40" data-unit="г">40 г</span>
+                <span class="shopping-hint">В крем — по вкусу; автор советует не добавлять вовсе, сладость придёт из шоколада</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сироп глюкозный</strong>:
+                <span class="shopping-qty" data-base-amount="20" data-unit="г">20 г</span>
+                <span class="shopping-hint">В трюфели: держит свободную воду и работает консервантом, без него конфеты хранятся хуже</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Перец острый красный</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">Один крупный стручок на ганаш и трюфели. Мелкие жгучие сорта и кайенский перец автор не советует</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Виски, коньяк, ром или бренди</strong> — по вкусу (1–2 ст. л.)
+                <span class="shopping-hint">В ганаш. Водку автор не рекомендует</span>
+              </div>
+            </li>
+            <li class="shopping-item" style="border-style: dashed;"><div class="shopping-item-content">
+                <strong>Клубника и малина для декора (опционально)</strong> — по вкусу
+                <span class="shopping-hint">Целые ягоды без плодоножки, сажают на каплю растопленного шоколада</span>
+              </div>
+            </li>
+            <li class="shopping-item" style="border-style: dashed;"><div class="shopping-item-content">
+                <strong>Белый шоколад для надписи (опционально)</strong> — по вкусу
+                <span class="shopping-hint">Растапливают прямо в мешке и пишут по ганашу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — раздвижное кольцо Ø18–20 см, пергамент, канцелярская скрепка, стакан с ровным дном, сковорода или противень, кондитерские мешки, палетка или вилка для оттиска на трюфелях
+                <span class="shopping-hint">Кольцо не смазывают: пергаментная лента держится за счёт бумаги на дне и скрепки</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Основа из крошки</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Крошка песочного печенья
+              <span class="ingredient-note">«Юбилейное», «Топлёное молоко»: смолоть в блендере</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="18" data-unit="г">18 г</span> — Какао-порошок
+              <span class="ingredient-note">Просеять к крошке до введения сливок: в жидком виде какао уже не разойдётся</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Крошка бородинского хлеба
+              <span class="ingredient-note">Мякиш без корки, не подсушенный; покрошить руками</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Сливки 33 % для восстановления крошки
+              <span class="ingredient-note">Диапазон до 60 г: добавлять по консистенции, пока комок не начнёт держать форму</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Сырная масса</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="500" data-unit="г">500 г</span> — Творожный сыр
+              <span class="ingredient-note">Комнатной температуры; плавленый и маскарпоне не подойдут</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Сахар
+              <span class="ingredient-note">Пудра и тростниковый сахар здесь не нужны: вкус задаёт шоколад</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Тёмный шоколад
+              <span class="ingredient-note">Растопить горячим; темперировать не нужно</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span> — Яйца С0
+              <span class="ingredient-note">Вводить по одному, после сахара и до сливок</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Сливки 33 %
+              <span class="ingredient-note">В самом конце; можно заменить очень жирной сметаной, но появится кислинка</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем для выравнивания</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Творожный сыр
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Тёмный шоколад 54 %
+              <span class="ingredient-note">Растопить и ввести горячим</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Сливки 33 %
+              <span class="ingredient-note">Взбить отдельно и соединить с сыром</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Сахарная пудра
+              <span class="ingredient-note">В видео 40 г; можно не добавлять совсем</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Ганаш с острым перцем</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сливки 33 %
+              <span class="ingredient-note">Нагреть почти до кипения</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Тёмный шоколад 54 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="0.25" data-unit="стручка">0,25 стручка</span> — Острый красный перец
+              <span class="ingredient-note">Без семян, очень мелко; вводить в остывший ганаш</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Виски, коньяк, ром или бренди
+              <span class="ingredient-note">1–2 ст. л.; в видео — одна ложка бренди</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Трюфели</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Тёмный шоколад 54 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сливки 33 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Масло сливочное 82,5 %
+              <span class="ingredient-note">Размягчённое, вводится после шоколада</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Сироп глюкозный
+              <span class="ingredient-note">Вместе со сливками; продлевает хранение конфет до 7 дней</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="0.25" data-unit="стручка">0,25 стручка</span> — Острый красный перец
+              <span class="ingredient-note">В видео на эту порцию идёт половина небольшого стручка; вводить в тёплую массу</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Какао для обваливания
+              <span class="ingredient-note">Можно заменить вафельной или ореховой крошкой</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Клубника и малина
+              <span class="ingredient-note">Целые ягоды без плодоножки; сажать на каплю растопленного шоколада</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Белый шоколад для надписи
+              <span class="ingredient-note">Растопить в мешке, писать по застывшему ганашу</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Сухая крошка: печенье, какао, бородинский хлеб</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Измельчите 150 г песочного печенья в блендере до крошки. Просейте к ней 18 г какао и перемешайте ложкой — сухие части должны соединиться до того, как появится жидкость. Добавьте 30 г крошки бородинского хлеба: мякиш без корки, не подсушенный, покрошенный руками.
+                <span class="source-badge">⏱ Урок 1: 00:06:16–00:09:54</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> чем темнее бородинский хлеб, тем насыщеннее и отчётливее его привкус в готовом чизкейке. Крошку хлеба можно смолоть вместе с печеньем — она не должна быть крупной.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>Блендер, сито, ложка</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Однородная тёмная сухая крошка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Восстановление крошки сливками, а не маслом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Влейте 40 г сливок 33 % и перемешайте рукой. Сожмите горсть: если получился комок, который не рассыпается, сливок достаточно. Если масса сухая — долейте ещё, всего до 60 г.
+                <span class="source-badge">⏱ Урок 1: 00:09:54–00:12:22</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не перелить:</strong> здесь основа восстанавливается сливками, без сливочного масла, и задача — сохранить её песочной и хрустящей после выпечки. Слишком много сливок — основа становится плотной; слишком мало — разваливается при нарезке.
+                <span class="source-badge">⏱ Урок 1: 00:12:05–00:12:21</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак: <strong>Комок держит форму</strong></span>
+              <span class="param-pill">🥣 Сливки: <strong>40–60 г по консистенции</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Кольцо, пергаментное дно и лента по борту</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Возьмите раздвижное кольцо Ø18 см (подойдёт и форма 18–20 см со съёмным дном). Кольцо ничем не смазывайте: положите на дно круг пергамента, установите кольцо и выложите по внутреннему диаметру ленту пергамента, закрепив её канцелярской скрепкой. Всю конструкцию поставьте в сковороду — так её можно будет отправить в холодильник.
+                <span class="source-badge">⏱ Урок 1: 00:12:25–00:19:28</span>
+              </p>
+              <div class="warning-box">
+                <strong>Бортиков у чизкейка нет:</strong> крошка ложится только на дно. Поэтому после выпечки чизкейк нельзя ни переносить, ни снимать со сковороды — остывать и стабилизироваться он будет прямо в этом кольце.
+                <span class="source-badge">⏱ Урок 1: 00:13:34–00:14:13, 00:15:52</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Кольцо: <strong>Ø18 см, раздвижное</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Пергамент, скрепка, сковорода</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Утрамбовка основы стаканом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выложите крошку в кольцо, разровняйте рукой и утрамбуйте стаканом с ровным дном. Ложкой или пальцем пройдитесь по самому краю — крошка должна прилегать к кольцу без зазора.
+                <span class="source-badge">⏱ Урок 1: 00:15:24–00:18:06</span>
+              </p>
+              <div class="warning-box">
+                <strong>Край — самое важное:</strong> если крошка у борта не уплотнена, сырная масса вытечет под неё и основа сгорит. Трамбовать нужно так, чтобы слой был абсолютно гладким и одинаковым по толщине.
+                <span class="source-badge">⏱ Урок 1: 00:17:07–00:18:06</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> у цилиндрического стакана без рёбер ложка не нужна вовсе. И в холодильник основу убирать не нужно: масла в ней нет, ждать нечего.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак: <strong>Гладкий слой без зазоров у борта</strong></span>
+              <span class="param-pill">🧊 Холодильник: <strong>Не требуется</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Духовка: 160 °C, верх-вниз, без конвекции</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разогрейте духовку до 160 °C в режиме «верх-вниз». Конвекция должна быть выключена. Поставьте кольцо с основой на противень и уберите в сторону до заливки массы.
+                <span class="source-badge">⏱ Урок 1: 00:19:31–00:20:07</span>
+              </p>
+              <div class="warning-box">
+                <strong>Если конвекция не отключается:</strong> снизьте температуру на 15 °C от указанной в рецепте. В газовой духовке чизкейки тоже получаются хорошо, но нужен отдельный термометр и поправка на реальный нагрев.
+                <span class="source-badge">⏱ Урок 1: 01:07:47–01:08:11, 00:22:38–00:23:21</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Режим: <strong>160 °C, верх-вниз</strong></span>
+              <span class="param-pill">🚫 Конвекция: <strong>Выключена</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Сырная масса: перемешивать, а не взбивать</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Соедините 500 г творожного сыра комнатной температуры со 120 г сахара и перемешайте миксером на первой скорости — сахар не должен растворяться, объём не должен расти. Растопите 100 г тёмного шоколада в микроволновке до горячего состояния и отставьте.
+                <span class="source-badge">⏱ Урок 1: 00:20:33–00:25:30</span>
+              </p>
+              <p>
+                Введите три яйца С0 по одному, каждый раз перемешивая до однородности, и только затем влейте 120 г сливок. Порядок важен: яйца взбиваются медленнее сливок, поэтому сливки идут последними.
+                <span class="source-badge">⏱ Урок 1: 00:25:32–00:29:35</span>
+              </p>
+              <div class="warning-box">
+                <strong>Никакого взбивания:</strong> насыщение массы воздухом даёт пузыри, а они потом лопаются и портят поверхность. Темперировать шоколад для выпечки тоже не нужно — температура в духовке всё равно далека от температуры темперирования.
+                <span class="source-badge">⏱ Урок 1: 00:21:04–00:21:11, 00:24:51</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Миксер: <strong>1-я (минимальная) скорость</strong></span>
+              <span class="param-pill">🥚 Яйца: <strong>По одному, до сливок</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Убрать пузыри до заливки формы</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Несколько раз постучите миской об стол: пузыри поднимутся и лопнут. Делать это можно только в миске — если форма уже залита, стучать нельзя, кольцо разойдётся, и в массе появятся трещины.
+                <span class="source-badge">⏱ Урок 1: 00:29:50–00:30:45</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚠️ Только: <strong>До заливки формы</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Поверхность без пузырей</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Шоколад вводим через «затравку»</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сырная масса холодная, шоколад горячий: если влить его сразу, он схватится мелкими комочками. Поэтому сначала добавьте 4 столовые ложки сырной массы в шоколад, быстро перемешайте миксером — шоколад прогреется и станет гладким, — и только потом верните эту массу в общую миску.
+                <span class="source-badge">⏱ Урок 1: 00:30:49–00:32:35</span>
+              </p>
+              <p>
+                Перемешайте до однородного цвета и пройдитесь лопаткой по дну и стенкам, собирая светлые разводы: иначе на срезе будет «зебра».
+                <span class="source-badge">⏱ Урок 1: 00:32:44–00:34:25</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> густота сырной основы зависит от влажности сыра и может быть любой — от совсем жидкой до очень густой. Это варианты нормы, подстраиваться не нужно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак: <strong>Гладкая, глянцевая, однородная масса</strong></span>
+              <span class="param-pill">🥣 Затравка: <strong>≈4 ст. л. массы в шоколад</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Заливка и противень с водой под формой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Вылейте массу в кольцо, собирая остатки лопаткой, и разровняйте. Поставьте кольцо на решётку духовки, а прямо под ним — противень с водой. Вода нужна не против высыхания, а для равномерной температуры: пар сглаживает перепады, и поверхность остаётся ровной.
+                <span class="source-badge">⏱ Урок 1: 00:35:07–00:37:16</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> вода может быть горячей или холодной, объём не важен — налейте хоть на дно и подливайте каждые 15–20 минут, чтобы она не выкипала. В газовой духовке чизкейк ставят максимально вверх, а противень с водой — под ним.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>Решётка + противень с водой</strong></span>
+              <span class="param-pill">💧 Долив: <strong>Каждые 15–20 минут</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Выпечка: 30 минут при 160 °C, затем 50 при 110 °C</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Первые 30 минут чизкейк стоит при 160 °C. Затем, не вынимая, снизьте температуру до 110 °C и выпекайте ещё 50 минут.
+                <span class="source-badge">⏱ Урок 1: 00:37:23–00:37:42, 01:08:11–01:08:29</span>
+              </p>
+              <div class="warning-box">
+                <strong>Готовность проверяют покачиванием:</strong> потрясите сковороду. Если по бокам масса уже собралась в гель, а середина ещё «ходит» — чизкейк не готов. Именно так было у автора после 50 минут.
+                <span class="source-badge">⏱ Урок 1: 01:46:03–01:46:49</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Этап 1: <strong>160 °C — 30 мин</strong></span>
+              <span class="param-pill">🌡 Этап 2: <strong>110 °C — 50 мин</strong></span>
+              <span class="param-pill">🔍 Признак неготовности: <strong>Середина ходит</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Досушка 15 минут и полная готовность</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Если середина ещё жидкая, добавьте ещё 15 минут при 110 °C — итого 65 минут на втором этапе. Готовый чизкейк при покачивании ведёт себя как единое целое: середина не трясётся, вся масса превратилась в упругий гель, похожий по поведению на японский чизкейк.
+                <span class="source-badge">⏱ Урок 3: 00:00:03–00:00:55; Урок 4: 00:00:01–00:00:31</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> выключать духовку нужно в момент, когда весь чизкейк стал гелем. Пересушенный чизкейк теряет кремовую текстуру, поэтому лучше проверять каждые 10–15 минут, чем «досидеть» до трещин.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Досушка: <strong>Ещё 15 минут при 110 °C</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Пружинящий гель без жидкости</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Остывание в духовке и 6–24 часа в холодильнике</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Оставьте чизкейк остывать при комнатной температуре, не вынимая из духовки и не снимая со сковороды: при 19–20 °C в комнате это около двух часов, в тёплом помещении — дольше. Затем уберите в холодильник минимум на 6 часов.
+                <span class="source-badge">⏱ Урок 1: 01:41:31–01:44:44</span>
+              </p>
+              <div class="warning-box">
+                <strong>Замораживать нельзя:</strong> этот чизкейк не содержит глюкозного сиропа или инвертного сахара, которые удерживают воду, поэтому после разморозки он даёт ощутимую «лужу». На балкон и лоджию убирать тоже не стоит — он может замёрзнуть.
+                <span class="source-badge">⏱ Урок 1: 01:47:23–01:47:40; Урок 2: 00:16:36–00:17:15</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> самым вкусным чизкейк будет через 24 часа после остывания до комнатной температуры — с этого же момента считают срок хранения 5 суток.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Холодильник: <strong>Минимум 6 ч, идеально 24 ч</strong></span>
+              <span class="param-pill">📦 Срок: <strong>5 суток с момента остывания</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Трюфельная масса — пока печётся чизкейк</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Нагрейте 50 г сливок с 20 г глюкозного сиропа почти до кипения. Залейте ими 150 г тёмного шоколада и мешайте до гладкости, при необходимости прогревая импульсами. Добавьте 50 г размягчённого масла и размешайте до блеска — температура массы упадёт примерно до 30 °C.
+                <span class="source-badge">⏱ Урок 1: 01:20:39–01:35:32</span>
+              </p>
+              <p>
+                Очистите от семян ½ небольшого острого перца, нарежьте его максимально мелко и добавьте в остывшую массу — примерно ½ чайной ложки без горки. Перемешайте, но не пробивайте блендером: кусочки перца должны остаться. Затяните плёнкой (не в контакт) и уберите в холодильник до следующего дня.
+                <span class="source-badge">⏱ Урок 1: 01:27:02–01:40:22</span>
+              </p>
+              <div class="warning-box">
+                <strong>Перец — только в тёплый ганаш, не в горячие сливки:</strong> в горячей жирной среде перец отдаст всю жгучесть, и конфеты будет невозможно есть. Сначала масса должна остыть до 30–40 °C.
+                <span class="source-badge">⏱ Урок 1: 01:30:10–01:30:31</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Перец: <strong>В массе 30–40 °C</strong></span>
+              <span class="param-pill">⏱ В холодильнике: <strong>До следующего дня</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">День второй: извлекаем чизкейк из кольца</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Снимите нижний пергамент и переставьте чизкейк на подложку — сковорода больше не нужна. Разведите кольцо, помогая руками, и снимите его. Затем снимите пергаментную ленту с борта, прижимая её к чизкейку и ведя по кругу: так борт останется целым.
+                <span class="source-badge">⏱ Урок 2: 00:00:44–00:04:00</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> у чизкейка без бортиков бока после кольца получаются настолько ровными, что можно вообще ничего не выравнивать. Крем нужен только ради задумки — чаши под ганаш.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак: <strong>Ровная гладкая поверхность</strong></span>
+              <span class="param-pill">⚠️ Не резать: <strong>Пока ганаш не застыл</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">15</span>
+                <h3 class="step-title">Крем для выравнивания на сыре и шоколаде</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Взбейте 200 г творожного сыра с сахарной пудрой (в видео — 40 г, можно без неё). Отдельно подвзбейте 40 г сливок до рисунка, соедините с сыром. Растопите 40 г шоколада до горячего состояния, введите в крем по той же схеме «затравки» — часть крема в шоколад, перемешать, потом обратно, — и перемешайте миксером до равномерного цвета.
+                <span class="source-badge">⏱ Урок 2: 00:04:55–00:15:06</span>
+              </p>
+              <div class="warning-box">
+                <strong>Работать быстро:</strong> в креме нет стабилизатора, шоколад схватывается, и крем начинает густеть прямо в мешке. Здесь, в отличие от сырной массы, взбивать на высокой скорости уже можно.
+                <span class="source-badge">⏱ Урок 2: 00:08:08–00:08:25, 00:14:50</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Шоколад: <strong>Горячий, через затравку</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Равномерный цвет, без крошек</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">16</span>
+                <h3 class="step-title">Выравнивание «чашей» с бортиком 5 мм</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Уберите с боков крошки, нанесите крем на борт и разгладьте палеткой, опуская крем чуть ниже верхнего края. Верх не выравнивайте: крем должен образовать импровизированную чашу с бортиком примерно 5 мм над поверхностью — этого достаточно, чтобы ганаш не вытек. Где бортика не хватает, дорастите его остатками крема.
+                <span class="source-badge">⏱ Урок 2: 00:15:14–00:23:13</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> чем больше практики в выравнивании, тем меньше крема на это уходит. Если чизкейк выпекали с бортиком из крошки, крем не нужен вовсе — можно залить ганаш прямо на верх.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Бортик: <strong>≈5 мм над верхом</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Палетка, поворотный стол</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">17</span>
+                <h3 class="step-title">Ганаш с перцем и виски, заливка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Залейте 100 г нарезанного шоколада 100 г сливок, нагретых почти до кипения, и мешайте от центра, пока сливки полностью не войдут в ганаш. Масса должна быть блестящей и текучей: если она сваливается с лопатки кусками, добавьте тёплых сливок по чайной ложке.
+                <span class="source-badge">⏱ Урок 2: 00:26:49–00:31:43</span>
+              </p>
+              <p>
+                Когда ганаш остынет до 35–40 °C, влейте столовую ложку бренди (можно две, если едят только взрослые) и введите ¼ стручка острого перца, нарезанного очень мелко, либо ½ чайной ложки молотого без горки. Перемешайте и залейте чизкейк с краёв, помогая поверхность покачиванием.
+                <span class="source-badge">⏱ Урок 2: 00:31:43–00:35:41</span>
+              </p>
+              <div class="warning-box">
+                <strong>Перец не в горячий ганаш:</strong> при высокой температуре он отдаёт максимум жгучести. И не сыпьте много: остринка здесь для удивления, десерт не должен превращаться в соревнование.
+                <span class="source-badge">⏱ Урок 2: 00:29:47–00:30:02; Урок 1: 00:40:48–00:41:00</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Перец и алкоголь: <strong>При 35–40 °C</strong></span>
+              <span class="param-pill">🥃 Алкоголь: <strong>1–2 ст. л., не водка</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Ганаш течёт, а не рвётся</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">18</span>
+                <h3 class="step-title">Трюфели по 19–20 г и оттиск вилкой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Достаньте трюфельную массу заранее и прогрейте её 10 секунд в микроволновке, затем разомните ложкой — иначе шарики не сформировать. Надевайте перчатки, отвешивайте по 19–20 г, скатывайте шарик и сразу обваливайте в какао. У автора выходит 9–10 конфет.
+                <span class="source-badge">⏱ Урок 2: 00:37:17–00:44:43</span>
+              </p>
+              <p>
+                Готовым трюфелям сделайте оттиск вилкой или палеткой — одинаковый на всех, чтобы декор на чизкейке смотрелся рисунком. Можно припылить кандурином, но это не обязательно.
+                <span class="source-badge">⏱ Урок 2: 00:50:30–00:51:34</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> обваливать трюфели можно не только в какао, но и в вафельной крошке; хранятся они 7 дней в холодильнике благодаря глюкозному сиропу, поэтому их можно приготовить в подарок отдельно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ Вес: <strong>19–20 г на конфету</strong></span>
+              <span class="param-pill">🔢 Выход: <strong>9–10 шт.</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>7 дней в холодильнике</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">19</span>
+                <h3 class="step-title">Декор ягодами и надпись белым шоколадом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Когда ганаш застыл, выложите трюфели по борту, разворачивая их оттиски в одну сторону. Ягоды освежите (удалите плодоножки), окуните основание в каплю растопленного тёмного шоколада и приклейте к ганашу — целыми, чтобы декор дожил до подачи.
+                <span class="source-badge">⏱ Урок 5: 00:03:38–00:05:30</span>
+              </p>
+              <p>
+                Надпись делают белым шоколадом: растопите его прямо в кондитерском мешке в микроволновке или в тёплой воде, срежьте самый кончик и пишите по застывшему ганашу не торопясь.
+                <span class="source-badge">⏱ Урок 5: 00:00:01–00:00:43</span>
+              </p>
+              <div class="warning-box">
+                <strong>Только целые ягоды:</strong> разрезанные дадут сок и потекут. Собирайте декор, когда ганаш уже держит форму, иначе трюфели съедут.
+                <span class="source-badge">⏱ Урок 5: 00:04:45–00:04:59</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍓 Ягоды: <strong>Целые, без плодоножки</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>5 суток в холодильнике</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Бородинский хлеб и перец — по желанию:</strong> без них получится совершенно традиционный шоколадный чизкейк, но попробовать стоит именно с ними.</li>
+                <li><strong>Порядок ингредиентов:</strong> сахар, яйца, сливки — сливки в самом конце. Яйца вводят до сливок, чтобы масса получилась гладкой и однородной.</li>
+                <li><strong>Затравка шоколада:</strong> часть холодной сырной массы сначала прогревают в горячем шоколаде, и только потом соединяют всё вместе.</li>
+                <li><strong>Вода под противнем:</strong> нужна для равномерной температуры в камере, а не для влажности. Объём и температура воды значения не имеют.</li>
+                <li><strong>Проверка готовности:</strong> покачивание формы — единственный надёжный способ. Гель по бокам и «ходящая» середина означают, что нужно ещё время.</li>
+                <li><strong>Срок хранения:</strong> 5 суток с момента остывания до комнатной температуры; самый вкусный — через сутки.</li>
+                <li><strong>Перец работает по-разному:</strong> в ганаш лучше свежий, в трюфели — сушёный или свежий, но вводить его нужно только в остывшую массу.</li>
+                <li><strong>Трюфели как отдельный подарок:</strong> с глюкозным сиропом они хранятся 7 дней, обваливать можно в какао или вафельной крошке.</li>
+                <li><strong>Меньше сахара в креме:</strong> автор советует не добавлять пудру вовсе — чизкейк задуман брутальным, сладость даёт шоколад.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Шоколад сразу в холодную массу:</strong> он схватится крошкой, и чизкейк будет похож на испечённый с шоколадными вкраплениями.</li>
+                <li><strong>Взбивание сырной массы:</strong> воздух в массе, пузыри и неровная поверхность.</li>
+                <li><strong>Стучать формой после заливки:</strong> кольцо расходится, масса трескается.</li>
+                <li><strong>Неплотная крошка у борта:</strong> сырная масса вытекает под основу.</li>
+                <li><strong>Много сливок в основе:</strong> она перестаёт быть песочной и хрустящей; мало — разваливается при нарезке.</li>
+                <li><strong>Конвекция при выпечке:</strong> поверхность схватывается быстрее середины, появляются трещины. Не отключается — снижайте температуру на 15 °C.</li>
+                <li><strong>Перец в горячий ганаш или горячие сливки:</strong> получается жгучая, а не пряная нота.</li>
+                <li><strong>Кайенский перец и мелкие жгучие сорта:</strong> отрегулировать остроту почти невозможно.</li>
+                <li><strong>Заморозка:</strong> без глюкозного сиропа чизкейк после разморозки даёт лужу.</li>
+                <li><strong>Ягоды, разрезанные заранее:</strong> дают сок и портят вид декора.</li>
+                <li><strong>Резка сразу после заливки:</strong> ганаш ещё течёт — нужна стабилизация в холодильнике.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Творожный сыр:</strong> Hochland Creme Bonjour (в видео — Hochland Креметта), Violette, Almette сливочный, Hochland для выпечки; продаются в магазинах у дома. Нужен сыр без растительных жиров.</li>
+                <li><strong>Сливки:</strong> жирные, 30 % и выше — Метро Шеф, Formalat, «Питмол». Очень жирная сметана тоже подойдёт, но даст кислинку.</li>
+                <li><strong>Яйца:</strong> строго С0. С другой категорией пересчитывайте по весу.</li>
+                <li><strong>Печенье:</strong> «Юбилейное», «Топлёное молоко» — любое песочное.</li>
+                <li><strong>Шоколад:</strong> тёмный 54 % (Calibaut, «Россия»), для выпечки качество не критично.</li>
+                <li><strong>Алкоголь в ганаше:</strong> виски, коньяк, ром, бренди. Водку автор не рекомендует.</li>
+                <li><strong>Перец:</strong> свежий крупный стручок или молотый острый — ½ чайной ложки без горки.</li>
+                <li><strong>Каперсы в террине и перец в десерте</strong> — оба ингредиента опциональны: рецепт собирается и без них.</li>
+                <li><strong>Форма:</strong> кольцо Ø18–20 см, форма со съёмным дном или с поднимающимся дном. Обязательное условие — чизкейк должен легко извлекаться.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 (основа — 00:06–00:18, форма — 00:12–00:19, духовка — 00:19–00:20, сырная масса — 00:20–00:34, заливка и вода — 00:35–00:38, режимы выпечки — 00:37–00:41, 01:08, трюфельная масса — 01:20–01:40, хранение — 01:41–01:47); Урок_02.mp4 (извлечение — 00:00–00:04, крем — 00:04–00:15, выравнивание — 00:15–00:23, ганаш и заливка — 00:26–00:35, трюфели — 00:37–00:51); Урок_03.mp4 (досушка 15 минут — 00:00–00:00:55); Урок_04.mp4 (признак готовности — 00:00–00:00:31); Урок_05.mp4 (декор и надпись — 00:00–00:06:32); «Чизкейки для мужчин.docx» — граммовки; «Расшифровка Чизкейк_для_мужчин.csv» — таймкоды и технология.</li>
+              <li><strong>Время второй фазы выпечки:</strong> в начале урока автор говорит «50–130 минут», затем поправляется: «50–90 минут, я оговорилась». Фактически после 50 минут добавила ещё 15, и в Урок_03 итог назван прямо: 30 минут при 160 °C и 65 минут при 110 °C. На странице — 50 минут плюс досушка 15 минут.</li>
+              <li><strong>Количество перца в трюфелях:</strong> в DOCX — ¼ стручка, в видео автор берёт половину крупного стручка и добавляет примерно ½ чайной ложки нарезанного перца. На странице — ¼ стручка по DOCX с пометкой о видео.</li>
+              <li><strong>Сахарная пудра в креме:</strong> DOCX — «по вкусу», в видео — 40 г, и сразу оговорка, что можно не добавлять.</li>
+              <li><strong>Алкоголь в ганаше:</strong> DOCX — 1–2 ст. ложки виски (коньяк, ром, бренди), в видео — одна ложка бренди, максимум две, если десерт только для взрослых.</li>
+              <li><strong>Ганаш с трюфелями:</strong> в видео трюфельная масса варится в первый день, а шарики формируются во второй; на странице этапы разделены так же.</li>
+              <li><strong>Пробелы:</strong> количество ягод для декора и белого шоколада для надписи не взвешивается; точная температура ганаша при вводе перца названа приблизительно (30–40 °C); время остывания при комнатной температуре зависит от температуры в помещении — автор называет около двух часов при 19–20 °C.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице стоит кадр из Урок_05.mp4 (00:06:50) с готовым чизкейком, обрезанный по краям.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

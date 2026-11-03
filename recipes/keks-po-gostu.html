@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кекс по ГОСТу с изюмом и цукатами — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Кекс по ГОСТу на сливочном масле 82,5%: масляно-яичная эмульсия, изюм и апельсиновые цукаты, программируемая трещина по центру, выпечка 40–50 минут при 170 °C. Сахарная помадка и анютины глазки из масляного крема.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body data-recipe-id="keks-po-gostu">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Кекс по ГОСТу с изюмом и цукатами</h1>
+      <p class="recipe-lead">
+        Тот самый советский кекс, но на качественном сливочном масле 82,5%: масло взбивается с сахаром до бела, яйца входят понемногу и собирают эмульсию, а в муку отправляются цукаты и изюм. Трещина здесь не случайность, а заказ — по центру проводится бороздка и заполняется маслом, и кекс рвётся именно там. Сверху сахарная помадка и анютины глазки из масляного крема.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~40 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">~1 ч 20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~2 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">2 кекса по 400–450 г</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/keks-po-gostu.jpg" alt="Кекс по ГОСТу под белой сахарной помадкой, украшенный кремовыми анютиными глазками и листьями" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (2 порции)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="2">2</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">кекса</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — два кекса по 400–450 г, как в авторской раскладке. Тесто можно разложить и в капсулы для капкейков: тогда отвешивайте по 55 г, а время выпечки сократится до 23–25 минут.
+          </p>
+        </div>
+
+        <!-- Переключатель источников -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">2</span> порций</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех продуктов с учетом выбранного масштаба. Позиции, которые идут и в тесто, и в отделку, уже сложены и расписаны в подсказках.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: масло, яйца, молоко -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧈 Масло, яйца, молоко</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="340" data-unit="г">340 г</span>
+                <span class="shopping-hint">180 г в тесто + 160 г в крем для цветов; всё размягчённое. 72,5% не берите: в нём на 10% больше влаги</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span>
+                <span class="shopping-hint">155 г без скорлупы; обязательно комнатной температуры</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="мл">50 мл</span>
+                <span class="shopping-hint">Для крема, комнатной температуры — холодное свернёт масло</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: бакалея и наполнитель -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧂 Мука, сахар, наполнитель</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="260" data-unit="г">260 г</span>
+                <span class="shopping-hint">Просейте заранее; сюда же пойдут разрыхлитель, соль и сухофрукты</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок (всего)</strong>:
+                <span class="shopping-qty" data-base-amount="490" data-unit="г">490 г</span>
+                <span class="shopping-hint">190 г в тесто + 300 г в сахарную помадку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Только в крем для цветов</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Изюм</strong>:
+                <span class="shopping-qty" data-base-amount="95" data-unit="г">95 г</span>
+                <span class="shopping-hint">Промыть и обсушить; можно замочить на ночь в роме, но потом обязательно просушить</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Цукаты</strong>:
+                <span class="shopping-qty" data-base-amount="95" data-unit="г">95 г</span>
+                <span class="shopping-hint">Апельсиновые; весь наполнитель — 190 г, можно заменить курагой, инжиром, черносливом, орехами, шоколадной крошкой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Разрыхлитель</strong>:
+                <span class="shopping-qty" data-base-amount="6" data-unit="г">6 г</span>
+                <span class="shopping-hint">Без него тесто будет как кирпич; замена — 6 г соды и столовая ложка лимонного сока</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="г">1 г</span>
+                <span class="shopping-hint">В муку, вместе с разрыхлителем</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ваниль</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="г">1 г</span>
+                <span class="shopping-hint">Паста, ванильный сахар или ванилин — на результат это не влияет</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимонный сок</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="ч. л.">2 ч. л.</span>
+                <span class="shopping-hint">В помадку при 110 °C; можно заменить растворённой лимонной кислотой</span>
+              </div>
+            </li>
+            <li class="shopping-item" style="border-style: dashed;"><div class="shopping-item-content">
+                <strong>Какао</strong> (опционально):
+                <span class="shopping-qty" data-base-amount="2" data-unit="ч. л.">2 ч. л.</span>
+                <span class="shopping-hint">Только если хотите шоколадную помадку вместо белой</span>
+              </div>
+            </li>
+            <li class="shopping-item" style="border-style: dashed;"><div class="shopping-item-content">
+                <strong>Для декора</strong> (опционально) — водорастворимые красители, пергамент, кондитерские мешки, насадки 103, № 2, 349/348/352
+                <span class="shopping-hint">Цветы можно и не делать: кекс хорош и просто под помадкой, и с сахарной пудрой</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Тесто (на 2 кекса)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="180" data-unit="г">180 г</span> — Масло сливочное 82,5%
+              <span class="ingredient-note">Размягчённое; если не размягчается — подтопите пульсами в микроволновке</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="190" data-unit="г">190 г</span> — Сахар-песок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="155" data-unit="г">155 г</span> — Яйца (≈3 шт. С1)
+              <span class="ingredient-note">Категория любая, важен вес; комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="260" data-unit="г">260 г</span> — Мука пшеничная в/с
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="6" data-unit="г">6 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="г">1 г</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="г">1 г</span> — Ваниль
+              <span class="ingredient-note">Паста, ванильный сахар или ванилин</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="190" data-unit="г">190 г</span> — Наполнитель: изюм и цукаты
+              <span class="ingredient-note">95 г изюма + 95 г апельсиновых цукатов; всё сухое</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Сахарная помадка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Сахар-песок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Вода
+              <span class="ingredient-note">Плюс ледяная вода в миске для резкого охлаждения</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="ч. л.">2 ч. л.</span> — Лимонный сок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="ч. л.">2 ч. л.</span> — Какао (по желанию)
+              <span class="ingredient-note">Только для шоколадной помадки; на видео кекс покрыт белой</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем для цветов</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Масло сливочное
+              <span class="ingredient-note">Очень хорошо размягчённое</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="мл">50 мл</span> — Молоко комнатной температуры
+              <span class="ingredient-note">Вводится в 4–5 приёмов</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Пропитка (по желанию)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Сироп 30% сахара / 70% воды
+              <span class="ingredient-note">Без количества: не пересчитывается; можно добавить алкоголь</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка и духовка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Включите духовку на 170 °C с конвекцией; если конвекции нет — режим «верх-вниз», тоже 170 °C. Духовка обязательно должна быть полностью прогрета. Масло и яйца достаньте заранее: они нужны комнатной температуры, иначе эмульсия не соберётся.
+                <span class="source-badge">⏱ Урок 1: 00:03–00:03</span>
+              </p>
+              <div class="tip-box">
+                <strong>Формы:</strong> у автора две — 19×5×6 см и 20×6×6 см, рецепт рассчитан на два кекса по 400–450 г. Подойдут и капсулы для капкейков: тогда отвешивайте по 55 г теста.
+                <span class="source-badge">⏱ Урок 1: 00:04–00:04</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Духовка: <strong>170 °C</strong></span>
+              <span class="param-pill">🔄 Режим: <strong>конвекция или верх-вниз</strong></span>
+              <span class="param-pill">🍰 Выход: <strong>2 кекса по 400–450 г</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Масло с сахаром — 10 минут</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Масло и сахар соедините в миске для взбивания. Начните на небольшой скорости, чтобы сахар не разлетался, затем включите максимальную и взбивайте 5–7 минут, а лучше все 10. Масса должна побелеть и заметно увеличиться в объёме.
+                <span class="source-badge">⏱ Урок 1: 00:04–00:13</span>
+              </p>
+              <div class="tip-box">
+                <strong>Это и есть разрыхление:</strong> разрыхлителя в рецепте всего 6 г на 260 г муки и 180 г масла, поэтому основную работу делает воздух, который вы набиваете в масло. Взбивание здесь — не формальность.
+                <span class="source-badge">⏱ Урок 1: 00:12–00:13</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Масло: <strong>180 г, 82,5%</strong></span>
+              <span class="param-pill">🍬 Сахар: <strong>190 г</strong></span>
+              <span class="param-pill">⏱ Взбивание: <strong>7–10 мин</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Яйца в четыре приёма</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Яйца заранее перемешайте венчиком, чтобы в массу не плюхнулось целое яйцо, и вводите в четыре приёма. После каждой порции взбивайте до полного объединения: масса остаётся густой, жидкости на дне нет — значит, эмульсия приняла яйцо и можно добавлять следующее.
+                <span class="source-badge">⏱ Урок 1: 00:13–00:16</span>
+              </p>
+              <div class="warning-box">
+                <strong>Если жидкость не уходит:</strong> продолжайте взбивать. Не помогло — прогрейте массу пульсами в микроволновке или на водяной бане и взбивайте дальше: так эмульсия собирается.
+                <span class="source-badge">⏱ Урок 1: 00:16–00:17</span>
+              </div>
+              <div class="tip-box">
+                <strong>Холодные яйца всё ломают:</strong> в тёплом масле они запускают застывание, и эмульсия не образуется. Поэтому и масло, и яйца — только комнатной температуры.
+                <span class="source-badge">⏱ Урок 1: 00:13–00:14</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Яйца: <strong>155 г ≈ 3 шт. С1</strong></span>
+              <span class="param-pill">🔁 Приёмов: <strong>4</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>густо, жидкости на дне нет</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Сухие ингредиенты и наполнитель</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Введите в эмульсию ваниль и перемешайте. Муку соедините с разрыхлителем и солью, добавьте туда изюм с цукатами и перемешайте — наполнитель должен быть сухим и покрыться мукой. Высыпьте всё в эмульсию за один приём и смешайте на низкой скорости до полного входа муки.
+                <span class="source-badge">⏱ Урок 1: 00:17–00:19</span>
+              </p>
+              <div class="tip-box">
+                <strong>Почему наполнитель в муке:</strong> сухие цукаты и изюм не слипаются в комки и не оседают на дно. Если замачивали изюм в роме — обязательно обсушите его на салфетке.
+                <span class="source-badge">⏱ Урок 1: 00:18–00:18</span>
+              </div>
+              <div class="warning-box">
+                <strong>Не взбивайте на высокой:</strong> кислород тесту больше не нужен, задача — просто вмешать муку. Готовое тесто густое, его консистенция зависит от сезона: летом жиже, зимой гуще.
+                <span class="source-badge">⏱ Урок 1: 00:19–00:19</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Мука: <strong>260 г</strong></span>
+              <span class="param-pill">🥄 Разрыхлитель: <strong>6 г</strong></span>
+              <span class="param-pill">🧂 Соль: <strong>1 г</strong></span>
+              <span class="param-pill">🍇 Наполнитель: <strong>190 г</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Подготовка форм</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Металлическую форму смажьте сливочным маслом или спреем из растительного масла. На дно выложите пергамент, вырезанный под форму, с «ушками» — за них кекс потом удобно вынуть. Бумажную форму смазывать не нужно, силиконовую — тоже. Если форма с трубкой, смажьте и трубку.
+                <span class="source-badge">⏱ Урок 1: 00:21–00:25</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем ушки:</strong> пергамент застилается так, чтобы уголки торчали над бортами. Когда кекс остынет, вы просто тянете за них и вынимаете его, не ломая.
+                <span class="source-badge">⏱ Урок 1: 00:22–00:23</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Смазка: <strong>масло или спрей</strong></span>
+              <span class="param-pill">📄 Дно: <strong>пергамент с ушками</strong></span>
+              <span class="param-pill">🚫 Силикон: <strong>не смазывать</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Отсадка теста</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите тесто в кондитерский мешок, отрежьте отверстие около 2 см и выкладывайте в формы. Разравнивать до идеала не нужно: масла в тесте много, и в духовке оно само разойдётся по форме.
+                <span class="source-badge">⏱ Урок 1: 00:27–00:28</span>
+              </p>
+              <div class="warning-box">
+                <strong>Тесто не ждёт:</strong> держать его до выпечки можно не больше 60 минут — дальше разрыхлитель начинает работать впустую.
+                <span class="source-badge">⏱ Урок 2: 00:19–00:19</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥄 Отверстие: <strong>~2 см</strong></span>
+              <span class="param-pill">🍰 В форме: <strong>2/3–3/4 высоты</strong></span>
+              <span class="param-pill">⏱ До выпечки: <strong>не более 60 мин</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Программируем трещину</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Кекс обязательно треснет — вопрос только где. Чтобы разрыв пошёл по центру, проведите ножом или палеткой неглубокую бороздку вдоль всей заготовки. Затем заполните её размягчённым маслом из мешка с отверстием около 5 мм, утопив носик внутрь бороздки, а не размазывая поверху. У кекса не останется выбора, где рваться.
+                <span class="source-badge">⏱ Урок 1: 00:29–00:30</span>
+              </p>
+              <div class="tip-box">
+                <strong>Сколько масла:</strong> буквально 7 г из 15 — совсем немного, только чтобы в этом месте тесту было легче разорваться. Слишком много масла даст лужу и неровный верх.
+                <span class="source-badge">⏱ Урок 1: 00:37–00:37</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔪 Бороздка: <strong>по центру, неглубоко</strong></span>
+              <span class="param-pill">🧈 Масло: <strong>~7 г в бороздку</strong></span>
+              <span class="param-pill">🌡 Масло: <strong>размягчённое</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Форма с трубкой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Для формы с отверстием внутри правила другие: заполняйте тесто только до уровня дырок — выше нельзя, иначе трубка «наестся» теста и достать её будет очень сложно. Вставьте трубку, придерживая её пальцем, до противоположной стороны, затем доложите оставшееся тесто, усиливая углы: там кекс поднимается меньше всего.
+                <span class="source-badge">⏱ Урок 1: 00:32–00:35</span>
+              </p>
+              <div class="tip-box">
+                <strong>Трещины тут не будет:</strong> трубка расширяется куда меньше теста, и пару для разрыва просто негде собраться. Маслом бороздку здесь не заполняют — верхушку всё равно срежут.
+                <span class="source-badge">⏱ Урок 2: 00:08–00:09</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧁 Заполнение: <strong>до дырок</strong></span>
+              <span class="param-pill">🔩 Трубка: <strong>смазать и вставить</strong></span>
+              <span class="param-pill">📐 Углы: <strong>усилить тестом</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Выпечка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте при 170 °C от 40 до 50 минут — время зависит от силы духовки. Без конвекции режим тот же, «верх-вниз», противень ставьте посередине. В газовой духовке противень поднимайте на самый верхний уровень, который у вас есть.
+                <span class="source-badge">⏱ Урок 1: 00:36–00:37</span>
+              </p>
+              <div class="tip-box">
+                <strong>Капкейки — быстрее:</strong> если разложили тесто в капсулы по 55 г, выпекайте 23–25 минут при той же температуре.
+                <span class="source-badge">⏱ Урок 1: 00:37–00:37</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>170 °C</strong></span>
+              <span class="param-pill">⏱ Время: <strong>40–50 мин</strong></span>
+              <span class="param-pill">🧁 Капкейки: <strong>23–25 мин</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Извлечение и подрезка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Кекс из формы с дном просто выдавите. У формы с трубкой сначала продавите трубку об стол, затем выкрутите её, как шуруп, придерживая верхушку рукой — иначе она потянется за трубкой. Вынув кекс, срежьте ножом-пилой горку: режьте по борту формы, не вынимая кекс, тогда верх получится ровным. Бока, которые вылезли, чуть подпилите — помадка ляжет аккуратнее.
+                <span class="source-badge">⏱ Урок 2: 00:00–00:03</span>
+              </p>
+              <div class="tip-box">
+                <strong>Верхушку можно и не срезать:</strong> у кекса с запрограммированной трещиной её просто окунают в помадку — получается красивая арка. Срезают только там, где сверху будет плоский декор.
+                <span class="source-badge">⏱ Урок 2: 00:02–00:03</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔩 Трубка: <strong>выкрутить</strong></span>
+              <span class="param-pill">🔪 Срез: <strong>по борту формы</strong></span>
+              <span class="param-pill">📄 Вынуть: <strong>за ушки пергамента</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 11 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Пропитка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                По желанию пропитайте кекс сиропом: 30% сахара и 70% воды, можно с алкоголем. Наносите кисточкой или шприцем. Под декор кекс переворачивают дном вверх: эта сторона жёстче и не деформируется под весом цветов.
+                <span class="source-badge">⏱ Урок 2: 00:03–00:04</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">💧 Сироп: <strong>30% сахара / 70% воды</strong></span>
+              <span class="param-pill">🖌 Нанесение: <strong>кисть или шприц</strong></span>
+              <span class="param-pill">🔄 Под декор: <strong>дном вверх</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 12 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Помадка и покрытие</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Помадку прогревайте пульсами по 15 секунд, каждый раз перемешивая, — и не дольше: если греть сразу две минуты, она закипит и испортится. Покройте кекс сверху и дайте помадке немного стечь по краям, затем постучите подносом, чтобы слой разровнялся. Схватывается она за 10–15 минут.
+                <span class="source-badge">⏱ Урок 2: 00:05–00:13</span>
+              </p>
+              <div class="warning-box">
+                <strong>Помадка трескается и рассыпается, если её переварили.</strong> Лечится влагой: при прогреве добавьте не 2 чайные ложки воды, а 4 — и слой ляжет ровно.
+                <span class="source-badge">⏱ Урок 2: 00:13–00:13</span>
+              </div>
+              <div class="tip-box">
+                <strong>Можно не варить:</strong> готовая помадка продаётся в порошке, но брать её стоит в профессиональном кондитерском магазине на развес: сетевая часто не застывает. Покрывать кекс вообще не обязательно — можно просто посыпать пудрой.
+                <span class="source-badge">⏱ Урок 2: 00:05–00:06</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏲ Прогрев: <strong>пульсы по 15 с</strong></span>
+              <span class="param-pill">💧 Вода: <strong>2–4 ч. л. при прогреве</strong></span>
+              <span class="param-pill">⏱ Схватывается: <strong>10–15 мин</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 13 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Крем для цветов</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Масло с пудрой взбивайте 10 минут на высокой скорости. Затем добавляйте молоко комнатной температуры в 4–5 приёмов, каждый раз дожидаясь однородности. В конце можно добавить ароматизатор и подкрасить водорастворимыми красителями.
+                <span class="source-badge">⏱ Урок 2: 00:18–00:18</span>
+              </p>
+              <div class="warning-box">
+                <strong>Холодное молоко свернёт крем:</strong> масло схватится комками, и восстановить массу будет сложно. Молоко — только комнатной температуры, как и масло.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Масло: <strong>160 г</strong></span>
+              <span class="param-pill">🍬 Пудра: <strong>150 г</strong></span>
+              <span class="param-pill">🥛 Молоко: <strong>50 мл, в 4–5 приёмов</strong></span>
+              <span class="param-pill">⏱ Взбивание: <strong>10 мин</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 14 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Анютины глазки насадкой 103</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Насадка 103 устроена просто: толстая «попа» и тонкий носик. Держите её так, чтобы попа была внизу, а носик вверху — именно носик даёт тонкий край лепестка. На гвоздике закрепите квадратик пергамента и отсадите на дальнем краю бумажки площадку. Затем двумя полукругами внахлёст выложите первые лепестки, третьим цветом нарисуйте «восьмёрку» с центром на 5 мм выше основания и завершите пятым, почти горизонтальным лепестком. Тычинки — насадкой № 2 или просто тонко срезанным мешком.
+                <span class="source-badge">⏱ Урок 2: 00:17–00:23</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем пергамент:</strong> анютины глазки плоские, с гвоздя без бумажки их не снять. Готовый цветок снимают ножницами вместе с бумажкой и убирают в морозилку — замороженные цветы потом удобно переносить руками, и композиция получается чище.
+                <span class="source-badge">⏱ Урок 2: 00:23–00:31</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧰 Цветы: <strong>насадка 103</strong></span>
+              <span class="param-pill">⚪ Тычинки: <strong>насадка № 2</strong></span>
+              <span class="param-pill">🎨 Красители: <strong>водорастворимые</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 15 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">15</span>
+                <h3 class="step-title">Сборка композиции</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сначала отсадите зелёные ветки: насадку 349 (подойдут 348 и 352) для этого держат горизонтально. Цветы сажайте на кремовую площадку — она и держит цветок, и позволяет приподнять его под нужным углом. Выкладывайте плотно, друг к другу, как косичку, а пустоты закрывайте мелкими листьями, держа насадку вертикально.
+                <span class="source-badge">⏱ Урок 2: 00:35–00:45</span>
+              </p>
+              <div class="warning-box">
+                <strong>Два правила аккуратного букета:</strong> цветок должен лежать в одной плоскости — не наслаивайте лепестки рядами друг на друга. И зелени должно быть достаточно, но не слишком много: избыток выдаёт места, которые вы пытались закрыть.
+                <span class="source-badge">⏱ Урок 2: 00:29–00:44</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌿 Ветки: <strong>насадка горизонтально</strong></span>
+              <span class="param-pill">🍃 Листья: <strong>под разными углами</strong></span>
+              <span class="param-pill">❄ Цветы: <strong>из морозилки</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 16 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">16</span>
+                <h3 class="step-title">Хранение</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Кекс в плёнке хранится в холодильнике до 10 дней, при комнатной температуре — 3 дня, тоже под плёнкой. Тесто до выпечки держится не больше часа. С помадкой и кремовыми цветами кекс лучше держать в холоде.
+                <span class="source-badge">⏱ Урок 2: 00:19–00:19</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">❄ Холодильник: <strong>до 10 дней</strong></span>
+              <span class="param-pill">🌡 Комнатная: <strong>до 3 дней</strong></span>
+              <span class="param-pill">⏱ Тесто: <strong>до 60 мин</strong></span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Масло только 82,5%:</strong> в 72,5% на 10% больше влаги, и баланс теста ломается. Кекс на хорошем масле нежнее и не держится «колом».</li>
+                <li><strong>Взбивание — это разрыхление:</strong> разрыхлителя всего 6 г, поэтому подъём даёт воздух в масле. Взбивайте 10 минут, а не «до объединения».</li>
+                <li><strong>Всё комнатной температуры:</strong> масло и яйца. Холодные яйца заставляют масло застывать, и эмульсия не собирается.</li>
+                <li><strong>Яйца в четыре приёма:</strong> каждый раз до полного входа — жидкости на дне быть не должно.</li>
+                <li><strong>Наполнитель — в муку:</strong> сухие цукаты и изюм покрываются мукой и не оседают на дно. Замачивали в роме — обязательно просушите.</li>
+                <li><strong>Наполнитель взаимозаменяем:</strong> 190 г — это общий вес. Орехи, курага, инжир, чернослив, шоколадная крошка — всё работает.</li>
+                <li><strong>Раскатка не нужна:</strong> тесто раскладывается мешком, а масло само разровняет его в духовке.</li>
+                <li><strong>Трещину программируют:</strong> бороздка по центру плюс масло в неё — и кекс рвётся там, где задумано.</li>
+                <li><strong>Форма с трубкой — для начинки:</strong> в готовый кекс можно вложить карамель, ганаш, мусс или густой джем. Если начинка не нужна, дырку закрывают пергаментом.</li>
+                <li><strong>Помадку греют пульсами:</strong> по 15 секунд с перемешиванием. Две минуты подряд — и она закипит.</li>
+                <li><strong>Цветы морозят:</strong> замороженные анютины глазки берут руками и переносят без деформации — букет получается чище.</li>
+                <li><strong>Кекс — готовый подарок:</strong> к 1 сентября, учителю, коллеге. Готовится быстро, стоит недорого, хранится неделю.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Масло 72,5% или залежавшееся:</strong> лишняя влага и посторонний привкус, «чудо в духовке» не сработает.</li>
+                <li><strong>Холодные яйца:</strong> масса расслаивается, эмульсия не образуется.</li>
+                <li><strong>Взбивали мало:</strong> кекс не поднимется — разрыхлителя для этого недостаточно.</li>
+                <li><strong>Мокрый изюм:</strong> не обсушили после замачивания — он осядет и даст сырые комки.</li>
+                <li><strong>Взбили тесто на высокой скорости:</strong> мука забилась, кекс получился плотным.</li>
+                <li><strong>Переполнили форму с трубкой:</strong> тесто попало в дырки, трубку потом не вытащить, а кекс порвётся в случайном месте.</li>
+                <li><strong>Не прогрели духовку:</strong> кекс не поднимется равномерно и поплывёт.</li>
+                <li><strong>Не срезали горку под плоский декор:</strong> цветы лягут криво.</li>
+                <li><strong>Переваренная помадка:</strong> трескается и осыпается. Спасает добавка воды при прогреве.</li>
+                <li><strong>Холодное молоко в крем:</strong> масса свернётся комками.</li>
+                <li><strong>Цветы не в одной плоскости:</strong> лепестки разных рядов читаются как отдельные цветы, букет рассыпается.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение</h4>
+              <ul>
+                <li><strong>Кекс в плёнке:</strong> до 10 дней в холодильнике.</li>
+                <li><strong>При комнатной температуре:</strong> до 3 дней, тоже под плёнкой.</li>
+                <li><strong>Тесто до выпечки:</strong> не больше 60 минут.</li>
+                <li><strong>Помадка:</strong> в холодильнике, перед использованием прогреть пульсами.</li>
+                <li><strong>Кремовые цветы:</strong> замораживают на пергаменте и переносят на кекс уже замороженными.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> два урока Надежды Зубовой «Кекс по ГОСТу» (Тортомафия, месяц 2) — расшифровки с таймкодами и технологическая карта с граммовками.</li>
+              <li><strong>Расхождения — разрыхлитель:</strong> в карте 6 г; на видео автор один раз оговаривается «4 грамма», но тут же подтверждает 6 г. На странице 6 г.</li>
+              <li><strong>Расхождения — время выпечки:</strong> в карте 45–50 минут, на видео 40–50. На странице диапазон 40–50 минут.</li>
+              <li><strong>Расхождения — взбивание масла:</strong> в карте 7 минут, на видео 5–7 минут и совет «вам взбивать 10». На странице 7–10 минут.</li>
+              <li><strong>Расхождения — какао в помадке:</strong> в карте указано 1–2 ч. л., но на видео кекс покрыт белой помадкой, какао не добавляется — раздел помадки, судя по всему, перенесён из карты школьных пирожных. На странице какао оставлено как опция для шоколадного варианта.</li>
+              <li><strong>Пробелы — крем для цветов:</strong> на видео состав крема не проговаривается («рецептура придёт по кодовому слову»), граммовки взяты из карты.</li>
+              <li><strong>Пробелы — время:</strong> общее и активное время автор не называет; значения на странице оценены по урокам, декор цветами идёт отдельно, примерно +40 минут.</li>
+              <li><strong>Пробелы — пропитка:</strong> пропорции названы на видео (30% сахара / 70% воды), количество на кекс не указано — оставлено «по вкусу».</li>
+              <li><strong>Фото:</strong> отдельного снимка в папке нет — используется кадр из второго урока (00:45:00) с готовым кексом.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

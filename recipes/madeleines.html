@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Печенье «Мадлен» в шоколаде — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Печенье мадлен Надежды Зубовой: яйца, масло и мука в равных долях (125 г), водяная баня до 50 °C, взбивание 7–10 минут, холод 8–24 часа, выпечка 8–10 минут. Плюс шоколадный корпус на темперированном шоколаде с какао-маслом Микрио.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="madeleines">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Печенье «Мадлен» в шоколаде</h1>
+      <p class="recipe-lead">
+        Мадлен — тесто на грани кексового и бисквитного: яиц, сливочного масла и муки в нём ровно по 125 г. Яйца с сахаром и мёдом прогревают на водяной бане до 50 °C, взбивают 7–10 минут до увеличения втрое, сухие ингредиенты и растопленное масло вводят лопаткой, а тесто убирают в холодильник на 8–24 часа — именно холод даёт тот самый гребешок и якорь. Выпекается печенье 8–10 минут, а шоколадный корпус на темперированном шоколаде добавляет вкус и продлевает срок хранения.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~20 мин (духовка, водяная баня)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~40 мин на замес и отсаживание</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Холод 8–24 ч, выпечка 8–10 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">9–25 ч с вызреванием теста</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">27 больших печений (3 формы по 9)</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/madeleines.jpg" alt="Глазированные шоколадом руби печенья мадлен рядом с силиконовой формой-ракушкой" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (27 печений)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="27">27</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">печений</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База калькулятора — один замес и 27 больших печений: в видео тесто раскладывают ровно в три формы по 9 ячеек. Если печь в мелких формах, печений выйдет больше, но расход теста от этого не меняется.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">27</span> печений</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на тесто и шоколадный корпус: бакалея и молочное в первой колонке, шоколад и всё для темперирования — во второй.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Бакалея, молочное, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С0</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span>
+                <span class="shopping-hint">125 г без скорлупы — это два яйца С0. Температура не важна: яйца всё равно пойдут на водяную баню</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5 %</strong>:
+                <span class="shopping-qty" data-base-amount="125" data-unit="г">125 г</span>
+                <span class="shopping-hint">Жирность принципиальна. Растопить до жидкого состояния, не кипятить</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="125" data-unit="г">125 г</span>
+                <span class="shopping-hint">Автор предупреждает: муку с разрыхлителем вмешивают только лопаткой, руками или на низкой скорости</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="140" data-unit="г">140 г</span>
+                <span class="shopping-hint">Заменить сахарозаменителем в этом рецепте автор не советует</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мёд</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">Держит влагу и продлевает срок годности. Замена — инвертный сахар (тримолин, инвертный сироп), но не глюкозный сироп</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Разрыхлитель</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="г">4 г</span>
+                <span class="shopping-hint">В муку, вместе с солью</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="г">1 г</span>
+                <span class="shopping-hint">В видео автор добавляет грамм соли в муку; в DOCX соль не указана</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ваниль, ванильный сахар или ванильная паста</strong> — по вкусу
+                <span class="shopping-hint">В видео ваниль заменяют цедрой ¼ лимона</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимон или апельсин</strong> — по вкусу
+                <span class="shopping-hint">Цедра ¼ лимона на замес; подойдут также мандарин или лайм</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло растительное или спрей для формы</strong> — сколько уйдёт
+                <span class="shopping-hint">Смазать формочки, чтобы печенье вылетало из них</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Шоколадный корпус и темперирование</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шоколад в калетах</strong> — сколько уйдёт
+                <span class="shopping-hint">Тёмный, молочный, белый, руби или цветной. Автор темперировала 100 г на пробу и говорит, что 600 г хватило на мадлен, бомбочки и сердечки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао-масло Микрио (Calibaut, порошок)</strong> — 1 % от веса шоколада
+                <span class="shopping-hint">На 100 г шоколада — 1 г. Другое какао-масло для этого способа не подойдёт: оно не успеет разойтись</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Жирорастворимый краситель (опционально)</strong> — по вкусу
+                <span class="shopping-hint">Для мадлен допустим: глазировка идёт в форме. В бомбочки автор красители класть не советует</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong> — по вкусу
+                <span class="shopping-hint">Если хочется обойтись без шоколада: мадлен хороша и просто присыпанная пудрой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — кондитерский мешок, игольчатый термометр, силиконовая форма-ракушка, пергамент
+                <span class="shopping-hint">Форма может быть и металлической; отсаживать тесто на противень без формы нельзя</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Тесто</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Яйца
+              <span class="ingredient-note">Это два яйца категории С0; температура не важна, яйца идут на водяную баню</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="140" data-unit="г">140 г</span> — Сахар
+              <span class="ingredient-note">Сахара чуть больше, чем яиц, масла и муки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Мёд
+              <span class="ingredient-note">Замена при аллергии: инвертный сахар, тримолин, инвертный сироп. Глюкозный сироп не подойдёт</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="г">4 г</span> — Разрыхлитель
+              <span class="ingredient-note">Вводится в муку заранее</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="г">1 г</span> — Соль
+              <span class="ingredient-note">Есть в видео, в DOCX не указана</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Масло сливочное 82,5 %
+              <span class="ingredient-note">Растопить и слегка остудить; в момент вмешивания около 55 °C</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Ваниль, ванильный сахар или ванильная паста
+              <span class="ingredient-note">Автор в этом замесе заменяет ваниль цедрой</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Цедра ¼ лимона, апельсина, мандарина или лайма
+              <span class="ingredient-note">По желанию; дополнительную жидкость добавлять не нужно</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Шоколадный корпус</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Сколько уйдёт — Шоколад в калетах (тёмный, молочный, белый, руби, цветной)
+              <span class="ingredient-note">Точный расход для 27 печений автор не называет</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              1 % от веса шоколада — Какао-масло Микрио
+              <span class="ingredient-note">На 100 г шоколада — 1 г. Только порошковое какао-масло Calibaut</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Жирорастворимый краситель
+              <span class="ingredient-note">По желанию, для более яркого цвета глазури</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Запомните пропорцию: 125 — 125 — 125</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отвесьте яйца, сливочное масло и муку — каждого ровно по 125 г. Сахара чуть больше, 140 г, мёда — 15 г. В муку заранее добавьте 4 г разрыхлителя и 1 г соли.
+                <span class="source-badge">⏱ Урок 1: 00:06:40–00:09:00</span>
+              </p>
+              <p>
+                Мадлен стоит на грани кексового и бисквитного теста: яиц и масла в нём очень много, и их количества почти равны. Из-за этого внутри, в самой толстой части с гребешком, печенье получается как бисквит, а снаружи — плотнее, с привкусом песочного теста.
+                <span class="source-badge">⏱ Урок 1: 00:01:27–00:02:47</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> пропорцию легко запомнить, и она же — точка настройки вкуса. Хотите ближе к бисквиту — добавьте только цедру или ваниль. Хотите ближе к кексу — вводите жиросодержащие добавки: ореховую или фисташковую пасту, пралине, но тогда масла берут меньше ровно на вес пасты (25 г пасты и 100 г масла).
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Яйца / масло / мука: <strong>по 125 г</strong></span>
+              <span class="param-pill">⚖ Сахар: <strong>140 г</strong></span>
+              <span class="param-pill">⚖ Мёд: <strong>15 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Духовка: 170 °C с конвекцией или 180 °C верх-низ</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Включите духовку заранее: 170 °C с конвекцией. Если конвекции нет — режим «верх-низ» и 180 °C. В газовой духовке ставьте 180 °C и выпекайте на самом верхнем уровне.
+                <span class="source-badge">⏱ Урок 1: 00:11:33–00:12:05</span>
+              </p>
+              <p>
+                Пока духовка греется, растопите масло в микроволновке до жидкого состояния. Оно должно быть горячим и жидким, но не кипящим: пока вы работаете с яйцами, масло немного остынет и останется текучим — именно это и нужно.
+                <span class="source-badge">⏱ Урок 1: 00:10:49–00:13:42</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Конвекция: <strong>170 °C</strong></span>
+              <span class="param-pill">🌡 Верх-низ: <strong>180 °C</strong></span>
+              <span class="param-pill">🔥 Газовая духовка: <strong>180 °C, верхний уровень</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Водяная баня до 50 °C</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Соедините в сотейнике яйца, сахар и мёд, добавьте ваниль или цедру и перемешайте. Поставьте на умеренно кипящую водяную баню и прогревайте до 50 °C, постоянно работая венчиком.
+                <span class="source-badge">⏱ Урок 1: 00:12:43–00:15:13</span>
+              </p>
+              <p>
+                Готовность без термометра определяют по сахару: он должен полностью раствориться, а масса — не обжигать палец. Миксером на минимальной скорости тоже можно, но венчиком удобнее.
+                <span class="source-badge">⏱ Урок 1: 00:15:51–00:16:10</span>
+              </p>
+              <div class="warning-box">
+                <strong>Баня должна кипеть умеренно:</strong> если вода бурлит, яйца схватятся и вы получите сладкий омлет. Мешайте непрерывно, чтобы масса прогревалась равномерно. Касается ли сотейник воды — не принципиально.
+                <span class="source-badge">⏱ Урок 1: 00:14:19–00:15:12</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Прогрев: <strong>до 50 °C</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Водяная баня, венчик, термометр</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Сахар растворился, палец не обжигает</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Взбивание 7–10 минут до роста втрое</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Переставьте сотейник с бани и взбивайте массу на максимальной скорости 7–10 минут. Готовая масса светлеет, становится пышной и увеличивается в объёме не менее чем в три раза.
+                <span class="source-badge">⏱ Урок 1: 00:16:20–00:25:11</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> перевзбить эту массу практически невозможно — испортить её можно, только взбивая часами, когда жидкость уже испарится. Подойдёт и планетарный миксер, и насадка-венчик от блендера.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Взбивание: <strong>7–10 минут</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Объём вырос не менее чем втрое</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Сухие ингредиенты — только лопаткой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Всыпьте в взбитую массу муку с разрыхлителем и солью. Перемешивайте лопаткой поднимающими движениями со дна чаши: врезали лопатку — провернули. Не прижимайте и не размазывайте тесто по стенкам.
+                <span class="source-badge">⏱ Урок 1: 00:26:51–00:28:11</span>
+              </p>
+              <p>
+                Мешайте ровно столько, пока в тесте видны следы муки. Как только сухих комочков не осталось — остановитесь.
+                <span class="source-badge">⏱ Урок 1: 00:28:00–00:28:11</span>
+              </p>
+              <div class="warning-box">
+                <strong>Даже после планетарного миксера — лопаткой:</strong> миксер выбьет весь воздух, который вы загоняли первые семь минут, и печенье не поднимется. Долго мешать тоже нельзя — воздух улетучится.
+                <span class="source-badge">⏱ Урок 1: 00:27:02–00:27:40</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Инструмент: <strong>Лопатка, не миксер</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Следов сухой муки не осталось</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Растопленное масло широким движением</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Вылейте всё масло сразу, но широким движением — по всей поверхности теста, а не в одну точку. Так вы одновременно снижаете температуру масла и равномернее его распределяете. Вмешайте поднимающими движениями, пока тесто не заберёт всё масло.
+                <span class="source-badge">⏱ Урок 1: 00:28:13–00:29:54</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> масла в рецепте очень много, поэтому мадлен — скорее кекс, чем бисквит. Именно жир делает тесто удобным в работе и вкусным. Слишком долго перемешивать не нужно: масло вошло — остановитесь.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Масло: <strong>≈55 °C, жидкое</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Тесто забрало всё масло</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Холодильник: 8–24 часа</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите тесто в кондитерский мешок (удобно ставить его в стакан блендера) и уберите в холодильник на ночь. Минимум — 8 часов, максимум — 24: дольше тесто держать не нужно.
+                <span class="source-badge">⏱ Урок 1: 00:29:55–00:32:52</span>
+              </p>
+              <p>
+                За это время масло стабилизируется, тесто становится однородным, плотным и приятным в работе — отсаживать его гораздо легче, и именно холод даёт характерную форму с гребешком.
+                <span class="source-badge">⏱ Урок 1: 00:32:27–00:32:43</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> это обязательный этап при любом способе приготовления мадлен — и когда взбивают яйца, как здесь, и когда взбивают масло с сахаром, а яйца добавляют комнатной температуры. Тесто может подождать: можно обойтись одной формой и печь партиями. А для эксперимента отсадите часть теста сегодня, а часть — завтра: текстура будет заметно разной.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Холод: <strong>8–24 часа</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Тесто плотное и однородное</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Отсаживание на половину объёма формы</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Смажьте форму размягчённым сливочным маслом, кисточкой с растительным или спреем. Отрежьте у мешка кончик диаметром около 1,5 см — довольно много, чтобы тесто шло свободно.
+                <span class="source-badge">⏱ Урок 1: 00:34:05–00:34:57</span>
+              </p>
+              <p>
+                Отсаживайте одним уверенным движением, заполняя ячейку примерно наполовину по объёму. Никаких «пупырок», капель и подрагиваний: тесто должно лечь ровно.
+                <span class="source-badge">⏱ Урок 1: 00:34:59–00:35:36</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не разглаживайте тесто палеткой:</strong> в нём много масла, и оно разровняется само. Отсаживать прямо на противень без формы нельзя — тесто растечётся и получится блинчик.
+                <span class="source-badge">⏱ Урок 1: 00:22:50–00:23:00, 00:36:16–00:36:28</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Заполнение: <strong>½ объёма ячейки</strong></span>
+              <span class="param-pill">🥣 Мешок: <strong>Отверстие ≈1,5 см</strong></span>
+              <span class="param-pill">🍪 Форма: <strong>Ракушка, силикон или металл</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Выпечка 8–10 минут и остывание в форме</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте 8–10 минут при 170 °C с конвекцией (или 180 °C верх-низ). Готовое печенье пружинит при нажатии и поднимается горкой — виден тот самый гребешок.
+                <span class="source-badge">⏱ Урок 1: 00:37:39–00:38:13</span>
+              </p>
+              <p>
+                Противень выньте и дайте печенью остыть — в форме или уже на решётке. Из силиконовой формы мадлен выходит легко, особенно если форма была смазана.
+                <span class="source-badge">⏱ Урок 1: 00:38:26–00:38:30</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> форма-ракушка не обязательна. Подойдёт любая мелкая силиконовая или тефлоновая, можно печь и в формочках для капкейков — но это тесто рассчитано на мелкие изделия, и в большой форме оно не должно подниматься до самого верха.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Выпечка: <strong>8–10 минут</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Пружинит, поднялась горка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Темперирование шоколада с какао-маслом Микрио</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Растопите шоколад в микроволновке пульсами по 15–20 секунд, каждый раз перемешивая. Тёмный — до 40–45 °C, молочный, белый, руби и цветной — не выше 40 °C. Затем оставьте шоколад остывать на столе, не трогая его, до 35 °C (тёмный) или 34 °C (молочный, белый, цветной).
+                <span class="source-badge">⏱ Урок 2: 00:15:55–00:16:20</span>
+              </p>
+              <p>
+                Отвесьте 1 % какао-масла Микрио от веса шоколада (на 100 г — 1 г), добавьте в шоколад и тщательно перемешайте, пока оно не разойдётся. Доведите массу до рабочей температуры: 31–32 °C для тёмного шоколада, 29–30 °C для молочного, белого, руби и цветного.
+                <span class="source-badge">⏱ Урок 2: 00:22:00–00:29:36</span>
+              </p>
+              <div class="warning-box">
+                <strong>Проверка готовности:</strong> нанесите каплю шоколада на пергамент и подождите минуту. Затемперированный шоколад станет матовым. Если перегрели выше температуры на упаковке — добавьте 30 % шоколада по весу и начните темперирование заново. Шоколад боится влаги, поэтому в профессиональной практике водяную баню не используют.
+                <span class="source-badge">⏱ Урок 2: 00:18:48–00:18:57, 00:27:29–00:28:14, 00:33:04–00:33:23</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> если какао-масла Микрио нет, темперируйте любым другим знакомым способом — калетами или на мраморе. Обычное какао-масло натереть не получится: оно плавится и слипается обратно. Темперировать можно и обычный магазинный шоколад без добавок — Lindt, Toblerone, Ritter Sport.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Растопить: <strong>40–45 °C (тёмный), ≤40 °C (остальные)</strong></span>
+              <span class="param-pill">🌡 Остудить: <strong>до 35 / 34 °C</strong></span>
+              <span class="param-pill">🌡 Рабочая: <strong>31–32 / 29–30 °C</strong></span>
+              <span class="param-pill">⚖ Микрио: <strong>1 % от веса шоколада</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Шоколадный корпус в форме</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Налейте шоколад в ту же силиконовую форму, в которой пекли, распределите по ячейкам. Возьмите печенье и опустите в форму той стороной, которая соприкасалась с формой, — рельефной. Слегка прижмите, чтобы шоколад показался по краям.
+                <span class="source-badge">⏱ Урок 2: 00:31:49–00:32:38</span>
+              </p>
+              <p>
+                Уберите форму в морозилку на минуту, чтобы шоколад схватился, и при необходимости нанесите второй слой. Лишний шоколад, стекая, застывает на листе — его можно собрать и использовать снова, темперировать шоколад можно бесконечно.
+                <span class="source-badge">⏱ Урок 2: 00:34:44–00:35:06, 00:37:15–00:38:44</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не вырывайте печенье из формы:</strong> дайте шоколаду «расслабиться» и самому отойти. Насилие над шоколадом заканчивается трещинами и сколами на корпусе.
+                <span class="source-badge">⏱ Урок 2: 00:39:48–00:39:59</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Стабилизация: <strong>1 минута в морозилке</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Шоколад матовый и глянцевый по форме</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Хранение</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Без шоколада печенье хранится неделю в пергаменте или пакете при комнатной температуре, при желании — в холодильнике. С шоколадным корпусом срок увеличивается на три дня, до десяти, но тогда лучше держать мадлен в холодильнике.
+                <span class="source-badge">⏱ Урок 2: 00:30:36–00:31:09</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> мадлен — выгодный подарок к 14 февраля, 8 марта и 23 февраля: один замес даёт 27 печений, их делят на два набора и глазируют разными видами шоколада — в одной коробке получится ярко и натурально.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📦 Без шоколада: <strong>7 дней</strong></span>
+              <span class="param-pill">📦 В шоколаде: <strong>до 10 дней</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Пропорция 125–125–125:</strong> яйца, масло и мука в равных долях — отсюда двойная природа теста: бисквит внутри, кекс снаружи.</li>
+                <li><strong>Мёд — про срок годности:</strong> он держит влагу, поэтому печенье дольше остаётся свежим. Замена — инвертный сахар, но не глюкозный сироп: он связывает воду иначе.</li>
+                <li><strong>Водяная баня до 50 °C:</strong> прогретые яйца взбиваются втрое быстрее и дают устойчивую пену.</li>
+                <li><strong>Лопатка после миксера:</strong> сухие ингредиенты и масло вводят только вручную, поднимающими движениями, иначе воздух уйдёт.</li>
+                <li><strong>Холод 8–24 часа:</strong> стабилизированное масло даёт плотное, послушное тесто и тот самый гребешок.</li>
+                <li><strong>Отсаживание на половину:</strong> вторая половина объёма нужна для подъёма и характерной формы.</li>
+                <li><strong>Жиросодержащие добавки:</strong> ореховая или фисташковая паста, пралине — но масла берут меньше ровно на вес пасты.</li>
+                <li><strong>Шоколадный корпус:</strong> увеличивает срок хранения и даёт дополнительный оттенок вкуса; темперированный шоколад можно использовать повторно.</li>
+                <li><strong>Мелкие формы:</strong> печенье в них выглядит декоративнее и печётся быстрее — но количество теста то же.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Бурно кипящая баня:</strong> яйца сворачиваются, получается сладкий омлет.</li>
+                <li><strong>Взбивание сухих ингредиентов миксером:</strong> тесто теряет воздух и не поднимается.</li>
+                <li><strong>Долгое перемешивание после муки:</strong> воздух улетучивается, печенье выходит плотным.</li>
+                <li><strong>Масло в одну точку:</strong> оно не распределяется равномерно и тяжелее вмешивается.</li>
+                <li><strong>Выпечка сразу после замеса:</strong> без холода нет ни гребешка, ни нужной текстуры.</li>
+                <li><strong>Отсаживание на противень без формы:</strong> тесто растекается в блинчики.</li>
+                <li><strong>Полная ячейка тестом:</strong> печенье упирается в форму и теряет форму ракушки.</li>
+                <li><strong>Разглаживание палеткой:</strong> лишние движения, тесто разровняется само.</li>
+                <li><strong>Глюкозный сироп вместо мёда и сахарозаменитель вместо сахара:</strong> для этого рецепта не подходят — нужны специализированные рецепты.</li>
+                <li><strong>Водяная баня для шоколада:</strong> конденсат и влага портят темперированный шоколад, он мутнеет и не застывает.</li>
+                <li><strong>Перегрев шоколада:</strong> темперирование приходится начинать заново с добавлением 30 % шоколада.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 (история и формы — 00:00–00:04, ингредиенты — 00:06–00:09, водяная баня и взбивание — 00:12–00:25, сухие ингредиенты и масло — 00:25–00:30, холод и отсаживание — 00:30–00:37, выпечка — 00:37–00:39); Урок_02.mp4 (темперирование шоколада — 00:00–00:30, глазирование — 00:31–00:39, хранение — 00:30–00:31); расшифровка с таймкодами «Расшифровка Печенье_Мадлен.csv»; файл «Печенье_Мадлен.docx» с граммовками и технологией темперирования. Таймкоды на странице — реальные, из расшифровки.</li>
+              <li><strong>Температура выпечки:</strong> в DOCX — 180 °C и конвекция 10 минут либо 180 °C верх-низ 10 минут. В видео духовку разогревают на 170 °C с конвекцией (или 180 °C верх-низ) и выпекают 8–10 минут. На странице указаны оба ориентира, режим из видео — как основной.</li>
+              <li><strong>Соль:</strong> в видео автор добавляет в муку 1 г соли, в DOCX соль не указана. На странице соль оставлена с пометкой.</li>
+              <li><strong>Ваниль:</strong> в DOCX — ванильный сахар, в видео автор ваниль не использует и берёт цедру ¼ лимона. На странице оба варианта, как «по вкусу».</li>
+              <li><strong>Количество шоколада:</strong> в источниках не указано ни на один замес, ни на одно печенье. Известно лишь, что 100 г автор отвешивала для темперирования и что 600 г ушло на мадлен, две бомбочки и сердечки. На странице — «сколько уйдёт».</li>
+              <li><strong>Сколько печений в мелкой форме:</strong> автор говорит, что в мелких формах печений получится больше, но точного количества не называет.</li>
+              <li><strong>Второй способ замеса:</strong> в видео упомянут метод взбивания масла с сахаром и тёплыми яйцами комнатной температуры, но пошагово он не показан — на странице описан только способ со взбиванием яиц.</li>
+              <li><strong>Пробелы:</strong> точный вес одного печенья и время полного остывания не названы; шоколадные бомбочки из Урок_02 — отдельное изделие, в этот рецепт не входят.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице стоит кадр из Урок_02.mp4 (00:41:08) с глазированными печеньями и формой-ракушкой, обрезанный по краям.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

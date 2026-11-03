@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Крем «Шантильи» для капкейков — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Стабильный крем «Шантильи» Надежды Зубовой: две порции сливок, белый шоколад, глюкоза, инвертный сахар и желатин. Стабилизация 12–24 часа, взбивание 3–4 минуты, отсадка двухъярусной шапочки и покраска мешка снаружи.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body data-recipe-id="shantilli">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Крем «Шантильи» для капкейков</h1>
+      <p class="recipe-lead">
+        Классический шантильи — это просто взбитые сливки, и он быстро оседает. Чтобы шапка на капкейке держалась высоко, крем стабилизируют сразу тремя способами: какао-маслом белого шоколада, глюкозой с инвертным сахаром, которые удерживают лишнюю воду, и желатином. В рецепте две порции сливок — это не опечатка: меньшую нагревают, остальные остаются холодными.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">10 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">12–24 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~12 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 партия ≈ 680 г крема</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/shantilli.jpg" alt="Капкейки с кремом «Шантильи»: двухъярусные розово-белые шапочки, малина и тимьян" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 партия)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">× партия</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — одна партия по рецептуре автора: 410 г сливок (110 г для нагрева и 300 г холодных) и 680 г готового крема по сумме продуктов. Одна партия — примерно на 8–10 капкейков со стандартной шапкой; увеличивайте число партий, и раскладка пересчитается.
+          </p>
+        </div>
+
+        <!-- Переключатель источников и таймкодов видео -->
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Количество партий: <span class="shopping-portion-val">1</span></span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на одну партию крема. Сливки идут двумя порциями в одной строке — 110 г на нагрев и 300 г холодных, поэтому берите упаковку не меньше 410 г.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: сливки, желатин -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Сливки и желатин</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки</strong>:
+                <span class="shopping-qty" data-base-amount="410" data-unit="г">410 г</span>
+                <span class="shopping-hint">110 г — нагрев, 300 г — холодные. Берите только те, что априори хорошо взбиваются</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="г">3 г</span>
+                <span class="shopping-hint">Замачивается в 15 г холодной воды</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Вода</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">Холодная, для набухания желатина</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: шоколад, сиропы, декор -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Шоколад, сиропы и декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Белый шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Хороший, с какао-маслом в составе — именно он стабилизирует крем</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сироп глюкозы</strong>:
+                <span class="shopping-qty" data-base-amount="26" data-unit="г">26 г</span>
+                <span class="shopping-hint">Греется вместе со сливками и инвертным сахаром</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Инвертный сахар</strong>:
+                <span class="shopping-qty" data-base-amount="26" data-unit="г">26 г</span>
+                <span class="shopping-hint">Можно заменить мёдом, но появится привкус мёда</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ликёр Baileys</strong> (опционально):
+                <span class="shopping-qty" data-base-amount="1" data-unit="ст. л.">1 ст. л.</span>
+                <span class="shopping-hint">Добавить перед взбиванием, для аромата</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Растворимый кофе</strong> (опционально)
+                <span class="shopping-hint">Щепотка в горячие сливки — второй способ ароматизировать крем</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ароматизаторы и красители</strong> (опционально)
+                <span class="shopping-hint">Любые, в каплях; красителем прокрашивают мешок снаружи</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Малина и тимьян</strong>
+                <span class="shopping-hint">По вкусу, для декора; ягоды — любые свежие</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — кондитерские мешки, насадки «закрытая звезда» (7 зубьев 8 мм или № 856), шпажки для красителя, пищевая плёнка
+                <span class="shopping-hint">Плёнка нужна для укрытия крема в контакт</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Крем «Шантильи» — одна партия (≈ 680 г)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="110" data-unit="г">110 г</span> — Сливки для нагрева
+              <span class="ingredient-note">Первая порция; нагреваются с глюкозой и инвертным сахаром</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Сливки холодные
+              <span class="ingredient-note">Вторая порция; вводятся в конце в тёплую массу</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Белый шоколад
+              <span class="ingredient-note">Какао-масло в его составе — первый стабилизатор крема</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="26" data-unit="г">26 г</span> — Сироп глюкозы
+              <span class="ingredient-note">Удерживает лишнюю воду вместе с инвертным сахаром</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="26" data-unit="г">26 г</span> — Инвертный сахар
+              <span class="ingredient-note">Замена — мёд, но крем приобретёт медовый привкус</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Желатин
+              <span class="ingredient-note">Замочить в холодной воде заранее</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Вода для желатина
+              <span class="ingredient-note">Холодная</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Аромат, покраска и декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ст. л.">1 ст. л.</span> — Ликёр Baileys
+              <span class="ingredient-note">Перед взбиванием, по желанию</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Растворимый кофе
+              <span class="ingredient-note">Немного в горячие сливки — ароматизация</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Ароматизаторы в каплях и красители
+              <span class="ingredient-note">Краситель наносится на мешок снаружи</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Свежие ягоды
+              <span class="ingredient-note">На видео — малина</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Тимьян
+              <span class="ingredient-note">Только самые верхушки, свежие</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Зачем шантильи три стабилизатора</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Исторически шантильи — это просто взбитые сливки. Вкусно, но нестабильно: украшение оседает, и изделие теряет вид. Поэтому кондитеры постепенно добавили в крем три элемента.
+                <span class="source-badge">⏱ Урок 1: 00:02–00:46</span>
+              </p>
+              <p>
+                Сначала белый шоколад — какао-масло в его составе отлично стабилизирует сливки и меняет вкус в лучшую сторону. Затем глюкозу и инвертный сахар: они держат лишнюю воду. И наконец желатин, который связывает воду иначе. Для высоких шапочек на капкейках крем должен быть «стабильнее стабильного» — подстраховываемся со всех сторон.
+                <span class="source-badge">⏱ Урок 1: 00:46–01:43</span>
+              </p>
+              <div class="tip-box">
+                <strong>Плюс хорошие сливки:</strong> выбирайте те, что априори точно взбиваются. Нужны и хороший шоколад, и глюкоза, и желатин, и правильные сливки — автор подчёркивает это отдельно.
+                <span class="source-badge">⏱ Урок 1: 01:44–02:00</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Шоколад: <strong>какао-масло</strong></span>
+              <span class="param-pill">🍯 Сиропы: <strong>держат воду</strong></span>
+              <span class="param-pill">🧊 Желатин: <strong>связывает воду</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Желатин и две порции сливок</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Замочите желатин в холодной воде — 3 г желатина на 15 г воды. Пока он набухает, отвесьте продукты. В рецепте две порции сливок, и это не опечатка: 110 г пойдут в нагрев, 300 г останутся холодными и введутся самыми последними.
+                <span class="source-badge">⏱ Урок 1: 02:00–02:07</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Желатин: <strong>3 г</strong></span>
+              <span class="param-pill">💧 Вода: <strong>15 г холодной</strong></span>
+              <span class="param-pill">🥛 Сливки: <strong>110 г + 300 г</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Нагрев сливок с глюкозой и инвертным сахаром</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В меньшую порцию сливок добавьте инвертный сахар и сироп глюкозы, отправьте нагреваться. Нужно довести до кипения, но не кипятить: как только сливки закипают, отсчитайте до трёх — и выключайте.
+                <span class="source-badge">⏱ Урок 1: 02:47–03:42</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не переварите:</strong> автору хватает температуры в момент закипания, чтобы расплавить шоколад и желатин. Долгое кипение выпарит воду, и пропорции поплывут.
+                <span class="source-badge">⏱ Урок 1: 03:21–03:42</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍯 Глюкоза: <strong>26 г</strong></span>
+              <span class="param-pill">🍬 Инвертный сахар: <strong>26 г</strong></span>
+              <span class="param-pill">🔥 Нагрев: <strong>до кипения, не кипятить</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Белый шоколад</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В горячие сливки введите отвешенный белый шоколад и перемешайте. Масса останется тёплой. Если шоколад растворяется плохо, помогите себе погружным блендером.
+                <span class="source-badge">⏱ Урок 1: 03:43–04:00</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Шоколад: <strong>200 г белого</strong></span>
+              <span class="param-pill">🥣 Помощь: <strong>погружной блендер</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Набухший желатин</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В тёплую массу добавьте набухший желатин и перемешайте до полного растворения — и желатина, и шоколада. Масса получается жидкой и по цвету и консистенции похожа на растоплённую сгущёнку.
+                <span class="source-badge">⏱ Урок 1: 04:04–04:37</span>
+              </p>
+              <div class="warning-box">
+                <strong>Растворять полностью:</strong> крупинки желатина потом дадут резинистые вкрапления в готовом креме, и убрать их уже не получится.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак: <strong>как растоплённая сгущёнка</strong></span>
+              <span class="param-pill">🌡 Масса: <strong>тёплая, но не горячая</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Холодные сливки и блендер</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Добавьте холодные сливки по весу и перемешайте до однородности — для подстраховки можно ещё раз пробить погружным блендером. Смесь получается абсолютно жидкой, так и должно быть.
+                <span class="source-badge">⏱ Урок 1: 04:38–05:11</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥛 Сливки: <strong>300 г холодных</strong></span>
+              <span class="param-pill">🥣 Блендер: <strong>погружной, до однородности</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Плёнка в контакт и стабилизация</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Накройте крем пищевой плёнкой в контакт — плёнка должна касаться поверхности крема, чтобы не образовывалась корочка и конденсат. Уберите в холодильник.
+                <span class="source-badge">⏱ Урок 1: 05:16–06:01</span>
+              </p>
+              <div class="warning-box">
+                <strong>Время стабилизации сокращать нельзя:</strong> минимум 12 часов, лучше 24. Только после этого крем можно взбивать и использовать.
+                <span class="source-badge">⏱ Урок 1: 02:32–02:45</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🎬 Плёнка: <strong>в контакт с кремом</strong></span>
+              <span class="param-pill">🧊 Холодильник: <strong>12 ч минимум, лучше 24 ч</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Подготовка капкейков</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Пока крем стабилизируется, в капкейках вынимают серединку — тем же способом, каким вы делаете это под начинку. Инструмент не принципиален, подойдёт даже чайная ложка. Дальше углубление заполняют начинками: на видео это черника, шоколадная, смородиновая и ореховая карамель.
+                <span class="source-badge">⏱ Урок 1: 06:24–07:21</span>
+              </p>
+              <div class="tip-box">
+                <strong>Не переборщите:</strong> вынули слишком много — капкейк станет менее стабильным и плотным. Серединку убирают ровно столько, сколько нужно под начинку.
+                <span class="source-badge">⏱ Урок 1: 06:47–06:58</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥄 Углубление: <strong>немного, не насквозь</strong></span>
+              <span class="param-pill">🍫 Начинки: <strong>ягоды, карамели</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Взбивание крема</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Взбивайте сразу на большой скорости миксером. Три условия: узкая и высокая посуда, очень холодный крем и полностью выдержанное время стабилизации.
+                <span class="source-badge">⏱ Урок 1: 06:07–06:23</span>
+              </p>
+              <p>
+                Когда взбивание начинается, крем сильно разжижается — пугаться не надо, продолжайте. Плотным он становится минуты за 3–4.
+                <span class="source-badge">⏱ Урок 1: 07:33–08:00</span>
+              </p>
+              <div class="warning-box">
+                <strong>Признак перебоя — «манная каша»:</strong> как только на поверхности появилось что-то похожее на манку, срочно прекращайте взбивание. Перебитый шантильи починить нельзя.
+                <span class="source-badge">⏱ Урок 1: 08:01–08:15</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚡ Скорость: <strong>сразу максимальная</strong></span>
+              <span class="param-pill">⏱ Время: <strong>3–4 мин</strong></span>
+              <span class="param-pill">🥣 Посуда: <strong>узкая и высокая</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>держит форму при перевороте</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Если крем кажется жидким</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите крем в кондитерский мешок с насадкой и уберите в холодильник: он станет гуще за счёт желатина. Если после взбивания он всё ещё жидковат, дайте ему схватиться в холодильнике примерно час — и дальше с ним можно спокойно работать.
+                <span class="source-badge">⏱ Урок 1: 08:20–08:34</span>
+              </p>
+              <div class="tip-box">
+                <strong>Это нормальное поведение:</strong> желатин догоняет плотность уже в мешке, поэтому не спешите взбивать крем «до последнего».
+                <span class="source-badge">⏱ Урок 1: 10:13–10:23</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Холодильник: <strong>~1 ч</strong></span>
+              <span class="param-pill">🧰 Тара: <strong>кондитерский мешок с насадкой</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 11 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Мешки и насадки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Перед тем как выкладывать крем, выверните манжет мешка — так и не испачкаетесь, и всё войдёт аккуратно. Каждый мешок автор отправляет в свою насадку: «закрытая звезда» на 7 зубьев 8 мм (без номера) и «закрытая звезда» № 856.
+                <span class="source-badge">⏱ Урок 1: 08:34–09:00</span>
+              </p>
+              <div class="warning-box">
+                <strong>Как отрезать мешок:</strong> он должен заканчиваться не позже чем на одной трети насадки. Если насадка вылезает слишком сильно, давлением её просто выдавит — виден должен быть только рельеф.
+                <span class="source-badge">⏱ Урок 1: 10:33–10:54</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⭐ Насадка 1: <strong>закрытая звезда, 7 зубьев, 8 мм</strong></span>
+              <span class="param-pill">⭐ Насадка 2: <strong>закрытая звезда № 856</strong></span>
+              <span class="param-pill">✂ Отрез: <strong>не дальше 1/3 насадки</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 12 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Покраска мешка снаружи</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Краситель наносят на шпажку и полосами распределяют по внутренней стороне мешка и по насадке — примерно на 10 см мешка. Основная масса крема остаётся неокрашенной, а на выходе получаются яркие полосы.
+                <span class="source-badge">⏱ Урок 1: 09:01–10:03</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не попадайте в швы мешка:</strong> краситель останется в них и не перейдёт на крем. И не берите столько, чтобы он тёк, — нужна умеренность.
+                <span class="source-badge">⏱ Урок 1: 09:19–09:22</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🎨 Нанесение: <strong>шпажкой, полосами</strong></span>
+              <span class="param-pill">📏 Зона: <strong>~10 см мешка + насадка</strong></span>
+              <span class="param-pill">🚫 Избегать: <strong>швов мешка</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 13 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Отсадка шапочки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Мешок держите над капкейком вертикально и давите на крем, а не на мешок. Сделайте две окружности одинакового диаметра, поднимаясь вверх, — получится двухъярусная шапочка. Прежде чем вынуть насадку, остановите давление и отведите её в сторону.
+                <span class="source-badge">⏱ Урок 1: 11:13–11:38</span>
+              </p>
+              <div class="warning-box">
+                <strong>Диаметр шапки:</strong> он должен совпадать с диаметром капкейка или быть меньше. Шапка шире основы выглядит неаккуратно и нависает.
+                <span class="source-badge">⏱ Урок 1: 12:14–12:21</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📐 Диаметр: <strong>равен капкейку или меньше</strong></span>
+              <span class="param-pill">🔄 Движение: <strong>две окружности, вверх</strong></span>
+              <span class="param-pill">✋ Финал: <strong>сбросить давление, увести в сторону</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 14 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Декор</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Украсьте малиной — подойдут любые свежие ягоды. В качестве зелени автор берёт тимьян и оставляет только самые верхушки: они самые красивые и свежие.
+                <span class="source-badge">⏱ Урок 1: 12:43–13:05</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍓 Ягоды: <strong>малина или любые свежие</strong></span>
+              <span class="param-pill">🌿 Зелень: <strong>верхушки тимьяна</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 15 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">15</span>
+                <h3 class="step-title">Ароматизация</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Крем можно ароматизировать, добавив в горячие сливки немного растворимого кофе. Перед взбиванием допустимо влить 1 ст. л. Baileys. Подойдут и любые ароматизаторы в каплях, а также красители.
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">☕ Кофе: <strong>в горячие сливки</strong></span>
+              <span class="param-pill">🥃 Baileys: <strong>1 ст. л. перед взбиванием</strong></span>
+              <span class="param-pill">💧 Ароматизаторы: <strong>в каплях</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 16 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">16</span>
+                <h3 class="step-title">Хранение</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Срок годности крема — 72 часа. В морозилке он хранится 1 месяц.
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📅 Холодильник: <strong>72 ч</strong></span>
+              <span class="param-pill">❄️ Морозилка: <strong>1 месяц</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Три стабилизатора сразу:</strong> белый шоколад, глюкоза с инвертным сахаром и желатин — для высокой шапки этого мало не бывает.</li>
+                <li><strong>Две порции сливок:</strong> 110 г нагреваются, 300 г остаются холодными — так масса быстро охлаждается и не перегревает шоколад.</li>
+                <li><strong>До кипения, не кипятить:</strong> автору хватает температуры в момент закипания, чтобы расплавить шоколад и желатин.</li>
+                <li><strong>Плёнка в контакт:</strong> иначе на поверхности крема образуется корочка.</li>
+                <li><strong>12–24 часа:</strong> время стабилизации не сокращают ни при каких обстоятельствах.</li>
+                <li><strong>Узкая высокая посуда:</strong> одно из трёх условий удачного взбивания — вместе с холодным кремом и полной стабилизацией.</li>
+                <li><strong>Сначала разжижается:</strong> при взбивании крем становится жидким, это нормально — продолжайте.</li>
+                <li><strong>Желатин доработает в мешке:</strong> если крем кажется жидким, час в холодильнике в мешке решает вопрос.</li>
+                <li><strong>Покраска снаружи:</strong> так основная масса крема остаётся неокрашенной, а рисунок получается полосатым.</li>
+                <li><strong>Давите крем, а не мешок:</strong> и сбрасывайте давление перед тем, как убрать насадку.</li>
+                <li><strong>Мёд вместо инвертного сахара:</strong> можно, но у крема появится медовый привкус.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Сократили стабилизацию:</strong> крем не взобьётся в плотную массу и поплывёт на капкейке.</li>
+                <li><strong>Взбивали тёплым:</strong> сливки не держат воздух, крем остаётся жидким.</li>
+                <li><strong>Широкая посуда:</strong> крем не захватывается венчиком и взбивается неравномерно.</li>
+                <li><strong>Перебили крем:</strong> появилась «манная каша» — шантильи уже не починить.</li>
+                <li><strong>Желатин не растворился полностью:</strong> в креме остаются резинистые крупинки.</li>
+                <li><strong>Кипятили сливки долго:</strong> часть воды выпарилась, пропорции нарушились.</li>
+                <li><strong>Краситель попал в швы мешка:</strong> он не перейдёт на крем, рисунка не будет.</li>
+                <li><strong>Мешок отрезан слишком далеко от насадки:</strong> насадку выдавливает давлением.</li>
+                <li><strong>Шапка шире капкейка:</strong> выглядит неаккуратно и нависает над краями.</li>
+                <li><strong>Вынули слишком много серединки:</strong> капкейк теряет стабильность и плотность.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> урок Надежды Зубовой «Крем Шантильи» (Тортомафия, месяц 2) — расшифровка видео с таймкодами и технологическая карта с граммовками.</li>
+              <li><strong>Расхождения — стабилизация:</strong> в карте «оставить в холодильнике на 12 часов», на видео «минимум 12 часов, а лучше 24». На странице указан диапазон 12–24 ч.</li>
+              <li><strong>Расхождения — взбивание:</strong> в карте только «хорошо взбить в плотную пышную массу», на видео — большая скорость и 3–4 минуты. Время взято из видео.</li>
+              <li><strong>Расхождения — выход:</strong> ни карта, ни видео не указывают, на сколько капкейков хватает партии и сколько крема получается в граммах. 680 г на странице — сумма всех продуктов партии, а не взвешенный автором выход.</li>
+              <li><strong>Пробелы — жирность сливок:</strong> автор говорит только «хорошие сливки, которые априори взбиваются», процент жирности не называет.</li>
+              <li><strong>Пробелы — инвертный сахар и глюкоза:</strong> граммовки есть, но способа замены (кроме мёда с оговоркой про привкус) и пропорций сиропа автор не даёт.</li>
+              <li><strong>Пробелы — наполнение капкейков:</strong> начинки (черника, шоколадная, смородиновая и ореховая карамель) названы, но их рецепты и количество — в отдельных уроках; здесь только порядок подготовки капкейка.</li>
+              <li><strong>Пробелы — декор:</strong> ягоды и тимьян без граммовок, «по вкусу».</li>
+              <li><strong>Фото:</strong> отдельного снимка в папке нет — на странице кадр из видео урока (13:00): капкейки с двухъярусными шапочками шантильи, малиной и тимьяном, полоса плеера обрезана.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>
