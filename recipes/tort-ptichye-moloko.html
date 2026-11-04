@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Торт «Птичье молоко» с суфле на агаре — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Бюджетный советский вариант «Птичьего молока» от Надежды Зубовой: корж на маргарине за 10 минут при 170 °C, суфле на агаре силы 900 (сироп 110 °C, белок, крем из масла и сгущёнки) и шоколадная глазурь на желатине без растительного жира.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tort-ptichye-moloko">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Торт «Птичье молоко» на агаре</h1>
+      <p class="recipe-lead">
+        Бюджетный «советский» вариант: корж замешивается на маргарине, а не на сливочном масле, суфле собирается из трёх частей — крем из масла со сгущёнкой, белки и агаровый сироп. Агар здесь принципиален: с желатином суфле не держит форму и тает на столе. Сверху торт заливается собственной шоколадной глазурью из молока, сахара и какао — без единого грамма растительного жира.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~40 мин (корж, крем, агар)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Выпечка 10–15 мин, стабилизация суфле в холодильнике, застывание глазури</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~5–6 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 торт в раздвижной рамке (противень 60×40 см)</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-ptichye-moloko.jpg" alt="Торт «Птичье молоко» в раздвижной рамке после заливки шоколадной глазурью: glossy-ровная тёмная поверхность" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 торт)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">торт</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База калькулятора — один торт из одного противня коржа: корж делится на две части, между ними идёт суфле. Размер рамки автор не называет — в уроке её длину добирают ограничителем.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> торт</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на корж, суфле и глазурь. Ключевые позиции — агар силы 900 (на нём держится вся конструкция) и какао: глазурь варится из него, а не из шоколада, поэтому выходит в разы дешевле.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, жиры</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Маргарин</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Размягчённый; один к одному заменяется сливочным маслом</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное</strong>:
+                <span class="shopping-qty" data-base-amount="165" data-unit="г">165 г</span>
+                <span class="shopping-hint">Хорошее, размягчённое — в крем для суфле</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сгущённое молоко</strong>:
+                <span class="shopping-qty" data-base-amount="165" data-unit="г">165 г</span>
+                <span class="shopping-hint">Обязательно комнатной температуры — холодное расслоит крем</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко 3,5–6 %</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">В глазурь; в уроке автор берёт 10 % сливки — они дают более яркую заливку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца С1</strong>:
+                <span class="shopping-qty" data-base-amount="11" data-unit="шт." data-piece="true">11 шт.</span>
+                <span class="shopping-hint">5 целых в корж и 6 белков (210 г) в суфле; шесть желтков останутся</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Бакалея, желирующее, какао</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="280" data-unit="г">280 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="730" data-unit="г">730 г</span>
+                <span class="shopping-hint">200 г в корж, 440 г в сироп, 90 г в глазурь</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Агар-агар, сила 900</strong>:
+                <span class="shopping-qty" data-base-amount="11" data-unit="г">11 г</span>
+                <span class="shopping-hint">Чилийский, чистый; замачивается на 10 минут. Желатином не заменяется</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сироп глюкозы</strong>:
+                <span class="shopping-qty" data-base-amount="55" data-unit="г">55 г</span>
+                <span class="shopping-hint">В сироп для суфле</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Алкализованное или самое простое; «Золотой ярлык» даст менее яркую заливку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин</strong>:
+                <span class="shopping-qty" data-base-amount="7" data-unit="г">7 г</span>
+                <span class="shopping-hint">В глазурь, замачивается в 35 г воды</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимонная кислота</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="г">2 г</span>
+                <span class="shopping-hint">Около половины чайной ложки, стабилизирует белок; не обязательно</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong> — щепотка
+                <span class="shopping-hint">В корж, вместе с мукой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — пергамент, раздвижная рамка или кольцо с ограничителем, палетка и мастихин
+                <span class="shopping-hint">Рамка нужна, чтобы суфле стояло ровным прямоугольником</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Корж</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Маргарин
+              <span class="ingredient-note">Размягчённый; можно заменить сливочным маслом</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="шт." data-piece="true">5 шт.</span> — Яйца С1
+              <span class="ingredient-note">Комнатной температуры, вводить по одному</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="280" data-unit="г">280 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Соль — щепотка
+              <span class="ingredient-note">В муку, перед вводом в тесто</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Суфле: крем</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="165" data-unit="г">165 г</span> — Масло сливочное
+              <span class="ingredient-note">Размягчённое</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="165" data-unit="г">165 г</span> — Сгущённое молоко
+              <span class="ingredient-note">Комнатной температуры</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Суфле: белок и сироп</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="210" data-unit="г">210 г</span> — Белок яичный
+              <span class="ingredient-note">6 яиц С1</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="440" data-unit="г">440 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="180" data-unit="г">180 г</span> — Вода холодная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="11" data-unit="г">11 г</span> — Агар-агар, сила 900
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="55" data-unit="г">55 г</span> — Сироп глюкозы
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Лимонная кислота
+              <span class="ingredient-note">На кончике ножа, не обязательно</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Шоколадная глазурь</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Молоко 3,5–6 %
+              <span class="ingredient-note">Можно заменить сливками 10 %</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="90" data-unit="г">90 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Какао
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Желатин
+              <span class="ingredient-note">Замочить в 35 г воды заранее</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Корж: маргарин с сахаром</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Размягчённый маргарин взбивайте с 200 г сахара: сначала на небольшой скорости, чтобы масса объединилась, потом на большой. Сильно побелеть она не должна — это маргарин, а не масло.
+                <span class="source-badge">⏱ Урок 1: 00:00:02–00:01:00</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> если маргарин в кондитерке неприемлем, он заменяется сливочным маслом один к одному. Вся разница — во вкусе и цене, на технологию это не влияет.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Маргарин: <strong>200 г</strong></span>
+              <span class="param-pill">🍬 Сахар: <strong>200 г</strong></span>
+              <span class="param-pill">🎚 Скорость: <strong>Сначала малая, потом большая</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Яйца по одному</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Вводите 5 яиц строго по одному и только комнатной температуры: следующее добавляйте, когда предыдущее полностью вошло в массу. Тесто получится довольно жидким, и даже после муки останется негустым.
+                <span class="source-badge">⏱ Урок 1: 00:01:01–00:01:35</span>
+              </p>
+              <div class="warning-box">
+                <strong>Расслоение — не брак:</strong> на маргарине масса может расслоиться, в отличие от сливочного масла. Если это мешает, прогрейте её немного на водяной бане или в микроволновке и снова пробейте миксером, но в целом можно просто продолжать.
+                <span class="source-badge">⏱ Урок 1: 00:01:56–00:02:15</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Яйца: <strong>5 шт. С1, тёплые</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>Яйцо вошло в массу</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Мука и соль</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Всыпьте 280 г муки и щепотку соли в один-два приёма и перемешайте на низкой скорости. Разрыхлителя в этом корже нет. Как только сухие ингредиенты вошли — перестаньте взбивать: тесто должно быть тягучим, консистенции крема, чтобы его можно было размазать по противню.
+                <span class="source-badge">⏱ Урок 1: 00:02:15–00:02:51</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не вымешивайте после объединения:</strong> лишние обороты дадут клейковину, и корж станет резиновым вместо мягкого.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌾 Мука: <strong>280 г</strong></span>
+              <span class="param-pill">🎚 Скорость: <strong>Низкая</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Выпечка: 170 °C без конвекции</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Размажьте тесто по противню с пергаментом максимально ровно — лопаткой, палеткой или ножом. Выпекайте при 170 °C без конвекции 10–15 минут: автору хватило 10. Готовность проверяйте нажатием — впадинка от пальца должна восстанавливаться, корж остаётся светлым.
+                <span class="source-badge">⏱ Урок 1: 00:02:55–00:03:38</span>
+              </p>
+              <div class="warning-box">
+                <strong>Корж не хранится:</strong> он быстро подсыхает, поэтому собирайте торт в тот же день. Ровная толщина важнее скорости — от неё зависит, как ляжет суфле.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>170 °C</strong></span>
+              <span class="param-pill">⏱ Время: <strong>10–15 минут</strong></span>
+              <span class="param-pill">💨 Режим: <strong>Без конвекции</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Корж в форму</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отделите от коржа одну часть под нижний слой и уложите её в раздвижную рамку. Ограничителем доберите нужную длину, чтобы корж закрывал дно без зазоров.
+                <span class="source-badge">⏱ Урок 2: 00:00:02–00:00:52</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> второй, внутренний корж должен быть меньше — он утапливается в суфле и не доходит до стенок рамки.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📐 Форма: <strong>Раздвижная рамка</strong></span>
+              <span class="param-pill">🍰 Коржей: <strong>2 части из одного пласта</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Крем: масло и сгущёнка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Взбейте 165 г размягчённого сливочного масла до бела, затем по весу добавьте 165 г сгущённого молока комнатной температуры и объедините в гладкий крем.
+                <span class="source-badge">⏱ Урок 3: 00:00:53–00:01:40</span>
+              </p>
+              <div class="warning-box">
+                <strong>Крем нельзя убирать в холодильник:</strong> он должен оставаться мягким, иначе при вводе в суфле пойдёт комками. Холодная сгущёнка тоже расслоит крем.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Масло: <strong>165 г</strong></span>
+              <span class="param-pill">🥛 Сгущёнка: <strong>165 г, тёплая</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Агар и сахар в сироп</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Агар залейте 180 г холодной воды и оставьте на 10 минут. Затем поставьте на огонь и доведите до кипения, постоянно помешивая. Всыпьте 440 г сахара и 55 г глюкозного сиропа, добавьте 2 г лимонной кислоты и снова доведите до кипения — масса станет жиже и превратится в сироп.
+                <span class="source-badge">⏱ Урок 3: 00:01:53–00:03:19</span>
+              </p>
+              <div class="warning-box">
+                <strong>Агар пригорает:</strong> мешать нужно непрерывно, особенно после ввода сахара. Закипевший агар становится заметно гуще — это нормально, не пугайтесь. Пенится сироп тоже нормально.
+                <span class="source-badge">⏱ Урок 3: 00:02:13–00:03:31</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">💧 Агар: <strong>11 г на 180 г воды</strong></span>
+              <span class="param-pill">🍬 Сахар: <strong>440 г</strong></span>
+              <span class="param-pill">⏱ Замачивание: <strong>10 минут</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Уварить сироп до 110 °C</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Варите сироп при постоянном помешивании до 110 °C — или до пробы «на нити»: с венчика должны тянуться тонкие «сопельки». Как только сироп дошёл до 100 °C, начинайте взбивать белки на средней скорости.
+                <span class="source-badge">⏱ Урок 3: 00:03:52–00:04:23</span>
+              </p>
+              <div class="warning-box">
+                <strong>Ориентир — нити, а не только градусник:</strong> в уроке термометр показал 150 °C вместо 110, и автор ориентировалась именно на пробу «на нити». Не переварите сироп: он должен тянуться, а не застывать в карамель.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сироп: <strong>110 °C</strong></span>
+              <span class="param-pill">🥚 Белок: <strong>210 г, средняя скорость</strong></span>
+              <span class="param-pill">🔍 Проба: <strong>Тонкие нити с венчика</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Сироп в белок</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Дайте кипению уняться и влейте сироп в белок тонкой, но уверенной струёй, переключив миксер на большую скорость. Взбивайте, пока масса не остынет до 60–65 °C.
+                <span class="source-badge">⏱ Урок 3: 00:04:23–00:05:10</span>
+              </p>
+              <div class="warning-box">
+                <strong>Температурный порог — 40 °C:</strong> при этой температуре агар начинает застывать. Всё, что после ввода сиропа, делается без пауз, иначе суфле схватится прямо в чаше.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🎚 Скорость: <strong>Максимальная</strong></span>
+              <span class="param-pill">🌡 Остудить: <strong>До 60–65 °C</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Ввести крем в суфле</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Снизьте скорость до средней и введите крем в несколько приёмов. Масса осядет — так и должно быть. Взбивайте после добавления крема недолго и сразу переходите к сборке.
+                <span class="source-badge">⏱ Урок 3: 00:05:15–00:05:58</span>
+              </p>
+              <div class="warning-box">
+                <strong>Почему суфле оседает:</strong> агар уже начал работать, объём уходит, но структура остаётся стабильной. Долгое взбивание её наоборот разрушит.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🎚 Скорость: <strong>Средняя</strong></span>
+              <span class="param-pill">⏱ Взбивание: <strong>Коротко, до объединения</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Сборка: корж — суфле — корж</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Половину суфле вылейте на нижний корж и быстро разровняйте. Уложите второй, меньший корж и утопите его в суфле, затем закройте оставшейся массой и разровняйте лопаткой, чтобы поверхность была гладкой.
+                <span class="source-badge">⏱ Урок 3: 00:06:00–00:07:06</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> работать нужно очень быстро — агар застывает на глазах, второй попытки разровнять не будет.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ Суфле: <strong>Две половины</strong></span>
+              <span class="param-pill">🍰 Корж внутри: <strong>Меньшего размера</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Подровнять и в холодильник</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Когда суфле подзастынет — не полностью, а именно схватится, — пройдитесь по поверхности палеткой или маленьким мастихином и доведите её до гладкости. Затем уберите торт в холодильник на стабилизацию.
+                <span class="source-badge">⏱ Урок 3: 00:07:21–00:07:47</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> ровнять подзастывшее суфле проще, чем жидкое: оно уже держит форму и не тянется за инструментом.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔧 Инструмент: <strong>Палетка или мастихин</strong></span>
+              <span class="param-pill">🧊 Стабилизация: <strong>В холодильнике</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Шоколадная глазурь на желатине</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Желатин замочите в 35 г воды. Молоко соедините с 90 г сахара и 30 г какао, доведите до кипения при помешивании, проварите 3 минуты, но не кипятите бурно. Снимите с огня, добавьте желатин и мешайте до полного растворения, затем остудите примерно до 30 °C.
+                <span class="source-badge">⏱ Урок 4: 00:00:10–00:02:00</span>
+              </p>
+              <div class="warning-box">
+                <strong>Это дешевле шоколада и без «химии»:</strong> в глазури только молоко, сахар, какао и желатин — никакого растительного жира и готовой глазури. По вкусу получается интенсивно шоколадно.
+                <span class="source-badge">⏱ Урок 4: 00:01:27–00:01:44</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Заливка: <strong>Около 30 °C</strong></span>
+              <span class="param-pill">⏱ Проварка: <strong>3 минуты</strong></span>
+              <span class="param-pill">🍫 Какао: <strong>30 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Заливка и застывание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Залейте стабилизированное «Птичье молоко» глазурью и равномерно покачайте рамку, чтобы шоколад закрыл всю поверхность. Уберите торт в холодильник (в уроке — в морозилку) до полного застывания.
+                <span class="source-badge">⏱ Урок 4: 00:02:15–00:03:12</span>
+              </p>
+              <div class="tip-box">
+                <strong>Сроки хранения:</strong> в холодильнике торт стоит 5 суток, в морозилке — до 2 месяцев.
+                <em style="font-size: 13px; color: var(--text-muted);">Источник: DOCX «Торт_Птичье_молоко»</em>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Застывание: <strong>Холодильник или морозилка</strong></span>
+              <span class="param-pill">📦 Срок: <strong>5 суток / 2 месяца</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Маргарин — ради бюджета:</strong> в советском варианте корж делали на нём; замена на сливочное масло идёт один к одному.</li>
+                <li><strong>Яйца только тёплые:</strong> холодные расслаивают массу.</li>
+                <li><strong>Расслоение на маргарине допустимо:</strong> его можно прогреть и снова пробить, но на результат оно не влияет.</li>
+                <li><strong>Тесто как крем:</strong> именно такая консистенция легко размазывается в ровный пласт.</li>
+                <li><strong>Агар силы 900:</strong> держит суфле при комнатной температуре, желатин такой структуры не даст.</li>
+                <li><strong>Мешать агар непрерывно:</strong> смеси с агаром склонны к пригоранию.</li>
+                <li><strong>Проба «на нити»:</strong> надёжнее термометра, если он врёт.</li>
+                <li><strong>Крем комнатной температуры:</strong> холодный не вмешается в суфле гладко.</li>
+                <li><strong>Глазурь из какао:</strong> дешевле шоколада, без растительного жира и с ярким вкусом.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Желатин вместо агара:</strong> суфле не держит форму и оплывает.</li>
+                <li><strong>Холодные яйца:</strong> масса расслаивается сильнее, чем допустимо.</li>
+                <li><strong>Долгое вымешивание с мукой:</strong> корж получается резиновым.</li>
+                <li><strong>Неровный пласт:</strong> суфле ложится с перекосом, торт ведёт.</li>
+                <li><strong>Хранение коржа:</strong> он подсыхает и крошится при сборке.</li>
+                <li><strong>Холодный крем или сгущёнка:</strong> комки в суфле.</li>
+                <li><strong>Агар без помешивания:</strong> пригорает, появляется привкус горелого.</li>
+                <li><strong>Переваренный сироп:</strong> тянется в карамель и не вмешивается в белок.</li>
+                <li><strong>Пауза после ввода крема:</strong> при 40 °C агар схватывается, разровнять уже не выйдет.</li>
+                <li><strong>Заливка горячей глазурью:</strong> она должна остыть примерно до 30 °C.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Маргарин:</strong> сливочное масло один к одному — вариант для тех, кто не приемлет маргарин.</li>
+                <li><strong>Молоко в глазури:</strong> сливки 10 % дают более яркую и плотную заливку.</li>
+                <li><strong>Какао:</strong> алкализованное, обычное или «Золотой ярлык» — последнее даёт менее интенсивный цвет.</li>
+                <li><strong>Лимонная кислота:</strong> необязательна, но стабилизирует белок.</li>
+                <li><strong>Форма:</strong> раздвижная рамка любого размера, длину добирают ограничителем.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 (корж — 00:00:02–00:03:38); Урок_02.mp4 (подготовка формы — 00:00:02–00:00:52); Урок_03.mp4 (крем, агар, суфле, сборка — 00:00:03–00:07:47); Урок_04.mp4 (глазурь и заливка — 00:00:02–00:03:12); DOCX «Торт_Птичье_молоко» — граммовки всех трёх частей, режимы и сроки хранения.</li>
+              <li><strong>Глазурь — молоко или сливки:</strong> в DOCX основа глазури — молоко 3,5–6 %, в уроке автор говорит про сливки 10 %. На странице в раскладке молоко (по DOCX), сливки указаны как равноценная замена; на цвет и вкус это влияет слабо.</li>
+              <li><strong>Температура сиропа:</strong> по DOCX — 110 °C, в уроке термометр показал 150 °C, а автор ориентировалась на пробу «на нити». На странице взят ориентир 110 °C с обязательной проверкой на нити.</li>
+              <li><strong>Температура остывания суфле:</strong> в DOCX — 60–65 °C, в уроке автор снижает скорость при 50–55 °C. Ключевое ограничение одно: не доводить до 40 °C, когда агар начинает застывать.</li>
+              <li><strong>Количество коржей:</strong> в DOCX сборка описана как «половина суфле — корж меньшего диаметра — остальное суфле», в уроке корж печётся на один противень и делится на две части. На странице — вариант урока.</li>
+              <li><strong>Яйца в раскладке:</strong> 5 целых в корж и 6 белков в суфле — итого 11 яиц, шесть желтков остаются неиспользованными.</li>
+              <li><strong>Пробелы:</strong> размер рамки и вес готового торта не названы; время стабилизации суфле в холодильнике и застывания глазури не указано; толщина коржа не измеряется.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_04.mp4 (около 00:03:25): торт в рамке сразу после заливки шоколадной глазурью.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

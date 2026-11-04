@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Шоколадные конфеты и медианты на темперированном шоколаде — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Темперирование шоколада какао-маслом Mycryo по методу Надежды Зубовой: 1 % от веса шоколада, тёмный до 35 °C и рабочая 31–32 °C, молочный и белый до 34 °C и 29–30 °C. Конфеты в полусферах, медианты и скалы с сублимированными ягодами и орехами.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="shokoladnye-konfety">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Конфеты и сладости</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Шоколадные конфеты, медианты и скалы</h1>
+      <p class="recipe-lead">
+        Главное здесь не форма, а темперирование: шоколад с какао-маслом Mycryo в количестве 1 % от веса даёт глянец, хруст и стабильность при комнатной температуре. Дальше из одной темперированной массы выходят конфеты в силиконовых полусферах, медианты и «скалы» — пластины с сублимированными ягодами, обжаренными орехами и взрывной карамелью. Температурные режимы для тёмного и для молочного шоколада разные, и это единственное, что нельзя путать.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~15 мин (шоколад, формы, декор)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~40 мин на партию</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Охлаждение шоколада и стабилизация конфет</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~1 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 партия: 200 г шоколада → полусферы, медианты или скалы</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/shokoladnye-konfety.jpg" alt="Готовые шоколадные конфеты-медианты на пергаменте: шоколадные основания с сублимированной клубникой, орехами, фисташковой мукой и цветными шариками" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 партия)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">партия</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База калькулятора — одна партия на 200 г шоколада, как у автора. Какао-масло Mycryo считается как 1 % от веса шоколада, поэтому в раскладке оно привязано к этой же партии. Декор берётся «по вкусу»: его количество автор не отвешивает.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> партию</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Список предельно короткий: шоколад, какао-масло Mycryo и сухой декор. Mycryo продаётся в кондитерских магазинах, в том числе на развес, — обычное какао-масло в плитках для этого метода не подойдёт.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Шоколад и какао-масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Тёмный, молочный или белый — режимы темперирования разные. Автор работает на Callebaut и Cargill</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао-масло Mycryo</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="г">2 г</span>
+                <span class="shopping-hint">Порошковое, 1 % от веса шоколада; обычное какао-масло не заменяет, дома такое не сделать</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍓 Сухой декор и оснастка</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Орехи обжаренные</strong> — по вкусу
+                <span class="shopping-hint">Целые или половинками, для верха конфет и медиантов</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ягоды сублимационной сушки</strong> — по вкусу
+                <span class="shopping-hint">Клубника, малина; можно пудру — её вмешивают в шоколад</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Взрывная карамель</strong> — по вкусу
+                <span class="shopping-hint">Карамельный взрывающийся сахар</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Хрустящий рис и посыпки</strong> — по вкусу
+                <span class="shopping-hint">Совсем немного, для фактуры и цвета</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Фисташковая мука</strong> — по вкусу
+                <span class="shopping-hint">Для посыпки полусфер</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — силиконовые формы-полусферы, формы для леденцов, пергамент, кондитерские мешки, кухонный термометр
+                <span class="shopping-hint">Без термометра темперировать нельзя: все режимы держатся на градусах</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Основа</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Шоколад
+              <span class="ingredient-note">Тёмный, молочный, белый или цветной — на выбор</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Какао-масло Mycryo
+              <span class="ingredient-note">1 % от веса шоколада</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Декор (только сухое)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Орехи обжаренные — по вкусу
+              <span class="ingredient-note">Целые или половинками</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Ягоды сублимационной сушки — по вкусу
+              <span class="ingredient-note">Или пудра сублимированных ягод в шоколад</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Взрывная карамель — по вкусу
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Хрустящий рис, посыпки, фисташковая мука — по вкусу
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Чем темперируем и почему только Mycryo</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Темперирование идёт какао-маслом Mycryo — порошковым, его выпускает Cacao Barry. Берите ровно 1 % от веса темперируемого шоколада. Приобрести можно в любом кондитерском магазине, в том числе на развес.
+                <em style="font-size: 13px; color: var(--text-muted);">Источник: DOCX «Шоколадные_конфеты»</em>
+              </p>
+              <div class="warning-box">
+                <strong>Обычное какао-масло не подойдёт:</strong> дома сделать такое порошковое масло невозможно, и метод с ним просто не сработает. Это не тот случай, где допустима замена.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌰 Mycryo: <strong>1 % от веса шоколада</strong></span>
+              <span class="param-pill">📦 Партия: <strong>200 г шоколада = 2 г Mycryo</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Три температуры: нагрев, охлаждение, работа</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Схема одинаковая по шагам, но разные цифры. Тёмный шоколад: нагреть до 40–45 °C, охладить до 35 °C, добавить Mycryo, вывести на рабочую 31–32 °C. Молочный, белый и цветной: нагреть не выше 40 °C, охладить до 34 °C, добавить Mycryo, рабочая — 29–30 °C.
+                <span class="source-badge">⏱ Урок 3: 00:02:17–00:03:01</span>
+              </p>
+              <div class="warning-box">
+                <strong>Молочный и белый перегревать нельзя:</strong> максимум 45 °C, а лучше остановиться на 40. Тёмный спокойно держит 45–50 °C на первом этапе.
+                <span class="source-badge">⏱ Урок 1: 00:00:02–00:00:12</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Тёмный: <strong>45 °C → 35 °C → 31–32 °C</strong></span>
+              <span class="param-pill">🥛 Молочный и белый: <strong>40 °C → 34 °C → 29–30 °C</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Растопить пульсами</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Шоколад рубите в калетки или мельче и топите в микроволновке пульсами: первый — 30 секунд, второй — ещё 30, дальше по 10–15 секунд, каждый раз перемешивая. На водяной бане принцип тот же — не перегреть.
+                <span class="source-badge">⏱ Урок 3: 00:03:07–00:03:50</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> если после очередного пульса остались комочки, но они расходятся при перемешивании — греть дальше не нужно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Пульсы: <strong>30 + 30 с, затем 10–15 с</strong></span>
+              <span class="param-pill">🌡 Предел: <strong>45 °C</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Охладить до нужной температуры</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Оставьте шоколад остывать при комнатной температуре — до 35 °C для тёмного и до 34 °C для молочного, белого и цветного. Мешать не обязательно, но если мешать, остынет быстрее.
+                <span class="source-badge">⏱ Урок 3: 00:04:29–00:04:47</span>
+              </p>
+              <div class="warning-box">
+                <strong>Если перегрели до 50 °C:</strong> добавьте 30 % шоколада по весу и начните заново — нагреть до 40–45 °C, охладить, добавить Mycryo и вывести на рабочую температуру.
+                <span class="source-badge">⏱ Урок 3: 00:03:57–00:04:23</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Тёмный: <strong>35 °C</strong></span>
+              <span class="param-pill">🌡 Молочный и белый: <strong>34 °C</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Ввести Mycryo</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Поставьте миску на весы, не сбрасывая показания, и добавьте 2 г какао-масла — так, чтобы цифра выросла ровно на два. Два грамма — это меньше неполной чайной ложки, поэтому весы нужны обязательно.
+                <span class="source-badge">⏱ Урок 3: 00:04:49–00:05:13</span>
+              </p>
+              <div class="warning-box">
+                <strong>Считайте «плюсом» к весу:</strong> 2 г на бытовых весах отдельно просто не отвесить — они ничего не покажут. Насыпайте до нужной суммы.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ На 200 г шоколада: <strong>2 г Mycryo</strong></span>
+              <span class="param-pill">🧮 Доля: <strong>1 %</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Интенсивно перемешать до рабочей температуры</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Теперь мешайте активно: кристаллы Mycryo должны полностью разойтись, именно они строят кристаллическую решётку. Доведите шоколад до рабочей температуры — 31–32 °C для тёмного, 29–30 °C для молочного и белого. С этого момента с ним можно работать.
+                <span class="source-badge">⏱ Урок 3: 00:05:19–00:05:39</span>
+              </p>
+              <div class="warning-box">
+                <strong>После ввода Mycryo шоколад уже нельзя оставлять остывать сам по себе:</strong> его нужно постоянно перемешивать, иначе масса застынет неравномерно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Рабочая: <strong>31–32 °C / 29–30 °C</strong></span>
+              <span class="param-pill">🥄 Мешать: <strong>Непрерывно</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Переложить в мешок</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите шоколад в кондитерский мешок — пока он переливается, он остынет ещё на градус и как раз выйдет на рабочую температуру. С мешком работать всегда легче, чем с миской.
+                <span class="source-badge">⏱ Урок 3: 00:05:48–00:06:07</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> если делать несколько видов шоколада, идите от светлого к тёмному — тогда один мешок, одна посуда и одна лопатка, не подходя к мойке.
+                <span class="source-badge">⏱ Урок 1: 00:01:03–00:01:29</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оснастка: <strong>Мешок и лопатка</strong></span>
+              <span class="param-pill">🎨 Порядок: <strong>От светлого к тёмному</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Формы: полусферы и леденцы</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Простые силиконовые полусферы дают конфеты-«бомбошки». Формы для леденцов с отверстием под палочку тоже годятся: отверстие заклейте скотчем, чтобы шоколад не вытек. Наполняйте так, чтобы потом не пришлось убирать лишнее, и постучите формой по столу — шоколад разровняется.
+                <span class="source-badge">⏱ Урок 3: 00:06:13–00:07:19</span>
+              </p>
+              <div class="tip-box">
+                <strong>Глянец зависит от формы:</strong> в глянцевых силиконовых формах шоколад получается глянцевым. Медианты и скалы заливают просто на пергамент — это пластинки, фигурки и шоколадки.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍬 Формы: <strong>Полусферы, леденцы</strong></span>
+              <span class="param-pill">🔨 Постучать: <strong>Для ровной поверхности</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Декор, пока шоколад не застыл</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сразу посыпайте: обжаренные орехи, ягоды сублимационной сушки, взрывная карамель, хрустящий рис, немного посыпок, фисташковая мука. На полусферы сверху кладут орешек — «для пущей вкусноты».
+                <span class="source-badge">⏱ Урок 3: 00:07:20–00:10:37</span>
+              </p>
+              <div class="warning-box">
+                <strong>Только сухое:</strong> не добавляйте вяленые влажные ягоды и фрукты — курагу, чернослив, инжир, самодельные цукаты. Они дают влагу и портят шоколад. И не кладите совсем жёсткие куски — о людях, которые будут это есть, тоже надо думать.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> пудру сублимированных ягод и фруктов (например, маракуйи) можно просто вмешать в шоколад — получится новый вкус.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍓 Декор: <strong>Сублимированные ягоды</strong></span>
+              <span class="param-pill">🌰 Орехи: <strong>Обжаренные</strong></span>
+              <span class="param-pill">❌ Нельзя: <strong>Влажные сухофрукты</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Стабилизация и остатки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Дождитесь полной стабилизации шоколада и извлекайте конфеты из формы. Оставшийся темперированный шоколад можно использовать снова и снова — точно так же, как шоколад в калетках из мешка: с застывшим поступают как с калетками, каждый раз добавляя какао-масло.
+                <span class="source-badge">⏱ Урок 3: 00:11:39–00:11:54</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> такими шоколадками интереснее лакомиться и гораздо интереснее смотрятся в подарке — их легко продавать, потому что выглядит ярко, а вкус говорит сам за себя.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Стабилизация: <strong>До полного застывания</strong></span>
+              <span class="param-pill">♻️ Остатки: <strong>Темперировать заново</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Mycryo, а не плиточное какао-масло:</strong> порошок даёт готовую кристаллическую решётку, и темперировать проще.</li>
+                <li><strong>1 % от веса:</strong> универсальная дозировка для любого шоколада — и тёмного, и белого.</li>
+                <li><strong>Греть пульсами:</strong> 30 + 30 секунд, затем по 10–15 — так шоколад не пригорает.</li>
+                <li><strong>Разные шкалы:</strong> у тёмного и у молочного с белым разные температуры нагрева, охлаждения и работы.</li>
+                <li><strong>От светлого к тёмному:</strong> один мешок и одна посуда на все виды шоколада.</li>
+                <li><strong>Перегрели — начните заново:</strong> добавьте 30 % шоколада и пройдите цикл с начала.</li>
+                <li><strong>Только сухой декор:</strong> орехи, сублимированные ягоды, взрывная карамель, хрустящий рис.</li>
+                <li><strong>Глянцевая форма — глянцевые конфеты:</strong> блеск зависит от поверхности формы, а не от полировки.</li>
+                <li><strong>Остатки не выбрасывают:</strong> их темперируют повторно, добавляя какао-масло.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Обычное какао-масло вместо Mycryo:</strong> метод не работает, шоколад не темперируется.</li>
+                <li><strong>Перегрев молочного и белого:</strong> выше 45 °C они теряют структуру, нагрев лучше держать на 40 °C.</li>
+                <li><strong>Греть непрерывно, а не пульсами:</strong> шоколад пригорает и идёт комками.</li>
+                <li><strong>Добавить Mycryo не вовремя:</strong> только после охлаждения до 34–35 °C.</li>
+                <li><strong>Оставить шоколад остывать после Mycryo:</strong> его нужно мешать до рабочей температуры.</li>
+                <li><strong>Работать «на глаз» без термометра:</strong> все режимы держатся на градусах.</li>
+                <li><strong>Влажный декор:</strong> курага, чернослив, цукаты портят шоколад.</li>
+                <li><strong>Слишком жёсткие куски в конфете:</strong> их неприятно и опасно жевать.</li>
+                <li><strong>Переполненная форма:</strong> приходится убирать лишний шоколад и портить глянец.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Шоколад:</strong> тёмный, молочный, белый, цветной — от калеток Callebaut до «Бабаевского»; режимы меняются, метод тот же.</li>
+                <li><strong>Белый шоколад:</strong> автор советует Cargill Extra White — самый белый без красителей, с оттенком шампань.</li>
+                <li><strong>Формы:</strong> силиконовые полусферы, леденцовые с заклеенным отверстием, пергамент для медиантов и скал.</li>
+                <li><strong>Декор:</strong> обжаренные орехи, сублимированные ягоды и их пудра, взрывная карамель, хрустящий рис, посыпки.</li>
+                <li><strong>Вкус:</strong> пудру сублимированных фруктов можно вмешать прямо в шоколад.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 (темперирование тёмного шоколада, полусферы с орехом — 00:00:02–00:04:14); Урок_02.mp4 (руби и белый Cargill по 200 г — 00:00:02–00:01:50); Урок_03.mp4 (полный цикл темперирования, медианты и скалы — 00:00:03–00:12:35); DOCX «Шоколадные_конфеты» — таблица режимов по видам шоколада и правила декора.</li>
+              <li><strong>Температуры тёмного шоколада:</strong> в уроке 1 автор греет до 45 °C, охлаждает до 36 °C и работает при 31–32 °C; в DOCX и уроке 3 — нагрев 40–45 °C, охлаждение до 35 °C, рабочая 31–32 °C. На странице взят вариант DOCX как основной.</li>
+              <li><strong>Название какао-масла:</strong> в речи автора звучит «Микрио» и «Колибо» (по бренду Callebaut), в DOCX — Mycryo. На странице — Mycryo, как в технологической карте.</li>
+              <li><strong>Молочный и белый шоколад:</strong> в уроке 2 оба вида доводят до 34 °C и не называют рабочую температуру; рабочая 29–30 °C взята из DOCX.</li>
+              <li><strong>Количество декора:</strong> ни в одном источнике декор не взвешивается — он идёт «по вкусу», поэтому в раскладке без числовых данных.</li>
+              <li><strong>Пробелы:</strong> число конфет из одной партии не указано; время полной стабилизации шоколада не названо; вес готовых медиантов и скал не приводится.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_03.mp4 (около 00:12:05): готовые медианты на пергаменте с сублимированной клубникой, орехами и фисташковой мукой.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

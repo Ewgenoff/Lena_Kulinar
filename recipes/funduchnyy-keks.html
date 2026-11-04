@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Фундучный кекс длительного хранения с клубничным конфи — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Еврокекс Надежды Зубовой на коричневом сахаре и обжаренном фундуке: 30–40 минут при 170 °C с конвекцией, клубничное конфи на яблочном пектине, глазурь гурмэ из молочного шоколада с растительным маслом и сроки хранения до 7 дней.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="funduchnyy-keks">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Фундучный кекс длительного хранения с клубничным конфи</h1>
+      <p class="recipe-lead">
+        Еврокекс, который спокойно живёт неделю: плотное тесто на коричневом сахаре, яблочном пюре и обжаренном фундуке двух помолов. Внутри — полость с клубничным конфи на яблочном пектине, снаружи — глазурь гурмэ из молочного шоколада с растительным маслом, которая застывает без темперирования. Тот же замес годится на капкейки: 52–55 г теста на форму.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~30 мин (тесто, формы)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч 15 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Выпечка 30–40 мин, остывание, охлаждение конфи</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~2 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 еврокекс (около 500 г теста) + 1–2 капкейка</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/funduchnyy-keks.jpg" alt="Два еврокекса на решётке: один уже покрыт глазурью гурмэ, второй ещё без глазури, рядом миска с шоколадной глазурью" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 кекс)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">кекс</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База калькулятора — один еврокекс: порция теста весит около 577 г, в форму идёт 500 г, остаток уходит на капкейки по 52–55 г. Конфи и глазурь даны партией — их хватает с запасом на два-три изделия.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> кекс</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на тесто, конфи и глазурь. Дорогие позиции здесь только две — фундук и молочный шоколад; пектин на конфи нужен яблочный, а при его отсутствии конфи ставится на желатине.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5 %</strong>:
+                <span class="shopping-qty" data-base-amount="90" data-unit="г">90 г</span>
+                <span class="shopping-hint">Мягкое, но не растопленное</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца С3</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span>
+                <span class="shopping-hint">По весу 80 г без скорлупы</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Жирность любая — здесь оно работает как жидкость</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молочный шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">В глазурь гурмэ</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌰 Фундук, бакалея, ягоды</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Фундук обжаренный</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">115 г в тесто (70 мелко молотого + 45 крупно рубленого) и 35 г в глазурь</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="125" data-unit="г">125 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар коричневый</strong>:
+                <span class="shopping-qty" data-base-amount="110" data-unit="г">110 г</span>
+                <span class="shopping-hint">Именно коричневый — он даёт карамельный вкус</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар белый</strong>:
+                <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+                <span class="shopping-hint">В конфи</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Разрыхлитель</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="г">4 г</span>
+                <span class="shopping-hint">Автор намеренно округлила: на малых весах проще отвесить 4 г, чем 3</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яблочное пюре</strong>:
+                <span class="shopping-qty" data-base-amount="20" data-unit="г">20 г</span>
+                <span class="shopping-hint">Готовое детское пюре без сахара подойдёт</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Клубника свежая или замороженная</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Или готовое клубничное пюре</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пектин яблочный</strong>:
+                <span class="shopping-qty" data-base-amount="8" data-unit="г">8 г</span>
+                <span class="shopping-hint">Замена: 8 г быстрорастворимого желатина + 40 г холодной воды</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло растительное без запаха</strong>:
+                <span class="shopping-qty" data-base-amount="40" data-unit="г">40 г</span>
+                <span class="shopping-hint">Кукурузное, виноградной косточки — рафинированное дезодорированное</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимонная кислота</strong> — на кончике ножа
+                <span class="shopping-hint">Для конфи; пектин работает там, где есть кислота</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — форма для еврокекса или обычная форма для кексов, пергамент, кондитерский мешок, шпажка
+                <span class="shopping-hint">Бумажная вкладка должна выступать над краем формы</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Тесто</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="90" data-unit="г">90 г</span> — Масло сливочное 82,5 %
+              <span class="ingredient-note">Мягкое</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="110" data-unit="г">110 г</span> — Сахар коричневый
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Яйца
+              <span class="ingredient-note">≈2 яйца С3 без скорлупы</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Молоко
+              <span class="ingredient-note">Жирность любая</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="г">4 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Яблочное пюре
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Фундук мелко измолотый
+              <span class="ingredient-note">Обжаренный</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="45" data-unit="г">45 г</span> — Фундук крупно рубленый
+              <span class="ingredient-note">Обжаренный</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Клубничное конфи</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Клубника
+              <span class="ingredient-note">Свежая, замороженная или готовое пюре</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="8" data-unit="г">8 г</span> — Пектин яблочный
+              <span class="ingredient-note">Или 8 г желатина + 40 г холодной воды</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Лимонная кислота — на кончике ножа
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Глазурь гурмэ</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Молочный шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Растительное масло без запаха
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="35" data-unit="г">35 г</span> — Фундук рубленый
+              <span class="ingredient-note">В глазурь, обжаренный</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Пропитка (по желанию)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Сахар и вода в пропорции 30 : 70 по весу
+              <span class="ingredient-note">Гостовская пропитка, 80–150 г на кекс</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Духовка и подготовка формы</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сразу включите духовку: 170 °C с конвекцией, а если её нет — 180 °C с нагревом верх-низ. Для газовой духовки ставьте такой же уровень газа, как при выпечке пирогов, и кекс ставьте в верхнюю часть. Из пергамента вырежьте вкладку: сложите пополам, загните по размеру половины дна и вставьте в форму так, чтобы бумага выступала над краем.
+                <span class="source-badge">⏱ Урок 1: 00:00:02–00:09:59</span>
+              </p>
+              <div class="warning-box">
+                <strong>Бумагу не подрезают заподлицо:</strong> выступающие края не дают тесту вытечь по бокам. Отгибать их вниз тоже не нужно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Режим: <strong>170 °C конвекция / 180 °C верх-низ</strong></span>
+              <span class="param-pill">📄 Вкладка: <strong>Выше края формы</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Масло с коричневым сахаром</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Размягчённое, но не растопленное масло (90 г) разотрите с 110 г коричневого сахара. Перетирайте до объединения — масса не должна побелеть, как при взбивании с белым сахаром.
+                <span class="source-badge">⏱ Урок 1: 00:11:57–00:12:52</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> сахар нужен именно коричневый — он даёт кексу карамельный вкус и влажную структуру.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Масло: <strong>90 г, мягкое</strong></span>
+              <span class="param-pill">🍬 Сахар: <strong>110 г, коричневый</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Яйца с молоком</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отвесьте 80 г яиц без скорлупы — это примерно два яйца категории С3 — и смешайте венчиком с 30 г молока. Затем понемногу добавляйте эту смесь в масло с сахаром, перемешивая после каждой порции.
+                <span class="source-badge">⏱ Урок 1: 00:14:08–00:15:27</span>
+              </p>
+              <div class="warning-box">
+                <strong>Всё по весу, а не «на глаз»:</strong> 80 г яиц и 30 г молока — это точная жидкостная часть, от неё зависит, получится тесто густым или поплывёт.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Яйца: <strong>80 г (≈2 шт. С3)</strong></span>
+              <span class="param-pill">🥛 Молоко: <strong>30 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Сухие: мука, разрыхлитель, мелкий фундук</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Просейте 125 г муки, добавьте 4 г разрыхлителя и 70 г мелко измолотого обжаренного фундука, перемешайте. Разрыхлитель в этот момент вводится к муке, а не в тесто.
+                <span class="source-badge">⏱ Урок 1: 00:17:00–00:17:46</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> 4 г разрыхлителя вместо 3 — намеренно: на малых граммовках бытовые весы плохо реагируют, и 4 г просто легче отвесить.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌾 Мука: <strong>125 г</strong></span>
+              <span class="param-pill">🧂 Разрыхлитель: <strong>4 г</strong></span>
+              <span class="param-pill">🌰 Фундук: <strong>70 г, мелкий помол</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Ввести сухие и добавить пюре с орехами</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Введите сухие ингредиенты в масляную массу, затем добавьте 20 г яблочного пюре и 45 г крупно порубленного фундука. Тесто получится густым и однородным, общий вес одной порции — около 577 г.
+                <span class="source-badge">⏱ Урок 1: 00:19:16–00:21:29</span>
+              </p>
+              <div class="warning-box">
+                <strong>Два помола ореха — не случайность:</strong> мелкий работает как мука и держит структуру, крупный даёт кусочки в готовом кексе.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍏 Яблочное пюре: <strong>20 г</strong></span>
+              <span class="param-pill">🌰 Крупный фундук: <strong>45 г</strong></span>
+              <span class="param-pill">⚖️ Вес теста: <strong>≈577 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Раскладка: 500 г на еврокекс</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В форму для еврокекса кладите около 500 г теста. Остаток распределите по капкейковым формочкам: 52–55 г на стандартный капкейк высотой 4 см и диаметром 5 см. Граммовку под форму с крышкой нужно считать точно, иначе тесто ляжет слишком плотно.
+                <span class="source-badge">⏱ Урок 1: 00:15:00–00:28:12</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> если формы для еврокекса нет, пеките в обычной форме для кексов — принцип тот же, только цилиндр не получится идеальным.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📦 Еврокекс: <strong>≈500 г теста</strong></span>
+              <span class="param-pill">🧁 Капкейк: <strong>52–55 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Выпечка 30–40 минут</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте при 170 °C с конвекцией 30–40 минут — время зависит от мощности духовки. Капкейки готовы примерно за 25 минут, кекс в форме-трубке печётся раньше остальных. Готовность проверяйте шпажкой: она должна выходить сухой.
+                <span class="source-badge">⏱ Урок 1: 00:37:51–00:38:18</span>
+              </p>
+              <div class="warning-box">
+                <strong>Трещины сверху — норма:</strong> кекс на плотном тесте всегда трескается, на вкус и на последующую сборку это не влияет.
+              </div>
+              <div class="tip-box">
+                <strong>Проверка:</strong> если шпажка сухая, но хочется уверенности — оставьте ещё на 2 минуты и вынимайте.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>170 °C</strong></span>
+              <span class="param-pill">⏱ Кекс: <strong>30–40 минут</strong></span>
+              <span class="param-pill">🧁 Капкейки: <strong>≈25 минут</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Остывание и извлечение</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Горячий кекс не трогайте: дайте ему немного остыть при комнатной температуре, затем уберите в морозилку или холодильник — остывать нужно быстро. Пока он тёплый, трубку можно немного сдвинуть внутри, чтобы потом она легко вышла.
+                <span class="source-badge">⏱ Урок 1: 01:15:03–01:16:00</span>
+              </p>
+              <div class="warning-box">
+                <strong>Резать горячий кекс нельзя:</strong> он развалится. Всё, что связано с начинкой и глазурью, делается только на полностью остывшем изделии.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Остывание: <strong>Комната, затем холод</strong></span>
+              <span class="param-pill">🔧 Трубка: <strong>Сдвинуть тёплой</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Клубничное конфи на пектине</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Из 200 г клубники сделайте пюре. 60 г сахара соедините с 8 г яблочного пектина и всыпьте дождиком в пюре при постоянном помешивании — температура массы не должна быть выше 40 °C. Доведите до кипения, добавьте лимонную кислоту на кончике ножа и варите 2–3 минуты до загустения.
+                <span class="source-badge">⏱ Урок 1: 00:38:40–00:42:39</span>
+              </p>
+              <div class="warning-box">
+                <strong>Пектин не загустел — значит, не доварили:</strong> либо мало кислоты, либо пектин некачественный. На пектине конфи получается ярче, на желатине — прозрачнее.
+              </div>
+              <div class="tip-box">
+                <strong>Если пектина нет:</strong> замочите 8 г быстрорастворимого желатина в 40 г холодной воды на 5–10 минут, клубнику и сахар возьмите те же. Пектина НН (100-пудового) на эту порцию нужно 3 г, а не 8.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍓 Клубника: <strong>200 г</strong></span>
+              <span class="param-pill">🌡 Ввод пектина: <strong>Не выше 40 °C</strong></span>
+              <span class="param-pill">⏱ Уваривание: <strong>2–3 минуты</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Глазурь гурмэ</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Растопите 150 г молочного шоколада в микроволновке или на водяной бане, введите 40 г растительного масла без запаха и 35–40 г рубленого фундука, перемешайте. Глазурь должна остыть до рабочей температуры 38–40 °C.
+                <span class="source-badge">⏱ Урок 1: 01:20:08–01:26:37</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> главное преимущество глазури гурмэ — темперировать шоколад не нужно, а застывает она прекрасно и режется без крошек и осколков. Ею же покрывают ромовые бабы.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Шоколад: <strong>150 г, молочный</strong></span>
+              <span class="param-pill">🌻 Масло: <strong>40 г, без запаха</strong></span>
+              <span class="param-pill">🌡 Рабочая температура: <strong>38–40 °C</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Сборка и пропитка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Остывший кекс разрежьте пополам, из нижней части выньте мякиш ложкой или ножом, чтобы получилась полость. Уложите клубничное конфи, накройте верхней частью. Если нужен более сочный кекс, пропитайте его гостовской пропиткой — 30 % сахара и 70 % воды по весу, от 80 до 150 г на изделие.
+                <span class="source-badge">⏱ Урок 1: 01:28:30–01:36:56</span>
+              </p>
+              <div class="warning-box">
+                <strong>Пропитка — только на полностью остывшем кексе:</strong> тёплый от влаги размокнет и поплывёт. Сначала начинка, потом пропитка ложкой или кисточкой, и только затем глазурь.
+              </div>
+              <div class="tip-box">
+                <strong>Начинка — любая:</strong> густое яблочное повидло, конфитюр из малины, варёная сгущёнка или карамель.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥄 Полость: <strong>Вынуть из нижней части</strong></span>
+              <span class="param-pill">💧 Пропитка: <strong>80–150 г, 30 : 70</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Глазурь и хранение</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Полейте собранный кекс глазурью гурмэ и дайте ей застыть. Без начинки и пропитки кекс в пергаменте и пакете хранится до 7 дней при 18–20 °C, в холодильнике — до 10 дней, в морозилке — месяц; размораживать в холодильнике около 2 часов. С начинкой срок — 72 часа и только в холодильнике.
+                <span class="source-badge">⏱ Урок 1: 01:12:11–01:13:37</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> это свойство всех кексов длительного хранения — на следующий день они вкуснее. С начинкой замораживать можно, но загущение тогда лучше делать на желатине или обратимом пектине НН, иначе при разморозке начинка вытечет.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📦 Без начинки: <strong>7 дней / 10 дней / месяц</strong></span>
+              <span class="param-pill">🧊 С начинкой: <strong>72 часа в холодильнике</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Коричневый сахар:</strong> даёт карамельный вкус и влажность, с белым кекс будет другим.</li>
+                <li><strong>Бумага выше края формы:</strong> держит тесто и не даёт ему вытечь по бокам.</li>
+                <li><strong>Два помола фундука:</strong> мелкий — структура, крупный — кусочки в срезе.</li>
+                <li><strong>4 г разрыхлителя вместо 3:</strong> так проще отвесить на бытовых весах.</li>
+                <li><strong>250 г теста на еврокекс с крышкой</strong> считают точно, чтобы тесто не легло слишком плотно.</li>
+                <li><strong>Остывание в холоде:</strong> кекс быстрее стабилизируется и лучше режется.</li>
+                <li><strong>Пектин любит кислоту:</strong> без лимонной кислоты конфи не загустеет.</li>
+                <li><strong>Глазурь гурмэ без темперирования:</strong> шоколад плюс растительное масло — и покрытие застывает глянцем.</li>
+                <li><strong>Пропитка 30 : 70:</strong> гостовская, 80–150 г на кекс, только на остывшем изделии.</li>
+                <li><strong>На следующий день вкуснее:</strong> это свойство любого кекса длительного хранения.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Бумага подрезана заподлицо:</strong> тесто вытекает по бокам.</li>
+                <li><strong>Масло растоплено, а не размягчено:</strong> тесто получается жидким и плохо держит форму.</li>
+                <li><strong>Жидкость «на глаз»:</strong> 80 г яиц и 30 г молока — критичная пропорция.</li>
+                <li><strong>Тесто кладут в форму с горкой:</strong> с крышкой оно упирается и не пропекается.</li>
+                <li><strong>Проверка «на глаз»:</strong> без шпажки легко вынуть сырой центр.</li>
+                <li><strong>Режут горячий кекс:</strong> разваливается.</li>
+                <li><strong>Пектин всыпают в кипящее пюре:</strong> комкуется; вводить нужно при 40 °C дождиком.</li>
+                <li><strong>Пропитка на тёплом кексе:</strong> он размокает.</li>
+                <li><strong>Глазурь слишком горячая:</strong> стекает и не даёт ровного слоя; рабочая температура 38–40 °C.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Форма:</strong> еврокекс или обычная форма для кексов; из того же теста — капкейки.</li>
+                <li><strong>Начинка:</strong> клубничное конфи, яблочное повидло, малиновый конфитюр, варёная сгущёнка, карамель.</li>
+                <li><strong>Загуститель:</strong> яблочный пектин, пектин НН (3 г) или желатин 8 г + 40 г воды.</li>
+                <li><strong>Глазурь:</strong> гурмэ из молочного шоколада с растительным маслом — без темперирования.</li>
+                <li><strong>Пропитка:</strong> по желанию, 30 % сахара и 70 % воды.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 — единственный файл серии, вебинар на 1 ч 52 мин: подготовка формы и замес (00:09:51–00:21:29), конфи (00:38:40–00:47:08), выпечка (00:37:51–01:12:07), хранение (01:12:11–01:13:37), глазурь гурмэ (01:20:08–01:26:37), сборка, пропитка и покрытие (01:28:30–01:47:00); DOCX «Фундучный кекс» — граммовки теста, конфи и глазури.</li>
+              <li><strong>Количество ореха:</strong> в DOCX фундук разделён на 70 г мелко измолотого и 45 г крупно рубленого; в уроке автор говорит «орехов взяла 115 граммов» — это те же 115 г.</li>
+              <li><strong>Яйца:</strong> в DOCX просто «80 г яйцо», в уроке автор уточняет, что это примерно два яйца категории С3.</li>
+              <li><strong>Разрыхлитель:</strong> 4 г против 3 г — автор объясняет округлением под бытовые весы, на странице оставлено 4 г.</li>
+              <li><strong>Пектин:</strong> в DOCX и уроке — 8 г яблочного пектина (100-пудового); для пектина НН автор называет 3 г на ту же порцию.</li>
+              <li><strong>Капкейки:</strong> в уроке капкейки пеклись около 25 минут — это отдельный ориентир, в DOCX он не указан.</li>
+              <li><strong>Пропитка:</strong> в DOCX её нет вовсе; пропорция 30 : 70 по весу и расход 80–150 г названы только в уроке, причём автор не успела показать процесс — кекс не остыл.</li>
+              <li><strong>Пробелы:</strong> вес готового кекса не назван; точное время охлаждения не указано; расход глазури на одно изделие не отвешивается.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_01.mp4 (около 01:47:20), обрезанный по решётке: два еврокекса, один уже под глазурью.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

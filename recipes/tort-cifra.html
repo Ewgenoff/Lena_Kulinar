@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Торт-цифра «6» на песочном сабле с маршмеллоу — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Торт-цифра Надежды Зубовой: песочное тесто сабле с миндальной мукой, выпечка под перфорированным ковриком при 170 °C, мягкий крем из творожного сыра со сметаной и декор из самодельного маршмеллоу — зверюшки, сердечки и цветы.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tort-cifra">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Торт-цифра «6» с маршмеллоу</h1>
+      <p class="recipe-lead">
+        Финал шестого месяца — цифра из песочного теста сабле с миндальной мукой. Коржи вырезают по трафарету, выпекают на перфорированном коврике и получают аккуратную клетчатую поверхность, а между четырьмя слоями идёт мягкий крем из творожного сыра со сметаной. Декор — собственный маршмеллоу: зверюшки, сердечки, цветы, расписанные водорастворимым красителем. Себестоимость низкая, эффект — как у витринного торта.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~40 мин (тесто и крем)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~2 ч (с маршмеллоу)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Стабилизация теста, выпечка 17–20 мин на партию, сушка маршмеллоу 30–40 мин или ночь</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">1–2 дня</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 торт-цифра, около 1,5 кг</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-cifra.jpg" alt="Готовый торт-цифра «6» из песочных коржей с кремом, полностью засыпанный фигурками маршмеллоу: мишки, зайцы, единороги, сердечки и цветы" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 торт)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">торт-цифра</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База калькулятора — одна цифра: четыре песочных коржа, крем на три прослойки и верх, декор из маршмеллоу. Автор замешивала тесто двойной порцией и получала четыре цифры — на странице пересчитано на одну.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> торт</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на коржи, крем и домашний маршмеллоу. Тесто дешёвое: дорогие позиции здесь только творожный сыр и миндальная мука, а вместо готового декора — сахар, желатин и красители.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное и яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5 %</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Холодное, из холодильника — иначе не получится крошка</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творожный сыр</strong>:
+                <span class="shopping-qty" data-base-amount="400" data-unit="г">400 г</span>
+                <span class="shopping-hint">Холодный, в крем</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сметана 20–30 %</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Автор берёт 30 %, вполне подойдёт и 20 %</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца С1</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span>
+                <span class="shopping-hint">60 г яиц в тесто и 2 белка (65 г) в маршмеллоу; два желтка останутся — из них можно замесить ещё сабле</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Бакалея, желирующее и декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="125" data-unit="г">125 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Миндальная мука</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">Даёт сабле ореховый вкус и нежность</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="47.5" data-unit="г">47,5 г</span>
+                <span class="shopping-hint">В тесто; не заменяйте сахаром-песком</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="380" data-unit="г">380 г</span>
+                <span class="shopping-hint">200 г в крем и 180 г в сироп для маршмеллоу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сироп глюкозы</strong>:
+                <span class="shopping-qty" data-base-amount="20" data-unit="г">20 г</span>
+                <span class="shopping-hint">Чтобы маршмеллоу дольше оставались свежими</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин быстрорастворимый</strong>:
+                <span class="shopping-qty" data-base-amount="16" data-unit="г">16 г</span>
+                <span class="shopping-hint">Принципиально «Dr. Oetker»: заливается 1 к 6, а не 1 к 5</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ванильный сахар или кристаллический ванилин</strong>:
+                <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+                <span class="shopping-hint">Только кристаллический: жидкий экстракт даст вкрапления и поменяет цвет</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="1.5" data-unit="г">1,5 г</span>
+                <span class="shopping-hint">Щепотка, сразу в муку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кукурузный крахмал</strong> — по вкусу
+                <span class="shopping-hint">Подстилка для отсаживания фигурок, используется многократно</span>
+              </div>
+            </li>
+            <li class="shopping-item" style="border-style: dashed;"><div class="shopping-item-content">
+                <strong>Водорастворимые красители (опционально)</strong> — по вкусу
+                <span class="shopping-hint">Для окраски маршмеллоу и росписи мордочек</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — перфорированный коврик (или силиконовый), трафарет цифры 6 из бумаги, кондитерские мешки, насадка «французская звезда», кисточка
+                <span class="shopping-hint">Коврик нужен ради клетчатого рисунка на корже</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Песочное тесто сабле</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Миндальная мука
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1.5" data-unit="г">1,5 г</span> — Соль
+              <span class="ingredient-note">Сразу в муку, вместе с миндальной</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="47.5" data-unit="г">47,5 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сливочное масло
+              <span class="ingredient-note">Холодное, кубиками</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Яйца
+              <span class="ingredient-note">Примерно одно яйцо С1 без скорлупы</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="400" data-unit="г">400 г</span> — Творожный сыр
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Сметана 20–30 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сахар
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Маршмеллоу для декора</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="180" data-unit="г">180 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Сироп глюкозы
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Вода в сироп
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Ванильный сахар
+              <span class="ingredient-note">Или кристаллический ванилин</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="16" data-unit="г">16 г</span> — Желатин быстрорастворимый
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="35" data-unit="г">35 г</span> — Вода холодная для желатина
+              <span class="ingredient-note">Пропорция 1 к 6</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="65" data-unit="г">65 г</span> — Белок яичный
+              <span class="ingredient-note">2 белка категории С1</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Декор и оснастка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Кукурузный крахмал — по вкусу
+              <span class="ingredient-note">Ощутимый слой на противне, можно использовать много раз</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Водорастворимые красители — по вкусу
+              <span class="ingredient-note">Для окраски массы и росписи готовых фигурок</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Орехи, карамель или фруктовая начинка для центра
+              <span class="ingredient-note">По желанию, автор оставляет на усмотрение</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Сухие ингредиенты и масло в комбайн</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В чашу комбайна отправьте 125 г муки, 15 г миндальной муки и 1,5 г соли, затем 47,5 г сахарной пудры. Несколько оборотов, чтобы масса осела, и только потом добавляйте 150 г холодного сливочного масла, нарезанного кубиками.
+                <span class="source-badge">⏱ Урок 1: 00:00:28–00:01:23</span>
+              </p>
+              <div class="warning-box">
+                <strong>Порядок загрузки критичен:</strong> если сначала положить масло, оно размажется по дну чаши и тесто не получится. Мука и ореховая мука должны лежать внизу, масло — сверху.
+                <span class="source-badge">⏱ Урок 1: 00:00:46–00:01:02</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> рубить можно и ножом, если комбайна нет, — важно только не греть тесто руками.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Масло: <strong>Холодное, кубиками</strong></span>
+              <span class="param-pill">🌰 Миндальная мука: <strong>15 г</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>Масло вмешано, масса осела</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Крошка, затем яйцо</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Как только масло вмешалось, включите рубку: должен пойти процесс образования крошки. Когда крошка пошла, добавьте 30 г яиц и вымешивайте на маленькой скорости, пока масса не станет крупной крошкой — остановиться можно и на мелкой, это не принципиально.
+                <span class="source-badge">⏱ Урок 1: 00:01:26–00:03:04</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не вымешивайте долго:</strong> из-за тепла масло начнёт таять, и вместо сабле получится затяжное тесто. Мелкая или крупная крошка — оба варианта рабочие.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Яйца: <strong>30 г</strong></span>
+              <span class="param-pill">🎚 Скорость: <strong>Маленькая</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>Крупная крошка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Комок, четыре части и раскатка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Соберите крошку в комок (автор при двойном замесе делила его на четыре части — по цифре на каждую). Раскатайте между двумя листами пергамента толщиной 3–5 мм и уберите в холодильник или морозилку на стабилизацию. Раскатывать удобно с трафаретом рядом: сразу подгоняйте пласт под размер цифры.
+                <span class="source-badge">⏱ Урок 1: 00:03:04–00:04:18</span>
+              </p>
+              <div class="warning-box">
+                <strong>Толщина:</strong> в DOCX указано 3 мм, в уроке автор говорит о 4–5 мм. Очень тонко раскатывать не надо — корж должен держать форму и не ломаться при переносе.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> раскатанное тесто хранится в холодильнике в пергаменте до 14 дней, в морозилке — до 2 месяцев. На застывший пласт можно ставить холодную посуду, чтобы не занимать полку.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Толщина: <strong>3–5 мм</strong></span>
+              <span class="param-pill">🧊 Стабилизация: <strong>Холодильник или морозилка</strong></span>
+              <span class="param-pill">📦 Запас: <strong>2 месяца в морозилке</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Вырезать цифру по трафарету</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Достаньте почти замороженный пласт и вырежьте шестёрку прямо на том пергаменте, на котором раскатывали, — переносить тесто на коврик не нужно. Уберите обрезки, не деформируя цифру, и подровняйте края ножом.
+                <span class="source-badge">⏱ Урок 2: 00:00:03–00:01:14</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> обрезки скатайте в комочек, снова раскатайте между пергаментами и уберите в морозилку — из них потом выйдет ещё одна цифра или песочная основа для чизкейка.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">✂️ Инструмент: <strong>Нож и трафарет</strong></span>
+              <span class="param-pill">🧊 Тесто: <strong>Почти замороженное</strong></span>
+              <span class="param-pill">🔧 Обрезки: <strong>В морозилку</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Выпечка под перфорированным ковриком</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Накройте цифру перфорированным ковриком и слегка придавите — тогда на поверхности останется аккуратный клетчатый рисунок. Выпекайте при 170 °C с конвекцией 17–20 минут. При конвекции на противень спокойно встают две цифры одновременно.
+                <span class="source-badge">⏱ Урок 2: 00:01:14–00:01:58</span>
+              </p>
+              <div class="warning-box">
+                <strong>Коврик — только для рисунка:</strong> без него корж тоже испечётся, просто поверхность будет гладкой. Снимать коврик нужно осторожно, чтобы не сломать горячий корж.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> коржи удобно печь партиями — пока печётся один, вырезайте следующий.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>170 °C</strong></span>
+              <span class="param-pill">⏱ Время: <strong>17–20 минут</strong></span>
+              <span class="param-pill">💨 Режим: <strong>Конвекция</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Вариант коржей: медовые</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Если песочное тесто не хочется, цифру можно собрать на медовых коржах. На двойной замес: 370 г муки, 2 яйца С0, 150 г сахара, 60 г мёда, 100 г сливочного масла и 1 ч. л. соды. Сахар, яйца, мёд и щепотку соли смешайте венчиком, добавьте масло и на среднем огне доведите до кипения, не кипятя. Снимите с огня, введите соду и дайте массе остыть до комнатной температуры, затем вмешайте сразу всю просеянную муку.
+                <em style="font-size: 13px; color: var(--text-muted);">Источник: DOCX «Торт-цифра», раздел «Альтернативные медовые коржи»</em>
+              </p>
+              <div class="warning-box">
+                <strong>Муку не добавлять «до нужной консистенции»:</strong> тесто получится сухим и жёстким. Слегка липкое — это нормально; уберите его в пакете в холодильник на пару часов или на ночь.
+              </div>
+              <div class="tip-box">
+                <strong>Выпечка медовых:</strong> раскатайте части по 3–4 мм, вырежьте цифру, наколите вилкой, чтобы не пузырилась, и пеките при 170 °C 7–9 минут до лёгкого румянца. Тесто слегка увеличится в размере, но форму удержит.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>170 °C</strong></span>
+              <span class="param-pill">⏱ Время: <strong>7–9 минут</strong></span>
+              <span class="param-pill">🍯 Мёд: <strong>60 г на двойной замес</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Крем из сыра, сметаны и сахара</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отвесьте в одну миску 400 г творожного сыра, 250 г сметаны 20–30 % и 200 г сахарного песка. Взбивайте сначала на небольшой скорости, чтобы не летело в стороны, потом на максимальной — не менее трёх минут, пока сахар не растворится. Готовый крем плотный, без крупинок.
+                <span class="source-badge">⏱ Урок 3: 00:00:46–00:01:28</span>
+              </p>
+              <div class="warning-box">
+                <strong>Крем для песочной цифры должен быть мягким:</strong> масляный крем вроде «масло + сгущёнка» схватится, и такой торт придётся пилить, а не нарезать. сырно-сметанный крем режется ножом.
+                <span class="source-badge">⏱ Урок 3: 00:01:29–00:01:44</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Взбивание: <strong>Не менее 3 минут</strong></span>
+              <span class="param-pill">🥣 Крем: <strong>Около 850 г</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>Плотно, без крупинок сахара</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Отсаживание крема по периметру</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите крем в кондитерский мешок. Подойдёт круглая насадка, насадка «французская звезда» (автор берёт ту, что поменьше), а можно просто отрезать кончик мешка. Идите по внешнему и по внутреннему периметру цифры: поднимайтесь вместе с насадкой и смазывайте крем внутрь торта, чтобы он не вылез за край. Красивые «штучечки» важны только по краям, центр заполняйте как попало.
+                <span class="source-badge">⏱ Урок 3: 00:01:44–00:02:30</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> в центр можно добавить орехи, карамель или фруктовую начинку — на ваше усмотрение, это уже про вкус, а не про технику.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧁 Насадка: <strong>Звезда, круглая или просто мешок</strong></span>
+              <span class="param-pill">📐 Порядок: <strong>Сначала периметр, потом центр</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Сборка: четыре коржа, три слоя</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Уложите корж, отсадите крем, накройте следующим — и так три раза. Цифры выкладывайте строго друг над другом, иначе торт перекосится. Каждый слой слегка прижмите, чтобы торт стал единым целым.
+                <span class="source-badge">⏱ Урок 3: 00:02:54–00:03:08</span>
+              </p>
+              <div class="warning-box">
+                <strong>Ровность важнее скорости:</strong> песочные коржи жёсткие, смещённую цифру уже не поправить — она просто повиснет в креме.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍰 Слоёв: <strong>4 коржа, 3 прослойки</strong></span>
+              <span class="param-pill">✋ Прижим: <strong>Каждый слой</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Верх под декор</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                На верхний корж отсадите оставшийся крем по всей поверхности — здесь уже надо постараться, потому что вся площадь уйдёт под фигурки. Вес готового торта без декора — примерно 1,5 кг.
+                <span class="source-badge">⏱ Урок 3: 00:03:14–00:03:41</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> верх можно засыпать не только фигурками, но и просто «бомбошками» — крем всё равно закроется полностью.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ Вес торта: <strong>≈1,5 кг без декора</strong></span>
+              <span class="param-pill">🧊 Хранение: <strong>В холодильнике</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Маршмеллоу: желатин и сироп</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Залейте 16 г быстрорастворимого желатина 35 г холодной воды — пропорция 1 к 6. На противень постелите силиконовый коврик или ровную бумагу и насыпьте ощутимый слой кукурузного крахмала. В сотейник положите 180 г сахара, 50 г воды, 20 г глюкозного сиропа и 10 г ванильного сахара. Начните взбивать 65 г тёплого белка на средней скорости и поставьте сироп на огонь.
+                <span class="source-badge">⏱ Урок 4: 00:00:10–00:01:07</span>
+              </p>
+              <div class="warning-box">
+                <strong>Только кристаллический ванилин:</strong> жидкий экстракт даст вкрапления и изменит цвет массы. Желатин нужен быстрорастворимый, который заливается 1 к 6.
+                <span class="source-badge">⏱ Урок 4: 00:00:22–00:00:46</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сироп: <strong>110–112 °C</strong></span>
+              <span class="param-pill">💧 Желатин: <strong>1 к 6</strong></span>
+              <span class="param-pill">🥚 Белок: <strong>65 г (2 шт. С1)</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Сироп в белок и желатин</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Как только сироп дойдёт до 110–112 °C (по DOCX — после закипания прокипятить 2 минуты), снимите его с огня и влейте тонкой уверенной струйкой во взбивающийся на максимальной скорости белок. Взбивайте 5 минут: меренга должна стать плотной, блестящей и эластичной, с «клювом», который держится, но поворачивается во все стороны. Растопьте желатин в микроволновке (или на водяной бане), введите в меренгу и взбивайте ещё около минуты — масса станет тягучей и льющейся.
+                <span class="source-badge">⏱ Урок 4: 00:02:12–00:04:18</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сироп не должен остыть:</strong> вливайте его сразу после достижения температуры, иначе он затянется в нити и не вмешается в белок.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Взбивание: <strong>5 минут + 1 минута с желатином</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>Плотный блестящий «клюв»</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Окраска и мешки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разделите массу на порции, в каждую добавьте водорастворимый краситель и перемешайте лопаточкой. Разложите по кондитерским мешкам, отрезав самый кончик. Если маршмеллоу в процессе застывает, прогревайте мешок пульсами по 3–4 секунды в микроволновке, затем разомните и перемешайте.
+                <span class="source-badge">⏱ Урок 4: 00:04:24–00:04:50</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> красителей нужно немного — цвет должен остаться чистым, без грязных оттенков.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🎨 Краситель: <strong>Водорастворимый</strong></span>
+              <span class="param-pill">♨️ Разогрев: <strong>Пульсы 3–4 секунды</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Фигурки на крахмале</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отсаживайте фигурки на крахмал слоями, давая каждому схватиться: сначала туловища и головы (треугольники у единорогов, круги у котиков и зайцев), через пару минут — уши, лапки, хвосты, рога и чёлочки, в конце — сердечки и цветочки в лапки. Через 30–40 минут обсыпьте фигурки крахмалом и смахните его кисточкой. Можно оставить маршмеллоу на ночь — тогда оно подсохнет и не будет липнуть.
+                <span class="source-badge">⏱ Урок 5: 00:00:08–00:07:34</span>
+              </p>
+              <div class="warning-box">
+                <strong>Слои делают по очереди:</strong> если отсадить уши на свежую голову, они провалятся. Ждите, пока предыдущий слой стабилизируется.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Сушка: <strong>30–40 минут или ночь</strong></span>
+              <span class="param-pill">🥣 Подложка: <strong>Кукурузный крахмал</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">15</span>
+                <h3 class="step-title">Роспись и выкладка на торт</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Мордочки рисуйте водорастворимым красителем: кисточку окуните, почти насухо вытрите и наносите краску тонко — так получаются аккуратные глазки и носики. Готовые фигурки снимите с крахмала, смахните его с обратной стороны кисточкой и выложите на крем, закрывая всю поверхность цифры.
+                <span class="source-badge">⏱ Урок 5: 00:07:54–00:10:13</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> на 14 февраля можно засыпать весь торт сердечками, на детский день рождения — зверюшками. Маршмеллоу хранится при комнатной температуре 72 часа, в холодильнике в плотном пакете — месяц, а подсохшие фигурки на влажном креме снова станут мягкими.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🖌 Роспись: <strong>Водорастворимый краситель и кисточка</strong></span>
+              <span class="param-pill">⏱ Срок: <strong>72 часа при комнатной температуре</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Миндальная мука в сабле:</strong> 15 г на замес дают ореховый вкус и рассыпчатость, которой нет у обычного песочного теста.</li>
+                <li><strong>Сначала мука, потом масло:</strong> иначе масло размазывается по дну чаши комбайна.</li>
+                <li><strong>Перфорированный коврик сверху:</strong> оставляет на корже клетчатый рисунок и не даёт тесту вспучиться.</li>
+                <li><strong>Обрезки — не отходы:</strong> из них выходит ещё одна цифра или основа для чизкейка.</li>
+                <li><strong>Мягкий крем обязателен:</strong> с масляным кремом песочный торт пришлось бы пилить.</li>
+                <li><strong>Крем по периметру:</strong> бортик, смазанный внутрь, не даёт крему вылезти за край при укладке следующей цифры.</li>
+                <li><strong>Глюкозный сироп в маршмеллоу:</strong> продлевает свежесть, без него масса быстрее сохнет.</li>
+                <li><strong>Крахмал многоразовый:</strong> после сушки фигурок его просеивают и используют снова.</li>
+                <li><strong>Маршмеллоу на ночь:</strong> подсохшие фигурки не липнут и не тускнеют, их не нужно припылять крахмалом.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Масло первым в чашу:</strong> размазывается по дну, крошка не образуется.</li>
+                <li><strong>Долгое вымешивание:</strong> масло тает, тесто становится затяжным.</li>
+                <li><strong>Тонкая раскатка:</strong> корж ломается при переносе на противень.</li>
+                <li><strong>Перенос теста на коврик:</strong> цифру легко деформировать; выпекайте прямо на пергаменте.</li>
+                <li><strong>Масляный крем:</strong> песочный торт не режется, а пилится.</li>
+                <li><strong>Крем не по периметру:</strong> выдавливается за край и портит силуэт цифры.</li>
+                <li><strong>Смещённые коржи:</strong> торт перекашивается, край провисает.</li>
+                <li><strong>Жидкий ванилин в маршмеллоу:</strong> вкрапления и сероватый оттенок.</li>
+                <li><strong>Холодный сироп:</strong> затягивается нитями и не вмешивается в белок.</li>
+                <li><strong>Фигурки одним слоем сразу:</strong> уши и лапки проваливаются в незастывшую массу.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Коржи:</strong> песочное сабле или медовые — второй вариант описан в DOCX отдельным блоком.</li>
+                <li><strong>Коврик:</strong> перфорированный для рисунка или обычный силиконовый без него.</li>
+                <li><strong>Насадка:</strong> «французская звезда», круглая или просто отрезанный кончик мешка.</li>
+                <li><strong>Начинка центра:</strong> орехи, карамель, фруктовая начинка — по вкусу.</li>
+                <li><strong>Цифра:</strong> та же технология годится для любой цифры и буквы, меняется только трафарет.</li>
+                <li><strong>Декор:</strong> зверюшки, сердечки, цветы, бабочки, ромашки — ограничений нет.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 (замес сабле, раскатка, стабилизация — 00:00:02–00:05:00); Урок_02.mp4 (вырезание и выпечка цифры — 00:00:03–00:01:58); Урок_03.mp4 (крем, отсаживание, сборка — 00:00:02–00:03:41); Урок_04.mp4 (маршмеллоу — 00:00:02–00:04:50); Урок_05.mp4 (фигурки, роспись, декор — 00:00:02–00:11:10); DOCX «Торт-цифра» — граммовки, альтернативные медовые коржи, режимы выпечки.</li>
+              <li><strong>Толщина раскатки:</strong> в DOCX указано 3 мм, в уроке автор говорит «4–5 мм». На странице взят диапазон 3–5 мм.</li>
+              <li><strong>Порция теста:</strong> DOCX даёт замес на 250 г муки и приписку «я делала двойной замес», в уроке двойной замес делится на 4 части — по цифре на каждую. В калькуляторе база — одна цифра, поэтому тесто пересчитано как четверть двойного замеса (отсюда 47,5 г пудры и 1,5 г соли).</li>
+              <li><strong>Крем:</strong> 400 г сыра, 200 г сахара и 250 г сметаны даны в DOCX одной порцией; в уроке этого количества хватает на одну цифру — торт весит около 1,5 кг.</li>
+              <li><strong>Тайминги маршмеллоу:</strong> в уроке сироп греют до 110–112 °C, в DOCX — кипятят 2 минуты после закипания и взбивают по 30 секунд на каждом этапе; в уроке меренгу взбивают 5 минут и ещё минуту с желатином. На странице взяты тайминги урока, температура — из урока, ориентир по DOCX указан рядом.</li>
+              <li><strong>Желатин:</strong> автор подчёркивает, что нужен быстрорастворимый «Dr. Oetker» с заливкой 1 к 6, а не 1 к 5 — с обычным желатином количество воды придётся пересчитывать.</li>
+              <li><strong>Пробелы:</strong> время стабилизации теста в холодильнике не названо; сколько именно фигурок нужно на одну цифру — тоже; расход красителей не отвешивается; для медовых коржей не указан выход в цифрах.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_05.mp4 (около 00:11:30): готовая цифра «6», полностью покрытая фигурками маршмеллоу.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Шоколадный торт на бисквите со сгущёнкой и вишней — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Шоколадный бисквит Надежды Зубовой на сгущённом молоке и сметане с алкализованным какао: два коржа 30×40 см по 8–12 минут при 170 °C, крем из творожного сырa со сливками и тёмным шоколадом, вишнёвая прослойка и сахарная картинка.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tort-shokoladnyy">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Шоколадный торт с вишней и кремом на творожном сыре</h1>
+      <p class="recipe-lead">
+        Шоколадный вариант той же бюджетной серии, что «Красный бархат» и «Ванильный»: бисквит на сгущённом молоке и сметане, но с алкализованным какао. Какао и разрыхлитель сначала смешивают с мукой — иначе в тесте останутся комочки. Прослойка — замороженная вишня, крем — творожный сыр со сливками и тёмным шоколадом. Собирается в рамке 20×30 см, замораживается на ночь и декорируется сахарной картинкой.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~40 мин (тесто и крем)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Выпечка 8–12 мин на корж, остывание, ночь в морозилке</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">2 дня</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 торт 20×30 см, 4 слоя бисквита</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-shokoladnyy.jpg" alt="Разрез шоколадного торта: четыре бисквитных коржа с кремом и прослойками замороженной вишни" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 торт)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">торт</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База калькулятора — один торт 20×30 см: два коржа 30×40 см, разрезанных пополам. Крем — 750 г, по 250 г в три прослойки. Вишню автор не взвешивает: кладёт горстью в два слоя.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> торт</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на коржи, крем, вишнёвую прослойку и декор. Торт бюджетный: сгущёнка и сметана заменяют дорогое масло, шоколад в крем годится самый дешёвый, а глазурь нужна только для изоляции картинки.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, шоколад</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сгущённое молоко</strong>:
+                <span class="shopping-qty" data-base-amount="500" data-unit="г">500 г</span>
+                <span class="shopping-hint">Можно с заменителем молочного жира — для бисквита не критично</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сметана 15 %</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Заменяет сливочное масло из «Молочной девочки»</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца С1</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span>
+                <span class="shopping-hint">По весу — около 200 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творожный сыр</strong>:
+                <span class="shopping-qty" data-base-amount="380" data-unit="г">380 г</span>
+                <span class="shopping-hint">Холодный; в уроке — Cremette</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 30 % и выше</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Холодные, в крем</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Тёмный шоколад или шоколадная глазурь</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Самый дешёвый — в креме качество шоколада почти не чувствуется</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Бакалея, вишня, декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао алкализованное</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Экономичнее обычного: даёт интенсивный цвет при малой закладке</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Разрыхлитель</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">Обязателен; смешивается с мукой и какао</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="120" data-unit="г">120 г</span>
+                <span class="shopping-hint">В крем. Обычный песок, а не пудра: экономия вдвое</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="0.25" data-unit="ч. л.">0,25 ч. л.</span>
+                <span class="shopping-hint">Щепотка в тесто</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Вишня замороженная</strong> — по вкусу
+                <span class="shopping-hint">Автор не взвешивает; подойдут черника, смородина или клубника кусочками</span>
+              </div>
+            </li>
+            <li class="shopping-item" style="border-style: dashed;"><div class="shopping-item-content">
+                <strong>Сахарная бумага с картинкой и белая шоколадная глазурь (опционально)</strong> — по вкусу
+                <span class="shopping-hint">Глазурь идёт тонким слоем для изоляции картинки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — раздвижная рамка 20×30 см, пергамент, линейка и нож-пила
+                <span class="shopping-hint">Бока бюджетных тортов не подрезают: срез и так аккуратный</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Бисквит</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="500" data-unit="г">500 г</span> — Сгущённое молоко
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span> — Яйца С1
+              <span class="ingredient-note">Около 200 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сметана 15 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="0.25" data-unit="ч. л.">0,25 ч. л.</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Какао алкализованное
+              <span class="ingredient-note">Смешать с мукой до ввода в тесто</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Разрыхлитель
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="380" data-unit="г">380 г</span> — Творожный сыр
+              <span class="ingredient-note">Холодный</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Сахар
+              <span class="ingredient-note">Обычный песок, не пудра</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сливки 30 % и выше
+              <span class="ingredient-note">Холодные</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Тёмный шоколад или глазурь
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Прослойка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Вишня замороженная — по вкусу
+              <span class="ingredient-note">Не размораживать и не обрабатывать; вес автором не назван</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Сахарная бумага с картинкой
+              <span class="ingredient-note">Размер подгоняют под нарезку торта</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Белая шоколадная глазурь
+              <span class="ingredient-note">Для изоляции картинки, тонким слоем</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Сухие ингредиенты: мука, какао, разрыхлитель</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В шоколадном бисквите последовательность другая: сначала 200 г муки соедините с 15 г разрыхлителя и 30 г алкализованного какао и перемешайте венчиком. Только после этого сухие ингредиенты отправляются в тесто.
+                <span class="source-badge">⏱ Урок 1: 00:00:01–00:01:18</span>
+              </p>
+              <div class="warning-box">
+                <strong>Почему какао смешивают с мукой:</strong> если всыпать его прямо в жидкую массу, в бисквите останутся комочки какао. Разрыхлителя в этом рецепте много намеренно — чем его больше, тем меньше вероятных ошибок.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> берите алкализованное какао — при небольшом количестве оно даёт интенсивный цвет и вкус, поэтому выходит экономичнее обычного.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌾 Мука: <strong>200 г</strong></span>
+              <span class="param-pill">🍫 Какао: <strong>30 г, алкализованное</strong></span>
+              <span class="param-pill">🧂 Разрыхлитель: <strong>15 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Жидкая база</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Смешайте 500 г сгущённого молока, 4 яйца С1 (около 200 г), 100 г сметаны 15 % и 0,25 ч. л. соли. Взбивайте 3 минуты — масса станет однородной и очень жидкой.
+                <em style="font-size: 13px; color: var(--text-muted);">Источник: DOCX «Торт_Шоколадный»</em>
+              </p>
+              <div class="warning-box">
+                <strong>Замес в уроке не показан:</strong> в этом видео автор делает сразу три вида бисквита и показывает только момент ввода муки. Пропорции жидкой базы и порядок даны по DOCX — они полностью совпадают с «Красным бархатом» и «Ванильным».
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Взбивание: <strong>3 минуты</strong></span>
+              <span class="param-pill">🥚 Яйца: <strong>4 шт. ≈ 200 г</strong></span>
+              <span class="param-pill">🥛 Сметана: <strong>15 %</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Ввести сухие в тесто</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отправьте муку с разрыхлителем и какао в бисквитную массу и перемешайте миксером: сначала на небольшой скорости, чтобы не летело в стороны, затем на максимуме до объединения. Тесто готово.
+                <span class="source-badge">⏱ Урок 1: 00:01:18–00:02:10</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🎚 Скорость: <strong>Сначала малая, потом максимум</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>Однородный тёмный цвет</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Раскладка по двум противням</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Распределите тесто по весу на два противня 30×40 см, застеленных пергаментом, и разровняйте как можно ровнее. По этому рецепту выходят ровно два коржа на стандартный противень.
+                <span class="source-badge">⏱ Урок 1: 00:02:10–00:02:30</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> чем ровнее слой, тем одинаковее по высоте будут коржи, а значит и ровнее торт после нарезки.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Противень: <strong>30×40 см, два</strong></span>
+              <span class="param-pill">⚖️ Тесто: <strong>Пополам по весу</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Выпечка 8–12 минут при 170 °C</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте при 170 °C в режиме конвекции 8 минут — при необходимости до 12. Готовность проверяйте нажатием и зубочисткой. Коржи должны остыть до комнатной температуры, только потом собирайте торт.
+                <span class="source-badge">⏱ Урок 1: 00:02:44–00:03:10</span>
+              </p>
+              <div class="warning-box">
+                <strong>Газовая духовка или нет конвекции:</strong> пеките по очереди, по одному коржу. Тесто спокойно ждёт своей очереди до 60 минут.
+              </div>
+              <div class="tip-box">
+                <strong>Если оставляете коржи на время:</strong> закройте их плёнкой, иначе засохнут.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>170 °C</strong></span>
+              <span class="param-pill">⏱ Время: <strong>8–12 минут</strong></span>
+              <span class="param-pill">💨 Режим: <strong>Конвекция</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Крем: сыр, сахар, сливки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отвесьте в чашу 380 г холодного творожного сыра, 120 г сахара и 150 г холодных сливок 30 % и выше. Перемешайте на маленькой скорости, чтобы сливки не разлетались, затем взбивайте на максимальной 2–3 минуты. Крем получится плотным, а сахар в нём не чувствуется.
+                <span class="source-badge">⏱ Урок 2: 00:01:49–00:03:09</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> килограмм творожного сыра и литр сливок стоят примерно одинаково, поэтому в креме выгодно совмещать и то и другое. А вообще, для бизнеса на дешёвых тортах крем должен быть один на все торты — дальше в него добавляют варёную сгущёнку, карамель или шоколад.
+                <span class="source-badge">⏱ Урок 2: 00:00:04–00:00:43</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Взбивание: <strong>2–3 минуты на максимуме</strong></span>
+              <span class="param-pill">🍬 Сахар: <strong>Песок, не пудра</strong></span>
+              <span class="param-pill">📦 Срок: <strong>72 часа</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Ввести шоколад</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Растопите 100 г тёмного шоколада или шоколадной глазури в микроволновке либо на водяной бане. Добавьте в растопленную массу две столовые ложки готового крема, интенсивно перемешайте, а затем введите эту смесь в крем миксером.
+                <em style="font-size: 13px; color: var(--text-muted);">Источник: DOCX «Торт_Шоколадный»</em>
+              </p>
+              <div class="warning-box">
+                <strong>Шоколад идёт через «затравку»:</strong> если вылить его в холодный крем сразу, он схватится хлопьями. Две ложки крема выравнивают температуры.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> годится самый дешёвый шоколад и даже глазурь — в креме качество шоколада почувствовать невероятно сложно, а яркий вкус он даёт.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Шоколад: <strong>100 г</strong></span>
+              <span class="param-pill">🥣 Затравка: <strong>2 ст. л. крема</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Разрезать коржи</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Переверните один корж на другой и снимите пергамент — так коржи не сломаются. Разрежьте оба сразу, насквозь, по линейке: получатся четыре коржа 20×30 см.
+                <span class="source-badge">⏱ Урок 3: 00:00:01–00:00:54</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> резать сразу два коржа удобнее, чем по одному, — они друг друга держат.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📐 Коржи: <strong>4 шт. по 20×30 см</strong></span>
+              <span class="param-pill">🔧 Инструмент: <strong>Линейка и нож-пила</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Сборка: крем и вишня</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Первый корж уложите в рамку и ограничьте её так, чтобы торт собрался плотно. Отвесьте крем и распределите его ровно по коржу, затем хаотично разложите замороженную вишню и слегка вдавите её в крем. Накройте следующим коржом и прижмите — «массаж» здесь нужен основательный, иначе вишня выдавится наружу. Повторите слои.
+                <span class="source-badge">⏱ Урок 3: 00:00:56–00:04:50</span>
+              </p>
+              <div class="warning-box">
+                <strong>Крем по весу, 250 г в слой:</strong> от этого зависит, встанет ли торт ровно и хватит ли крема на все три прослойки.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> вишню можно не размораживать и ничем не обрабатывать. Подойдут любые мелкие замороженные ягоды — черника, смородина, клубника кусочками. Если бюджет не проходит, ягоды можно не класть вовсе: торт от этого не проиграет.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ Крем в слой: <strong>250 г</strong></span>
+              <span class="param-pill">🍒 Вишня: <strong>В два слоя, горстью</strong></span>
+              <span class="param-pill">✋ Прижим: <strong>Сильный</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Морозилка на ночь</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Собранный торт отправьте в морозилку до полного замерзания — это займёт примерно ночь. Замороженный торт режется ровно, а сахарная картинка потом лучше ложится на поверхность.
+                <span class="source-badge">⏱ Урок 3: 00:05:11–00:05:17</span>
+              </p>
+              <div class="warning-box">
+                <strong>Замораживать нужно в торте, а не по частям:</strong> автор не рекомендует замораживать отдельно крем или коржи — собирайте и замораживайте уже готовую заготовку.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Морозилка: <strong>Ночь</strong></span>
+              <span class="param-pill">📦 Срок: <strong>72 часа в холодильнике</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Картинка и глазурь</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Достаньте замороженный торт, отделите от пергамента и переверните ровной стороной вверх. Картинку, напечатанную на сахарной бумаге, изолируйте очень тонким слоем хорошо разогретой белой шоколадной глазури — на все картинки уходит минимум. Подложка — обычный пергамент.
+                <span class="source-badge">⏱ Урок 4: 00:01:34–00:04:24</span>
+              </p>
+              <div class="warning-box">
+                <strong>Безопасный срок картинки — 24 часа:</strong> при разморозке торт выделяет влагу, и картинка может пострадать. Выкладывайте её непосредственно перед передачей клиенту.
+                <span class="source-badge">⏱ Урок 4: 00:00:41–00:01:22</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🖼 Картинка: <strong>Сахарная бумага</strong></span>
+              <span class="param-pill">🍫 Изоляция: <strong>Белая глазурь, тонко</strong></span>
+              <span class="param-pill">⏱ Срок: <strong>До 24 часов</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Нарезка: торт, бенто и пирожные</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Из одной заготовки выходят торт, бенто 10×12 см и пирожные 9×3,5 см. Режут подмороженный торт по линейке, с усилием, а после каждого разреза вытирают нож. Бюджетные торты с боков не подрезают: срез и так аккуратный, а высота коржей и слоя крема сбалансированы. Порции переносят на пергамент и укладывают в коробку или капсулу.
+                <span class="source-badge">⏱ Урок 4: 00:04:36–00:13:57</span>
+              </p>
+              <div class="tip-box">
+                <strong>Если картинку распечатать негде:</strong> испеките дополнительный бисквит, сделайте из него крошку и обсыпьте края и верх по принципу медовика.
+                <em style="font-size: 13px; color: var(--text-muted);">Источник: DOCX «Торт_Шоколадный»</em>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍰 Пирожное: <strong>9×3,5 см</strong></span>
+              <span class="param-pill">🎁 Бенто: <strong>10×12 см</strong></span>
+              <span class="param-pill">🧊 Резать: <strong>Подмороженным</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Какао — в муку:</strong> иначе в бисквите останутся комочки.</li>
+                <li><strong>Много разрыхлителя:</strong> 15 г на замес — страховка от ошибок, бисквит получается стабильно.</li>
+                <li><strong>Алкализованное какао:</strong> при малой закладке даёт интенсивный цвет и вкус, поэтому экономичнее обычного.</li>
+                <li><strong>Сметана вместо масла:</strong> основа — «Молочная девочка», где дорогое масло заменено бюджетной сметаной 15 %.</li>
+                <li><strong>Сахар-песок в креме:</strong> экономия на пудре вдвое, крупинок не чувствуется.</li>
+                <li><strong>Сыр и сливки вместе:</strong> они стоят примерно одинаково, совмещение выгодно и по вкусу, и по цене.</li>
+                <li><strong>Один крем на все торты:</strong> дальше в него добавляют варёную сгущёнку, карамель или шоколад.</li>
+                <li><strong>Дешёвый шоколад годится:</strong> в креме разница почти не ощущается.</li>
+                <li><strong>Вишня не обязательна:</strong> без ягод торт не проигрывает, с ними — интереснее разрез.</li>
+                <li><strong>Картинка — в последний момент:</strong> безопасный срок на торте 24 часа.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Какао всыпают сразу в тесто:</strong> комочки, которые не разбиваются миксером.</li>
+                <li><strong>Неровный слой теста:</strong> коржи разной высоты, торт перекошен при нарезке.</li>
+                <li><strong>Выпечка двух коржей без конвекции:</strong> пеките по очереди, иначе верхний зарумянится неравномерно.</li>
+                <li><strong>Шоколад сразу в холодный крем:</strong> схватывается хлопьями.</li>
+                <li><strong>Крем на глаз:</strong> слои разной толщины, торт ведёт.</li>
+                <li><strong>Слабый прижим:</strong> вишня выдавливается наружу и рвёт бок.</li>
+                <li><strong>Режут размороженный торт:</strong> ровного среза не будет.</li>
+                <li><strong>Картинка положена заранее:</strong> за сутки может пострадать от влаги.</li>
+                <li><strong>Подрезают бока:</strong> у бюджетного торта срез и так ровный, подрезка только тратит продукт.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Ягоды:</strong> вишня, черника, смородина, клубника кусочками — любые замороженные.</li>
+                <li><strong>Шоколад:</strong> плитка, дешёвая глазурь или «Россия» — на крем это почти не влияет.</li>
+                <li><strong>Декор:</strong> сахарная картинка или бисквитная крошка по принципу медовика.</li>
+                <li><strong>Формат:</strong> торт 20×30 см, бенто 10×12 см, пирожные 9×3,5 см.</li>
+                <li><strong>Крем:</strong> универсальный — с варёной сгущёнкой, карамелью или шоколадом.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 (сухие ингредиенты, ввод в тесто, раскладка и выпечка — 00:00:01–00:03:10); Урок_02.mp4 (крем — 00:00:02–00:03:18); Урок_03.mp4 (коржи, сборка с вишней, морозилка — 00:00:01–00:05:17); Урок_04.mp4 (декор картинкой, нарезка и упаковка — 00:00:02–00:13:57); DOCX «Торт_Шоколадный» — граммовки и режимы.</li>
+              <li><strong>Число прослоек:</strong> в DOCX написано «торт из 4 слоёв бисквита, в каждый слой пойдёт 250 г крема», но крема по рецептуре всего 750 г (380 + 120 + 150 + 100). В уроке торт собирают из четырёх коржей, то есть с тремя кремовыми слоями по 250 г — на странице взято это.</li>
+              <li><strong>Вишня:</strong> в DOCX прослойка не описана вообще, вес не указан. В видео автор кладёт замороженную вишню горстью в два слоя, ничего не взвешивая, поэтому в раскладке она идёт «по вкусу».</li>
+              <li><strong>Замес жидкой базы:</strong> в уроке он не показан — автор делает сразу три бисквита и начинает с сухих ингредиентов. Пропорции и порядок взяты из DOCX, они совпадают с «Красным бархатом» и «Ванильным».</li>
+              <li><strong>Продолжительность выпечки:</strong> в DOCX — 8 минут с оговоркой «может доходить до 12», в уроке — 8–10 минут. На странице указан диапазон 8–12 минут.</li>
+              <li><strong>Пробелы:</strong> вес вишни не назван; время остывания коржей и полной заморозки не указано («ночь»); количество глазури для картинки не отвешивается; вес готового торта и пирожных не приведён.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_04.mp4 (около 00:05:20): разрез шоколадного торта с вишнёвыми прослойками.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>
