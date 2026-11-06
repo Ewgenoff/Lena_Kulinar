@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Трюфель «Два шоколада» со взрывной карамелью — рецепт | CookBook</title>
+  <meta name="description" content="Трюфель «Два шоколада» Надежды Зубовой: холодный ганаш на молочном и белом шоколаде с декстрозой и глюкозой, хрустящие шарики калебо и взрывная карамель. 22–26 конфет по 10–12 г, покрытие белым шоколадом.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tryufel-dva-shokolada">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Конфеты и сладости</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Трюфель «Два шоколада» со взрывной карамелью</h1>
+      <p class="recipe-lead">
+        Ганаш на молочном и белом шоколаде, приготовленный холодным способом: сливки с сахарами нагревают только до 40 °C, шоколад — до 45 °C. Внутрь идут хрустящие шарики калебо в солёной карамели и взрывная карамель, сверху — ещё немного карамели, чтобы эффект «взрыва» был отчётливым. Покрытие — темперированный белый шоколад.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Стабилизация 8–12 ч + 1–2 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~12 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">22–26 конфет по 10–12 г</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tryufel-dva-shokolada.jpg" alt="Трюфели «Два шоколада» в белом шоколадном корпусе, присыпанные сублимированной малиной" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (24 конфеты)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="24">24</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">конфеты</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — 24 конфеты: автор говорит о 22–26 штуках при раскладке 10–12 г. Покрытие считается отдельно и в массу ганаша не входит.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">24</span> конфеты</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на ганаш и покрытие. Взрывная карамель и шарики калебо — кондитерские позиции, в обычном магазине их не всегда найдёшь. Какао-масло нужно двух видов: калеты для ганаша и Mycryo для темперирования.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Шоколад и какао-масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молочный шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span>
+                <span class="shopping-hint">В ганаш, калетами</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Белый шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="210" data-unit="г">210 г</span>
+                <span class="shopping-hint">60 г в ганаш и около 150 г в покрытие (на 24 конфеты по расчёту автора хватит ~100 г, берите с запасом)</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао-масло</strong>:
+                <span class="shopping-qty" data-base-amount="24" data-unit="г">24 г</span>
+                <span class="shopping-hint">В ганаш</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао-масло Mycryo</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="г">2 г</span>
+                <span class="shopping-hint">Для темперирования белого шоколада</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Сливки, карамель, шарики</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 30 %</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сироп глюкозы</strong>:
+                <span class="shopping-qty" data-base-amount="8" data-unit="г">8 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Декстроза</strong>:
+                <span class="shopping-qty" data-base-amount="8" data-unit="г">8 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Инвертный сахар</strong>:
+                <span class="shopping-qty" data-base-amount="8" data-unit="г">8 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Хрустящие шарики калебо в шоколаде</strong>:
+                <span class="shopping-qty" data-base-amount="24" data-unit="г">24 г</span>
+                <span class="shopping-hint">У автора — в солёной карамели</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Взрывная карамель</strong>:
+                <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+                <span class="shopping-hint">Часть внутрь, часть на обсыпку готовых конфет</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сублимированная малина и драже</strong> — для декора
+                <span class="shopping-hint">По желанию, как в видео</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — весы, перчатки, бумажные полотенца, погружной блендер, противень и плёнка
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Ганаш</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Белый шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Молочный шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сливки 30 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="8" data-unit="г">8 г</span> — Сироп глюкозы
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="8" data-unit="г">8 г</span> — Декстроза
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="8" data-unit="г">8 г</span> — Инвертный сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="24" data-unit="г">24 г</span> — Какао-масло
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Наполнение</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="24" data-unit="г">24 г</span> — Хрустящие шарики калебо
+              <span class="ingredient-note">В шоколаде или солёной карамели</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Взрывная карамель — по вкусу
+              <span class="ingredient-note">Внутрь и на обсыпку готовых конфет</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Покрытие и декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Белый шоколад
+              <span class="ingredient-note">Для двух слоёв покрытия</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Какао-масло Mycryo
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Сублимированная малина, драже — по желанию
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Холодный способ ганаша</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Трюфели делают двумя способами: горячим — сливки с сахарами греют до 90 °C и выливают на шоколад — и холодным. Здесь используется холодный: сливки с сахарами нагревают примерно до 40 °C, шоколад с какао-маслом — до 45 °C, затем всё соединяют и пробивают блендером. Стабилизация в этом случае занимает от 8 часов.
+                <span class="source-badge">⏱ Урок_01: 00:00:17–00:01:07</span>
+              </p>
+              <div class="tip-box">
+                <strong>Почему холодный:</strong> мягче температурный режим и короче стабилизация, а вкус молочного и белого шоколада не «заваривается».
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥛 Сливки: <strong>~40 °C</strong></span>
+              <span class="param-pill">🍫 Шоколад: <strong>~45 °C</strong></span>
+              <span class="param-pill">❄️ Стабилизация: <strong>От 8 ч</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Сливки с тремя сахарами</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                В сливки (50 г) отправьте инвертный сахар (8 г), сироп глюкозы (8 г) и декстрозу (8 г). Прогрейте в микроволновке 20–25 секунд — примерно до 40 °C, чтобы сахара полностью разошлись. Термометр здесь не нужен: главное, чтобы сливки стали тёплыми.
+                <span class="source-badge">⏱ Урок_01: 00:01:07–00:02:37</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не кипятить:</strong> при холодном способе сливки только тёплые, иначе шоколад перегреется при соединении.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Прогрев: <strong>20–25 сек в микроволновке</strong></span>
+              <span class="param-pill">🍬 Сахара: <strong>3 вида по 8 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Шоколад с какао-маслом</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Молочный (80 г) и белый (60 г) шоколад вместе с какао-маслом (24 г) растопите в микроволновке пульсами, перемешивая после каждого импульса и не перегревая. Кусочки какао-масла могут остаться — оно топится дольше шоколада, это нормально.
+                <span class="source-badge">⏱ Урок_01: 00:01:31–00:02:50</span>
+              </p>
+              <div class="tip-box">
+                <strong>Почему вместе:</strong> молочный и белый шоколад плавятся примерно при одной температуре, поэтому их объединяют в одной ёмкости.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Шоколад: <strong>80 г молочного + 60 г белого</strong></span>
+              <span class="param-pill">🫒 Какао-масло: <strong>24 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Эмульсия</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Перелейте шоколад с какао-маслом в тёплые сливки, перемешайте лопаткой от центра, затем пробейте погружным блендером. Цель — не взбить, а сделать эмульсию: блендер не поднимайте, чтобы не загонять воздух. Ганаш должен стать блестящим и хорошо стекать.
+                <span class="source-badge">⏱ Урок_01: 00:02:50–00:04:14</span>
+              </p>
+              <div class="warning-box">
+                <strong>Без воздуха:</strong> лишние пузыри испортят текстуру и помешают формированию конфет.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак: <strong>Блеск и текучесть</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Погружной блендер</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Шарики и взрывная карамель</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                В готовый ганаш вмешайте хрустящие шарики калебо (24 г) и взрывную карамель — по вкусу. Шарики берите любые: в молочном, тёмном или белом шоколаде; у автора — в солёной карамели.
+                <span class="source-badge">⏱ Урок_01: 00:04:14–00:05:01</span>
+              </p>
+              <div class="tip-box">
+                <strong>Двойной эффект:</strong> карамель внутри даёт деликатное потрескивание, а та, что останется на обсыпку, — уже настоящий «взрыв».
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍬 Шарики: <strong>24 г</strong></span>
+              <span class="param-pill">💥 Карамель: <strong>По вкусу</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Стабилизация ганаша</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Накройте ганаш плёнкой в контакт и оставьте на 8–12 часов. Оптимально — при 16–18 °C; если такой возможности нет, 2 часа при комнатной температуре и затем холодильник. Готовый ганаш жёсткий, но продавливается пальцем.
+                <span class="source-badge">⏱ Урок_01: 00:05:08–00:05:27</span>
+                <span class="source-badge">⏱ Урок_02: 00:00:02–00:01:21</span>
+              </p>
+              <div class="warning-box">
+                <strong>Плёнка обязательна:</strong> конденсат — это лишняя влага, в которой заводятся бактерии и плесень.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Оптимум: <strong>16–18 °C, 8–12 ч</strong></span>
+              <span class="param-pill">❄️ Альтернатива: <strong>2 ч + холодильник</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Формирование конфет</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Раскидайте массу на весах по 10–12 г и скатайте в перчатках — быстро, пока ганаш не начал таять. Выложите на противень с плёнкой и оставьте на 1–2 часа при 20–21 °C. Если в помещении жарче — уберите в холодильник.
+                <span class="source-badge">⏱ Урок_02: 00:04:29–00:06:12</span>
+              </p>
+              <div class="warning-box">
+                <strong>Перчатки, а не мокрые руки:</strong> загрязнения с перчаток снимают бумажным полотенцем; вымытые перчатки остаются влажными, а влага и шоколад несовместимы.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ Вес: <strong>10–12 г</strong></span>
+              <span class="param-pill">⏱ Отдых: <strong>1–2 ч</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Покрытие белым шоколадом</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Белый шоколад оттемперируйте: растопите до 40 °C, остудите до 34 °C, добавьте Mycryo и доведите до рабочей температуры 29–30 °C. Покройте конфеты тонким слоем, дайте застыть и нанесите второй слой. Пока шоколад не встал, присыпьте взрывной карамелью, сублимированной малиной или драже.
+                <span class="source-badge">⏱ Урок_03: 00:08:36–00:10:53</span>
+              </p>
+              <div class="warning-box">
+                <strong>Два слоя, не один:</strong> первый слой — основа корпуса, второй закрывает просветы и даёт глянец.
+              </div>
+              <div class="tip-box">
+                <strong>Обсыпка:</strong> карамель лучше добавить и в темперированный шоколад для корпуса — тогда «взрывы» будут самыми мощными.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Рабочая: <strong>29–30 °C</strong></span>
+              <span class="param-pill">🍫 Слоёв: <strong>2</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>14 дней в холодильнике</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Холодный способ:</strong> сливки 40 °C, шоколад 45 °C — и стабилизация от 8 часов.</li>
+                <li><strong>Горячий способ:</strong> сливки 90 °C, но стабилизация не меньше 12 часов.</li>
+                <li><strong>Три сахара:</strong> глюкоза, декстроза и инвертный держат ганаш мягким.</li>
+                <li><strong>Не взбивать:</strong> цель блендера — эмульсия без воздуха.</li>
+                <li><strong>Шарики и карамель:</strong> можно класть по вкусу, ориентируясь на текстуру.</li>
+                <li><strong>Плёнка в контакт:</strong> защита от конденсата и плесени.</li>
+                <li><strong>От светлых к тёмным:</strong> при формировании партии конфет идут в таком порядке, чтобы не пачкать светлые тёмным.</li>
+                <li><strong>Гладкая конфета:</strong> на покрытие уходит меньше шоколада.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Перегрев шоколада:</strong> белый и молочный сворачиваются быстрее тёмного.</li>
+                <li><strong>Кипящие сливки при холодном способе:</strong> нарушают температурный баланс.</li>
+                <li><strong>Взбивание блендером с воздухом:</strong> пористая текстура и пузыри в корпусе.</li>
+                <li><strong>Работа без перчаток:</strong> ганаш тает от рук.</li>
+                <li><strong>Мокрые перчатки:</strong> влага портит шоколад.</li>
+                <li><strong>Один слой покрытия:</strong> просветы и неровный глянец.</li>
+                <li><strong>Хранение вне холода:</strong> карамель и шарики отсыревают.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и подача</h4>
+              <ul>
+                <li><strong>Холодильник:</strong> 14 дней.</li>
+                <li><strong>Винный шкаф:</strong> допустим.</li>
+                <li><strong>Подача:</strong> при комнатной температуре, чтобы корпус не «плакал».</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Шарики калебо:</strong> в молочном, тёмном, белом шоколаде или солёной карамели.</li>
+                <li><strong>Взрывная карамель:</strong> можно не добавлять внутрь, а только на обсыпку.</li>
+                <li><strong>Покрытие:</strong> белый шоколад; допустим молочный.</li>
+                <li><strong>Декор:</strong> сублимированная малина, драже, кандурин.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 — холодный способ, сливки с сахарами, шоколад, эмульсия и наполнение (00:00:17–00:05:27); Урок_02.mp4 — стабилизация и формирование (00:00:02–00:06:12); Урок_03.mp4 — темперирование и покрытие (00:08:36–00:14:14); DOCX «Трюфель_Два шоколада» — граммовки.</li>
+              <li><strong>Покрытие:</strong> в DOCX указано 150 г шоколада на 35–40 конфет двойным слоем; для 22–26 конфет по этой пропорции выходит около 100 г, но на странице оставлено 150 г как в источнике.</li>
+              <li><strong>Стабилизация:</strong> в DOCX 12 часов при 16–18 °C; в видео для холодного способа названо «даже 8 часов» — на странице диапазон 8–12 ч.</li>
+              <li><strong>Взрывная карамель:</strong> количество не отвешивается — «по вкусу», часть идёт внутрь, часть на обсыпку.</li>
+              <li><strong>Пробелы:</strong> точный вес готовой конфеты с покрытием не назван; количество шоколада для покрытия одной конфеты не измеряется.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_03.mp4 (около 00:12:40): трюфели в белом корпусе с малиновой посыпкой.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

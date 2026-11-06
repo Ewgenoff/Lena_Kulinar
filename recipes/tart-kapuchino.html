@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тарт «Капучино» — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Кофейный тарт Ø8 см: шоколадно-кофейное сабле, хрустящий слой с грецким орехом и вафельной крошкой, заливка кофейным ганашом на белом шоколаде и шапка из взбитого кофейного ганаша. С домашней пастой кофе из сублимированного кофе.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tart-kapuchino">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Тарт «Капучино»</h1>
+      <p class="recipe-lead">
+        Пирожное Ø8 см для любителей кофе: шоколадно-кофейное песочное сабле, хрустящий слой из тёмного шоколада с грецким орехом и вафельной крошкой, заливка плотным кофейным ганашом на белом шоколаде и шапка из взбитого кофейного ганаша. Всё кофейное — на домашней пасте из сублимированного кофе, сахар + вода + кофе.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~30 мин: взвесить, паста кофе, желатин замочить</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~2 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Тесто 2–12 ч, выпечка 15 мин, взбитый ганаш 8 ч, заливка 2–4 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~1,5–2 дня с заготовками</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">10 тартов Ø8 см, высота 2–2,5 см</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tart-kapuchino.jpg" alt="Три готовых кофейных тарта в тёмных хрустящих основах, с крышкой из взбитого кофейного ганаша красивыми шапочками и крошкой ореха" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (10 тартов)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="10">10</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">тартов</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — 10 пирожных Ø8 см по рецептуре автора. Ганаши удобно делать с запасом: из стабилизированного взбитого ганаша получается шапка на все тарты, а остаток спокойно живёт в холодильнике.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Показать источники (видео-таймкоды)</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">10</span> тартов</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+      </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Самый «сливочный» тарт из серии: почти полкило сливок на два ганаша. Кофе нужен растворимый сублимированный — из него варится паста, и она идёт и в тесто, и в оба ганаша. Желатин сильный, 220 Блюм: его здесь немного, но он держит форму взбитой шапки.
+      </p>
+
+        <div class="shopping-grid">
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🧈 Масло, яйца, сливки</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сливки 33 %</strong>:
+                  <span class="shopping-qty" data-base-amount="495" data-unit="г">495 г</span>
+                  <span class="shopping-hint">315 г во взбитый ганаш, 180 г в кофейный ганаш; в оба часть идёт горячей, часть холодной</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Масло сливочное 82,5 %</strong>:
+                  <span class="shopping-qty" data-base-amount="145" data-unit="г">145 г</span>
+                  <span class="shopping-hint">95 г в сабле (холодное), 50 г в кофейный ганаш (холодное, кубиками)</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Яйца куриные</strong>:
+                  <span class="shopping-qty" data-base-amount="33" data-unit="г">33 г</span>
+                  <span class="shopping-hint">В сабле, холодные — это меньше одного яйца С1</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🧂 Мука, шоколад, кофе</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Мука пшеничная в/с</strong>:
+                  <span class="shopping-qty" data-base-amount="170" data-unit="г">170 г</span>
+                  <span class="shopping-hint">В сабле</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Миндальная мука</strong>:
+                  <span class="shopping-qty" data-base-amount="12" data-unit="г">12 г</span>
+                  <span class="shopping-hint">В сабле, вместе с какао</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Какао-порошок</strong>:
+                  <span class="shopping-qty" data-base-amount="12" data-unit="г">12 г</span>
+                  <span class="shopping-hint">В сабле; даёт тёмный цвет и шоколадный вкус</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахарная пудра</strong>:
+                  <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+                  <span class="shopping-hint">В сабле</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Кофе растворимый сублимированный</strong>:
+                  <span class="shopping-qty" data-base-amount="32" data-unit="г">32 г</span>
+                  <span class="shopping-hint">30 г в пасту кофе, 2 г в тесто — по желанию, см. предупреждение в шагах</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахар-песок</strong>:
+                  <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                  <span class="shopping-hint">В пасту кофе — варится сухая карамель</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Белый шоколад</strong>:
+                  <span class="shopping-qty" data-base-amount="230" data-unit="г">230 г</span>
+                  <span class="shopping-hint">В кофейный ганаш-заливку</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Молочный шоколад</strong>:
+                  <span class="shopping-qty" data-base-amount="145" data-unit="г">145 г</span>
+                  <span class="shopping-hint">Во взбитый кофейный ганаш</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Шоколад тёмный 54,5 %</strong>:
+                  <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+                  <span class="shopping-hint">В хрустящий слой</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Грецкий орех</strong>:
+                  <span class="shopping-qty" data-base-amount="85" data-unit="г">85 г</span>
+                  <span class="shopping-hint">Дробленый, в хрустящий слой</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Вафельная крошка</strong>:
+                  <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                  <span class="shopping-hint">Вафли или вафельная стружка, в хрустящий слой</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Масло кукурузное</strong>:
+                  <span class="shopping-qty" data-base-amount="18" data-unit="г">18 г</span>
+                  <span class="shopping-hint">Без запаха, в хрустящий слой; подойдёт любое рафинированное дезодорированное</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сироп глюкозы</strong>:
+                  <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+                  <span class="shopping-hint">Во взбитый ганаш — держит воду и стабильность</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Желатин 220 Блюм</strong>:
+                  <span class="shopping-qty" data-base-amount="6" data-unit="г">6 г</span>
+                  <span class="shopping-hint">2 г во взбитый ганаш + 4 г в заливку; вода 10 + 20 г</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Ванильный сахар или ванильная паста</strong>:
+                  <span class="shopping-qty" data-base-amount="7" data-unit="г">7 г</span>
+                  <span class="shopping-hint">Во взбитый ганаш</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Разрыхлитель и соль</strong>:
+                  <span class="shopping-qty" data-base-amount="2.5" data-unit="г">2,5 г</span>
+                  <span class="shopping-hint">1 г разрыхлителя, 1,5 г соли в сабле</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Расходники</strong> — кольца Ø8 см, перфорированный коврик, погружной блендер, пленка в контакт, насадки
+                  <span class="shopping-hint">Без блендера ганаши не станут гладкими; в видео автор использует насадки для декора</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">1. Шоколадно-кофейное сабле</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="170" data-unit="г">170 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="12" data-unit="г">12 г</span> — Какао-порошок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="12" data-unit="г">12 г</span> — Миндальная мука
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="95" data-unit="г">95 г</span> — Масло сливочное 82,5 %
+              <span class="ingredient-note">Холодное, кубиками</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="33" data-unit="г">33 г</span> — Яйца
+              <span class="ingredient-note">Холодные</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Кофе растворимый
+              <span class="ingredient-note">По желанию: в рецептуре есть, но в видео автор в тесто его не добавляла</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="г">1 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1.5" data-unit="г">1,5 г</span> — Соль
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">2. Паста кофе</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сахар
+              <span class="ingredient-note">Варится в сухую карамель</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Вода
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Кофе растворимый
+              <span class="ingredient-note">Сублимированный, любой; хранится паста 2–3 месяца в холодильнике</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">3. Взбитый кофейный ганаш</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="315" data-unit="г">315 г</span> — Сливки 33 %
+              <span class="ingredient-note">Половина греется, половина остаётся холодной</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="145" data-unit="г">145 г</span> — Молочный шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Желатин 220 Блюм
+              <span class="ingredient-note">Плюс 10 г холодной воды</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Сироп глюкозы
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Паста кофе
+              <span class="ingredient-note">Из своей заготовки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Ванильный сахар или ванильная паста
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">4. Кофейный ганаш (заливка)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="180" data-unit="г">180 г</span> — Сливки 33 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="18" data-unit="г">18 г</span> — Паста кофе
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="230" data-unit="г">230 г</span> — Белый шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Масло сливочное
+              <span class="ingredient-note">Холодное, вводится при температуре ниже 35 °C</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="г">4 г</span> — Желатин 220 Блюм
+              <span class="ingredient-note">Плюс 20 г холодной воды</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">5. Хрустящий слой</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Шоколад тёмный 54,5 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="18" data-unit="г">18 г</span> — Масло кукурузное без запаха
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="85" data-unit="г">85 г</span> — Грецкий орех дробленый
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Вафельная крошка
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Порядок работы</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Сначала паста кофе — без неё не сделать ни один ганаш, а хранится она 2–3 месяца, так что варить её можно сильно заранее. Потом тесто: ему нужна стабилизация 2–12 часов (в видео автор держит 4–6). Пока тесто отдыхает, варят взбитый ганаш — ему тоже нужно не меньше 8 часов в холодильнике. Сборка идёт на следующий день: основа, хрустящий слой, заливка, стабилизация 2–4 часа и шапка из взбитого ганаша.
+                <span class="source-badge">⏱ Урок_01: 00:00:02–00:00:20</span>
+              </p>
+              <div class="tip-box">
+                <strong>Плёнка в контакт — обязательный шаг:</strong> и для взбитого ганаша, и для заливки. Иначе на поверхности образуется плёнка из застывшего жира.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Тесто: <strong>2–12 ч</strong></span>
+              <span class="param-pill">🧊 Ганаш: <strong>≥8 ч</strong></span>
+              <span class="param-pill">📏 Форма: <strong>кольца Ø8 см</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Сабле: сухие и масло в крошку</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                В комбайне или миксере с насадкой-веслом смешайте 170 г муки, 12 г какао, 12 г миндальной муки, 60 г сахарной пудры, 1 г разрыхлителя и 1,5 г соли. Добавьте 95 г холодного масла, порезанного кубиками, и превратите в крошку — около полутора минут работы. В последнюю очередь введите холодные яйца (33 г) и перемешивайте совсем недолго.
+                <span class="source-badge">⏱ Урок_01: 00:00:02–00:02:21</span>
+              </p>
+              <div class="warning-box">
+                <strong>Кофе в тесто — по желанию.</strong> В рецептуре стоит 2 г растворимого кофе, но в видео автор его не добавляла: если хотите, смелите сублимированный кофе в порошок и добавьте к сухим ингредиентам.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Крошка: <strong>~1,5 мин</strong></span>
+              <span class="param-pill">🥣 Насадка: <strong>Весло</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Раскатка и стабилизация теста</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Разделите тесто на две части и раскатайте каждую между двумя листами пергамента. Толщину проверяйте линейкой. Уберите в холодильник минимум на 2 часа, максимум на 12 — в видео автор ориентируется на 4–6 часов. Так пласт перестаёт липнуть и режется без деформации.
+                <span class="source-badge">⏱ Урок_01: 00:04:47–00:04:51</span>
+                <span class="source-badge">⏱ Урок_02: 00:04:49</span>
+              </p>
+              <div class="tip-box">
+                <strong>Два пласта вместо одного:</strong> так удобнее работать — второй остаётся в холодильнике, пока формуете первый.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Отдых: <strong>2–12 ч (в видео 4–6)</strong></span>
+              <span class="param-pill">📏 Толщина: <strong>2–2,5 мм</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Формовка и заморозка</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Вырежьте дно и бортики, прижмите тесто к стенкам колец, пройдитесь по краю, срезая лишнее, и слегка придавите краешки. Автор выпекает в перфорированных кольцах на перфорированном коврике: без перфорации идеального ровного края не выйдет, а если кольца обычные, помогает металлическая линейка высотой 2,5 см. Сформированные тарты отправьте в морозилку — на выпечку они идут замороженными.
+                <span class="source-badge">⏱ Урок_02: 00:00:02–00:04:49</span>
+              </p>
+              <div class="warning-box">
+                <strong>Шоколадное сабле хуже выходит из формы.</strong> Через 10 минут после начала выпечки пройдитесь по краю кончиком ножа, отгибая тесто от стенок, — пока основа мягкая, это делается легко.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">❄️ Перед выпечкой: <strong>Полная заморозка</strong></span>
+              <span class="param-pill">🥣 Кольца: <strong>Перфорированные</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Выпечка основы</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте при 160 °C в режиме конвекции около 15 минут. На 10-й минуте достаньте противень и пройдитесь ножом по внутреннему краю каждого кольца, отодвигая тесто от стенок. Дальше пеките до готовности и дайте полностью остыть, не вынимая из колец: горячая основа легко ломается.
+                <span class="source-badge">⏱ Урок_02: 00:05:11</span>
+                <span class="source-badge">⏱ Урок_03: 00:00:02–00:01:01</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем нож:</strong> шоколадное тесто прилипает к металлу сильнее светлого, и без этой манипуляции тарт выходит с рваными краями.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Выпечка: <strong>160 °C, конвекция</strong></span>
+              <span class="param-pill">⏱ Время: <strong>~15 мин</strong></span>
+              <span class="param-pill">🔪 Нож по краю: <strong>На 10-й минуте</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Паста кофе</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Из 50 г сахара сварите сухую карамель — на среднем огне, не мешая, до тёмного янтарного цвета. Отдельно доведите до кипения 50 г воды с 30 г растворимого кофе и вылейте на карамель: масса бурно запенится. Верните на огонь и уварите всю массу примерно вдвое — до консистенции густого сиропа-пасты. Остудите.
+                <span class="source-badge">⏱ Урок_04: 00:00:01–00:02:13</span>
+              </p>
+              <div class="warning-box">
+                <strong>Карамель сухим способом жгут быстро:</strong> не отходите от плиты, а воду с кофе подготовьте заранее — вливать в раскалённую карамель нужно кипящую.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Карамель: <strong>Сухая, до янтарного</strong></span>
+              <span class="param-pill">⏱ Уваривание: <strong>Вдвое</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>2–3 месяца в холодильнике</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Взбитый кофейный ганаш</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Замочите 2 г желатина в 10 г холодной воды. Половину сливок (около 160 г) с ванилью, глюкозой и желатиновой массой доведите до кипения и вылейте на 145 г молочного шоколада, добавьте 15 г пасты кофе. Пробейте блендером до эмульсии, влейте вторую часть холодных сливок и снова пробейте. Накройте плёнкой в контакт и уберите в холодильник минимум на 8 часов, лучше на 6–12.
+                <span class="source-badge">⏱ Урок_05: 00:00:02–00:03:55</span>
+              </p>
+              <div class="tip-box">
+                <strong>Глюкоза не для сладости:</strong> она держит воду и не даёт ганашу заветриваться — изделие дольше выглядит свежим.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сливки: <strong>До кипения</strong></span>
+              <span class="param-pill">🧊 Стабилизация: <strong>8–12 ч</strong></span>
+              <span class="param-pill">💧 Плёнка: <strong>В контакт</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Кофейный ганаш-заливка</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Замочите 4 г желатина в 20 г холодной воды. 180 г сливок с желатиновой массой доведите до кипения, вылейте на 230 г белого шоколада, добавьте 18 г пасты кофе и пробейте блендером. Остудите до 35 °C — не выше, иначе масло вытопится, — и сделайте эмульсию, вводя 50 г холодного масла кубиками. Разлейте по тартам и уберите в холодильник на 2–4 часа; можно заморозить.
+                <span class="source-badge">⏱ Урок_06: 00:00:02–00:01:32</span>
+              </p>
+              <div class="warning-box">
+                <strong>Масло только ниже 35 °C:</strong> в горячую массу его добавлять нельзя — эмульсия развалится и на поверхности выступит жир.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Перед маслом: <strong>≤35 °C</strong></span>
+              <span class="param-pill">🧊 Стабилизация: <strong>2–4 ч</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Хрустящий слой</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Растопите 60 г тёмного шоколада, добавьте 18 г кукурузного масла без запаха, перемешайте. Всыпьте 85 г дробленого грецкого ореха и 30 г вафельной крошки, размешайте до однородности. Разложите тонким ровным слоем по дну тартов и подморозьте, чтобы слой схватился и не смешался с заливкой.
+                <span class="source-badge">⏱ Урок_07: 00:00:01–00:01:24</span>
+                <span class="source-badge">⏱ Урок_08: 00:00:02–00:02:24</span>
+              </p>
+              <div class="tip-box">
+                <strong>Внутри тарт ничем не покрывают:</strong> автор не промазывает основу ни желтком, ни сиропом — так хрустящий слой остаётся хрустящим, а не размокает.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">❄️ Схватывание: <strong>Подморозить</strong></span>
+              <span class="param-pill">📏 Слой: <strong>Тонкий, ровный</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Сборка тартов</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                На схватившийся хрустящий слой разложите кофейный ганаш-заливку — ровно, чтобы на все тарты хватило одинаково. Уберите в холодильник на 4 часа или в морозилку на час. Автор отдельно отмечает, что овальные и круглые кольца с одинаковым периметром дают одинаковый расход слоёв — удобно, когда в наборе разные формы.
+                <span class="source-badge">⏱ Урок_08: 00:00:02–00:02:43</span>
+              </p>
+              <div class="tip-box">
+                <strong>Заливка должна полностью закрыть орехи:</strong> иначе взбитый ганаш сверху ляжет неровно, а срез будет выглядеть неаккуратно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Холодильник: <strong>~4 ч</strong></span>
+              <span class="param-pill">❄️ Морозилка: <strong>~1 ч</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Взбивание и декор</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Снимите плёнку с застывшего взбитого ганаша — он должен держать след от пальца — и переложите в узкую посуду: взбивать нужно по всему объёму, а не в широкой миске. Взбивайте на средней скорости или чуть выше средней, следя за массой: ганаш легко перебить. Переложите в мешок и отсадите шапку на каждый тарт, пройдя по поверхности палетой.
+                <span class="source-badge">⏱ Урок_09: 00:00:02–00:03:46</span>
+              </p>
+              <div class="warning-box">
+                <strong>Три условия для жидких ганашей:</strong> хорошо охлаждённая масса, узкая посуда и средняя скорость. На высокой скорости ганаш «перебивается» и становится зернистым.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚙️ Скорость: <strong>Средняя или чуть выше</strong></span>
+              <span class="param-pill">🥣 Посуда: <strong>Узкая</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>72 ч в холодильнике</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Паста кофе — своя:</strong> сахар в сухую карамель, кипящая вода с кофе, уваривание вдвое; хранится 2–3 месяца.</li>
+                <li><strong>Глюкоза в ганаше:</strong> держит воду и сохраняет внешний вид изделия.</li>
+                <li><strong>Две порции сливок:</strong> одна греется с желатином, вторая остаётся холодной и вводится после блендера — так ганаш стабильнее.</li>
+                <li><strong>Плёнка в контакт:</strong> обязательна и для взбитого ганаша, и для заливки.</li>
+                <li><strong>Масло в заливку — ниже 35 °C:</strong> эмульсия собирается именно на этой температуре.</li>
+                <li><strong>Перфорированные кольца:</strong> дают ровный край и равномерную пропечённость.</li>
+                <li><strong>Нож по краю на 10-й минуте:</strong> страховка от прилипания шоколадного теста.</li>
+                <li><strong>Основа без покрытия:</strong> хрустящий слой остаётся хрустящим.</li>
+                <li><strong>Узкая посуда для взбивания:</strong> венчик должен работать по всему объёму.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Тёплое масло в сабле:</strong> вместо крошки — пластичное тесто.</li>
+                <li><strong>Выпечка без заморозки:</strong> бортики сползают.</li>
+                <li><strong>Кольца без перфорации:</strong> неровный край и влажная середина.</li>
+                <li><strong>Перегретая карамель для пасты:</strong> горький вкус, который уже не исправить.</li>
+                <li><strong>Масло в горячий ганаш:</strong> эмульсия расслаивается, выступает жир.</li>
+                <li><strong>Взбивание на высокой скорости:</strong> ганаш зернится и «перебивается».</li>
+                <li><strong>Недогретые сливки с шоколадом:</strong> крупинки шоколада в массе.</li>
+                <li><strong>Нет плёнки в контакт:</strong> на поверхности застывает жирная плёнка.</li>
+                <li><strong>Хранение дольше 72 часов:</strong> хрустящий слой перестаёт хрустеть.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и замены</h4>
+              <ul>
+                <li><strong>Готовые пирожные:</strong> 72 часа в холодильнике, 30 дней в морозилке.</li>
+                <li><strong>Паста кофе:</strong> 2–3 месяца в холодильнике, вкус насыщенный и стабильный.</li>
+                <li><strong>Взбитый ганаш:</strong> после стабилизации живёт в холодильнике под плёнкой; взбивают перед подачей.</li>
+                <li><strong>Кофе растворимый:</strong> нужен сублимированный; порошок «3 в 1» не подойдёт из-за сахара и сливок.</li>
+                <li><strong>Грецкий орех:</strong> можно заменить пеканом или фундуком, но вкус станет другим.</li>
+                <li><strong>Кукурузное масло:</strong> любое рафинированное дезодорированное, без запаха.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: #666; line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «Тарт_Капучино» с рецептурой и девять уроков с расшифровкой. Граммовки — из DOCX, техника и таймкоды — из видео.</li>
+              <li><strong>Кофе в тесте:</strong> в рецептуре указано 2 г растворимого кофе, но в видео автор говорит, что в тесто его не добавляла. На странице кофе оставлен как опция с пометкой.</li>
+              <li><strong>Время стабилизации теста:</strong> в DOCX — минимум 2 часа и не больше 12, в видео — 4–6 часов. Оба значения на странице.</li>
+              <li><strong>Разделение сливок во взбитом ганаше:</strong> DOCX даёт 315 г общей массой и говорит «половину сливок», точный вес половин не назван. На странице — «около 160 г».</li>
+              <li><strong>Насадка для декора:</strong> в DOCX не указана; на видео автор отсаживает взбитый ганаш, но номер насадки в речи не назван — на странице номера нет, чтобы не выдумывать.</li>
+              <li><strong>Пробелы:</strong> не назван вес порции заливки и шапки на один тарт; не указан точный выход ганаша в граммах после взбивания.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_09 (около 00:03:55) с готовыми тартами.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

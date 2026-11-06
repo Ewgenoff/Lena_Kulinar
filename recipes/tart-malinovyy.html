@@ -1,0 +1,765 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тарт «Малиновый» с муссом на белом шоколаде — пошаговый рецепт | CookBook</title>
+  <meta name="description" content="Малиновый тарт Ø8 см: сабле с сублимированной малиной и миндальной мукой, хрустящий слой на кукурузных хлопьях, кули из малины на пектине, лёгкий мусс на белом шоколаде и взбитый малиновый ганаш для декора.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tart-malinovyy">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Тарт «Малиновый»</h1>
+      <p class="recipe-lead">
+        Нежное малиновое пирожное Ø8 см: песочное сабле с миндальной мукой и сублимированной малиной, хрустящий слой из белого шоколада с кукурузными хлопьями, кислое кули на пектине, лёгкий мусс на белом шоколаде и взбитый малиновый ганаш сверху. Цвет — натуральный, от сублимированных ягод.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~30 мин: взвесить, смолоть сублимированную малину</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~2 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Тесто 2–4 ч, выпечка 15 мин, ганаш 6–12 ч, заморозка слоёв</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~2 дня: ганаш заранее, сборка на следующий день</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">10–12 тартов Ø8 см, высота 2–2,5 см</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tart-malinovyy.jpg" alt="Малиновый тарт на песочной основе с шапкой из взбитого розового малинового ганаша спиралью и вкраплениями сублимированной малины" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (10 тартов)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="10">10</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">тартов</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            В рецептуре автора выход 10–12 тартов Ø8 см; за базу калькулятора взято 10. Малиновый ганаш нужно поставить в холодильник заранее — минимум за 6–8 часов, а лучше за сутки до сборки.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Показать источники (видео-таймкоды)</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">10</span> тартов</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+      </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Здесь много белого шоколада и сливок — почти 400 г и 650 г соответственно. Обязательно нужны сублимированная малина (идёт и в тесто, и в хрустящий слой) и инвертный сахар с глюкозой: без них взбитый ганаш не держит форму.
+      </p>
+
+        <div class="shopping-grid">
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🧈 Масло, яйца, сливки</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сливки 33 %</strong>:
+                  <span class="shopping-qty" data-base-amount="635" data-unit="г">635 г</span>
+                  <span class="shopping-hint">240 г в ганаш, 125 г в мусс (горячие), 270 г в мусс (полувзбитые)</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Масло сливочное 82,5 %</strong>:
+                  <span class="shopping-qty" data-base-amount="115" data-unit="г">115 г</span>
+                  <span class="shopping-hint">В сабле, холодное</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Яйца куриные</strong>:
+                  <span class="shopping-qty" data-base-amount="52" data-unit="г">52 г</span>
+                  <span class="shopping-hint">В сабле, холодные — примерно одно яйцо С1</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🧂 Мука, шоколад, малина</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Мука пшеничная в/с</strong>:
+                  <span class="shopping-qty" data-base-amount="240" data-unit="г">240 г</span>
+                  <span class="shopping-hint">В сабле</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Миндальная мука</strong>:
+                  <span class="shopping-qty" data-base-amount="40" data-unit="г">40 г</span>
+                  <span class="shopping-hint">В сабле; добавляется после крошки</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахарная пудра</strong>:
+                  <span class="shopping-qty" data-base-amount="85" data-unit="г">85 г</span>
+                  <span class="shopping-hint">В сабле</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахар-песок</strong>:
+                  <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+                  <span class="shopping-hint">В кули</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Белый шоколад</strong>:
+                  <span class="shopping-qty" data-base-amount="385" data-unit="г">385 г</span>
+                  <span class="shopping-hint">90 г в хрустящий слой, 170 г в ганаш, 125 г в мусс</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Пюре малины</strong>:
+                  <span class="shopping-qty" data-base-amount="275" data-unit="г">275 г</span>
+                  <span class="shopping-hint">35 г в ганаш, 240 г в кули; замороженное подойдёт</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Малина сублимированная</strong>:
+                  <span class="shopping-qty" data-base-amount="2" data-unit="ст. л.">2 ст. л.</span>
+                  <span class="shopping-hint">1 ст. л. в тесто, 1 ст. л. в хрустящий слой; смолоть в пудру</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Кукурузные хлопья</strong>:
+                  <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span>
+                  <span class="shopping-hint">В хрустящий слой; хлопья крошат руками</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Масло растительное без запаха</strong>:
+                  <span class="shopping-qty" data-base-amount="20" data-unit="г">20 г</span>
+                  <span class="shopping-hint">В хрустящий слой, рафинированное дезодорированное</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Инвертный сахар</strong>:
+                  <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+                  <span class="shopping-hint">В ганаш; без него взбитый ганаш не стабилен</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сироп глюкозы</strong>:
+                  <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+                  <span class="shopping-hint">В ганаш, вместе с инвертным сахаром</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Желатин 220 Блюм</strong>:
+                  <span class="shopping-qty" data-base-amount="7" data-unit="г">7 г</span>
+                  <span class="shopping-hint">2 г в ганаш + 5 г в мусс; вода 10 г</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Пектин NH</strong>:
+                  <span class="shopping-qty" data-base-amount="4" data-unit="г">4 г</span>
+                  <span class="shopping-hint">В кули; яблочного нужно вдвое больше</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Лимонная кислота</strong>:
+                  <span class="shopping-qty" data-base-amount="2" data-unit="г">2 г</span>
+                  <span class="shopping-hint">В кули, после кипячения</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Разрыхлитель и соль</strong>:
+                  <span class="shopping-qty" data-base-amount="2.5" data-unit="г">2,5 г</span>
+                  <span class="shopping-hint">1 г разрыхлителя, 1,5 г соли в сабле</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Расходники</strong> — кольца Ø8 см, перфорированный коврик, насадки 124 или 125, пленка в контакт
+                  <span class="shopping-hint">Насадка-лепесток 125 даёт спираль, которая видна на фото</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">1. Малиновое сабле</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="240" data-unit="г">240 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Миндальная мука
+              <span class="ingredient-note">Добавляется после крошки, вместе с пудрой</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="85" data-unit="г">85 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="115" data-unit="г">115 г</span> — Масло сливочное 82,5 %
+              <span class="ingredient-note">Холодное, кубиками</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="52" data-unit="г">52 г</span> — Яйца
+              <span class="ingredient-note">Холодные</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              1 ст. л. — Малина сублимированная
+              <span class="ingredient-note">Смолоть в пудру, вводится в тесто</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="г">1 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1.5" data-unit="г">1,5 г</span> — Соль
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">2. Хрустящий слой</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="90" data-unit="г">90 г</span> — Белый шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Масло растительное без запаха
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Кукурузные хлопья
+              <span class="ingredient-note">Покрошить руками; подойдут обычные готовые завтраки без глазури</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              1 ст. л. — Малина сублимированная
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">3. Малиновый ганаш</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="240" data-unit="г">240 г</span> — Сливки 33 %
+              <span class="ingredient-note">Половина греется, половина остаётся холодной</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="170" data-unit="г">170 г</span> — Белый шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="35" data-unit="г">35 г</span> — Пюре малины
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Сироп глюкозы
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Инвертный сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Желатин 220 Блюм
+              <span class="ingredient-note">Плюс 10 г холодной воды; в видео его нет — см. примечание в шагах</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">4. Кули малина</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="240" data-unit="г">240 г</span> — Пюре малины
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="г">4 г</span> — Пектин NH
+              <span class="ingredient-note">Смешать с сахаром, вводить при 35–40 °C</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Лимонная кислота
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">5. Мусс на белом шоколаде</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Сливки 33 % (первая порция)
+              <span class="ingredient-note">Доводятся до кипения</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Белый шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="г">5 г</span> — Желатин 220 Блюм
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="270" data-unit="г">270 г</span> — Сливки 33 % (вторая порция)
+              <span class="ingredient-note">Полувзбитые, вводятся в остывшую базу</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Порядок работы</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Малиновый ганаш ставят заранее — минимум за 6–8 часов до сборки, а лучше за сутки: его нельзя ускорить, он должен стабилизироваться в холодильнике, а не в морозилке. В первый день также замешивают тесто (2–4 часа в холодильнике) и делают хрустящий слой. На следующий день выпекают основы, варят кули, собирают мусс и взбивают ганаш для декора.
+                <span class="source-badge">⏱ Урок_03: 00:00:03–00:00:10</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> ганаш можно сделать и за 24 часа — он спокойно ждёт, а вот взбивать его нужно в день сборки.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Ганаш: <strong>6–24 ч</strong></span>
+              <span class="param-pill">🧊 Тесто: <strong>2–4 ч</strong></span>
+              <span class="param-pill">📏 Форма: <strong>кольца Ø8 см</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Сабле: крошка и сухие добавки</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                240 г муки смешайте с 1,5 г соли и 1 г разрыхлителя. Добавьте 115 г холодного масла кубиками и превратите в крошку. Затем введите 40 г миндальной муки и 85 г сахарной пудры, перемешайте. В самом конце — холодные яйца (52 г) и столовую ложку смолотой сублимированной малины. Общее время перемешивания — не больше 2 минут.
+                <span class="source-badge">⏱ Урок_01: 00:00:01–00:02:30</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не больше двух минут:</strong> долгий замес развивает клейковину, и песочное тесто садится при выпечке, а край выходит волнистым.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Замес: <strong>≤2 мин</strong></span>
+              <span class="param-pill">🍓 Малина: <strong>1 ст. л. пудры</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Раскатка и отдых теста</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Раскатайте тесто толщиной 2–2,5 мм между двумя листами пергамента и уберите в холодильник на 2–4 часа. Для этого теста отдых особенно важен: сублимированная малина делает его чуть более липким, и на холоде оно перестаёт тянуться за скалкой.
+                <span class="source-badge">⏱ Урок_01: 00:06:00–00:06:39</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет:</strong> раскатывайте сразу до нужной толщины и chilling — потом тесто не нужно будет докатывать на столе и нагревать.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Толщина: <strong>2–2,5 мм</strong></span>
+              <span class="param-pill">🧊 Отдых: <strong>2–4 ч</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Формовка, подморозка и выпечка</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Сформируйте тарты по кольцам, прижимая тесто к стенкам, и отправьте в морозилку — перед выпечкой заготовки подмораживают. Пеките при 165–170 °C с конвекцией 15 минут. Готовые основы полностью остудите, не вынимая из колец.
+                <span class="source-badge">⏱ Урок_01: 00:06:00–00:06:39</span>
+              </p>
+              <div class="warning-box">
+                <strong>Температура выше, чем у других тартов серии:</strong> 165–170 °C вместо 155–160 °C. Это указание рецептуры — не путайте с остальными тартами.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Выпечка: <strong>165–170 °C, конвекция</strong></span>
+              <span class="param-pill">⏱ Время: <strong>15 мин</strong></span>
+              <span class="param-pill">❄️ Заготовки: <strong>Подморозить</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Хрустящий слой</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Растопите 90 г белого шоколада, добавьте 20 г растительного масла без запаха и перемешайте. Всыпьте 80 г кукурузных хлопьев, покрошенных руками, и столовую ложку сублимированной малины. Разложите тонким слоем по дну тартов и заморозьте — слой должен схватиться, прежде чем на него пойдёт кули.
+                <span class="source-badge">⏱ Урок_02: 00:00:02–00:02:17</span>
+              </p>
+              <div class="tip-box">
+                <strong>Хлопья ломают руками:</strong> нож даёт ровные куски, а нужна именно неровная крошка — она лучше схватывается с шоколадом.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">❄️ Схватывание: <strong>В морозилке</strong></span>
+              <span class="param-pill">📏 Слой: <strong>Тонкий</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Малиновый ганаш</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Половину сливок (около 120 г) с инвертным сахаром и сиропом глюкозы доведите до кипения и вылейте на 170 г белого шоколада. Добавьте набухший желатин и 35 г пюре малины, пробейте блендером. Влейте оставшиеся холодные сливки и снова пробейте. Накройте плёнкой в контакт и уберите в холодильник минимум на 12 часов — или на 6–8, если очень нужно быстрее.
+                <span class="source-badge">⏱ Урок_03: 00:00:03–00:03:45</span>
+              </p>
+              <div class="warning-box">
+                <strong>Расхождение с видео:</strong> в ролике желатин в ганаш не добавляют, а в DOCX стоит пометка «в видео нет желатина, лучше его добавить». На странице желатин есть — 2 г, как в рецептуре.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Стабилизация: <strong>Не менее 12 ч</strong></span>
+              <span class="param-pill">💧 Плёнка: <strong>В контакт</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Кули малина</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                240 г пюре малины подогрейте до 35–40 °C, всыпьте дождиком 60 г сахара, перемешанного с 4 г пектина NH, непрерывно мешая. Доведите до кипения и прокипятите 30 секунд. Снимите с огня, добавьте 2 г лимонной кислоты, слегка охладите. Распределите поверх хрустящего слоя и уберите в морозилку, чтобы кули схватилось до заливки муссом.
+                <span class="source-badge">⏱ Урок_04: 00:00:02–00:02:33</span>
+              </p>
+              <div class="warning-box">
+                <strong>Пектин в холодную массу:</strong> 35–40 °C — верхняя граница. В горячее пюре пектин вводить нельзя, он закомкуется.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Пюре: <strong>35–40 °C</strong></span>
+              <span class="param-pill">⏱ Кипячение: <strong>30 секунд</strong></span>
+              <span class="param-pill">❄️ Перед муссом: <strong>В морозилку</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Мусс на белом шоколаде</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                125 г сливок доведите до кипения, но не кипятите долго, и растворите в них 125 г белого шоколада. Добавьте 5 г набухшего желатина и пробейте блендером до гладкости, затем остудите. Отдельно взбейте 270 г сливок до полувзбитого состояния — они должны стекать с венчика лентой — и объедините с остывшей шоколадной базой лопаткой, аккуратно, снизу вверх.
+                <span class="source-badge">⏱ Урок_05: 00:00:01–00:03:11</span>
+              </p>
+              <div class="tip-box">
+                <strong>Полувзбитые, не взбитые:</strong> если сливки встанут «гвоздём», мусс при смешивании с базой станет зернистым и потеряет воздушность.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Сливки 2: <strong>Полувзбитые</strong></span>
+              <span class="param-pill">🌡 База: <strong>Остывшая</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Сборка и подморозка</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                На схватившееся кули разложите мусс, заполняя тарт до верха, и подморозьте. Слои должны схватиться до того, как сверху появится взбитый ганаш, иначе он продавит мусс и рисунок поедет. Этот вариант удобен тем, что тарты можно держать в морозилке и доставать по мере надобности.
+                <span class="source-badge">⏱ Урок_05: 00:03:00–00:03:11</span>
+              </p>
+              <div class="tip-box">
+                <strong>Порядок неизменен:</strong> основа → хрустящий слой → кули → мусс → взбитый ганаш. Каждый слой схватывается до следующего.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">❄️ Подморозка: <strong>До схватывания</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>72 ч в холодильнике</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Взбивание ганаша и декор</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Стабилизированный ганаш взбейте — он посветлеет и станет держать форму — и переложите в мешок с насадкой 124 или 125. Отсадите на тарты: лепестковой насадкой получается спираль, которая видна на фото. По желанию добавьте сублимированную малину или свежую ягоду. Подавайте сразу: взбитый ганаш долго не стоит.
+                <span class="source-badge">⏱ Урок_06: 00:00:02–00:01:21</span>
+              </p>
+              <div class="warning-box">
+                <strong>Взбитый ганаш используется сразу:</strong> через несколько часов он начнёт «садиться» и терять рисунок.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌼 Насадки: <strong>124 или 125</strong></span>
+              <span class="param-pill">🍓 Декор: <strong>Сублимированная малина</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Ганаш заранее:</strong> минимум 6–8 часов, спокойно 24 часа до сборки.</li>
+                <li><strong>Инвертный сахар и глюкоза обязательны:</strong> без них взбитый ганаш будет то жидким, то перебитым.</li>
+                <li><strong>Сублимированная малина:</strong> натуральный цвет и вкус без красителей, работает и в тесте, и в хрустящем слое.</li>
+                <li><strong>Хлопья — руками:</strong> неровная крошка лучше держится в шоколаде.</li>
+                <li><strong>Кули под мусс:</strong> кислота малины уравновешивает сладкий белый шоколад.</li>
+                <li><strong>Полувзбитые сливки в мусс:</strong> залог воздушной текстуры.</li>
+                <li><strong>Каждый слой схватывают в морозилке:</strong> так границы остаются ровными.</li>
+                <li><strong>Ганаш взбивают в день подачи:</strong> он держит форму несколько часов.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Долгий замес сабле:</strong> тесто садится, край волнистый.</li>
+                <li><strong>Выпечка без подморозки:</strong> бортики сползают.</li>
+                <li><strong>Пектин в горячее пюре:</strong> комки, кули не загустевает.</li>
+                <li><strong>Перевзбитые сливки в мусс:</strong> зернистая текстура и «шапка» из жира.</li>
+                <li><strong>Тёплая база под сливки:</strong> мусс расслаивается.</li>
+                <li><strong>Мусс на жидкое кули:</strong> слои смешиваются, рисунок теряется.</li>
+                <li><strong>Ганаш без стабилизации:</strong> не взбивается, течёт.</li>
+                <li><strong>Долгое хранение взбитого ганаша:</strong> рисунок оседает.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и замены</h4>
+              <ul>
+                <li><strong>Готовые тарты:</strong> 72 часа в холодильнике, месяц в морозилке.</li>
+                <li><strong>Тесто:</strong> 2–4 часа в холодильнике; подмороженные заготовки — до выпечки.</li>
+                <li><strong>Ганаш:</strong> 6–12 часов стабилизации; взбивают перед подачей.</li>
+                <li><strong>Пюре малины:</strong> замороженное подходит; при варке впрок добавляют 10 % сахара.</li>
+                <li><strong>Сублимированная малина:</strong> не заменяется свежей — свежая даст влагу.</li>
+                <li><strong>Пектин NH:</strong> яблочного вдвое больше.</li>
+                <li><strong>Кукурузные хлопья:</strong> любые готовые завтраки без глазури и добавок.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: #666; line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «Тарт_Малиновый» с рецептурой и шесть уроков с расшифровкой. Граммовки — из DOCX, техника и таймкоды — из видео.</li>
+              <li><strong>Желатин в ганаше — прямое расхождение:</strong> в DOCX стоит 2 г желатина и пометка автора «в видео нет желатина, лучше его добавить». В Урок_03 желатина действительно нет. На странице он есть, с пояснением.</li>
+              <li><strong>Выход:</strong> в DOCX «10–12 тартов», на странице база 10 — как у остальных тартов серии; при 12 тартах расход на один меньше.</li>
+              <li><strong>Температура выпечки:</strong> 165–170 °C — выше, чем у остальных тартов серии (155–160 °C). Так в DOCX; в расшифровке конкретная температура не проговаривается.</li>
+              <li><strong>Порции сливок в ганаше и муссe:</strong> в DOCX есть деление «сливки (1) / (2)», но точные веса половин не названы — на странице «около 120 г» для горячей части ганаша.</li>
+              <li><strong>Сублимированная малина:</strong> измеряется столовыми ложками, граммовка не указана.</li>
+              <li><strong>Пробелы:</strong> не указан вес кули и мусса на один тарт; не назван точный выход ганаша после взбивания.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_06 (около 00:01:30) с готовым тартом.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

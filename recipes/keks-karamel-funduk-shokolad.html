@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кекс «Карамель-фундук-шоколад» — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Восточный кекс Надежды Зубовой на карамели сухого способа и фундуке в шелухе: яйца с коричневым сахаром на водяной бане, сироп глюкозы, кусочки молочного шоколада. Выпечка 27 минут при 160 °C с конвекцией, черничное конфи на пектине NH, глазурь гурмэ и карамельный ганаш.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="keks-karamel-funduk-shokolad">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Кекс «Карамель-фундук-шоколад»</h1>
+      <p class="recipe-lead">
+        Богатый восточный кекс, в котором три вкуса работают в одном тесте: карамель сухого способа, обжаренный в шелухе фундук, смолотый в муку, и кусочки молочного шоколада. Яйца с коричневым сахаром прогревают на водяной бане, поэтому корпус получается плотным и влажным. Сверху — черничное конфи в отверстии и снаружи, глазурь гурмэ с фундуком и карамельный ганаш «лепестком».
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~1 ч 10 мин (орехи, карамель, тесто)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Орехи 50–60 мин, выпечка 27–35 мин, остывание</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~3 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">2 кекса + 2–3 капкейка</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/keks-karamel-funduk-shokolad.jpg" alt="Кекс «Карамель-фундук-шоколад»: тёмный корпус под глазурью гурмэ с кусочками фундука и волнистые завитки карамельного ганаша сверху" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (2 кекса)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="2">2</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">кекс</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — два кекса: 400 г теста в форму со съёмным дном 20 × 5,6 × 5,6 см и 430 г в форму с трубкой Ø18–20 см. Остаток теста уходит на 2–3 капкейка по 50–55 г — они в базу не входят. Конфи, глазурь и ганаш даны партиями на два кекса.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">2</span> кекса</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на тесто, карамель, конфи, глазурь и ганаш. Фундук берите с запасом: 105 г идёт в тесто мелким помолом и 40 г — в глазурь рубленым. Сахар в списке разделён на белый (карамель и конфи) и коричневый (тесто).
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5 %</strong>:
+                <span class="shopping-qty" data-base-amount="170" data-unit="г">170 г</span>
+                <span class="shopping-hint">Размягчённое, комнатной температуры</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span>
+                <span class="shopping-hint">По весу 160 г без скорлупы</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 30–33 %</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">70 г в карамель (довести до кипения) и 30 г в тесто, холодными</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молочный шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="270" data-unit="г">270 г</span>
+                <span class="shopping-hint">80 г калетами в тесто, 150 г в глазурь и 40 г в ганаш</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌰 Фундук, бакалея, черника</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Фундук в шелухе</strong>:
+                <span class="shopping-qty" data-base-amount="145" data-unit="г">145 г</span>
+                <span class="shopping-hint">105 г в тесто мелким помолом + 40 г в глазурь; шелуху не снимать</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="155" data-unit="г">155 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар коричневый</strong>:
+                <span class="shopping-qty" data-base-amount="125" data-unit="г">125 г</span>
+                <span class="shopping-hint">Именно коричневый — он даёт карамельную глубину</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар белый</strong>:
+                <span class="shopping-qty" data-base-amount="125" data-unit="г">125 г</span>
+                <span class="shopping-hint">80 г в карамель и 45 г в конфи (30 г + 15 г с пектином)</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сироп глюкозы</strong>:
+                <span class="shopping-qty" data-base-amount="75" data-unit="г">75 г</span>
+                <span class="shopping-hint">60 г в тесто и 10–15 г в конфи</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре черники</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Или свежая и замороженная черника — перебить в пюре</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пектин NH</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="г">2 г</span>
+                <span class="shopping-hint">На 150 г пюре; вводить дождиком, смешав с 15 г сахара</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимонная кислота</strong> — ¼ ч. л.
+                <span class="shopping-hint">В конфи, в самом конце</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Разрыхлитель</strong>:
+                <span class="shopping-qty" data-base-amount="6" data-unit="г">6 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло растительное без запаха</strong>:
+                <span class="shopping-qty" data-base-amount="20" data-unit="г">20 г</span>
+                <span class="shopping-hint">Кукурузное, в глазурь гурмэ</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong> — щепотка
+                <span class="shopping-hint">В карамельный ганаш</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — форма со съёмным дном 20 × 5,6 × 5,6 см, форма с трубкой 18 × 6 × 7 см, кондитерский мешок, насадка 124–127 «лепесток», шпажка
+                <span class="shopping-hint">Масло для формы — спрей или растительное</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Карамель</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Сахар
+              <span class="ingredient-note">Белый; плавится сухим способом</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Сливки 30–33 %
+              <span class="ingredient-note">Довести до кипения</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Тесто кекса</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="170" data-unit="г">170 г</span> — Масло сливочное 82,5 %
+              <span class="ingredient-note">Размягчённое</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Сахар коричневый
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Яйца
+              <span class="ingredient-note">≈3 яйца С1 без скорлупы</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Карамель
+              <span class="ingredient-note">Из компонента выше, комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сироп глюкозы
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="155" data-unit="г">155 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="105" data-unit="г">105 г</span> — Фундук мелко дробленый
+              <span class="ingredient-note">Обжаренный в шелухе, смолотый в блендере</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="6" data-unit="г">6 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Сливки 30 %, холодные
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Молочный шоколад в калетах
+              <span class="ingredient-note">Не мельче: кусочки должны чувствоваться в тесте</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Черничное конфи</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Пюре черники
+              <span class="ingredient-note">Или ягоды, перебитые в пюре</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Сахар к пектину
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Сироп глюкозы
+              <span class="ingredient-note">По источнику — 10–15 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Пектин NH
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              ¼ ч. л. — Лимонная кислота
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Глазурь гурмэ</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Молочный шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Масло растительное без запаха
+              <span class="ingredient-note">Кукурузное</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Фундук обжаренный рубленый
+              <span class="ingredient-note">Опционально: можно без ореха</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Карамельный ганаш</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Карамель
+              <span class="ingredient-note">Из компонента выше, нагреть до кипения</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Молочный шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Щепотка — Соль
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Обжарка и помол фундука</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Фундук рассыпьте на противень и поджарьте при 140–150 °C с конвекцией 50–60 минут. Шелуху не снимайте — она даёт дополнительный вкус. Остывшие орехи отправьте в измельчитель или блендер и смелите довольно мелко: смесь получится насыщенной, коричневой именно из-за шелухи.
+                <span class="source-badge">⏱ Кекс: 00:00:14–00:01:03</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> долгая обжарка при невысокой температуре нужна, чтобы максимально раскрыть вкус фундука. Именно поэтому 50–60 минут, а не 10.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>140–150 °C</strong></span>
+              <span class="param-pill">⏱ Время: <strong>50–60 минут</strong></span>
+              <span class="param-pill">🌰 Шелуха: <strong>Оставить</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Карамель сухим способом</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Сотейницу сильно нагрейте. Всыпьте половину сахара (40 г) и дождитесь, пока он начнёт плавиться, затем добавьте вторую половину. Следите, чтобы сахар не горел: при необходимости сбавьте нагрев или приподнимите сотейник. Когда весь сахар растопится, влейте сливки, доведённые до кипения, — они должны быть реально очень горячими, иначе получите ожог. Нагрев уже можно выключить. Остудите карамель до комнатной температуры.
+                <span class="source-badge">⏱ Кекс: 00:01:05–00:02:55</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сливки — кипящие:</strong> автор подчёркивает это отдельно. Холодные или просто тёплые сливки в раскалённом сахаре дадут бурную реакцию и ожог.
+              </div>
+              <div class="tip-box">
+                <strong>Если карамель застыла:</strong> прогрейте её немного в микроволновке — в тесто она должна идти тёплой, но не горячей.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍬 Сахар: <strong>80 г, в два приёма</strong></span>
+              <span class="param-pill">🥛 Сливки: <strong>70 г, кипящие</strong></span>
+              <span class="param-pill">🌡 Остудить: <strong>До комнатной</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Яйца с коричневым сахаром на бане</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Соедините яйца (160 г) с коричневым сахаром (125 г) и поставьте на водяную баню. Нагревайте примерно до 45 °C — до полного растворения сахара; можно измерять градусником, а можно на глаз. Масса должна стать тёплой. Снимите с бани и отставьте, затем добавьте сироп глюкозы (60 г) и перемешайте.
+                <span class="source-badge">⏱ Кекс: 00:02:55–00:03:41</span>
+              </p>
+              <div class="warning-box">
+                <strong>Без водяной бани нельзя:</strong> холодный сахар не разойдётся, и эмульсия в тесте не соберётся — кекс получится плотным.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Водяная баня: <strong>До 45 °C</strong></span>
+              <span class="param-pill">🍬 Сахар: <strong>125 г, коричневый</strong></span>
+              <span class="param-pill">🍯 Глюкоза: <strong>60 г, после бани</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Масло-помада и яйца в три приёма</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Размягчённое масло (170 г) разбейте миксером до однородной масло-помады. Затем введите тёплую яичную смесь с глюкозой в три приёма, дожидаясь, пока каждая порция полностью разойдётся и масло снова станет однородным.
+                <span class="source-badge">⏱ Кекс: 00:03:41–00:05:02</span>
+              </p>
+              <div class="warning-box">
+                <strong>Постепенно, а не сразу:</strong> вся жидкость за один раз расслоит эмульсию. Если это всё-таки случилось, прогрейте массу 7–10 секунд в микроволновке и продолжите взбивать.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Масло: <strong>170 г</strong></span>
+              <span class="param-pill">🥚 Яйца: <strong>В три приёма</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Карамель в тесто</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Добавьте 70 г карамели и разбейте миксером до объединения. Карамель должна быть тёплой и не застывшей.
+                <span class="source-badge">⏱ Кекс: 00:05:09–00:05:40</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> карамели по весу получается ровно столько, сколько нужно, но может выйти чуть больше. Лишнее не выливайте — оно пойдёт в карамельный ганаш.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍮 Карамель: <strong>70 г, тёплая</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Сухие ингредиенты</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Отдельно перемешайте муку (155 г) с разрыхлителем (6 г) — это обязательно, — затем добавьте фундучную муку (105 г) и перемешайте ещё раз. Введите сухие в тесто и перемешивайте миксером на небольших оборотах до однородности.
+                <span class="source-badge">⏱ Кекс: 00:05:42–00:06:48</span>
+              </p>
+              <div class="tip-box">
+                <strong>Цвет теста:</strong> должно получиться красивым карамельно-ореховым — это и есть сигнал, что всё сделано правильно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌾 Мука: <strong>155 г + 6 г разрыхлителя</strong></span>
+              <span class="param-pill">🌰 Фундук: <strong>105 г, помол</strong></span>
+              <span class="param-pill">⚙️ Скорость: <strong>Небольшая</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Сливки и шоколад</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Добавьте холодные сливки (30 г) и вмешайте уже лопаткой, не миксером. Затем введите молочный шоколад в калетах (80 г) и перемешайте лопаткой, чтобы кусочки распределились по тесту. Переложите тесто в кондитерский мешок.
+                <span class="source-badge">⏱ Кекс: 00:06:49–00:07:27</span>
+              </p>
+              <div class="warning-box">
+                <strong>Шоколад — не мельче калет:</strong> если порубить его слишком мелко, кусочков в готовом кексе не будет. Крупные калеты можно просто порубить ножом.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥛 Сливки: <strong>30 г, холодные</strong></span>
+              <span class="param-pill">🍫 Шоколад: <strong>80 г, калетами</strong></span>
+              <span class="param-pill">🥄 Мешать: <strong>Лопаткой</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Раскладка по формам</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Формы обработайте маслом — сливочным, растительным или спреем; внутренний цилиндр тоже, чтобы он легко выходил. Выкладывайте тесто по весу: 400 г в форму со съёмным дном и 430 г в форму с трубкой. Тесто на дне распределяйте не выше отверстия, иначе оно попадёт в трубку. Вставьте трубку и заполните тесто вокруг неё, хорошо прорабатывая края и верх. Остаток разложите по капкейковым формочкам по 50–55 г — выйдет 2–3 штуки. Верх разровняйте лопаткой.
+                <span class="source-badge">⏱ Кекс: 00:07:20–00:09:12</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не выше отверстия:</strong> иначе тесто залепит трубку, и кекс придётся вырезать из формы.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> разравнивать лопаткой стоит лишь слегка — масла в тесте достаточно, и кекс сам выйдет сверху почти ровным.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ Форма без трубки: <strong>400 г</strong></span>
+              <span class="param-pill">⚖️ Форма с трубкой: <strong>430 г</strong></span>
+              <span class="param-pill">🧁 Капкейки: <strong>50–55 г, 2–3 шт.</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Выпечка</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте при 160 °C, желательно с конвекцией, 27 минут — по тексту источника. Готовность проверяйте сухой шпажкой. В видео автор печёт 25–35 минут, и 25 минут ей не хватило: она допекала ещё 7–10 минут. Ориентируйтесь на шпажку, а не на таймер.
+                <span class="source-badge">⏱ Кекс: 00:09:19–00:09:51</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не перепекать:</strong> автор предупреждает об этом отдельно. Тесто на коричневом сахаре и карамели сохнет быстро, и пересушенный кекс потеряет всю влажность, ради которой всё делалось.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>160 °C, конвекция</strong></span>
+              <span class="param-pill">⏱ Время: <strong>27 мин (в видео 25–35)</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Сухая шпажка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Черничное конфи</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Пектин NH (2 г) смешайте с 15 г сахара. Пюре черники (150 г) с сиропом глюкозы (10–15 г) немного прогрейте и введите пектин с сахаром дождиком при непрерывном помешивании. Добавьте остальной сахар (30 г) и варите до пробы «нестекающая капля». В конце введите лимонную кислоту (¼ ч. л.), перемешайте, переложите в кондитерский мешок и дайте остыть до комнатной температуры.
+              </p>
+              <div class="tip-box">
+                <strong>Этот шаг — из текстового источника:</strong> в видео видно только использование готового конфи, поэтому таймкода у него нет.
+              </div>
+              <div class="warning-box">
+                <strong>Пектин — только дождиком и в тёплое пюре:</strong> если всыпать его в кипящее пюре, он схватится комками. Смешивание с сахаром перед вводом — не формальность.
+              </div>
+              <div class="tip-box">
+                <strong>Проба на «нестекающую каплю»:</strong> капля на холодной тарелке должна держать форму, а не растекаться.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🫐 Пюре: <strong>150 г</strong></span>
+              <span class="param-pill">🧪 Пектин NH: <strong>2 г + 15 г сахара</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Нестекающая капля</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Начинить кексы конфи</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Верх кекса подровняйте. В отверстие кекса с трубкой заполните конфи, глубоко отправляя насадку внутрь, но оставляя воздушный просвет — воздуху нужно выходить. Затем форму можно перевернуть: начинка густая и уже стабилизировалась. С другой стороны подставьте бумажку, чтобы конфи не вытекала, переверните, бумажку выньте и продолжите заполнение.
+                <span class="source-badge">⏱ Сборка: 00:00:02–00:01:11</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> второй кекс — тот, что пёкся без трубки, — можно оставить как есть или тоже подровнять и заполнить.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🫐 Конфи: <strong>В отверстие</strong></span>
+              <span class="param-pill">💨 Просвет: <strong>Оставить для воздуха</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Конфи снаружи</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Густую начинку можно нанести и снаружи: двумя полосками из кондитерского мешка. Уберите кексы в холодильник, чтобы конфи стабилизировалась.
+                <span class="source-badge">⏱ Сборка: 00:01:11–00:01:35</span>
+              </p>
+              <div class="warning-box">
+                <strong>Слишком много нельзя:</strong> толстый слой начинки «уползёт» с кекса. Автор наносит именно двумя полосками.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🫐 Снаружи: <strong>Две полоски</strong></span>
+              <span class="param-pill">❄️ Затем: <strong>В холодильник</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Глазурь гурмэ</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Молочный шоколад (150 г) растопите с растительным маслом (20 г) в микроволновке пульсами или на водяной бане, добавьте обжаренный рубленый фундук (40 г) и перемешайте. Орех можно не добавлять вовсе.
+                <span class="source-badge">⏱ Сборка: 00:01:29–00:02:22</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> глазурь гурмэ не требует темперирования, прекрасно застывает и ложится ровным глянцем.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Шоколад: <strong>150 г, молочный</strong></span>
+              <span class="param-pill">🌻 Масло: <strong>20 г, без запаха</strong></span>
+              <span class="param-pill">🌰 Фундук: <strong>40 г, рубленый</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Карамельный ганаш</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Карамель (60 г) нагрейте до кипения и вылейте на молочный шоколад (40 г) со щепоткой соли. Перемешайте до однородности, переложите в кондитерский мешок с насадкой 124 «лепесток» (подойдут также 125 или 127). Дождитесь, пока ганаш остынет до комнатной температуры.
+                <span class="source-badge">⏱ Сборка: 00:02:22–00:03:14</span>
+              </p>
+              <div class="warning-box">
+                <strong>Ганаш не взбивать:</strong> достаточно, чтобы он остыл до комнатной температуры, — тогда он прекрасно отсаживается через насадку.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍮 Карамель: <strong>60 г, кипящая</strong></span>
+              <span class="param-pill">🍫 Шоколад: <strong>40 г, молочный</strong></span>
+              <span class="param-pill">🌰 Насадка: <strong>124 (или 125, 127)</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">15</span>
+                <h3 class="step-title">Покрытие и декор</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Кекс с конфи окуните в глазурь гурмэ и покройте со всех сторон, помогая себе палочкой. Окунать целиком можно только полностью замороженный кекс — иначе конфи и глазурь поплывут. Карамельный ганаш отсадите сверху волнистым «лепестком», раскладывая карамель хаотично по поверхности.
+                <span class="source-badge">⏱ Сборка: 00:03:14–00:05:17</span>
+              </p>
+              <div class="warning-box">
+                <strong>Целиком — только замороженный:</strong> автор подчёркивает это отдельно. Кекс с черничным конфи покрывают с ног до головы, лишь если он из морозилки.
+              </div>
+              <div class="tip-box">
+                <strong>Декор:</strong> ганаш и карамель кладут хаотично — ровные ряды здесь не нужны, работает именно небрежная «богатая» поверхность.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Покрытие: <strong>Окунать целиком</strong></span>
+              <span class="param-pill">🍮 Ганаш: <strong>«Лепестком» сверху</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>7 дней в холоде / 1 месяц в морозилке</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Фундук в шелухе:</strong> шелуху не снимают — она даёт дополнительный вкус, а помол получается насыщенным и коричневым.</li>
+                <li><strong>Карамель сухим способом:</strong> сахар плавят без воды в сильно нагретом сотейнике и всыпают в два приёма, чтобы он не горел.</li>
+                <li><strong>Сливки кипящие:</strong> только так они безопасно деглазируют карамель.</li>
+                <li><strong>Яйца на водяной бане:</strong> прогрев до 45 °C нужен и для растворения сахара, и для правильной консистенции яйца.</li>
+                <li><strong>Яйца в три приёма:</strong> постепенность — главное правило эмульсии; так масло не расслаивается.</li>
+                <li><strong>Шоколад калетами:</strong> кусочки должны чувствоваться в готовом кексе, поэтому не мельчат.</li>
+                <li><strong>Тесто любит холод:</strong> кексовое тесто можно держать в холодильнике до 12 часов, а готовые кексы — замораживать в сборе на месяц.</li>
+                <li><strong>Тот же рецепт — в торт:</strong> из одной рецептуры выходит 4 коржа Ø16 см потолще или 4 коржа Ø18 см потоньше; печь в двух кольцах и разрезать каждый пополам.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Сахар горит в карамели:</strong> слишком сильный нагрев. Сотейник приподнимают или сбавляют мощность.</li>
+                <li><strong>Холодные сливки в карамель:</strong> бурная реакция и ожог. Сливки должны кипеть.</li>
+                <li><strong>Расслоившаяся эмульсия:</strong> её нельзя «спасать» мукой. Прогрейте массу 7–10 секунд в микроволновке пульсами и продолжите взбивать.</li>
+                <li><strong>Вся жидкость сразу:</strong> яйца вводят в три приёма, иначе тесто расслаивается.</li>
+                <li><strong>Тесто выше отверстия:</strong> оно залепит трубку и кекс не выйдет из формы.</li>
+                <li><strong>Перепечённый кекс:</strong> тесто на карамели сохнет быстро — ориентируются на сухую шпажку, а не на таймер.</li>
+                <li><strong>Пектин в кипящее пюре:</strong> комкуется. Вводят дождиком в тёплое пюре, предварительно смешав с сахаром.</li>
+                <li><strong>Окунают тёплый кекс:</strong> конфи и глазурь поплывут. Целиком покрывают только замороженный кекс.</li>
+                <li><strong>Взбивают карамельный ганаш:</strong> не нужно — достаточно остудить до комнатной температуры.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и подача</h4>
+              <ul>
+                <li><strong>Кекс:</strong> до 10 дней в холодильнике, до 2 месяцев в морозилке; заворачивать в плёнку.</li>
+                <li><strong>Кекс в сборе:</strong> 7 суток в холодильнике, 1 месяц в морозилке.</li>
+                <li><strong>Без начинки и декора:</strong> до 5 суток при комнатной температуре — в контейнере, коробке или пергаменте.</li>
+                <li><strong>Черничное конфи:</strong> 7 суток в холодильнике, 2 месяца в морозилке.</li>
+                <li><strong>Карамельный ганаш:</strong> 2 недели в холодильнике, 2 месяца в морозилке.</li>
+                <li><strong>Коржи для торта:</strong> в пищевой плёнке до 10 дней в холодильнике или до 2 месяцев в морозилке.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Форма:</strong> со съёмным дном 20 × 5,6 × 5,6 см, с трубкой 18 × 6 × 7 или 20 × 5 × 6 см; остаток — на капкейки 4 × 5 см по 50–55 г.</li>
+                <li><strong>Шоколад:</strong> калеты можно заменить плиткой, порубив ножом.</li>
+                <li><strong>Глазурь:</strong> можно без ореха — на вкус это не влияет принципиально.</li>
+                <li><strong>Начинка:</strong> черничное конфи по этому рецепту; автор допускает и другие густые начинки.</li>
+                <li><strong>Как торт:</strong> 4 коржа Ø16 или Ø18 см, выпекать в двух кольцах и разрезать пополам.</li>
+                <li><strong>Как капкейки:</strong> тот же замес годится для капкейков, но время выпечки меньше.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 — теория кексов длительного хранения: эмульсия, влага, хранение и заморозка; Урок_02.mp4 — обжарка фундука, карамель, замес, раскладка по формам и выпечка (00:00:02–00:09:51); Урок_03.mp4 — конфи в отверстии и снаружи, глазурь гурмэ, карамельный ганаш и декор (00:00:00–00:05:17); DOCX «Кекс_Карамель-Фундук-Шоколад» — все граммовки, рецепт черничного конфи и сроки хранения.</li>
+              <li><strong>Время выпечки:</strong> в DOCX — 27 минут при 160 °C с конвекцией; в видео автор называет 25–35 минут и говорит, что 25 минут ей не хватило — допекала ещё 7–10 минут (итого около 32–35). На странице указаны оба варианта с ориентиром на сухую шпажку.</li>
+              <li><strong>Черничное конфи:</strong> в видео показано только использование готового конфи, рецепт с граммовками (150 г пюре, 30 + 15 г сахара, 10–15 г глюкозы, 2 г пектина NH, ¼ ч. л. лимонной кислоты) есть только в DOCX.</li>
+              <li><strong>Сахар в конфи:</strong> в DOCX он записан двумя значениями — 30 г и отдельно 15 г, которое смешивают с пектином; на странице это отражено как два пункта.</li>
+              <li><strong>Сироп глюкозы в конфи:</strong> в DOCX указан диапазон 10–15 г; на странице оставлено 15 г как база калькулятора.</li>
+              <li><strong>Карамель:</strong> из 80 г сахара и 70 г сливок выходит около 130 г карамели; 70 г идёт в тесто и 60 г — в карамельный ганаш. В видео автор отмечает, что карамели может выйти чуть больше, и лишнее не выбрасывают.</li>
+              <li><strong>Насадка:</strong> в DOCX — 124 (можно 125 или 127), в видео автор называет 124 и 127.</li>
+              <li><strong>Пробелы:</strong> вес готового кекса не назван; точное время остывания конфи и ганаша не указано — только «до комнатной температуры»; расход глазури на одно изделие не отвешивается.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_03.mp4 (около 00:05:10), обрезанный по кексу: глазурь гурмэ с фундуком и завитки карамельного ганаша.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

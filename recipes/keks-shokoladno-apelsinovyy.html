@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кекс «Шоколадно-апельсиновый» — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Шоколадно-апельсиновый кекс Надежды Зубовой: тонкий шоколадный пласт на миндальной муке, слои шоколадного ганаша и апельсинового конфи на пектине NH, сборка в рамке и глазурь гурмэ из двух шоколадов с дробленым какао.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="keks-shokoladno-apelsinovyy">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Кекс «Шоколадно-апельсиновый»</h1>
+      <p class="recipe-lead">
+        Кекс, который собирается как мини-торт: тонкий шоколадный пласт на миндальной муке выпекается на коврике с бортиками из фольги, режется на четыре полосы и переслаивается шоколадным ганашом и апельсиновым конфи. Готовый блок замораживают, обрезают по линейке, окунают в глазурь гурмэ из двух шоколадов и покрывают сверху нейтральным гелем — чтобы срез читался.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~40 мин (конфи, тесто, ганаш)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч 10 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Выпечка 7–8 мин, ганаш 2 ч, заморозка</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~5 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">4 кекса 15 × 4 см</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/keks-shokoladno-apelsinovyy.jpg" alt="Шоколадно-апельсиновые кексы-брусочки в глазури гурмэ: тонкая жёлтая полоса апельсинового конфи в срезе, верх под нейтральным гелем" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (4 кекса)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="4">4</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">кекса</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — 4 кекса: пласт 20 × 15 см режется на четыре полосы 15 × 4 см. Конфи, ганаш и глазурь даны партиями на этот объём. В видео блок можно оставить и целым — тогда это торт.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">4</span> кекса</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на конфи, кекс, ганаш и глазурь. Апельсин нужен один крупный: из него выходит 75 г бланшированного пюре. Пектин — именно NH, яблочный потребует другой дозировки.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span>
+                <span class="shopping-hint">140 г без скорлупы</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 30 %</strong>:
+                <span class="shopping-qty" data-base-amount="145" data-unit="г">145 г</span>
+                <span class="shopping-hint">65 г в тесто и 80 г в ганаш</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5 %</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">Размягчённое, в ганаш</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шоколад тёмный 54 %</strong>:
+                <span class="shopping-qty" data-base-amount="265" data-unit="г">265 г</span>
+                <span class="shopping-hint">15 г горького в тесто, 70 г в ганаш, 180 г в глазурь</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шоколад молочный</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">В ганаш; в видео глазурь делают из двух шоколадов поровну</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍊 Апельсин, бакалея, декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Апельсин</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">Крупный, с кожей: нужно 75 г бланшированной мякоти</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Миндальная мука</strong>:
+                <span class="shopping-qty" data-base-amount="40" data-unit="г">40 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао алкализованное</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">В сухие ингредиенты теста</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="85" data-unit="г">85 г</span>
+                <span class="shopping-hint">70 г в тесто и 15 г в конфи</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сироп глюкозы</strong>:
+                <span class="shopping-qty" data-base-amount="26" data-unit="г">26 г</span>
+                <span class="shopping-hint">10 г в конфи и 16 г в ганаш</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Инвертный сахар</strong>:
+                <span class="shopping-qty" data-base-amount="14" data-unit="г">14 г</span>
+                <span class="shopping-hint">10 г в конфи и 4 г в тесто; можно заменить светлым мёдом</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пектин NH</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="г">2 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Разрыхлитель</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="г">5 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло растительное без запаха</strong>:
+                <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                <span class="shopping-hint">40 г в тесто и 30 г в глазурь, кукурузное</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Дробленое какао-боб</strong>:
+                <span class="shopping-qty" data-base-amount="20" data-unit="г">20 г</span>
+                <span class="shopping-hint">В глазурь; можно заменить обжаренным орехом</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Нейтральный гель</strong> — для верха
+                <span class="shopping-hint">Чтобы срез читался</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong> — щепотка в тесто и щепотка при бланшировании
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — силиконовый коврик 30 × 40, фольга для бортиков, раздвижная рамка 15–27 см, пищевая плёнка, шпажки
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Апельсиновое конфи</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span> — Апельсин
+              <span class="ingredient-note">Нужно 75 г бланшированной мякоти с кожей</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Сироп глюкозы
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Инвертный сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Пектин NH
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Шоколадный кекс</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="140" data-unit="г">140 г</span> — Яйца
+              <span class="ingredient-note">≈3 шт. С1</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="г">4 г</span> — Инвертный сахар
+              <span class="ingredient-note">Или нейтральный светлый мёд</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Миндальная мука
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="65" data-unit="г">65 г</span> — Сливки 30 %
+              <span class="ingredient-note">Холодные, в самом конце</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="г">5 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Какао алкализованное
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Масло растительное
+              <span class="ingredient-note">Без запаха, кукурузное</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Шоколад горький
+              <span class="ingredient-note">Растопить с растительным маслом</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Щепотка — Соль
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Шоколадный ганаш</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Сливки
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="16" data-unit="г">16 г</span> — Сироп глюкозы
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Шоколад тёмный 54 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Шоколад молочный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Масло сливочное
+              <span class="ingredient-note">Размягчённое, когда ганаш ниже 35 °C</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Глазурь гурмэ</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="180" data-unit="г">180 г</span> — Шоколад тёмный 54 %
+              <span class="ingredient-note">В видео — пополам с молочным</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Масло растительное без запаха
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Дробленое какао
+              <span class="ingredient-note">Или обжаренный рубленый орех</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Бланширование апельсина</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Апельсин с кожей разрежьте сначала на 8 долек, затем каждую дольку пополам — всего 16 частей. Залейте водой примерно на 1 см, доведите до кипения и откиньте на дуршлаг. Повторите трижды; в третье кипячение добавьте хорошую щепотку соли, чтобы убрать горечь. Косточки удалите. Бланшированные апельсины пробейте погружным блендером и отберите 75 г.
+                <span class="source-badge">⏱ Урок_02: 00:00:18–00:01:49</span>
+              </p>
+              <div class="warning-box">
+                <strong>Трижды, а не один раз:</strong> здесь нужен не цукат, где небольшая горечь допустима, а конфи — поэтому воду сливают полностью и повторяют кипячение.
+              </div>
+              <div class="tip-box">
+                <strong>Крупинка в пюре:</strong> это нормально — апельсин пробивают вместе с кожурой.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍊 Апельсин: <strong>16 частей с кожей</strong></span>
+              <span class="param-pill">💧 Кипячение: <strong>3 раза</strong></span>
+              <span class="param-pill">⚖️ Отобрать: <strong>75 г пюре</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Апельсиновое конфи</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Пюре переложите в сотейник, добавьте сироп глюкозы (10 г) и инвертный сахар (10 г). Смешайте пектин NH (2 г) с сахаром (15 г) и введите дождиком при постоянном помешивании, пока масса ещё холоднее 40 °C. Доведите до кипения и проварите 1–2 минуты. Остудите.
+                <span class="source-badge">⏱ Урок_02: 00:02:12–00:03:44</span>
+              </p>
+              <div class="warning-box">
+                <strong>Пектин — дождиком и в холодную массу:</strong> иначе он схватится комками и не загустит.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧪 Пектин NH: <strong>2 г + 15 г сахара</strong></span>
+              <span class="param-pill">⏱ Варка: <strong>1–2 мин с кипения</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Сухие и яйца</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                В яйца (140 г) отправьте инвертный сахар (4 г) и весь сахар (70 г), перемешайте до растворения. Отдельно соедините муку (70 г), разрыхлитель (5 г), какао (15 г) и миндальную муку (40 г). Всыпьте сухие в яйца сразу все и перемешайте лопаткой — ровно до того момента, когда мука разойдётся.
+                <span class="source-badge">⏱ Урок_03: 00:00:01–00:02:07</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не перемешивать долго:</strong> заработает глютен, и кекс получится резиновым вместо кексовой текстуры. Миксер здесь вообще не нужен.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> инвертный сахар можно заменить нейтральным светлым мёдом — яркий мёд перебьёт апельсин.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Яйца: <strong>140 г</strong></span>
+              <span class="param-pill">🌾 Мука + миндальная: <strong>70 + 40 г</strong></span>
+              <span class="param-pill">🥄 Мешать: <strong>Лопаткой</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Шоколад с маслом и сливки</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Горький шоколад (15 г) растопите в микроволновке и смешайте с растительным маслом (40 г). Влейте жиры широким движением по всей поверхности теста и вмешайте лопаткой. В самом конце добавьте холодные сливки (65 г) и мешайте только до их вхождения.
+                <span class="source-badge">⏱ Урок_03: 00:02:07–00:03:28</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сливки — строго в конце и холодные:</strong> они завершают эмульсию, и после них тесто уже не мешают.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Шоколад: <strong>15 г</strong></span>
+              <span class="param-pill">🌻 Масло: <strong>40 г</strong></span>
+              <span class="param-pill">🥛 Сливки: <strong>65 г, холодные</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Пласт на коврике</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                На силиконовом коврике соорудите бортики из фольги высотой около 1 см — просто подложите фольгу под край и загните. Вылейте тесто и распределите ровным слоем, при необходимости постучите ковриком по столу. Пекарскую бумагу автор здесь не рекомендует.
+                <span class="source-badge">⏱ Урок_03: 00:03:29–00:04:59</span>
+              </p>
+              <div class="warning-box">
+                <strong>Только коврик:</strong> бумага намокнет и деформируется, тесто ляжет неравномерно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📐 Бортик: <strong>~1 см из фольги</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Силиконовый коврик</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Выпечка</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте при 170 °C с конвекцией (или 180 °C верх-низ) 7–8 минут. Готовность проверяйте нажатием пальца: ямка должна полностью восстанавливаться. Сразу после выпечки накройте пласт силиконовым ковриком или плёнкой в контакт, чтобы корж не высох.
+                <span class="source-badge">⏱ Урок_03: 00:05:00–00:05:34</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не перепекать:</strong> 7 минут достаточно. Пересушенный пласт будет ломаться при сборке.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>170 °C, конвекция</strong></span>
+              <span class="param-pill">⏱ Время: <strong>7–8 мин</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Ямка восстанавливается</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Шоколадный ганаш</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Сливки (80 г) с сиропом глюкозы (16 г) нагрейте до кипения и в два приёма вылейте на тёмный (70 г) и молочный (30 г) шоколад. Дайте шоколаду «подумать», затем перемешайте до однородности; при необходимости пробейте погружным блендером. Когда масса станет ниже 35 °C, введите размягчённое масло (15 г). Затяните плёнкой и оставьте при комнатной температуре минимум на 2 часа, либо на 40 минут в холодильник.
+                <span class="source-badge">⏱ Урок_04: 00:00:01–00:02:17</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем масло:</strong> оно делает ганаш шелковистее и помогает ему держать форму после стабилизации.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Шоколад: <strong>70 г тёмного + 30 г молочного</strong></span>
+              <span class="param-pill">❄️ Стабилизация: <strong>2 ч при комнатной</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Нарезка пласта</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Снимите фольгу и верхний коврик, переверните пласт и снимите второй коврик. По линейке разрежьте корж на четыре полосы: пласт получается 20 × 15 см, полосы — 15 × 4 см.
+                <span class="source-badge">⏱ Урок_05: 00:00:01–00:01:40</span>
+              </p>
+              <div class="tip-box">
+                <strong>Кожу не снимают:</strong> тонкая корочка сверху автору не мешает, её оставляют.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📐 Пласт: <strong>20 × 15 см</strong></span>
+              <span class="param-pill">🔪 Полосы: <strong>15 × 4 см, 4 шт.</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Сборка в рамке</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                В раздвижную рамку 15–27 см уложите полосу коржа. Половину ганаша распределите ровным слоем, накройте вторым коржом, прижмите через пергамент плоским скребком — нужна большая площадь давления, а не пальцы. Затем слой апельсинового конфи (его предварительно разомните), третий корж, второй слой ганаша и последний корж. Всё уплотните через бумагу, закройте плёнкой и отправьте в морозилку.
+                <span class="source-badge">⏱ Урок_05: 00:01:43–00:06:09</span>
+              </p>
+              <div class="warning-box">
+                <strong>Слои одинаковой толщины:</strong> иначе кекс получится кособоким, а срез — некрасивым.
+              </div>
+              <div class="tip-box">
+                <strong>Зачем морозилка:</strong> только полностью замороженный блок режется с чёткими краями.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥞 Порядок: <strong>корж — ганаш — корж — конфи — корж — ганаш — корж</strong></span>
+              <span class="param-pill">❄️ Заморозка: <strong>До полного застывания</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Обрезка и глазурь гурмэ</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Замороженный блок обрежьте по линейке со всех четырёх граней, каждый раз протирая нож. Разрежьте на четыре кекса 15 × 4 см. Для глазури растопите шоколад (180 г тёмного 54 %, в видео — пополам с молочным) с растительным маслом (30 г), вмешайте дробленое какао (20 г). Насадите кекс на шпажку и окуните в глазурь, не покрывая верхний срез.
+                <span class="source-badge">⏱ Урок_06: 00:00:02–00:04:11</span>
+              </p>
+              <div class="warning-box">
+                <strong>Только замороженный:</strong> бока покроются глазурью, а верх останется открытым лишь у полностью застывшего кекса.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Глазурь: <strong>180 г шоколада + 30 г масла</strong></span>
+              <span class="param-pill">🥜 Хруст: <strong>20 г дробленого какао</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Нейтральный гель сверху</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Верхнюю грань покройте нейтральным гелем мастихином — тонко и только сверху. Гель проявляет срез: сразу видно ганаш, апельсиновую прослойку и коржи.
+                <span class="source-badge">⏱ Урок_06: 00:04:58–00:05:27</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> если кекс оставить целым блоком, получится мини-торт — резать его можно уже за столом.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🖌 Гель: <strong>Только верх, мастихином</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>5 суток в холодильнике</strong></span>
+              <span class="param-pill">🧊 Морозилка: <strong>60 дней</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Бланширование трижды:</strong> только так уходит горечь кожуры.</li>
+                <li><strong>Лопатка вместо миксера:</strong> тесто мешают ровно до соединения, чтобы не развить глютен.</li>
+                <li><strong>Бортики из фольги:</strong> дают пласт одинаковой толщины без специального коврика.</li>
+                <li><strong>Плёнка в контакт:</strong> сразу после выпечки корж не сохнет.</li>
+                <li><strong>Скребок через бумагу:</strong> большая площадь давления даёт ровные слои.</li>
+                <li><strong>Заморозка перед резом:</strong> чёткие грани и красивый срез.</li>
+                <li><strong>Гель на верх:</strong> проявляет структуру среза.</li>
+                <li><strong>Альтернатива кексу:</strong> тот же блок можно подать как мини-торт.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Долгое перемешивание теста:</strong> кекс становится резиновым.</li>
+                <li><strong>Пекарская бумага вместо коврика:</strong> намокает и деформируется, слой неравномерный.</li>
+                <li><strong>Перепечённый пласт:</strong> ломается при сборке.</li>
+                <li><strong>Пектин в горячую массу:</strong> комкуется и не загущает.</li>
+                <li><strong>Масло в горячий ганаш:</strong> расслаивает массу; вводить ниже 35 °C.</li>
+                <li><strong>Прижимание пальцами:</strong> слои получаются неровными, нужен скребок.</li>
+                <li><strong>Резка незамороженного блока:</strong> края рвутся.</li>
+                <li><strong>Окунание с покрытием верха:</strong> срез закрывается глазурью и теряет вид.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и подача</h4>
+              <ul>
+                <li><strong>Кекс в сборе:</strong> 5 суток в холодильнике или 60 дней в морозилке.</li>
+                <li><strong>Конфи:</strong> до 5 суток в холодильнике, до 1 месяца в морозилке.</li>
+                <li><strong>Корж:</strong> не рекомендуется хранить в холодильнике или морозилке из-за сложности дальнейшей сборки.</li>
+                <li><strong>Подача:</strong> как кекс-брусок или целым блоком нарезать за столом.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Инвертный сахар:</strong> нейтральный светлый мёд.</li>
+                <li><strong>Дробленое какао в глазури:</strong> обжаренный рубленый орех, даже арахис, или ничего.</li>
+                <li><strong>Глазурь:</strong> только тёмный шоколад 54 % или смесь с молочным поровну.</li>
+                <li><strong>Форма подачи:</strong> кексы-бруски или мини-торт.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_02 — бланширование апельсина и конфи (00:00:18–03:44); Урок_03 — замес и выпечка пласта (00:00:01–00:05:34); Урок_04 — ганаш (00:00:01–00:02:17); Урок_05 — нарезка и сборка (00:00:01–00:06:09); Урок_06 — обрезка, глазурь и гель (00:00:02–00:05:27); DOCX «Кекс Шокладно-апельсиновый» — граммовки.</li>
+              <li><strong>Глазурь:</strong> в DOCX 180 г тёмного шоколада 54 %, в видео автор берёт тёмный и молочный поровну. На странице база — по DOCX, вариант из видео описан в ингредиентах.</li>
+              <li><strong>Сборка:</strong> в DOCX указана форма 15 × 20 см; в видео используется раздвижная рамка от 15 до 27 см, пласт режется на 4 кекса 15 × 4 см.</li>
+              <li><strong>Температура выпечки:</strong> DOCX — 170 °C с конвекцией или 180 °C верх-низ, видео — 170 °C.</li>
+              <li><strong>Ганаш:</strong> DOCX пишет «сливки нагреть с сахарами», хотя в составе только сироп глюкозы — нагревают именно с ним.</li>
+              <li><strong>Пробелы:</strong> вес готового кекса не назван; время заморозки блока не указано — только «до полного застывания»; количество нейтрального геля не отвешивается.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_06.mp4 (около 00:05:40): кексы-брусочки с жёлтой полосой конфи в срезе.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

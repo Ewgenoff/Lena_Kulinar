@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тарт «Сникерс» с солёной карамелью и арахисом — рецепт | CookBook</title>
+  <meta name="description" content="Тарт «Сникерс» Ø8 см: шоколадное сабле, хрустящий слой с арахисом и вафельной крошкой, солёная карамель, лёгкий мусс на белом шоколаде, глазурь гурмэ с арахисом и взбитый шоколадный ганаш насадкой 25.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tart-snikers">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Тарт «Сникерс» с солёной карамелью и арахисом</h1>
+      <p class="recipe-lead">
+        Пирожное Ø8 см по мотивам батончика: шоколадное песочное сабле, хрустящий слой из молочного шоколада с арахисом и вафельной крошкой, солёная карамель с желатином, лёгкий мусс на белом шоколаде, полное погружение в глазурь гурмэ с рубленым арахисом и шапка из взбитого шоколадного ганаша.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~40 мин: взвесить, обжарить арахис, желатин замочить</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~3 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Тесто 2–12 ч, выпечка 15 мин, карамель 1 ч, мусс и глазурь по 1 ч в холоде</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~2 дня: заготовки, сборка, глазирование</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">10 тартов Ø8 см, высота 2–2,5 см</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tart-snikers.jpg" alt="Четыре тарта «Сникерс», полностью покрытые шоколадной глазурью с рубленым арахисом, с белой шапкой взбитого ганаша и шоколадной звёздочкой" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (10 тартов)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="10">10</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">тартов</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — 10 тартов Ø8 см по рецептуре автора. Глазурь дана с хорошим запасом: она нужна, чтобы полностью окунуть пирожное, а не покрыть его кистью.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Показать источники (видео-таймкоды)</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">10</span> тартов</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+      </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Больше 400 г молочного шоколада и 170 г арахиса — здесь шоколад идёт в три слоя. Арахис нужен обжаренный, без соли и глазури. Желатин сильный, 220 Блюм: на нём держится и карамель, и мусс.
+      </p>
+
+        <div class="shopping-grid">
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🧈 Масло, сливки, яйца</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сливки 33 %</strong>:
+                  <span class="shopping-qty" data-base-amount="410" data-unit="г">410 г</span>
+                  <span class="shopping-hint">90 г в карамель, 75 г горячие и 145 г полувзбитые в мусс, 100 г в ганаш</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Масло сливочное 82,5 %</strong>:
+                  <span class="shopping-qty" data-base-amount="135" data-unit="г">135 г</span>
+                  <span class="shopping-hint">95 г в сабле (холодное), 40 г в солёную карамель</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Яйца куриные</strong>:
+                  <span class="shopping-qty" data-base-amount="33" data-unit="г">33 г</span>
+                  <span class="shopping-hint">В сабле, холодные — меньше одного яйца С1</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🍫 Шоколад, орехи, бакалея</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Молочный шоколад</strong>:
+                  <span class="shopping-qty" data-base-amount="405" data-unit="г">405 г</span>
+                  <span class="shopping-hint">50 г в хрустящий слой, 300 г в глазурь гурмэ, 55 г в ганаш</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Белый шоколад</strong>:
+                  <span class="shopping-qty" data-base-amount="75" data-unit="г">75 г</span>
+                  <span class="shopping-hint">В лёгкий мусс</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Арахис обжаренный</strong>:
+                  <span class="shopping-qty" data-base-amount="170" data-unit="г">170 г</span>
+                  <span class="shopping-hint">70 г целый или рубленый в хрустящий слой, 100 г рубленый в глазурь; без соли и глазури</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Масло растительное без запаха</strong>:
+                  <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span>
+                  <span class="shopping-hint">10 г в хрустящий слой, 70 г в глазурь гурмэ</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Мука пшеничная в/с</strong>:
+                  <span class="shopping-qty" data-base-amount="170" data-unit="г">170 г</span>
+                  <span class="shopping-hint">В сабле</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахар-песок</strong>:
+                  <span class="shopping-qty" data-base-amount="110" data-unit="г">110 г</span>
+                  <span class="shopping-hint">В сухую карамель для солёной карамели</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахарная пудра</strong>:
+                  <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+                  <span class="shopping-hint">В сабле</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Какао-порошок</strong>:
+                  <span class="shopping-qty" data-base-amount="12" data-unit="г">12 г</span>
+                  <span class="shopping-hint">В сабле, вместе с миндальной мукой</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Миндальная мука</strong>:
+                  <span class="shopping-qty" data-base-amount="12" data-unit="г">12 г</span>
+                  <span class="shopping-hint">В сабле</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Вафельная крошка</strong>:
+                  <span class="shopping-qty" data-base-amount="20" data-unit="г">20 г</span>
+                  <span class="shopping-hint">Вафли или вафельная стружка, в хрустящий слой</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Желатин 220 Блюм</strong>:
+                  <span class="shopping-qty" data-base-amount="5" data-unit="г">5 г</span>
+                  <span class="shopping-hint">2 г в карамель + 3 г в мусс; вода 10 + 15 г</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Соль мелкая</strong>:
+                  <span class="shopping-qty" data-base-amount="2" data-unit="г">2 г</span>
+                  <span class="shopping-hint">1 г в сабле, 1 г в солёную карамель</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Разрыхлитель</strong>:
+                  <span class="shopping-qty" data-base-amount="1" data-unit="г">1 г</span>
+                  <span class="shopping-hint">В сабле</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Расходники</strong> — кольца Ø8 см, перфорированный коврик, насадка 25 (закрытая звезда), пергамент, шпажки для окунания
+                  <span class="shopping-hint">Формы для «Сникерса» могут быть продолговатыми — тогда расход слоёв на штуку меньше</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">1. Шоколадное сабле</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="170" data-unit="г">170 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="12" data-unit="г">12 г</span> — Какао-порошок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="12" data-unit="г">12 г</span> — Миндальная мука
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="95" data-unit="г">95 г</span> — Масло сливочное 82,5 %
+              <span class="ingredient-note">Холодное, кубиками</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="33" data-unit="г">33 г</span> — Яйца
+              <span class="ingredient-note">Холодные</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="г">1 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="г">1 г</span> — Соль
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">2. Хрустящий слой</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Шоколад молочный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Масло растительное без запаха
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Арахис
+              <span class="ingredient-note">Целый обжаренный или рубленый</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Вафельная крошка
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">3. Солёная карамель</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="110" data-unit="г">110 г</span> — Сахар
+              <span class="ingredient-note">Сухая карамель</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="90" data-unit="г">90 г</span> — Сливки 33 %
+              <span class="ingredient-note">Кипящие</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Масло сливочное
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="г">1 г</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Желатин 220 Блюм
+              <span class="ingredient-note">Плюс 10 г холодной воды</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">4. Лёгкий мусс</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="75" data-unit="г">75 г</span> — Сливки 33 % (первая порция)
+              <span class="ingredient-note">Доводятся до кипения с желатином</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="75" data-unit="г">75 г</span> — Белый шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Желатин 220 Блюм
+              <span class="ingredient-note">Плюс 15 г холодной воды</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="145" data-unit="г">145 г</span> — Сливки 33 % (вторая порция)
+              <span class="ingredient-note">Полувзбитые, вводятся при 29 °C</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">5. Глазурь гурмэ</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Шоколад молочный
+              <span class="ingredient-note">С запасом: тарты окунают целиком</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Масло растительное без запаха
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Арахис рубленый
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">6. Взбитый шоколадный ганаш</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сливки 33 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="55" data-unit="г">55 г</span> — Шоколад молочный
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Порядок работы</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Самый длинный тарт серии: тесто, хрустящий слой, карамель, мусс, глазурь и ганаш. В первый день — тесто (2–12 часов в холодильнике) и ганаш (6–12 часов стабилизации). Во второй день выпекают основы, собирают слои, замораживают и глазируют. Карамель можно сварить заранее — она спокойно ждёт под плёнкой.
+                <span class="source-badge">⏱ Урок_01: 00:00:02–00:00:20</span>
+                <span class="source-badge">⏱ Урок_11: 00:00:02–00:00:33</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> глазурь варится с запасом — тарты в неё именно окунают целиком, а не смазывают. Остатки сливают и хранят до следующего раза.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Тесто: <strong>2–12 ч</strong></span>
+              <span class="param-pill">🧊 Ганаш: <strong>6–12 ч</strong></span>
+              <span class="param-pill">📏 Форма: <strong>Ø8 см или продолговатая</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Сабле: сухие и холодное масло</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                В миксере с насадкой-веслом смешайте 170 г муки, 12 г какао, 12 г миндальной муки, 60 г сахарной пудры, 1 г разрыхлителя и 1 г соли. Добавьте 95 г холодного масла кубиками и рубите в крошку. В последнюю очередь — 33 г холодных яиц, перемешивайте совсем недолго. Общее время работы — около полутора минут.
+                <span class="source-badge">⏱ Урок_01: 00:00:02–00:02:21</span>
+              </p>
+              <div class="warning-box">
+                <strong>Шоколадное тесто капризнее светлого:</strong> оно быстрее нагревается и липнет. Если почувствовали, что масса «поплыла», отправьте чашу на 5 минут в холодильник.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Замес: <strong>~1,5 мин</strong></span>
+              <span class="param-pill">🥣 Насадка: <strong>Весло</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Раскатка и отдых теста</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Разделите тесто на две части и раскатайте каждую между двумя листами пергамента или силиконового коврика. Уберите в холодильник минимум на 2 часа и не более чем на 12 — в видео автор ориентируется на 4–6 часов. Отдохнувшее шоколадное тесто режется чисто и не рвётся по краю.
+                <span class="source-badge">⏱ Урок_01: 00:04:47–00:04:51</span>
+                <span class="source-badge">⏱ Урок_02: 00:04:49</span>
+              </p>
+              <div class="tip-box">
+                <strong>Два пласта:</strong> пока формуете первый, второй остаётся холодным — это заметно облегчает работу.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Отдых: <strong>2–12 ч (в видео 4–6)</strong></span>
+              <span class="param-pill">📏 Толщина: <strong>2–2,5 мм</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Формовка и заморозка</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Сформируйте тарты по кольцам: прижимайте тесто к стенкам, лишнее срезайте, края слегка придавите. Если форма сложной конструкции — с рельефом или углами, — сбрызните её внутри растительным маслом или пройдитесь кисточкой: так тесто потом легче отойдёт. Готовые заготовки заморозьте.
+                <span class="source-badge">⏱ Урок_02: 00:00:02–00:04:49</span>
+                <span class="source-badge">⏱ Урок_05: 00:00:02–00:00:20</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сложные формы:</strong> тесто в них обязательно переворачивают, чтобы открепить со всех сторон, и только потом вырезают дно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">❄️ Перед выпечкой: <strong>Полная заморозка</strong></span>
+              <span class="param-pill">🛢 Сложная форма: <strong>Смазать маслом</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Выпечка основы</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте замороженные тарты при 160 °C с конвекцией около 15 минут. Через 10 минут достаньте противень и пройдитесь кончиком ножа по внутреннему краю формы, отгибая тесто от стенок: пока основа тёплая, это делается без усилий. Остудите в кольцах.
+                <span class="source-badge">⏱ Урок_02: 00:05:11</span>
+                <span class="source-badge">⏱ Урок_06: 00:00:03–00:01:02</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем нож именно на 10-й минуте:</strong> тесто уже держит форму, но ещё мягкое — край отходит идеально, без сколов.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Выпечка: <strong>160 °C, конвекция</strong></span>
+              <span class="param-pill">⏱ Время: <strong>~15 мин</strong></span>
+              <span class="param-pill">🔪 Нож по краю: <strong>На 10-й минуте</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Хрустящий слой</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Растопите 50 г молочного шоколада, добавьте 10 г растительного масла без запаха и перемешайте. Всыпьте 70 г обжаренного арахиса и 20 г вафельной крошки, размешайте. Разложите по тартам и уберите в морозилку минут на 10 или в холодильник на полчаса, чтобы слой схватился.
+                <span class="source-badge">⏱ Урок_07: 00:00:02–00:01:50</span>
+              </p>
+              <div class="warning-box">
+                <strong>Без схватывания нельзя:</strong> жидкий слой смешается с карамелью, и граница исчезнет — в разрезе это будет одна масса.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">❄️ Морозилка: <strong>~10 мин</strong></span>
+              <span class="param-pill">🧊 Холодильник: <strong>~30 мин</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Солёная карамель</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Из 110 г сахара сварите сухую карамель до карамельного цвета. Добавьте 40 г сливочного масла, тонкой струйкой влейте 90 г кипящих сливок и быстро перемешайте до объединения — масса сильно пенится. Добавьте 1 г соли и 2 г замоченного желатина, перемешайте. Остудите, разложите по тартам и уберите в холодильник на час.
+                <span class="source-badge">⏱ Урок_08: 00:00:01–00:00:53</span>
+              </p>
+              <div class="tip-box">
+                <strong>Соль — в конце:</strong> если посолить раньше, соль уйдёт в карамель и вкус станет плоским. Соль нужна именно как акцент на фоне сладкой массы.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сливки: <strong>Кипящие</strong></span>
+              <span class="param-pill">🧊 Холодильник: <strong>~1 ч</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Лёгкий мусс на белом шоколаде</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                75 г сливок с 3 г замоченного желатина доведите до кипения и вылейте на 75 г белого шоколада. Пробейте блендером до гладкости и остудите до 29 °C. Отдельно взбейте 145 г холодных сливок до полувзбитого состояния — в маленькой посуде и на средней скорости, сливок мало. Объедините базу с полувзбитыми сливками лопаткой.
+                <span class="source-badge">⏱ Урок_09: 00:00:01–00:02:03</span>
+              </p>
+              <div class="warning-box">
+                <strong>Температура 29 °C важна:</strong> слишком тёплая база растопит сливки, слишком холодная — схватится комками при смешивании.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 База: <strong>29 °C</strong></span>
+              <span class="param-pill">⚙️ Взбивание: <strong>Средняя скорость</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Сборка и заморозка</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                На схватившуюся карамель разложите мусс, заполняя тарт доверху, и заморозьте. Тарты должны быть твёрдыми: только так глазурь ляжет ровным слоем и не «поплывёт» от тёплой начинки. Это тот случай, когда морозилка не портит десерт, а делает его сборку возможной.
+                <span class="source-badge">⏱ Урок_09: 00:01:49</span>
+              </p>
+              <div class="tip-box">
+                <strong>Замораживайте до упора:</strong> достать тарт из морозилки, окунуть и убрать обратно — вся операция занимает секунды, и начинка не успевает оттаять.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">❄️ Перед глазурью: <strong>Полная заморозка</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>72 ч в холодильнике</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Глазурь гурмэ и окунание</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Растопите 300 г молочного шоколада в микроволновке, добавьте 70 г растительного масла и 100 г рубленого арахиса, перемешайте. Окуните каждый замороженный тарт полностью — удобнее всего держа за шпажку или за край, — дайте стечь и переложите на пергамент. Уберите в холодильник на час, чтобы глазурь схватилась.
+                <span class="source-badge">⏱ Урок_10: 00:00:01–00:04:22</span>
+              </p>
+              <div class="warning-box">
+                <strong>Глазурь нужна жидкая, но не горячая:</strong> перегретый шоколад с маслом стечёт с тарта, не оставив слоя. Ориентир — текучая, как сгущённое молоко.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Глазурь: <strong>Шоколад + масло + арахис</strong></span>
+              <span class="param-pill">🧊 Схватывание: <strong>1 ч в холодильнике</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Взбитый шоколадный ганаш</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Половину сливок (50 г) доведите до кипения и вылейте на 55 г молочного шоколада. Пробейте блендером до эмульсии, влейте оставшиеся холодные сливки, снова пробейте. Накройте плёнкой в контакт и уберите в холодильник на 5–6 часов минимум. Перед использованием взбейте: ганаш посветлеет и начнёт держать форму.
+                <span class="source-badge">⏱ Урок_11: 00:00:02–00:00:33</span>
+                <span class="source-badge">⏱ Урок_12: 00:00:01–00:01:55</span>
+              </p>
+              <div class="tip-box">
+                <strong>Ганаш взбивают только перед подачей:</strong> из мешка с насадкой 25 он отсаживается сразу — ждать, пока «отдохнёт», нельзя.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Стабилизация: <strong>5–6 ч</strong></span>
+              <span class="param-pill">💧 Плёнка: <strong>В контакт</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Декор и подача</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Взбитый ганаш переложите в мешок с насадкой 25 — закрытая звезда — и отсадите шапку на каждый глазированный тарт. Автор советует французскую звезду маленького размера, если насадки 25 нет. По желанию добавьте шоколадную звёздочку или пластинку. Подавайте охлаждёнными: на срезе должны читаться все слои.
+                <span class="source-badge">⏱ Урок_12: 00:00:01–00:01:55</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не держите в тепле:</strong> глазурь с растительным маслом быстро «потеет» и липнет, поэтому тарты живут в холодильнике до подачи.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌼 Насадка: <strong>25, закрытая звезда</strong></span>
+              <span class="param-pill">📦 Срок: <strong>72 ч / месяц в морозилке</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Глазурь с запасом:</strong> тарты окунают полностью, поэтому 300 г шоколада — не избыток.</li>
+                <li><strong>Растительное масло в глазури:</strong> даёт блеск и не даёт шоколаду трескаться при нарезке.</li>
+                <li><strong>Сложные формы смазывают маслом:</strong> иначе шоколадное тесто не выходит из углов.</li>
+                <li><strong>Нож на 10-й минуте выпечки:</strong> край отходит без сколов.</li>
+                <li><strong>Хрустящий слой подмораживают:</strong> иначе он смешивается с карамелью.</li>
+                <li><strong>Соль в карамель — в конце:</strong> так она остаётся акцентом, а не фоном.</li>
+                <li><strong>Мусс при 29 °C:</strong> база не должна быть ни горячей, ни холодной.</li>
+                <li><strong>Собирают и глазируют только из морозилки:</strong> тёплая начинка портит ровный слой.</li>
+                <li><strong>Ганаш взбивают перед подачей:</strong> иначе рисунок осядет.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Тёплое масло в сабле:</strong> шоколадное тесто теряет крошку и липнет.</li>
+                <li><strong>Выпечка без заморозки:</strong> бортики сползают, форма теряется.</li>
+                <li><strong>Нож не пройден:</strong> тарт выходит с рваным краем.</li>
+                <li><strong>Хрустящий слой без подморозки:</strong> слои смешиваются.</li>
+                <li><strong>Холодные сливки в карамель:</strong> масса схватывается комками.</li>
+                <li><strong>Перегретая карамель:</strong> горький привкус.</li>
+                <li><strong>Горячая база мусса:</strong> сливки «плывут», мусс расслаивается.</li>
+                <li><strong>Окунание тёплого тарта:</strong> глазурь стекает, слой неравномерный.</li>
+                <li><strong>Ганаш вместо взбитого:</strong> насадку забивает плотная масса — взбивайте до гладкости.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и замены</h4>
+              <ul>
+                <li><strong>Готовые тарты:</strong> 72 часа в холодильнике, месяц в морозилке.</li>
+                <li><strong>Тесто:</strong> 2–12 часов в холодильнике; замороженные заготовки — до выпечки.</li>
+                <li><strong>Карамель:</strong> после часа в холодильнике; остатки хранят под плёнкой.</li>
+                <li><strong>Ганаш:</strong> 6–12 часов стабилизации, взбивают перед подачей.</li>
+                <li><strong>Молочный шоколад:</strong> в глазури можно заменить на тёмный — вкус станет менее сладким.</li>
+                <li><strong>Арахис:</strong> можно взять фундук, но это уже другой вкус.</li>
+                <li><strong>Насадка 25:</strong> французская звезда маленького размера.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: #666; line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «Тарт_Сникерс» с рецептурой и уроки Урок_01, Урок_02, Урок_05–Урок_12 с расшифровкой. Граммовки — из DOCX, техника и таймкоды — из видео.</li>
+              <li><strong>Два файла видео повреждены:</strong> Урок_03.mp4 (59 КБ) и Урок_04.mp4 (47 КБ) не читаются, поэтому в расшифровке нет реплик этих уроков. По DOCX это части сборки; на странице шаги собраны по рецептуре и по Урок_05, где показана формовка.</li>
+              <li><strong>Формы:</strong> в DOCX указан диаметр 8 см, но в видео автор отдельно говорит о форме «более сложной конструкции» и о продолговатых тартах — расход слоёв на них меньше. На странице оба варианта упомянуты.</li>
+              <li><strong>Процесс карамели в видео не показан:</strong> в DOCX прямо сказано «не показываю процесс приготовления, мы с вами варили карамель уже много раз». Шаг восстановлен по рецептуре.</li>
+              <li><strong>Половинки сливок в ганаше:</strong> в DOCX «100 г сливок» и «половину сливок» — точный вес половины не назван, на странице «50 г».</li>
+              <li><strong>Пробелы:</strong> не назван вес карамели и мусса на один тарт; не указано время стабилизации карамели до разлива.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_12 (около 00:02:00) с глазированными тартами.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

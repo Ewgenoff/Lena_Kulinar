@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Торт «Чёрный принц» с вишнёвым компоте и кремовыми ранункулюсами | CookBook</title>
+  <meta name="description" content="Высокий шоколадный торт Ø16 см на кексовом бисквите с вишнёвым компоте, заварным шоколадным кремом и кремом с маскарпоне. Покрытие — бетонный ганаш с трафаретом и съедобные ранункулюсы из масляного крема на итальянской меренге.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tort-chernyy-prints">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Торт «Чёрный принц»</h1>
+      <p class="recipe-lead">
+        Высокий торт Ø16 см — около 12 см в готовом виде — из четырёх слоёв кексового шоколадного бисквита с миндальной мукой. Внутри поочерёдно идут вишнёвое компоте на пектине, шоколадный заварной крем с пюре вишни и крем на маскарпоне, а коржи пропитаны сиропом с тёмным ромом. Снаружи — бетонный ганаш под трафарет и композиция из съедобных ранункулюсов на масляном креме с итальянской меренгой.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~40 мин: всё взвесить, формы застелить</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~4 ч в сумме по трём дням</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Остывание бисквита и компоте, стабилизация крема 20–30 мин, торт 2–4 ч, ганаш и цветы в холодильнике и морозилке</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">3 дня у автора: бисквит и сборка → покрытие → цветы</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 торт Ø16 см, высота ~12 см, 4 коржа</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-chernyy-prints.jpg" alt="Готовый торт «Чёрный принц»: тёмное покрытие с рисунком по трафарету и композиция из розовых, сиреневых и голубых кремовых ранункулюсов с зеленью" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 торт)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">торт</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — один торт Ø16 см по рецептуре автора: два бисквита по 400 г в кольцах 16 см, высота в сборе около 12 см. Пересчёт пропорциональный; для формы 18 см берите ту же закладку, но следите за временем выпечки.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Показать источники (видео-таймкоды)</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> торт</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+      </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Граммовки сведены по всем частям торта: бисквит, компоте, заварной крем, маскарпоне, пропитка и крем для цветов. Требования жёсткие: сливки только 33 % и холодные, масло в крем для цветов — 82,5 % и обязательно светлое, шоколад для заварного крема — тёмный или горький.
+      </p>
+
+        <div class="shopping-grid">
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🧈 Масло, яйца, молочное</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Масло сливочное 82,5 %</strong>:
+                  <span class="shopping-qty" data-base-amount="525" data-unit="г">525 г</span>
+                  <span class="shopping-hint">75 г в бисквит, 450 г (пачка) в крем для цветов; для цветов берите самое светлое масло — «Тысяча озёр» слишком жёлтое</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Яйца куриные С1</strong>:
+                  <span class="shopping-qty" data-base-amount="10" data-unit="шт." data-piece="true">10 шт.</span>
+                  <span class="shopping-hint">4 шт. (210 г) в бисквит, 1 шт. на 15 г желтка в заварной крем, 5 шт. на 160 г белка в крем для цветов</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сливки 33 %</strong>:
+                  <span class="shopping-qty" data-base-amount="370" data-unit="г">370 г</span>
+                  <span class="shopping-hint">100 г в бисквит, 70 г в заварной крем, 200 г в крем с маскарпоне. В бисквит и заварной — холодные из холодильника</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Маскарпоне</strong>:
+                  <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                  <span class="shopping-hint">Холодный, из холодильника</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🧂 Бакалея, шоколад, вишня</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Шоколад тёмный</strong>:
+                  <span class="shopping-qty" data-base-amount="130" data-unit="г">130 г</span>
+                  <span class="shopping-hint">60 г в бисквит, 70 г в заварной крем. Для крема — тёмный или горький, лучше 54,5 % и выше</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахар-песок</strong>:
+                  <span class="shopping-qty" data-base-amount="475" data-unit="г">475 г</span>
+                  <span class="shopping-hint">60 г компоте + 110 г бисквит + 15 г заварной крем + 90 г пропитка + 200 г крем для цветов (2 раза по 100 г)</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Инвертный сахар</strong>:
+                  <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+                  <span class="shopping-hint">В бисквит; замена — мёд 1:1 или просто сахар. С инвертным бисквит дольше остаётся влажным</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Мука пшеничная в/с</strong>:
+                  <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                  <span class="shopping-hint">В бисквит, вместе с какао и разрыхлителем</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Миндальная мука</strong>:
+                  <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+                  <span class="shopping-hint">В бисквит; даёт жир в сухом виде и влажность мякиша</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Какао-порошок</strong>:
+                  <span class="shopping-qty" data-base-amount="20" data-unit="г">20 г</span>
+                  <span class="shopping-hint">В бисквит, просеять вместе с мукой</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Разрыхлитель</strong>:
+                  <span class="shopping-qty" data-base-amount="7" data-unit="г">7 г</span>
+                  <span class="shopping-hint">В бисквит</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Пюре вишни</strong>:
+                  <span class="shopping-qty" data-base-amount="140" data-unit="г">140 г</span>
+                  <span class="shopping-hint">90 г в компоте, 50 г в заварной крем. Можно сделать самим из вишни; в готовое пюре для хранения идёт 10 % сахара</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Вишня замороженная</strong>:
+                  <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+                  <span class="shopping-hint">В компоте, порезать каждую ягоду на 4 части</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Пектин NH</strong>:
+                  <span class="shopping-qty" data-base-amount="2" data-unit="г">2 г</span>
+                  <span class="shopping-hint">В компоте. Если только яблочный пектин — 4 г, и тогда компоте нельзя замораживать</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Желатин</strong>:
+                  <span class="shopping-qty" data-base-amount="2" data-unit="г">2 г</span>
+                  <span class="shopping-hint">2 г + 10 г воды в заварной крем. Сильный, платиновой серии (240–260 Блюм); замена пектина в компоте — 6 г + 30 г воды</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Лимонная кислота</strong> — щепотка
+                  <span class="shopping-hint">1/6 ч. л. в компоте: запускает пектин, при нагреве кислота разрушается</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Тёмный ром или кирш</strong>:
+                  <span class="shopping-qty" data-base-amount="25" data-unit="г">25 г</span>
+                  <span class="shopping-hint">В пропитку, это примерно 2 ст. л. Классика для шоколада с вишней — кирш</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахарная пудра</strong>:
+                  <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                  <span class="shopping-hint">В крем с маскарпоне</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🎨 Покрытие и декор</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Диоксид титана</strong> — количество не названо
+                  <span class="shopping-hint">Отбеливатель для бетонного ганаша; без него крем будет жёлтым. Скрыт в универсальном жирорастворимом белом красителе</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Красители водорастворимые</strong> — по оттенкам
+                  <span class="shopping-hint">Для ганаша и для крема: автор берёт Americolor Electric Pink, Color Gel фиолетовый, Flavour «лайм» и сухой «киви»</span>
+                </div>
+              </li>
+              <li class="shopping-item" style="border-style: dashed;"><div class="shopping-item-content">
+                  <strong>Творожный сыр / крем-чиз (альтернатива)</strong>:
+                  <span class="shopping-qty" data-base-amount="500" data-unit="г">500 г</span>
+                  <span class="shopping-hint">Если не работаете с бетонным ганашем и трафаретом: столько крема нужно на выравнивание</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Трафарет</strong>
+                  <span class="shopping-hint">Гибкий, с повторяющимся рисунком на три раппорта; в супермаркете для кондитера стоит около 120 ₽</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Расходники</strong> — кольца 16 см с дном, фольга, пергамент, кондитерские мешки, насадки 120–122 (лепесток розы), 103/104 и 349/350/352 (листья), поворотный стол, скребок, палета, зубочистки, фанерная или поликарбонатная подложка
+                  <span class="shopping-hint">Твёрдая подложка обязательна: на картонной бетонный ганаш трескается</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">1. Вишнёвое компоте</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="90" data-unit="г">90 г</span> — Пюре вишни
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Вишня замороженная
+              <span class="ingredient-note">Порезать каждую ягоду на 4 части</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Пектин NH
+              <span class="ingredient-note">Смешать с сахаром; яблочного пектина нужно вдвое больше — 4 г, и тогда компоте не замораживают</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              1/6 ч. л. — Лимонная кислота
+              <span class="ingredient-note">Вводится после минуты кипения, запускает загустевание</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По желанию — Тёмный ром, коньяк или бренди
+              <span class="ingredient-note">1 ст. л. в самом конце, только для взрослой версии</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Замена пектина — Желатин
+              <span class="ingredient-note">6 г желатина, замоченного в 30 г холодной воды; вводится в самом конце, консистенция будет ближе к желе</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">2. Шоколадный кексовый бисквит (2 формы Ø16 см)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="210" data-unit="г">210 г</span> — Яйца
+              <span class="ingredient-note">4 шт. категории С1, комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="110" data-unit="г">110 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Инвертный сахар
+              <span class="ingredient-note">Замена — мёд 1:1, а если и его нет, то обычный сахар</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Миндальная мука
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Какао-порошок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="75" data-unit="г">75 г</span> — Масло сливочное 82,5 %
+              <span class="ingredient-note">Топится вместе с шоколадом</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Шоколад тёмный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сливки 33 %
+              <span class="ingredient-note">Холодные, вводятся в самом конце</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">3. Шоколадный заварной крем</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Желатин
+              <span class="ingredient-note">Платиновой серии, 240–260 Блюм; листового понадобится больше — пересчитать по силе</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Вода
+              <span class="ingredient-note">Холодная, для замачивания желатина</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Желток
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Сливки 33 %
+              <span class="ingredient-note">Сначала сливки к желтку, только потом сахар</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Шоколад тёмный
+              <span class="ingredient-note">Подтопить 30 секунд в микроволновке, чтобы масса успела его расплавить</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Пюре вишни
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">4. Крем с маскарпоне</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Маскарпоне
+              <span class="ingredient-note">Холодный</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сливки 33 %
+              <span class="ingredient-note">Холодные, взбивать отдельно</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Сахарная пудра
+              <span class="ingredient-note">Больше не добавлять: на такой объём 30–40 г — уже сладко</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">5. Пропитка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="90" data-unit="г">90 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Вода
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Тёмный ром
+              <span class="ingredient-note">Вводится только в полностью остывший сироп</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">6. Крем для цветов (800 г, итальянская меренга на масле)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="450" data-unit="г">450 г</span> — Масло сливочное 82,5 %
+              <span class="ingredient-note">Целая пачка, температура 10–15 °C: холодное, но режется на кубики</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Белок
+              <span class="ingredient-note">4 белка от яиц С0 или 5 от С1. Только свежие: пастеризованный белок и альбумин для цветов не годятся</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сахар
+              <span class="ingredient-note">Две порции по 100 г: одна в белки, вторая в сироп</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Вода для сиропа — количество не названо
+              <span class="ingredient-note">Наливать чуть больше, чем нужно: излишек выкипит за 3 минуты активного кипения</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">7. Покрытие и декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Бетонный ганаш — рецептура не названа
+              <span class="ingredient-note">В записи вебинара его готовили в незаписанной утренней части; известно только, что он на белом шоколаде, с творожным сыром и диоксидом титана</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Диоксид титана — по необходимости
+              <span class="ingredient-note">Без него ганаш получается жёлтым</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Красители — водорастворимые и сухие
+              <span class="ingredient-note">Сухие прячут вкус красителя, поэтому их предпочитают для цветов</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Альтернатива покрытию — <span class="ingredient-qty" data-base-amount="500" data-unit="г">500 г</span> крем-чиза
+              <span class="ingredient-note">Если выравнивать без трафарета</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Три дня и порядок работы</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Автор ведёт торт в три приёма. Первый день: компоте, два бисквита, заварной шоколадный крем, крем с маскарпоне, пропитка и сборка — собранный торт уходит в холодильник на ночь. Второй день: бетонный ганаш, выравнивание и рисунок по трафарету. Третий день: крем для цветов, ранункулюсы и композиция. Если делать всё подряд, реально уложиться в два дня: цветы можно слепить, пока стабилизируется покрытие.
+                <span class="source-badge">⏱ Урок_01: 00:04:48–00:07:20</span>
+              </p>
+              <div class="tip-box">
+                <strong>Что взвесить сразу:</strong> компоте должно остыть до сборки, бисквит — остыть и отлежаться. Поэтому первым делом ставят вариться компоте, а уже под него замешивают бисквитную массу.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📅 День 1: <strong>бисквит и сборка</strong></span>
+              <span class="param-pill">📅 День 2: <strong>покрытие и трафарет</strong></span>
+              <span class="param-pill">📅 День 3: <strong>цветы и композиция</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Компоте: сахар с пектином</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Смешайте 60 г сахара с 2 г пектина NH — сухой смесью, а не по отдельности. В сотейник отправьте 90 г пюре вишни и 60 г замороженной вишни, порезанной на четыре части. Всыпьте сахар с пектином дождиком при постоянном помешивании: главное правило — пектин нельзя вводить в смесь горячее 40 °C, при 4, 20 или 30 градусах он работает одинаково. Затем при непрерывном помешивании нагрейте до кипения.
+                <span class="source-badge">⏱ Урок_01: 00:07:18–00:11:00</span>
+              </p>
+              <div class="warning-box">
+                <strong>Нет пектина NH?</strong> Яблочного берите вдвое больше — 4 г, но тогда компоте нельзя замораживать. Полная замена — 6 г желатина, замоченного в 30 г холодной воды: он вводится в самом конце, и результат будет ближе к желе и мармеладу.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Пектин: <strong>в смесь ниже 40 °C</strong></span>
+              <span class="param-pill">🔥 Нагрев: <strong>выше среднего, при помешивании</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Компоте: нестекающая капля</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Прокипятите смесь минуту, добавьте 1/6 ч. л. лимонной кислоты и перемешайте — именно она запускает загустевание: при нагреве кислота из вишни частично разрушается, и своей не хватает. Проварите ещё немного и сделайте тест: капля на лопатке должна образоваться и не стекать. Готовую массу снимите с огня, дайте чуть остыть и переложите в кондитерский мешок — так удобнее отсаживать и быстрее остывает. Взрослый вариант: 1 ст. л. рома, коньяка или бренди в самом конце.
+                <span class="source-badge">⏱ Урок_01: 00:11:20–00:17:24</span>
+              </p>
+              <div class="warning-box">
+                <strong>Пробуйте на кислоту:</strong> масса должна быть кислой, но не так, чтобы сводило рецепторы. Если вишня попалась очень кислая, сладость уже не исправить — это вкус торта.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Готовность: <strong>Капля не стекает с лопатки</strong></span>
+              <span class="param-pill">🍋 Кислота: <strong>1/6 ч. л. после кипения</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Бисквит: шоколад с маслом и сухие</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Растопите 60 г шоколада с 75 г масла — удобнее в микроволновке, по 30 секунд, до текучей однородной массы. Отдельно просейте и смешайте 100 г муки, 60 г миндальной муки, 20 г какао и 7 г разрыхлителя. Формы Ø16 см заверните снаружи фольгой и выложите дно пергаментом: печь в кольце без дна этот бисквит не позволит — масса слишком влажная и сдобная.
+                <span class="source-badge">⏱ Урок_01: 00:17:48–00:27:02</span>
+              </p>
+              <div class="warning-box">
+                <strong>Ошибки, которых легко избежать:</strong> холодные яйца (с шоколадно-масляной смесью масса начнёт схватываться), несмешанные сухие ингредиенты и попытка испечь всё в одной форме.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Духовка: <strong>180 °C, верх-низ</strong></span>
+              <span class="param-pill">🥣 Формы: <strong>2 кольца Ø16 см с дном</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Бисквит: взбить яйца с двумя сахарами</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Взбейте 210 г яиц комнатной температуры со 110 г сахара и 60 г инвертного сахара на максимальной скорости ручного миксера 3–4 минуты: масса увеличится минимум втрое и начнёт держать рисунок. Сахар заранее в яйца не засыпайте — успеет начать их сворачивать. Инвертный сахар (или мёд) держит влагу внутри, и бисквит дольше остаётся сочным; если нет ни того, ни другого, 60 г инвертного просто заменяются обычным сахаром.
+                <span class="source-badge">⏱ Урок_01: 00:28:18–00:32:25</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> взбивать 10 минут тоже можно — бисквит выйдет ещё воздушнее, это не ошибка. И этот же бисквит отлично подходит под «Прагу».
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Взбивание: <strong>3–4 мин на максимуме</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Объём втрое, держит рисунок</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Бисквит: соединить и разлить по 400 г</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                На низкой скорости вмешайте в яичную массу все сухие ингредиенты сразу, затем тонкой струйкой влейте 100 г холодных сливок — смесь от них заметно загустеет, это нормально. Разливайте по весам: в каждое кольцо должно уйти примерно по 400 г теста, оно займёт около половины высоты формы. Автор советует печь в двух формах, а не в одной: бисквит влажный, цельный пласт духовка может не пропечь, а тесто спокойно ждёт 40 минут.
+                <span class="source-badge">⏱ Урок_01: 00:32:25–00:38:36</span>
+              </p>
+              <div class="warning-box">
+                <strong>Одна форма — не беда:</strong> испеките первый бисквит, выньте и залейте вторую половину массы. Пока печётся первый, остальное тесто стоит и ничего с ним не делается.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ Вес теста: <strong>по 400 г в форму</strong></span>
+              <span class="param-pill">🥣 Сливки: <strong>100 г, только холодные</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Бисквит: выпечка и отдых</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте при 180 °C режимом верх-низ. Диапазон — 25–35 минут, всё зависит от духовки: автор проверяет на 25-й минуте, при необходимости допекает ещё 5. Готовый бисквит остудите в форме, затем заверните в пищевую плёнку — лучше в два слоя — и уберите в холодильник или морозилку. Перед морозилкой нарезать не нужно: охлаждённый и отлежавшийся бисквит режется струной ровнее.
+                <span class="source-badge">⏱ Урок_01: 00:38:39–00:39:12</span>
+                <span class="source-badge">⏱ Урок_01: 01:04:50–01:05:03</span>
+              </p>
+              <div class="tip-box">
+                <strong>Почему в плёнку:</strong> бисквит должен «отдышаться» и распределить влагу — иначе при разрезании он крошится, а на срезе выглядит сухим.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Выпечка: <strong>180 °C</strong></span>
+              <span class="param-pill">⏱ Время: <strong>25–35 мин</strong></span>
+              <span class="param-pill">🔍 Проверка: <strong>Сухая шпажка, упругий центр</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Заварной шоколадный крем</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Замочите 2 г желатина в 10 г холодной воды, перемешайте и проверьте, что на дне не осталось сухих крупинок. В сотейник положите 15 г желтка, влейте 70 г сливок и только потом добавьте 15 г сахара — на голый желток сахар сыпать нельзя, он начнёт сворачивать белок. Варите на самом минимальном нагреве при непрерывном помешивании до первого булька (по градуснику — около 82 °C), затем минуту продолжайте мешать: дно продолжает греться и пригорает мгновенно.
+                <span class="source-badge">⏱ Урок_01: 00:42:00–00:52:20</span>
+              </p>
+              <div class="warning-box">
+                <strong>Уходить от плиты нельзя.</strong> Перегреете — яйцо свернётся, и крем придётся выбросить. Если страшно, варите на водяной бане: дольше, но безопаснее.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Готовность: <strong>Первый бульк, ~82–84 °C</strong></span>
+              <span class="param-pill">🔥 Нагрев: <strong>Минимальный</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Заварной крем: шоколад, вишня, желатин</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                В горячую заварную основу первым делом отправьте распухший желатин — масса горячая, он разойдётся без следа. Затем 70 г шоколада, подтопленного 30 секунд в микроволновке: одного тепла крема на шоколад и желатин сразу не хватит. Мешайте до полного исчезновения крупинок, при необходимости прогрейте ещё чуть-чуть. Последней вводится 50 г пюре вишни — оно должно быть комнатной температуры или чуть тёплым. Крем отправьте в холодильник или на 20–30 минут в морозилку для быстрой стабилизации.
+                <span class="source-badge">⏱ Урок_01: 00:52:40–00:56:25</span>
+              </p>
+              <div class="tip-box">
+                <strong>Запасной вариант автора:</strong> держите под рукой вторую порцию уже стабилизированного крема. Какао-масло и желатин начинают работать не сразу, и если крем «поплыл», сборка не встанет.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Стабилизация: <strong>20–30 мин в морозилке</strong></span>
+              <span class="param-pill">🍒 Пюре: <strong>50 г, комнатной температуры</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Крем с маскарпоне и пропитка</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Холодные 200 г сливок взбейте с 30 г сахарной пудры до устойчивых пиков, затем на низкой скорости вмешайте 200 г холодного маскарпоне — получится стабильный крем, по вкусу близкий к взбитым сливкам, но который держит форму в разрезе и переживёт перевозку. Параллельно сварите пропитку: 90 г сахара и 50 г воды доведите до кипения и через 2 минуты снимите. Остудите до комнатной температуры и только тогда влейте 25 г рома — в горячий сироп алкоголь не добавляют. Это примерно 2 ст. л., и на первом разрезе спиртное будет чувствоваться.
+                <span class="source-badge">⏱ Урок_01: 01:03:07–01:11:54</span>
+                <span class="source-badge">⏱ Урок_01: 00:57:12–00:59:09</span>
+              </p>
+              <div class="warning-box">
+                <strong>Детская версия:</strong> алкоголь в пропитке — 25 г, и автор советует для детей уменьшать его или вовсе не добавлять, а компоте оставлять: без рома торт останется «взрослым» только по вкусу шоколада и вишни.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Сливки: <strong>200 г, холодные, до пиков</strong></span>
+              <span class="param-pill">🍮 Пудра: <strong>30 г</strong></span>
+              <span class="param-pill">🥃 Ром: <strong>25 г в остывший сироп</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Разрезать коржи и пропитать</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Каждый бисквит разрежьте струной пополам — всего четыре коржа. Пропитывайте кисточкой только ту сторону, которая ляжет к крему: снаружи влага не нужна, там идёт покрытие. Для умеренно пропитанного торта проходитесь по коржу один раз, для хорошо пропитанного — дважды по одному месту. Всего пропитки хватает почти на все коржи: у автора остаётся около 10 г, и последний корж она не «насилует».
+                <span class="source-badge">⏱ Урок_01: 01:15:10–01:22:18</span>
+                <span class="source-badge">⏱ Урок_01: 01:28:03–01:28:35</span>
+              </p>
+              <div class="tip-box">
+                <strong>Не лейте из бутылочки:</strong> устройства, которые просто поливают корж, перебарщивают моментально, и торт потом течёт на подложку. Кисточка контролирует количество.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔪 Коржи: <strong>4 шт. из двух бисквитов</strong></span>
+              <span class="param-pill">🖌 Пропитка: <strong>1–2 прохода кистью</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Сборка: чередование слоёв</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                На подложку — каплю крема, чтобы корж не ездил, и первый корж. Отсадите компоте концентрическими окружностями, довольно ощутимым слоем, сверху шоколадный крем: по рецепту в этот слой идёт весь крем целиком, толщиной около сантиметра. Накройте вторым коржом, пропитайте, «помассируйте» ладонями, чтобы слои соединились, и повторите: у автора вишня идёт в первом и третьем разрезе, во втором — только крем. Мешки надрезайте одинаково, на 1 см — так все слои выходят ровными.
+                <span class="source-badge">⏱ Урок_01: 01:22:18–01:41:47</span>
+              </p>
+              <div class="warning-box">
+                <strong>Порядок «компоте, потом крем» — не догма:</strong> если крем хорошо стабилизирован, сначала отсаживают бортик кремом, а компоте кладут внутрь. Автор сделала наоборот именно потому, что её крем ещё не достоялся.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Слой крема: <strong>~1 см</strong></span>
+              <span class="param-pill">🗡 Отверстие мешка: <strong>1 см</strong></span>
+              <span class="param-pill">📐 Высота торта: <strong>~12 см</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Стабилизация перед покрытием</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Собранный торт закройте пищевой плёнкой и уберите в холодильник. Минимум для этого торта — 2–4 часа, у автора он стоит ночь. Срок годности готового торта — 72 часа. Отдельно подготовьте основу: под бетонный ганаш нужна твёрдая подложка — поликарбонат или фанера. На толстом картоне ганаш неизбежно треснет под весом 12-сантиметрового торта.
+                <span class="source-badge">⏱ Урок_01: 01:41:47–01:42:11</span>
+                <span class="source-badge">⏱ Урок_01: 01:22:37–01:22:58</span>
+              </p>
+              <div class="tip-box">
+                <strong>Без бетонного ганаша:</strong> торт можно оставить «голым» — он хорошо смотрится и так, — либо выровнять 500 г крем-чиза. Трафарет в этом случае не понадобится.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Холодильник: <strong>2–4 ч минимум</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>до 72 ч</strong></span>
+              <span class="param-pill">🪵 Подложка: <strong>Фанера или поликарбонат</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Покрытие и рисунок по трафарету</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Торт выровняйте бетонным ганашем и хорошо охладите — это ключевое условие. Определите у трафарета изнанку: с лицевой стороны ноготь не цепляется за рисунок, с изнаночной — цепляется, и именно рельефная сторона ложится к торту. Приложите трафарет, натяните по нижнему краю, приколите зубочистками и втирайте окрашенный ганаш палетой или скребком в рисунок. Излишки снимайте скребком, вытирая его начисто между цветами. Снимайте трафарет с того края, где начинали, потянув аккуратно, — рисунок останется только внутри прорезей.
+                <span class="source-badge">⏱ Урок_02: 00:02:33–00:10:02</span>
+              </p>
+              <div class="warning-box">
+                <strong>Рецептура бетонного ганаша в записи не названа:</strong> его готовили в незаписанной утренней части второго дня, в видео он уже окрашен. Известно, что основа — белый шоколад с творожным сыром и диоксидом титана (без него крем жёлтый). Пропорции на этой странице не восстановлены намеренно, чтобы не выдумывать.
+              </div>
+              <div class="warning-box">
+                <strong>Две ошибки:</strong> работа по тёплому торту — трафарет снимется вместе с первым слоем покрытия; и долгое прижатие трафарета руками — покрытие нагревается и «плывёт». Работайте быстро и как можно меньше касайтесь.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Ганаш: <strong>Хорошо охлаждён</strong></span>
+              <span class="param-pill">🖌 Инструмент: <strong>Скребок и палета</strong></span>
+              <span class="param-pill">📌 Фиксация: <strong>Зубочистки, не иголки</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">15</span>
+                <h3 class="step-title">Крем для цветов: итальянская меренга на масле</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Масло нарежьте кубиками по 1 см и держите холодным, 10–15 °C — достаньте из холодильника минут за 10 до начала. Сварите сироп из 100 г сахара и воды: после закипания активное кипение около 3 минут, по градуснику — до 116–118 °C. Одновременно взбейте 160 г свежих белков со вторыми 100 г сахара, сначала на низкой, затем на максимальной скорости. Готовым сиропом заварите меренгу тонкой струйкой, продолжая взбивать, и взбивайте до остывания хотя бы до 30 °C. Потом понемногу добавляйте масло, не прекращая взбивать.
+                <span class="source-badge">⏱ Урок_03: 00:04:51–00:15:20</span>
+              </p>
+              <div class="warning-box">
+                <strong>Крем «расслоился» — не выбрасывайте.</strong> Когда масла ещё мало, а воды много, масса выглядит творогом и стекает по стенке. Это не брак: продолжайте взбивать и добавлять масло, и крем соберётся в гладкий рельефный.
+              </div>
+              <div class="tip-box">
+                <strong>Только живые белки.</strong> Пастеризованный белок из бутылки и сухой альбумин пробовали — крем получается жидким и течёт в руках, лепестки не держат форму. Для выравнивания тортов такой белок годится, для цветов — нет.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сироп: <strong>116–118 °C</strong></span>
+              <span class="param-pill">🌡 Масло: <strong>10–15 °C</strong></span>
+              <span class="param-pill">🥣 Выход: <strong>~800 г крема</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">16</span>
+                <h3 class="step-title">Окрашивание и ранункулюсы</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Масляный крем красится неохотно, поэтому берите водорастворимые красители — они расходятся без крупинок, — а для зелени удобны сухие, разведённые чайной ложкой воды: у них нет вкуса. Учитывайте, что крем изначально желтоватый от масла, и розовый краситель даёт сначала персиковый оттенок. Лепестки ранункулюса отсаживайте насадкой 120–122: сначала серединку, затем круг за кругом, каждый следующий слой чуть шире. Готовые цветы отправляйте в морозилку — застывшие, они «как пельмешки»: их можно снять и переставить, пока композиция не встала.
+                <span class="source-badge">⏱ Урок_03: 00:26:26–00:40:00</span>
+                <span class="source-badge">⏱ Урок_03: 00:48:26–01:14:37</span>
+              </p>
+              <div class="warning-box">
+                <strong>Живые лютики на торт не кладут:</strong> настоящий ранункулюс ядовит. Съедобная альтернатива — только кремовый цветок.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🎨 Красители: <strong>Водорастворимые и сухие</strong></span>
+              <span class="param-pill">🌼 Насадка: <strong>120, 121 или 122</strong></span>
+              <span class="param-pill">🧊 Хранение: <strong>Морозилка, до месяца</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">17</span>
+                <h3 class="step-title">Композиция и листья</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Выберите «лицо» торта и начинайте с него: сначала поставьте самый удачный цветок, закрепив его сзади небольшим количеством крема как подпоркой, дальше ведите композицию от него. Листья делайте насадкой 103, 104 или 350–352, ставя «галочку» вертикально, чтобы лист раскрывался с боков, а не выдавливался соплёй: дайте крему раскрыться, снимите давление и только потом уберите насадку. Зелень должна закрывать спорные места — стыки, просветы, следы от зубочисток, — но её должно быть меньше, чем цветов: перебор зелени сразу выглядит ненатурально.
+                <span class="source-badge">⏱ Урок_04: 00:01:26–00:28:45</span>
+              </p>
+              <div class="tip-box">
+                <strong>Воздух внутри композиции — это хорошо.</strong> Не забивайте промежутки кремом: в букете должна читаться пустота, и тогда срез торта останется чистым.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌿 Листья: <strong>103/104 или 349–352</strong></span>
+              <span class="param-pill">🌸 Количество: <strong>15–20 ранункулюсов</strong></span>
+              <span class="param-pill">🧊 После сборки: <strong>В холодильник</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Заметки по технологии</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Оборудование, без которого не выйдет</h4>
+              <ul>
+                <li><strong>Кольца Ø16 см с дном</strong> и фольга — печь в кольце без дна нельзя.</li>
+                <li><strong>Струна</strong> для разрезания коржей: ножом такой влажный бисквит рвётся.</li>
+                <li><strong>Твёрдая подложка</strong> — фанера или поликарбонат под бетонный ганаш.</li>
+                <li><strong>Трафарет</strong> с повторяющимся рисунком, скребок, палета, зубочистки.</li>
+                <li><strong>Градусник</strong> для сиропа; без него ориентир — 3 минуты активного кипения.</li>
+                <li><strong>Насадки:</strong> 120–122 для лепестков, 103/104 и 349–352 для листьев.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Что чем заменяется</h4>
+              <ul>
+                <li><strong>Инвертный сахар:</strong> мёд 1:1, при аллергии на мёд — обычный сахар.</li>
+                <li><strong>Пектин NH:</strong> яблочный вдвое больше (4 г), но без заморозки; либо 6 г желатина + 30 г воды.</li>
+                <li><strong>Кирш:</strong> тёмный ром, коньяк или бренди.</li>
+                <li><strong>Бетонный ганаш:</strong> 500 г крем-чиза, торт можно оставить и «голым».</li>
+                <li><strong>Диоксид титана:</strong> не заменяется — без него покрытие будет жёлтым, и это тоже вариант.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение</h4>
+              <ul>
+                <li><strong>Готовый торт:</strong> в холодильнике до 72 часов под плёнкой.</li>
+                <li><strong>Бисквит:</strong> в плёнке в холодильнике или морозилке; нарезать перед сборкой.</li>
+                <li><strong>Крем для цветов:</strong> до 30 дней в холодильнике, замораживается без потери качества; после морозилки — до комнатной температуры и пробить миксером.</li>
+                <li><strong>Цветы и листья:</strong> в морозилке до месяца, на торт ставят застывшими.</li>
+                <li><strong>Остатки ганаша:</strong> в морозилку; от хранения диоксид титана раскрывается, и крем становится белее.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Порядок из-за остывания:</strong> первым делом компоте — перед сборкой оно должно остыть, бисквит тоже должен отлежаться.</li>
+                <li><strong>Яйца тёплые, сливки холодные:</strong> яичная масса не схватится от шоколадно-масляной смеси, а холодные сливки в конце дают ту самую густую консистенцию теста.</li>
+                <li><strong>Инвертный сахар — против сухости:</strong> он держит влагу в мякише, поэтому бисквит долго остаётся сочным.</li>
+                <li><strong>Пеките в двух формах:</strong> одна форма — 30 минут, и тесто спокойно ждёт 40 минут, пока печётся первая половина.</li>
+                <li><strong>Пропитка только внутрь:</strong> пропитывается сторона, которая ляжет к крему; снаружи идёт покрытие, влага там лишняя.</li>
+                <li><strong>Компоте в мешок:</strong> так его удобнее отсаживать концентрическими окружностями и быстрее остужать.</li>
+                <li><strong>Застывшие цветы удобнее:</strong> из морозилки они «как пельмешки» — можно снять и переставить, пока композиция не встала.</li>
+                <li><strong>Безотходное производство:</strong> остатки ганаша, крема и лишние цветы уходят в морозилку и ждут следующего торта.</li>
+                <li><strong>Чистая подложка:</strong> автор протирает её несколько раз за съёмку — мутные разводы сводят на нет всю работу.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Холодные яйца в бисквит:</strong> шоколадно-масляная смесь начинает застывать, и гладкой блестящей массы уже не получить.</li>
+                <li><strong>Не смешать сухие ингредиенты:</strong> мука, какао, миндальная мука и разрыхлитель идут в тесто только вместе.</li>
+                <li><strong>Кольцо без дна или одна форма:</strong> влажный сдобный бисквит так не пропекается.</li>
+                <li><strong>Сахар на голый желток:</strong> желток начинает сворачиваться — сначала сливки, потом сахар.</li>
+                <li><strong>Отойти от заварного крема:</strong> дно продолжает греться, крем пригорает; перегрев выше ~84 °C сворачивает яйцо.</li>
+                <li><strong>Пектин в горячую смесь:</strong> вводить только ниже 40 °C, иначе комки вместо загустения.</li>
+                <li><strong>Алкоголь в горячий сироп:</strong> ром добавляют в полностью остывшую пропитку.</li>
+                <li><strong>Трафарет по тёплому торту:</strong> снимется вместе с первым слоем покрытия.</li>
+                <li><strong>Долго прижимать трафарет руками:</strong> ганаш нагревается и течёт, рисунок плывёт.</li>
+                <li><strong>Иголки вместо зубочисток:</strong> отверстия от зубочистки потом закрываются кремом, от иглы — нет.</li>
+                <li><strong>Пастеризованный белок в крем для цветов:</strong> крем жидкий, лепестки не держат форму.</li>
+                <li><strong>Много зелени:</strong> герой композиции — цветы; перебор листьев сразу выдаёт ненатуральность.</li>
+                <li><strong>Картонная подложка:</strong> под весом 12-сантиметрового торта бетонный ганаш трескается.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источник:</strong> четыре видео — Урок_01 (компоте, бисквит, заварной крем, маскарпоне, пропитка, сборка), Урок_02 (трафарет), Урок_03 (крем для цветов, ранункулюсы), Урок_04 (композиция) и общая расшифровка на 3083 реплики. DOCX с рецептурой в папке нет, все граммовки взяты из речи автора.</li>
+              <li><strong>Бетонный ганаш:</strong> его готовили в утренней части второго дня, которая в записи отсутствует — в Урок_02 ганаш уже окрашен. Пропорции белого шоколада, творожного сыра, диоксида титана и красителей не назывались, поэтому в рецепте их нет. Известна только альтернатива: 500 г крем-чиза на выравнивание.</li>
+              <li><strong>Время выпечки бисквита:</strong> в речи звучат 30 минут, затем 25 и «35 диапазон» — на странице оставлен честный интервал 25–35 минут с проверкой на 25-й. То же с весом: «по 400 грамм каждый бисквит» и рядом «должно быть 470» — вторая цифра к весу теста не отнесена, поэтому на странице 400 г.</li>
+              <li><strong>Вода в сироп для цветов и воды для пропитки:</strong> вода сиропа не взвешивалась (на глаз, излишек выкипает), в пропитке названо 50 г.</li>
+              <li><strong>Сила желатина:</strong> автор использует сильный желатин платиновой серии 240–260 Блюм. Для листового или слабого желатина количество придётся пересчитывать — готовая цифра для другого желатина в вебинаре не названа.</li>
+              <li><strong>Количество цветов:</strong> точное число не задавалось — автор говорит, что почти весь замес в 800 г уходит на композицию и запас нужен обязательно, потому что часть цветов не получается с первого раза. В вебинаре показаны композиции из 15–20 ранункулюсов разной степени раскрытости.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_04 (около 00:29:30) с готовым тортом.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

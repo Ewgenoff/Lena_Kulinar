@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Трюфель «Ореховый» — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Ореховый трюфель Надежды Зубовой: ганаш на молочном и тёмном шоколаде с фундучным пралине, сливками и сиропом глюкозы. 20–24 конфеты по 10–12 г, покрытие темперированным тёмным шоколадом и золотым кандурином.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tryufel-orehovyy">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Конфеты и сладости</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Трюфель «Ореховый»</h1>
+      <p class="recipe-lead">
+        Фундучный трюфель на молочном шоколаде с небольшой долей тёмного: пралине вводится прямо в растопленный шоколад, поэтому ореховая нота распределяется по всей массе, а не остаётся начинкой. Ганаш стабилизируется ночь, конфеты скатывают по 10–12 г и покрывают тёмным шоколадом с золотым кандурином.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~15 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Стабилизация 12 ч + 1–2 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~14 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">20–24 конфеты по 10–12 г</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tryufel-orehovyy.jpg" alt="Ореховые трюфели в тёмном шоколадном корпусе с золотым кандурином на рельефе" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (22 конфеты)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="22">22</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">конфеты</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — 22 конфеты: автор говорит о 20–24 штуках при раскладке 10–12 г. Покрытие считается отдельно.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">22</span> конфеты</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на ганаш и покрытие. Пралине можно заменить ореховой пастой или урбечом — тогда вкус меняется, но техника та же. Для покрытия нужен тёмный шоколад и Mycryo.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Шоколад и какао-масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молочный шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span>
+                <span class="shopping-hint">В ганаш</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Тёмный шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="170" data-unit="г">170 г</span>
+                <span class="shopping-hint">20 г в ганаш и около 150 г в покрытие</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао-масло в калетах</strong>:
+                <span class="shopping-qty" data-base-amount="12" data-unit="г">12 г</span>
+                <span class="shopping-hint">В ганаш</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао-масло Mycryo</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="г">2 г</span>
+                <span class="shopping-hint">1 % от веса шоколада для темперирования</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌰 Пралине, сливки, декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Фундучное пралине</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Перед использованием перемешать: масло отсекается сверху</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 30 %</strong>:
+                <span class="shopping-qty" data-base-amount="65" data-unit="г">65 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сироп глюкозы</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Золотой кандурин</strong> — для декора
+                <span class="shopping-hint">Совсем немного, по рельефу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — весы, перчатки, бумажные полотенца, погружной блендер, противень и плёнка
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Ганаш</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Молочный шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Тёмный шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="65" data-unit="г">65 г</span> — Сливки 30 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Сироп глюкозы
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="12" data-unit="г">12 г</span> — Какао-масло
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Ореховое пралине
+              <span class="ingredient-note">У автора фундучное; можно пасту или урбеч</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Покрытие и декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Тёмный шоколад
+              <span class="ingredient-note">Для двух слоёв покрытия</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Какао-масло Mycryo
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Золотой кандурин — по желанию
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Шоколад с какао-маслом</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Молочный (80 г) и тёмный (20 г) шоколад вместе с какао-маслом (12 г) растопите в микроволновке пульсами. Частички нерастопленного какао-масла допустимы — оно плавится дольше шоколада.
+                <span class="source-badge">⏱ Урок_01: 00:00:31–00:00:52</span>
+              </p>
+              <div class="tip-box">
+                <strong>Почему немного тёмного:</strong> он держит структуру, но не перебивает молочный вкус.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Шоколад: <strong>80 г молочного + 20 г тёмного</strong></span>
+              <span class="param-pill">🫒 Какао-масло: <strong>12 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Пралине в шоколад</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Пралине (50 г) перемешайте — сверху отсекается масло — и отправьте по весу в растопленный шоколад. Перемешайте и оставьте на столе. Вместо пралине можно взять ореховую пасту или урбеч.
+                <span class="source-badge">⏱ Урок_01: 00:00:52–00:01:39</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не забыть перемешать пралине:</strong> иначе в ганаш уйдёт только масло, а ореховая часть останется в банке.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌰 Пралине: <strong>50 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Сливки с глюкозой и эмульсия</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Сливки (65 г) с сиропом глюкозы (15 г) нагрейте примерно до 40 °C — ровно настолько, чтобы глюкоза разошлась. Перелейте к ним шоколад с пралине, перемешайте лопаткой от центра, затем пробейте погружным блендером до блестящей гладкой массы.
+                <span class="source-badge">⏱ Урок_01: 00:01:39–00:03:30</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не взбивать:</strong> блендер нужен для эмульсии, а не для насыщения воздухом.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сливки: <strong>~40 °C</strong></span>
+              <span class="param-pill">🍯 Глюкоза: <strong>15 г</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Блеск и гладкость</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Стабилизация</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите ганаш в контейнер, накройте плёнкой в контакт и оставьте на ночь: 12 часов при 16–18 °C. Если таких условий нет — 2 часа при комнатной температуре, затем холодильник. Готовый ганаш жёсткий, но продавливается пальцем.
+                <span class="source-badge">⏱ Урок_01: 00:03:31–00:03:55</span>
+                <span class="source-badge">⏱ Урок_02: 00:00:02–00:01:21</span>
+              </p>
+              <div class="warning-box">
+                <strong>Плёнка в контакт:</strong> конденсат на плёнке — это лишняя влага, которая попадает в ганаш и сокращает срок хранения.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Стабилизация: <strong>12 ч при 16–18 °C</strong></span>
+              <span class="param-pill">❄️ После холодильника: <strong>1 ч при комнатной</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Формирование</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Раскидайте массу на весах по 10–12 г и скатайте в перчатках. Затем прокатайте второй раз через 30–60 минут, когда конфеты перестанут липнуть: из «ёжиков» они превратятся в гладкие шарики. Чем глаже конфета, тем меньше шоколада уйдёт на покрытие.
+                <span class="source-badge">⏱ Урок_02: 00:01:28–00:08:12</span>
+              </p>
+              <div class="warning-box">
+                <strong>Перчатки:</strong> скатывать быстро; следы с перчаток снимают бумажным полотенцем, а не водой.
+              </div>
+              <div class="tip-box">
+                <strong>Второй прокат — экономия:</strong> гладкая конфета требует заметно меньше шоколада на корпус.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ Вес: <strong>10–12 г</strong></span>
+              <span class="param-pill">⏱ Второй прокат: <strong>Через 30–60 мин</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Покрытие тёмным шоколадом</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Тёмный шоколад оттемперируйте с Mycryo: растопите до 45–50 °C, остудите до 35 °C, добавьте 1 % какао-масла и доведите до рабочей температуры 31–32 °C. Покройте конфеты тонким слоем, дайте застыть и нанесите второй слой. Золотой кандурин наносите кисточкой, когда шоколад встанет.
+                <span class="source-badge">⏱ Урок_03: 00:03:50–00:07:20</span>
+                <span class="source-badge">⏱ Урок_03: 00:12:31–00:13:05</span>
+              </p>
+              <div class="warning-box">
+                <strong>Кандурин — по рельефу:</strong> автор не любит, когда его много — «ощущение, что ешь конфетку в фольге». Достаточно обозначить рельеф.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Рабочая: <strong>31–32 °C</strong></span>
+              <span class="param-pill">🍫 Слоёв: <strong>2</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>14 дней в холодильнике</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Пралине в шоколад:</strong> орех распределяется по всей массе, а не остаётся начинкой.</li>
+                <li><strong>Любое пралине:</strong> миндальное, кешью, грецкое — меняется только вкус.</li>
+                <li><strong>Паста и урбеч:</strong> допустимая замена, но их обязательно перемешивают.</li>
+                <li><strong>Немного тёмного шоколада:</strong> держит структуру ганаша.</li>
+                <li><strong>Второй прокат:</strong> гладкие конфеты экономят шоколад на покрытии.</li>
+                <li><strong>Двойной слой:</strong> полноценный хрустящий корпус.</li>
+                <li><strong>Кандурин по рельефу:</strong> подчёркивает фактуру, а не покрывает её.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Неразмешанное пралине:</strong> масло ушло в ганаш, ореховая часть осталась.</li>
+                <li><strong>Перегретые сливки:</strong> ганаш расслаивается при соединении.</li>
+                <li><strong>Работа без перчаток:</strong> масса тает от рук.</li>
+                <li><strong>Мокрые перчатки:</strong> влага портит шоколад.</li>
+                <li><strong>Покрытие одним слоем:</strong> просветы и тусклая поверхность.</li>
+                <li><strong>Перегрев при темперировании:</strong> начинать заново.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и подача</h4>
+              <ul>
+                <li><strong>Холодильник:</strong> 14 дней.</li>
+                <li><strong>Винный шкаф:</strong> допустим.</li>
+                <li><strong>Подача:</strong> при комнатной температуре.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Пралине:</strong> фундук, миндаль, кешью, грецкий орех.</li>
+                <li><strong>Покрытие:</strong> тёмный шоколад; можно молочный.</li>
+                <li><strong>Декор:</strong> золотой или цветной кандурин, ореховая крошка.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 — шоколад, пралине, сливки и эмульсия (00:00:31–00:03:55); Урок_02.mp4 — стабилизация и формирование (00:00:02–00:08:12); Урок_03.mp4 — темперирование, покрытие и кандурин (00:03:50–00:14:14); DOCX «Трюфель_Ореховый» — граммовки.</li>
+              <li><strong>Покрытие:</strong> в DOCX 150 г шоколада указано на 35–40 конфет двойным слоем; для 20–24 конфет уйдёт меньше, но на странице оставлен ориентир источника.</li>
+              <li><strong>Выход:</strong> 20–24 конфеты, база калькулятора — 22.</li>
+              <li><strong>Пробелы:</strong> вес готовой конфеты с покрытием не назван; количество кандурина не отвешивается.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_03.mp4 (около 00:12:40): тёмные трюфели с золотым кандурином.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

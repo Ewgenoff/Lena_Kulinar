@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Торт «Фисташковый» — дакуаз с малиновым конфи | CookBook</title>
+  <meta name="description" content="Торт «Фисташковый» Надежды Зубовой: дакуаз на фисташковой и миндальной муке, крем на заварной основе со сливочным маслом и фисташковой пастой, малиновое конфи и декор первоцветами.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tort-fistashkovyy">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Торт «Фисташковый» — дакуаз с малиновым конфи</h1>
+      <p class="recipe-lead">
+        Фисташковый дакуаз без грамма разрыхлителя: поднимается только за счёт воздуха в меренге. Внутри — крем из заварной основы, сливочного масла и фисташковой пасты, а малиновое конфи автор отсаживает каплями прямо в крем, чтобы на разрезе получились яркие точки. Снаружи торт выравнивают масляным кремом на итальянской меренге серо-голубого оттенка и украшают миниатюрными первоцветами.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~2 ч (без цветов)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Выпечка 40–50 мин, остывание, заварная основа, стабилизация 6–12 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~10–12 ч + ночь; с цветами — 2 дня</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 торт Ø18 см (3 коржа) или Ø16 см (4 коржа)</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-fistashkovyy.jpg" alt="Торт «Фисташковый» с серо-голубым выравниванием, букетом жёлто-оранжевых первоцветов и зелёными стеблями по боку" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 торт)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">торт</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — один торт: три коржа Ø18 см либо четыре Ø16 см. На выравнивание уходит около 250 г масляного крема, остальное — на цветы.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> торт</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на дакуаз, крем, конфи и масляный крем. Яйца считаны целыми: нужно 360 г белка (9 яиц С0) и 60 г желтков — девять яиц закрывают и белки, и желтки. Фисташковую пасту берите насыщенную, зелёную: от неё зависит и вкус, и цвет крема.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное и яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С0</strong>:
+                <span class="shopping-qty" data-base-amount="9" data-unit="шт." data-piece="true">9 шт.</span>
+                <span class="shopping-hint">200 г белка в дакуаз, 160 г в масляный крем, 60 г желтков в заварную основу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 30 % и выше</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">В заварную основу крема</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5 %</strong>:
+                <span class="shopping-qty" data-base-amount="570" data-unit="г">570 г</span>
+                <span class="shopping-hint">120 г в основной крем, 450 г в масляный крем на итальянской меренге</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌰 Орехи, ягоды, бакалея</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Фисташковая мука</strong>:
+                <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Миндальная мука</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Фисташковая паста</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Насыщенная зелёная, без сахара</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре малины</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Можно заменить клубничным — автор допускает такую замену</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="555" data-unit="г">555 г</span>
+                <span class="shopping-hint">200 г в дакуаз, 115 г в заварную основу, 40 г в конфи, по 100 г в белки и сироп</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар с семенами ванили</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная</strong>:
+                <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Крахмал кукурузный</strong>:
+                <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="г">5 г</span>
+                <span class="shopping-hint">На 25 г воды — для малинового конфи</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Диоксид титана</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span>
+                <span class="shopping-hint">Развести в столовой ложке воды</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Красители водорастворимые</strong> — по вкусу
+                <span class="shopping-hint">Для крема и цветов: голубой, зелёный двух оттенков, жёлтый, белый</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — кольца Ø16 или Ø18 см, разъёмное кольцо, пергамент, насадки 61 (или 120), 1, 4, гвоздики для цветов, кондитерские мешки
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Фисташковый дакуаз</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Белок яичный
+              <span class="ingredient-note">5 яиц С0, комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Фисташковая мука
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Миндальная мука
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Крахмал кукурузный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Мука пшеничная
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем фисташковый</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Желток яичный
+              <span class="ingredient-note">3 яйца С0</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="115" data-unit="г">115 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сливки 30 % и выше
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Сахар с семенами ванили
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Сливочное масло 82,5 %
+              <span class="ingredient-note">Комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Фисташковая паста
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              1 капля зелёного водорастворимого красителя
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Малиновое конфи</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Пюре малины
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="г">5 г</span> — Желатин
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Вода для желатина
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Масляный крем на итальянской меренге</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="450" data-unit="г">450 г</span> — Сливочное масло 82,5 %
+              <span class="ingredient-note">Холодное</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Белок
+              <span class="ingredient-note">4 яйца С0; для цветов — только живой</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар в белки
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар в сироп
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Вода для сиропа
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Диоксид титана
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Красители водорастворимые — по вкусу
+              <span class="ingredient-note">Для серо-голубого выравнивания и первоцветов</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Сухие ингредиенты и духовка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Смешайте фисташковую муку (80 г), миндальную муку (50 г), муку (10 г) и крахмал (10 г) — сахар идёт отдельно. Разогрейте духовку до 150 °C: конвекция либо верх-низ с конвекцией. Если режима конвекции нет, пеките один противень при 160 °C.
+                <span class="source-badge">⏱ Урок_01: 00:00:00–00:01:00</span>
+                <span class="source-badge">⏱ Урок_01: 00:03:04–00:03:38</span>
+              </p>
+              <div class="tip-box">
+                <strong>Белок:</strong> комнатной температуры, живой — но автор допускает и пастеризованный, и сухой альбумин, по инструкции на упаковке.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>150 °C, конвекция</strong></span>
+              <span class="param-pill">🌰 Мука: <strong>80 г фисташковой + 50 г миндальной</strong></span>
+              <span class="param-pill">🌡 Без конвекции: <strong>160 °C, один противень</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Меренга: от низкой скорости к пикам</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Белки (200 г) начинайте взбивать на низкой скорости — так они лучше принимают воздух, — затем увеличьте до максимума. Готово, когда от венчика остаётся рисунок, пузыри мелкие, а меренга держит форму пиков, пусть и не жёстких.
+                <span class="source-badge">⏱ Урок_01: 00:01:00–00:01:47</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не спешить с сахаром:</strong> его вводят только после того, как белок начал держать форму.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚙️ Сначала: <strong>Низкая скорость</strong></span>
+              <span class="param-pill">⚙️ Затем: <strong>Максимум</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Сахар в три приёма</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Введите сахар (200 г) в три приёма, каждый раз взбивая до растворения. Меренга должна стать упругой, блестящей, с подвижным, но держащимся пиком — при взбивании чувствуется сопротивление.
+                <span class="source-badge">⏱ Урок_01: 00:01:47–00:03:04</span>
+              </p>
+              <div class="tip-box">
+                <strong>Пропорция 1:1:</strong> сахара столько же, сколько белка, — иначе с таким количеством сухих ингредиентов дакуаз не соберётся.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍬 Сахар: <strong>200 г, три приёма</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Упругая, блестящая</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Вмешивание сухих ингредиентов</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отправьте все сухие ингредиенты в меренгу сразу и вмешайте лопаткой лёгкими поднимающими движениями. Мешайте недолго — ровно до того момента, когда сухих участков не останется. Масса должна держаться на лопатке и сохранять форму.
+                <span class="source-badge">⏱ Урок_01: 00:03:14–00:04:04</span>
+              </p>
+              <div class="warning-box">
+                <strong>Разрыхлителя нет:</strong> тесто поднимается только воздухом. Перемешали долго — корж станет лепёшкой, и это уже не исправить.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥄 Инструмент: <strong>Лопатка</strong></span>
+              <span class="param-pill">⏱ Время: <strong>До однородности, не дольше</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Формы, выпечка и вырезание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Формы смажьте маслом или спреем, разложите массу по весу на 4 коржа Ø16 см или на 3 коржа Ø18 см и разровняйте — ровные коржи экономят крем при выравнивании. Выпекайте 40–50 минут при 150 °C с конвекцией. Остудите и вырежьте ножом по форме, а не по коржу.
+                <span class="source-badge">⏱ Урок_01: 00:04:24–00:05:55</span>
+                <span class="source-badge">⏱ Урок_02: 00:00:00–00:00:42</span>
+              </p>
+              <div class="warning-box">
+                <strong>Массу не откладывать:</strong> разложили — сразу в духовку, иначе воздух выйдет и коржи осядут.
+              </div>
+              <div class="tip-box">
+                <strong>Хранение:</strong> до 5 дней при комнатной температуре в плёнке, до 10 дней в холодильнике.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📐 Коржи: <strong>4 × Ø16 или 3 × Ø18 см</strong></span>
+              <span class="param-pill">⏱ Время: <strong>40–50 мин</strong></span>
+              <span class="param-pill">🔪 Вырезать: <strong>По форме</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Заварная основа</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сливки (200 г) с ванильным сахаром (15 г) доведите до кипения. Желтки (60 г) смешайте с сахаром (115 г) и сразу мешайте венчиком. Влейте в желтки часть горячих сливок, перемешайте, верните всё в сотейник и уварите на минимальном нагреве до загустения — 91–92 °C по термометру. Готовность: капля застывает на венчике.
+                <span class="source-badge">⏱ Урок_04: 00:00:00–00:05:43</span>
+              </p>
+              <div class="warning-box">
+                <strong>Только минимальный нагрев:</strong> если плита не держит минимум, нужна водяная баня — иначе крем свернётся.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Финал: <strong>91–92 °C</strong></span>
+              <span class="param-pill">🌡 Нагрев: <strong>Минимальный</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Охлаждение под плёнку в контакт</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Вылейте крем на противень или в широкий контейнер, затяните пищевой плёнкой прямо по горячей поверхности и остудите до комнатной температуры. Плёнка в контакт не даёт образоваться корочке и конденсату.
+                <span class="source-badge">⏱ Урок_04: 00:05:41–00:07:22</span>
+              </p>
+              <div class="warning-box">
+                <strong>Зачем так:</strong> быстрое охлаждение защищает от бактерий и плесени — торт потом замораживают и размораживают.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📄 Плёнка: <strong>В контакт</strong></span>
+              <span class="param-pill">🌡 До: <strong>Комнатной температуры</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Крем с маслом и фисташковой пастой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сливочное масло (120 г) взбейте до бела, пышности и воздушности. Постепенно, примерно по три столовые ложки, вводите заварную основу — каждый раз до полного объединения. Масло и заварная часть должны быть одной температуры. В готовый крем добавьте фисташковую пасту и каплю зелёного красителя, взбейте.
+                <span class="source-badge">⏱ Урок_03: 00:00:01–00:03:15</span>
+              </p>
+              <div class="warning-box">
+                <strong>Одинаковая температура:</strong> холодное масло с тёплой заварной частью даёт зернистость и расслоение.
+              </div>
+              <div class="tip-box">
+                <strong>Крем не «масляный», а густой:</strong> благодаря маслу он держит форму, не течёт при разморозке и по вкусу напоминает мороженое.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Масло: <strong>120 г</strong></span>
+              <span class="param-pill">🌰 Паста: <strong>30 г</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>72 ч в холодильнике</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Малиновое конфи</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Желатин замочите в холодной воде (25 г). Пюре малины (150 г) с сахаром (40 г) нагрейте до кипения, снимите с огня и введите набухший желатин. Переложите в кондитерский мешок, дайте остыть и слегка застыть в холодильнике. Срок годности — 72 часа.
+              </p>
+              <div class="tip-box">
+                <strong>Малина дорогая:</strong> автор прямо разрешает заменить конфи клубничным — по вкусу это тоже работает.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍓 Пюре: <strong>150 г</strong></span>
+              <span class="param-pill">🥄 Желатин: <strong>5 г на 25 г воды</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Сборка с конфи каплями</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                На дно — немного крема, затем первый корж и крем по весу. Разровняйте и отсадите малиновое конфи каплями, погружая мешок в крем: так оно чётко читается на разрезе. Накройте следующим коржом, перевернув его, прижмите. Кольцо надевайте, когда коржи уже сложены. Чередуйте коржи так, чтобы сверху оказался ровный, затяните плёнкой и уберите в холодильник или морозилку.
+                <span class="source-badge">⏱ Урок_03: 00:03:18–00:05:57</span>
+              </p>
+              <div class="warning-box">
+                <strong>Разъёмное кольцо:</strong> при заморозке без него торт не извлечь — дакуаз не каменеет.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍓 Конфи: <strong>В каждый слой</strong></span>
+              <span class="param-pill">🧊 Стабилизация: <strong>Холодильник или морозилка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Масляный крем на итальянской меренге</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Белки (160 г) взбивайте на средней скорости. Как только пена станет плотной и без жидкости на дне, введите весь сахар (100 г). Параллельно варите сироп из 100 г сахара и 60 г воды до 116 °C. Дайте кипению уняться и влейте сироп тонкой струйкой по краю чаши. Взбивайте до 30–35 °C, затем вводите холодное масло кубиками — сначала крупные, потом мелкие. Крем расслоится, но продолжит собираться, если не останавливаться. В конце — раствор диоксида титана, пауза 5–7 минут и ещё раз миксером.
+                <span class="source-badge">⏱ Урок_05: 00:00:00–00:10:15</span>
+              </p>
+              <div class="warning-box">
+                <strong>Расслоение — не брак:</strong> в этот момент крем выглядит как «манная каша». Взбивайте дальше, эмульсия соберётся.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сироп: <strong>116 °C</strong></span>
+              <span class="param-pill">🧈 Масло: <strong>450 г, холодное</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>5 суток / 1 месяц в морозилке</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Выравнивание и цветная полоска</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Торт достаньте из морозилки и дайте отойти в холодильнике пару часов. Окрасьте крем в серо-голубой. Сначала тонким слоем спрячьте крошки и коржи, затем выровняйте начисто палетой и скребком, верх — строго горизонтальными движениями к центру, скребок вытирайте после каждого прохода. Подложку вычистите до идеала. В конце нанесите тонкую хаотичную полоску более интенсивного цвета и проведите скребком — она даст торт оттенок.
+                <span class="source-badge">⏱ Урок_06: 00:00:01–00:03:57</span>
+              </p>
+              <div class="warning-box">
+                <strong>Ледяной торт не выравнивают:</strong> крем схватывается моментально и ложится комками.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Отогрев: <strong>~2 ч в холодильнике</strong></span>
+              <span class="param-pill">🎨 Цвет: <strong>Серо-голубой</strong></span>
+              <span class="param-pill">🧽 Скребок: <strong>Строго горизонтально</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Первоцветы</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Насадка 61 — миниатюрная версия 120, если нужны цветы крупнее, берите 120. Работайте носиком насадки, держа её вертикально. На шарике-основе сделайте три лепестка, чуть прикрывающих серединку, затем ещё три — с воздухом между ними. В центр насадкой 1 поставьте тычинки другого оттенка. Повторите в нескольких стадиях раскрытия: закрытый бутон, полураскрытый, полностью открытый с тремя внутренними и шестью внешними лепестками. Каждого вида — примерно по пять штук, затем подморозить.
+                <span class="source-badge">⏱ Урок_07: 00:00:00–00:07:41</span>
+              </p>
+              <div class="tip-box">
+                <strong>Закручивайте насадку:</strong> перед тем как убрать её от лепестка, поверните и гвоздик, и насадку — лепесток получится вогнутым, а не плоским.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧁 Насадки: <strong>61 (или 120), 1</strong></span>
+              <span class="param-pill">🌸 Стадии: <strong>Бутон → полураскрытый → открытый</strong></span>
+              <span class="param-pill">🧊 Перед сборкой: <strong>Подморозить</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Стебли, листья и композиция</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Насадкой 4 тёмно-зелёного цвета проведите стебли: они идут наискосок по боку и заходят на верхнюю поверхность торта. С одной стороны стеблей больше, с другой — меньше. Затем выложите подмороженные цветы от центра по нисходящей, добавьте бутоны, а зелень — только там, где не хватает акцента.
+                <span class="source-badge">⏱ Урок_08: 00:00:00–00:05:31</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не вдавливать стебель:</strong> одна сторона насадки касается торта, вторая не должна продавливать покрытие.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧁 Насадка: <strong>4 (стебли, бутоны)</strong></span>
+              <span class="param-pill">🌿 Зелень: <strong>Сдержанно</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Живой белок:</strong> для цветов он даёт тонкие реалистичные лепестки; для одного выравнивания подойдёт альбумин.</li>
+                <li><strong>Фисташковая паста:</strong> от неё зависит и вкус, и цвет — берите насыщенную.</li>
+                <li><strong>Краситель в крем:</strong> одна капля; на разрезе зелень «наберётся» сама за счёт пасты.</li>
+                <li><strong>Полоска цвета:</strong> тонкая хаотичная полоса оттеняет торт и делает покрытие живым.</li>
+                <li><strong>Диоксид титана:</strong> нужен для холодных оттенков, в тёплых можно не добавлять.</li>
+                <li><strong>Крем замораживается:</strong> после разморозки его обязательно пробивают миксером.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Долго мешать тесто:</strong> корж оседает, крем потом «не спасает».</li>
+                <li><strong>Печь без конвекции два противня:</strong> верхний зарумянится, нижний останется сырым.</li>
+                <li><strong>Разная температура масла и заварной части:</strong> крем зернит.</li>
+                <li><strong>Сильный нагрев англеза:</strong> хлопья вместо крема.</li>
+                <li><strong>Конфи без желатина:</strong> вытечет между слоями.</li>
+                <li><strong>Выравнивание без отогрева:</strong> крем ложится комками.</li>
+                <li><strong>Густой краситель сразу:</strong> цвет проявляется не мгновенно, легко переборщить.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и подача</h4>
+              <ul>
+                <li><strong>Коржи:</strong> 5 дней при комнатной температуре в плёнке, 10 дней в холодильнике.</li>
+                <li><strong>Крем фисташковый:</strong> 72 часа в холодильнике.</li>
+                <li><strong>Масляный крем:</strong> 5 суток в холодильнике, 1 месяц в морозилке.</li>
+                <li><strong>Конфи:</strong> 72 часа.</li>
+                <li><strong>Подача:</strong> после отогрева в холодильнике, нарезать горячим ножом.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Конфи:</strong> малиновое можно заменить клубничным.</li>
+                <li><strong>Форма:</strong> 4 коржа Ø16 см или 3 коржа Ø18 см.</li>
+                <li><strong>Белок:</strong> живой, пастеризованный или альбумин — для дакуаза допустимо всё.</li>
+                <li><strong>Декор:</strong> первоцветы, бутоны, стебли; в DOCX указаны насадки 161, 1, 4.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 — дакуаз (00:00:00–00:05:55); Урок_02.mp4 — вырезание (00:00:00–00:00:42); Урок_03.mp4 — крем и сборка (00:00:01–00:05:57); Урок_04.mp4 — заварная основа (00:00:00–00:09:11); Урок_05.mp4 — масляный крем; Урок_06.mp4 — выравнивание; Урок_07.mp4 — первоцветы; Урок_08.mp4 — стебли и композиция; DOCX «Торт_Фисташковый» — граммовки.</li>
+              <li><strong>Оговорка в речи:</strong> в начале Урок_01 автор говорит «смесь фисташковой муки и муки арахиса», но дальше уточняет: миндальная мука. В DOCX — 80 г фисташковой и 50 г миндальной.</li>
+              <li><strong>Малиновое конфи:</strong> в видео упоминается только при сборке, способ приготовления — из DOCX; отдельного урока нет.</li>
+              <li><strong>Насадки для первоцветов:</strong> в DOCX 161 (и 120 как более крупный вариант), в видео работа идёт насадкой 61.</li>
+              <li><strong>Выравнивание:</strong> в DOCX указано, что ушло 250 г крема; на фото цвет серо-голубой, как в видео.</li>
+              <li><strong>Пробелы:</strong> точный вес готового торта и время отогрева перед подачей в источниках не названы.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_08.mp4 (около 05:30): украшенный торт с первоцветами и стеблями.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

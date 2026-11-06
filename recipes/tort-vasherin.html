@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Торт «Вашерин» — торт-мороженое с безе и клубникой | CookBook</title>
+  <meta name="description" content="Торт «Вашерин» Надежды Зубовой: французская меренга на сахаре и пудре, домашнее сливочное мороженое на желтках, клубничное желе и лимонная цедра. Сборка в разъёмном кольце, подача замороженной.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tort-vasherin">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Торт «Вашерин» — торт-мороженое с безе и клубникой</h1>
+      <p class="recipe-lead">
+        Настоящий торт-мороженое: между плотными безе лежит домашнее сливочное мороженое на желтках, прослоенное клубничным желе, а одна из порций мороженого — с лимонной цедрой. Собирают в разъёмном кольце и держат в морозилке, поэтому торт не течёт при разморозке и режется как торт. Сахар и пудра в меренге нужны не для сладости, а чтобы коржи были плотнее и держали влажное мороженое.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~40 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Сушка безе 1,5–2 ч, заморозка мороженого 4,5–5,5 ч, стабилизация торта от 4 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~8 ч + ночь в морозилке</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 торт Ø18 см ≈1,8 кг</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-vasherin.jpg" alt="Торт «Вашерин» в разъёмном кольце Ø18 см: безе с шапкой сливочного мороженого, вид сверху" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 торт)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">торт</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — один торт Ø18 см из трёх безе. Кольца или разъёмная форма обязательны: без них замороженный торт не извлечь.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> торт</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на безе, мороженое, желе и крем для декора. Яйца считаны целыми: нужно 120 г белка (3 яйца) и 120 г желтков (6 яиц) — шесть яиц закрывают и то и другое, лишние белки останутся. Сливки берите одной жирности 30–35 %, они идут и в мороженое, и в декор.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное и яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С0</strong>:
+                <span class="shopping-qty" data-base-amount="6" data-unit="шт." data-piece="true">6 шт.</span>
+                <span class="shopping-hint">120 г белка = 3 яйца, 120 г желтков = 6 яиц; белки от трёх «лишних» яиц останутся</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 30–35 %</strong>:
+                <span class="shopping-qty" data-base-amount="900" data-unit="г">900 г</span>
+                <span class="shopping-hint">500 г в мороженое, 400 г в крем для декора; в мороженое часть сливок идёт холодной, в конце</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Любой жирности, по весу</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍓 Ягоды, бакалея, расходники</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">125 г в меренгу, 150 г в мороженое, 25 г в клубнику</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="175" data-unit="г">175 г</span>
+                <span class="shopping-hint">125 г в меренгу, 50 г в крем для декора</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Клубника</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Можно замороженная — всё равно уваривается с сахаром</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="г">3 г</span>
+                <span class="shopping-hint">Обычный листовой или порошковый, замачивать в 15 г холодной воды</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимон</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">Только цедра — в одну из двух порций мороженого</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ваниль, ванильная паста или ванилин</strong> — по вкусу
+                <span class="shopping-hint">В мороженое и, по желанию, в крем для декора</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ягоды и мята для декора</strong> — по вкусу
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — кольца Ø18 см (3 шт.) или разъёмная форма, пергамент, пищевая плёнка, кондитерские мешки, контейнер под мороженое, погружной блендер
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Французская меренга (3 коржа Ø18 см)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Белки
+              <span class="ingredient-note">3 яйца С0, комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Сахарная пудра
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Сливочное мороженое</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="500" data-unit="г">500 г</span> — Сливки 30 % и выше
+              <span class="ingredient-note">Половина идёт в нагревание, половина — холодной в конце</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Молоко
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сахар
+              <span class="ingredient-note">Половина в сливки, половина в желтки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Желтки
+              <span class="ingredient-note">6 яиц С0</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Ванилин, ванильная паста или ваниль — по вкусу
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Клубничная начинка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Клубника
+              <span class="ingredient-note">Можно замороженная</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Желатин
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Вода для желатина
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем для декора</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="400" data-unit="г">400 г</span> — Сливки 30 % и выше
+              <span class="ingredient-note">Холодные</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Ваниль — по желанию
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Духовка и режим для безе</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разогрейте духовку до 80 °C. Автор сушит безе с конвекцией и при приоткрытой дверце — так коржи остаются светлыми и белыми. Если ваша духовка так не умеет, сушите при минимально возможной температуре, но время придётся увеличить.
+                <span class="source-badge">⏱ Урок_01: 00:03:23–00:03:53</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не печь, а сушить:</strong> при 80 °C меренга не зарумянивается. Как только верх начнёт золотиться, температура слишком высокая.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>80 °C</strong></span>
+              <span class="param-pill">💨 Режим: <strong>Конвекция, дверца приоткрыта</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Белки до мелкопористой пены</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Белки комнатной температуры начните взбивать на низкой скорости примерно минуту, затем переключите на максимальную и взбивайте до отчётливого рисунка от венчика и мелкопористой текстуры — жидкости на дне быть не должно.
+                <span class="source-badge">⏱ Урок_01: 00:00:35–00:01:07</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем сахар и пудра вместе:</strong> автор объясняет это просто — так коржи получаются плотнее и дольше держат влажное мороженое.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚙️ Сначала: <strong>Низкая, ~1 мин</strong></span>
+              <span class="param-pill">⚙️ Затем: <strong>Максимум до рисунка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Сахар, затем пудра в два приёма</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Весь сахар (125 г) введите сразу и взбивайте, пока он не войдёт в меренгу. Затем половину сахарной пудры — не на венчик, а по краю чаши — перемешайте и продолжайте взбивать. Когда меренга станет блестящей и гладкой, добавьте вторую половину пудры.
+                <span class="source-badge">⏱ Урок_01: 00:01:08–00:02:23</span>
+              </p>
+              <div class="warning-box">
+                <strong>Пудру не сыпать на венчик:</strong> она собьётся комками и останется крупинками в безе.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍬 Сахар: <strong>125 г сразу</strong></span>
+              <span class="param-pill">🍬 Пудра: <strong>две порции по ~62 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Плотная стабильная меренга</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                После последней порции пудры взбивайте примерно 15 минут, затем ещё 2–3 минуты. Готовность: с венчика ничего не течёт, меренга плотная, но эластичная, «клюв» держится и не стекает.
+                <span class="source-badge">⏱ Урок_01: 00:02:23–00:02:55</span>
+              </p>
+              <div class="warning-box">
+                <strong>Недобитая меренга расползётся:</strong> корж потеряет форму уже при отсадке, а готовое безе будет рыхлым.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Взбивание: <strong>~15 мин + 2–3 мин</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Не течёт с венчика</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Отсадка трёх коржей</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите меренгу в кондитерский мешок и отсадите в кольца Ø18 см — три коржа, не толстым слоем. Разровняйте так, чтобы высота была одинаковой.
+                <span class="source-badge">⏱ Урок_01: 00:02:55–00:03:22</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📐 Кольца: <strong>Ø18 см, 3 шт.</strong></span>
+              <span class="param-pill">📏 Слой: <strong>Не толстый</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Сушка и хранение безе</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сушите 90–120 минут при 80 °C. Ориентируйтесь на свою духовку: автор говорит и про час, и про два — всё зависит от того, какую температуру реально держит шкаф. Готовое безе остудите и храните при комнатной температуре в защищённом от влаги месте до месяца.
+                <span class="source-badge">⏱ Урок_01: 00:03:23–00:03:53</span>
+              </p>
+              <div class="tip-box">
+                <strong>Запас во времени:</strong> безе можно высушить за день-два до сборки. Это единственный элемент торта, который спокойно ждёт.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>90–120 мин</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>80 °C</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>До 1 месяца, сухо</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">База мороженого: молоко, сливки, сахар</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В сотейник налейте молоко (250 г) и половину сливок (250 г), добавьте половину сахара (75 г) и чайную ложку ванильной пасты. Доведите до кипения на среднем нагреве.
+                <span class="source-badge">⏱ Урок_02: 00:00:02–00:01:00</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥛 Сливки: <strong>250 г из 500 г</strong></span>
+              <span class="param-pill">🍬 Сахар: <strong>75 г из 150 г</strong></span>
+              <span class="param-pill">🌡 Нагрев: <strong>До кипения</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Желтки с сахаром — не оставлять без внимания</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Желтки (120 г) соедините с оставшимся сахаром (75 г) и сразу начните перемешивать венчиком. Задача не взбить, а не дать желткам стоять с сахаром: иначе они начнут сворачиваться и «гореть».
+                <span class="source-badge">⏱ Урок_02: 00:01:04–00:01:24</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сахар в желтки и сразу мешать:</strong> это главная страховка от крупинок и свернувшегося белка в креме.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Желтки: <strong>120 г</strong></span>
+              <span class="param-pill">⚙️ Инструмент: <strong>Венчик, без миксера</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Соединение и уваривание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Горячие сливки влейте в желтки тонкой струйкой, примерно половину объёма, постоянно помешивая — чтобы желтки не «шокировало» температурой. Перемешайте и верните всю массу в сотейник. Варите на минимальном нагреве, постоянно помешивая, до загустения: масса должна держать след от пальца на лопатке.
+                <span class="source-badge">⏱ Урок_02: 00:01:24–00:03:29</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не кипятить:</strong> при сильном кипении желтки свернутся хлопьями. Если плита не держит минимум — варите на водяной бане.
+              </div>
+              <div class="tip-box">
+                <strong>Проверка:</strong> проведите пальцем по лопатке — полоска должна остаться чистой и не заплывать.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Нагрев: <strong>Минимальный</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>След от пальца держится</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Быстрое охлаждение и блендер</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Вылейте массу на противень или в широкий контейнер — так она остынет быстрее. Остудите до комнатной температуры, затем добавьте вторую половину холодных сливок (250 г) и пробейте погружным блендером до однородности.
+                <span class="source-badge">⏱ Урок_02: 00:03:29–00:04:30</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥛 Сливки: <strong>250 г, холодные</strong></span>
+              <span class="param-pill">🔧 Блендер: <strong>До гладкости</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Заморозка с пробиванием</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Перелейте мороженое в контейнер, в котором удобно работать погружным блендером, и уберите в морозилку на 45 минут. Затем пробейте блендером и снова уберите. Повторите 6–7 раз, каждые 40–45 минут: масса будет становиться всё гуще, а на стенках и дне начнёт застывать.
+                <span class="source-badge">⏱ Урок_02: 00:04:27–00:06:14</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не пропускать пробивания:</strong> без них мороженое замёрзнет крупными кристаллами и будет колоться, а не резаться.
+              </div>
+              <div class="tip-box">
+                <strong>Если есть мороженица:</strong> автор разрешает просто заморозить массу в мороженице.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Интервал: <strong>40–45 мин</strong></span>
+              <span class="param-pill">🔁 Повторов: <strong>6–7 раз</strong></span>
+              <span class="param-pill">🍨 Итог: <strong>Густая, но текучая масса</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Две порции: с цедрой и без</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разделите мороженое на две части по весу. В одну добавьте лимонную цедру — автор берёт чайную ложку без горки, можно с половины или с целого лимона, по вкусу. Перемешайте, переложите обе части в кондитерские мешки и уберите в морозилку до сборки. Хранится такое мороженое до 30 дней.
+                <span class="source-badge">⏱ Урок_03: 00:00:43–00:01:26</span>
+              </p>
+              <div class="step-parameters">
+                <span class="param-pill">🍋 Цедра: <strong>~1 ч. л. без горки</strong></span>
+                <span class="param-pill">🧊 Хранение: <strong>До 30 дней</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Клубничное желе</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Желатин замочите в холодной воде (15 г). Клубнику (100 г) нагрейте с сахаром (25 г), снимите с огня, выложите набухший желатин и перемешайте до однородности. При желании пробейте погружным блендером. Перед сборкой остудите до комнатной температуры.
+                <span class="source-badge">⏱ Урок_03: 00:01:57–00:02:33</span>
+              </p>
+              <div class="warning-box">
+                <strong>Желатин не кипятить:</strong> он теряет силу, и желе не схватится между слоями мороженого.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍓 Клубника: <strong>100 г</strong></span>
+              <span class="param-pill">🥄 Желатин: <strong>3 г на 15 г воды</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Сборка в разъёмном кольце</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Собирайте только в разъёмной форме или кольце — иначе замороженный торт не извлечь. На дно уложите безе, выдавите часть мороженого, ложкой добавьте клубничное желе — не до самых краёв, чтобы оно не вытекло. Накройте вторым коржом, сверху выдавите лимонное мороженое. Третий корж кладите гладкой стороной вверх. Если мороженое подтекает из формы — это нормально, просто возвращайте торт в морозилку, чтобы схватывался предыдущий слой. Затяните плёнкой и уберите в морозилку.
+                <span class="source-badge">⏱ Урок_03: 00:01:24–00:03:27</span>
+              </p>
+              <div class="warning-box">
+                <strong>Ягоды и «хрустяшки»:</strong> в видео автор упоминает хрустяшки между слоями, но их состав в источниках не приводится — на странице их нет.
+              </div>
+              <div class="tip-box">
+                <strong>Порядок слоёв:</strong> безе — мороженое — желе — безе — лимонное мороженое — безе. Верхний корж гладкой стороной наружу.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Морозилка: <strong>До полной стабилизации</strong></span>
+              <span class="param-pill">🍋 Слои: <strong>Классическое + лимонное</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">15</span>
+                <h3 class="step-title">Декор и подача</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Холодные сливки (400 г) взбейте с сахарной пудрой (50 г) и ванилью, при желании — с красителем. Снимите кольцо с замороженного торта и украсьте кремом через насадку, добавьте ягоды и мяту. Подавайте сразу из морозилки: при комнатной температуре торт начнёт таять.
+                <span class="source-badge">⏱ Урок_03: 00:03:25–00:03:27</span>
+              </p>
+              <div class="tip-box">
+                <strong>Идеи декора:</strong> автор отсылает к декору из рецепта «Торт «Меренговый»» — те же приёмы с кремом и ягодами.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥛 Сливки: <strong>400 г, холодные</strong></span>
+              <span class="param-pill">🍬 Пудра: <strong>50 г</strong></span>
+              <span class="param-pill">🍽 Подача: <strong>Замороженным</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Сахар и пудра вместе:</strong> коржи получаются плотнее и дольше держат влажное мороженое.</li>
+                <li><strong>Сушить, а не печь:</strong> 80 °C и приоткрытая дверца сохраняют белый цвет безе.</li>
+                <li><strong>Меренгу взбивать долго:</strong> 15 минут после пудры плюс 2–3 минуты — иначе корж поплывёт.</li>
+                <li><strong>Только разъёмная форма:</strong> меренговые коржи не замерзают в камень, вынуть торт иначе почти невозможно.</li>
+                <li><strong>Пробивать мороженое 6–7 раз:</strong> каждые 40–45 минут — так не будет кристаллов.</li>
+                <li><strong>Желе не до краёв:</strong> иначе оно вытечет между слоями при отсадке.</li>
+                <li><strong>Ягоды и мята:</strong> лучше всего работают с лимонным слоем.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Высокая температура сушки:</strong> безе желтеет и становится полым.</li>
+                <li><strong>Недобитая меренга:</strong> корж расплывается при отсадке.</li>
+                <li><strong>Желтки стоят с сахаром:</strong> они сворачиваются и «горят».</li>
+                <li><strong>Кипячение заварной массы:</strong> крем идёт хлопьями.</li>
+                <li><strong>Пропуск пробиваний:</strong> мороженое получается ледяным и колется.</li>
+                <li><strong>Обычная форма без разъёма:</strong> торт не достать, не сломав коржи.</li>
+                <li><strong>Передержать при комнатной температуре:</strong> торт начинает течь.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и подача</h4>
+              <ul>
+                <li><strong>Безе:</strong> до 1 месяца при комнатной температуре, в защищённом от влаги месте.</li>
+                <li><strong>Мороженое:</strong> до 30 дней в морозилке.</li>
+                <li><strong>Торт:</strong> в морозилке, под плёнкой; режется замороженным.</li>
+                <li><strong>Подача:</strong> холодным, сразу после морозилки, с кремом и ягодами.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Клубника:</strong> подойдёт замороженная — она всё равно уваривается.</li>
+                <li><strong>Лимонная цедра:</strong> от половины или целого лимона, по вкусу.</li>
+                <li><strong>Мороженое:</strong> можно сделать в мороженице вместо пробиваний блендером.</li>
+                <li><strong>Декор:</strong> ягоды, мята, крем через насадку — по примеру «Меренгового» торта.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 — французская меренга и сушка (00:00:03–00:03:53); Урок_02.mp4 — мороженое (00:00:02–00:06:14); Урок_03.mp4 — коржи, желе, сборка (00:00:02–00:03:27); DOCX «Торт Вашерин» — граммовки и крем для декора.</li>
+              <li><strong>Время сушки:</strong> в DOCX 90–120 минут при 80 °C, в видео «час, 20 или даже 2 часа — в зависимости от духовки». На странице оставлен диапазон 90–120 минут.</li>
+              <li><strong>Число пробиваний:</strong> DOCX — 6–8 раз, видео — 6–7 раз каждые 40–45 минут. Оставлено 6–7.</li>
+              <li><strong>«Хрустяшки»:</strong> в Урок_03 автор говорит, что выложит их между слоями, но состав и количество нигде не указаны — в раскладку не включены.</li>
+              <li><strong>Декор:</strong> видео заканчивается сборкой и плёнкой; крем для декора и украшение описаны только в DOCX, со ссылкой на «Торт «Меренговый»».</li>
+              <li><strong>Лимонная цедра:</strong> в DOCX «по вкусу», в видео — примерно чайная ложка без горки.</li>
+              <li><strong>Пробелы:</strong> точный вес готового торта не назван (расчётно около 1,8 кг); температура подачи и время выдержки до нарезки в источниках не оговорены.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_03.mp4 (около 03:18): собранный торт Ø18 см в разъёмном кольце перед отправкой в морозилку. Украшенного варианта в видео нет.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

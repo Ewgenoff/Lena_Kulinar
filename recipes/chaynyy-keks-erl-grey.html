@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Чайный кекс «Эрл Грей» с вишнёвым мармеладом — рецепт | CookBook</title>
+  <meta name="description" content="Чайный кекс Надежды Зубовой: сливки, заваренные чаем Эрл Грей, яйца с сахаром, растопленное и растительное масло. Выпечка 10 минут при 180 °C и 15–20 минут при 150 °C, сверху вишнёвый мармелад на яблочном пектине с орехами.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="chaynyy-keks-erl-grey">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Чайный кекс «Эрл Грей» с вишнёвым мармеладом</h1>
+      <p class="recipe-lead">
+        Самый жидкий кекс курса: сливки здесь завариваются чаем Эрл Грей, а аромат усиливается ещё и сухим чаем из пакетика в сухих ингредиентах. Тесто на растопленном сливочном и растительном масле, поэтому кекс долго остаётся мягким. Сверху — вишнёвый мармелад на яблочном пектине, залитый прямо на орехи и вяленую вишню.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~40 мин (чай в сливках, тесто)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~40 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Настой 2 ч, холод 2 ч, выпечка 25–30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~4 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">2 кекса</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/chaynyy-keks-erl-grey.jpg" alt="Чайный кекс «Эрл Грей» в форме с трубкой, залитый вишнёвым мармеладом с миндалём и вяленой вишней" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (2 кекса)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="2">2</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">кекса</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — два кекса: 400–430 г теста в форму с трубкой и 270 г в маленькую форму (если сверху будет мармелад). Без мармелада маленькую форму заполняют на 330–350 г. Мармелад дан партией на два кекса.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">2</span> кекса</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на тесто и мармелад. Сливок нужно больше, чем идёт в тесто: 160 г заваривают чаем, часть испаряется, после остывания вес доводят до 110 г. Пектин для мармелада — яблочный, не NH.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 33 %</strong>:
+                <span class="shopping-qty" data-base-amount="160" data-unit="г">160 г</span>
+                <span class="shopping-hint">Заварить чаем, после остывания отобрать 110 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span>
+                <span class="shopping-hint">По весу 220 г без скорлупы, комнатной температуры</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5 %</strong>:
+                <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span>
+                <span class="shopping-hint">Растопить и дать остыть</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло растительное без запаха</strong>:
+                <span class="shopping-qty" data-base-amount="20" data-unit="г">20 г</span>
+                <span class="shopping-hint">Кукурузное; продлевает свежесть кекса</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍒 Чай, бакалея, вишня</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Чай Эрл Грей</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="пак." data-piece="true">3 пак.</span>
+                <span class="shopping-hint">2 пакетика в сливки и 1 в сухие ингредиенты; лучше листовой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="210" data-unit="г">210 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="545" data-unit="г">545 г</span>
+                <span class="shopping-hint">250 г в тесто, 25 + 270 г в мармелад</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Разрыхлитель</strong>:
+                <span class="shopping-qty" data-base-amount="6" data-unit="г">6 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре вишни без косточек</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Покупное или своё</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пектин яблочный жёлтый</strong>:
+                <span class="shopping-qty" data-base-amount="7" data-unit="г">7 г</span>
+                <span class="shopping-hint">Именно яблочный; NH для мармелада не подойдёт</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сироп глюкозы</strong>:
+                <span class="shopping-qty" data-base-amount="65" data-unit="г">65 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимонная кислота</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="г">4 г</span>
+                <span class="shopping-hint">Смешать с 4 г лимонного сока, ввести в конце</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Миндаль и вяленая вишня</strong> — для верха
+                <span class="shopping-hint">По горсти, под мармелад</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="г">3 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — форма с трубкой 18 × 6 × 7 см, маленькая форма, силиконовый коврик, термометр
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Тесто кекса</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="220" data-unit="г">220 г</span> — Яйца
+              <span class="ingredient-note">≈4 шт. С1, комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="110" data-unit="г">110 г</span> — Сливки 33 %, заваренные чаем
+              <span class="ingredient-note">Из 160 г сливок и 2 пакетиков чая</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Чай Эрл Грей
+              <span class="ingredient-note">2 пакетика для сливок + 1 пакетик сухого чая в тесто</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="210" data-unit="г">210 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="6" data-unit="г">6 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Масло сливочное 82,5 %
+              <span class="ingredient-note">Растопить и остудить</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Масло растительное без запаха
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Вишнёвый мармелад</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Пюре вишни без косточек
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Пектин яблочный
+              <span class="ingredient-note">NH не подходит</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Сахар к пектину
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="270" data-unit="г">270 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="65" data-unit="г">65 г</span> — Сироп глюкозы
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="г">4 г</span> — Лимонная кислота
+              <span class="ingredient-note">Смешать с 4 г лимонного сока</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Для верха</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Миндаль и вяленая вишня — по горсти
+              <span class="ingredient-note">Выложить на кекс до заливки мармеладом</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Сливки, заваренные чаем</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Сливки 33 % (160 г) доведите до кипения, снимите с огня, положите 2 пакетика Эрл Грей и оставьте до полного остывания — пакетики не вынимайте. Затем извлеките чай, процедите и доведите вес обычными сливками до 110 г. Тесто должно стать кремового цвета.
+                <span class="source-badge">⏱ Урок_02: 00:01:01–00:02:13</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сливок берут с запасом:</strong> при кипячении часть испаряется, поэтому вес доводят уже после остывания.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> листовой чай даёт более сильный аромат, чем пакетики, но тогда сливки придётся процеживать.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥛 Сливки: <strong>160 → 110 г</strong></span>
+              <span class="param-pill">🍵 Чай: <strong>2 пакетика</strong></span>
+              <span class="param-pill">⏱ Настой: <strong>До полного остывания</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Яйца с сахаром и солью</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Яйца (220 г) соедините с сахаром (250 г) и солью (3 г) и немного взбейте. Цели увеличить объём или полностью растворить сахар нет — нужно только объединить ингредиенты.
+                <span class="source-badge">⏱ Урок_02: 00:02:17–00:02:40</span>
+              </p>
+              <div class="tip-box">
+                <strong>Холодные яйца:</strong> если забыли достать заранее, опустите их на 10–15 минут в воду не горячее 40 °C. В микроволновке яйца греть нельзя — легко получить омлет.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Яйца: <strong>220 г, комнатной температуры</strong></span>
+              <span class="param-pill">⚙️ Взбивание: <strong>Только до объединения</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Сухие с сухим чаем</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Муку (210 г) перемешайте с разрыхлителем (6 г), добавьте содержимое одного пакетика Эрл Грей и перемешайте ещё раз. Всыпьте сухие в яичную массу сразу все и вмешайте миксером.
+                <span class="source-badge">⏱ Урок_02: 00:02:58–00:03:29</span>
+              </p>
+              <div class="tip-box">
+                <strong>Листовой чай:</strong> если берёте рассыпной, он должен быть мелким — крупный лист в тесте будет чувствоваться.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌾 Мука: <strong>210 г</strong></span>
+              <span class="param-pill">🍵 Сухой чай: <strong>1 пакетик</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Два масла</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Сливочное масло (80 г) растопите и дайте немного остыть — горячим в тесто нельзя. Смешайте его с растительным (20 г), вылейте широким движением по всей поверхности и перемешайте ровно до объединения. Долго мешать не нужно.
+                <span class="source-badge">⏱ Урок_02: 00:03:36–00:04:16</span>
+              </p>
+              <div class="warning-box">
+                <strong>Горячее масло:</strong> заваривает тесто и даёт плотный корпус.
+              </div>
+              <div class="tip-box">
+                <strong>Зачем растительное:</strong> снижает калорийность, удешевляет рецепт и продлевает свежесть кекса.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Сливочное: <strong>80 г</strong></span>
+              <span class="param-pill">🌻 Растительное: <strong>20 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Отдых теста в холоде</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Тесто получается довольно жидким — самым жидким из всех кексов курса. Перед выпечкой отправьте его в холодильник на пару часов; можно держать в мешке или уже разложенным по формам до 12 часов.
+                <span class="source-badge">⏱ Урок_02: 00:04:28–00:04:38</span>
+              </p>
+              <div class="tip-box">
+                <strong>Планирование:</strong> замешайте вечером, уберите в формы — и пеките утром, когда будет время.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">❄️ Холод: <strong>~2 ч, до 12 ч</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Раскладка по формам</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                В форму с трубкой (трубку предварительно смажьте маслом) отсадите тесто на дно, вставьте трубу и заполните остатками — тесто должно едва прикрывать трубку, не больше. В трубку идёт 400–430 г. В маленькую форму — 270 г, если сверху будет мармелад, или 330–350 г без него.
+                <span class="source-badge">⏱ Урок_02: 00:04:48–00:06:13</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не переполнять:</strong> тесто жидкое и очень активно поднимается, излишек убежит.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ Форма с трубкой: <strong>400–430 г</strong></span>
+              <span class="param-pill">⚖️ Маленькая форма: <strong>270 или 330–350 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Выпечка в две температуры</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте в заранее разогретой духовке: 10 минут при 180 °C с конвекцией, затем снизьте температуру до 150 °C и допекайте ещё 15–20 минут до сухой шпажки.
+                <span class="source-badge">⏱ Урок_02: 00:06:15–00:06:26</span>
+              </p>
+              <div class="tip-box">
+                <strong>Логика двух температур:</strong> высокий старт даёт подъём, низкое завершение — равномерную пропечку без пересушки.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Первый этап: <strong>180 °C, 10 мин</strong></span>
+              <span class="param-pill">🌡 Второй этап: <strong>150 °C, 15–20 мин</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Сухая шпажка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Вишнёвый мармелад</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Пюре вишни (250 г) слегка прогрейте — не выше 40 °C. Смешайте яблочный пектин (7 г) с 25 г сахара и введите дождиком при интенсивном помешивании. Добавьте сахар (270 г), уложив в него сироп глюкозы, чтобы тот не касался стенок. Уваривайте, помешивая, до 106 °C. В самом конце введите лимонную кислоту (4 г), смешанную с 4 г лимонного сока, и сразу используйте.
+                <span class="source-badge">⏱ Урок_03: 00:00:03–00:03:47</span>
+              </p>
+              <div class="warning-box">
+                <strong>Повторно не подогревать:</strong> яблочный пектин необратим — разогретая масса уже не застынет как надо.
+              </div>
+              <div class="tip-box">
+                <strong>Проба:</strong> капните мармелад на холодную поверхность — должен держать форму, а не растекаться.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Уваривание: <strong>До 106 °C</strong></span>
+              <span class="param-pill">🧪 Пектин: <strong>Яблочный, 7 г</strong></span>
+              <span class="param-pill">🍋 Кислота: <strong>В самом конце</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Заливка кексов</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                На верх кекса выложите миндаль и вяленую вишню, затем залейте горячим мармеладом — сверху и, если успеваете, в отверстие трубки. Работайте в перчатках: масса очень горячая. Остатки вылейте на силиконовый коврик — получится отдельный мармелад.
+                <span class="source-badge">⏱ Урок_03: 00:03:48–00:04:57</span>
+              </p>
+              <div class="warning-box">
+                <strong>Осторожно с трубкой:</strong> автор не рекомендует заливать мармелад в отверстие евро-кекса — риск обжечься очень велик. Отверстие лучше заполнить конфи, карамелью или курдом.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍒 Мармелад: <strong>Сразу после варки</strong></span>
+              <span class="param-pill">🥜 Декор: <strong>Миндаль и вяленая вишня</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Остывание и извлечение</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Дождитесь полного остывания мармелада и только потом извлекайте кекс из формы. Форму автор ничем не смазывала, кроме трубы.
+              </p>
+              <div class="tip-box">
+                <strong>Хранение:</strong> 10 дней при 18–21 °C в пергаменте, коробке или контейнере; в сборе кексы можно замораживать на месяц.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📦 Хранение: <strong>10 дней при 18–21 °C</strong></span>
+              <span class="param-pill">🧊 Морозилка: <strong>До 1 месяца</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Двойной чай:</strong> сливки завариваются пакетиками, а сухой чай идёт прямо в муку — аромат держится сильнее.</li>
+                <li><strong>Сливки с запасом:</strong> 160 г заваривают, чтобы после испарения осталось 110 г.</li>
+                <li><strong>Растительное масло:</strong> современный приём — свежесть дольше, себестоимость ниже.</li>
+                <li><strong>Жидкое тесто любит холод:</strong> до 12 часов в холодильнике — и подъём ровнее.</li>
+                <li><strong>Две температуры:</strong> 180 °C на старте, 150 °C на финише.</li>
+                <li><strong>Яблочный пектин:</strong> только он даёт мармеладную текстуру, NH не подходит.</li>
+                <li><strong>Глюкоза в сахаре:</strong> сироп кладут внутрь сахара, чтобы он не прилипал к стенкам.</li>
+                <li><strong>Тот же рецепт — в коржи:</strong> 4 коржа Ø16 или Ø18 см, печь в двух кольцах и разрезать пополам.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Холодные яйца:</strong> эмульсия не собирается; яйца греют в тёплой воде, но не в микроволновке.</li>
+                <li><strong>Горячее растопленное масло:</strong> заваривает тесто.</li>
+                <li><strong>Переполненная форма:</strong> жидкое тесто убегает.</li>
+                <li><strong>Пектин в горячее пюре:</strong> комкуется; вводить не выше 40 °C.</li>
+                <li><strong>Недоваренный мармелад:</strong> не застывает; ориентир — 106 °C и проба на нестекающую каплю.</li>
+                <li><strong>Повторный нагрев мармелада:</strong> яблочный пектин необратим.</li>
+                <li><strong>Заливка в трубку без навыка:</strong> очень высокий риск ожога.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и подача</h4>
+              <ul>
+                <li><strong>Кекс:</strong> 10 дней при 18–21 °C в пергаменте, коробке или контейнере.</li>
+                <li><strong>В сборе:</strong> замораживается на месяц, в том числе с начинкой и декором.</li>
+                <li><strong>Без декора:</strong> до 5 суток при комнатной температуре.</li>
+                <li><strong>Коржи:</strong> до 10 дней в холодильнике или до 2 месяцев в морозилке.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Чай:</strong> любой ароматный чёрный, лучше листовой.</li>
+                <li><strong>Мармелад:</strong> вишнёвое пюре можно заменить другим ягодным.</li>
+                <li><strong>Начинка в отверстии:</strong> конфи, карамель или курд вместо мармелада.</li>
+                <li><strong>Форма:</strong> любая кексовая; без трубки и без мармелада тоже работает.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01 — теория кексов, хранение и заморозка; Урок_02 — чай в сливках, замес, формы и выпечка (00:01:01–00:06:26); Урок_03 — вишнёвый мармелад и заливка (00:00:03–00:04:57); DOCX «Чайный кекс Эрл Грей» — граммовки и сроки.</li>
+              <li><strong>Режим выпечки:</strong> в DOCX 10–15 минут при 180 °C, в видео — ровно 10 минут, затем 150 °C на 15–20 минут. На странице взят вариант из видео.</li>
+              <li><strong>Сливки:</strong> в DOCX 110 г в тесте, но с оговоркой, что потребуется 160 г с учётом потерь.</li>
+              <li><strong>Мармелад:</strong> в DOCX строка записана с опечаткой «25 г сахар 7 г яблочный пектин» — это 25 г сахара и 7 г пектина, на странице разделено.</li>
+              <li><strong>Орехи и вишня:</strong> в DOCX их нет в раскладке, в видео автор выкладывает миндаль и вяленую вишню под мармелад — на странице это блок «Для верха» без граммовки.</li>
+              <li><strong>Пробелы:</strong> вес готового кекса не назван; точное время остывания мармелада не указано; количество орехов и вишни не отвешивается.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_03.mp4 (около 00:05:10): кекс в форме с трубкой, залитый вишнёвым мармеладом с миндалём.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

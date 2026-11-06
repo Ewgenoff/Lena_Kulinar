@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сырный трюфель с пармезаном — пошаговый рецепт | CookBook</title>
+  <meta name="description" content="Сырный трюфель Надежды Зубовой: ганаш на белом шоколаде с пюре ананаса, декстрозой и глюкозой, с тонко натёртым пармезаном и сливочным маслом. 20 конфет по 10 г, покрытие темперированным белым шоколадом.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="syrnyy-tryufel-parmezan">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Конфеты и сладости</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Сырный трюфель с пармезаном</h1>
+      <p class="recipe-lead">
+        Неожиданное сочетание: белый шоколад, ананас и пармезан. Ганаш на пюре ананаса с декстрозой, глюкозой и инвертным сахаром остаётся мягким, а тонко натёртый пармезан даёт солоноватую сырную ноту — если пробить его блендером, он уйдёт в эмульсию, если добавить в конце, будет чувствоваться «сырком». Конфеты покрывают темперированным белым шоколадом в два слоя.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Стабилизация 12 ч + 2 ч, формирование</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~15 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">20 конфет по 10 г</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/syrnyy-tryufel-parmezan.jpg" alt="Белые шоколадные трюфели с пармезаном: круглые конфеты на плёнке, покрытые тонким слоем белого шоколада" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (20 конфет)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="20">20</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">конфет</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — 20 конфет: раскладка по 10 г трюфельной массы. Покрытие дано отдельной партией и в пересчёт массы ганаша не входит.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">20</span> конфет</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на ганаш и покрытие. Белый шоколад берите профессиональный — для корпуса нужен ровный глянец. Пармезан нужен куском, чтобы натереть его тонко; декстроза и Mycryo продаются в кондитерских отделах.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧀 Сыр, масло, шоколад</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Белый шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="260" data-unit="г">260 г</span>
+                <span class="shopping-hint">110 г в ганаш и 150 г в покрытие</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пармезан</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Куском, натёртый на самой тонкой тёрке</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5 %</strong>:
+                <span class="shopping-qty" data-base-amount="20" data-unit="г">20 г</span>
+                <span class="shopping-hint">Размягчённое, вводить в остывшую массу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 33 %</strong> — 2 ст. л.
+                <span class="shopping-hint">Опционально: для более текучего покрытия</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍍 Пюре, сахара, какао-масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре ананаса</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">С сиропом глюкозы, инвертным сахаром и декстрозой — по рецепту</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Инвертный сахар</strong>:
+                <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сироп глюкозы</strong>:
+                <span class="shopping-qty" data-base-amount="12" data-unit="г">12 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Декстроза</strong>:
+                <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао-масло</strong>:
+                <span class="shopping-qty" data-base-amount="22" data-unit="г">22 г</span>
+                <span class="shopping-hint">12 г в ганаш и 10 г в покрытие</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао-масло Mycryo</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="г">3 г</span>
+                <span class="shopping-hint">2 % от веса белого шоколада для темперирования</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Грецкий орех</strong> — для обсыпки
+                <span class="shopping-hint">Половину конфет обваливают в рубленом орехе</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао-порошок</strong> — для обсыпки
+                <span class="shopping-hint">Часть конфет обваливают в какао</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — весы, перчатки, бумажные полотенца, погружной блендер, термометр, противень и плёнка
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Ганаш</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="110" data-unit="г">110 г</span> — Белый шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Пюре ананаса
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Инвертный сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="12" data-unit="г">12 г</span> — Сироп глюкозы
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Декстроза
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="12" data-unit="г">12 г</span> — Какао-масло
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Пармезан тонко натёртый
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Масло сливочное 82,5 %
+              <span class="ingredient-note">Размягчённое</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Покрытие</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Белый шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Какао-масло в калетах
+              <span class="ingredient-note">Для текучести</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Какао-масло Mycryo
+              <span class="ingredient-note">2 % от веса шоколада</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Грецкий орех, какао — для обсыпки
+              <span class="ingredient-note">По желанию</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка пюре и шоколада</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Пюре ананаса с инвертным сахаром, сиропом глюкозы и декстрозой нагрейте до 40–45 °C (в видео автор доводит до 50–60 °C), чтобы сахара разошлись. Белый шоколад с какао-маслом (12 г) растопите до той же температуры.
+                <span class="source-badge">⏱ Урок_01: 00:00:22–00:00:37</span>
+              </p>
+              <div class="warning-box">
+                <strong>Белый шоколад — не выше 40–45 °C:</strong> он капризнее тёмного и легко сворачивается.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Пюре: <strong>40–45 °C</strong></span>
+              <span class="param-pill">🌡 Шоколад: <strong>40–45 °C</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Эмульсия и пармезан</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Соедините пюре с шоколадом и пробейте погружным блендером до эмульсии. Когда масса остынет до 35 °C, введите размягчённое масло (20 г) — при необходимости снова пробейте. В конце добавьте тонко натёртый пармезан (30 г) и перемешайте.
+                <span class="source-badge">⏱ Урок_01: 00:00:37–00:02:00</span>
+              </p>
+              <div class="tip-box">
+                <strong>Хотите пармезан «эмульсией»:</strong> добавляйте его до пробивания блендером. Если хотите чувствовать сырком — как автор, вводите в самом конце.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Масло: <strong>При 35 °C</strong></span>
+              <span class="param-pill">🧀 Пармезан: <strong>30 г, тонко</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Стабилизация ганаша</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Затяните массу плёнкой в контакт и оставьте стабилизироваться при 16–18 °C на 12 часов. Если таких условий нет — 2 часа при комнатной температуре, затем 8–12 часов в холодильнике. Готовый ганаш жёсткий, но продавливается пальцем и хорошо держит форму.
+                <span class="source-badge">⏱ Урок_01: 00:00:46–00:02:09</span>
+                <span class="source-badge">⏱ Урок_02: 00:00:02–00:01:21</span>
+              </p>
+              <div class="warning-box">
+                <strong>После холодильника:</strong> дайте ганашу час постоять при комнатной температуре, иначе он будет крошиться при скатывании.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Стабилизация: <strong>16–18 °C, 12 ч</strong></span>
+              <span class="param-pill">❄️ Альтернатива: <strong>2 ч + 8–12 ч в холоде</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Формирование конфет</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Раскидывайте массу на весах по 10 г и скатывайте в перчатках — быстро, чтобы ганаш не начал таять. Следы на перчатках протирайте бумажным полотенцем, а не мойте. Готовые шарики выложите на противень с плёнкой: с плёнки они снимаются чисто.
+                <span class="source-badge">⏱ Урок_02: 00:01:28–00:03:14</span>
+              </p>
+              <div class="tip-box">
+                <strong>Первый и второй прокат:</strong> через 40–60 минут при комнатной температуре прокатайте конфеты ещё раз — они станут глаже, и шоколада на покрытие уйдёт меньше.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ Вес: <strong>10 г на конфету</strong></span>
+              <span class="param-pill">🧤 Перчатки: <strong>Обязательно</strong></span>
+              <span class="param-pill">⏱ Отдых: <strong>40–60 мин</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Темперирование белого шоколада</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                К 150 г белого шоколада добавьте 10 г какао-масла в калетах — так покрытие будет тоньше и текучее. Растопите до 40 °C, дайте остыть до 34 °C, добавьте какао-масло Mycryo (2 % от веса шоколада) и активно перемешивайте до рабочей температуры 29–30 °C.
+                <span class="source-badge">⏱ Урок_03: 00:08:36–00:09:50</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не перегреть:</strong> выше рабочей температуры — и темперирование придётся начинать заново.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Растопить: <strong>40 °C</strong></span>
+              <span class="param-pill">🌡 Остудить: <strong>34 °C</strong></span>
+              <span class="param-pill">🌡 Рабочая: <strong>29–30 °C</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Покрытие в два слоя</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Берите немного шоколада на руку и прокатывайте конфету тонким слоем, не сжимая её. Уложите на противень, дайте застыть. Затем покройте вторым слоем: половину конфет обвалите в рубленом грецком орехе, часть оставьте просто в белом шоколаде, часть — в какао. Излишки какао снимайте кисточкой, когда шоколад встанет.
+                <span class="source-badge">⏱ Урок_03: 00:09:50–00:12:14</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не сжимать конфету:</strong> иначе на корпусе останутся вмятины, а шоколад ляжет неравномерно.
+              </div>
+              <div class="tip-box">
+                <strong>Декор:</strong> часть конфет автор припыляет золотым или розовым кандурином — совсем немного, только чтобы подчеркнуть рельеф.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Слоёв: <strong>2</strong></span>
+              <span class="param-pill">🌰 Обсыпка: <strong>Грецкий орех, какао</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>14 дней в холодильнике</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Пармезан в конце:</strong> так он чувствуется сырком; до блендера — уходит в эмульсию.</li>
+                <li><strong>Три сахара:</strong> глюкоза, инвертный и декстроза держат ганаш мягким и стабильным.</li>
+                <li><strong>Плёнка в контакт:</strong> обязательна, иначе на поверхности ганаша образуется корочка.</li>
+                <li><strong>Весы:</strong> 10 г на конфету — принципиально, иначе партия выйдет неравномерной.</li>
+                <li><strong>Двойной прокат:</strong> гладкая конфета требует меньше шоколада.</li>
+                <li><strong>Mycryo 2 % для белого:</strong> белый шоколад темперируют иначе, чем тёмный.</li>
+                <li><strong>Два слоя покрытия:</strong> только так получается полноценный хрустящий корпус.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Перегрев белого шоколада:</strong> масса сворачивается и не эмульгирует.</li>
+                <li><strong>Масло в горячую массу:</strong> расслаивает ганаш; вводить при 35 °C.</li>
+                <li><strong>Работа без перчаток:</strong> ганаш тает от рук и теряет форму.</li>
+                <li><strong>Мокрые перчатки:</strong> влага и шоколад несовместимы — только протирать полотенцем.</li>
+                <li><strong>Формирование холодного ганаша:</strong> крошится; нужен час при комнатной температуре.</li>
+                <li><strong>Сжимание конфеты при покрытии:</strong> вмятины и неровный слой.</li>
+                <li><strong>Перегрев при темперировании:</strong> начинать заново.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и подача</h4>
+              <ul>
+                <li><strong>Холодильник:</strong> 14 дней.</li>
+                <li><strong>Винный шкаф:</strong> допустим для хранения.</li>
+                <li><strong>Подача:</strong> при комнатной температуре, чтобы корпус раскрыл аромат.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Пюре:</strong> ананас — основа вкуса; замена изменит профиль.</li>
+                <li><strong>Обсыпка:</strong> грецкий орех, какао, кандурин — по вкусу.</li>
+                <li><strong>Покрытие:</strong> белый шоколад; допустим и молочный.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 — подготовка пюре и шоколада, эмульсия и пармезан (00:00:02–00:02:09); Урок_02.mp4 — стабилизация, формирование и прокат (00:00:02–00:08:12); Урок_03.mp4 — темперирование и покрытие (00:08:36–00:14:14); DOCX «Сырный Трюфель с пармезаном» — граммовки.</li>
+              <li><strong>Температура пюре:</strong> в DOCX 40–45 °C, в видео автор нагревает до 50–60 °C, чтобы растворились сахара. На странице указаны оба ориентира.</li>
+              <li><strong>Инвертный сахар:</strong> в DOCX строка записана как «10 г инвертный сахар 30 г» — по смыслу это 10 г; в видео автор называет 10 г.</li>
+              <li><strong>Какао-масло в покрытии:</strong> в DOCX 10 г на 150 г белого шоколада, в видео — тоже 10 г; Mycryo для белого берут 2 % (около 3 г).</li>
+              <li><strong>Пробелы:</strong> точный вес готовой конфеты с покрытием не назван; количество ореха и какао для обсыпки не отвешивается.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_03.mp4 (около 00:11:30): белые трюфели после покрытия на плёнке.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

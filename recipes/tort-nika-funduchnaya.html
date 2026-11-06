@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Торт «Ника Фундучная» с цветами — пошаговый рецепт | CookBook</title>
+  <meta name="description" content="Торт «Ника Фундучная» Надежды Зубовой: фундучный кексовый бисквит на сливках, ганаш на белом шоколаде с пралине, брусничная кули и апельсиновое конфи. Сборка 15 × 15 см, выравнивание в три полосы и пионы из сливочного крема на итальянской меренге.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tort-nika-funduchnaya">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Торт «Ника Фундучная» с цветами</h1>
+      <p class="recipe-lead">
+        Квадратный торт 15 × 15 см в малайзийской технике: фундучный кексовый бисквит печётся тонким пластом на противне, режется на квадраты и собирается с брусничной кули, апельсиновым конфи и взбитым ганашом на белом шоколаде с пралине. Снаружи — крем-чиз в трёх оттенках, выровненный полосами, и крупные пионы из сливочного крема на итальянской меренге с бутонами и листьями.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~1 ч 30 мин (бисквит, ганаш, начинки)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~4–5 ч (сборка, выравнивание, цветы)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Ганаш 5 ч, стабилизация сборки 2–3 ч, заморозка цветов</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~20 ч (два дня)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 торт 15 × 15 см, высота 10 см</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-nika-funduchnaya.jpg" alt="Торт «Ника Фундучная»: квадратный торт 15 × 15 см с полосами бежевого, белого и зелёного крема и букетом розовых пионов с листьями" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 торт)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">торт</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — один торт 15 × 15 см высотой 10 см, вес без декора около 2 кг. Коржи выпекаются одним пластом на противне 30 × 40 см и режутся на квадраты; крем для цветов и крем-чиз даны отдельными партиями.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> торт</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на бисквит, ганаш, начинки, выравнивание и цветы. Масла много: 220 г в бисквит, 200 г в крем-чиз и 450 г в крем для цветов. Творожный сыр берите плотный, для выравнивания. Ягоды для декора не мыть.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5 %</strong>:
+                <span class="shopping-qty" data-base-amount="870" data-unit="г">870 г</span>
+                <span class="shopping-hint">220 г в бисквит, 200 г в крем-чиз, 450 г в крем для цветов</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С0</strong>:
+                <span class="shopping-qty" data-base-amount="8" data-unit="шт." data-piece="true">8 шт.</span>
+                <span class="shopping-hint">4 яйца в бисквит и 4 белка (≈160 г) в крем для цветов</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 30–33 %</strong>:
+                <span class="shopping-qty" data-base-amount="360" data-unit="г">360 г</span>
+                <span class="shopping-hint">70 г холодных в бисквит, 90 + 200 г в ганаш</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творожный сыр для выравнивания</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">Плотный, не «крем-чиз»; Cohland Creameta, Balout, Almette</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Белый шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Только профессиональный, не «воздушный» — в ганаш</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌰 Фундук, ягоды, бакалея</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Фундук обжаренный</strong>:
+                <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span>
+                <span class="shopping-hint">Смолоть в муку для бисквита</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Фундучное пралине</strong>:
+                <span class="shopping-qty" data-base-amount="40" data-unit="г">40 г</span>
+                <span class="shopping-hint">Или паста из обжаренных орехов</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">200 г в бисквит и 100 г в крем-чиз</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="280" data-unit="г">280 г</span>
+                <span class="shopping-hint">80 г в кули, 30 г в конфи, 100 + 100 г в крем для цветов</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре брусники</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Апельсин</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">Сок с мякотью — 80 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пектин NH</strong>:
+                <span class="shopping-qty" data-base-amount="6" data-unit="г">6 г</span>
+                <span class="shopping-hint">4 г в кули и 2 г в конфи; яблочный — 6 г и 3–4 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сироп глюкозы</strong>:
+                <span class="shopping-qty" data-base-amount="20" data-unit="г">20 г</span>
+                <span class="shopping-hint">В ганаш</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Инвертный сахар</strong>:
+                <span class="shopping-qty" data-base-amount="20" data-unit="г">20 г</span>
+                <span class="shopping-hint">В ганаш</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин</strong>:
+                <span class="shopping-qty" data-base-amount="6" data-unit="г">6 г</span>
+                <span class="shopping-hint">Если нет глюкозы и инвертного сахара — 3 г + 15 г воды; ещё 3 г в конфи</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимонная кислота</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="г">3 г</span>
+                <span class="shopping-hint">1,5–2 г в кули и около 1 г в конфи</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Разрыхлитель</strong>:
+                <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пропитка готовая</strong> — 250–300 г
+                <span class="shopping-hint">Плюс 2 ст. л. Baileys или орехового ликёра</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Клубника, малина, голубика</strong> — для декора
+                <span class="shopping-hint">Свежие, не мыть; замороженные не использовать</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Тёмный шоколад</strong> — для приклеивания ягод
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Красители</strong> — Americolor Chocolate, колор-гель зелёный, розовый
+                <span class="shopping-hint">Для трёх оттенков крема и лепестков</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — противень 30 × 40, два ковра, раздвижная рамка 15 × 15, ацетатная лента, насадки № 4, 24, 103/104, 120–122, шпатель
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Фундучный кексовый бисквит</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="220" data-unit="г">220 г</span> — Масло сливочное 82,5 %
+              <span class="ingredient-note">Размягчённое</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span> — Яйца С0
+              <span class="ingredient-note">Комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Фундук обжаренный
+              <span class="ingredient-note">Смолотый в муку</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Сливки холодные
+              <span class="ingredient-note">30–33 %, можно 10 % или ледяное молоко</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Ганаш на белом шоколаде с пралине</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="90" data-unit="г">90 г</span> — Сливки, первая порция
+              <span class="ingredient-note">Нагреть с глюкозой и инвертным сахаром</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сливки, вторая порция
+              <span class="ingredient-note">Холодные</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Сироп глюкозы
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Инвертный сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Белый шоколад
+              <span class="ingredient-note">Профессиональный, не «воздушный»</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Фундучное пралине
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Желатин + 15 г воды
+              <span class="ingredient-note">Только если нет глюкозы или инвертного сахара</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Брусничная кули</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Пюре брусники
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="г">4 г</span> — Пектин NH
+              <span class="ingredient-note">Яблочного — 6 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Лимонная кислота
+              <span class="ingredient-note">По источнику 1,5–2 г</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Апельсиновое конфи</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Апельсин
+              <span class="ingredient-note">Сок с мякотью, выдавленный вилкой</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Пектин
+              <span class="ingredient-note">Яблочного — 3–4 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="г">1 г</span> — Лимонная кислота
+              <span class="ingredient-note">≈1/8 ч. л.</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Желатин + 15 г воды
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Пропитка и крем для выравнивания</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Пропитка готовая — 250–300 г
+              <span class="ingredient-note">+ 2 ст. л. Baileys или орехового ликёра</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Масло сливочное
+              <span class="ingredient-note">Размягчённое, для крема-чиз</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахарная пудра
+              <span class="ingredient-note">Просеянная</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Творожный сыр
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем для цветов на итальянской меренге</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Белки
+              <span class="ingredient-note">≈4 шт. С0</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сахар
+              <span class="ingredient-note">100 г в белки и 100 г в сироп</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Вода
+              <span class="ingredient-note">Для сиропа</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="450" data-unit="г">450 г</span> — Масло сливочное 82,5 %
+              <span class="ingredient-note">Относительно холодное</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Замес фундучного бисквита</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Размягчённое масло (220 г) взбейте с пудрой (200 г): сначала на малой скорости, затем на максимальной, пока масса не побелеет. Яйца вводите по одному, каждое — до полного включения. Муку просейте с разрыхлителем и добавьте вместе с фундучной мукой, затем — холодные сливки (70 г). Духовку разогрейте до 170 °C с конвекцией.
+                <span class="source-badge">⏱ Урок_01: 00:13:40–00:32:42</span>
+              </p>
+              <div class="warning-box">
+                <strong>Яйца тёплые:</strong> холодные дают крупинку и расслоение. Если эмульсия всё же расслоилась — прогрейте массу микроволновкой или на бане и продолжите взбивать.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Масло: <strong>220 г, 82,5 %</strong></span>
+              <span class="param-pill">🥚 Яйца: <strong>4 шт., по одному</strong></span>
+              <span class="param-pill">🌰 Фундук: <strong>80 г, в муку</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Пласт на противне</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Тесто размажьте тонким ровным слоем на пергаменте или силиконовом ковре 30 × 40 см. Тесто ждёт не больше 30 минут — дальше оно начинает расходиться.
+                <span class="source-badge">⏱ Урок_01: 00:33:07–00:37:45</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем тонко:</strong> из одного пласта получаются квадратные коржи, которые потом складываются в высокую сборку.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📐 Противень: <strong>30 × 40 см</strong></span>
+              <span class="param-pill">⏱ Тесто ждёт: <strong>До 30 мин</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Выпечка бисквита</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте при 170 °C с конвекцией 13 минут, затем проверяйте по 15 минут; в видео после двух дополнительных минут корж был готов. Готовность — нажатие пальцем: ямка не восстанавливается, значит, нужно дотянуть. Сразу после выпечки накройте корж ковром или плёнкой и прогладьте полотенцем, затем остудите.
+                <span class="source-badge">⏱ Урок_01: 00:39:02–00:57:38</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не перепекать:</strong> тонкий пласт сохнет мгновенно, а сухой корж ломается при нарезке.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>170 °C, конвекция</strong></span>
+              <span class="param-pill">⏱ Время: <strong>13 мин + проверка</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Ямка не восстанавливается</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Ганаш на белом шоколаде</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Сливки (90 г) с сиропом глюкозы (20 г) и инвертным сахаром (20 г) доведите до кипения в микроволновке. Вылейте на белый шоколад (150 г), добавьте пралине (40 г), затем холодные сливки (200 г). Пробейте погружным блендером, соберите массу лопаткой с бортов, накройте плёнкой в контакт и уберите в холодильник минимум на 5 часов.
+                <span class="source-badge">⏱ Урок_01: 00:40:30–00:58:51</span>
+              </p>
+              <div class="warning-box">
+                <strong>Глюкоза и инвертный сахар не взаимозаменяемы с обычным:</strong> если одного из них нет, добавьте желатин 3 г, замоченный в 15 г воды, — иначе ганаш не взобьётся.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Шоколад: <strong>150 г, белый</strong></span>
+              <span class="param-pill">🌰 Пралине: <strong>40 г</strong></span>
+              <span class="param-pill">❄️ Стабилизация: <strong>Не менее 5 ч</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Брусничная кули</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Пектин NH (4 г) смешайте с частью сахара и всыпьте дождиком в тёплое пюре брусники (200 г) при помешивании. Добавьте остальной сахар (всего 80 г), доведите до кипения и проварите. В конце введите лимонную кислоту (1,5–2 г). Готовность — капля хочет стечь, но повисает.
+                <span class="source-badge">⏱ Урок_01: 01:01:05–01:12:49</span>
+              </p>
+              <div class="warning-box">
+                <strong>Пектин только дождиком:</strong> иначе он схватится комками и не загустит.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🫐 Пюре: <strong>200 г</strong></span>
+              <span class="param-pill">🧪 Пектин NH: <strong>4 г</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Нестекающая капля</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Апельсиновое конфи</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Сок с мякотью (80 г) соедините с сахаром (30 г) и пектином (2 г) ещё в холодном виде, затем нагрейте и прокипятите 1 минуту. Добавьте лимонную кислоту (около 1 г), затем замоченный желатин (3 г в 15 г воды). Остудите.
+                <span class="source-badge">⏱ Урок_01: 01:13:14–01:19:14</span>
+              </p>
+              <div class="tip-box">
+                <strong>Холодный старт:</strong> в отличие от кули, здесь пектин вводят в холодную массу — так его проще равномерно распределить.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍊 Сок с мякотью: <strong>80 г</strong></span>
+              <span class="param-pill">🧪 Пектин: <strong>2 г</strong></span>
+              <span class="param-pill">🥄 Желатин: <strong>3 г + 15 г воды</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Нарезка коржей</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                С остывшего коржа снимите «кожу» — отогните край к себе и потяните, — затем снимите плёнку. Разрежьте пласт пополам и нарежьте квадратами 15 × 15 см. Толщина коржей — чуть больше 1 см, общий вес около 687 г (с обрезками 700–850 г).
+                <span class="source-badge">⏱ Урок_01: 01:19:40–01:21:42</span>
+                <span class="source-badge">⏱ Урок_02: 00:02:17–00:08:32</span>
+              </p>
+              <div class="tip-box">
+                <strong>Обрезки не выбрасывать:</strong> из них делают «буфер» под декор.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📐 Квадраты: <strong>15 × 15 см</strong></span>
+              <span class="param-pill">📏 Толщина: <strong>Чуть больше 1 см</strong></span>
+              <span class="param-pill">⚖️ Вес коржей: <strong>~687 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Взбивание ганаша и сборка</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Охлаждённый ганаш (около 515 г) переложите в узкий стакан и взбивайте на максимальной скорости около 2 минут — до плотного состояния; на три слоя идёт по 172 г. Сборка в рамке: капля крема на подложку, корж, пропитка кисточкой, тонкий слой крема с бортиком, кули (125 г на слой), ганаш, снова корж — и так три раза. Слои чередуются: крем + кули, крем + конфи, крем + кули.
+                <span class="source-badge">⏱ Урок_02: 00:11:04–00:36:18</span>
+              </p>
+              <div class="warning-box">
+                <strong>Ганаш — только в узкой посуде:</strong> в широкой он размазывается по стенкам и перебивается хлопьями. Признак приближения — уменьшение объёма.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Ганаш на слой: <strong>172 г</strong></span>
+              <span class="param-pill">🫐 Кули на слой: <strong>125 г</strong></span>
+              <span class="param-pill">🥃 Пропитка: <strong>С Baileys</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Стабилизация сборки</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Собранный торт оберните плёнкой, стяните ацетатной лентой и уберите в холодильник минимум на 2–3 часа. Высота сборки — 10 см, вес без декора — около 2 кг.
+                <span class="source-badge">⏱ Урок_02: 00:38:27–00:39:30</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">❄️ Холодильник: <strong>2–3 ч</strong></span>
+              <span class="param-pill">📏 Высота: <strong>10 см</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Крем-чиз и окраска</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Масло (200 г) с пудрой (100 г) взбейте до бела, затем вводите творожный сыр (300 г) по 2 ст. л. и взбивайте 5–7 минут. Выход — около 600 г: 240 г зелёного, 170 г белого, 170 г бежевого и 1 ст. л. для крошек. Красители берите в одной тёплой гамме — масло само даёт оттенок «шампань»; Americolor Chocolate и зелёный колор-гель.
+                <span class="source-badge">⏱ Урок_03: 00:03:28–00:23:50</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сыр по ложке:</strong> если вывалить весь сразу, крем расслоится. Сыр должен быть комнатной температуры.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧀 Сыр: <strong>300 г</strong></span>
+              <span class="param-pill">🧈 Масло: <strong>200 г</strong></span>
+              <span class="param-pill">🎨 Оттенки: <strong>Зелёный, белый, бежевый</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Выравнивание полосами</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Сначала тонким слоем белого крема спрячьте крошки. Затем наносите полосы одинаковой толщины, прижимая мешок: бежевая внизу, белая посередине, зелёная сверху. Выравнивайте сидя, каждую сторону отдельно, шпатель оттирайте в одном месте. Верх ведите «к центру», а не от центра. После выравнивания — 15 минут в холодильник.
+                <span class="source-badge">⏱ Урок_03: 00:30:22–00:53:12</span>
+              </p>
+              <div class="warning-box">
+                <strong>Толщина полос одинаковая:</strong> иначе границы «поплывут» и полосы станут разной высоты.
+              </div>
+              <div class="tip-box">
+                <strong>Текстура:</strong> лёгкие следы шпателя на зелёном дают «мраморность» — это задумано.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥄 Слоёв: <strong>3 полосы</strong></span>
+              <span class="param-pill">❄️ После: <strong>15 мин в холоде</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Ягодный декор</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Ягоды протрите влажной тряпкой — не мойте. Малину, клубнику и голубику приклеивайте на тёмный шоколад, расплавленный в пакете в чайнике, отступая 1 см от края. Укладывайте плотно, «лесенкой», подчёркивая угол. Срезы ягод обработайте нейтральным гелем.
+                <span class="source-badge">⏱ Урок_04: 00:00:25–00:11:19</span>
+              </p>
+              <div class="warning-box">
+                <strong>Замороженные ягоды не использовать:</strong> они дадут воду, и декор потечёт.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍓 Ягоды: <strong>Клубника, малина, голубика</strong></span>
+              <span class="param-pill">🍫 Клей: <strong>Тёмный шоколад</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Крем для цветов</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Белки (160 г) взбейте с 100 г сахара. Из 100 г сахара и 60 г воды сварите сироп до 118 °C — без термометра это примерно 3 минуты с начала кипения. Влейте сироп в пену тонкой струйкой, не прекращая взбивать на максимуме. Затем введите относительно холодное масло (450 г): масса на время «свернётся» — это нормально. Готово, когда крем гладкий, без крупинок; ещё 2–3 минуты.
+                <span class="source-badge">⏱ Урок_05: 00:07:14–00:21:14</span>
+              </p>
+              <div class="warning-box">
+                <strong>Только на белках, не на альбумине:</strong> пастеризованный белок и альбумин для этого крема не годятся. Плохое масло долго не соединяется.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сироп: <strong>118 °C</strong></span>
+              <span class="param-pill">🧈 Масло: <strong>450 г</strong></span>
+              <span class="param-pill">🥚 Белки: <strong>160 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Пионы, бутоны и листья</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Основание пиона — шарик 2 × 2 см. Тычинки отсадите насадкой № 4 (сжата в овал), пыльники — № 24. Лепестки — насадками 103/104 и 120–122, «попой снизу»: арки шириной около 5 мм, каждый следующий лепесток выше на 1 мм, слоями по три, без шахматного порядка; цветок делится на три части и идёт лестницей вверх. Бутон: шарик 1 × 1 см, три лепестка, затем три закрывающих и чашелистики. Готовые цветы ставьте на лёд или замороженное пюре и убирайте в морозилку (хранение 2 недели — месяц). Листья отсаживают насадкой 103 прямо на торте.
+                <span class="source-badge">⏱ Урок_05: 00:40:20–01:23:35</span>
+                <span class="source-badge">⏱ Урок_05: 01:39:36–01:44:51</span>
+              </p>
+              <div class="warning-box">
+                <strong>Прохлада и перчатки:</strong> в тёплой комнате лепестки «плывут»; при горячих руках работают в перчатках.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌹 Насадки: <strong>4, 24, 103/104, 120–122</strong></span>
+              <span class="param-pill">📏 Основание: <strong>2 × 2 см</strong></span>
+              <span class="param-pill">❄️ Хранение: <strong>2 недели — месяц в морозилке</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">15</span>
+                <h3 class="step-title">Композиция</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Зелёным кремом нанесите подстилку под тон торта. Главный цветок поставьте первым и закрепите кремом сзади, остальные — под разными углами, добавляя бутоны и листья. Композиция должна дышать: 5–7 крупных пионов плюс бутоны.
+                <span class="source-badge">⏱ Урок_05: 01:50:37–01:54:07</span>
+                <span class="source-badge">⏱ Урок_06: 00:00:08–00:08:31</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> не выкладывайте цветы идеально ровно — разные наклоны и небольшие просветы дают живую композицию.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌹 Цветов: <strong>5–7 пионов + бутоны</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>В холодильнике, в коробке</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Кексовый бисквит:</strong> плотный, поэтому торт хорошо держит высокую сборку.</li>
+                <li><strong>Тонкий пласт на противне:</strong> квадраты получаются ровными и одинаковыми.</li>
+                <li><strong>«Кожа» коржа:</strong> её снимают, разрез получается чистым.</li>
+                <li><strong>Ганаш в узком стакане:</strong> единственный способ взбить его, не перебив.</li>
+                <li><strong>Пропитка с Baileys:</strong> ореховая нота связывает фундук и бруснику.</li>
+                <li><strong>Три оттенка крема:</strong> полосы разной высоты дают эффект градиента.</li>
+                <li><strong>Ягоды на шоколад:</strong> держатся крепче, чем на крем.</li>
+                <li><strong>Цветы заранее:</strong> их замораживают и ставят на торт уже готовыми.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Холодные яйца в бисквит:</strong> крупинка и расслоение эмульсии.</li>
+                <li><strong>Перепечённый пласт:</strong> ломается при нарезке.</li>
+                <li><strong>Ганаш в широкой миске:</strong> перебивается хлопьями и не держит форму.</li>
+                <li><strong>Пектин в кипящую массу:</strong> комкуется.</li>
+                <li><strong>Сыр весь сразу в крем:</strong> крем расслаивается.</li>
+                <li><strong>Полосы разной толщины:</strong> границы плывут.</li>
+                <li><strong>Мокрые ягоды:</strong> декор течёт.</li>
+                <li><strong>Крем для цветов на альбумине:</strong> не держит лепесток.</li>
+                <li><strong>Тёплая комната при работе с цветами:</strong> лепестки оплывают.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и подача</h4>
+              <ul>
+                <li><strong>Торт в сборе:</strong> хранить в холодильнике, в коробке; точный срок в видео не назван.</li>
+                <li><strong>Цветы:</strong> 2 недели — месяц в морозилке.</li>
+                <li><strong>Ганаш:</strong> до 5 суток в холодильнике, 2 месяца в морозилке.</li>
+                <li><strong>Подача:</strong> нарезать квадратами, цветы снимать аккуратно.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Глюкоза и инвертный сахар:</strong> при отсутствии любого — желатин 3 г + 15 г воды.</li>
+                <li><strong>Пектин:</strong> NH; яблочный — 6 г в кули и 3–4 г в конфи.</li>
+                <li><strong>Пропитка:</strong> готовая, с Baileys, ореховым ликёром или коньяком.</li>
+                <li><strong>Декор:</strong> ягодный вариант без цветов — базовый тариф.</li>
+                <li><strong>Сыр для крема:</strong> Cohland Creameta, Balout (Biolet), Almette.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 — бисквит, ганаш, брусничная кули и апельсиновое конфи (00:13:40–01:21:42); Урок_02.mp4 — нарезка коржей и сборка (00:02:17–00:39:30); Урок_03.mp4 — крем-чиз, окраска и выравнивание (00:03:28–00:53:12); Урок_04.mp4 — ягодный декор (00:00:25–00:11:19); Урок_05.mp4 — крем для цветов, пионы, бутоны и листья (00:07:14–01:54:07); Урок_06.mp4 — установка цветов (00:00:08–00:08:31). DOCX «Торт» содержит только название — все данные из видео.</li>
+              <li><strong>Граммовки:</strong> названы автором в видео; часть цифр проговаривается сбивчиво (например, порядок слоёв в Урок_02 и «4–5 чайной ложки» лимонной кислоты при рецепте 1,5–2 г). На странице взяты значения, которые автор повторяет и использует на весах.</li>
+              <li><strong>Сироп глюкозы в кули:</strong> в рецептуре под вебинаром не указан, готовили без него.</li>
+              <li><strong>Пропитка и ягоды:</strong> граммовки не названы — пропитка готовая, ягоды «по вкусу».</li>
+              <li><strong>Пробелы:</strong> точный срок хранения торта в сборе не назван; насадка для бутона прямо не указана (подразумевается 103); диаметры насадок не измерены; финал Урок_06 оборвался, композиция восстановлена по последним кадрам.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_06.mp4 (около 00:09:50): собранный торт с букетом пионов.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

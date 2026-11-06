@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тарт «Каракум» с карамелью и орехами — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Тарт Ø8 см на фундучном сабле: взбитая шоколадная карамель, саблированные фундук и грецкий орех, шоколадный ганаш на молочном и белом шоколаде. Декор — взбитая карамель насадкой 124.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tart-karakum">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Тарт «Каракум» с карамелью и орехами</h1>
+      <p class="recipe-lead">
+        Карамельно-ореховое пирожное Ø8 см: фундучное песочное сабле, слой саблированных орехов — фундук и грецкий в тончайшей карамельной корочке, шоколадный ганаш на молочном и белом шоколаде с добавлением карамели. Сверху — шапка из взбитой шоколадной карамели насадкой 124 и посыпка орехом.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~30 мин: взвесить, обжарить орехи, замочить желатин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~2 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Тесто 2–12 ч, выпечка 15 мин, карамель 6–10 ч, стабилизация ганаша</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~1,5–2 дня с заготовками</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">10 тартов Ø8 см, высота 2–2,5 см</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tart-karakum.jpg" alt="Тарт «Каракум»: песочная основа, шапка из взбитой карамели крупными куполами и посыпка саблированными орехами" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (10 тартов)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="10">10</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">тартов</span>
+          </div>
+          <p style="font-size: 13px; color: var(--muted, #777); margin-top: 10px;">
+            База — 10 тартов Ø8 см по рецептуре автора. Карамель удобно варить сразу на два вида тартов (фисташковый и фундучный) — тесто делится пополам, как на видео. Здесь дан только фундучный вариант.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Показать источники (видео-таймкоды)</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">10</span> тартов</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+      </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Самый «сахарный» тарт серии: на карамель и саблирование уходит почти четверть килограмма сахара. Берите сливки 33 % и хорошее масло 82,5 % — карамель капризна к жирности. Орехи нужны обжаренные: фундук целый и грецкий дробленый.
+      </p>
+
+        <div class="shopping-grid">
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🧈 Масло, сливки, яйца</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Масло сливочное 82,5 %</strong>:
+                  <span class="shopping-qty" data-base-amount="160" data-unit="г">160 г</span>
+                  <span class="shopping-hint">95 г в сабле (холодное), 65 г в шоколадный ганаш (холодное, кубиками)</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сливки 33 %</strong>:
+                  <span class="shopping-qty" data-base-amount="510" data-unit="г">510 г</span>
+                  <span class="shopping-hint">335 г в карамель, 175 г в ганаш</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Яйца куриные</strong>:
+                  <span class="shopping-qty" data-base-amount="45" data-unit="г">45 г</span>
+                  <span class="shopping-hint">В сабле, холодные — примерно одно яйцо С1</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🧂 Мука, сахар, шоколад</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Мука пшеничная в/с</strong>:
+                  <span class="shopping-qty" data-base-amount="190" data-unit="г">190 г</span>
+                  <span class="shopping-hint">В сабле</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Фундучная мука</strong>:
+                  <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                  <span class="shopping-hint">В сабле; можно смолоть обжаренный фундук</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахар-песок</strong>:
+                  <span class="shopping-qty" data-base-amount="240" data-unit="г">240 г</span>
+                  <span class="shopping-hint">200 г в сухую карамель, 40 г в сироп для саблирования</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахарная пудра</strong>:
+                  <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                  <span class="shopping-hint">В сабле</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Шоколад молочный</strong>:
+                  <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+                  <span class="shopping-hint">В шоколадный ганаш</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Шоколад белый</strong>:
+                  <span class="shopping-qty" data-base-amount="40" data-unit="г">40 г</span>
+                  <span class="shopping-hint">В шоколадный ганаш</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Шоколад тёмный 54,5 %</strong>:
+                  <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                  <span class="shopping-hint">В карамель — для цвета и плотности</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Фундук целый</strong>:
+                  <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span>
+                  <span class="shopping-hint">Обжаренный, для саблирования</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Грецкий орех дробленый</strong>:
+                  <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                  <span class="shopping-hint">Обжаренный, для саблирования</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Желатин 220 Блюм</strong>:
+                  <span class="shopping-qty" data-base-amount="5.5" data-unit="г">5,5 г</span>
+                  <span class="shopping-hint">3,5 г в карамель, 2 г в ганаш; вода 10 г</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Ванильный сахар</strong>:
+                  <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+                  <span class="shopping-hint">В сливки для карамели</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Разрыхлитель и соль</strong>:
+                  <span class="shopping-qty" data-base-amount="2.5" data-unit="г">2,5 г</span>
+                  <span class="shopping-hint">1 г разрыхлителя, 1,5 г соли в сабле</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Расходники</strong> — кольца Ø8 см, перфорированный коврик, градусник, насадки 124 и круглая 8 мм
+                  <span class="shopping-hint">Градусник нужен для сиропа на саблирование — 115 °C на глаз не поймать</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">1. Фундучное сабле</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="190" data-unit="г">190 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Фундучная мука
+              <span class="ingredient-note">Смолотый обжаренный фундук</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="95" data-unit="г">95 г</span> — Масло сливочное 82,5 %
+              <span class="ingredient-note">Холодное, кубиками</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="45" data-unit="г">45 г</span> — Яйца
+              <span class="ingredient-note">Холодные</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="г">1 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1.5" data-unit="г">1,5 г</span> — Соль
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">2. Взбитая шоколадная карамель</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сахар
+              <span class="ingredient-note">Сухая карамель, без воды</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="335" data-unit="г">335 г</span> — Сливки 33 %
+              <span class="ingredient-note">Кипящие, вливаются в карамель</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Ванильный сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3.5" data-unit="г">3,5 г</span> — Желатин 220 Блюм
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Шоколад тёмный 54,5 %
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">3. Саблированные орехи</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Фундук целый
+              <span class="ingredient-note">Обжаренный, тёплый</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Грецкий орех дробленый
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Вода
+              <span class="ingredient-note">Сироп нагревается до 115 °C</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">4. Шоколадный ганаш</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="175" data-unit="г">175 г</span> — Сливки 33 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Шоколад молочный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Шоколад белый
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Карамель
+              <span class="ingredient-note">Из приготовленной взбитой карамели</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Желатин 220 Блюм
+              <span class="ingredient-note">Плюс 10 г холодной воды</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="65" data-unit="г">65 г</span> — Масло сливочное
+              <span class="ingredient-note">Размягчённое, вводится при 40–45 °C</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Порядок работы</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Карамель и тесто делают в первый день: карамель должна стабилизироваться 6–10 часов, тесто — от 2 до 12 часов. Во второй день выпекают основы, саблируют орехи, варят ганаш и собирают. Взбитую карамель взбивают в последний момент — она быстро теряет форму и после взбивания живёт недолго.
+                <span class="source-badge">⏱ Урок_01: 00:00:01–00:00:36</span>
+                <span class="source-badge">⏱ Урок_04: 00:03:11–00:03:20</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> карамель, которая слишком течёт и тянется, перекладывают в мешок и держат в холодильнике минут 10 — после этого она отсаживается аккуратно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Карамель: <strong>6–10 ч</strong></span>
+              <span class="param-pill">🧊 Тесто: <strong>2–12 ч</strong></span>
+              <span class="param-pill">🌰 Орехи: <strong>Обжарить заранее</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Сабле: крошка из сухих и масла</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Смешайте в чаше 190 г муки, 70 г сахарной пудры, 1 г разрыхлителя и 1,5 г соли. Добавьте 95 г холодного масла кубиками и превратите в мелкую крошку — 3–4 минуты. Фундучную муку не вводите: её добавляют последней, уже после яиц, чтобы тесто меньше месили и оно не грелось.
+                <span class="source-badge">⏱ Урок_01: 00:00:36–00:01:11</span>
+              </p>
+              <div class="warning-box">
+                <strong>Масло холодное, иначе крошки не будет.</strong> Тёплое масло сразу даёт пластичную массу, и песочная текстура теряется.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Крошка: <strong>3–4 мин</strong></span>
+              <span class="param-pill">🥣 Насадка: <strong>Весло</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Раскатка и стабилизация</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                В крошку влейте холодные яйца, перемешайте недолго, разделите тесто на две части, введите фундучную муку и раскатайте между двумя листами пергамента или силиконового коврика до 2–2,5 мм. Если на пласте есть залом, снимите бумагу и пройдитесь скалкой ещё раз — тесто должно быть ровным. Уберите в холодильник минимум на 2 часа, максимум на 12.
+                <span class="source-badge">⏱ Урок_02: 00:00:03–00:00:40</span>
+              </p>
+              <div class="tip-box">
+                <strong>Проверяйте толщину:</strong> разница в полмиллиметра уже видна на готовых тартах — у тонкого бортика край темнеет быстрее.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Толщина: <strong>2–2,5 мм</strong></span>
+              <span class="param-pill">🧊 Отдых: <strong>2–12 ч</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Формовка и выпечка</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Сформируйте тарты по кольцам, прижимая тесто к стенкам от края к середине, срежьте лишнее. Заморозьте перед выпечкой — автор выпекает полностью замороженные заготовки. Режим: 160 °C, конвекция, 15 минут, до лёгкого золотистого оттенка. Готовые основы остудите в кольцах.
+                <span class="source-badge">⏱ Урок_02: 00:04:27</span>
+                <span class="source-badge">⏱ Урок_03: 00:00:02–00:00:29</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не размораживайте перед выпечкой:</strong> тёплое песочное тесто оседает, и бортик получается ниже нужного.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Выпечка: <strong>160 °C, конвекция</strong></span>
+              <span class="param-pill">⏱ Время: <strong>15 мин</strong></span>
+              <span class="param-pill">❄️ Заготовки: <strong>Из морозилки</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Взбитая шоколадная карамель</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Сливки с ванилью отправьте греться до кипения. Сахар порциями, примерно в три приёма, расплавьте в раскалённом сотейнике в сухую карамель — до глубокого янтарного цвета; помогайте себе растирающими движениями, чтобы сахар не горел. Влейте кипящие сливки, тщательно перемешайте, снимите с огня, добавьте желатиновую массу и 30 г тёмного шоколада. Пробейте блендером, накройте плёнкой в контакт и уберите в холодильник минимум на 6–10 часов.
+                <span class="source-badge">⏱ Урок_04: 00:00:02–00:03:11</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сливки обязательно кипящие.</strong> Холодные или просто горячие сливки дадут резкий скачок температуры: карамель схватится комками, и масса не станет гладкой.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Карамель: <strong>Сухая, до янтарного</strong></span>
+              <span class="param-pill">🌡 Сливки: <strong>Кипящие</strong></span>
+              <span class="param-pill">🧊 Стабилизация: <strong>6–10 ч</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Саблирование орехов</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Из 40 г сахара и 120 г воды сварите сироп и нагрейте его до 115 °C. Всыпьте тёплые обжаренные орехи — целый фундук и дробленый грецкий — и перемешивайте: вода испарится, а на орехах останется тончайшая карамельная корочка. Выложите на пергамент и остудите, разбивая слипшиеся комки.
+                <span class="source-badge">⏱ Урок_05: 00:00:02–00:02:10</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем саблировать:</strong> корочка карамели не даёт орехам размокнуть в тарте — они остаются хрустящими и через сутки.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сироп: <strong>115 °C</strong></span>
+              <span class="param-pill">🌰 Орехи: <strong>Тёплые, обжаренные</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Шоколадный ганаш</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Замочите 2 г желатина в 10 г холодной воды. 175 г сливок с желатиновой массой доведите до кипения и вылейте на смесь 60 г молочного и 40 г белого шоколада с 20 г карамели. Пробейте блендером до эмульсии, остудите до 40–45 °C, добавьте размягчённое масло кубиками и снова пробейте. Разлейте по тартам и уберите в холодильник или морозилку.
+                <span class="source-badge">⏱ Урок_06: 00:00:01–00:02:07</span>
+              </p>
+              <div class="warning-box">
+                <strong>Масло — только когда масса холоднее 40–45 °C.</strong> В горячую эмульсию его вводить нельзя: ганаш расслоится и покроется жиром.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Перед маслом: <strong>40–45 °C</strong></span>
+              <span class="param-pill">🥤 Блендер: <strong>До и после масла</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Сборка: орехи и ганаш</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                На дно остывших тартов разложите саблированные орехи — ровным слоем, чтобы всем досталось одинаково. Залейте шоколадным ганашем и уберите в холодильник до полной стабилизации, а лучше в морозилку: так поверхность останется ровной и карамель сверху ляжет красиво.
+                <span class="source-badge">⏱ Урок_06: 00:02:00–00:02:07</span>
+              </p>
+              <div class="tip-box">
+                <strong>Орехи — до ганаша, не после:</strong> иначе они не схватятся с массой и при нарезке тарт развалится.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Стабилизация: <strong>До схватывания</strong></span>
+              <span class="param-pill">🌰 Орехи: <strong>Полностью остывшие</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Взбивание карамели и декор</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Застывшую карамель взбейте: она посветлеет, увеличится в объёме и начнёт тянуться. Если течёт слишком сильно — переложите в мешок и подержите минут 10 в холодильнике. Отсадите карамель на тарты насадкой 124, вторым движением добавьте круглым отверстием 8 мм акценты, посыпьте орехами. Карамель, охлаждённую уже во взбитом виде в мешке, отсаживать удобнее всего.
+                <span class="source-badge">⏱ Урок_07: 00:00:02–00:01:47</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не перевзбейте:</strong> перебитая карамель становится матовой и зернистой, вместо блеска появляется «творожная» крупа.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌼 Насадки: <strong>124 + круг 8 мм</strong></span>
+              <span class="param-pill">🧊 Если течёт: <strong>10 мин в холодильник</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>72 ч в холодильнике</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Карамель в три приёма:</strong> сахар подсыпают порциями, иначе он плавится неравномерно и горит.</li>
+                <li><strong>Сливки кипящие:</strong> только так карамель остаётся гладкой.</li>
+                <li><strong>Шоколад в карамель:</strong> 30 г тёмного шоколада дают цвет и плотность.</li>
+                <li><strong>Саблирование при 115 °C:</strong> корочка тонкая и не липнет к рукам.</li>
+                <li><strong>Саблированные орехи не размокают</strong> — это и есть смысл процедуры.</li>
+                <li><strong>Масло в ганаш при 40–45 °C:</strong> эмульсия собирается без жирных разводов.</li>
+                <li><strong>Карамель охлаждают уже во взбитом виде в мешке:</strong> так её удобнее отсаживать.</li>
+                <li><strong>Один замес теста — два вида тартов:</strong> тесто делят и вводят фундучную или фисташковую муку.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Холодные сливки в карамель:</strong> масса схватывается комками.</li>
+                <li><strong>Перегретый сахар:</strong> горькая карамель, вкус уже не исправить.</li>
+                <li><strong>Сироп для саблирования недогрет:</strong> корочка липкая, орехи слипаются в ком.</li>
+                <li><strong>Орехи без обжарки:</strong> вкус сырой и вяжущий.</li>
+                <li><strong>Масло в горячий ганаш:</strong> расслоение и жир на поверхности.</li>
+                <li><strong>Перебитая карамель:</strong> зернистая, матовая, плохо держит форму.</li>
+                <li><strong>Ганаш без стабилизации:</strong> карамель сверху проваливается.</li>
+                <li><strong>Орехи поверх ганаша:</strong> не схватываются, тарт ломается при нарезке.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и замены</h4>
+              <ul>
+                <li><strong>Готовые тарты:</strong> 72 часа в холодильнике, месяц в морозилке.</li>
+                <li><strong>Карамель:</strong> после стабилизации 6–10 часов; взбивают перед декором.</li>
+                <li><strong>Саблированные орехи:</strong> хранят в закрытой банке, они долго остаются хрустящими.</li>
+                <li><strong>Фундук:</strong> можно заменить миндалём, но вкус станет нейтральнее.</li>
+                <li><strong>Грецкий орех:</strong> пекан ближе всего по вкусу.</li>
+                <li><strong>Фундучная мука:</strong> смолотый обжаренный фундук или готовая ореховая мука.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: #666; line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «Тарт_Каракум» с рецептурой и семь уроков с расшифровкой. Граммовки — из DOCX, техника и таймкоды — из видео.</li>
+              <li><strong>Два вида теста:</strong> на видео Урок_01 — общий замес для фисташковых и фундучных тартов, крошку делят пополам. В DOCX дан только фундучный вариант.</li>
+              <li><strong>Вода в карамели:</strong> в рецептуре карамели вода не указана — это сухая карамель. В сиропе для саблирования вода есть: 120 г.</li>
+              <li><strong>Желатин в карамели:</strong> в DOCX 3,5 г без указания воды для замачивания; в ганаше отдельно 2 г + 10 г воды. На странице вода указана только там, где она названа.</li>
+              <li><strong>Температура сиропа для саблирования:</strong> в DOCX «115 градусов», в видео автор дважды сбивается («110–110», «надо 115») и ориентируется на 115 °C. На странице — 115 °C.</li>
+              <li><strong>Пробелы:</strong> не назван вес карамели и ганаша на один тарт; не указано время стабилизации ганаша в холодильнике (в DOCX — «убрать в холодильник или морозилку»).</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_07 (около 00:01:45) с готовыми тартами.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

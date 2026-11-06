@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Семифредо — три вкуса без мороженицы | CookBook</title>
+  <meta name="description" content="Домашнее семифредо Надежды Зубовой: взбитые яйца с сахаром и сливки 33 %, без агара и желатина. Три вкуса — шоколад, фисташка с малиной, манго-маракуйя. Замораживается без перемешивания.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="semi-freddo">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Лёгкая</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Семифредо — три вкуса без мороженицы</h1>
+      <p class="recipe-lead">
+        Семифредо — итальянский замороженный десерт, который у нас обычно называют мороженым. Внутри только яйца, сахар и сливки: ни агара, ни желатина, при этом воздуха больше 50 %, поэтому десерт не замерзает в камень и режется как торт. Из одной партии получается три вида — шоколадный, фисташковый с малиной и манго-маракуйя. Самое приятное: перемешивать его в морозилке не нужно, залили в форму и забыли.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~10 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~40 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Заморозка 6 ч, лучше 12 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~7–13 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">3 вида ≈1,1 кг</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/semi-freddo.jpg" alt="Три ломтика семифредо на чёрной подставке: фисташковый с малиной, манго-маракуйя и шоколадный, с ягодами и листиком мяты" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 партия)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">партия</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Одна партия — три вида сразу: яичная масса делится на три части по 130 г, в каждую идёт по 167 г взбитых сливок. Хотите только один вкус — возьмите треть раскладки.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> партию</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на три вида. Яйца считаны целыми: 240 г — это 4 яйца С0 (в одном около 60 г: 40 г белка и 20 г желтка). Если берёте пастеризованный меланж, яйца в скорлупе не нужны. Сливки должны быть те, которые точно взбиваются — это критично для семифредо.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное и яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С0</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span>
+                <span class="shopping-hint">240 г; можно заменить пастеризованным меланжем того же веса</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 33 %</strong>:
+                <span class="shopping-qty" data-base-amount="500" data-unit="г">500 г</span>
+                <span class="shopping-hint">Только проверенные, которые хорошо взбиваются</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Шоколад, фрукты, орехи</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Тёмный шоколад 54 %</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Для шоколадного вкуса; молочный сделает десерт мягче</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Фисташки очищенные обжаренные</strong>:
+                <span class="shopping-qty" data-base-amount="40" data-unit="г">40 г</span>
+                <span class="shopping-hint">Автор кладёт горсть целых; вес в источнике не указан</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Малина свежая</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Внутрь и на подачу; замороженную лучше не брать — даст воду</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре манго</strong>:
+                <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре маракуйи с косточками</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Можно заменить на 100 г любого ягодного пюре — клубника, смородина, черника</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ванильная паста или экстракт</strong> — по вкусу
+                <span class="shopping-hint">Ваниль нужна, чтобы спрятать вкус яйца</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>M&amp;M's, дроблёные орехи, ягоды для подачи</strong> — по желанию
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — прямоугольный контейнер или форма, пищевая плёнка, кондитерский мешок, миксер
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Основа</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="240" data-unit="г">240 г</span> — Яйца
+              <span class="ingredient-note">Пастеризованный меланж или 4 яйца С0</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Ванильная паста или ванильный экстракт — по вкусу
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="500" data-unit="г">500 г</span> — Сливки 33 %
+              <span class="ingredient-note">Холодные, хорошо взбивающиеся</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Шоколадное семифредо</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Тёмный шоколад 54 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="130" data-unit="г">130 г</span> — Яичная масса
+              <span class="ingredient-note">Треть основы</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="167" data-unit="г">167 г</span> — Взбитые сливки
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              M&amp;M's или другие драже — по желанию
+              <span class="ingredient-note">Именно сюда: этот вкус самый плотный</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Фисташка и малина</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="130" data-unit="г">130 г</span> — Яичная масса
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="167" data-unit="г">167 г</span> — Взбитые сливки
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Фисташки очищенные обжаренные — по вкусу
+              <span class="ingredient-note">Целые</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Малина свежая — по вкусу
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Фруктовый алкоголь — по желанию
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Манго-маракуйя</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="130" data-unit="г">130 г</span> — Яичная масса
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="167" data-unit="г">167 г</span> — Взбитые сливки
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Пюре манго
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Пюре маракуйи с косточками
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Продукты и яйца</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Возьмите пастеризованный меланж (смесь белка и желтка) — он продаётся в больших супермаркетах рядом с яйцами. Если такого нет, берите обычные яйца С0: вымойте их с мылом, оботрите и разбейте. Яйца нужны по весу — 240 г, это 4 штуки; в одном яйце примерно 40 г белка и 20 г желтка.
+                <span class="source-badge">⏱ Урок_01: 00:03:00–00:04:14</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сырые яйца в десерте:</strong> семифредо не проходит термическую обработку, поэтому безопаснее пастеризованный меланж. Обычные яйца берите только свежие, магазинные и вымытые.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Яйца: <strong>240 г = 4 шт. С0</strong></span>
+              <span class="param-pill">🧼 Скорлупа: <strong>Вымыть с мылом</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Взбить яйца с сахаром</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Соедините яйца, сахар (150 г) и ваниль. Взбивайте на максимальной скорости около 10 минут: ручным миксером — на максимуме, планетарным — на 6 из 10. Масса должна стать совсем светлой, воздушной, с отчётливым рисунком от венчика.
+                <span class="source-badge">⏱ Урок_01: 00:40:07–00:52:18</span>
+              </p>
+              <div class="tip-box">
+                <strong>Ваниль обязательна:</strong> она прячет вкус яйца, который в десерте никуда не денется.
+              </div>
+              <div class="tip-box">
+                <strong>Живые яйца vs меланж:</strong> на обычных яйцах масса получится гуще — это нормально.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚙️ Скорость: <strong>Максимум</strong></span>
+              <span class="param-pill">⏱ Время: <strong>~10 мин</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Светлая, воздушная</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Разделить на три части</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разложите яичную массу на три части по 130 г — по одной на каждый вкус. Точные веса здесь важны: от них зависит, сколько сливок пойдёт в каждую часть.
+                <span class="source-badge">⏱ Урок_01: 00:53:33–00:54:16</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ Части: <strong>3 × 130 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Сливки до устойчивых пиков</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Холодные сливки (500 г) взбивайте на максимальной скорости. Это не мусс, а семифредо: сливки должны быть хорошо взбитыми и держать форму. Как только они начнут уменьшаться в объёме — сразу останавливайтесь, иначе через пару секунд начнут отсекать воду.
+                <span class="source-badge">⏱ Урок_01: 00:58:47–01:04:57</span>
+              </p>
+              <div class="warning-box">
+                <strong>Перевзбить нельзя:</strong> момент, когда сливки «вот-вот» готовы и вдруг просели, — это уже начало отделения масла.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥛 Сливки: <strong>500 г, холодные</strong></span>
+              <span class="param-pill">⚙️ Скорость: <strong>Максимум</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Шоколадное: сначала шоколад, потом сливки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Тёмный шоколад 54 % (100 г) растопите до жидкого состояния и введите прямо в яичную массу (130 г), перемешайте. Затем добавьте взбитые сливки (167 г) и аккуратно соедините лопаткой — не взбивайте. Это самый плотный вкус: сюда можно добавить M&amp;M's, они не расплывутся.
+                <span class="source-badge">⏱ Урок_01: 01:10:27–01:19:56</span>
+              </p>
+              <div class="warning-box">
+                <strong>Порядок важен:</strong> шоколад вводим именно в яйца (они тёплые), а не в холодные сливки — иначе он закомкуется, и получится мороженое с кусочками шоколада.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Шоколад: <strong>100 г, 54 %</strong></span>
+              <span class="param-pill">🥛 Сливки: <strong>167 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Фисташка и малина: сначала сливки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Здесь порядок обратный: сначала в яичную массу (130 г) введите взбитые сливки (167 г), перемешайте, и только потом добавьте целые обжаренные фисташки и свежую малину. По желанию — ложка фруктового алкоголя.
+                <span class="source-badge">⏱ Урок_01: 01:21:21–01:22:31</span>
+              </p>
+              <div class="tip-box">
+                <strong>Крупные ягоды не целиком:</strong> малину лучше не мять, а вот клубнику или вишню автор советует порезать.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌰 Фисташки: <strong>Целые, по вкусу</strong></span>
+              <span class="param-pill">🍓 Малина: <strong>По вкусу</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Манго-маракуйя</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сливки (167 г) соедините с яичной массой (130 г), затем добавьте пюре: 70 г манго и 30 г маракуйи с косточками. Перемешайте лопаткой. Пюре должно быть холодным, не горячим.
+                <span class="source-badge">⏱ Урок_01: 01:29:30–01:33:42</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не подогревать массу:</strong> если пюре тёплое, десерт придётся термически обрабатывать, а это уже другой рецепт. Сильно замёрзшее пюре можно чуть распустить в микроволновке, но дать остыть.
+              </div>
+              <div class="tip-box">
+                <strong>Замены:</strong> вместо манго-маракуйи подойдёт 100 г клубничного, смородинового, черничного или малинового пюре.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥭 Манго: <strong>70 г</strong></span>
+              <span class="param-pill">🍈 Маракуйя: <strong>30 г с косточками</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Формы и плёнка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите каждый вкус в контейнер или форму и разровняйте: прямоугольная даёт «буханочку», круглая — разрез как у торта. Если планируете доставать десерт целиком и подавать красиво, затяните поверхность плёнкой в контакт: за неё потом удобно взяться и вытащить блок. Если едите ложкой прямо из контейнера, плёнка не нужна.
+                <span class="source-badge">⏱ Урок_01: 01:33:43–01:36:20</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📦 Форма: <strong>Прямоугольная или круглая</strong></span>
+              <span class="param-pill">📄 Плёнка: <strong>В контакт, если достаёте блок</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Заморозка — и ничего больше</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Уберите в морозилку и забудьте. В отличие от мороженого, семифредо не перемешивают: ни агара, ни желатина в нём нет, но воздуха в сливках больше 50 %, поэтому крупных кристаллов не образуется. При −18 °C полная стабилизация занимает около 6 часов, а лучше оставить на 12.
+                <span class="source-badge">⏱ Урок_01: 01:40:00–01:41:04</span>
+              </p>
+              <div class="tip-box">
+                <strong>Почему не каменеет:</strong> автор объясняет это тем, что лёгкая, насыщенная воздухом масса не превращается в лёд даже при минимальном количестве стабилизаторов — их здесь нет вовсе.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Морозилка: <strong>6 ч, лучше 12 ч</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>−18 °C</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Подача и нарезка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Достаньте блок за плёнку, положите на доску и режьте ножом смоченным в горячей воде — ломтями, как хлеб, или кусками, как торт. Семифредо остаётся мягким, поэтому срез получается ровным, а внутри видно фисташки, ягоды и косточки маракуйи.
+                <span class="source-badge">⏱ Урок_04: 00:07:31–00:11:02</span>
+              </p>
+              <div class="tip-box">
+                <strong>Если режется тяжело:</strong> дайте 3–5 минут при комнатной температуре — этого достаточно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔪 Нож: <strong>Горячий, вытирать</strong></span>
+              <span class="param-pill">⏱ Отогрев: <strong>3–5 мин</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Декор</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Фисташковый ломтик посыпьте рублеными фисташками и положите малину, к манго-маракуйе добавьте порезанную клубнику и листик мяты. Подавайте сразу: десерт быстро теплеет.
+                <span class="source-badge">⏱ Урок_04: 00:09:00–00:10:19</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌰 Фисташки: <strong>Рубленые</strong></span>
+              <span class="param-pill">🍓 Ягоды: <strong>Малина, клубника, мята</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Семифредо — не мороженое:</strong> это замороженный десерт, в котором есть и желток, и белок.</li>
+                <li><strong>Воздуха больше 50 %:</strong> поэтому текстура лёгкая, а не ледяная.</li>
+                <li><strong>Ваниль прячет яйцо:</strong> без неё вкус сырого яйца будет слышен.</li>
+                <li><strong>Сливки — только проверенные:</strong> если бренд плохо взбивается, десерт не получится.</li>
+                <li><strong>Порядок наполнителей:</strong> шоколад — в яйца, ягоды и пюре — после сливок.</li>
+                <li><strong>Не взбивать:</strong> после соединения только лопатка, иначе масса осядет.</li>
+                <li><strong>Универсальность:</strong> на этой основе делают торт-мороженое — бисквит в форму, сверху семифредо, заморозка.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Перевзбитые сливки:</strong> отсекают воду, десерт получается с крупинками масла.</li>
+                <li><strong>Шоколад в холодные сливки:</strong> закомкуется.</li>
+                <li><strong>Тёплое пюре:</strong> ломает микробиологию десерта, который не варят.</li>
+                <li><strong>Взбивать массу миксером после соединения:</strong> воздух уходит, текстура плотная.</li>
+                <li><strong>Ждать «как мороженое»:</strong> семифредо намеренно не замерзает в камень — это норма.</li>
+                <li><strong>Крупные ягоды целиком:</strong> плохо режутся и рвут срез.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и подача</h4>
+              <ul>
+                <li><strong>Морозилка:</strong> под плёнкой, до нескольких недель.</li>
+                <li><strong>Подача:</strong> сразу из морозилки, ломтями.</li>
+                <li><strong>Порция:</strong> 3–5 минут при комнатной температуре перед подачей.</li>
+                <li><strong>Не в холодильнике:</strong> там десерт размягчится и потеряет форму.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Пюре:</strong> клубника, чёрная смородина, черника, ежевика — 100 г на часть.</li>
+                <li><strong>Шоколад:</strong> молочный сделает вкус мягче, тёмный — плотнее.</li>
+                <li><strong>Добавки:</strong> M&amp;M's, дроблёные орехи, сублимированная вишня.</li>
+                <li><strong>Алкоголь:</strong> фруктовый, по желанию — в фисташково-малиновую часть.</li>
+                <li><strong>Торт-мороженое:</strong> на этой же основе, с бисквитом на дне формы.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 — теория и приготовление всех трёх вкусов (00:03:00–01:41:04); Урок_02.mp4 — заливка в формы; Урок_04.mp4 — извлечение, нарезка и декор (00:07:31–00:11:02). DOCX «Мороженое vs семифредо» содержит только название и фотографию готового десерта — граммовки взяты из речи.</li>
+              <li><strong>Сливки:</strong> в видео озвучено 500 г для семифредо (и 330 г отдельно для мороженого СССР), из них по 167 г на каждый из трёх вкусов.</li>
+              <li><strong>Фисташки и малина:</strong> точный вес в источнике не назван — только «немножечко» и «по вкусу». В раскладке они без количества.</li>
+              <li><strong>Шоколад:</strong> в видео 100 г на одну часть, процент назван как 54 и 54,5 — на странице 54 %.</li>
+              <li><strong>M&amp;M's:</strong> упомянуты как идея для шоколадного вкуса, без веса.</li>
+              <li><strong>Сроки хранения:</strong> конкретные не названы; автор говорит, что десерт спокойно хранится в морозилке.</li>
+              <li><strong>Фото:</strong> настоящее фото из DOCX — три ломтика семифредо с ягодами и фисташкой.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

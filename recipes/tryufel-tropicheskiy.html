@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Трюфель «Тропический» — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Тропический трюфель Надежды Зубовой на белом шоколаде: ганаш на пюре манго и кокоса с сиропом глюкозы и кокосовой стружкой. 22–27 конфет по 10–12 г, покрытие тёмным шоколадом, часть — в кокосовой стружке.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tryufel-tropicheskiy">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Конфеты и сладости</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Трюфель «Тропический»</h1>
+      <p class="recipe-lead">
+        Трюфель на белом шоколаде, где роль жидкости играют пюре манго и кокоса: фруктовая кислота и сливочность белого шоколада складываются в яркий манговый ганаш. Кокосовая стружка идёт и внутрь, и на обсыпку — половину конфет оставляют просто в тёмном шоколадном корпусе, половину обваливают в стружке, а часть припыляют розовым кандурином.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~15 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Стабилизация 12 ч + 1–2 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~14 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">22–27 конфет по 10–12 г</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tryufel-tropicheskiy.jpg" alt="Тропические трюфели в тёмном шоколадном корпусе, обвалянные в кокосовой стружке, рядом с другими конфетами на противне" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (24 конфеты)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="24">24</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">конфеты</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — 24 конфеты: автор говорит о 22–27 штуках при раскладке 10–12 г. Покрытие считается отдельно.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">24</span> конфеты</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на ганаш и покрытие. Пюре манго и кокоса берите кондитерские, без лишнего сахара; кокосовое пюре иногда продают как кокосовый урбеч. Белый шоколад — профессиональный, не «воздушный».
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥭 Пюре, шоколад, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Белый шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">В ганаш; для покрытия нужен тёмный шоколад</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре манго</strong>:
+                <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре кокоса</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Допустим кокосовый урбеч</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао-масло в калетах</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">В ганаш</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао-масло Mycryo</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="г">1 г</span>
+                <span class="shopping-hint">1 % от веса шоколада для покрытия</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥥 Кокос, шоколад для покрытия</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Тёмный шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">На два слоя покрытия; в видео тропические покрывают тёмным</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кокосовая стружка</strong>:
+                <span class="shopping-qty" data-base-amount="40" data-unit="г">40 г</span>
+                <span class="shopping-hint">15 г внутрь ганаша, остальное на обсыпку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сироп глюкозы</strong>:
+                <span class="shopping-qty" data-base-amount="12" data-unit="г">12 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Розовый кандурин</strong> — для декора
+                <span class="shopping-hint">По желанию, на часть конфет</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — весы, перчатки, бумажные полотенца, погружной блендер, противень и плёнка
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Ганаш</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Белый шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Пюре манго
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Пюре кокоса
+              <span class="ingredient-note">Или кокосовый урбеч</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="12" data-unit="г">12 г</span> — Сироп глюкозы
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Какао-масло
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Кокосовая стружка
+              <span class="ingredient-note">В ганаш</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Покрытие и декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Тёмный шоколад
+              <span class="ingredient-note">Для двух слоёв покрытия</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="г">1 г</span> — Какао-масло Mycryo
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Кокосовая стружка — для обсыпки
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Розовый кандурин — по желанию
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Пюре и шоколад</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Пюре манго и кокоса с сиропом глюкозы прогрейте до 50–60 °C — до горячего состояния; если пюре было замороженным, сначала дайте ему отойти. Белый шоколад с какао-маслом подтопите до 45 °C.
+                <span class="source-badge">⏱ Урок_01: 00:00:02–00:00:45</span>
+              </p>
+              <div class="warning-box">
+                <strong>Белый шоколад не выше 45 °C:</strong> перегретый белый шоколад сворачивается и теряет эмульсию.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Пюре: <strong>50–60 °C</strong></span>
+              <span class="param-pill">🌡 Шоколад: <strong>45 °C</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Эмульсия</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Отправьте горячее пюре к шоколаду с какао-маслом, перемешайте лопаткой и дождитесь, пока всё объединится. Затем пробейте погружным блендером — ганаш получится яркого мангового цвета.
+                <span class="source-badge">⏱ Урок_01: 00:00:45–00:01:24</span>
+              </p>
+              <div class="tip-box">
+                <strong>Цвет — индикатор:</strong> если ганаш получился тусклым или сероватым, значит, шоколад перегрели или плохо пробили.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥭 Цвет: <strong>Яркий манговый</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Погружной блендер</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Кокосовая стружка и стабилизация</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Готовый ганаш переложите в миску с кокосовой стружкой (15 г) и перемешайте. Накройте плёнкой в контакт и оставьте на 12 часов при 16–18 °C; без таких условий — 2 часа при комнатной температуре, затем холодильник.
+                <span class="source-badge">⏱ Урок_01: 00:01:24–00:02:02</span>
+                <span class="source-badge">⏱ Урок_02: 00:00:02–00:01:21</span>
+              </p>
+              <div class="warning-box">
+                <strong>Плёнка в контакт:</strong> конденсат не должен попадать в ганаш — это лишняя влага.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥥 Стружка: <strong>15 г</strong></span>
+              <span class="param-pill">🌡 Стабилизация: <strong>12 ч при 16–18 °C</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Формирование</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Раскидайте массу на весах по 10–12 г и быстро скатайте в перчатках — от светлых конфет к тёмным, чтобы не пачкать светлые. Через 30–60 минут прокатайте второй раз: конфеты станут гладкими, и покрытия уйдёт меньше.
+                <span class="source-badge">⏱ Урок_02: 00:04:12–00:04:29</span>
+              </p>
+              <div class="warning-box">
+                <strong>Скатывать быстро:</strong> от тепла рук ганаш плавится; следы на перчатках снимают бумажным полотенцем.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ Вес: <strong>10–12 г</strong></span>
+              <span class="param-pill">⏱ Второй прокат: <strong>Через 30–60 мин</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Покрытие и кокос</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Тёмный шоколад оттемперируйте с Mycryo: растопите до 45–50 °C, остудите до 35 °C, введите 1 % какао-масла, доведите до 31–32 °C. Покройте конфеты тонким слоем. Второй слой наносите уже с обсыпкой: часть конфет просто в шоколаде, часть — в кокосовой стружке, пока шоколад не застыл.
+                <span class="source-badge">⏱ Урок_03: 00:05:53–00:08:36</span>
+              </p>
+              <div class="warning-box">
+                <strong>Обваливать сразу:</strong> стружка держится только на незастывшем шоколаде.
+              </div>
+              <div class="tip-box">
+                <strong>Декор:</strong> тропические конфеты автор припыляет розовым кандурином — получается эффект румянца.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Рабочая: <strong>31–32 °C</strong></span>
+              <span class="param-pill">🥥 Обсыпка: <strong>Кокосовая стружка</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>14 дней в холодильнике</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Пюре вместо сливок:</strong> манго и кокос дают и жидкость, и вкус.</li>
+                <li><strong>Пюре горячее:</strong> 50–60 °C — иначе шоколад не эмульгирует.</li>
+                <li><strong>Стружка внутрь:</strong> кокос работает и в текстуре, и в аромате.</li>
+                <li><strong>Тёмный корпус:</strong> контрастирует с белой начинкой и держит форму.</li>
+                <li><strong>Два проката:</strong> экономия шоколада на покрытии.</li>
+                <li><strong>Розовый кандурин:</strong> лёгкий «румянец» на рельефе.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Холодное пюре:</strong> шоколад схватывается хлопьями.</li>
+                <li><strong>Перегрев белого шоколада:</strong> масса сворачивается.</li>
+                <li><strong>Работа без перчаток:</strong> ганаш тает.</li>
+                <li><strong>Обсыпка после застывания:</strong> стружка не держится.</li>
+                <li><strong>Один слой покрытия:</strong> просветы на корпусе.</li>
+                <li><strong>Перегрев при темперировании:</strong> начинать заново.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и подача</h4>
+              <ul>
+                <li><strong>Холодильник:</strong> 14 дней.</li>
+                <li><strong>Винный шкаф:</strong> допустим.</li>
+                <li><strong>Подача:</strong> при комнатной температуре.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Пюре кокоса:</strong> кокосовый урбеч.</li>
+                <li><strong>Покрытие:</strong> тёмный шоколад; можно белый.</li>
+                <li><strong>Обсыпка:</strong> кокосовая стружка, кандурин или ничего.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 — пюре, шоколад, эмульсия и кокосовая стружка (00:00:02–00:02:02); Урок_02.mp4 — стабилизация и формирование (00:00:02–00:04:29); Урок_03.mp4 — темперирование, покрытие и кокосовая обсыпка (00:05:53–00:08:36); DOCX «Трюфель_тропический» — граммовки.</li>
+              <li><strong>Покрытие:</strong> в DOCX цвет корпуса не указан; в видео тропические трюфели покрывают тёмным шоколадом. На странице — тёмный.</li>
+              <li><strong>Кокосовая стружка:</strong> в DOCX 15 г в ганаш; на обсыпку количество не отвешивается.</li>
+              <li><strong>Выход:</strong> 22–27 конфет, база калькулятора — 24.</li>
+              <li><strong>Пробелы:</strong> вес готовой конфеты с покрытием не назван; количество кандурина не измеряется.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_03.mp4 (около 00:13:55): тропические трюфели в кокосовой стружке.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

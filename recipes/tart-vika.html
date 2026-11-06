@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тарт «Вика» с фисташкой и вишней — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Фисташковый тарт Ø8 см: песочное сабле с фисташковой мукой, сочный фисташковый франжипан, вишнёвое конфи на пектине NH и взбитый вишнёвый крем на белом шоколаде. Декор — цветок из крема насадкой 103.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tart-vika">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Тарт «Вика» с фисташкой и вишней</h1>
+      <p class="recipe-lead">
+        Фисташковая тарталетка Ø8 см в четыре слоя: хрупкое песочное сабле с фисташковой мукой, сочный фисташковый франжипан прямо на горячей основе, вишнёвое конфи на пектине NH с амаретто и взбитый вишнёвый крем на белом шоколаде. Сверху — цветок из крема насадкой 103 и целая вишня в серединке.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~30 мин: взвесить, кольца и перфорированный коврик</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~2 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Тесто 2–12 ч в холодильнике, выпечка 10–12 + 10 мин, крем 8–12 ч, конфи 1 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~1,5–2 дня с заготовками</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">10 тартов Ø8 см, высота 2–2,5 см</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tart-vika.jpg" alt="Фисташковый тарт с вишнёвым конфи и вишнёвым кремом, отсаженным розовым цветком насадкой 103, с целой вишней в серединке" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (10 тартов)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="10">10</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">тартов</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — 10 тартов Ø8 см по рецептуре автора. Сабле готовится сразу на два вида тартов (фисташковый и фундучный), поэтому тесто на видео делят пополам; здесь дан только фисташковый вариант.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Показать источники (видео-таймкоды)</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">10</span> тартов</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+      </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммы по всем четырём компонентам. Главное, что стоит взять заранее, — фисташковая паста и сублимированные ягоды: без пасты франжипан теряет вкус, а фисташковую муку можно смолоть из обжаренных орехов. Желатин нужен сильный, 220 Блюм.
+      </p>
+
+        <div class="shopping-grid">
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🧈 Масло, яйца, сливки</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Масло сливочное 82,5 %</strong>:
+                  <span class="shopping-qty" data-base-amount="140" data-unit="г">140 г</span>
+                  <span class="shopping-hint">95 г в сабле (холодное), 45 г во франжипан (мягкое)</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Яйца куриные</strong>:
+                  <span class="shopping-qty" data-base-amount="110" data-unit="г">110 г</span>
+                  <span class="shopping-hint">45 г в сабле (холодные), 65 г во франжипан (тёплые) — примерно 2 яйца С1</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сливки 33 %</strong>:
+                  <span class="shopping-qty" data-base-amount="180" data-unit="г">180 г</span>
+                  <span class="shopping-hint">45 г горячие в крем, 135 г холодные — взбиваются отдельно</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🧂 Мука, орехи, шоколад</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Мука пшеничная в/с</strong>:
+                  <span class="shopping-qty" data-base-amount="198" data-unit="г">198 г</span>
+                  <span class="shopping-hint">190 г в сабле, 8 г во франжипан</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Фисташковая мука</strong>:
+                  <span class="shopping-qty" data-base-amount="43" data-unit="г">43 г</span>
+                  <span class="shopping-hint">30 г в сабле, 13 г во франжипан; можно смолоть обжаренные фисташки</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Миндальная мука</strong>:
+                  <span class="shopping-qty" data-base-amount="32" data-unit="г">32 г</span>
+                  <span class="shopping-hint">Во франжипан</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Фисташковая паста</strong>:
+                  <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                  <span class="shopping-hint">Во франжипан; нужна натуральная, без лишнего сахара</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахар-песок</strong>:
+                  <span class="shopping-qty" data-base-amount="115" data-unit="г">115 г</span>
+                  <span class="shopping-hint">45 г во франжипан, 70 г в конфи</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахарная пудра</strong>:
+                  <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                  <span class="shopping-hint">В сабле</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Белый шоколад</strong>:
+                  <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                  <span class="shopping-hint">В вишнёвый крем; нужен именно белый, на молочном цвет будет грязным</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Пюре вишни</strong>:
+                  <span class="shopping-qty" data-base-amount="177" data-unit="г">177 г</span>
+                  <span class="shopping-hint">17 г в крем, 160 г в конфи</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Вишня без косточки</strong>:
+                  <span class="shopping-qty" data-base-amount="170" data-unit="г">170 г</span>
+                  <span class="shopping-hint">В конфи; часть ягод оставьте целыми для декора</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Ликёр амаретто</strong>:
+                  <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                  <span class="shopping-hint">10 г в крем, 20 г в конфи; алкоголь усиливает силу желатина</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сироп глюкозы</strong>:
+                  <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+                  <span class="shopping-hint">В вишнёвый крем — держит воду и стабильность</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Желатин 220 Блюм</strong>:
+                  <span class="shopping-qty" data-base-amount="3" data-unit="г">3 г</span>
+                  <span class="shopping-hint">Плюс 15 г холодной воды для замачивания</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Пектин NH</strong>:
+                  <span class="shopping-qty" data-base-amount="7" data-unit="г">7 г</span>
+                  <span class="shopping-hint">В конфи; яблочного нужно вдвое больше</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Лимонная кислота</strong>:
+                  <span class="shopping-qty" data-base-amount="2" data-unit="г">2 г</span>
+                  <span class="shopping-hint">В конфи, в самом конце</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Ванильный сахар</strong>:
+                  <span class="shopping-qty" data-base-amount="7" data-unit="г">7 г</span>
+                  <span class="shopping-hint">В сливки для вишнёвого крема</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Разрыхлитель и соль</strong>:
+                  <span class="shopping-qty" data-base-amount="2.5" data-unit="г">2,5 г</span>
+                  <span class="shopping-hint">1 г разрыхлителя и 1,5 г соли в сабле</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Краситель водорастворимый</strong> — по желанию
+                  <span class="shopping-hint">Крем бежевый от белого шоколада и вишни; пара капель розового делает его наряднее</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Расходники</strong> — кольца Ø8 см, перфорированный коврик, насадка 103, мешок, пленка в контакт
+                  <span class="shopping-hint">Перфорированные кольца дают ровный край, металлическая линейка помогает вырезать полоски</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">1. Фисташковое сабле</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="190" data-unit="г">190 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Фисташковая мука
+              <span class="ingredient-note">Перемолотые обжаренные фисташки; вводится в тесто последней</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="95" data-unit="г">95 г</span> — Масло сливочное 82,5 %
+              <span class="ingredient-note">Холодное, порезанное кубиками</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="45" data-unit="г">45 г</span> — Яйца
+              <span class="ingredient-note">Холодные</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="г">1 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1.5" data-unit="г">1,5 г</span> — Соль
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">2. Фисташковый франжипан</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="45" data-unit="г">45 г</span> — Масло сливочное 82,5 %
+              <span class="ingredient-note">Мягкое, комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="45" data-unit="г">45 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="32" data-unit="г">32 г</span> — Миндальная мука
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="13" data-unit="г">13 г</span> — Фисташковая мука
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="8" data-unit="г">8 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Фисташковая паста
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="65" data-unit="г">65 г</span> — Яйца
+              <span class="ingredient-note">Тёплые, вводятся в два приёма</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">3. Вишнёвый крем (мусс)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="45" data-unit="г">45 г</span> — Сливки 33 %
+              <span class="ingredient-note">Горячая часть, доводится до кипения</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="17" data-unit="г">17 г</span> — Пюре вишни
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Ликёр амаретто
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Сироп глюкозы
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Ванильный сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Белый шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Желатин 220 Блюм
+              <span class="ingredient-note">Замочить в 15 г холодной воды заранее</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="135" data-unit="г">135 г</span> — Сливки 33 %
+              <span class="ingredient-note">Холодные, взбиваются отдельно</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">4. Вишнёвое конфи</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="170" data-unit="г">170 г</span> — Вишня без косточки
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Пюре вишни
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Пектин NH
+              <span class="ingredient-note">Смешать с сахаром; вводить в массу не горячее 40–45 °C</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Лимонная кислота
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Ликёр амаретто
+              <span class="ingredient-note">В самом конце, после снятия с огня</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Порядок работы и подготовка</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Компоненты готовятся в разное время, и это главное в планировании. Тесто для сабле нужно стабилизировать в холодильнике минимум 2 часа (максимум 12), вишнёвый крем — 8–12 часов, конфи — около часа. Поэтому сначала замешивают сабле и крем, а сборку делают на следующий день. Всё взвешивают заранее: рецептура в граммах, и тарты маленькие — 8 см в диаметре, ошибка в пару граммов здесь заметна.
+                <span class="source-badge">⏱ Урок_01: 00:00:02–00:00:39</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> за один замес она делает сразу и фисташковые, и фундучные тарты: сухие ингредиенты смешивают без ореховой муки, делят крошку пополам и только потом вводят фисташковую и фундучную муку по отдельности.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Тесто: <strong>2–12 ч в холодильнике</strong></span>
+              <span class="param-pill">🧊 Крем: <strong>8–12 ч стабилизации</strong></span>
+              <span class="param-pill">📏 Форма: <strong>кольца Ø8 см</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Сабле: сухие и холодное масло</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                В чаше миксера с насадкой-веслом смешайте 190 г муки, 70 г сахарной пудры, 1 г разрыхлителя и 1,5 г соли. Холодное масло порежьте кубиками, добавьте сразу всё и рубите в крошку — это занимает 3–4 минуты. Ореховую муку пока не добавляйте: она идёт последней, чтобы тесто не успело нагреться.
+                <span class="source-badge">⏱ Урок_01: 00:00:39–00:01:17</span>
+              </p>
+              <div class="warning-box">
+                <strong>Масло только холодное, из холодильника.</strong> Тёплое масло даст не крошку, а пластичную массу: тесто потеряет слоистость и тарт выйдет плотным.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Крошка: <strong>3–4 мин</strong></span>
+              <span class="param-pill">🥣 Насадка: <strong>Весло</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Сабле: яйца и ореховая мука</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                В крошку сразу влейте все 45 г холодных яиц и перемешивайте совсем недолго — ждать крупных комков не нужно. Готовую массу выложите на лист, взвесьте, разделите пополам и введите в одну часть 30 г фисташковой муки, вмешивая её миксером до однородности. Руками тесто не мешают специально: так оно не нагревается.
+                <span class="source-badge">⏱ Урок_01: 00:01:21–00:02:38</span>
+              </p>
+              <div class="tip-box">
+                <strong>Почему миксером:</strong> руками тесто греется от ладоней, масло подтаивает, и крошка превращается в тянущуюся массу. На весле всё происходит быстрее и холоднее.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Перемешивание: <strong>Недолго, до объединения</strong></span>
+              <span class="param-pill">⚖️ Деление: <strong>На две равные части</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Раскатка 2 мм и отдых в холодильнике</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Раскатайте тесто между двумя листами пергамента до толщины 2 мм — автор проверяет линейкой или просто на ощупь. Не снимая бумагу, уберите пласт в холодильник минимум на 2 часа и не более чем на 12. Так тесто стабилизируется, перестаёт липнуть и держит форму при формовке.
+                <span class="source-badge">⏱ Урок_02: 00:00:06–00:00:12</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не передержите:</strong> больше 12 часов в холодильнике — и тесто начинает крошиться при раскатке и формовке.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Толщина: <strong>2 мм</strong></span>
+              <span class="param-pill">🧊 Отдых: <strong>2–12 ч</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Формовка в кольцах и заморозка</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Снимите пергамент, вырежьте дно и полоски-бортики. Тесто прижимайте к стенкам кольца, от краёв к середине, лишнее срезайте по направлению от центра к краю. Краешки слегка придавите к форме, чтобы тесто не сползало. Готовые тарты отправьте в морозилку — на выпечку они идут полностью замороженными.
+                <span class="source-badge">⏱ Урок_03: 00:00:04–00:02:30</span>
+              </p>
+              <div class="tip-box">
+                <strong>Замороженный противень:</strong> если работать на охлаждённой поверхности, песочное тесто дольше остаётся холодным и не размягчается прямо в руках.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">❄️ Перед выпечкой: <strong>Полная заморозка</strong></span>
+              <span class="param-pill">🥶 Противень: <strong>Из морозилки</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Выпечка основы</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте замороженные тарты при 155–160 °C около 10–12 минут — до лёгкого золотистого цвета. На видео основа печётся ровно 10 минут при 160 °C с конвекцией, потом её достают, чтобы залить франжипаном, а духовку не выключают. Противень — перфорированный, кольца тоже лучше перфорированные: с ними край получается ровным.
+                <span class="source-badge">⏱ Урок_03: 00:03:00–00:03:26</span>
+              </p>
+              <div class="warning-box">
+                <strong>Только до золотистого:</strong> основа допечётся вместе с франжипаном, поэтому пересушенное сабле к концу станет жёстким.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Выпечка: <strong>155–160 °C, конвекция</strong></span>
+              <span class="param-pill">⏱ Время: <strong>10–12 мин</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Фисташковый франжипан</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Мягкое масло взбейте с сахаром, затем введите тёплые яйца в два приёма, каждый раз проверяя, что масса не расслоилась. Добавьте 15 г фисташковой пасты и взбейте. Отдельно смешайте миндальную, фисташковую и обычную муку и подмешайте её в конце — лопаткой или миксером на низких оборотах.
+                <span class="source-badge">⏱ Урок_04: 00:00:02–00:03:07</span>
+              </p>
+              <div class="warning-box">
+                <strong>Яйца только тёплые и по частям.</strong> Холодное яйцо, вылитое сразу, расслаивает масляную массу, и франжипан потом «отдаёт» масло при выпечке.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Яйца: <strong>Тёплые, в два приёма</strong></span>
+              <span class="param-pill">🥣 Мука: <strong>Смешать все три вида</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Франжипан на горячие тарты</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Наполовину испечённые тарты достаньте из духовки и разложите франжипан — ложкой или из мешка, автор взвешивает: так на все тарты хватает поровну. Верните в духовку при той же температуре ещё на 7–12 минут, до лёгкого загорелого оттенка на поверхности. Через 10–12 минут после начала второй выпечки пройдитесь ножом по краю формы: тесто ещё мягкое и легко отходит, и тарт потом выйдет без боя.
+                <span class="source-badge">⏱ Урок_04: 00:03:18–00:04:40</span>
+              </p>
+              <div class="warning-box">
+                <strong>Шоколадные основы выходят хуже:</strong> автор отдельно предупреждает, что шоколадное сабле не любит выходить из формы, поэтому ножом по краю проходят всегда, пока тесто тёплое.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>Та же, 160 °C</strong></span>
+              <span class="param-pill">⏱ Допекание: <strong>7–12 мин</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Легкий загар сверху</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Вишнёвый крем на белом шоколаде</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Замочите 3 г желатина в 15 г холодной воды. 45 г сливок с глюкозой и ванильным сахаром доведите до кипения, распустите в них желатин и вылейте на 100 г белого шоколада. Дайте шоколаду минуту «подумать», при необходимости прогрейте в микроволновке. Введите пюре вишни и амаретто, пробейте погружным блендером, добавьте 135 г холодных сливок и снова пробейте — без блендера шоколад не разойдётся полностью.
+                <span class="source-badge">⏱ Урок_05: 00:00:02–00:01:56</span>
+              </p>
+              <div class="tip-box">
+                <strong>Алкоголь и желатин:</strong> амаретто добавляют в самом конце, и он даже усиливает силу желатина. Готовый крем закрывают плёнкой в контакт и убирают на 8–12 часов, а взбивают только перед декором.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сливки: <strong>До кипения</strong></span>
+              <span class="param-pill">🥤 Блендер: <strong>Дважды, до и после холодных сливок</strong></span>
+              <span class="param-pill">🧊 Стабилизация: <strong>8–12 ч</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Вишнёвое конфи</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Пюре и целые ягоды поставьте на огонь. Пока масса холодная, всыпьте дождиком 70 г сахара, перемешанного с 7 г пектина NH, и непрерывно мешайте: температура должна быть ниже 40–45 °C. Доведите до кипения и проварите 1–2 минуты до нестекающей капли. Снимите, добавьте 2 г лимонной кислоты, активно перемешайте — она закрепляет результат, — и влейте 20 г амаретто. Дайте остыть не до застывания.
+                <span class="source-badge">⏱ Урок_06: 00:00:03–00:01:56</span>
+              </p>
+              <div class="warning-box">
+                <strong>Пектин не любит горячую массу:</strong> если всыпать его в кипящее пюре, он закомкуется и конфи не загустеет.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Пектин: <strong>Ниже 40–45 °C</strong></span>
+              <span class="param-pill">⏱ Варка: <strong>1–2 мин после кипения</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Нестекающая капля</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Сборка и декор цветком</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Остывшее конфи разложите по тартам поверх франжипана и уберите в холодильник минимум на час. Вишнёвый крем взбейте на средней скорости до гладких устойчивых пиков — он посветлеет; если нужен розовый оттенок, добавьте пару капель водорастворимого красителя. Переложите в мешок с насадкой 103: толстая часть насадки смотрит на вас, узким кончиком делаете тонкие лепестки арочками, в два слоя. В серединку — целая вишня.
+                <span class="source-badge">⏱ Урок_07: 00:00:01–00:02:28</span>
+              </p>
+              <div class="warning-box">
+                <strong>Периметр:</strong> следите, чтобы лепестки не выходили за край тарталетки — иначе цветок «съезжает» и композиция выглядит неаккуратно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Конфи в холодильнике: <strong>≥1 ч</strong></span>
+              <span class="param-pill">🌼 Насадка: <strong>103</strong></span>
+              <span class="param-pill">🍒 Верх: <strong>Целая вишня</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Один замес — два вида тартов:</strong> сухие без ореховой муки делят пополам, потом вводят фисташковую и фундучную муку.</li>
+                <li><strong>Тесто не мешают руками:</strong> только веслом или миксером, чтобы оно не нагревалось.</li>
+                <li><strong>Замороженный противень:</strong> продлевает время работы с песочным тестом.</li>
+                <li><strong>Франжипан на горячую основу:</strong> так он схватывается ровно и не отходит от бортика.</li>
+                <li><strong>Франжипан по весу:</strong> раскладка ложкой «на глаз» даёт разную высоту тартов.</li>
+                <li><strong>Нож по краю формы:</strong> пока тесто тёплое, тарт выходит без трещин — особенно шоколадный.</li>
+                <li><strong>Блендер обязателен:</strong> без него шоколад в креме не разойдётся полностью.</li>
+                <li><strong>Алкоголь усиливает желатин:</strong> поэтому крем с амаретто держит форму надёжнее.</li>
+                <li><strong>Плёнка в контакт:</strong> на креме не образуется плёнка и не оседает конденсат.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Тёплое масло в сабле:</strong> вместо крошки — пластичная масса, тарт получается плотным.</li>
+                <li><strong>Долгий замес:</strong> тесто тянет глиадин и садится при выпечке.</li>
+                <li><strong>Тесто теплее 12 часов в холодильнике:</strong> начинает крошиться при формовке.</li>
+                <li><strong>Выпечка незамороженных тартов:</strong> бортики сползают, форма теряется.</li>
+                <li><strong>Холодные яйца во франжипан:</strong> масса расслаивается и отдаёт масло.</li>
+                <li><strong>Пектин в горячую массу:</strong> комки, конфи не загустевает.</li>
+                <li><strong>Недогретые сливки с шоколадом:</strong> шоколад остаётся крупинками.</li>
+                <li><strong>Невзбитый крем:</strong> слишком жидкий, лепестки не держат форму.</li>
+                <li><strong>Лепестки за периметром:</strong> цветок выглядит неряшливо.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и замены</h4>
+              <ul>
+                <li><strong>Готовые тарты:</strong> 72 часа в холодильнике, до месяца в морозилке.</li>
+                <li><strong>Тесто сабле:</strong> 2–12 часов в холодильнике; замороженные заготовки — до выпечки.</li>
+                <li><strong>Крем:</strong> 8–12 часов стабилизации в холодильнике под плёнкой в контакт.</li>
+                <li><strong>Конфи:</strong> стабилизируется за час; остатки можно закрыть и хранить в холодильнике.</li>
+                <li><strong>Фисташковая мука:</strong> заменяется смолотыми обжаренными фисташками.</li>
+                <li><strong>Пектин NH:</strong> яблочного нужно вдвое больше, но конфи тогда хуже переносит заморозку.</li>
+                <li><strong>Амаретто:</strong> другой вишнёвый ликёр или вишнёвый сироп, но вкус изменится.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «Тарт_Вика» с точной рецептурой и семь уроков (Урок_01–Урок_07) с расшифровкой. Граммовки взяты из DOCX, техника и таймкоды — из видео, они совпадают.</li>
+              <li><strong>Два вида теста в одном замесе:</strong> на видео автор делает сразу фисташковое и фундучное сабле и делит крошку пополам. В DOCX дан только фисташковый вариант — на странице он же, база 10 тартов.</li>
+              <li><strong>Названия компонентов в расшифровке искажены:</strong> «намилака» / «вишневая намилака» — это вишнёвый крем (мусс) из DOCX; в речи распознавание дало другой термин. Ориентировались на DOCX.</li>
+              <li><strong>Время допекания с франжипаном:</strong> DOCX — 7–10 минут, видео — 10–12 минут («может, 12»). На странице оставлены оба значения.</li>
+              <li><strong>Температура и время основы:</strong> DOCX — 10–12 минут при 155–160 °C, видео — 160 °C конвекция, 10 минут. Это согласуется.</li>
+              <li><strong>Лимонная кислота в конфи:</strong> DOCX — 2 г, на видео — «четверть чайной ложки». Граммовка из DOCX, словесный ориентир — из видео.</li>
+              <li><strong>Пробел:</strong> не указано, сколько конфи и крема идёт в один тарт по весу; автор раскладывает на глаз и по высоте.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_07 (около 00:03:05) с готовыми тартами.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

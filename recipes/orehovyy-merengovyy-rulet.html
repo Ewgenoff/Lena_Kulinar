@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ореховый меренговый рулет с малиной — пошаговый рецепт | CookBook</title>
+  <meta name="description" content="Ореховый меренговый рулет Надежды Зубовой: французская меренга на 280 г белка, фисташковая крошка и кукурузный крахмал, выпечка 30 минут при 150 °C. Крем из маскарпоне и сливок, малина внутри, декор ягодами.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="orehovyy-merengovyy-rulet">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Ореховый меренговый рулет с малиной</h1>
+      <p class="recipe-lead">
+        Рулет на французской меренге: сахара здесь меньше классической пропорции 1:2, поэтому пласт остаётся эластичным и сворачивается без трещин. В тесто идёт крупная ореховая крошка и кукурузный крахмал вместо муки, внутри — крем из маскарпоне и сливок с малиной. Снаружи рулет припудривают и украшают ягодами.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~15 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~50 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Выпечка 30 мин, остывание, стабилизация 30–60 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~2 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 рулет ≈1,2–1,4 кг</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/orehovyy-merengovyy-rulet.jpg" alt="Ореховый меренговый рулет, припудренный сахарной пудрой, с клубникой и малиной сверху, на деревянной доске" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 рулет)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">рулет</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — один рулет на противень 30 × 40 см. Пласт распределяют слоем около 1 см; готовый рулет весит примерно 1,2–1,4 кг.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> рулет</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на пласт и крем. Белки удобнее покупать в упаковке — их нужно 280 г, это примерно 9–10 белков от яиц С1. Орехи берите очищенные и обжаренные; маскарпоне — плотный, не «крем-чиз».
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное и яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="10" data-unit="шт." data-piece="true">10 шт.</span>
+                <span class="shopping-hint">Нужно 280 г белка ≈ 9–10 яиц; желтки останутся — пустите их на другой десерт</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Маскарпоне</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Если пачка 300 г — автор советует класть все 300</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 33 %</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Холодные, прямо из холодильника</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌰 Орехи, ягоды, бакалея</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Орехи очищенные обжаренные</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Фисташка, грецкий, кешью, фундук или миндаль; 80 г в тесто и 20 г на посыпку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кукурузный крахмал</strong>:
+                <span class="shopping-qty" data-base-amount="40" data-unit="г">40 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="320" data-unit="г">320 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">В крем, просеянная; ещё немного на посыпку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Малина свежая</strong>:
+                <span class="shopping-qty" data-base-amount="120" data-unit="г">120 г</span>
+                <span class="shopping-hint">Внутрь рулета; замороженная не подойдёт — потечёт</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ягоды для декора</strong> — клубника, малина
+                <span class="shopping-hint">По вкусу; срезы обрабатывают нейтральным гелем</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ванильная паста</strong> — по вкусу
+                <span class="shopping-hint">В меренгу за 3 минуты до конца взбивания</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — два листа пергамента 30 × 40, решётка или второй противень, ручной миксер, кондитерский мешок
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Меренговый пласт</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="280" data-unit="г">280 г</span> — Белок
+              <span class="ingredient-note">Комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="320" data-unit="г">320 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Орехи в тесто
+              <span class="ingredient-note">Крупная крошка; у автора фисташка</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Крахмал кукурузный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Ванильная паста — по вкусу
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Маскарпоне
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Сливки 30–33 %
+              <span class="ingredient-note">Холодные</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахарная пудра
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка и декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Малина свежая
+              <span class="ingredient-note">Внутрь рулета</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Орехи на посыпку
+              <span class="ingredient-note">Из общего веса 100 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Ягоды для украшения — по вкусу
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Сахарная пудра — для посыпки
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Духовка и подготовка</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Духовку включите заранее: 150 °C с конвекцией, без конвекции — 160 °C верх-низ, в газовой — 160 °C на среднем огне. Противень 30 × 40 застелите хорошим пергаментом; смазывать его не нужно.
+                <span class="source-badge">⏱ Урок_01: 00:11:30–00:13:13</span>
+              </p>
+              <div class="warning-box">
+                <strong>Бумага должна быть плотной:</strong> на плохом пергаменте пласт прилипнет, и снять его целым не получится.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>150 °C, конвекция</strong></span>
+              <span class="param-pill">📐 Противень: <strong>30 × 40 см</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Начало взбивания белков</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Отделите 280 г белка — рецепт весовой, количество яиц автор не считает. Белки должны быть комнатной температуры, без капли желтка. Взбивайте на минимальной скорости 1–2 минуты, пока белок не отдаст воду и не начнёт напитываться воздухом, затем переключите на максимум до появления рисунка — жидкости на дне миски быть не должно.
+                <span class="source-badge">⏱ Урок_01: 00:19:20–00:29:11</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сахар пока не добавлять:</strong> если всыпать его сразу, он растворится, «птичий клюв» не получится, и пласт осядет.
+              </div>
+              <div class="tip-box">
+                <strong>Про желток и воду:</strong> влажный желток недопустим, но капля воды около 20 г делу не повредит. Лимонную кислоту и соль не используем.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚙️ Первый этап: <strong>Минимум, 1–2 мин</strong></span>
+              <span class="param-pill">⚙️ Второй: <strong>Максимум до рисунка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Сахар в два приёма</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Введите первую половину сахара — 160 г — и взбивайте до блеска и эластичности. Затем вторую половину, ещё 160 г, и продолжайте на максимальной скорости до стоячих пиков. Промежуточные стадии: сначала свисает «птичий клюв», потом он едва загибается, в финале пик стоит вертикально и не клонится. За 3 минуты до конца добавьте ванильную пасту.
+                <span class="source-badge">⏱ Урок_01: 00:29:12–00:39:52</span>
+              </p>
+              <div class="warning-box">
+                <strong>Готовую меренгу не ждут:</strong> больше ~10 минут она не стоит — белок сжимается и отдаёт влагу.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍬 Сахар: <strong>160 + 160 г</strong></span>
+              <span class="param-pill">🔍 Финал: <strong>Стоячие пики</strong></span>
+              <span class="param-pill">🌡 Белки: <strong>Комнатной температуры</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Орехи и крахмал</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Из 100 г орехов 80 г отправьте в меренгу, 20 г отложите на посыпку внутри рулета. Туда же всыпьте кукурузный крахмал (40 г) и перемешайте лопаткой: врезайтесь ребром в середину, проведите по дну и выведите массу наверх — быстро.
+                <span class="source-badge">⏱ Урок_01: 00:43:54–00:46:14</span>
+              </p>
+              <div class="warning-box">
+                <strong>Только лопаткой:</strong> миксером тесто не мешают — оно осядет. Крахмал здесь вместо муки и отвечает за эластичность «псевдобисквита».
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌰 Орехи: <strong>80 г в тесто, 20 г на посыпку</strong></span>
+              <span class="param-pill">🌽 Крахмал: <strong>40 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Выкладка и выпечка</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Распределите массу по пергаменту ровным слоем около 1 см — лопаткой или палеткой, без перекосов. Выпекайте 30 минут при 150 °C с конвекцией. Электрическая духовка — противень посередине, газовая — максимально вверх. Первые полчаса дверцу не открывать.
+                <span class="source-badge">⏱ Урок_01: 00:46:15–00:48:51</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не открывать:</strong> от перепада температуры меренга осядет.
+              </div>
+              <div class="tip-box">
+                <strong>Признаки готовности:</strong> пласт пышный, сверху хрустящая корочка, внутри не сырой. Недопёк — добавьте 10 минут, затем по 5.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Толщина: <strong>~1 см</strong></span>
+              <span class="param-pill">⏱ Время: <strong>30 мин</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>150 °C, конвекция</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Переворот и снятие бумаги</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Заранее приготовьте второй лист пергамента и решётку или второй противень. Горячий пласт накройте бумагой, сверху — решёткой и переверните, затем снимите верхний противень. Бумагу снимайте не сразу, а когда корж «отойдёт»: наклоните лист и тихонько потяните на себя, не сдёргивая вверх.
+                <span class="source-badge">⏱ Урок_02: 00:01:56–00:03:04</span>
+                <span class="source-badge">⏱ Урок_02: 00:15:28–00:16:13</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не вверх, а вбок:</strong> резкое движение рвёт пласт. Корж должен полностью остыть, прежде чем на него пойдёт крем.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📄 Бумага: <strong>Снимать после остывания</strong></span>
+              <span class="param-pill">📏 Толщина после выпечки: <strong>~1 см</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Крем из маскарпоне и сливок</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Маскарпоне (250 г) соедините с просеянной пудрой (100 г) и перемешайте на небольшой скорости — быстро, не взбивая долго. Сдвиньте сыр в сторону и в той же миске взбейте холодные сливки (250 г): сразу на большой скорости, до плотного состояния. Затем соедините сыр и сливки миксером не на максимуме до густоты и сразу остановитесь.
+                <span class="source-badge">⏱ Урок_02: 00:13:20–00:21:08</span>
+              </p>
+              <div class="warning-box">
+                <strong>Маскарпоне не взбивать на максимуме:</strong> свернётся в масло. Сливки, наоборот, взбивают сразу на высокой скорости, иначе они могут не взбиться вовсе.
+              </div>
+              <div class="tip-box">
+                <strong>Всё холодное:</strong> и посуда, и сливки — из холодильника.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧀 Маскарпоне: <strong>250 г</strong></span>
+              <span class="param-pill">🥛 Сливки: <strong>250 г, холодные</strong></span>
+              <span class="param-pill">🍬 Пудра: <strong>100 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Сборка и закрутка</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Распределите крем по всему пласту, присыпьте оставшимися 20 г орехов и выложите малину полосой по центру — ягода за ягодой, не вдавливая. Сворачивайте, поднимая край пергамента, начиная от первой ягоды, формируя круглый рулет; малину не мните. Хрустящая сторона в итоге окажется снаружи.
+                <span class="source-badge">⏱ Урок_02: 00:31:33–00:39:26</span>
+              </p>
+              <div class="warning-box">
+                <strong>Горячий корж мазать нельзя:</strong> крем поплывёт.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍓 Малина: <strong>120 г, полосой по центру</strong></span>
+              <span class="param-pill">🌰 Орехи: <strong>20 г на посыпку</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Стабилизация и обрезка</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Уберите рулет в холодильник на 30–60 минут — иначе срез будет некрасивым. Затем обрежьте торцы ровным ножом.
+                <span class="source-badge">⏱ Урок_02: 00:39:36–00:40:30</span>
+                <span class="source-badge">⏱ Урок_02: 00:49:14–00:50:36</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">❄️ Холодильник: <strong>30–60 мин</strong></span>
+              <span class="param-pill">🔪 Торцы: <strong>Обрезать</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Декор</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Припудрьте рулет сахарной пудрой, выложите ягоды — малину, клубнику. Срезы клубники и инжира обработайте нейтральным гелем, целые ягоды не трогайте. Ягоды можно посадить на каплю шоколада или на ложку крема.
+                <span class="source-badge">⏱ Урок_02: 00:55:02–01:06:26</span>
+              </p>
+              <div class="warning-box">
+                <strong>Ягоды не мыть:</strong> только протирать влажной тряпкой. Замороженные внутрь не кладут — они дают воду.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍓 Декор: <strong>Клубника, малина</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>72 ч в холодильнике</strong></span>
+              <span class="param-pill">🧊 Морозилка: <strong>До 30 дней</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Меньше сахара:</strong> 320 г на 280 г белка вместо классических 1:2 — поэтому пласт эластичный и сворачивается.</li>
+                <li><strong>Сахар только по рисунку:</strong> иначе масса осядет.</li>
+                <li><strong>Тёплые белки:</strong> держат форму лучше холодных.</li>
+                <li><strong>Крахмал вместо муки:</strong> даёт «псевдобисквиту» эластичность.</li>
+                <li><strong>Лопатка, а не миксер:</strong> на финальном вмешивании.</li>
+                <li><strong>Сливки сразу на максимум:</strong> иначе могут не взбиться.</li>
+                <li><strong>Маскарпоне, не крем-чиз:</strong> с меренгой вкус складывается только так.</li>
+                <li><strong>Лучший вкус:</strong> через 5–6 часов; хрусткость держится 24–48 часов.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Сахар сразу в белок:</strong> «клюв» не выходит, пласт оседает.</li>
+                <li><strong>Открыть духовку в первые полчаса:</strong> меренга падает.</li>
+                <li><strong>Перевзбить сливки:</strong> они уменьшаются в объёме и идут хлопьями.</li>
+                <li><strong>Взбивать маскарпоне на максимуме:</strong> сыр сворачивается в масло.</li>
+                <li><strong>Сдёрнуть бумагу вверх:</strong> пласт рвётся.</li>
+                <li><strong>Мазать крем на горячий корж:</strong> крем течёт.</li>
+                <li><strong>Замороженная малина внутрь:</strong> вода разрушает меренгу.</li>
+                <li><strong>Резать без стабилизации:</strong> срез получается смазанным.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и подача</h4>
+              <ul>
+                <li><strong>Холодильник:</strong> 72 часа.</li>
+                <li><strong>Морозилка:</strong> до 30 дней, разморозка 1,5–2 часа в холодильнике.</li>
+                <li><strong>Лучший вкус:</strong> через 5–6 часов после сборки.</li>
+                <li><strong>Подача:</strong> нарезать толстыми ломтями, ягоды и пудра сверху.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Орехи:</strong> фисташка, грецкий, кешью, фундук, миндаль — на выбор.</li>
+                <li><strong>Маскарпоне:</strong> пачка 300 г — кладите все 300.</li>
+                <li><strong>Начинка:</strong> вместо свежей малины — конфи: 200 г пюре малины, 60–80 г сахара и 8 г быстрорастворимого желатина на 40 г воды.</li>
+                <li><strong>Декор:</strong> клубника, малина, пророщенный горошек вместо мяты.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 — подготовка, взбивание меренги, орехи и крахмал, выкладка и выпечка (00:11:30–00:48:51); Урок_02.mp4 — переворот, крем, сборка, стабилизация и декор (00:01:56–01:06:26); DOCX «Ореховый меренговый рулет» — граммовки.</li>
+              <li><strong>Маскарпоне:</strong> в DOCX 250 г, в видео автор оговаривается «по-моему, 300» и тут же поправляется — 250 г, но если пачка 300 г, кладут всё.</li>
+              <li><strong>Сливки:</strong> в DOCX «30 % или больше», в речи — 33 %.</li>
+              <li><strong>Орехи:</strong> DOCX даёт 100 г общим весом, деление 80/20 (тесто/посыпка) есть только в видео.</li>
+              <li><strong>Ваниль и конфи:</strong> в DOCX отсутствуют, есть только в видео; конфи — 200 г пюре, 60–80 г сахара, 8 г желатина, 40 г воды.</li>
+              <li><strong>Режим выпечки:</strong> в DOCX не указан вовсе; в видео — 30 минут при 150 °C с конвекцией.</li>
+              <li><strong>Пробелы:</strong> количество яиц не считается (только вес белка); точный вес готового рулета назван приблизительно — 1,2–1,4 кг.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_02.mp4 (около 01:05:30): рулет с ягодами на доске.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

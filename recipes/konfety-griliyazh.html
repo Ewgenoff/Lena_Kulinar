@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конфеты «Грильяж» — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Грильяжные конфеты Надежды Зубовой: крупно рубленые обжаренные фундук и миндаль в сахарной корочке-сабляже, вафельная крошка, воздушный рис и темперированный тёмный шоколад. Обсыпка какао, 26–30 конфет, хранение 2 месяца.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="konfety-griliyazh">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Конфеты и сладости</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Конфеты «Грильяж»</h1>
+      <p class="recipe-lead">
+        Брутальный грильяж на крупно рубленых орехах: фундук и миндаль сначала покрывают тонкой матовой сахарной корочкой — саблируют в сиропе, сваренном до 115 °C, — а затем смешивают с вафельной крошкой, воздушным рисом и темперированным тёмным шоколадом. Конфеты лепят, пока масса не застыла, и обваливают в какао. Сладость здесь намеренно сдержанная, зато хруст слышно на весь стол.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~15 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~50 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Саблирование и темперирование, стабилизация 2 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~3 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">26–30 конфет</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/konfety-griliyazh.jpg" alt="Грильяжные конфеты, обвалянные в какао, рядами на противне, затянутом плёнкой" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (28 конфет)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="28">28</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">конфет</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — 28 конфет: автор говорит о 26–30 штуках из этой партии. Вес одной конфеты не отвешивается — ориентируются на размер трюфеля.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">28</span> конфет</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на грильяжную массу и обсыпку. Орехи берите уже очищенные и обжаренные — или обжарьте сами. Для темперирования нужны два вида какао-масла: калеты и порошок Mycryo.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Шоколад и какао-масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Тёмный шоколад 54 %</strong>:
+                <span class="shopping-qty" data-base-amount="125" data-unit="г">125 г</span>
+                <span class="shopping-hint">72 % автор считает слишком брутальным — не хватает сладости</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао-масло в калетах</strong>:
+                <span class="shopping-qty" data-base-amount="6" data-unit="г">6 г</span>
+                <span class="shopping-hint">В растопленный шоколад, для текучести</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао-масло Mycryo (порошок)</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="г">2 г</span>
+                <span class="shopping-hint">1 % от веса шоколада; удобнее отвесить 2 г, чем 1,5</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао-порошок для обсыпки</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">С запасом: конфеты обваливают и присыпают сверху</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌰 Орехи, вафли, рис</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Фундук обжаренный очищенный</strong>:
+                <span class="shopping-qty" data-base-amount="75" data-unit="г">75 г</span>
+                <span class="shopping-hint">Крупно порубить ножом, не в блендере</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Миндаль обжаренный</strong>:
+                <span class="shopping-qty" data-base-amount="75" data-unit="г">75 г</span>
+                <span class="shopping-hint">Крупно порубить; пропорция с фундуком — на вкус</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Вафельная крошка</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">Можно заменить воздушным рисом</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Воздушный рис</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="40" data-unit="г">40 г</span>
+                <span class="shopping-hint">В сироп для сабляжа</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong> — щепотка
+                <span class="shopping-hint">В хрустящую смесь</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — термометр, весы, перчатки, бумажные полотенца, противень и плёнка
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Саблированные орехи</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Орехи обжаренные рубленые
+              <span class="ingredient-note">Фундук и миндаль, крупно, ножом</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Вода
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Грильяжная масса</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Вафельная крошка
+              <span class="ingredient-note">Или заменить воздушным рисом</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Воздушный рис
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Щепотка — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Тёмный шоколад 54 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="6" data-unit="г">6 г</span> — Какао-масло в калетах
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Какао-масло Mycryo
+              <span class="ingredient-note">1 % от веса шоколада</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Для обсыпки</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Какао-порошок — сколько уйдёт
+              <span class="ingredient-note">Обвалять и присыпать сверху</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка орехов</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Орехи должны быть обжаренными и крупно порубленными — именно ножом, а не в блендере. Прогрейте их в микроволновке: орехи долго держат температуру, и горячими они пойдут в сироп.
+                <span class="source-badge">⏱ Урок_01: 00:00:11–00:01:24</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем прогревать:</strong> горячий орех мгновенно покрывается сиропом, а холодный резко снижает его температуру и корочка ложится неравномерно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌰 Орехи: <strong>150 г, крупно</strong></span>
+              <span class="param-pill">♨️ Прогрев: <strong>В микроволновке</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Сироп до 115 °C</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                В сотейник налейте воду (120 г) и всыпьте сахар (40 г). Нагревайте до 115 °C — к этому моменту почти вся вода испарится. Термометром можно касаться дна сотейника, иначе температуру не измерить.
+                <span class="source-badge">⏱ Урок_01: 00:01:05–00:02:00</span>
+              </p>
+              <div class="warning-box">
+                <strong>Меньшую порцию не сварить:</strong> автор подчёркивает это отдельно — сиропа должно быть достаточно, чтобы термометр и орехи в нём работали.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сироп: <strong>115 °C</strong></span>
+              <span class="param-pill">⏱ Время: <strong>~7 мин</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Сабляж орехов</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                На 115 °C выключите нагрев и сразу всыпьте горячие орехи. Интенсивно перемешивайте, чтобы сироп покрыл их со всех сторон. Орехи покроются матовой белой корочкой и начнут «звенеть»; на дне сотейника тоже образуется матовая корочка — значит, задача выполнена. Остудите до комнатной температуры.
+                <span class="source-badge">⏱ Урок_01: 00:02:00–00:02:57</span>
+              </p>
+              <div class="tip-box">
+                <strong>Где ещё пригодится:</strong> так же саблируют орехи для торта — они не размокают в креме.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак: <strong>Матовая корочка и звон</strong></span>
+              <span class="param-pill">🌡 Остудить: <strong>До комнатной</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Темперирование шоколада с Mycryo</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Тёмный шоколад с какао-маслом в калетах растопите в микроволновке пульсами до 45–50 °C (в видео — до 46 °C). Не перемешивая, дайте остыть до 35–36 °C, затем добавьте какао-масло Mycryo — 1 % от веса шоколада — и активно перемешивайте до рабочей температуры 31–32 °C.
+                <span class="source-badge">⏱ Урок_01: 00:02:57–00:04:56</span>
+              </p>
+              <div class="warning-box">
+                <strong>Перегрели — начинайте заново:</strong> если шоколад ушёл выше рабочей температуры, темперирование придётся повторить с нуля.
+              </div>
+              <div class="tip-box">
+                <strong>Почему Mycryo:</strong> самый быстрый способ; весы при отвешивании не сбрасывайте — малый вес иначе не поймать.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Растопить: <strong>45–50 °C</strong></span>
+              <span class="param-pill">🌡 Остудить: <strong>35–36 °C</strong></span>
+              <span class="param-pill">🌡 Рабочая: <strong>31–32 °C</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Хрустящая смесь</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                К остывшим саблированным орехам добавьте вафельную крошку (15 г), воздушный рис (15 г) и щепотку соли. Перемешайте — масса должна быть очень хрустящей и «звонкой».
+                <span class="source-badge">⏱ Урок_01: 00:04:56–00:05:19</span>
+              </p>
+              <div class="tip-box">
+                <strong>Соль:</strong> её добавляют в сухую смесь сразу, чтобы не забыть, — она подчёркивает шоколад.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧇 Вафля: <strong>15 г</strong></span>
+              <span class="param-pill">🍚 Рис: <strong>15 г</strong></span>
+              <span class="param-pill">🧂 Соль: <strong>Щепотка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Смешивание с шоколадом</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Отправьте темперированный шоколад в хрустящую массу и тщательно перемешайте. Масса получается насыщенной, ореховой и очень красивой.
+                <span class="source-badge">⏱ Урок_01: 00:05:22–00:06:26</span>
+              </p>
+              <div class="warning-box">
+                <strong>Формировать в тот же день:</strong> ждать следующего дня нельзя — масса застынет и конфеты не слепить.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Шоколад: <strong>125 г, темперированный</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Формирование конфет</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Пока масса не застыла, берите кусочек, сжимайте в кулаке — так она слепляется и сразу получает форму, — затем докатывайте в ладонях до размера трюфеля. Работайте в перчатках; при горячих руках надевайте две пары. Загрязнённые перчатки протирайте бумажным полотенцем, а не мойте.
+                <span class="source-badge">⏱ Урок_02: 00:00:01–00:00:29</span>
+              </p>
+              <div class="tip-box">
+                <strong>Весы:</strong> поначалу раскладывайте массу на весах, чтобы понять, сколько брать ложкой; дальше можно «на глаз».
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧤 Перчатки: <strong>Обязательно</strong></span>
+              <span class="param-pill">⚖️ Размер: <strong>С трюфель</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Обсыпка и стабилизация</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Обваляйте конфеты в какао и присыпьте сверху. Оставьте при комнатной температуре на 40–60 минут, затем прокатайте ещё раз — поверхность станет ровнее. После этого стабилизируйте 2 часа при комнатной температуре, плёнкой не накрывайте.
+                <span class="source-badge">⏱ Урок_02: 00:00:31–00:01:29</span>
+              </p>
+              <div class="warning-box">
+                <strong>Плёнкой не закрывать:</strong> конденсат испортит какао-обсыпку.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Первый отдых: <strong>40–60 мин</strong></span>
+              <span class="param-pill">⏱ Стабилизация: <strong>2 ч</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>2 месяца в холодильнике</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Крупный помол:</strong> орехи рубят ножом, чтобы в конфете чувствовался кусок.</li>
+                <li><strong>Горячие орехи в горячий сироп:</strong> корочка ложится ровно и держится.</li>
+                <li><strong>Саблирование:</strong> приём годится и для тортов — орехи не размокают в креме.</li>
+                <li><strong>Сахар 40 г на 120 г воды:</strong> сироп уваривается почти досуха, поэтому сахара немного.</li>
+                <li><strong>Mycryo 1 %:</strong> быстрый способ темперирования, не требующий мраморной доски.</li>
+                <li><strong>Шоколад 54 %:</strong> с 72 % конфеты получаются слишком брутальными и несладкими.</li>
+                <li><strong>Сжимать в кулаке:</strong> так масса лучше слепляется и сразу держит форму.</li>
+                <li><strong>Второй прокат:</strong> через 40–60 минут конфеты становятся глаже.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Холодные орехи:</strong> сироп резко остывает, корочка ложится пятнами.</li>
+                <li><strong>Недоваренный сироп:</strong> корочка не образуется, орехи остаются липкими.</li>
+                <li><strong>Перегретый шоколад:</strong> темперирование сбито, покрытие не застынет глянцем.</li>
+                <li><strong>Отложить формирование:</strong> застывшую массу уже не слепить.</li>
+                <li><strong>Мокрые перчатки:</strong> влага и шоколад несовместимы — перчатки протирают, а не моют.</li>
+                <li><strong>Накрыть плёнкой на стабилизации:</strong> какао отсыревает.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и подача</h4>
+              <ul>
+                <li><strong>Хранение:</strong> 2 месяца в холодильнике.</li>
+                <li><strong>Подача:</strong> к кофе и чаю, как самостоятельная конфета или в подарочной коробке.</li>
+                <li><strong>Температура:</strong> перед подачей дайте конфетам согреться 10–15 минут при комнатной температуре — вкус раскроется ярче.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Орехи:</strong> фундук и миндаль; пропорция — на вкус.</li>
+                <li><strong>Вафельная крошка:</strong> полностью заменяется воздушным рисом.</li>
+                <li><strong>Шоколад:</strong> 54 % — оптимум; молочный сделает конфеты слаще.</li>
+                <li><strong>Обсыпка:</strong> какао; можно смешать с сахарной пудрой.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 — подготовка орехов, сироп и сабляж, темперирование и смешивание (00:00:01–00:06:26); Урок_02.mp4 — формирование, обсыпка и стабилизация (00:00:01–00:01:29); DOCX «Конфеты_Грильяж» — граммовки и сроки.</li>
+              <li><strong>Температуры темперирования:</strong> в видео автор называет 45–50 °C для растопки, 35–36 °C перед Mycryo и 31–32 °C рабочей; в DOCX общая схема 40–45 → 35 → 31–32. На странице — значения из видео.</li>
+              <li><strong>Шоколад:</strong> в DOCX указан 54 %, с примечанием, что 72 % автору показался слишком брутальным.</li>
+              <li><strong>Выход:</strong> 26–30 конфет; на странице база — 28.</li>
+              <li><strong>Покрытие:</strong> в Урок_03 показано покрытие трюфелей шоколадом, но грильяж по рецепту остаётся в какао и дополнительного корпуса не требует.</li>
+              <li><strong>Пробелы:</strong> вес одной конфеты не назван; количество какао для обсыпки не отвешивается; точное время саблирования зависит от плиты.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_02.mp4 (около 00:01:25): грильяжные конфеты в какао на противне.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

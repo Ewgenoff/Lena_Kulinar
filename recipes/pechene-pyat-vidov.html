@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Печенье: пять видов — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Пять видов печенья с одного вебинара Надежды Зубовой: заварное медовое, матча-лимон с рулетом, венское сабле с домашней нутеллой, солёный крекер с пармезаном и шоколадно-ореховое с арахисовой пастой. Плюс рецепты нутеллы и ириски из маракуйи.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="pechene-pyat-vidov">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Печенье: пять видов</h1>
+      <p class="recipe-lead">
+        Пять разных техник за один вечер: заварное медовое тесто, рубленое масляное с матчей и лимоном, взбитое венское сабле с фундучной мукой, холодный солёный крекер с пармезаном и шоколадно-ореховое с арахисовой пастой. Всё печётся при 160–170 °C, различаются только толщина раскатки, время и способ формовки. В комплекте — домашняя нутелла для сабле и ириска из маракуйи для глазирования.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~40 мин: взвесить всё заранее</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~2 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Охлаждение теста 30–60 мин, заморозка рулетов, выпечка партиями по 7–20 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~3 ч 30 мин — 4 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">5 видов печенья + нутелла и ириска</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/pechene-pyat-vidov.jpg" alt="Ассортимент готового печенья на столе: шоколадно-ореховые батончики с полосками шоколада, рулетики с зелёной спиралью матчи и венское сабле, сложенное попарно с ореховой начинкой" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 комплект)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">комплект</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — один комплект: пять видов печенья по рецептуре автора, домашняя нутелла и ириска из маракуйи. Пересчёт пропорциональный: два комплекта — это двойная закладка каждого вида. Автор советует в первый раз брать не больше двух видов за один заход.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Показать источники (видео-таймкоды)</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> комплект</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+      </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммы на все пять видов сразу. Масло — только 82,5 %, и его много: 625 г на тесто и начинки. Отдельно проверьте, что в доме есть весы: рецепты автор считает в граммах, а не в стаканах.
+      </p>
+
+        <div class="shopping-grid">
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🧈 Масло, яйца, молочное</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Масло сливочное 82,5 %</strong>:
+                  <span class="shopping-qty" data-base-amount="625" data-unit="г">625 г</span>
+                  <span class="shopping-hint">50 г в медовое, 125 г в матча, 160 г в сабле, 120 г в крекер, 100 г в шоколадное, 20 г в нутеллу, 50 г в ириску</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Яйца куриные</strong>:
+                  <span class="shopping-qty" data-base-amount="5" data-unit="шт." data-piece="true">5 шт.</span>
+                  <span class="shopping-hint">60 г (С0) в медовое, 50 г в матча, 50 г в шоколадное, 30 г желтка в крекер, 30 г белка в сабле</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сливки 33–35 %</strong>:
+                  <span class="shopping-qty" data-base-amount="90" data-unit="г">90 г</span>
+                  <span class="shopping-hint">50 г в нутеллу, 40 г в ириску</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Молоко</strong> — только для подачи
+                  <span class="shopping-hint">Автор советует деткам печенье с молоком; в рецептуру не входит</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🧂 Бакалея, орехи, шоколад</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Мука пшеничная в/с</strong>:
+                  <span class="shopping-qty" data-base-amount="785" data-unit="г">785 г</span>
+                  <span class="shopping-hint">300 г матча + 200 г сабле + 135 г крекер + 150 г шоколадное; мука для медового не учтена — её граммовка в вебинаре не названа</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахарная пудра</strong>:
+                  <span class="shopping-qty" data-base-amount="255" data-unit="г">255 г</span>
+                  <span class="shopping-hint">90 г матча + 75 г сабле + 90 г крекер-ориентир; в крекере количество не названо</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахар-песок</strong>:
+                  <span class="shopping-qty" data-base-amount="415" data-unit="г">415 г</span>
+                  <span class="shopping-hint">90 г медовое + 75 г шоколадное + 175 г ириска; плюс 75 г коричневого отдельно</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахар тростниковый коричневый</strong>:
+                  <span class="shopping-qty" data-base-amount="75" data-unit="г">75 г</span>
+                  <span class="shopping-hint">В шоколадно-ореховое печенье</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Мёд</strong>:
+                  <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                  <span class="shopping-hint">30 г в матча; в медовое печенье мёд идёт без граммовки — берите с запасом, инвертный сахар меняется 1:1</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Шоколад молочный 33,6 %</strong>:
+                  <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                  <span class="shopping-hint">В нутеллу; процент важен — от него зависит консистенция</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Шоколад</strong>:
+                  <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                  <span class="shopping-hint">В шоколадно-ореховое печенье — каллеты или рубленая плитка</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Пралине фундучное</strong>:
+                  <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                  <span class="shopping-hint">В нутеллу; замена — урбеч или рубленый обжаренный фундук</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Фундук обжаренный</strong>:
+                  <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                  <span class="shopping-hint">Смолоть в фундучную муку для сабле; можно не чистить — даст крапины</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Арахисовая паста</strong>:
+                  <span class="shopping-qty" data-base-amount="25" data-unit="г">25 г</span>
+                  <span class="shopping-hint">Из жареного арахиса; замена — любая ореховая паста или рубленый орех</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Матча</strong>:
+                  <span class="shopping-qty" data-base-amount="2" data-unit="ч. л.">2 ч. л.</span>
+                  <span class="shopping-hint">С горкой, это примерно столовая ложка; нужен именно порошок зелёного чая</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Лимон</strong>:
+                  <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                  <span class="shopping-hint">Крупный: 25 г сока + 1 ст. л. в пасту и цедра половины плода</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Пармезан</strong> — натёртый
+                  <span class="shopping-hint">Количество в вебинаре не названо; нужен именно твёрдый солёный сыр</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Пюре маракуйи</strong>:
+                  <span class="shopping-qty" data-base-amount="160" data-unit="г">160 г</span>
+                  <span class="shopping-hint">Готовое пюре; свежая маракуйя в наших условиях выходит слишком дорого</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сироп глюкозы</strong>:
+                  <span class="shopping-qty" data-base-amount="75" data-unit="г">75 г</span>
+                  <span class="shopping-hint">Даёт ириске тягучесть и продлевает её жизнь</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Крахмал кукурузный</strong>:
+                  <span class="shopping-qty" data-base-amount="20" data-unit="г">20 г</span>
+                  <span class="shopping-hint">В крекер с пармезаном</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Разрыхлитель</strong>:
+                  <span class="shopping-qty" data-base-amount="9" data-unit="г">9 г</span>
+                  <span class="shopping-hint">1 г в матча + 8 г в шоколадное</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сода</strong>:
+                  <span class="shopping-qty" data-base-amount="0.5" data-unit="ч. л.">0,5 ч. л.</span>
+                  <span class="shopping-hint">В заварную медовую основу, гасится кислотой мёда</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Соль</strong> — по рецептам
+                  <span class="shopping-hint">1 г в матча, 1 г в сабле, 3 г в крекер, щепоть в шоколадное, 2 г в ириску</span>
+                </div>
+              </li>
+              <li class="shopping-item" style="border-style: dashed;"><div class="shopping-item-content">
+                  <strong>Конфитюр или варенье (опционально)</strong>
+                  <span class="shopping-hint">Для начинки медовых чашечек; у автора малиновый</span>
+                </div>
+              </li>
+              <li class="shopping-item" style="border-style: dashed;"><div class="shopping-item-content">
+                  <strong>Шоколад горький 70 % (опционально)</strong>
+                  <span class="shopping-hint">Обмакнуть край крекера; темперировать не нужно</span>
+                </div>
+              </li>
+              <li class="shopping-item" style="border-style: dashed;"><div class="shopping-item-content">
+                  <strong>Закуски к крекеру (опционально)</strong> — творожный сыр, зелень, паштет, красная рыба, икра, каперсы
+                  <span class="shopping-hint">Крекер с пармезаном — основа для закусочных</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Расходники</strong> — пергамент, весы, кондитерский мешок, звёздчатая насадка 8 мм, выемки, мини-форма для микрокапкейков, фасоль или горох для груза
+                  <span class="shopping-hint">Перфорированные коврики — по желанию, для рисунка на крекере</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">1. Медовое печенье (заварное)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="90" data-unit="г">90 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Яйцо
+              <span class="ingredient-note">Категории С0; яйца другой категории — по весу</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Мёд — количество не названо
+              <span class="ingredient-note">Автор подогревает мёд, чтобы легче вылить; заменяется инвертным сахаром 1:1</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Масло сливочное 82,5 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="0.5" data-unit="ч. л.">0,5 ч. л.</span> — Сода
+              <span class="ingredient-note">Вводится в горячую массу сразу после кипения</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Мука пшеничная — количество не названо
+              <span class="ingredient-note">Вводится в остывшую заварную основу; больше положенного не добавлять</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Специи
+              <span class="ingredient-note">Корица, мускатный орех, молотый чёрный перец</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">2. Чай с лимоном (матча)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Масло сливочное 82,5 %
+              <span class="ingredient-note">Размягчённое, взбивается с пудрой</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="90" data-unit="г">90 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Сок лимона
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Мёд
+              <span class="ingredient-note">Подогретый, чтобы легче отмерить</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Яйцо
+              <span class="ingredient-note">Жидкость для эмульсии, вводится двумя порциями по 25 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Мука пшеничная
+              <span class="ingredient-note">С разрыхлителем и солью</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="г">1 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="г">1 г</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Цедра — с половины крупного лимона
+              <span class="ingredient-note">Только жёлтая часть, без белого</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">2а. Паста из матчи</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Вода горячая
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="ч. л.">2 ч. л.</span> — Матча
+              <span class="ingredient-note">С горкой, вместо 1 ст. л. с горкой; или 1 ст. л.</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              1 ст. л. — Сок лимона
+              <span class="ingredient-note">В пасту, вместе с яйцом из основного списка</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Пряности
+              <span class="ingredient-note">Корица, ваниль, кориандр — автор не добавляет, ей нравится чистый лимон с матчей</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">3. Венское сабле</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Масло сливочное 82,5 %
+              <span class="ingredient-note">Хорошо размягчённое, но не «масло-помада»</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="75" data-unit="г">75 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Фундучная мука
+              <span class="ingredient-note">Обжаренный фундук, смолотый в блендере; можно миндальной, но это уже другое печенье</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Белок
+              <span class="ingredient-note">С яйца С1, чуть меньше одного белка; 33 г не страшно, 40–42 г — уже страшно</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="г">1 г</span> — Соль
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">4. Крекер с пармезаном</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Масло сливочное 82,5 %
+              <span class="ingredient-note">Холодное, из холодильника — тесто рубится</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="135" data-unit="г">135 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Крахмал кукурузный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Сахарная пудра — количество не названо
+              <span class="ingredient-note">Нужна даже в солёном печенье: даёт цвет корочке</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Пармезан — количество не названо
+              <span class="ingredient-note">Только натёртый: ненатёртый в тесте не раскроется</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Желток
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Вода
+              <span class="ingredient-note">Холодная, вместе с желтком</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">5. Шоколадно-ореховое</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Масло сливочное 82,5 %
+              <span class="ingredient-note">Холодное</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="75" data-unit="г">75 г</span> — Сахар белый
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="75" data-unit="г">75 г</span> — Сахар тростниковый коричневый
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Арахисовая паста
+              <span class="ingredient-note">Из жареного арахиса; замена — фундучная паста, урбеч или рубленый орех</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Яйцо С1
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="8" data-unit="г">8 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Шоколад
+              <span class="ingredient-note">Каллеты или рубленая плитка; примерно полторы плитки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Щепоть — Соль
+              <span class="ingredient-note">Сразу в сахар</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Домашняя нутелла</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Шоколад молочный
+              <span class="ingredient-note">Идеально 33,6 %; если меньше — начинка будет жиже</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сливки 33–35 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Пралине фундучное
+              <span class="ingredient-note">Или урбеч, или рубленый обжаренный фундук</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Масло сливочное
+              <span class="ingredient-note">Размягчённое, в самом конце</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По желанию — Тёмный ром
+              <span class="ingredient-note">Для взрослого варианта начинки</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Ириска из маракуйи</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="175" data-unit="г">175 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Масло сливочное
+              <span class="ingredient-note">Размягчённое</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Сливки
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="75" data-unit="г">75 г</span> — Сироп глюкозы
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Пюре маракуйи
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Соль
+              <span class="ingredient-note">В самом конце, для контраста</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Общие правила и подготовка</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Всё взвесьте заранее: автор подчёркивает, что весы — первое из необходимого оборудования, и все рецепты считаются в граммах, а не в ложках и стаканах. Масло — только 82,5 %: в нём меньше воды, а именно из-за воды масло отсекается на пергаменте и печенье оказывается в луже. Всю выпечку ведут при 160 °C с конвекцией или 170 °C верх-вниз: печенье никогда не печётся так горячо, как коржи. Часть теста охлаждают в холодильнике (около 30 минут, до часа — тоже нормально), часть — в морозилке, чтобы потом резать.
+                <span class="source-badge">⏱ Вебинар: 00:19:28–00:21:46</span>
+                <span class="source-badge">⏱ Вебинар: 01:25:11–01:25:31</span>
+              </p>
+              <div class="warning-box">
+                <strong>Масло 72,5 % не подходит:</strong> почти треть пачки — вода. Из-за неё эмульсия не собирается, тесто течёт, а готовое печенье получается плотным и бледным.
+                <span class="source-badge">⏱ Вебинар: 00:33:27–00:33:42</span>
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> за один заход берите не больше двух видов — пять сразу успевают только те, кто просто смотрит. Остальные рецепты можно повторить на следующий день.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Выпечка: <strong>160 °C конвекция / 170 °C верх-вниз</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Весы, миксер, комбайн-измельчитель</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Медовое: заварная основа</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Смешайте 90 г сахара, 60 г яйца и подогретый мёд. Поставьте на средний огонь и мешайте до однородности — с подогретым мёдом это происходит быстро. Добавьте 50 г сливочного масла и доведите массу до кипения, не переставая мешать: всё, что нагревается с яйцами, склонно пригорать. Снимите с огня и всыпьте ½ ч. л. соды — пойдёт бурная реакция с густой пеной, потому что мёд даёт кислую среду, а сода щелочная. Переложите в миску и уберите в холодильник остывать.
+                <span class="source-badge">⏱ Вебинар: 00:10:12–00:15:52</span>
+              </p>
+              <div class="warning-box">
+                <strong>Муку в горячую массу не сыпать:</strong> сначала основа должна остыть. Только после этого вводится мука, и уже готовое тесто ещё раз уходит в холодильник на стабилизацию.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> мёд заранее прогрейте — иначе он не соединится с яйцом и сахаром. При аллергии на мёд берите инвертный сахар 1:1: результат тот же, только без медового цвета и аромата.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Нагрев: <strong>Средний, до кипения</strong></span>
+              <span class="param-pill">🥄 Сода: <strong>½ ч. л. после снятия с огня</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>Густая пена после соды</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Медовое: мука и стабилизация</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Остывшую массу соедините с мукой и замесите тесто. В вебинаре граммовка муки не названа: ориентир — тесто собирается в комок и перестаёт липнуть к рукам. Больше муки, чем нужно, не добавляйте — от этого тесто грубеет. Готовое тесто уберите в холодильник ещё на 15 минут, после чего с ним можно работать. По желанию добавьте специи: корицу, мускатный орех, немного молотого чёрного перца.
+                <span class="source-badge">⏱ Вебинар: 01:21:36–01:24:07</span>
+                <span class="source-badge">⏱ Вебинар: 01:29:45–01:29:57</span>
+              </p>
+              <div class="warning-box">
+                <strong>Пропорции мёда и муки в этом рецепте не взвешивались на вебинаре</strong> — автор называет только сахар, яйцо, масло и соду. Ориентируйтесь на консистенцию: липкое тесто, которое держит форму после охлаждения.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Холодильник: <strong>15 мин после замеса</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>Не липнет к рукам</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Медовое: формочки и чашечки</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Раскатайте тесто между двумя листами пергамента до 2–3 мм и вырежьте формочками — это тесто прекрасно держит форму. Второй вариант формовки: цветок из теста уложить в смазанную мини-форму для микрокапкейков, лепестки утопить, а в серединку положить фасоль или горох — груз не даст середине подняться, и получится чашечка. Выпекайте при 160 °C с конвекцией (170 °C без) 10–15 минут: мелкие чашечки готовы уже через 7. Груз вынимают только из остывшего печенья.
+                <span class="source-badge">⏱ Вебинар: 01:47:31–01:52:40</span>
+                <span class="source-badge">⏱ Вебинар: 01:58:33–01:59:04</span>
+              </p>
+              <div class="warning-box">
+                <strong>Без груза серединка выпрыгнет:</strong> маленькие чашечки обязательно укрепляют фасолью, иначе вместо корзиночки получится бугор.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> из этого теста выходят и пряники-топперы, и коржи для торта. Хранится оно долго благодаря мёду: на открытом воздухе печенье хрустящее, в закрытом пакете внутри остаётся мягким — раскатывайте потолще, если любите мягкое.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Раскатка: <strong>2–3 мм</strong></span>
+              <span class="param-pill">🌡 Выпечка: <strong>160 °C конвекция, 10–15 мин</strong></span>
+              <span class="param-pill">⏱ Мелкие чашечки: <strong>~7 мин</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Чай с лимоном: масляная база</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                В чашу миксера положите 125 г размягчённого масла, 90 г сахарной пудры, 25 г лимонного сока и 30 г подогретого мёда. Взбивайте сначала на небольшой скорости, чтобы пудра не разлеталась, затем на максимальной — до однородной пышной массы. Сильно побелеть она не сможет: мёд ярко-жёлтый, сок лимона тоже даёт свой оттенок.
+                <span class="source-badge">⏱ Вебинар: 00:21:59–00:27:16</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> сок и мёд добавляются вместе с пудрой — так масло сразу получает всю жидкость будущей эмульсии, а лимон успевает отдать аромат.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Взбивание: <strong>До пышности</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Миксер с чашей</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Чай с лимоном: эмульсия с яйцом</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Яйцо (50 г) — это жидкость, и вводить её нужно двумя порциями по 25 г, каждый раз взбивая до полной однородности. После второй порции масса сначала расслоится: масло будет плавать в жидкости. Продолжайте взбивать — она объединится. Три правила эмульсии: одинаковая температура масла и яйца, постепенное введение и хорошее промешивание после каждой порции.
+                <span class="source-badge">⏱ Вебинар: 00:27:27–00:30:27</span>
+              </p>
+              <div class="warning-box">
+                <strong>Если эмульсия так и не собралась:</strong> поставьте чашу в микроволновку на 5–7 секунд или прогрейте на водяной бане и взбейте снова. Тесто станет жиже — просто подержите его дольше в холодильнике.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> расслоение посередине процесса — это норма, а не ошибка. Ошибка — влить всё яйцо сразу или взять холодное.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Яйцо: <strong>50 г, двумя порциями</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>Однородная масса, масло не плавает</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Чай с лимоном: мука, цедра, холод</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Просейте 300 г муки с 1 г разрыхлителя и 1 г соли, добавьте в масляную массу и перемешивайте на небольшой скорости до крупной крошки. Цедру половины крупного лимона натрите прямо в масло до введения муки — масло хорошо держит эфирные масла и запах. Соберите тесто рукой в комок: оно будет липнуть, и это нормально. Уберите в пакет и в холодильник или морозилку, чтобы схватилось и перестало липнуть.
+                <span class="source-badge">⏱ Вебинар: 00:30:28–00:36:39</span>
+              </p>
+              <div class="warning-box">
+                <strong>Цедра — только жёлтая часть:</strong> белая даёт горечь. И не путайте: соли в этом тесте 1 г, это буквально щепотка для усиления вкуса.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> в морозилке тесто схватывается быстрее, но лучше стабилизировать в холодильнике: перемороженное тесто тяжело раскатывать, приходится ждать, пока отойдёт.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍋 Цедра: <strong>½ крупного лимона</strong></span>
+              <span class="param-pill">⏱ Охлаждение: <strong>~30 мин, до часа</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>Крупная крошка, собралось в комок</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Паста из матчи</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                В 30 г горячей воды всыпьте матчу — 1 ст. л. с горкой или 2 ч. л. с горкой. От горячей воды порошок превращается в кашицу яркого зелёного цвета. Добавьте 1 ст. л. лимонного сока и яйцо (то самое, 50 г из рецепта) и перемешайте до однородности. Матча — это просто очень мелко смолотый чай, поэтому цвет и аромат у пасты очень насыщенные.
+                <span class="source-badge">⏱ Вебинар: 00:36:43–00:42:02</span>
+              </p>
+              <div class="warning-box">
+                <strong>Матчу не заменяют:</strong> на прямой вопрос «чем заменить» автор отвечает — ничем. Если нужен другой вкус, меняют не матчу, а всю формовку.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> пряности в пасту можно добавить — корицу, ваниль, кориандр, — но ей нравится именно чистое сочетание лимона и матчи. Наносите пасту равномерно: от этого зависит красота разреза.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Вода: <strong>30 г, горячая</strong></span>
+              <span class="param-pill">🍵 Матча: <strong>1 ст. л. с горкой</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Чай с лимоном: рулет и нарезка</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Раскатайте тесто между двумя листами пергамента в прямоугольник шириной 20–23 см и толщиной около 8 мм — ровный, одинаковой толщины: для этого катайте сначала в одном направлении, потом в другом. Смажьте всю поверхность пастой из матчи кисточкой, помогая себе бумагой, сверните плотный рулет, подкатывая его по столу, и уберите в морозилку. Замороженный рулет нарежьте ломтиками по 1 см, обрежьте неровные края и выпекайте 15 минут при 160 °C с конвекцией (170 °C без).
+                <span class="source-badge">⏱ Вебинар: 00:43:14–00:51:20</span>
+                <span class="source-badge">⏱ Вебинар: 01:53:29–01:54:22</span>
+                <span class="source-badge">⏱ Вебинар: 02:00:03–02:00:08</span>
+              </p>
+              <div class="warning-box">
+                <strong>Следите за цветом:</strong> печенье не должно потемнеть — оно зелёное, и румянец его только портит. Ориентир — 15 минут, но смотрите по духовке.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> нарезанный рулет можно заморозить и печь по необходимости. При выпечке печенье почти не увеличивается: разрыхлителя всего 1 г.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Пласт: <strong>8 мм, ширина 20–23 см</strong></span>
+              <span class="param-pill">🔪 Нарезка: <strong>1 см</strong></span>
+              <span class="param-pill">⏱ Выпечка: <strong>15 мин</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Венское сабле: тесто</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                160 г хорошо размягчённого масла взбейте с 75 г сахарной пудры на максимальной скорости до светло-пышной массы. Добавьте 50 г фундучной муки и перемешайте: она почти на 100 % жир, поэтому идёт сразу после масла. Затем понемногу введите 30 г белка — это жидкость, её добавляют не всю сразу, — и в конце 200 г муки с 1 г соли. Мешайте не до крошки, а до приятного кремового состояния: массу предстоит отсаживать.
+                <span class="source-badge">⏱ Вебинар: 00:53:32–01:02:34</span>
+              </p>
+              <div class="warning-box">
+                <strong>Белок по весу:</strong> 33 г вместо 30 — не страшно, а 40–42 г уже испортят тесто. Каждый рецепт песочного теста рассчитан на определённое соотношение жира и жидкости.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> фундук для муки не обязательно чистить — с кожицей печенье получает характерный цвет и крапины. Миндальная мука тоже подойдёт, но это будет уже другое печенье.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Порядок: <strong>Масло+пудра → фундук → белок → мука</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>Кремовая масса</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Венское сабле: отсадка и выпечка</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите тесто в кондитерский мешок со звёздчатой насадкой 8 мм на 7 лучей и отсадите печенье в форме буквы «С» высотой не больше 7 см. Давите на мешок выше, у самой насадки, иначе нужного давления не создать; в конце ослабьте давление и «смажьте» кончик, иначе останется некрасивый хвост. Отсаживайте одинаково — печенья складываются попарно. Выпекайте 15–20 минут при 160 °C с конвекцией: сабле почти не увеличивается и остаётся таким, как отсадили.
+                <span class="source-badge">⏱ Вебинар: 01:03:13–01:11:35</span>
+                <span class="source-badge">⏱ Вебинар: 01:24:41–01:25:00</span>
+              </p>
+              <div class="warning-box">
+                <strong>Насадку отрезайте в верхней трети мешка:</strong> если обрезать ниже, тесто будет давить на насадку и придётся перекладывать всё в новый мешок.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> тесто без разрыхлителя можно держать в холодильнике до 24 часов — перед отсадкой пробейте его миксером, чтобы снова стало пластичным.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⭐ Насадка: <strong>Звёздчатая, 8 мм, 7 лучей</strong></span>
+              <span class="param-pill">📏 Размер: <strong>«С» до 7 см</strong></span>
+              <span class="param-pill">⏱ Выпечка: <strong>15–20 мин</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Домашняя нутелла</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                В миске соедините 100 г молочного шоколада (оптимально 33,6 %) и 50 г сливок. Грейте в микроволновке пульсами: достали, перемешали, вернули — так ганаш не перегреется и не расслоится. Когда кусочков не осталось, добавьте 50 г фундучного пралине (или урбеч, или рубленый обжаренный фундук) и 20 г размягчённого масла, перемешайте до блеска. Готовую начинку уберите в холодильник в мешок — она должна стабилизироваться.
+                <span class="source-badge">⏱ Вебинар: 01:12:13–01:20:39</span>
+              </p>
+              <div class="warning-box">
+                <strong>Лучше перемешать, чем ещё погреть:</strong> перегретый ганаш расслаивается, и начинка уже не станет гладкой.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> если нужна жидкая нутелла, как из банки, её достаточно немного прогреть. Срок хранения — 10 дней в холодильнике. Для взрослой версии можно добавить тёмный ром.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Шоколад: <strong>Молочный 33,6 %</strong></span>
+              <span class="param-pill">⏱ Хранение: <strong>10 дней в холодильнике</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Микроволновка или водяная баня</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Крекер с пармезаном</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Всё холодное: 120 г масла из холодильника, 135 г муки, 20 г крахмала, 3 г соли, сахарная пудра и натёртый пармезан. Масло нарежьте кусочками и пробейте в комбайне-измельчителе до мелкой крошки, затем добавьте желток с 7 г холодной воды и пробейте до крупной крошки — комок сформируется сам. Раскатайте между двумя листами пергамента до 3–4 мм, уберите в морозилку, нарежьте по линейке квадратами 4 × 4 см и выпекайте 15 минут при 160–170 °C.
+                <span class="source-badge">⏱ Вебинар: 01:25:48–01:32:55</span>
+                <span class="source-badge">⏱ Вебинар: 01:55:11–01:55:27</span>
+                <span class="source-badge">⏱ Вебинар: 01:59:36–01:59:43</span>
+              </p>
+              <div class="warning-box">
+                <strong>Граммовки пудры и пармезана в вебинаре не названы.</strong> Пудра нужна обязательно — она даёт цвет, хотя печенье солёное. Пармезан только натёртый: куском он в тесте не раскроется.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> между двумя перфорированными ковриками крекер получает красивый рисунок — укладывайте по рисунку, а не по диагонали. Коврик снимают только с остывшего печенья.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Раскатка: <strong>3–4 мм</strong></span>
+              <span class="param-pill">🔪 Нарезка: <strong>4 × 4 см</strong></span>
+              <span class="param-pill">⏱ Выпечка: <strong>15 мин</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Шоколадно-ореховое печенье</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                В измельчитель положите 100 г холодного масла, 75 г белого и 75 г коричневого сахара, щепоть соли и 25 г арахисовой пасты — пробейте до однородности. Добавьте 50 г яйца и снова пробейте. Затем 150 г муки с 8 г разрыхлителя — до равномерной крошки, и в самом конце 150 г шоколада: буквально два движения, чтобы кусочки остались целыми. Раскатайте до 8 мм, нарежьте квадратами 5 × 5 см и выпекайте около 14 минут при 160–170 °C.
+                <span class="source-badge">⏱ Вебинар: 01:37:57–01:44:05</span>
+                <span class="source-badge">⏱ Вебинар: 02:01:00–02:01:28</span>
+              </p>
+              <div class="warning-box">
+                <strong>Этому печенью нужно много места:</strong> оно заметно растекается, поэтому формочками его не вырезают. Раскладывайте с большими промежутками.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> вместо пасты подойдут фундучная, урбеч или просто рубленый жареный арахис и грецкий орех. Шоколад — каллетами; плитку нужно порубить заранее.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Раскатка: <strong>8 мм</strong></span>
+              <span class="param-pill">🔪 Нарезка: <strong>5 × 5 см</strong></span>
+              <span class="param-pill">⏱ Выпечка: <strong>~14 мин</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">15</span>
+                <h3 class="step-title">Ириска из маракуйи</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                160 г пюре маракуйи соедините с 75 г сиропа глюкозы и нагрейте до кипения. Параллельно расплавьте 175 г сахара сухим способом, без воды, небольшими порциями: мешайте растирающими движениями, не ломающими кристаллы, и не давайте сахару гореть. Доведите карамель до цвета ириски, влейте горячую маракуйю с глюкозой, убавьте нагрев, добавьте 50 г масла, 40 г сливок и 2 г соли. Варите около трёх минут: готово, когда с лопатки не стекает водопадом, а масса остаётся на ней.
+                <span class="source-badge">⏱ Вебинар: 02:09:54–02:21:54</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не уваривайте долго:</strong> ириска застывает буквально в камень. Как только ингредиенты объединились — три минуты, и снимайте.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> как только в карамель попало что-то кроме сахара, мешать можно свободно — кристаллы уже не образуются. Хранить ириску лучше при комнатной температуре: в холодильнике она покрывается конденсатом и течёт.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Нагрев: <strong>Средний</strong></span>
+              <span class="param-pill">⏱ Варка: <strong>~3 мин после объединения</strong></span>
+              <span class="param-pill">🔍 Признак готовности: <strong>Не стекает с лопатки</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">16</span>
+                <h3 class="step-title">Сборка, хранение, подача</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Остывшее сабле складывайте попарно, отсаживая между ними нутеллу той же звёздчатой насадкой буквой «С», и поворачивайте половинки для симметрии. В медовые чашечки положите конфитюр или варенье, из крекера выньте фасоль. Крекер макайте краем в растопленный горький шоколад 70 % — темперировать его не нужно, он всё равно застынет, — или делайте закусочные с творожным сыром, паштетом, красной рыбой, икрой и каперсами.
+                <span class="source-badge">⏱ Вебинар: 02:05:38–02:09:31</span>
+                <span class="source-badge">⏱ Вебинар: 02:27:05–02:32:33</span>
+              </p>
+              <div class="warning-box">
+                <strong>Печенье с влажной начинкой — только в холодильник.</strong> Без начинки оно хранится до 10 дней при комнатной температуре, но комнатная — это 19–22 °C, а не 25.
+              </div>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> любое из этих печений вкуснее на следующий день. Заготовки в морозилке лежат до двух месяцев — можно печь по несколько штук.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📦 Без начинки: <strong>до 10 дней, 19–22 °C</strong></span>
+              <span class="param-pill">🧊 Заготовки: <strong>до 2 месяцев в морозилке</strong></span>
+              <span class="param-pill">❄️ С начинкой: <strong>Только холодильник</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Весы, а не ложки:</strong> профессиональный рецепт считается в граммах — это первое оборудование в списке автора.</li>
+                <li><strong>Масло 82,5 %:</strong> качество масла автор проверяет на кремовых цветах: если отсекается вода, печенье «поплывёт» в луже масла.</li>
+                <li><strong>Три правила эмульсии:</strong> одинаковая температура, постепенное введение жидкости, хорошее промешивание после каждой порции.</li>
+                <li><strong>Холодное масло — для рубки:</strong> когда масло холодное, его рубят, чтобы оно обволакивало муку и не давало глютена; размягчённое — взбивают.</li>
+                <li><strong>Мёд и инвертный сахар:</strong> такие печенья хранятся очень долго; мёд меняется инвертным сахаром 1:1.</li>
+                <li><strong>Сода и мёд:</strong> кислая среда мёда даёт бурную реакцию с содой — отсюда густая пена в заварной основе.</li>
+                <li><strong>Матча не заменяется:</strong> это очень мелко смолотый чай, его вкус и цвет уникальны.</li>
+                <li><strong>Печенье не печётся горячо:</strong> 160–170 °C — всегда ниже, чем для коржей.</li>
+                <li><strong>Остывшее — снимаем коврик:</strong> только так крекеры не разрушатся.</li>
+                <li><strong>Вкуснее на следующий день:</strong> это касается всех пяти видов.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Масло 72,5 %:</strong> эмульсия не собирается, тесто течёт, печенье бледное и плотное.</li>
+                <li><strong>Холодные яйца при взбитом масле:</strong> расслоение, которое уже не исправить взбиванием.</li>
+                <li><strong>Всё яйцо сразу:</strong> масло плавает в жидкости — вводить порциями.</li>
+                <li><strong>Долгое перемешивание с мукой:</strong> тесто тянет глютен и становится жёстким; рубленые виды мешают до крошки.</li>
+                <li><strong>Лишняя мука:</strong> если тесто липнет, его охлаждают, а не забивают мукой.</li>
+                <li><strong>Пудра в крекере «забыта»:</strong> без неё печенье не получит цвет.</li>
+                <li><strong>Груз не поставлен в чашечку:</strong> серединка поднимется и корзиночка не получится.</li>
+                <li><strong>Перегретый ганаш:</strong> расслаивается; лучше дольше мешать, чем ещё греть.</li>
+                <li><strong>Долго уваренная ириска:</strong> застывает в камень.</li>
+                <li><strong>Ириска в холодильнике:</strong> конденсат, и глазурь течёт.</li>
+                <li><strong>Печенье с начинкой при комнатной температуре:</strong> хранится только в холодильнике.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и подача</h4>
+              <ul>
+                <li><strong>Без начинки:</strong> до 10 дней при 19–22 °C, в закрытой таре.</li>
+                <li><strong>С начинкой (сабле с нутеллой):</strong> только холодильник.</li>
+                <li><strong>Тесто без разрыхлителя:</strong> до 24 часов в холодильнике; с разрыхлителем — не больше 8 часов.</li>
+                <li><strong>Заготовки:</strong> до 2 месяцев в морозилке, печь по необходимости.</li>
+                <li><strong>Нутелла:</strong> 10 дней в холодильнике; для жидкой консистенции слегка прогреть.</li>
+                <li><strong>Ириска:</strong> при комнатной температуре, не в холодильнике.</li>
+                <li><strong>Подача:</strong> к чаю и кофе, сабле — «дамское» печенье к вину и кофе, крекеры — закусочные, детям — с молоком.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Мёд:</strong> инвертный сахар 1:1 (без медового аромата и цвета).</li>
+                <li><strong>Фундучная мука:</strong> миндальная — но это уже другое печенье.</li>
+                <li><strong>Пралине в нутелле:</strong> урбеч или рубленый обжаренный фундук.</li>
+                <li><strong>Арахисовая паста:</strong> любая ореховая паста, урбеч, рубленый орех.</li>
+                <li><strong>Матча:</strong> не заменяется; пряности в пасту — по вкусу.</li>
+                <li><strong>Начинка чашечек:</strong> любое варенье или конфитюр.</li>
+                <li><strong>Крекер:</strong> горький шоколад 70 % по краю, творожный сыр с зеленью, паштет, рыба, икра, каперсы.</li>
+                <li><strong>Медовое тесто:</strong> годится и на пряники-топперы, и на коржи для торта.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источник:</strong> единственный файл — «Вебинар «Печём печенье».mp4» (00:00:33–02:35:52) и его расшифровка. DOCX с рецептурами в папке нет, поэтому все граммовки взяты из речи автора.</li>
+              <li><strong>Медовое печенье:</strong> названы сахар 90 г, яйцо 60 г, масло 50 г и сода ½ ч. л. Количество мёда и муки в вебинаре не проговаривалось — на странице они оставлены без граммовки с ориентиром по консистенции, а не додуманы.</li>
+              <li><strong>Крекер с пармезаном:</strong> названы масло 120 г, мука 135 г, крахмал 20 г, соль 3 г, желток 30 г, вода 7 г. Сахарная пудра упоминается без веса, пармезан — без веса. В сводном списке покупок пудра дана ориентиром 90 г, пармезан — без количества.</li>
+              <li><strong>Матча:</strong> в рецептуре «1 ст. л. с горкой», но автор берёт 2 ч. л. с горкой — на странице указаны оба варианта.</li>
+              <li><strong>Ириска из маракуйи:</strong> полная закладка названа полностью (сахар 175, масло 50, сливки 40, глюкоза 75, пюре 160, соль 2 г); на вебинаре варили половину. На странице — полная порция, как в рецептуре.</li>
+              <li><strong>Сливочное масло в сводном списке:</strong> 625 г — сумма всех пяти видов и двух начинок; отдельно на смазку форм не закладывалось.</li>
+              <li><strong>Пробелы:</strong> не названо точное количество ингредиентов для посыпки и закусочных топпингов; не указан вес одного печенья и точный выход в штуках; время выпечки дано диапазонами, потому что зависит от духовки.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из вебинара (около 02:27:05): шоколадно-ореховые батончики, рулетики с матчей и венское сабле с нутеллой.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

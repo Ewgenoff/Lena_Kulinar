@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мороженое «как в СССР» на агаре — рецепт без мороженицы | CookBook</title>
+  <meta name="description" content="Сливочное мороженое Надежды Зубовой как в СССР: молоко, сухое молоко, агар 900, сахар и инвертный сахар, взбитые сливки 33 %. Без мороженицы, с перемешиванием каждые 40 минут.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="morozhenoe-sssr">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Мороженое «как в СССР» на агаре</h1>
+      <p class="recipe-lead">
+        Сливочное мороженое без яиц и без мороженицы: молоко с сухим молоком, агар вместо желатина и взбитые сливки вместо насыщения воздухом в аппарате. Агар держит воду, поэтому не даёт вырасти крупным кристаллам и не позволяет десерту превратиться в камень. Вкус автор описывает так: «как растаявшее советское мороженое», один в один.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~10 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~40 мин + 4–5 перемешиваний</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Заморозка 6 ч, лучше 12 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~8–14 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">≈1,1 кг (около 1,4 л)</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/morozhenoe-sssr.jpg" alt="Шарик сливочного мороженого в стеклянной креманке, рядом силиконовая форма с полусферами чёрной смородины" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 партия)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">партия</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — одна партия сливочного мороженого. По объёму его выходит примерно на 30 % больше, чем было сливок: из 330 г сливок получается около 1,4 л десерта.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> партию</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на молочную основу и сливки. Агар берите силой 900 — его нужно 3 г, это чайная ложка с небольшой горкой (2 г — ложка без горки). Сухое молоко ищите цельное, а не с растительными жирами: оно лежит в холодильниках рядом с обычным молоком.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко 3,2 %</strong>:
+                <span class="shopping-qty" data-base-amount="550" data-unit="г">550 г</span>
+                <span class="shopping-hint">Подойдёт и стерилизованное; в этом рецепте можно взять и меньшей жирности</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 33 %</strong>:
+                <span class="shopping-qty" data-base-amount="330" data-unit="г">330 г</span>
+                <span class="shopping-hint">Холодные, те, что точно взбиваются</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко сухое цельное 26 %</strong>:
+                <span class="shopping-qty" data-base-amount="55" data-unit="г">55 г</span>
+                <span class="shopping-hint">Не с растительными жирами; после вскрытия хранить в закрытом пакете — сильно впитывает запахи</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍬 Сахар, агар, наполнители</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Инвертный сахар (тримолин)</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Он слаще сахара на 30 % и работает как антикристаллизатор; можно сварить дома</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Агар 900</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="г">3 г</span>
+                <span class="shopping-hint">Чайная ложка с небольшой горкой; агар с наполнителями берут втрое больше</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ванильная паста</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span>
+                <span class="shopping-hint">Или ванильный экстракт, или стручок ванили</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре чёрной смородины</strong>:
+                <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                <span class="shopping-hint">Опционально: на 350 г мороженого. Подойдут также клубника, малина, сиропы и варенье</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — контейнер с крышкой, силиконовые формы-полусферы (по желанию), ложка для мороженого, миксер
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Молочная основа</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="550" data-unit="г">550 г</span> — Молоко 3,2 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Вода
+              <span class="ingredient-note">Для агара</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Агар 900
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="55" data-unit="г">55 г</span> — Сухое молоко цельное
+              <span class="ingredient-note">26 % жирности</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Инвертный сахар (тримолин)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Ванильная паста
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Сливки</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="330" data-unit="г">330 г</span> — Сливки 33 %
+              <span class="ingredient-note">Холодные</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Наполнитель (по желанию)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Пюре чёрной смородины
+              <span class="ingredient-note">На 350 г мороженого</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Сиропы, варенье без ягод, жидкая карамель — по вкусу
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Агар с водой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отвесьте 100 г воды и всыпьте 3 г агара, перемешайте. Порошковый агар не нужно замачивать заранее — он просто подождёт, пока вы отвесите остальное.
+                <span class="source-badge">⏱ Урок_01: 00:21:52–00:23:55</span>
+              </p>
+              <div class="tip-box">
+                <strong>Сколько это в ложках:</strong> 3 г агара — чайная ложка с небольшой горкой, 2 г — без горки. Если агар сильнее (1200), хватит 2 г; если с наполнителями — втрое больше.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">💧 Вода: <strong>100 г</strong></span>
+              <span class="param-pill">🥄 Агар: <strong>3 г (900)</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Молочная смесь</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В кастрюлю налейте молоко (550 г), добавьте ванильную пасту (1 ч. л.), сухое молоко (55 г), сахар (100 г) и инвертный сахар (50 г). Перемешайте — сухое молоко может разойтись не полностью, это нормально, потом массу процедим.
+                <span class="source-badge">⏱ Урок_01: 00:24:02–00:27:29</span>
+              </p>
+              <div class="warning-box">
+                <strong>Пропорция сахаров:</strong> обычный сахар к инвертному примерно 2:1. Инвертный слаще на 30 %, поэтому его кладут меньше — иначе мороженое будет приторным.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥛 Молоко: <strong>550 г</strong></span>
+              <span class="param-pill">🍬 Сахар: <strong>100 г + 50 г инвертного</strong></span>
+              <span class="param-pill">🌾 Сухое молоко: <strong>55 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Нагрев молока до 60 °C</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Нагревайте молочную смесь при постоянном помешивании примерно до 60 °C — рукой горячо, но терпимо. Кипятить её не нужно.
+                <span class="source-badge">⏱ Урок_01: 00:27:43–00:28:51</span>
+              </p>
+              <div class="tip-box">
+                <strong>Без термометра:</strong> автор в этом рецепте им не пользуется и проверяет температуру пальцем.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Нагрев: <strong>~60 °C</strong></span>
+              <span class="param-pill">🥄 Мешать: <strong>Постоянно</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Агар прокипятить</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Параллельно доведите агар с водой до кипения и прокипятите 1–2 минуты — за это время он «раскроется» и начнёт принимать воду.
+                <span class="source-badge">⏱ Урок_01: 00:29:05–00:30:49</span>
+              </p>
+              <div class="warning-box">
+                <strong>Мало прокипятить:</strong> недогретый агар держит воду заметно хуже, и мороженое получится ледяным.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Кипячение: <strong>1–2 мин</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Соединить агар с молоком</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Горячий агар влейте в молочную смесь, которая уже нагрета до 60 °C, и тщательно перемешайте без нагрева. Это принципиально: агар начинает схватываться при 35–40 °C, а при 60 °C спокойно ждёт, пока вы всё соедините.
+                <span class="source-badge">⏱ Урок_01: 00:31:13–00:32:20</span>
+              </p>
+              <div class="warning-box">
+                <strong>Холодное молоко:</strong> если влить агар в холодную массу, он схватится комками.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Смесь: <strong>60 °C</strong></span>
+              <span class="param-pill">🌡 Схватывание агара: <strong>35–40 °C</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Быстро охладить</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Перелейте массу в контейнер и уберите в морозилку примерно на 15 минут — она должна охладиться, но не замёрзнуть. Так вы темперируете молоко: резкое охлаждение тормозит размножение бактерий и продлевает срок годности. Масса может стать похожей на холодец — пугаться не нужно, перед соединением её разобьют миксером.
+                <span class="source-badge">⏱ Урок_01: 00:32:27–00:34:45</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Морозилка: <strong>~15 мин</strong></span>
+              <span class="param-pill">🌡 Итог: <strong>~28 °C</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Взбить сливки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Холодные сливки (330 г) взбивайте на максимальной скорости до плотных пиков — это не мусс, сливки должны хорошо держать форму. Как только они начнут уменьшаться в объёме, останавливайтесь.
+                <span class="source-badge">⏱ Урок_01: 00:58:47–01:04:57</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем:</strong> в отсутствие мороженицы воздух вводят именно так — он уже содержится в взбитых сливках.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥛 Сливки: <strong>330 г, холодные</strong></span>
+              <span class="param-pill">⚙️ Скорость: <strong>Максимум</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Соединить с молочной массой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Остывшую молочную массу (температура ниже 35 °C) разбейте миксером, затем на невысокой скорости введите взбитые сливки, помогая лопаткой. Не взбивайте долго: задача — однородность, а не дополнительная работа миксера.
+                <span class="source-badge">⏱ Урок_01: 01:05:22–01:09:44</span>
+              </p>
+              <div class="warning-box">
+                <strong>Горячую массу не соединять:</strong> сливки при 35 °C и выше осядут.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Масса: <strong>Ниже 35 °C</strong></span>
+              <span class="param-pill">⚙️ Скорость: <strong>Невысокая</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Заморозка с перемешиванием</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Уберите в морозилку. Каждые 40 минут доставайте и взбивайте миксером на большой скорости около минуты — просто «взъерошивайте» массу. Всего нужно 4–5 таких подходов. Так разбиваются крупные кристаллы льда.
+                <span class="source-badge">⏱ Урок_01: 01:09:44–01:10:26</span>
+              </p>
+              <div class="warning-box">
+                <strong>Чаще не нужно:</strong> между перемешиваниями мороженое должно успеть схватиться.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Интервал: <strong>40 мин</strong></span>
+              <span class="param-pill">🔁 Подходов: <strong>4–5</strong></span>
+              <span class="param-pill">⚙️ Скорость: <strong>Большая, ~1 мин</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Полная стабилизация</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Оставьте мороженое в морозилке: при −18 °C полное застывание занимает около 6 часов, а лучше 12 — при условии, что вы не открываете морозилку каждые полчаса.
+                <span class="source-badge">⏱ Урок_01: 01:40:00–01:40:13</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Время: <strong>6 ч, лучше 12 ч</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>−18 °C</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Вариант с чёрной смородиной</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                На 350 г готового мороженого возьмите 70 г пюре чёрной смородины и перемешайте. Переложите в кондитерский мешок и отсадите в силиконовые полусферы — удобнее на промежуточном этапе, когда масса ещё не замёрзла в камень. Затем полусферы вставляют в белые шарики, прижимая друг к другу и проходя пальцем по стыку. Шарики формируют в силиконовой форме большего размера, а достают, выворачивая форму, а не вынимая десерт.
+                <span class="source-badge">⏱ Урок_02: 00:01:01–00:07:24</span>
+                <span class="source-badge">⏱ Урок_03: 00:00:00–00:01:54</span>
+              </p>
+              <div class="tip-box">
+                <strong>Можно проще:</strong> шарики и полусферы — необязательная затея. Пюре можно просто вмешать в мороженое и дальше перемешивать как обычно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍇 Пюре: <strong>70 г на 350 г</strong></span>
+              <span class="param-pill">🍨 Форма: <strong>Силиконовая</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Подача при −11 °C</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Домашнее мороженое подают при −11 °C, а не при −18 °C. Достаньте его заранее минут на пять, чтобы оно чуть нагрелось, и набирайте шарики ложкой для мороженого. Полейте карамелью или шоколадом.
+                <span class="source-badge">⏱ Урок_04: 00:02:15–00:06:46</span>
+              </p>
+              <div class="warning-box">
+                <strong>Из морозилки сразу:</strong> при −18 °C десерт покажется вам каменным. Это не брак — нужно просто дать ему согреться.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Подача: <strong>−11 °C</strong></span>
+              <span class="param-pill">⏱ Отогрев: <strong>~5 мин</strong></span>
+              <span class="param-pill">🍫 Топпинг: <strong>Карамель или шоколад</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Агар, а не желатин:</strong> он самый сильный из гелеобразователей и держит много воды.</li>
+                <li><strong>Агар против кристаллов:</strong> вода связана, поэтому крупный лёд не вырастает.</li>
+                <li><strong>Инвертный сахар:</strong> антикристаллизатор, но слаще на 30 % — поэтому обычного сахара меньше.</li>
+                <li><strong>Темперирование:</strong> быстрое охлаждение молочной массы продлевает срок годности.</li>
+                <li><strong>Воздух из сливок:</strong> без мороженицы именно взбитые сливки дают нужную текстуру.</li>
+                <li><strong>Сиропы и варенье:</strong> в это мороженое можно добавлять жидкие сиропы — клубничный, малиновый, абрикосовый.</li>
+                <li><strong>Крем-брюле:</strong> жидкая карамель или варёная сгущёнка на этапе приготовления.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Агар не прокипятить:</strong> он не раскроется, и текстура будет ледяной.</li>
+                <li><strong>Влить агар в холодное молоко:</strong> схватится комками.</li>
+                <li><strong>Соединить сливки с тёплой массой:</strong> сливки осядут.</li>
+                <li><strong>Пропустить перемешивания:</strong> мороженое станет камнем.</li>
+                <li><strong>Перевзбить сливки:</strong> они отсекут воду.</li>
+                <li><strong>Подавать сразу из −18 °C:</strong> вкус и текстура не проявятся.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и подача</h4>
+              <ul>
+                <li><strong>Морозилка:</strong> в закрытом контейнере; крышку лучше не надевать в первые часы, чтобы схватывалось быстрее.</li>
+                <li><strong>Подача:</strong> при −11 °C, шариками или брусочками.</li>
+                <li><strong>Топпинги:</strong> карамель, шоколад, глазурь.</li>
+                <li><strong>Порционно:</strong> удобно замораживать в силиконовых формах.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Молоко:</strong> можно меньшей жирности или стерилизованное.</li>
+                <li><strong>Сухое молоко:</strong> в крайнем случае — детская смесь, вкус будет другим.</li>
+                <li><strong>Инвертный сахар:</strong> можно сварить дома; без него ориентир — около 150 г обычного сахара.</li>
+                <li><strong>Наполнители:</strong> пюре, сиропы, варенье без ягод, карамель.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 — теория и приготовление мороженого (00:21:52–01:41:04); Урок_02.mp4 — чёрная смородина и полусферы (00:01:01–00:07:24); Урок_03.mp4 — заливка в форму; Урок_04.mp4 — шарики и подача (00:01:13–00:06:46). DOCX «Мороженое vs семифредо» содержит только название и фото десерта, граммовок в нём нет.</li>
+              <li><strong>Вес выхода:</strong> в Урок_04 автор говорит «1 килограмм 70 грамм» и тут же «получается 1,70 кг» — это оговорка. По раскладке выходит около 1,1 кг вместе с 70 г пюре.</li>
+              <li><strong>Сливки:</strong> в речи сначала звучит «880 г», затем автор поправляется — 500 г для семифредо и 330 г для мороженого.</li>
+              <li><strong>Инвертный сахар:</strong> в видео 100 г сахара + 50 г инвертного названы эквивалентом «170 г простого сахара», хотя сказано, что инвертный слаще на 30 %. Ориентир для замены — около 150 г обычного сахара.</li>
+              <li><strong>Пюре:</strong> 70 г на 350 г мороженого — это вариант; в базовую партию наполнитель не входит.</li>
+              <li><strong>Пробелы:</strong> точные сроки хранения мороженого в морозилке не названы; вес шариков не оговаривается.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_04.mp4 (около 03:20): шарик сливочного мороженого в креманке и силиконовая форма с полусферами.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Букет из зефира — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Съедобный букет из зефирных цветов: зефир на агаре 900 для силиконовых молдов, цветы пионов, клематисов и герань, зефирные листья и сборка на шпажках в пеноплексе. Плюс пересчёт агара, если сила ниже 900.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="buket-iz-zefira">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Конфеты и сладости</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Букет из зефира</h1>
+      <p class="recipe-lead">
+        Съедобный букет, который делается в силиконовых молдах: зефир на агаре 900 — плотный и упругий, поэтому цветы держат форму лепестков. Пионы, бутоны, клематисы, герань и зефирные листья, вырубленные из пласта 3 мм, собираются на зубочистки в пеноплекс и упаковываются как настоящий букет. Рецептура рассчитана на один замес зефирной массы.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~30 мин: агар замочить, пюре пробить, молды охладить</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~40 мин на зефир + ~30 мин на сборку</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Сироп 3 мин кипения, стабилизация цветов 20–40 мин (в охлаждённых молдах — почти сразу)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~3–4 ч с сушкой цветов и сборкой букета</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">Букет Ø18 см, около 15 цветов и листья</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/buket-iz-zefira.jpg" alt="Зефирный букет в бумаге: розовые, сиреневые, жёлтые и оранжевые цветы — пионы, ранункулюсы и мелкие бутоны — с зелёными зефирными листьями" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 замес)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">замес</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — один замес зефирной массы по рецептуре автора: 40 г белка (одно яйцо С0) и 6 г агара 900. Пересчёт пропорциональный; для планетарного миксера автор советует сразу увеличивать закладку вдвое.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Показать источники (видео-таймкоды)</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> замес</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+      </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Продуктов здесь немного, зато есть оборудование: агар 900, мягкие силиконовые молды (3D-цветы), шпажки 25 см, пеноплекс. Агар — главное: от его силы зависит 70 % успеха, поэтому пачку из ближайшего магазина нужно пересчитывать.
+      </p>
+
+        <div class="shopping-grid">
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🍎 Продукты</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Яйцо С0</strong>:
+                  <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                  <span class="shopping-hint">Нужен только белок — 40 г. Яйцо холодное, из холодильника</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахар-песок</strong>:
+                  <span class="shopping-qty" data-base-amount="180" data-unit="г">180 г</span>
+                  <span class="shopping-hint">40 г в меренгу, 140 г в сироп с агаром</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Яблочное пюре</strong>:
+                  <span class="shopping-qty" data-base-amount="40" data-unit="г">40 г</span>
+                  <span class="shopping-hint">Своё или детское без сахара; обязательно пробить погружным блендером до гомогенности</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Агар 900 Блюм</strong>:
+                  <span class="shopping-qty" data-base-amount="6" data-unit="г">6 г</span>
+                  <span class="shopping-hint">Профессиональный, сила 900–1000. Если на пачке 20 % агара — брать в 5 раз больше, то есть 30 г</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Вода</strong>:
+                  <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                  <span class="shopping-hint">Для замачивания агара и варки сиропа</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Красители водорастворимые</strong> — по оттенкам
+                  <span class="shopping-hint">Жидкие или гелевые; на букет уходит несколько цветов, удобно красить массу порциями</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Кукурузный крахмал</strong> — по желанию
+                  <span class="shopping-hint">Припылить цветы для матовой поверхности</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🧰 Оборудование и упаковка</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Силиконовые молды 3D</strong>
+                  <span class="shopping-hint">Мягкие, чтобы молд можно было вывернуть одной рукой; под пионы, бутоны, клематисы, герань</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Шпажки длиной 25 см</strong>
+                  <span class="shopping-hint">Для каркаса букета — втыкаются в пеноплекс</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Пеноплекс</strong>
+                  <span class="shopping-hint">Основа букета; оборачивается пергаментом, чтобы шпажки и зубочистки входили в бумагу, а не в пенопласт</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Бумага для букета и пергамент</strong>
+                  <span class="shopping-hint">Упаковка с надрезом посередине и «дном» с нахлёстом; пергамент — между пеноплексом и продуктом</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Зубочистки</strong>
+                  <span class="shopping-hint">На них крепятся цветы — по одной на цветок</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Вырубка для листьев</strong>
+                  <span class="shopping-hint">Или нож: листья вырезают из пласта зефира толщиной 3 мм</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Миксер, сотейник, термометр, таймер</strong>
+                  <span class="shopping-hint">Сироп с агаром кипятится ровно 3 минуты — таймер обязателен</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">1. Меренга</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Белок
+              <span class="ingredient-note">Одно яйцо С0; холодный, прямо из холодильника</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Сахар
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">2. Сироп с агаром</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Вода
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="6" data-unit="г">6 г</span> — Агар 900 Блюм
+              <span class="ingredient-note">Сила 900–1000; для слабого агара из магазина — пересчёт (см. шаг 1)</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="140" data-unit="г">140 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Яблочное пюре
+              <span class="ingredient-note">Гомогенизированное блендером; можно заменить ягодным</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">3. Для формовки и декора</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Красители водорастворимые — по вкусу
+              <span class="ingredient-note">Жидкие или гелевые; добавляются в конце взбивания</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Кукурузный крахмал — по желанию
+              <span class="ingredient-note">Припылить готовые цветы, чтобы получилась матовая поверхность</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Силиконовые молды 3D — набор
+              <span class="ingredient-note">Не смазываются; мягкие, чтобы легко выворачивать</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Шпажки 25 см, пеноплекс, пергамент, упаковочная бумага, зубочистки
+              <span class="ingredient-note">Каркас и крепление цветов</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Агар: сила и пересчёт</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Зефир держится на агаре, и 70 % успеха зависит именно от него. Нужен профессиональный агар силой 900–1000 Блюм: он схватывается уже при 40 °C, поэтому масса успевает застыть в молде раньше, чем осядет. Если агар только из магазина у дома, читайте упаковку: при содержании агара в сухом веществе 20 % порошка нужно взять в 5 раз больше, то есть 30 г вместо 6.
+                <span class="source-badge">⏱ 00:03:50–00:05:00</span>
+                <span class="source-badge">⏱ 00:14:34–00:14:56</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не всякий «агар» — агар.</strong> Пакетик без указания силы и процента содержания может дать зефир, который не схватится вовсе. Пересчёт по проценту из DOCX работает и для дешёвых смесей, но результат будет мягче.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">💪 Сила: <strong>900–1000 Блюм</strong></span>
+              <span class="param-pill">🔄 Слабый агар: <strong>×5 при 20 %</strong></span>
+              <span class="param-pill">🌡 Схватывается: <strong>при 40 °C</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Пюре: только гомогенное</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Автор берёт яблочное пюре, сваренное заранее, но подойдёт и детское из баночки без сахара, и любое ягодное. Ключевое требование — пробить пюре погружным блендером до полной однородности: букет декоративный, и любой волоконный комок испортит лепесток. Пюре в этом рецепте немного, потому что зефир нужен плотный, для молдов.
+                <span class="source-badge">⏱ 00:05:20–00:07:11</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет:</strong> лишнее пюре разложите по пакетам и заморозьте — на следующий букет оно идёт без пересчёта.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥤 Блендер: <strong>Погружной, до гладкости</strong></span>
+              <span class="param-pill">🍏 Пюре: <strong>40 г на замес</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Замачивание агара и подготовка молдов</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                В воду засыпьте агар, перемешайте и оставьте на 5 минут набухать. Пюре можно смешать с водой сразу — так удобнее. Параллельно подготовьте всё остальное: две ёмкости (в одной меренга, во второй сироп), миксер, сотейник, таймер и молды. Молды берите мягкие, 3D: такой можно вывернуть одной рукой. Если молдов мало, поставьте их в холодильник заранее — в охлаждённый молд зефир схватывается почти мгновенно, и цветок можно доставать сразу, а молд использовать снова.
+                <span class="source-badge">⏱ 00:08:47–00:09:37</span>
+                <span class="source-badge">⏱ 00:28:45–00:29:38</span>
+              </p>
+              <div class="warning-box">
+                <strong>Молды ничем не смазывают.</strong> Ни маслом, ни крахмалом заранее — зефир сам отходит от силикона, а смазка испортит рельеф лепестков.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Набухание: <strong>5 мин</strong></span>
+              <span class="param-pill">🧊 Молды: <strong>Охладить для скорости</strong></span>
+              <span class="param-pill">🥣 Ёмкости: <strong>Отдельно меренга и сироп</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Сироп: 3 минуты кипения</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                В сотейник с водой, агаром и пюре добавьте 140 г сахара, доведите до кипения и варите 3 минуты на огне выше среднего. С момента закипания поставьте таймер: три минуты — не «на глаз», потому что сироп на агаре меняет свойства быстро. Одновременно начинайте взбивать белок с 40 г сахара — работать двумя руками, как автор.
+                <span class="source-badge">⏱ 00:14:16–00:17:02</span>
+              </p>
+              <div class="warning-box">
+                <strong>Кипение активное, огонь выше среднего:</strong> на слабом огне сироп не доварится за 3 минуты, и агар не наберёт силу.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Кипение: <strong>ровно 3 мин</strong></span>
+              <span class="param-pill">🔥 Огонь: <strong>Выше среднего</strong></span>
+              <span class="param-pill">⏲ Таймер: <strong>Обязателен</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Меренга и ввод сиропа</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Белок с сахаром взбивайте, пока сироп кипит. Готовый сироп влейте в меренгу уверенной, но тонкой струйкой, не прекращая взбивать. Масса начнёт заметно густеть и тянуться — это сработал агар. Взбивать долго не нужно: зефир для молдов должен оставаться текучим, иначе он не заполнит рельеф лепестков.
+                <span class="source-badge">⏱ 00:15:02–00:21:39</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не перевзбить:</strong> в обычном зефире нужна устойчивая «шапка», в зефире для молдов — нет. Перегустевшая масса ляжет в молд комком и не даст чёткого цветка.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥛 Струя: <strong>Тонкая, уверенная</strong></span>
+              <span class="param-pill">⚙️ Взбивание: <strong>Недолго, до текучести</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Окрашивание массы</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                В конце взбивания добавьте водорастворимый краситель — жидкий или гелевый, — перемешайте миксером до однородного цвета. Чтобы получить букет разных оттенков, массу делят на порции и красят каждую отдельно, либо работают партиями: один замес — один-два цвета. Цвет на агаровой массе раскрывается быстро, но через полчаса может стать чуть интенсивнее.
+                <span class="source-badge">⏱ 00:21:11–00:21:39</span>
+              </p>
+              <div class="tip-box">
+                <strong>Порядок:</strong> сначала красят массу, потом заполняют молды — пока агар не начал схватываться, на всё у вас около 10–15 минут.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🎨 Краситель: <strong>Водорастворимый</strong></span>
+              <span class="param-pill">⏱ Работа с массой: <strong>10–15 мин</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Заполнение молдов</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите массу в мешок, надрежьте кончик и заполняйте молд, протыкая массой в углы и лепестки — проще всего «протыкивать» носиком мешка, начиная с самых глубоких мест. Заполнив, закройте молд и стукните им по столу, чтобы вышли пузыри, затем отложите на стабилизацию. Цветы из плоских молдов (клематис) и объёмных (пион) заполняются одинаково — разница только в количестве массы.
+                <span class="source-badge">⏱ 00:22:58–00:26:02</span>
+              </p>
+              <div class="warning-box">
+                <strong>Считайте время:</strong> агар схватывается при 40 °C, поэтому масса в мешке остывает и густеет. Если чувствуете, что она «встала», верните мешок в тёплую воду на минуту, но не перегревайте.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Мешок: <strong>Кончик надрезан</strong></span>
+              <span class="param-pill">🔨 После заливки: <strong>Стукнуть молдом</strong></span>
+              <span class="param-pill">🌡 Порог: <strong>40 °C</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Стабилизация и вынимание цветов</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Цветы стабилизируются 20–40 минут при комнатной температуре; если молды были охлаждённые — практически сразу. Доставайте правильно: выворачивайте молд, а не тяните цветок из формы — так лепестки не рвутся. Готовый цветок упругий и мягкий, лишнее аккуратно обрежьте ножницами по плоскости.
+                <span class="source-badge">⏱ 00:52:38–00:57:20</span>
+                <span class="source-badge">⏱ 01:03:25–01:03:48</span>
+              </p>
+              <div class="tip-box">
+                <strong>Признак готовности:</strong> зефир не липнет к пальцам и держит рельеф. Если цветок «плывёт», значит масса была слишком тёплой или слабый агар.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Стабилизация: <strong>20–40 мин</strong></span>
+              <span class="param-pill">🧊 В холодном молде: <strong>Почти сразу</strong></span>
+              <span class="param-pill">🔄 Съём: <strong>Выворачивать молд</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Матовая поверхность по желанию</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Зефир сам по себе липкий. Если нужна матовая, «бархатная» поверхность, припылите цветы кукурузным крахмалом — совсем немного, через ситечко или обваляв. Автор в этом букете крахмал не использовала, поэтому цветы блестящие и слегка липкие.
+                <span class="source-badge">⏱ 00:54:34–00:55:35</span>
+                <span class="source-badge">⏱ 01:09:56</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не перепылить:</strong> избыток крахмала собирается в складочках лепестков и выглядит как пыль. Лучше пройтись кистью, чем обваливать.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌾 Крахмал: <strong>Кукурузный, по желанию</strong></span>
+              <span class="param-pill">✨ Эффект: <strong>Матовая поверхность</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Зефирные листья</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Остатки массы вылейте на силиконовый коврик, разровняйте палетой до толщины около 3 мм и дайте схватиться. Из пласта вырежьте листья вырубкой или ножом — они нужны не для формы, а чтобы заполнить пустоты в букете и придать ему объём. Из остатков получаются и мелкие «букетонаполнители» — колючие шарики и веточки.
+                <span class="source-badge">⏱ 00:56:40–00:59:51</span>
+              </p>
+              <div class="tip-box">
+                <strong>Форма листьев:</strong> вырезайте разного размера и разной формы — одинаковые листья выглядят искусственно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Пласт: <strong>~3 мм</strong></span>
+              <span class="param-pill">🔪 Инструмент: <strong>Вырубка или нож</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Каркас букета</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Из пеноплекса вырежьте основу и оберните её пергаментом — тогда шпажки и зубочистки входят в бумагу, а не в пенопласт, и заготовка остаётся чистой. Натыкайте в основу шпажки длиной 25 см: это каркас. Размеры по автору: букет Ø18 см смотрится объёмно и достойно, Ø20 см — крупный, Ø30 см — «первоклассник точно не донесёт».
+                <span class="source-badge">⏱ 00:32:35–00:34:43</span>
+              </p>
+              <div class="warning-box">
+                <strong>Пищевая безопасность:</strong> зефир не должен касаться пеноплекса и обычной упаковочной бумаги. Прослойка из пергамента обязательна.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📐 Основа: <strong>Пеноплекс + пергамент</strong></span>
+              <span class="param-pill">🪵 Шпажки: <strong>25 см</strong></span>
+              <span class="param-pill">📏 Оптимум: <strong>Ø18 см</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Упаковка заготовки</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Бумагу сложите и оберните вокруг основы, сделайте небольшой надрез посередине — так букет входит плотнее и держится ровно. Низ закройте отдельным листом бумаги с нахлёстом, чтобы не было видно шпажек. На этом заготовка готова: дальше в неё только вставляются цветы.
+                <span class="source-badge">⏱ 00:37:41–00:43:39</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет из цветочного магазина:</strong> надрез по центру и нахлёст снизу — два приёма, которые автор подсмотрела у флористов, они и дают «товарный» вид.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">✂️ Надрез: <strong>По центру</strong></span>
+              <span class="param-pill">📄 Низ: <strong>С нахлёстом</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Сборка букета на зубочистки</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Втыкайте зубочистку в основу и надевайте на неё цветок — так каждый цветок встаёт точно на своё место, и его можно переставить. Зубочистки автор вставляет не заранее, а под конкретный цветок. Сначала ставят крупные пионы, вокруг — бутоны, клематисы и герань, пустоты закрывают листьями: на букет Ø18 см уходит около 15 цветов.
+                <span class="source-badge">⏱ 01:01:35–01:03:00</span>
+                <span class="source-badge">⏱ 01:08:06–01:11:11</span>
+              </p>
+              <div class="warning-box">
+                <strong>Предупредите получателя:</strong> внутри букета зубочистки и шпажки. Автор специально оговаривает это в конце: букет красивый, но не «просто съешь целиком».
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🪥 Крепление: <strong>Зубочистка в основу</strong></span>
+              <span class="param-pill">🌸 Цветов: <strong>~15 на Ø18 см</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>10 дней в контейнере</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Сила агара — 70 % успеха:</strong> берите 900–1000 Блюм, слабый пересчитывайте по проценту.</li>
+                <li><strong>Молды мягкие и 3D:</strong> жёсткий молд не вывернуть одной рукой, и лепестки рвутся.</li>
+                <li><strong>Охлаждённые молды:</strong> зефир схватывается почти сразу, и набор из пары форм работает как большой.</li>
+                <li><strong>Молды не смазывают:</strong> зефир отходит сам, смазка портит рельеф.</li>
+                <li><strong>Пюре только гомогенное:</strong> цветок должен быть гладким, без волокон.</li>
+                <li><strong>Сироп ровно 3 минуты:</strong> таймер с момента закипания.</li>
+                <li><strong>Массу для молдов не взбивают до «шапки»:</strong> она должна течь.</li>
+                <li><strong>Пласт для листьев 3 мм:</strong> тоньше — ломается, толще — грубо выглядит.</li>
+                <li><strong>Пергамент между пеноплексом и зефиром:</strong> гигиена и чистая заготовка.</li>
+                <li><strong>Планетарный миксер:</strong> если работаете на нём, увеличивайте закладку вдвое.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Слабый агар без пересчёта:</strong> зефир не схватывается, цветы оседают.</li>
+                <li><strong>Сироп варили меньше 3 минут:</strong> масса жидкая, рельеф не держится.</li>
+                <li><strong>Перевзбитая масса:</strong> в молд ложится комками, лепестки не пропечатываются.</li>
+                <li><strong>Долгая работа с массой:</strong> агар схватывается при 40 °C, и мешок густеет.</li>
+                <li><strong>Тянуть цветок из молда:</strong> рвутся лепестки — молд надо выворачивать.</li>
+                <li><strong>Смазывать молд маслом:</strong> рельеф «заливается», цветок теряет форму.</li>
+                <li><strong>Много крахмала:</strong> белые разводы в складочках лепестков.</li>
+                <li><strong>Зефир касается пеноплекса:</strong> непищевой контакт.</li>
+                <li><strong>Зубочистки вставлены заранее:</strong> цветок не встаёт на нужное место.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и подача</h4>
+              <ul>
+                <li><strong>В закрытом контейнере:</strong> 10 дней при комнатной температуре.</li>
+                <li><strong>Заморозка:</strong> зефир можно замораживать, цветы переносят её без потери формы.</li>
+                <li><strong>На улице:</strong> по дороге букет лучше прикрыть, но плёнкой плотно не заматывать — зефир липкий.</li>
+                <li><strong>Крахмал:</strong> только для матовой поверхности, по желанию.</li>
+                <li><strong>Подача:</strong> букет съедобный, но внутри шпажки и зубочистки — предупредите.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «букет из зефира» с рецептурой и запись вебинара (1:19:07) с расшифровкой на 1062 реплики. Граммовки — из DOCX, техника, размеры и таймкоды — из видео.</li>
+              <li><strong>Выход букета:</strong> в DOCX не указан. По видео автор называет Ø18 см как оптимальный, Ø20 и Ø30 см как более крупные варианты, и говорит про «15 цветов в букете» — эта цифра и стоит на странице. Точное количество цветов из одного замеса не названо.</li>
+              <li><strong>Агар из магазина:</strong> правило пересчёта «20 % → в 5 раз больше» взято из DOCX дословно; в видео автор обещает рассказать про агар из «Пятёрочки» и «Магнита», но конкретных цифр для слабых агаров не приводит.</li>
+              <li><strong>Стабилизация:</strong> в видео звучат и «20–40 минут», и «практически мгновенно в охлаждённых молдах»; в DOCX времени нет. На странице оба варианта.</li>
+              <li><strong>Крахмал:</strong> в DOCX «можно припылить кукурузным крахмалом», в видео автор свой букет не припыляла. Это опция.</li>
+              <li><strong>Молды:</strong> в речи проскакивает «оловянные и платиновые» — судя по контексту, речь о типах силикона; на странице это не воспроизводится как термин, чтобы не тиражировать ошибку распознавания.</li>
+              <li><strong>Пробелы:</strong> не назван вес готового цветка; не указано, сколько именно цветов каждого вида нужно на букет; не приведены размеры пеноплексовой основы в сантиметрах.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из вебинара (около 00:33:45), кадрированный по букету; исходное видео 720×412, поэтому изображение мягкое.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

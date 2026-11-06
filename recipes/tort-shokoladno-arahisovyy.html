@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Торт «Шоколадно-арахисовый» — дакуаз со солёной карамелью | CookBook</title>
+  <meta name="description" content="Торт «Шоколадно-арахисовый» Надежды Зубовой: дакуаз с какао и жареным арахисом, крем на заварной основе с молочным шоколадом и арахисовой пастой, солёная карамель между слоями и декор герберами.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tort-shokoladno-arahisovyy">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Торт «Шоколадно-арахисовый» — дакуаз с солёной карамелью</h1>
+      <p class="recipe-lead">
+        Самый «сникерсовый» торт серии: шоколадно-арахисовый дакуаз, крем на заварной основе с молочным шоколадом и арахисовой пастой из жареного арахиса, а между слоями — солёная карамель, отсаженная капельками. Себестоимость у него ниже остальных, а вкус от этого не страдает. Снаружи — масляный крем на итальянской меренге и герберы, которые делают насадками 81 и 80.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~2 ч (без цветов)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Выпечка 40 мин, остывание, заварная основа, стабилизация 6 ч и больше</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~9–11 ч + ночь</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 торт Ø18 см (3 коржа) или Ø16 см (4 коржа)</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-shokoladno-arahisovyy.jpg" alt="Торт «Шоколадно-арахисовый» в светло-розовом выравнивании с шапкой розовых гербер и зелёными листьями" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 торт)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">торт</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — один торт: три коржа Ø18 см либо четыре Ø16 см. Карамели по рецепту выходит около 0,5 л, в торт идёт только 120 г — остальное останется на другие десерты.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> торт</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на дакуаз, крем, карамель и масляный крем. Яйца считаны целыми: 360 г белка (9 яиц С0) и 60 г желтков — девять яиц закрывают и белки, и желтки. Карамель варится сразу на 0,5 л, но в торт уходит 120 г, поэтому сахар и сливки на неё указаны полностью.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное и яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С0</strong>:
+                <span class="shopping-qty" data-base-amount="9" data-unit="шт." data-piece="true">9 шт.</span>
+                <span class="shopping-hint">200 г белка в дакуаз, 160 г в масляный крем, 60 г желтков в заварную основу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 30 % и выше</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">В заварную основу крема</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 20–35 % для карамели</strong>:
+                <span class="shopping-qty" data-base-amount="335" data-unit="г">335 г</span>
+                <span class="shopping-hint">Нагреть до кипения перед добавлением; карамели выйдет около 0,5 л</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5 %</strong>:
+                <span class="shopping-qty" data-base-amount="515" data-unit="г">515 г</span>
+                <span class="shopping-hint">65 г в карамель, 450 г холодного — в масляный крем</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Шоколад, орехи, бакалея</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Арахис жареный</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Смолоть почти в муку; можно заменить другим орехом</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Арахисовая паста из жареного арахиса</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Именно из жареного — она даёт сильный вкус</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молочный шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="90" data-unit="г">90 г</span>
+                <span class="shopping-hint">Растопить до жидкого состояния</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао</strong>:
+                <span class="shopping-qty" data-base-amount="20" data-unit="г">20 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="815" data-unit="г">815 г</span>
+                <span class="shopping-hint">200 г в дакуаз, 115 г в заварную основу, 300 г в карамель, по 100 г в белки и сироп</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар с семенами ванили</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная</strong>:
+                <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Крахмал кукурузный</strong>:
+                <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span>
+                <span class="shopping-hint">В солёную карамель</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Диоксид титана</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Красители водорастворимые</strong> — по вкусу
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — кольца Ø16 или Ø18 см, разъёмное кольцо, пергамент, насадки 1, 81 (80), 5, 70, 349, кондитерские мешки, термометр
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Шоколадно-арахисовый дакуаз</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Белок яичный
+              <span class="ingredient-note">5 яиц С0</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Арахис жареный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Какао
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Крахмал кукурузный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Мука пшеничная
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем шоколадно-арахисовый</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Желток яичный
+              <span class="ingredient-note">3 яйца С0</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="115" data-unit="г">115 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сливки 30 % и выше
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Сахар с семенами ванили
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="90" data-unit="г">90 г</span> — Молочный шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Арахисовая паста
+              <span class="ingredient-note">Из жареного арахиса</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Солёная карамель (выход ~0,5 л)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Вода
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="335" data-unit="г">335 г</span> — Сливки 20–35 %
+              <span class="ingredient-note">Нагреть до кипения</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="65" data-unit="г">65 г</span> — Сливочное масло
+              <span class="ingredient-note">Размягчённое</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Соль
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Масляный крем на итальянской меренге</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="450" data-unit="г">450 г</span> — Сливочное масло 82,5 %
+              <span class="ingredient-note">Холодное</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Белок
+              <span class="ingredient-note">4 яйца С0</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар в белки
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар в сироп
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Вода для сиропа
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Диоксид титана
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Арахис в муку и сухая смесь</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Жареный арахис (100 г) измельчите практически в муку — где-то мельче, где-то крупнее. Смешайте его с какао (20 г), мукой (10 г) и крахмалом (10 г) и перемешайте очень тщательно, иначе какао пойдёт комочками и это скажется на качестве коржей.
+                <span class="source-badge">⏱ Урок_01: 00:00:00–00:01:02</span>
+              </p>
+              <div class="warning-box">
+                <strong>Какао просеять или размешать до однородности:</strong> комки в дакуазе не разойдутся при выпечке.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥜 Арахис: <strong>100 г</strong></span>
+              <span class="param-pill">🍫 Какао: <strong>20 г</strong></span>
+              <span class="param-pill">🌾 Мука и крахмал: <strong>по 10 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Меренга</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Белки (200 г) минуту взбивайте на маленькой скорости, затем на максимуме — до рисунка от венчика и мелкопористой текстуры.
+                <span class="source-badge">⏱ Урок_01: 00:01:05–00:01:31</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚙️ Сначала: <strong>Маленькая скорость</strong></span>
+              <span class="param-pill">⚙️ Затем: <strong>Максимум</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Сахар в несколько приёмов</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сахар (200 г) вводите порциями, взбивая между ними. Готово, когда меренга плотная и упругая: свисающий пик держится, с венчика ничего не сваливается, сахар практически разошёлся.
+                <span class="source-badge">⏱ Урок_01: 00:01:20–00:02:21</span>
+              </p>
+              <div class="tip-box">
+                <strong>Сахара вдвое меньше:</strong> здесь не французская меренга 1:2 — автор напоминает об этом прямо, потому что сухих ингредиентов много.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍬 Сахар: <strong>200 г</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Упругий пик</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Вмешивание сухих ингредиентов</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Введите сухие ингредиенты в один приём. Мешайте лопаткой недолго: врезаетесь боком до дна, проходите по дну, поднимаете толщу меренги наверх и прикладываете сверху — без прижимающих движений. По сути, просто переворачиваете массу.
+                <span class="source-badge">⏱ Урок_01: 00:02:21–00:03:05</span>
+              </p>
+              <div class="tip-box">
+                <strong>Вкус:</strong> автор говорит, что торт получается «чем-то напоминающим сникерс», а арахис можно заменить любым орехом по вкусу.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥄 Инструмент: <strong>Лопатка</strong></span>
+              <span class="param-pill">🔄 Движения: <strong>Переворот, без прижима</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Выкладка и выпечка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разложите массу по весу на 4 коржа Ø16 см или на 3 коржа Ø18 см и разровняйте как можно ровнее. Выпекайте 40 минут при 150 °C с конвекцией. Остудите до комнатной температуры, затем вырежьте ножом по форме, а не по коржу.
+                <span class="source-badge">⏱ Урок_01: 00:03:39–00:04:31</span>
+                <span class="source-badge">⏱ Урок_02: 00:00:00–00:00:42</span>
+              </p>
+              <div class="warning-box">
+                <strong>Резать по стенке формы:</strong> иначе корж разрушится — дакуаз хрупкий.
+              </div>
+              <div class="tip-box">
+                <strong>Хранение:</strong> до 5 дней при комнатной температуре в плёнке, до 10 дней в холодильнике.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📐 Коржи: <strong>4 × Ø16 или 3 × Ø18 см</strong></span>
+              <span class="param-pill">⏱ Время: <strong>40 мин</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>150 °C, конвекция</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Заварная основа</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сливки (200 г) с ванильным сахаром (15 г) нагрейте до кипения. Желтки (60 г) с сахаром (115 г) перемешайте и сразу начните мешать венчиком. Влейте часть горячих сливок, соедините, верните массу в сотейник и уварите на минимальном нагреве до 91–92 °C. Проверка: капля застывает на венчике.
+                <span class="source-badge">⏱ Урок_04: 00:00:00–00:05:43</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не оставлять желтки с сахаром:</strong> они начнут сворачиваться от такого количества сахара.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Финал: <strong>91–92 °C</strong></span>
+              <span class="param-pill">🌡 Нагрев: <strong>Минимальный</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Охлаждение под плёнку в контакт</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выложите крем на противень или в контейнер и затяните плёнкой прямо по горячей поверхности. Остудите до комнатной температуры, при возможности — в холодильнике.
+                <span class="source-badge">⏱ Урок_04: 00:05:41–00:07:22</span>
+              </p>
+              <div class="warning-box">
+                <strong>Плёнка в контакт:</strong> без неё сверху образуется корочка, а на ней конденсат.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📄 Плёнка: <strong>В контакт</strong></span>
+              <span class="param-pill">🌡 До: <strong>Комнатной температуры</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Крем с шоколадом и пастой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Молочный шоколад (90 г) растопите до жидкого состояния, добавьте арахисовую пасту (50 г) и перемешайте — при необходимости чуть прогрейте. В тёплую шоколадную массу положите пару столовых ложек заварной основы и интенсивно перемешайте, можно миксером. Только после этого соедините с остальной заварной частью и пробейте миксером.
+                <span class="source-badge">⏱ Урок_03: 00:00:00–00:01:32</span>
+              </p>
+              <div class="warning-box">
+                <strong>Почему через «затравку»:</strong> если влить шоколад сразу в холодный крем, он свернётся хлопьями.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Шоколад: <strong>90 г, молочный</strong></span>
+              <span class="param-pill">🥜 Паста: <strong>50 г</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>72 ч</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Солёная карамель</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сахар (300 г) с водой (60 г) нагрейте до растворения сахара, перемешивая минимально. Продолжайте нагревать до нужного карамельного оттенка. Добавьте размягчённое масло (65 г) и интенсивно перемешайте, затем влейте сливки, нагретые до кипения, и перемешайте до однородности. Добавьте соль (1 ч. л.), перемешайте и уварите примерно 3 минуты. Выход — около 0,5 л. Для торта нужно 120 г; если карамель застыла, её можно подогреть.
+                <span class="source-badge">⏱ Урок_03: 00:01:35–00:01:37</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сливки — кипящие:</strong> холодные сливки в горячей карамели дают сильное вспенивание и могут обжечь.
+              </div>
+              <div class="tip-box">
+                <strong>Соль:</strong> автор кладёт чайную ложку на это количество; если соль мелкая, вкус будет ощутимее.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍬 Сахар: <strong>300 г</strong></span>
+              <span class="param-pill">🥛 Сливки: <strong>335 г, кипящие</strong></span>
+              <span class="param-pill">🧂 Соль: <strong>1 ч. л.</strong></span>
+              <span class="param-pill">🥄 В торт: <strong>120 г из ~0,5 л</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Сборка с карамелью</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                На дно — немного крема, первый корж, затем крем по весу. Разровняйте и отсадите карамель капельками. Накройте следующим коржом, перевернув его, и снова крем — в этот слой карамель не идёт. Третий корж кладите ровной стороной вниз, наденьте кольцо, выложите оставшийся крем и карамель, сверху — последний корж гладкой стороной вверх. Сделайте торту «массаж», затяните плёнкой и уберите в морозилку или холодильник.
+                <span class="source-badge">⏱ Урок_03: 00:01:32–00:04:49</span>
+              </p>
+              <div class="warning-box">
+                <strong>Стабилизация:</strong> в холодильнике — минимум 6 часов, лучше ночь; в морозилке торт считается стабилизированным, как только замёрз.
+              </div>
+              <div class="tip-box">
+                <strong>Кольцо:</strong> торт небольшой и собирать его можно без кольца, но если он уходит в морозилку — кольцо обязательно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍮 Карамель: <strong>В два слоя из трёх</strong></span>
+              <span class="param-pill">❄️ Холодильник: <strong>Минимум 6 ч</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Масляный крем на итальянской меренге</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Белки (160 г) взбейте на средней скорости до плотной пены без жидкости на дне, введите сахар (100 г) в один приём. Сироп из 100 г сахара и 60 г воды варите до 116 °C, дайте кипению уняться и влейте тонкой струйкой по краю чаши. Взбивайте до 30–35 °C, затем вводите холодное масло (450 г) кубиками. После расслоения крем соберётся и станет гладким. В конце — раствор диоксида титана, пауза 5–7 минут и ещё раз миксером.
+                <span class="source-badge">⏱ Урок_05: 00:00:00–00:10:15</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не пугаться «испорченного» крема:</strong> стадия расслоения обязательна, взбивание её проходит.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сироп: <strong>116 °C</strong></span>
+              <span class="param-pill">🧈 Масло: <strong>450 г, холодное</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>5 суток / 1 месяц в морозилке</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Выравнивание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Торт достаньте из морозилки заранее, чтобы он отошёл. Сначала тонким слоем закройте крошки, затем выровняйте начисто палетой и скребком. Верх — строго горизонтальными движениями к центру, скребок вытирайте после каждого прохода; в места, где просвечивает торт, добавляйте крем. Подложку вычистите до идеала.
+                <span class="source-badge">⏱ Урок_07: 00:00:01–00:03:00</span>
+              </p>
+              <div class="warning-box">
+                <strong>Ледяной торт не выравнивают:</strong> крем схватывается слишком быстро.
+              </div>
+              <div class="tip-box">
+                <strong>Расход:</strong> по DOCX на выравнивание уходит 250 г масляного крема.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Отогрев: <strong>~2 ч в холодильнике</strong></span>
+              <span class="param-pill">🧽 Скребок: <strong>Вытирать каждый раз</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Герберы</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                На широком гвоздике сделайте ощутимую площадку — по диаметру и по высоте. Насадкой 1 в хаотичном порядке отсадите пушистую серединку примерно на квадратный сантиметр. Насадкой 81 сделайте короткие лепестки, чуть прикрывающие серединку, вторым слоем — ровно напротив первых и чуть выше, третий ряд — ещё выше и почти вертикально. Затем более светлым оттенком длинные открытые лепестки, каждый следующий слой чуть длиннее и с перехлёстом. Бутоны закрывают насадкой 81, а чашелистики — 249, держа её горизонтально.
+                <span class="source-badge">⏱ Урок_06: 00:00:00–00:12:52</span>
+              </p>
+              <div class="tip-box">
+                <strong>Насадка 80 лучше 81:</strong> если есть выбор, берите ту, что крупнее — длинные лепестки будут меньше падать.
+              </div>
+              <div class="warning-box">
+                <strong>Мало крема — лепесток падает:</strong> давайте лепестку достаточно «еды» и врезайтесь насадкой в площадку.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧁 Насадки: <strong>1, 81 (или 80), 249</strong></span>
+              <span class="param-pill">🌼 Лепесток: <strong>~1 × 3 см</strong></span>
+              <span class="param-pill">🧊 Перед сборкой: <strong>Заморозить</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Стебли, листья и композиция</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Насадкой 5 (отверстие около 2,5 мм) проведите пять стеблей наискосок — от низа к цветам, прикасаясь к торту одной стороной насадки и не продавливая покрытие. Насадкой 70 отсадите широкие листья и поправьте кончики пальцами, чтобы они стали острыми. Для цветов сделайте площадку чуть выше поверхности торта и высадите подмороженные герберы, добавляя бутоны и зелень.
+                <span class="source-badge">⏱ Урок_07: 00:03:12–00:10:24</span>
+              </p>
+              <div class="warning-box">
+                <strong>Листья под разными углами:</strong> если все смотрят в одну сторону, композиция выглядит неестественно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧁 Насадки: <strong>5, 70</strong></span>
+              <span class="param-pill">🌿 Стебли: <strong>5 штук</strong></span>
+              <span class="param-pill">📐 Композиция: <strong>От центра вниз</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Вкус «сникерса»:</strong> шоколад, арахис и солёная карамель складываются в знакомый профиль.</li>
+                <li><strong>Арахисовая паста:</strong> только из жареного арахиса — она даёт сильный вкус.</li>
+                <li><strong>Затравка шоколада:</strong> пара ложек заварного крема спасает массу от сворачивания.</li>
+                <li><strong>Карамель с запасом:</strong> из порции выходит около 0,5 л, в торт идёт 120 г.</li>
+                <li><strong>Стабилизация:</strong> в холодильнике минимум 6 часов, лучше ночь.</li>
+                <li><strong>Герберы:</strong> самый сложный момент — начало длинных лепестков, их лучше делать короткими и толстыми.</li>
+                <li><strong>Себестоимость:</strong> автор отмечает, что этот торт дешевле остальных из серии.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Комки какао:</strong> портят структуру коржа.</li>
+                <li><strong>Долго мешать тесто:</strong> дакуаз осядет.</li>
+                <li><strong>Шоколад сразу в крем:</strong> свернётся хлопьями.</li>
+                <li><strong>Холодные сливки в карамель:</strong> бурное вспенивание и риск ожога.</li>
+                <li><strong>Мало карамели:</strong> вкус теряется, на разрезе её не видно.</li>
+                <li><strong>Выравнивание без отогрева:</strong> крем ложится комками.</li>
+                <li><strong>Слишком много крема на лепесток:</strong> он собирается гармошкой.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и подача</h4>
+              <ul>
+                <li><strong>Коржи:</strong> 5 дней при комнатной температуре в плёнке, 10 дней в холодильнике.</li>
+                <li><strong>Крем:</strong> 72 часа в холодильнике.</li>
+                <li><strong>Масляный крем:</strong> 5 суток в холодильнике, 1 месяц в морозилке.</li>
+                <li><strong>Карамель:</strong> хранится в холодильнике, перед использованием подогревается.</li>
+                <li><strong>Торт:</strong> морозилка или холодильник от 6 часов.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Арахис:</strong> любой другой орех по вкусу.</li>
+                <li><strong>Карамель:</strong> можно не солить или уменьшить соль.</li>
+                <li><strong>Декор:</strong> герберы, бутоны, листья; без цветов — просто ровное покрытие.</li>
+                <li><strong>Крем:</strong> вместо масляного можно выровнять ганашем.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 — дакуаз (00:00:00–00:04:31); Урок_02.mp4 — вырезание коржей; Урок_03.mp4 — крем и сборка (00:00:00–00:04:49); Урок_04.mp4 — заварная основа; Урок_05.mp4 — масляный крем; Урок_06.mp4 — герберы; Урок_07.mp4 — выравнивание, стебли и композиция; DOCX «Торт_Шоколадно-арахисовый» — граммовки и карамель.</li>
+              <li><strong>Солёная карамель:</strong> есть только в DOCX, отдельного видеоурока нет. Там же указан выход ~0,5 л и расход 120 г на торт.</li>
+              <li><strong>Карамель в слоях:</strong> в видео её отсаживают в два слоя из трёх — во второй слой автор её не добавляет.</li>
+              <li><strong>Насадки для гербер:</strong> в DOCX 1, 81, 81 (лучше 80), 5, 70; в видео добавляется 249 для чашелистиков.</li>
+              <li><strong>Время стабилизации:</strong> по видео в холодильнике минимум 6 часов, лучше ночь; в DOCX срок не указан.</li>
+              <li><strong>Пробелы:</strong> вес готового торта не назван; количество цветов не оговорено.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_07.mp4 (около 10:56): торт с герберами и листьями.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

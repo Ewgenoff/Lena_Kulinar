@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Торт «Миндальный» — дакуаз с маскарпоне и манго | CookBook</title>
+  <meta name="description" content="Торт «Миндальный» Надежды Зубовой: миндальный дакуаз на 200 г белка, крем из маскарпоне и заварной основы с цедрой лайма, манговое конфи и масляный крем на итальянской меренге для выравнивания.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tort-mindalnyy">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Торт «Миндальный» — дакуаз с маскарпоне и манго</h1>
+      <p class="recipe-lead">
+        Миндальный дакуаз — это меренга с орехами вместо разрыхлителя: воздух держит только белок. Между коржами идёт крем из заварной основы и маскарпоне с цедрой лайма, а манговое конфи автор отсаживает сердечками, чтобы оно читалось на разрезе. Снаружи торт выравнивают масляным кремом на итальянской меренге и украшают цветами в малайзийской технике.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~2 ч (без цветов)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Выпечка 40–50 мин, остывание, заварная основа, стабилизация 6–12 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~10–12 ч + ночь; с цветами — 2 дня</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 торт Ø18 см (3 коржа) или Ø16 см (4 коржа)</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-mindalnyy.jpg" alt="Торт «Миндальный» с персиково-оранжевым выравниванием и букетом розовых ранункулюсов и синих скабиоз" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 торт)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">торт</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — один торт: три коржа Ø18 см либо четыре Ø16 см. Масляного крема в рецепте с запасом — на выравнивание уходит около 250 г, остальное на цветы.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> торт</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на дакуаз, крем, конфи и масляный крем. Яйца считаны целыми: нужно 360 г белка (9 яиц С0) и 60 г желтков — девять яиц закрывают и белки, и желтки, лишние желтки останутся. Маскарпоне берите плотный (Bonfesto, Galbani), не «крем-чиз».
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное и яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С0</strong>:
+                <span class="shopping-qty" data-base-amount="9" data-unit="шт." data-piece="true">9 шт.</span>
+                <span class="shopping-hint">200 г белка в дакуаз, 160 г в масляный крем, 60 г желтков в заварную основу; лишние желтки — на другой десерт</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Маскарпоне</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Плотный, из холодильника</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 30 % и выше</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Только в заварную основу крема</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5 %</strong>:
+                <span class="shopping-qty" data-base-amount="450" data-unit="г">450 г</span>
+                <span class="shopping-hint">Холодное, для крема на итальянской меренге; для одних цветов нужно самое лучшее по качеству</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лайм</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">Нужна 1 ч. л. цедры</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥭 Орехи, манго, бакалея</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Миндальная мука</strong>:
+                <span class="shopping-qty" data-base-amount="65" data-unit="г">65 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Миндальные лепестки</strong>:
+                <span class="shopping-qty" data-base-amount="65" data-unit="г">65 г</span>
+                <span class="shopping-hint">Автор разрешает взять что-то одно: лепестки, рубленый миндаль или муку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре манго</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">100 г пюре + 50 г кубиков манго; если кубиков нет — всё пюре</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="545" data-unit="г">545 г</span>
+                <span class="shopping-hint">200 г в дакуаз, 115 г в заварную основу, 30 г в конфи, по 100 г в белки и сироп</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар с семенами ванили</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная</strong>:
+                <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Крахмал кукурузный</strong>:
+                <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="г">5 г</span>
+                <span class="shopping-hint">На 25 г воды — для мангового конфи</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Диоксид титана</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span>
+                <span class="shopping-hint">Растворить в столовой ложке воды; без него крем будет кремовым, а не белым</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Красители водорастворимые</strong> — по вкусу
+                <span class="shopping-hint">Гелевые, сухие или жидкие; сухие предварительно развести водой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — кольца Ø16 или Ø18 см, разъёмное кольцо, пергамент, насадки 120, 103, 349, 12, 133, 262, гвоздики для цветов, кондитерские мешки
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Миндальный дакуаз</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Белок яичный
+              <span class="ingredient-note">5 яиц С0, комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="65" data-unit="г">65 г</span> — Миндальные лепестки
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="65" data-unit="г">65 г</span> — Миндальная мука
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Крахмал кукурузный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Мука пшеничная
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем с маскарпоне</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Желток яичный
+              <span class="ingredient-note">3 яйца С0</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="115" data-unit="г">115 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сливки 30 % и выше
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Сахар с семенами ванили
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Маскарпоне
+              <span class="ingredient-note">Bonfesto, Galbani</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Цедра лайма
+              <span class="ingredient-note">Можно замороженная</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Манговое конфи</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Пюре манго
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Манго кубиками
+              <span class="ingredient-note">Можно заменить 50 г пюре</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="г">5 г</span> — Желатин
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Вода для желатина
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Масляный крем на итальянской меренге</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="450" data-unit="г">450 г</span> — Сливочное масло 82,5 %
+              <span class="ingredient-note">Холодное, из холодильника</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Белок
+              <span class="ingredient-note">4 яйца С0; для цветов — только живой</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар в белки
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар в сироп
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Вода для сиропа
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Диоксид титана
+              <span class="ingredient-note">Развести в ~1 ст. л. воды</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Красители водорастворимые — по вкусу
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Ароматизаторы или ликёры (бейлис, лимончелло, куантро, бренди, амаретто) — по желанию
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Духовка и сухие ингредиенты</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разогрейте духовку до 150 °C с конвекцией. Смешайте миндальные лепестки, миндальную муку, муку и кукурузный крахмал — сахар пока отдельно, он идёт в белки.
+                <span class="source-badge">⏱ Урок_01: 00:00:01–00:01:03</span>
+              </p>
+              <div class="tip-box">
+                <strong>Что взять из миндаля:</strong> автор разрешает любую форму — лепестки, рубленый миндаль или муку. С бланшированным миндалём дакуаз будет светлым, с обжаренным в кожуре — вкус интенсивнее.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>150 °C, конвекция</strong></span>
+              <span class="param-pill">🌰 Миндаль: <strong>65 + 65 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Меренга до рисунка от венчика</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Белки (200 г) взбивайте на маленькой скорости около минуты, затем на максимальной — до мелкопористой текстуры и явного следа от венчика.
+                <span class="source-badge">⏱ Урок_01: 00:01:03–00:01:41</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сахар пока не вводить:</strong> его добавляют только после того, как белок начал держать форму.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚙️ Первый этап: <strong>Маленькая скорость, ~1 мин</strong></span>
+              <span class="param-pill">⚙️ Затем: <strong>Максимум до рисунка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Сахар в три приёма</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Введите сахар (200 г) в три приёма, каждый раз взбивая до его растворения. После первой порции взбивайте 4–5 минут до плотного состояния — меренга станет блестящей и начнёт сопротивляться венчику. Готовность: пики держатся, форма сохраняется.
+                <span class="source-badge">⏱ Урок_01: 00:01:41–00:02:10</span>
+              </p>
+              <div class="tip-box">
+                <strong>Пропорция:</strong> сахара здесь столько же, сколько белка — это не классическая французская меренга 1:2, потому что сухих ингредиентов в дакуазе очень много.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍬 Сахар: <strong>200 г, три приёма</strong></span>
+              <span class="param-pill">⏱ Взбивание: <strong>4–5 мин после первой порции</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Вмешивание сухих ингредиентов</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выложите все сухие ингредиенты сразу и вмешайте лопаткой: поднимающими движениями снизу вверх, поворачивая чашу. Мешайте ровно столько, чтобы не осталось сухих участков — долго нельзя, иначе уйдёт воздух.
+                <span class="source-badge">⏱ Урок_01: 00:02:20–00:03:14</span>
+              </p>
+              <div class="warning-box">
+                <strong>Разрыхлителя здесь нет:</strong> подъём даёт только воздух в белке. Перемешали слишком долго — получите лепёшку.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥄 Инструмент: <strong>Лопатка</strong></span>
+              <span class="param-pill">🔄 Движения: <strong>Снизу вверх</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Выкладка по весу и выпечка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разложите массу по весу на 4 коржа Ø16 см или на 3 коржа Ø18 см, разровняйте лопаткой и палеткой — высота должна быть одинаковой. Выпекайте 40–50 минут при 150 °C с конвекцией (или верх-низ, если противень один). Остудите до комнатной температуры и вырежьте из форм.
+                <span class="source-badge">⏱ Урок_01: 00:02:10–00:04:05</span>
+                <span class="source-badge">⏱ Урок_02: 00:00:05–00:00:31</span>
+              </p>
+              <div class="warning-box">
+                <strong>Ждать нельзя:</strong> массу с разложенным дакуазом не оставляют перед выпечкой — воздух выйдет, и коржи осядут.
+              </div>
+              <div class="tip-box">
+                <strong>Хранение:</strong> коржи не нуждаются в созревании — до 5 дней при комнатной температуре в плёнке или до 10 дней в холодильнике.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📐 Коржи: <strong>4 × Ø16 или 3 × Ø18 см</strong></span>
+              <span class="param-pill">⏱ Время: <strong>40–50 мин</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>5 дней / 10 дней в холоде</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Заварная основа для крема</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сливки (200 г) с ванильным сахаром (15 г) нагрейте до кипения. Желтки (60 г) разотрите с сахаром (115 г) и сразу начните мешать венчиком. Влейте в желтки часть горячих сливок, перемешайте, верните всё в сотейник и уварите на минимальном нагреве до загустения — до 91–92 °C, если есть термометр. Готовность: капля застывает на венчике и не сваливается.
+                <span class="source-badge">⏱ Урок_04: 00:00:02–00:05:43</span>
+              </p>
+              <div class="warning-box">
+                <strong>Почему 91–92 °C, а не 84:</strong> сахара здесь много, и он позволяет уварить англез сильнее — при этом яркого вкуса желтка не будет.
+              </div>
+              <div class="tip-box">
+                <strong>Желтки с сахаром не стоят:</strong> как только сахар добавлен, массу постоянно перемешивают, иначе желтки свернутся.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Финал: <strong>91–92 °C</strong></span>
+              <span class="param-pill">🌡 Нагрев: <strong>Минимальный</strong></span>
+              <span class="param-pill">⏱ Время: <strong>Долго, до загустения</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Быстрое охлаждение под плёнку в контакт</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Вылейте крем на противень или в широкий контейнер и затяните пищевой плёнкой в контакт — плёнка должна лечь прямо на горячую массу. Остудите до комнатной температуры, при возможности уберите в холод. Плёнка не даёт образоваться корочке и конденсату.
+                <span class="source-badge">⏱ Урок_04: 00:05:41–00:07:22</span>
+              </p>
+              <div class="warning-box">
+                <strong>Резкое охлаждение — вопрос безопасности:</strong> в тёплом креме развиваются бактерии и плесень, а торт потом замораживают и размораживают.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📄 Плёнка: <strong>В контакт</strong></span>
+              <span class="param-pill">🌡 До: <strong>Комнатной температуры</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Крем с маскарпоне и лаймом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Маскарпоне (150 г) взбейте недолго, до густоты, и поэтапно введите холодную заварную основу. В конце добавьте чайную ложку цедры лайма. Крем мягче масляного, но форму держит. Срок годности — 72 часа в холодильнике.
+                <span class="source-badge">⏱ Урок_03: 00:00:01–00:01:03</span>
+              </p>
+              <div class="warning-box">
+                <strong>Маскарпоне не взбивать долго:</strong> он легко расслаивается. Вводите заварную часть постепенно и прекращайте, как только масса стала однородной.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧀 Маскарпоне: <strong>150 г</strong></span>
+              <span class="param-pill">🍋 Цедра: <strong>1 ч. л.</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>72 ч</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Манговое конфи</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Желатин замочите в холодной воде (25 г). Пюре манго с кубиками и сахаром нагрейте до кипения, снимите с огня и введите набухший желатин. Переложите в кондитерский мешок, дайте остыть и слегка застыть в холодильнике. Срок годности — 72 часа.
+              </p>
+              <div class="tip-box">
+                <strong>Без кубиков:</strong> можно взять 150 г пюре — конфи получится однородным, но на разрезе не будет кусочков манго.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥭 Манго: <strong>100 г пюре + 50 г кубиков</strong></span>
+              <span class="param-pill">🥄 Желатин: <strong>5 г на 25 г воды</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Сборка с конфи сердечками</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                На дно положите немного крема, уложите первый корж и разложите крем по весу. Конфи отсадите сердечками или кружками — так, чтобы оно читалось на разрезе, — а вокруг выложите крем. Накройте коржом гладкой стороной вверх, прижмите, повторите слои. На третьем корже наденьте разъёмное кольцо. Последний корж — гладкой стороной вверх, затем «массаж» торту, плёнка и морозилка.
+                <span class="source-badge">⏱ Урок_03: 00:01:13–00:03:16</span>
+              </p>
+              <div class="warning-box">
+                <strong>Кольцо только разъёмное:</strong> замороженный дакуаз не каменеет, вынуть торт из цельного кольца, не сломав коржи, почти невозможно.
+              </div>
+              <div class="tip-box">
+                <strong>Логика слоёв:</strong> автор специально чередует коржи, чтобы сверху оказался ровный — с ним потом проще выравнивать.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥭 Конфи: <strong>В каждый слой</strong></span>
+              <span class="param-pill">🧊 Стабилизация: <strong>Морозилка или 6–12 ч в холоде</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Масляный крем: сироп 116 °C</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Белки (160 г) поставьте взбиваться на среднюю скорость. Как только пена станет плотной и на дне не будет жидкости, введите весь сахар (100 г) в один приём. Одновременно варите сироп из 100 г сахара и 60 г воды до 116 °C. Снимите, дайте уняться кипению и влейте тонкой струйкой в белки по краю чаши, не на венчик. Взбивайте, пока меренга не остынет до 30–35 °C.
+                <span class="source-badge">⏱ Урок_05: 00:03:29–00:06:36</span>
+              </p>
+              <div class="warning-box">
+                <strong>Нужен термометр:</strong> 116 °C — принципиальная точка. Недоваренный сироп даст жидкую меренгу, переваренный — карамельные комки.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сироп: <strong>116 °C</strong></span>
+              <span class="param-pill">🌡 Меренга: <strong>Остудить до 30–35 °C</strong></span>
+              <span class="param-pill">🍬 Сахар: <strong>100 г в белки + 100 г в сироп</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Масло и восстановление эмульсии</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Холодное масло (450 г), нарезанное кубиками, вводите постепенно: сначала куски крупнее, потом мельче. Масса начнёт разжижаться, терять объём и расслаиваться — это нормально. Продолжайте взбивать, и крем соберётся, станет гладким и шелковистым. В конце введите раствор диоксида титана (1 ч. л. в столовой ложке воды), оставьте на 5–7 минут и ещё раз пробейте миксером.
+                <span class="source-badge">⏱ Урок_05: 00:06:53–00:10:15</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не останавливаться на «испорченном» виде:</strong> расслоение — обязательная стадия. Крем восстановится, если продолжать взбивать.
+              </div>
+              <div class="tip-box">
+                <strong>Масло для цветов:</strong> автор настаивает на самом качественном 82,5 % — у неё это традиционное масло Азеретского молококомбината. Для одного выравнивания можно взять сильно размягчённое масло.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Масло: <strong>450 г, холодное</strong></span>
+              <span class="param-pill">⚪ Диоксид титана: <strong>1 ч. л.</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>5 суток / 1 месяц в морозилке</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Окрашивание и выравнивание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Крем окрашивайте водорастворимыми красителями — сухими (разведёнными в воде), гелевыми или жидкими. Цвет проявляется не сразу: можно окрасить, дать постоять час и перемешать. Торт достаньте из морозилки и дайте отойти в холодильнике пару часов — ледяной торт крем схватывает мгновенно. Сначала тонким слоем спрячьте крошки, затем выровняйте чистовым слоем палетой и скребком строго горизонтальными движениями к центру.
+                <span class="source-badge">⏱ Урок_08: 00:00:01–00:04:26</span>
+              </p>
+              <div class="warning-box">
+                <strong>Красителя нужно больше, чем в крем-чиз:</strong> цвет в масляном креме раскрывается медленно, не пытайтесь догнать его сразу.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Отогрев: <strong>~2 ч в холодильнике</strong></span>
+              <span class="param-pill">🧽 Скребок: <strong>Вытирать после каждого прохода</strong></span>
+              <span class="param-pill">🎨 Краситель: <strong>Водорастворимый</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Цветы: ранункулюсы</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                На гвоздике сделайте шарик-основу. Насадку 120 держите горизонтально и отсадите три лежащих лепестка с нахлёстом. Затем вертикально — ряд коротких лепестков, прикрывающих серединку, и ещё ряд чуть выше. Смените оттенок и делайте лепестки-арочки с нахлёстом примерно в четверть. В двух-трёх местах добавьте «отваливающиеся» лепестки: насадка развёрнута от вас и лежит почти горизонтально. Цветы нужно сделать разной степени раскрытия — по пять каждого вида, и заморозить перед сборкой.
+                <span class="source-badge">⏱ Урок_06: 00:00:01–00:13:14</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зелёный должен быть разным:</strong> для внешних лепестков и для серединки берите разные оттенки, иначе цветы выглядят штампованными.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧁 Насадка: <strong>120</strong></span>
+              <span class="param-pill">🌸 Количество: <strong>По 5 цветов каждого вида</strong></span>
+              <span class="param-pill">🧊 Перед сборкой: <strong>Заморозить</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">15</span>
+                <h3 class="step-title">Цветы: скабиоза (циния)</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Насадкой 103 (её лепестки заранее поджаты плоскогубцами почти до плоскости) разметьте семь лучей и от центра выложите мелкие лепестки в несколько слоёв — они должны быть разной длины, ближе к центру короче. Насадкой 12 поставьте в центр объёмный зелёный шарик, насадкой «закрытая звезда» 262 сделайте белые тычинки, а насадкой для травы — лохматые волоски. Перед укладкой на торт цветы подморозить.
+                <span class="source-badge">⏱ Урок_07: 00:00:06–00:06:45</span>
+              </p>
+              <div class="warning-box">
+                <strong>Цветок рыхлый:</strong> переносить его сложно, поэтому автор работает с подмороженными цветами и снимает их ножницами.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧁 Насадки: <strong>103, 12, 262, «трава»</strong></span>
+              <span class="param-pill">🧊 Перед сборкой: <strong>Подморозить</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">16</span>
+                <h3 class="step-title">Композиция на торте</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Начинайте с листьев прямо на торте, затем выкладывайте цветы на крем: композиция идёт от самой высокой точки в центре по нисходящей к периметру. Крупные цветы — вниз, мелкие бутоны и отдельные лепестки — в промежутки. Зелени добавляйте сдержанно: в цветах уже есть зелёные серединки.
+                <span class="source-badge">⏱ Урок_08: 00:04:28–00:11:39</span>
+                <span class="source-badge">⏱ Урок_09: 00:00:05–00:03:20</span>
+              </p>
+              <div class="tip-box">
+                <strong>Если цветок не входит:</strong> разрежьте его ножницами пополам и поставьте половинку — этого никто не заметит.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌿 Листья: <strong>Сначала</strong></span>
+              <span class="param-pill">📐 Композиция: <strong>От центра вниз</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Сахар 1:1 к белку:</strong> в дакуазе сухих ингредиентов много, классическая пропорция 1:2 не подойдёт.</li>
+                <li><strong>Живые белки для цветов:</strong> на пастеризованном или альбумине крем тоже выйдет, но лепестки будут грубее.</li>
+                <li><strong>Диоксид титана:</strong> нужен только для холодных оттенков; в тёплых можно обойтись без него.</li>
+                <li><strong>Крем можно заморозить:</strong> после разморозки он обязательно проходит стадию «всё пропало», надо просто продолжать взбивать.</li>
+                <li><strong>Ароматизация:</strong> бейлис, лимончелло, куантро, бренди, амаретто.</li>
+                <li><strong>Шоколадная версия:</strong> 100 г растопленного шоколада на 500 г готового крема.</li>
+                <li><strong>Выравнивание ледяного торта:</strong> сначала дать отойти в холодильнике пару часов.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Долго мешать тесто:</strong> воздух уходит, корж оседает.</li>
+                <li><strong>Оставить дакуаз ждать:</strong> без разрыхлителя он держится только на воздухе.</li>
+                <li><strong>Сахар в желтки и пауза:</strong> желтки сворачиваются и «горят».</li>
+                <li><strong>Сильный нагрев заварной основы:</strong> крем идёт хлопьями.</li>
+                <li><strong>Долго взбивать маскарпоне:</strong> крем расслаивается.</li>
+                <li><strong>Выравнивать ледяной торт:</strong> крем схватывается комками.</li>
+                <li><strong>Цельное кольцо вместо разъёмного:</strong> торт не извлечь.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и подача</h4>
+              <ul>
+                <li><strong>Коржи:</strong> 5 дней при комнатной температуре в плёнке, 10 дней в холодильнике.</li>
+                <li><strong>Крем с маскарпоне:</strong> 72 часа в холодильнике.</li>
+                <li><strong>Масляный крем:</strong> 5 суток в холодильнике, 1 месяц в морозилке.</li>
+                <li><strong>Конфи:</strong> 72 часа.</li>
+                <li><strong>Торт:</strong> в морозилке; перед подачей отогреть в холодильнике.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Миндаль:</strong> лепестки, рубленый орех или мука — на выбор.</li>
+                <li><strong>Манго:</strong> вместо кубиков — 150 г пюре.</li>
+                <li><strong>Цитрус:</strong> цедра лайма; в видео её берут из замороженных запасов.</li>
+                <li><strong>Крем:</strong> можно сделать шоколадным или ароматизировать ликёром.</li>
+                <li><strong>Форма:</strong> 4 коржа Ø16 см или 3 коржа Ø18 см.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 — дакуаз (00:00:01–00:04:05); Урок_02.mp4 — вырезание коржей (00:00:05–00:00:31); Урок_03.mp4 — крем с маскарпоне и сборка (00:00:01–00:03:16); Урок_04.mp4 — заварная основа (00:00:02–00:09:11); Урок_05.mp4 — масляный крем (00:00:00–00:10:15); Урок_06–07 — цветы; Урок_08–09 — выравнивание и композиция; DOCX «Торт_Миндальный» — граммовки.</li>
+              <li><strong>Сливки:</strong> в DOCX «200 сливки 30 % и выше» без единицы, по контексту — 200 г.</li>
+              <li><strong>Манговое конфи:</strong> в DOCX два варианта — 100 г пюре + 50 г кубиков либо 150 г пюре. Отдельного видеоурока по конфи в папке нет, способ приготовления взят из DOCX.</li>
+              <li><strong>Сроки:</strong> DOCX даёт 72 часа для крема и конфи, 5 дней / 10 дней для коржей, 5 суток / 1 месяц для масляного крема.</li>
+              <li><strong>Цветы:</strong> набор насадок в DOCX (120, 120, 103, 349 для ранункулюсов; 103, 12, 133, 262 для скабиозы) и в видео совпадает не полностью — в уроке часть работы идёт насадкой 103 с поджатыми лепестками.</li>
+              <li><strong>Количество крема:</strong> в DOCX указано, что на выравнивание ушло 250 г масляного крема из общей порции.</li>
+              <li><strong>Пробелы:</strong> точный вес готового торта не назван; время отогрева перед подачей в источниках не оговорено.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_09.mp4 (около 03:25): собранный и украшенный торт с букетом ранункулюсов и скабиоз.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

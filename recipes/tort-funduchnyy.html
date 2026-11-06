@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Торт «Фундучный» — дакуаз с пралине и сухофруктами | CookBook</title>
+  <meta name="description" content="Торт «Фундучный» Надежды Зубовой: дакуаз на обжаренном фундуке в шелухе, крем на заварной основе с пралине и коньяком, курага и чернослив между слоями, масляный крем на итальянской меренге.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-recipe-id="tort-funduchnyy">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>CookBook</h1>
+          <p>Кулинарная библиотека</p>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Торт «Фундучный» — дакуаз с пралине и сухофруктами</h1>
+      <p class="recipe-lead">
+        Фундук здесь обжарен в шелухе и смолот в муку — вместе с кожурой он даёт самый яркий вкус. Коржи-дакуаз держатся только на взбитом белке, внутри — густой крем на заварной основе с фундучным пралине и ложкой крепкого алкоголя, а между слоями идут курага и чернослив: их должно быть прилично, чтобы они читались на разрезе. Снаружи торт выравнивают масляным кремом на итальянской меренге.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч 45 мин (без цветов)</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Выпечка 40–50 мин, остывание, заварная основа, стабилизация 6–12 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">~9–11 ч + ночь</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 торт Ø18 см (3 коржа) или Ø16 см (4 коржа)</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-funduchnyy.jpg" alt="Сборка торта «Фундучный»: в разъёмном кольце крем, утопленные курага и чернослив на поверхности слоя" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 торт)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">торт</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — один торт: три коржа Ø18 см либо четыре Ø16 см. Сухофрукты делят на две части — по числу разрезов между тремя коржами.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Таймкоды</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> торт</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список на дакуаз, крем, сухофрукты и масляный крем. Яйца считаны целыми: 360 г белка (9 яиц С0) и 60 г желтков — девять яиц закрывают и белки, и желтки. Фундук берите уже обжаренный и в шелухе: именно кожура даёт вкус. Пралине можно заменить фундучной пастой.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное и яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С0</strong>:
+                <span class="shopping-qty" data-base-amount="9" data-unit="шт." data-piece="true">9 шт.</span>
+                <span class="shopping-hint">200 г белка в дакуаз, 160 г в масляный крем, 60 г желтков в заварную основу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 30 % и выше</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">В заварную основу крема</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5 %</strong>:
+                <span class="shopping-qty" data-base-amount="550" data-unit="г">550 г</span>
+                <span class="shopping-hint">100 г в основной крем комнатной температуры, 450 г холодного — в масляный крем</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌰 Орехи, сухофрукты, бакалея</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Фундук обжаренный в шелухе</strong>:
+                <span class="shopping-qty" data-base-amount="120" data-unit="г">120 г</span>
+                <span class="shopping-hint">Смолоть в муку: мелкая крошка плюс немного покрупнее</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Фундучное пралине или ореховая паста</strong>:
+                <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+                <span class="shopping-hint">Консистенция кремовая, не сухая паста</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Курага</strong>:
+                <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+                <span class="shopping-hint">Промыть, замачивать не нужно</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Чернослив</strong>:
+                <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="515" data-unit="г">515 г</span>
+                <span class="shopping-hint">200 г в дакуаз, 115 г в заварную основу, по 100 г в белки и сироп</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар с семенами ванили</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная</strong>:
+                <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Крахмал кукурузный</strong>:
+                <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Коньяк или бренди</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="ст. л.">1 ст. л.</span>
+                <span class="shopping-hint">Крепкий алкоголь в крем; по желанию</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Диоксид титана</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Красители водорастворимые</strong> — по вкусу
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — кольца Ø16 или Ø18 см, разъёмное кольцо, пергамент, насадки 120, 349, 104 для роз, кондитерские мешки
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Фундучный дакуаз</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Белок яичный
+              <span class="ingredient-note">5 яиц С0</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Фундук обжаренный, в шелухе
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Крахмал кукурузный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Мука пшеничная
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем фундучный</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Желток яичный
+              <span class="ingredient-note">3 яйца С0</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="115" data-unit="г">115 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сливки 30 % и выше
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Сахар с семенами ванили
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сливочное масло 82,5 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Фундучное пралине или ореховая паста
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ст. л.">1 ст. л.</span> — Крепкий алкоголь
+              <span class="ingredient-note">Бренди, коньяк</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Для сборки</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Курага
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Чернослив
+              <span class="ingredient-note">Можно любые сухофрукты</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Масляный крем на итальянской меренге</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="450" data-unit="г">450 г</span> — Сливочное масло 82,5 %
+              <span class="ingredient-note">Холодное</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Белок
+              <span class="ingredient-note">4 яйца С0</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар в белки
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар в сироп
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Вода для сиропа
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Диоксид титана
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Фундук в муку</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Обжаренный фундук в шелухе (120 г) измельчите в блендере. Нужна не идеальная мука: часть крошки совсем мелкая, часть чуть крупнее — так и должно быть.
+                <span class="source-badge">⏱ Урок_01: 00:00:00–00:00:34</span>
+              </p>
+              <div class="tip-box">
+                <strong>Почему в шелухе:</strong> автор специально берёт неочищенный обжаренный фундук — вкус выражается ярче.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌰 Фундук: <strong>120 г</strong></span>
+              <span class="param-pill">⚙️ Помол: <strong>Мелкая крошка + чуть крупнее</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Сухие ингредиенты и духовка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Смешайте молотый фундук с мукой (10 г) и крахмалом (10 г) — сахар остаётся отдельно. Разогрейте духовку до 150 °C с конвекцией.
+                <span class="source-badge">⏱ Урок_01: 00:00:18–00:00:49</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>150 °C, конвекция</strong></span>
+              <span class="param-pill">🌾 Мука и крахмал: <strong>по 10 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Меренга</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Белки (200 г) взбивайте сначала на небольшой скорости минуту, затем на максимуме — до явного рисунка от венчика и мелкопористой текстуры.
+                <span class="source-badge">⏱ Урок_01: 00:00:49–00:01:13</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚙️ Сначала: <strong>Небольшая скорость</strong></span>
+              <span class="param-pill">⚙️ Затем: <strong>Максимум</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Сахар в три приёма</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Введите сахар (200 г) в три приёма и взбивайте до плотной блестящей меренги — автор добавляет ещё минуты три после последней порции.
+                <span class="source-badge">⏱ Урок_01: 00:01:10–00:01:35</span>
+              </p>
+              <div class="tip-box">
+                <strong>Пропорция 1:1:</strong> сахара столько же, сколько белка, — в дакуазе это норма, иначе масса не соберётся.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍬 Сахар: <strong>200 г, три приёма</strong></span>
+              <span class="param-pill">⏱ Довзбить: <strong>~3 мин</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Вмешивание орехов</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Добавьте весь фундук с мукой и крахмалом и перемешайте лопаткой поднимающими движениями сверху вниз, поворачивая миску. Мешайте ровно столько, чтобы сухие ингредиенты вошли в меренгу.
+                <span class="source-badge">⏱ Урок_01: 00:01:35–00:02:01</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не мешать долго:</strong> воздух уйдёт, и корж получится плотной лепёшкой.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥄 Инструмент: <strong>Лопатка</strong></span>
+              <span class="param-pill">🔄 Движения: <strong>Сверху вниз, с поворотом миски</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Выкладка и выпечка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разложите массу по весу на 4 коржа Ø16 см или на 3 коржа Ø18 см, распределите ровно — одинаковая высота и ровная поверхность сильно упрощают сборку. Выпекайте 40 минут при 150 °C с конвекцией, остудите и вырежьте из форм.
+                <span class="source-badge">⏱ Урок_01: 00:02:06–00:02:35</span>
+                <span class="source-badge">⏱ Урок_02: 00:00:00–00:00:42</span>
+              </p>
+              <div class="warning-box">
+                <strong>Резать по форме:</strong> нож ведут по стенке кольца, а не по коржу — иначе дакуаз крошится.
+              </div>
+              <div class="tip-box">
+                <strong>Хранение:</strong> до 5 дней при комнатной температуре в плёнке, до 10 дней в холодильнике.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📐 Коржи: <strong>4 × Ø16 или 3 × Ø18 см</strong></span>
+              <span class="param-pill">⏱ Время: <strong>40 мин</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>150 °C, конвекция</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Заварная основа</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сливки (200 г) с ванильным сахаром (15 г) нагрейте до кипения. Желтки (60 г) соедините с сахаром (115 г) и сразу мешайте. Влейте в желтки часть горячих сливок, перемешайте, верните в сотейник и уварите на минимальном нагреве до 91–92 °C — до состояния, когда капля застывает на венчике.
+                <span class="source-badge">⏱ Урок_04: 00:00:00–00:05:43</span>
+              </p>
+              <div class="warning-box">
+                <strong>Желтки не стоят с сахаром:</strong> без перемешивания они сворачиваются и начинают «гореть».
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Финал: <strong>91–92 °C</strong></span>
+              <span class="param-pill">🌡 Нагрев: <strong>Минимальный</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Охлаждение под плёнку в контакт</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Крем вылейте на противень или в контейнер и затяните плёнкой прямо по поверхности. Остудите до комнатной температуры — лучше в холодильнике или на прохладном балконе.
+                <span class="source-badge">⏱ Урок_04: 00:05:41–00:07:22</span>
+              </p>
+              <div class="warning-box">
+                <strong>Без плёнки:</strong> сверху образуется корочка и конденсат, крем придётся пробивать заново.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📄 Плёнка: <strong>В контакт</strong></span>
+              <span class="param-pill">🌡 До: <strong>Комнатной температуры</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Крем: масло и заварная часть</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Масло (100 г) взбейте до белого пышного состояния и понемногу, примерно по три столовые ложки, вводите заварную основу — каждый раз до полного объединения. Масло и заварная часть должны быть примерно одной температуры. В итоге крем густой, не течёт и не расслаивается.
+                <span class="source-badge">⏱ Урок_03: 00:00:01–00:02:26</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не спешить:</strong> если добавлять заварную часть порциями побольше, крем расслоится, и вернуть его будет сложнее.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Масло: <strong>100 г</strong></span>
+              <span class="param-pill">🥄 Порции: <strong>~3 ст. л. заварной части</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>72 ч</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Пралине и алкоголь</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Введите в крем фундучное пралине (60 г) — консистенция должна быть кремовой; подойдёт и фундучная паста. Перемешайте венчиком, затем добавьте столовую ложку крепкого алкоголя и объедините.
+                <span class="source-badge">⏱ Урок_03: 00:02:30–00:03:26</span>
+              </p>
+              <div class="tip-box">
+                <strong>Алкоголь по желанию:</strong> он подчёркивает орех, но без него крем тоже работает.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌰 Пралине: <strong>60 г</strong></span>
+              <span class="param-pill">🥃 Алкоголь: <strong>1 ст. л.</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Сборка с сухофруктами</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                На дно — немного крема, затем первый корж и крем по весу, разровняйте. Выложите половину сухофруктов и утопите их в креме, чтобы крем показался, а следующий корж хорошо лёг. Накройте коржом гладкой стороной вниз, наденьте разъёмное кольцо, придавите, чтобы крем схватился, и выровняйте корж. Повторите слой и оставшимися сухофруктами. Верхний крем разровняйте, уложите последний корж гладкой стороной наружу, сделайте торту «массаж», затяните плёнкой и уберите в морозилку.
+                <span class="source-badge">⏱ Урок_03: 00:03:32–00:06:45</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сухофрукты не замачивать:</strong> их достаточно промыть — лишняя влага в креме не нужна.
+              </div>
+              <div class="tip-box">
+                <strong>Если не морозите:</strong> торт можно просто убрать в холодильник на 6–8, лучше 12 часов.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍑 Сухофрукты: <strong>По половине на слой</strong></span>
+              <span class="param-pill">🧊 Стабилизация: <strong>Морозилка или 6–12 ч в холоде</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Масляный крем на итальянской меренге</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Белки (160 г) взбивайте на средней скорости до плотной пены, введите сахар (100 г) в один приём. Параллельно варите сироп из 100 г сахара и 60 г воды до 116 °C, дайте кипению уняться и влейте тонкой струйкой по краю чаши. Взбивайте до 30–35 °C, затем вводите холодное масло (450 г) кубиками. Крем расслоится — продолжайте взбивать, он соберётся и станет гладким. В конце введите раствор диоксида титана, дайте 5–7 минут и ещё раз пробейте.
+                <span class="source-badge">⏱ Урок_05: 00:00:00–00:10:15</span>
+              </p>
+              <div class="warning-box">
+                <strong>116 °C по термометру:</strong> без него легко получить либо жидкую меренгу, либо карамельные комки.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сироп: <strong>116 °C</strong></span>
+              <span class="param-pill">🧈 Масло: <strong>450 г, холодное</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>5 суток / 1 месяц в морозилке</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Выравнивание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Торт достаньте из морозилки заранее и дайте отойти в холодильнике. Сначала тонким слоем закройте крошки и коржи, затем выровняйте начисто палетой и скребком: бок — вертикальными движениями, верх — строго горизонтальными к центру. Скребок вытирайте после каждого прохода, подложку — до идеала.
+                <span class="source-badge">⏱ Урок_05: 00:00:00–00:02:51</span>
+              </p>
+              <div class="warning-box">
+                <strong>Ледяной торт:</strong> крем схватывается мгновенно и ложится неровно, выравнивать можно только отогретый.
+              </div>
+              <div class="tip-box">
+                <strong>Расход:</strong> по DOCX на выравнивание уходит 250 г масляного крема.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Отогрев: <strong>~2 ч в холодильнике</strong></span>
+              <span class="param-pill">🧽 Скребок: <strong>Вытирать каждый раз</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Декор розами</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Розы и бутоны отсаживают насадкой 120, чашелистики — насадкой 349, листья — насадкой 104. Готовые цветы замораживают и уже подмороженными переносят на торт: так композиция остаётся чистой.
+              </p>
+              <div class="tip-box">
+                <strong>Крем для цветов:</strong> нужен самый качественный 82,5 % и обязательно холодный — иначе лепестки не держат форму.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧁 Насадки: <strong>120, 349, 104</strong></span>
+              <span class="param-pill">🧊 Перед сборкой: <strong>Заморозить</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Фундук в шелухе:</strong> обжаренный и неочищенный даёт самый яркий вкус.</li>
+                <li><strong>Помол «в муку, но не в пыль»:</strong> часть крошки должна остаться крупнее.</li>
+                <li><strong>Сухофруктов должно быть заметно:</strong> их утапливают в креме, чтобы они читались на разрезе.</li>
+                <li><strong>Корж гладкой стороной:</strong> автор специально чередует — сверху должен оказаться ровный.</li>
+                <li><strong>Разъёмное кольцо:</strong> обязательно, если торт уходит в морозилку.</li>
+                <li><strong>Алкоголь:</strong> одна столовая ложка коньяка или бренди подчёркивает орех.</li>
+                <li><strong>Крем на итальянской меренге:</strong> хранится 5 суток и замораживается без потери качества.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Перемолоть фундук в пасту:</strong> корж станет тяжёлым и осядет.</li>
+                <li><strong>Мешать тесто долго:</strong> воздух уходит, дакуаз не поднимается.</li>
+                <li><strong>Замочить сухофрукты:</strong> лишняя влага размягчает коржи.</li>
+                <li><strong>Добавлять заварную часть сразу всю:</strong> крем расслаивается.</li>
+                <li><strong>Цельное кольцо:</strong> торт не извлечь, не сломав коржи.</li>
+                <li><strong>Выравнивать ледяной торт:</strong> крем ложится комками.</li>
+                <li><strong>Тёплое масло для цветов:</strong> лепестки плывут и не держат форму.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и подача</h4>
+              <ul>
+                <li><strong>Коржи:</strong> 5 дней при комнатной температуре в плёнке, 10 дней в холодильнике.</li>
+                <li><strong>Крем фундучный:</strong> 72 часа в холодильнике.</li>
+                <li><strong>Масляный крем:</strong> 5 суток в холодильнике, 1 месяц в морозилке.</li>
+                <li><strong>Торт:</strong> морозилка или холодильник 6–12 часов.</li>
+                <li><strong>Подача:</strong> нарезать ножом, смоченным в горячей воде, и вытирать его между разрезами.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Замены и варианты</h4>
+              <ul>
+                <li><strong>Пралине:</strong> можно заменить фундучной пастой.</li>
+                <li><strong>Сухофрукты:</strong> любые — изюм, инжир, финики.</li>
+                <li><strong>Алкоголь:</strong> бренди, коньяк; можно исключить.</li>
+                <li><strong>Форма:</strong> 4 коржа Ø16 см или 3 коржа Ø18 см.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> Урок_01.mp4 — дакуаз и выпечка (00:00:00–00:02:35); Урок_02.mp4 — вырезание (00:00:00–00:00:42); Урок_03.mp4 — крем и сборка (00:00:01–00:06:45); Урок_04.mp4 — заварная основа; Урок_05.mp4 — масляный крем и выравнивание; DOCX «Торт Фундучный» — граммовки и декор.</li>
+              <li><strong>Ссылка в DOCX:</strong> «добавляем крем из урока 6» — это опечатка, заварная основа варится в Урок_04, отдельного урока 6 в папке нет.</li>
+              <li><strong>Время выпечки:</strong> в DOCX 40–50 минут, в видео — ровно 40 минут при 150 °C с конвекцией.</li>
+              <li><strong>Декор:</strong> видео заканчивается сборкой и масляным кремом; розы описаны только в DOCX (насадки 120, 349, 104), отдельного урока по цветам в папке нет.</li>
+              <li><strong>Алкоголь:</strong> в DOCX «1 ст. л. крепкого алкоголя (бренди, коньяк)»; в видео ложку добавляют после пралине.</li>
+              <li><strong>Пробелы:</strong> точный вес торта не назван; время отогрева перед подачей не оговорено.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_03.mp4 (около 06:20): сборка торта в кольце со слоем крема и сухофруктами. Украшенного варианта в видео нет.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>
