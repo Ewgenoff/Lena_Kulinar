@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Торт «Спартак» — пошаговый рецепт и технология</title>
+  <meta name="description" content="Шоколадно-медовые тонкие коржи «Спартака» с начинкой из печёной сливы, сметанно-сливочным кремом и рубленым кешью. Торт в крошке, декор — взбитый белый ганаш и ягоды.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body data-recipe-id="tort-spartak">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Торт «Спартак» со сливовой начинкой</h1>
+      <p class="recipe-lead">
+        Вариация на тему классического шоколадного медовика. Тонкие шоколадно-медовые коржи долго остаются свежими — мед держит влагу. Не слишком сладкий сметанно-сливочный крем с нужной кислинкой, начинка из печёной сливы (сейчас сезон) и рубленый кешью. Снаружи торт обсыпан крошкой, сверху — взбитый белый ванильный ганаш и свежие ягоды.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~1 ч: отвесить сметану заранее, чайник на коржи</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~2 ч 30 мин по двум дням</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Отвешивание сметаны ночь, тесто 1 ч, коржи ~8 мин, пропитка торта от 6 часов до ночи</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">2 дня: отвесить сметану → коржи → начинка → сборка</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 торт Ø20 см, ~2100 г без декора, 10–12 коржей</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-spartak.jpg" alt="Торт «Спартак» в крошке с ягодами и взбитым ганашем" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 торт)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">торт</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — один торт Ø20 см по рецептуре автора. Тесто делится на 10 шаров по 100 г, каждый раскатывается до ~22 см (после выпечки ~20 см). В сборку идёт половина сливовой начинки — вторую половину можно заморозить.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Показать источники (видео-таймкоды)</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> торт</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+      </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Граммовки сведены по всем частям торта: отвешанная сметана для крема, шоколадно-медовые коржи, сливовая начинка и белый ганаш для декора. Важно: сметану для крема отвешивают заранее, поэтому в магазине её берут с запасом до 20 %.
+      </p>
+
+        <div class="shopping-grid">
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🥛 Сметана, сливки, масло, яйца</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сметана 30 %</strong>:
+                  <span class="shopping-qty" data-base-amount="800" data-unit="г">800 г</span>
+                  <span class="shopping-hint">Для крема нужно 650 г отвешанной. Из 800 г после отвешивания выходит примерно 600 г, поэтому берите с запасом 15–20 % (у автора 800 г → 600 г)</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сливки 33 %</strong>:
+                  <span class="shopping-qty" data-base-amount="605" data-unit="г">605 г</span>
+                  <span class="shopping-hint">350 г в сметанный крем + 255 г в белый ганаш (75 г и 180 г)</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Масло сливочное 82,5 %</strong>:
+                  <span class="shopping-qty" data-base-amount="110" data-unit="г">110 г</span>
+                  <span class="shopping-hint">Для коржей</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Яйца куриные</strong>:
+                  <span class="shopping-qty" data-base-amount="3" data-unit="шт." data-piece="true">3 шт.</span>
+                  <span class="shopping-hint">Берём по весу 120 г яиц (обычно 2–3 шт. С1)</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🍫 Шоколад, сливы, бакалея, декор</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сливы свежие</strong>:
+                  <span class="shopping-qty" data-base-amount="560" data-unit="г">560 г</span>
+                  <span class="shopping-hint">330 г на пюре + 230 г кусочками (можно больше для отбора после варки)</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Белый шоколад</strong>:
+                  <span class="shopping-qty" data-base-amount="120" data-unit="г">120 г</span>
+                  <span class="shopping-hint">Для белого ганаша на декор</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Мука пшеничная</strong>:
+                  <span class="shopping-qty" data-base-amount="380" data-unit="г">380 г</span>
+                  <span class="shopping-hint">Для коржей, просеять с какао</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Какао алкализованное</strong>:
+                  <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+                  <span class="shopping-hint">Для коржей; даёт кислую среду, помогая соде</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахар-песок</strong>:
+                  <span class="shopping-qty" data-base-amount="400" data-unit="г">400 г</span>
+                  <span class="shopping-hint">150 г в коржи + 100 г в сливовый пектин + 150 г сахарной пудры в крем</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахарная пудра</strong>:
+                  <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                  <span class="shopping-hint">Для сметанного крема, обязательно просеять</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Мёд</strong>:
+                  <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                  <span class="shopping-hint">Можно заменить 1:1 инвертным сахаром — например, при аллергии на мёд</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Молоко</strong>:
+                  <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                  <span class="shopping-hint">Для коржей</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сода</strong>:
+                  <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+                  <span class="shopping-hint">Для коржей; сода работает на кислой среде мёда и какао, привкуса не остаётся</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Орехи кешью обжаренные</strong>:
+                  <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                  <span class="shopping-hint">Рубленые, посыпать на сливовую начинку</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Пектин NH</strong>:
+                  <span class="shopping-qty" data-base-amount="4" data-unit="г">4 г</span>
+                  <span class="shopping-hint">Для сливовой начинки; смешать с сахаром</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Глюкозный сироп и инвертный сахар</strong>:
+                  <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                  <span class="shopping-hint">По 15 г в белый ганаш (можно заменить мёдом)</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Желатин</strong>:
+                  <span class="shopping-qty" data-base-amount="3" data-unit="г">3 г</span>
+                  <span class="shopping-hint">Для белого ганаша, замочить в 15 г воды</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Пряности</strong> — соль, лимонная кислота, ванильная паста
+                  <span class="shopping-hint">Щепотка соли в коржи, ¼ ч. л. лимонной кислоты в сливовую начинку, ванильная паста в крем и ганаш</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Ягоды для декора</strong> — малина, свежие ягоды по вкусу
+                  <span class="shopping-hint">Плюс к обсыпке торта крошкой</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Расходники</strong> — пергамент (2 листа на корж), марля, кольцо Ø20 см, скребок
+                  <span class="shopping-hint">Для отвешивания сметаны и раскатки коржей</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Шоколадно-медовые коржи</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Яйца куриные (меланж)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Мёд
+              <span class="ingredient-note">Можно заменить инвертным сахаром 1:1</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="110" data-unit="г">110 г</span> — Масло сливочное 82,5 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Молоко
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Сода
+              <span class="ingredient-note">Можно заменить на разрыхлитель, но сода раскрывается на кислой среде мёда и какао</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Какао алкализованное
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="380" data-unit="г">380 г</span> — Мука пшеничная
+              <span class="ingredient-note">Просейте и смешайте с какао</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Сметанно-сливочный крем</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="650" data-unit="г">650 г</span> — Сметана отвешанная
+              <span class="ingredient-note">Отвешивается ночь в холодильнике</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="350" data-unit="г">350 г</span> — Сливки 33 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              1 ч. л. — Ванильная паста
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Сливовая начинка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="330" data-unit="г">330 г</span> — Слива (на пюре)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="230" data-unit="г">230 г</span> — Слива (кусочками)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="г">4 г</span> — Пектин NH
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              ¼ ч. л. — Лимонная кислота
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Орехи кешью обжаренные, рубленые
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Белый ганаш для декора</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Белый шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="255" data-unit="г">255 г</span> — Сливки 33 %
+              <span class="ingredient-note">75 г нагреть с сиропами, 180 г добавить холодными в конце</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Сироп глюкозы
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Инвертный сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Желатин
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Вода (для желатина)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              1 ч. л. — Ванильная паста
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Отвешивание сметаны (заранее)</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Для торта нужна густая сметана, поэтому её отвешивают. Поставьте на сотейник марлю (или одноразовую тряпку, пропускающую воду), выложите всю сметану, накройте сверху, не прижимая, и отправьте в холодильник на 6–8 часов, лучше на ночь.
+                <span class="source-badge">⏱ Урок 1: 01:02–02:20</span>
+              </p>
+              <p>
+                Сметаны берить нужно больше, чем по рецепту, так как уйдёт часть влаги. Из 800 г 30% сметаны у автора после отвешивания получилось 600 г, при этом выделилось 200 г сыворотки.
+                <span class="source-badge">⏱ Урок 1: 02:41–03:10</span>
+              </p>
+              <div class="warning-box">
+                <strong>Чем ниже жирность — тем больше уходит:</strong> у 20% сметаны может уйти до 30% веса. 10–15% сметану автор не советует — она самая кислая. Для 650 г отвешанной берите около 800 г 30% сметаны.
+                <span class="source-badge">⏱ Урок 1: 01:48–02:20</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>ночь в холодильнике</strong></span>
+              <span class="param-pill">🧀 Выход: <strong>800 г → ~600 г отвешанной</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Сметанно-сливочный крем</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В отвешанную сметану добавьте жирные сливки и ванильную пасту (чайной ложки достаточно), взбивайте до плотного пышного состояния.
+                <span class="source-badge">⏱ Урок 1: 03:10–03:38</span>
+              </p>
+              <p>
+                Когда крем загустеет, добавьте сахарную пудру — обязательно просейте ее и добавляйте по весу. Взбивайте сахарную пудру до готовности. Автор взбивала довольно долго, около 7 минут.
+                <span class="source-badge">⏱ Урок 1: 04:11–05:15</span>
+              </p>
+              <div class="tip-box">
+                <strong>Важно:</strong> сметанно-сливочный крем лучше использовать сразу после приготовления.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Взбивание: <strong>~7 минут</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Густой, пышный</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Шоколадно-медовая смесь для коржей</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В сотейник отправьте яйца и сахар, разотрите. Затем добавьте мёд, сливочное масло (порезанное кусочками), пол-чайной ложки соли, молоко и 10 г соды.
+                <span class="source-badge">⏱ Урок 2: 00:11–00:35</span>
+              </p>
+              <div class="warning-box">
+                <strong>Автор добавляет соль двумя частями:</strong> пол-чайной ложки соли и 10 г соды идут в жидкую смесь. Соду можно заменить разрыхлителем — тогда разрыхлитель добавляется в муку, а не в жидкие ингредиенты.
+                <span class="source-badge">⏱ Урок 2: 02:08–03:00</span>
+              </div>
+              <p>
+                Эту смесь поставьте на самый минимальный огонь и при постоянном помешивании нагревайте, пока масса не увеличится в объёме в 1,5–2 раза (займёт 10–15 минут). Сода на кислой среде мёда и какао начнёт работать — пойдёт углекислый газ, масса станет пышной. Нагревать можно и на водяной бане, если боитесь пригорания.
+                <span class="source-badge">⏱ Урок 2: 00:35–04:22</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Нагрев: <strong>минимальный огонь или водяная баня</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Увеличение объёма в 1,5–2 раза</strong></span>
+              <span class="param-pill">⏱ Время: <strong>10–15 минут</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Замес теста</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Снимите смесь с огня и переложите в другую ёмкость, чтобы она быстрее остыла. В горячую смесь сухие ингредиенты добавлять нельзя — мука заварится, и коржи станут затянутыми. Дождитесь, пока смесь остынет ниже 45 °C (у автора ~40 °C).
+                <span class="source-badge">⏱ Урок 2: 04:46–05:22</span>
+              </p>
+              <p>
+                Муку обязательно перемешайте с какао (иначе какао пойдёт комочками) — обе просеянные. Автор оставляет 50 г муки про запас и замешивает сначала венчиком, потом рукой. Тёсто густое, может липнуть к рукам, но не должно течь.
+                <span class="source-badge">⏱ Урок 2: 05:11–07:12</span>
+              </p>
+              <p>
+                Меньше муки добавлять можно, больше — не стоит, иначе сложно будет раскатывать коржи. Пусть тесто полежит час в холодильнике, чтобы масло начало работать и тесто стало раскатываться.
+                <span class="source-badge">⏱ Урок 2: 07:15–07:58</span>
+              </p>
+              <div class="tip-box">
+                <strong>Замораживание:</strong> тесто и раскатанные коржи можно замораживать до месяца. Тесто после заморозки ведёт себя отлично.
+                <span class="source-badge">⏱ Урок 2: 08:06–08:21</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>ниже 45 °C для муки</strong></span>
+              <span class="param-pill">⏱ В холодильник: <strong>1 час</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Раскатка и выпечка коржей</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Так как тесто отдохнуло, взвесьте и разделите на 10–12 шаров по ~100 г. Скатайте в шары — не старайтесь сильно, всё равно раскатаете.
+                <span class="source-badge">⏱ Урок 2: 08:22–08:55</span>
+              </p>
+              <p>
+                Раскатывайте каждый шар между двух листов пергамента тонко (толщина ~1 мм и меньше) до диаметра около 22 см — после выпечки коржи сжмутся до ~20 см. Катайте в двух направлениях, периодически отрывая пергамент. Мукой посыпать не нужно.
+                <span class="source-badge">⏱ Урок 2: 08:56–10:30</span>
+              </p>
+              <p>
+                Перед выпечкой наколите коржи вилкой, чтобы они сильно не деформировались (ровные коржи). Обрезаются коржи строго после выпечки.
+                <span class="source-badge">⏱ Урок 2: 10:41–11:05</span>
+              </p>
+              <p>
+                Выпекайте при 170–180 °C с конвекцией 8–10 минут. Если выпекаете на двух противнях — 8 минут, если на пяти, как у автора — 10.
+                <span class="source-badge">⏱ Урок 2: 11:59–12:13</span>
+              </p>
+              <div class="warning-box">
+                <strong>Ориентируйтесь на время:</strong> цвет коржей тёмный, и по нему перепек/недопек практически невозможно определить. 8–10 минут для этих коржей более чем достаточно. Следите за временем выпечки!
+                <span class="source-badge">⏱ Урок 2: 13:01–13:25</span>
+              </div>
+              <p>
+                Обрезайте коржи горячими, сразу после выпечки — просто продавливайте их кольцом. Получается ровно.
+                <span class="source-badge">⏱ Урок 2: 13:03–13:44</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Температура: <strong>170–180 °C с конвекцией</strong></span>
+              <span class="param-pill">⏱ Время: <strong>8–10 минут</strong></span>
+              <span class="param-pill">📏 Диаметр: <strong>~22 см → ~20 см после выпечки</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Сливовая начинка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Часть сливы (330 г) оставьте в сотейнике половинками-четвертинками — её вы пюрируете. Вторую часть (230 г) нарежьте кубиками и добавьте в конце, чтобы в начинке ощущалась фруктовая текстура.
+                <span class="source-badge">⏱ Урок 3: 00:04–00:33</span>
+              </p>
+              <p>
+                Смешайте сахар и пектин. Немного прогрейте крупные кусочки сливы, чтобы легче пюрировались, затем пробейте погружным блендером. Кожицу не удаляйте — в ней много пектина, и она даёт розоватый цвет.
+                <span class="source-badge">⏱ Урок 3: 01:11–03:07</span>
+              </p>
+              <p>
+                Добавьте сливу кусочками. Когда масса остынет примерно до температуры тела (~36 °C), при постоянном помешивании вводите пектин с сахаром «дождиком», чтобы не комковался. Включите нагрев и варите до закипания.
+                <span class="source-badge">⏱ Урок 3: 03:13–04:21</span>
+              </p>
+              <p>
+                После закипания дайте провариться ещё 1–2 минуты, чтобы кусочки сливы стали мягче (иначе пострадает разрез торта). В самом конце добавьте ¼ ч. л. лимонной кислоты и интенсивно перемешайте. Выключите — начинка готова.
+                <span class="source-badge">⏱ Урок 3: 04:37–05:38</span>
+              </p>
+              <div class="tip-box">
+                <strong>Если готовите из чистого пюре:</strong> без кусочков можно выключать и добавлять лимонную кислоту сразу после закипания — густота уже будет хорошей. Начинка немного жидковата — в торте она стабилизируется.
+                <span class="source-badge">⏱ Урок 3: 05:02–05:38</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Нагрев: <strong>до закипания, потом 1–2 мин</strong></span>
+              <span class="param-pill">🍋 В конце: <strong>¼ ч. л. лимонной кислоты</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Сборка торта</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Собирайте по весам. На подложку нанесите немного крема, положите первый корж и распределите слой сметанного крема. Слои чередуйте: крем → корж → сливовая начинка → рубленый кешью → корж, так далее. В кольце Ø20 см высота позволяет 10–12 слоёв.
+                <span class="source-badge">⏱ Урок 4: 00:01–04:36</span>
+              </p>
+              <p>
+                На слоях с начинкой крема берите чуть меньше, чем в обычных прослойках, и делайте бортик-«чашечку» (удобнее из кондитерского мешка), чтобы начинка легла внутрь и не вытекала. Выкладывайте сливовую начинку по весам, распределяйте палеткой.
+                <span class="source-badge">⏱ Урок 4: 01:23–03:48</span>
+              </p>
+              <p>
+                Периодически делайте лёгкий «массаж» торту, чтобы слои соединились. Верхний слой крема должен быть небольшим, половинчатым — торт потом полностью обсыпают крошкой.
+                <span class="source-badge">⏱ Урок 4: 06:30–08:03</span>
+              </p>
+              <p>
+                Затяните торт плёнкой (после часа в холодильнике, когда крем начнёт впитываться) и отправьте на пропитку в холодильник. Неплохо дать пропитаться ночь — тогда торт полностью стабилизируется, станет сочным, нежным, воздушным и легким на разрез.
+                <span class="source-badge">⏱ Урок 4: 08:03–08:44</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Кольцо: <strong>Ø20 см</strong></span>
+              <span class="param-pill">🍮 Начинка: <strong>½ порции сливовой + кешью</strong></span>
+              <span class="param-pill">🧊 Пропитка: <strong>от 6 часов до ночи</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Обсыпка крошкой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Извлеките торт из кольца. Слегка покройте его оставшимся сметанным кремом снаружи тонким слоем — главное, чтобы крошечки прилипли. Выравнивать не нужно, торт и так ровный.
+                <span class="source-badge">⏱ Урок 5: 00:02–01:06</span>
+              </p>
+              <p>
+                Насыпайте крошку на скребок и прикладывайте ко всем поверхностям торта. Крошка тёмная — берегитесь, всё вокруг будет в крошке. Можно и рукой присоединять крошку к торту, как удобнее.
+                <span class="source-badge">⏱ Урок 5: 01:24–02:17</span>
+              </p>
+              <p>
+                Прижмите крошку скребком, чтобы она не осыпалась при перевозке и декоре. Торт сразу становится аккуратнее. Впадинки заполните дополнительной крошкой — торт должен быть ровным.
+                <span class="source-badge">⏱ Урок 5: 02:17–03:15</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥄 Крошка: <strong>от остатков коржей</strong></span>
+              <span class="param-pill">✨ Уровень: <strong>выравнивать нельзя, прижимать можно</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Белый ганаш для декора и ягоды</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Желатин замочите в холодной воде. Нагрейте 75 г сливок с сиропом глюкозы, инвертным сахаром и ванильной пастой до кипения, но не кипятите. Вылейте на белый шоколад, перемешайте до растворения (если не растворяется — капельку прогрейте или пробейте блендером).
+                <span class="source-badge">⏱ Урок 6: 00:02–01:25</span>
+              </p>
+              <p>
+                Растопите желатин в микроволновке и отправьте в ганаш. Затем по весу добавьте вторую порцию холодных сливок (180 г) и пробейте всё погружным блендером, опуская его на дно и не загоняя лишний воздух.
+                <span class="source-badge">⏱ Урок 6: 01:43–02:49</span>
+              </p>
+              <p>
+                Накройте ганаш плёнкой в контакт и уберите в холодильник на стабилизацию минимум на 5–6 часов, лучше на ночь (данный ганаш неплохо выдерживать и сутки).
+                <span class="source-badge">⏱ Урок 6: 02:50–03:11</span>
+              </p>
+              <p>
+                Перед использованием взбейте ганаш миксером в узкой посуде. Сначала он разжижается, потом густеет и приобретает кремовую текстуру. Как только увидите намёк на крупинку — сразу прекращайте, иначе перебьёте и придётся выбросить. Даже жидковатый на взгляд крем после посадки доберёт консистенцию за счёт желатина.
+                <span class="source-badge">⏱ Урок 6: 03:31–05:26</span>
+              </p>
+              <p>
+                Отсадите взбитый ганаш «помпочки» на торт и выложите между ними ягоды (например, малину горкой). Торт можно не украшать вовсе — просто выложить ягоды сверху.
+                <span class="source-badge">⏱ Урок 6: 05:28–06:33</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Стабилизация: <strong>от 5–6 часов до суток</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Погружной блендер, миксер, насадка «закрытая звезда» 8 мм</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Кремовая текстура, до крупинки</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Мед держит влагу:</strong> мёд — это инвертный сахар. Из-за него коржи долго остаются свежими.</li>
+                <li><strong>Сметану отвешивают:</strong> в магазине редко есть сметана 30 % нужной густоты — отвешивание ночью решает вопрос, но сметаны берите на 15–20 % больше.</li>
+                <li><strong>Замена мёда:</strong> при аллергии на мёд можно спокойно менять его 1:1 на инвертный сахар — коржи получатся такие же, торт не вызовет аллергии.</li>
+                <li><strong>Не перекладывайте муку:</strong> слишком много муки усложнит раскатку тонких коржей.</li>
+                <li><strong>Не прокалывайте при выпечке слишком много:</strong> кольцом обрезаются коржи после выпечки, а вилкой накалываются перед, чтобы не деформировались.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Недосчитаться сметаны:</strong> необвешанная жидкая сметана делает крем жидким. Отвешивайте заранее.</li>
+                <li><strong>Муку в горячую смесь:</strong> мука заварится, коржи будут затянутыми и их тяжело раскатывать.</li>
+                <li><strong>Переложить муку:</strong> тесто станет слишком тугим, коржи трудно раскатать.</li>
+                <li><strong>Неправильное время выпечки:</strong> цвет тёмный, перепек/недопек по цвету не определить — ориентируйтесь только на время.</li>
+                <li><strong>Перебить ганаш при взбивании:</strong> как только появилась крупинка — это всё, ганаш придётся выбросить.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> сериал «Торт Спартак» Надежды Зубовой — расшифровка видео (уроки 1–6) и текстовые комментарии автора с точными граммовками.</li>
+              <li><strong>Соль в коржах:</strong> автор в видео добавляет «пол чайной ложечки соли» в жидкую смесь отдельно; в комментариях в перечне коржей указано 2 г соли. Числа условно сведены: 2 г соли в итоговый перечень, пол-ложки соли в жидкую смесь.</li>
+              <li><strong>Сливовая начинка:</strong> в комментариях «для торта потребуется ½ порции»; на странице в сборке указано ½ порции, остальное можно заморозить.</li>
+              <li><strong>Объём теста:</strong> автор делит тесто на 10–12 шаров, в комментариях — 10 шаров по 100 г. На странице указано по видео «10–12 шаров по ~100 г».</li>
+              <li><strong>Время выпечки:</strong> в видео 170–180 °C 8–10 минут, в комментариях 170–180 °C «5 минут». На странице по видео оставлено 8–10 минут.</li>
+              <li><strong>Уроки 5–6 в этой папке</strong> содержат декор «Наполеона» (обсыпка крошкой и белый ганаш с корзинкой ягод) — это тот же ганаш, что в уроке для Спартака; техника обсыпки крошкой применена и к Спартаку.</li>
+              <li><strong>Фото:</strong> в исходной папке только видео, готового фото торта нет — на странице стоит кадр-заглушка.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

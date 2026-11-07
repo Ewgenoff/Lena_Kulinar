@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рулет «Сказка» — пошаговый рецепт и технология</title>
+  <meta name="description" content="Рулет «Сказка» на классическом бисквите с намилакой двух видов — на белом и молочном шоколаде, с сиропной пропиткой. Декор — масляный крем на итальянской меренге с цветами в малайзийской технике.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body data-recipe-id="rulet-skazka">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Рулет «Сказка» с намилакой</h1>
+      <p class="recipe-lead">
+        Советский торт «Сказка» в виде рулета, но вместо масляного крема — лёгкая японская намилака двух видов: на белом и молочном шоколаде. Классический бисквит, испечённый на листе, пропитывается сиропом и плотно сворачивается. Снаружи — шоколадный крем на итальянской меренге, бока в крошке, сверху композиция из кремовых цветов в малайзийской технике.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~40 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~3 ч по двум-трём дням</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Намилака ночь (8–10 ч или от 6 ч), бисквит 10 мин, стабилизация рулета от 1 ч до ночи, ганаш/крем минимум 5–6 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">2–3 дня: намилака → бисквит и сборка → декор</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 рулет (расход на 1 рулет из закладки на 2 рулета)</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/rulet-skazka.jpg" alt="Рулет «Сказка» со шоколадным кремом, крошкой по бокам и кремовыми цветами сверху" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 рулет)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">рулет</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Расход ингредиентов в источнике дан на два рулета. База калькулятора — один рулет: раскатанная намелака, бисквит на один противень, пропитка на один рулет, шоколадный крем и крем для цветов — на один рулет.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Показать источники (видео-таймкоды)</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> рулет</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+      </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Граммовки сведены по всем частям: намилака на белом и молочном шоколаде, бисквит, сироп-пропитка, шоколадный крем на итальянской меренге и крем для цветов. Основа — на 1 рулет.
+      </p>
+
+        <div class="shopping-grid">
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🥛 Молочное, сливки, масло, яйца</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Масло сливочное 82,5 %</strong>:
+                  <span class="shopping-qty" data-base-amount="450" data-unit="г">450 г</span>
+                  <span class="shopping-hint">В шоколадный крем и крем для цветов. Для цветов — самое лучшее и светлое (в описании автора — традиционное масло Азерского комбината 82,5 %)</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сливки 30–33 %</strong>:
+                  <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                  <span class="shopping-hint">200 г в намилаку на белом шоколаде + 100 г в намилаку на молочном</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Яйца куриные С0</strong>:
+                  <span class="shopping-qty" data-base-amount="8" data-unit="шт." data-piece="true">8 шт.</span>
+                  <span class="shopping-hint">4 шт. на бисквит + 4 шт. (160 г белка) на крем. Расход дан на 1 рулет</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Молоко</strong>:
+                  <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                  <span class="shopping-hint">100 г в намилаку на белом + 50 г в намилаку на молочном. Жирность ~3 %</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🍫 Шоколад, бакалея, декор</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Белый шоколад</strong>:
+                  <span class="shopping-qty" data-base-amount="180" data-unit="г">180 г</span>
+                  <span class="shopping-hint">Для намилаки на белом шоколаде; плюс 100 г тёмного на шоколадный крем</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Молочный шоколад</strong>:
+                  <span class="shopping-qty" data-base-amount="90" data-unit="г">90 г</span>
+                  <span class="shopping-hint">Для намилаки на молочном шоколаде</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Тёмный шоколад</strong>:
+                  <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                  <span class="shopping-hint">Растопленный, кладётся в шоколадный крем (100 г на 500 г готового крема)</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Какао-масло</strong>:
+                  <span class="shopping-qty" data-base-amount="3" data-unit="г">3 г</span>
+                  <span class="shopping-hint">В намилаку на белом шоколаде для стабильности</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахар-песок</strong>:
+                  <span class="shopping-qty" data-base-amount="380" data-unit="г">380 г</span>
+                  <span class="shopping-hint">150 г на бисквит + 70 г на сироп + 160 г на крем (100 г в белки + 60 г в сироп)</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Мука пшеничная</strong>:
+                  <span class="shopping-qty" data-base-amount="90" data-unit="г">90 г</span>
+                  <span class="shopping-hint">Для бисквита</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Желатин</strong>:
+                  <span class="shopping-qty" data-base-amount="6" data-unit="г">6 г</span>
+                  <span class="shopping-hint">4 г в намилаку на белом + 2 г (на 10 г воды) в намилаку на молочном. Автор — Dr. Oetker, листовой/гранулированный, считайте по блюмам</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Коньяк</strong>:
+                  <span class="shopping-qty" data-base-amount="1" data-unit="ст. л.">1 ст. л.</span>
+                  <span class="shopping-hint">В пропитку, по желанию</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Диоксид титана</strong>:
+                  <span class="shopping-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span>
+                  <span class="shopping-hint">Белый краситель для выбеливания крема для цветов. Опционально</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Красители водорастворимые</strong> — жёлтый, розовый, зелёный
+                  <span class="shopping-hint">Для кремовых цветов: жёлтый для серединок, розовый разных оттенков, зелёный (2 оттенка или 1)</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Пряности</strong> — ванильная паста, соль
+                  <span class="shopping-hint">Ваниль в намилаку и крем, щепотка соли в крем для цветов</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Расходники</strong> — пергамент/силиконовый ковёр, пищевая плёнка, насадки 349/1/103/101, гвоздик, бумажка для цветов
+                  <span class="shopping-hint">349 — лист, 1 — тычинка, 103 — лепесток крупнее, 101 — лепесток меньше</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Намилака на белом шоколаде</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="180" data-unit="г">180 г</span> — Белый шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Молоко
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Какао-масло
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="г">4 г</span> — Желатин
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Вода (для желатина)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сливки 30 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Ванильная паста
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Намилака на молочном шоколаде</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="90" data-unit="г">90 г</span> — Молочный шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Молоко
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Желатин
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Вода (для желатина)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сливки 30 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Ванильная паста
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Классический бисквит</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span> — Яйца куриные С0
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="90" data-unit="г">90 г</span> — Мука пшеничная
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Пропитка (сироп)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Вода
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              1 ст. л. — Коньяк (по желанию)
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Шоколадный крем и крем для цветов (на 1 рулет)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="450" data-unit="г">450 г</span> — Масло сливочное 82,5 % холодное
+              <span class="ingredient-note">Из них 200 г в крем для цветов, ~250 г в шоколадный крем для покрытия</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Белок яичный (4 шт. от яиц С0)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар (в белки)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар (в сироп)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Вода (для сиропа)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Тёмный шоколад (растопить, для шоколадного крема)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              1 ч. л. — Диоксид титана (опционально)
+              <span class="ingredient-note">Растворить в воде, для выбеливания крема для цветов</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Водорастворимые красители, соль
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Намилака: молочно-желатиновая база</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Желатин залейте холодной водой. Нагрейте молоко до горячего состояния (кипятить не обязательно): как только пойдёт пар и по бокам появятся первые пузыри — выключите.
+                <span class="source-badge">⏱ Урок 1: 03:11–04:53</span>
+              </p>
+              <p>
+                В горячее молоко добавьте ванильную пасту и набухший желатин, перемешайте до полного растворения желатина. Разлейте молоко по стаканам для блендера (по весам).
+                <span class="source-badge">⏱ Урок 1: 04:53–05:52</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Молоко: <strong>до пара, не кипятить</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Намилака: эмульсия с шоколадом и сливками</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Дайте шоколаду немного постоять в тёплом молоке, перемешайте и пробейте погружным блендером. Затем по весу добавьте холодные жирные сливки и снова пробейте блендером.
+                <span class="source-badge">⏱ Урок 1: 05:52–06:49</span>
+              </p>
+              <p>
+                В белый шоколад автор добавила какао-масло по весу, так как в её шоколаде меньше какао-масла, чем в классическом шоколаде Вальрона, — это стабилизирует намилаку. В молочный шоколад какао-масло не добавляется.
+                <span class="source-badge">⏱ Урок 1: 01:44–02:25</span>
+              </p>
+              <p>
+                Перелейте намилаку в плоский контейнер (большая площадь поверхности обязательна — иначе схватится только у краёв, а в середине останется жидкой), накройте плёнкой в контакт и уберите в холодильник на минимум 6–8 часов, лучше на ночь.
+                <span class="source-badge">⏱ Урок 1: 07:19–08:52</span>
+              </p>
+              <div class="tip-box">
+                <strong>Что такое намилака:</strong> японский крем на белом или молочном шоколаде, придуманный в школе Вальрона. Готов к употреблению без взбивания, но его можно и взбивать. Лёгкий, блестящий, держит след от ложки.
+                <span class="source-badge">⏱ Урок 1: 00:02–01:16</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Стабилизация: <strong>минимум 6–8 часов, лучше ночь</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Погружной блендер, плоский контейнер</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Классический бисквит на листе</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Духовку разогрейте заранее — такой бисквит печётся быстро. Яйца целиком (без разделения на белки и желтки, поскольку выпекается тонкий лист высотой ~1 см) взбивайте с сахаром на максимальной скорости миксера 10 минут — масса увеличится в объёме больше чем в 3 раза.
+                <span class="source-badge">⏱ Урок 2: 00:26–02:35</span>
+              </p>
+              <p>
+                Введите всю муку сразу лёгкими поднимающими движениями лопатки (не месите, не придавливайте — берегите воздух) ровно до намокания муки.
+                <span class="source-badge">⏱ Урок 2: 02:38–03:17</span>
+              </p>
+              <p>
+                Вылейте тесто на противень, застеленный пергаментом или силиконовым ковром, и аккуратно разровняйте лопаткой. Тесто густое, само не растекается — разравнивайте ровно.
+                <span class="source-badge">⏱ Урок 2: 03:18–04:08</span>
+              </p>
+              <div class="warning-box">
+                <strong>Ждать нельзя:</strong> у этого бисквита нет разрыхления, кроме воздуха внутри. Оставленное на столе тесто просто осядет и получится блинчик — сразу в духовку.
+                <span class="source-badge">⏱ Урок 2: 03:23–03:42</span>
+              </div>
+              <p>
+                Выпекайте при 180 °C верх-низ (без конвекции) 10 минут. Готовность — нажатие пальцем: бисквит должен восстанавливаться. Дайте остыть.
+                <span class="source-badge">⏱ Урок 2: 04:09–04:45</span>
+              </p>
+              <div class="tip-box">
+                <strong>Лучше выпекать прямо перед сборкой:</strong> если дать бисквиту постоять, он стабилизируется и утратит пластичность для сворачивания.
+                <span class="source-badge">⏱ Урок 3: 03:47–03:54</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Взбивание: <strong>10 минут</strong></span>
+              <span class="param-pill">🔥 Температура: <strong>180 °C верх-низ (или 170 °C конвекция)</strong></span>
+              <span class="param-pill">⏱ Выпечка: <strong>~10 минут</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Подготовка бисквита и намилаки к сборке</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Остывший бисквит переверните и аккуратно снимите бумагу. Проверьте намилаку: она должна стать густой, блестящей, с ложки сходить красивой текстурной массой. Намилаку можно использовать без взбивания.
+                <span class="source-badge">⏱ Урок 3: 00:02–01:10</span>
+              </p>
+              <p>
+                Автор слегка пробивает намилаку венчиком, чтобы было легче намазывать на корж.
+                <span class="source-badge">⏱ Урок 3: 02:23–02:34</span>
+              </p>
+              <p>
+                Сварите сироп из воды и сахара (по желанию с коньяком) и остудите. Классические бисквиты нуждаются в пропитке — сиропа для рулета потребуется примерно 120–150 г.
+                <span class="source-badge">⏱ Урок 3: 03:28–03:41</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍯 Сироп: <strong>120–150 г на рулет</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Формирование рулета</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Намилаку делите так: ⅔ белого крема и ⅓ тёмного на молочном шоколаде. Визуально разделите бисквит: одну треть не смазывайте светлым кремом, а всю поверхность пропитайте сиропом.
+                <span class="source-badge">⏱ Урок 3: 02:59–03:19</span>
+              </p>
+              <p>
+                Выложите белую намилаку ровным слоем на ⅔ бисквита (распределяйте ровно, чтобы разрез был красивым), затем пробитую шоколадную намилаку — на оставшееся место.
+                <span class="source-badge">⏱ Урок 3: 04:02–05:35</span>
+              </p>
+              <p>
+                Уберите рулет на 2–3 минуты в морозилку, чтобы намилака подхватилась, затем сворачивайте очень плотно. Подворачивайте и контролируйте, помогайте бумагой. Первые повороты самые ответственные.
+                <span class="source-badge">⏱ Урок 3: 05:37–06:40</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем морозилка:</strong> полежавший в морозилке бисквит не даёт намилаке течь и растекаться, а рулет получается круглым, а не приплюснутым.
+                <span class="source-badge">⏱ Урок 3: 05:56–06:51</span>
+              </div>
+              <p>
+                Переложите рулет на пергамент и отправьте в холодильник. Можно завернуть в плёнку и оставить на ночь, а можно декорировать уже через час. Подрезать бисквит удобно после стабилизации.
+                <span class="source-badge">⏱ Урок 3: 06:52–07:15</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🤝 Пропорция: <strong>⅔ белой + ⅓ шоколадной намилаки</strong></span>
+              <span class="param-pill">🧊 Морозилка: <strong>2–3 минуты</strong></span>
+              <span class="param-pill">🧊 Стабилизация: <strong>от 1 часа до ночи</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Шоколадный крем на итальянской меренге</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В классической «Сказке» сверху — крем «Шарлот». Вместо него автор делает сливочный крем на итальянской меренге и добавляет растопленный шоколад: получилось потрясающе вкусно, кремом удобно и выравнивать, и делать декор.
+                <span class="source-badge">⏱ Урок 4: 00:22–00:36</span>
+              </p>
+              <p>
+                Целиком приготовьте итальянскую меренгу: белки взбейте со 100 г сахара, сироп из 100 г сахара и 60 г воды сварите до 116 °C (дойдёт сам до 117 °C), тонкой струйкой, не на венчик, влейте в белки. Взбивайте, пока меренга не остынет до 38–40 °C.
+                <span class="source-badge">⏱ Урок 5: 03:42–07:12</span>
+              </p>
+              <p>
+                Затем постепенно добавляйте холодное сливочное масло кусочками и взбивайте до гладкой эмульсии — крем будет расслаиваться, как будто испорчен, но это нормально, продолжайте, он соберётся.
+                <span class="source-badge">⏱ Урок 5: 07:12–09:38</span>
+              </p>
+              <p>
+                В самом конце растопите 100 г тёмного шоколада и вмешайте в крем. Получится шоколадный крем для покрытия торта.
+                <span class="source-badge">⏱ Урок 4: 00:28–00:36</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сироп: <strong>116 °C</strong></span>
+              <span class="param-pill">🍫 Шоколад: <strong>100 г на ~500 г крема</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Гладкая блестящая эмульсия</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Масляный крем для цветов</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Для цветов автор делает масляный крем на итальянской меренге отдельно: тот же рецепт меренги, но без шоколада, и обязательно на живых белках — от них цветы получаются реалистичными, с тонкими лепестками. Масло — самое лучшее, светлое 82,5 %, холодное.
+                <span class="source-badge">⏱ Урок 5: 00:03–02:07</span>
+              </p>
+              <p>
+                Крем можно готовить и на альбумине/пастеризованном белке, если он нужен только для выравнивания. Диоксид титана растворите в ложке воды и вмешайте в конце взбивания для выбеливания.
+                <span class="source-badge">⏱ Урок 5: 01:11–01:31, 04:45–05:18, 09:38–10:21</span>
+              </p>
+              <p>
+                Крем отлично хранится и переживает заморозку без потери качества. После разморозки каждый раз пробивайте его миксером — он будет казаться свёрнутым, но эмульсия соберётся, продолжайте взбивать.
+                <span class="source-badge">⏱ Урок 5: 03:04–03:42</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Белки: <strong>живые (для цветов)</strong></span>
+              <span class="param-pill">⚪ Диоксид титана: <strong>1 ч. л. на порцию</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Покрытие рулета и обсыпка крошкой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Шоколадным кремом насадкой «закрытая звезда» с зазубринками выложите покрытие сверху. Бока оформляйте кремом чуть небрежно — всё равно будете разравнивать лопаточкой, главное, чтобы сюда прилипли крошки.
+                <span class="source-badge">⏱ Урок 4: 01:08–01:35</span>
+              </p>
+              <p>
+                Бока обсыпьте крошкой (бисквитной или как у автора — крошкой после Наполеона). Разровняйте крем палеткой и прилепите крошки. Если хотите ровный рулет — прижмите крошку скребком; если «лохматый» — оставьте как есть.
+                <span class="source-badge">⏱ Урок 4: 01:36–02:47</span>
+              </p>
+              <p>
+                Насадкой 8Z равномерно отсадите покрытие сверху красивым рисунком. Уберите рулет в холодильник, чтобы верхнее покрытие схватилось, и можно выкладывать цветы.
+                <span class="source-badge">⏱ Урок 4: 02:47–03:40</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥄 Крем на покрытие: <strong>~150 г на рулет</strong></span>
+              <span class="param-pill">⏱ Схватывание: <strong>в холодильнике</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Цветы в малайзийской технике</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Окрасьте крем для цветов водорастворимыми красителями: жёлтым (для серединок), розовым разных оттенков и зелёным. Крем выкладывайте в мешок слоями: тёмный → средний → светлый. Цвет проявится не сразу — красителя нужно больше, чем на крем-чиз.
+                <span class="source-badge">⏱ Урок 6: 00:20–03:14</span>
+              </p>
+              <p>
+                Насадки: 101 и 103 — для лепестков (разной величины), 1 — тычинка, 349 — лист. Работайте по бумажке: подготовьте наметочку из 5 лепестков, узкой «попой» насадки касайтесь бумаги, носиком ведите лепесток. Для объёмного цветка сделайте второй слой из 2–3 лепестков, отгибая угол насадки.
+                <span class="source-badge">⏱ Урок 6: 03:22–06:46</span>
+              </p>
+              <p>
+                Цветы обязательно заморозьте на бумажке — иначе их не снять и не посадить. Отсадите листья под разными углами (под одним углом получится «заборчик») и высаживайте букет: сначала крупные цветы, потом поменьше. Места, где не к чему приклеить цветок, закрывайте зелёным — листиком.
+                <span class="source-badge">⏱ Урок 6: 07:02–11:22</span>
+              </p>
+              <div class="tip-box">
+                <strong>Букет со всех сторон:</strong> композицию делайте и с торцевой стороны рулета тоже, чтобы букет смотрелся органично с любой стороны.
+                <span class="source-badge">⏱ Урок 6: 11:22–11:50</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🪻 Крем на цветы: <strong>~200 г на рулет</strong></span>
+              <span class="param-pill">🎨 Красители: <strong>водорастворимые</strong></span>
+              <span class="param-pill">🧊 Цветы: <strong>подморозить на бумажке</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Намилака — лёгкая альтернатива:</strong> крем готов к употреблению без взбивания, но его можно и взбивать. Плоский контейнер обязателен для стабилизации.</li>
+                <li><strong>Какао-масло в белый шоколад:</strong> корректирует содержание какао-масла под классический шоколад Вальрона, стабилизирует крем.</li>
+                <li><strong>Живые белки для цветов:</strong> от них лепестки тоньше и реалистичнее. Для выравнивания можно и альбумин.</li>
+                <li><strong>Крем переживает заморозку:</strong> после разморозки его пробивают миксером — при расслоении продолжайте взбивать, эмульсия соберётся.</li>
+                <li><strong>Ещё вариант сборки:</strong> торт «Сказка» можно собирать и «кирпичиком» — нарезать бисквит на 3–4 коржа и прослоить намилакой.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Намилака остаётся в чаше блендера:</strong> без большой площади она схватится только у краёв, в середине останется жидкой.</li>
+                <li><strong>Бисквит оставлен стоять:</strong> воздух выходит — тесто осядет и станет блинчиком.</li>
+                <li><strong>Свёрнуто неплотно:</strong> рулет получится овальным или распадётся.</li>
+                <li><strong>Цветы не подморожены:</strong> их не снять с бумажки и не посадить аккуратно.</li>
+                <li><strong>Крем для цветов на несвежих белках:</strong> лепестки теряют тонкость и реалистичность.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> сериал «Рулет Сказка» Надежды Зубовой — расшифровка видео (уроки 1–6) и текстовые комментарии автора с точными граммовками.</li>
+              <li><strong>Расход на 2 рулета:</strong> в комментариях указано, что расход ингредиентов дан на 2 рулета. База калькулятора на странице — 1 рулет, где это возможно (намилака, бисквит, крем). Намилака дана на 1 рулет (в DOCX она указана без «на 2 рулета» в заголовке, но в шапке стоит «Расход ингредиентов дан на 2 рулета» — части условно переведены на 1 рулет).</li>
+              <li><strong>Крем для цветов:</strong> в видео автор готовит двойную порцию (200 г белка). На странице дана база на 1 рулет (160 г белка) с пометкой в перечне.</li>
+              <li><strong>Про покрытие:</strong> шоколадный крем и крем для цветов — одна итальянская меренга с маслом; шоколадный получается добавлением 100 г тёмного шоколада на 500 г готового крема.</li>
+              <li><strong>Обсыпка:</strong> автор использует крошку «после Наполеона» — на странице это описано как бисквитная крошка или любая оставшаяся.</li>
+              <li><strong>Фото:</strong> в исходной папке только видео, готового фото рулета нет — на странице стоит кадр-заглушка, его стоит заменить настоящим снимком.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Торт «Прага» — пошаговый рецепт и технология</title>
+  <meta name="description" content="Современная «Прага» от Надежды Зубовой: насыщенный шоколадный кексовый бисквит, шоколадный ганаш внутри вместо крема «Шарлот», какао-пропитка с коньяком и подтёки из ганаша. Торт Ø16 см.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body data-recipe-id="tort-praga">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Торт «Прага» со шоколадным ганашом</h1>
+      <p class="recipe-lead">
+        Современная интерпретация классической «Праги». Коржи — насыщенно шоколадные, кексовые, поднимаются на соде и разрыхлителе. Вместо плотного крема «Шарлот» внутри — шелковый шоколадный ганаш на инвертном сахаре: он не встаёт колом в холодильнике, но отлично держит форму. Коржи пропитываются какао-сиропом с коньяком, а сверху торт заливается шоколадным ганашем с подтёками.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~1 ч 30 мин</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Выпечка 25–30 мин, ганаш 2–3 ч, стабилизация торта 6–8 ч</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">от 10–12 часов до суток</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 торт Ø16 см, 4 коржа, ~1200 г</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-praga.jpg" alt="Торт «Прага» со шоколадными подтёками из ганаша" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 торт)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">торт</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — один торт Ø16 см по рецептуре автора: тесто разливается в два кольца по 355 г, после выпечки каждое делится пополам — итого 4 коржа.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Показать источники (видео-таймкоды)</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> торт</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+      </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Граммовки сведены по всем частям торта: шоколадный бисквит, какао-пропитка, ганаш внутрь и ганаш для подтёков. Требования жёсткие: какао только алкализованное, сливки не ниже 30 %, масло 82,5 %.
+      </p>
+
+        <div class="shopping-grid">
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🧈 Масло, яйца, молочное</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Масло сливочное 82,5 %</strong>:
+                  <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                  <span class="shopping-hint">200 г в бисквит, 50 г в ганаш для прослойки и выравнивания</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Яйца куриные</strong>:
+                  <span class="shopping-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span>
+                  <span class="shopping-hint">Берём по весу 145 г яиц (обычно 3–4 шт. С1)</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сметана 15–30 %</strong>:
+                  <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                  <span class="shopping-hint">Для бисквита, комнатной температуры</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сливки 33 %</strong>:
+                  <span class="shopping-qty" data-base-amount="320" data-unit="г">320 г</span>
+                  <span class="shopping-hint">280 г в ганаш внутрь + 40 г в ганаш для подтёков</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🍫 Шоколад, бакалея, декор</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Тёмный шоколад 54 %</strong>:
+                  <span class="shopping-qty" data-base-amount="310" data-unit="г">310 г</span>
+                  <span class="shopping-hint">280 г в ганаш внутрь + 30 г в ганаш для подтёков</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Какао алкализованное</strong>:
+                  <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                  <span class="shopping-hint">50 г в бисквит + 20 г в пропитку. Автор — Extra Bruto, обычное какао из пачки не подойдёт</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Мука пшеничная</strong>:
+                  <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                  <span class="shopping-hint">Для бисквита, просеять с какао</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахар-песок</strong>:
+                  <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                  <span class="shopping-hint">130 г в бисквит + 70 г в пропитку</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Инвертный сахар</strong>:
+                  <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                  <span class="shopping-hint">Можно заменить 1:1 мёдом с нейтральным вкусом (тримолин или мёд на выбор автора)</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сода и разрыхлитель</strong>:
+                  <span class="shopping-qty" data-base-amount="3" data-unit="г">3 г</span> соды и <span class="shopping-qty" data-base-amount="5" data-unit="г">5 г</span> разрыхлителя
+                  <span class="shopping-hint">Сода идёт в сметану, разрыхлитель — в муку с какао</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Коньяк</strong>:
+                  <span class="shopping-qty" data-base-amount="1" data-unit="ст. л.">1 ст. л.</span>
+                  <span class="shopping-hint">В пропитку, по желанию</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Декор</strong> — ягоды, обрезки бисквита для «картошки»
+                  <span class="shopping-hint">По вкусу; автор украшает пирожным «картошка» из обрезков и ягодами</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Расходники</strong> — два кольца Ø16 см, кисть, струна, пергамент
+                  <span class="shopping-hint">Кольца можно заменить разъёмными формами 16 см</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Шоколадный бисквит (2 кольца Ø16 см)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Мука пшеничная
+              <span class="ingredient-note">Просейте и смешайте с какао и разрыхлителем — так какао не пойдёт комочками</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="130" data-unit="г">130 г</span> — Сахар-песок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="145" data-unit="г">145 г</span> — Яйца куриные (меланж)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Масло сливочное 82,5 %
+              <span class="ingredient-note">Размягчённое, комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сметана 15–30 %
+              <span class="ingredient-note">Комнатной температуры, как яйца и масло</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Какао алкализованное
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Сода
+              <span class="ingredient-note">Вмешать в сметану — начнёт работать в кислой среде</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="г">5 г</span> — Разрыхлитель (без горки)
+              <span class="ingredient-note">Вмешать в муку с какао</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Пропитка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Вода
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Какао алкализованное
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              1–2 ст. л. — Коньяк (по желанию)
+              <span class="ingredient-note">Добавляется в остывшую пропитку</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Ганаш внутрь и для выравнивания</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="280" data-unit="г">280 г</span> — Тёмный шоколад 54 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="280" data-unit="г">280 г</span> — Сливки 33 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Масло сливочное
+              <span class="ingredient-note">Мягкое, комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Инвертный сахар
+              <span class="ingredient-note">Тримолин или мёд 1:1</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Ганаш для подтёков</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Тёмный шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Сливки не ниже 30 %
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Шоколадный кексовый бисквит</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Все ингредиенты достаньте заранее — масло, яйца и сметана должны быть одинаковой комнатной температуры, иначе эмульсия расслоится. Муку просейте с какао, сюда же положите разрыхлитель. В сметану добавьте соду (в кислой среде она начнёт выделять углекислый газ).
+                <span class="source-badge">⏱ Урок 1: 01:05–02:36</span>
+              </p>
+              <p>
+                Масло с сахаром взбейте миксером: сначала на небольшой скорости, чтобы сахар не летел, потом на максимальной — до бела, около 5 минут.
+                <span class="source-badge">⏱ Урок 1: 03:56–04:21</span>
+              </p>
+              <p>
+                Яйца превратите в меланж и добавляйте в масляную смесь порциями, по трети. Каждую следующую порцию — только когда предыдущая полностью вошла в эмульсию, и обязательно при механическом взбивании. Затем введите сметану с содой.
+                <span class="source-badge">⏱ Урок 1: 04:37–07:43</span>
+              </p>
+              <p>
+                Сухие ингредиенты перед введением ещё раз перемешайте (какао гидрофобный — без муки останется крупинками) и на небольших оборотах миксера введите всю смесь в один приём. Тесто получается кремовой текстуры; в сезон может быть чуть гуще или жиже.
+                <span class="source-badge">⏱ Урок 1: 08:04–09:21</span>
+              </p>
+              <p>
+                Обязательно промешайте тесто лопаткой и разложите по весам в два несмазанных кольца Ø16 см — по 355 г в каждое. Сильно не разравнивайте: сливочное масло сделает работу за вас.
+                <span class="source-badge">⏱ Урок 1: 09:28–10:32</span>
+              </p>
+              <div class="tip-box">
+                <strong>Два разрыхлителя:</strong> коржи сдобные, с большим количеством масла. Обычный разрыхлитель работает в любой среде — его кладут в муку; сода работает только в кислой — её кладут в сметану. Так тяжёлые кексовые коржи хорошо поднимаются.
+                <span class="source-badge">⏱ Урок 1: 01:52–02:36</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Температура: <strong>170 °C с конвекцией</strong></span>
+              <span class="param-pill">⏱ Время: <strong>25–30 мин</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>2 кольца Ø16 см, миксер, весы</strong></span>
+              <span class="param-pill">⚖ Масса кола: <strong>355 г теста</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Пропитка какао-сиропом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В сотейник сложите воду, сахар и какао. Сварите какао, затем остудите. После остывания добавьте 1–2 столовые ложки коньяка и перемешайте.
+                <span class="source-badge">⏱ Урок 4: 00:02–00:08</span>
+              </p>
+              <div class="tip-box">
+                <strong>Сколько брать:</strong> на торт Ø16 см достаточно 130–150 г пропитки.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍯 Объём: <strong>130–150 г на торт</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Шоколадный ганаш внутрь</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сливки с инвертным сахаром нагрейте в микроволновке до кипения, но не кипятите. Слегка перемешайте, чтобы инвертный сахар разошёлся, и залейте горячие сливки на тёмный шоколад.
+                <span class="source-badge">⏱ Урок 2: 00:18–00:55</span>
+              </p>
+              <p>
+                Дайте шоколаду минуту «одуматься», перемешайте, а затем пробейте погружным блендером до гладкой блестящей эмульсии. Если температуры сливок не хватило — прогрейте пульсами в микроволновке.
+                <span class="source-badge">⏱ Урок 2: 00:55–02:24</span>
+              </p>
+              <p>
+                Введите сливочное масло комнатной температуры погружным блендером. Получится гладкий, глянцевый ганаш однородного цвета.
+                <span class="source-badge">⏱ Урок 2: 03:02–03:13</span>
+              </p>
+              <p>
+                Переложите ганаш в плоскую посуду и оставьте стабилизироваться при комнатной температуре на 2–3 часа (не выше 21 °C). В холодильник убирать не нужно — ганаш быстро встанет, и распределять его по торту будет невозможно.
+                <span class="source-badge">⏱ Урок 2: 03:29–03:57</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем инвертный сахар:</strong> он удерживает воду внутри ганаша (сухие бисквиты не вытянут из него влагу) и делает эмульсию более эластичной и блестящей, с шелковой текстурой. Если инвертного сахара нет — замените 1:1 мёдом без яркого вкуса.
+                <span class="source-badge">⏱ Урок 2: 01:14–02:07</span>
+              </div>
+              <div class="warning-box">
+                <strong>Проверка консистенции:</strong> если ганаш кажется жидковатым, можно убрать его в холодильник на несколько минут до нужной текстуры — он встанет во время стабилизации торта.
+                <span class="source-badge">⏱ Урок 4: 00:20–00:39</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>кипение без кипения</strong></span>
+              <span class="param-pill">⏱ Стабилизация: <strong>2–3 часа при комнатной температуре</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Погружной блендер</strong></span>
+              <span class="param-pill">⚖ В сборку: <strong>440 г, на выравнивание 200 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Подготовка коржей</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Коржи не поднимаются на полную высоту — так и должно быть. После полного остывания извлеките их из колец, заверните в пищевую плёнку. В морозилке они хранятся до месяца, в холодильнике — до 10 дней.
+                <span class="source-badge">⏱ Урок 3: 00:02–00:36</span>
+              </p>
+              <p>
+                Собирать торт сразу после остывания можно, но коржи будут слишком рассыпчатыми и сломаются при сборке. Дайте им хотя бы ночь стабилизироваться.
+                <span class="source-badge">⏱ Урок 3: 00:37–00:55</span>
+              </p>
+              <p>
+                Перед сборкой каждый бисквит разрежьте пополам струной или ножом. Небольшую шапочку сверху срежьте, обязательно подхватывая её рукой, чтобы струна не вырвала кусочки бисквита. Получится 4 ровных коржа.
+                <span class="source-badge">⏱ Урок 3: 01:07–01:56</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔪 Инструмент: <strong>Струна или длинный нож</strong></span>
+              <span class="param-pill">🍞 Хранение: <strong>до 10 дней в холодильнике, до 1 мес в морозилке</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Сборка торта</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В остывшую пропитку добавьте коньяк. Коржи у автора не сладкие, поэтому пропитывайте особенно тщательно: каждый корж проходите кисточкой дважды — два раза по одному и тому же месту.
+                <span class="source-badge">⏱ Урок 4: 00:08–01:18</span>
+              </p>
+              <p>
+                Собирайте по весам. На подложку нанесите немного крема. Выложите первый корж, пропитайте, разровняйте ганаш палетой — текстура плотная, никуда не растекается. Кладите следующий корж пропитанной стороной вниз, делайте небольшой «массаж».
+                <span class="source-badge">⏱ Урок 4: 00:46–04:04</span>
+              </p>
+              <p>
+                Так соберите все 4 коржа с прослойкой ганаша. На сборку используйте 440 г ганаша.
+                <span class="source-badge">⏱ Урок 4: 01:48–02:49</span>
+              </p>
+              <p>
+                Затяните торт пищевой плёнкой и отправьте на стабилизацию в холодильник не менее чем на 6–8 часов (лучше на ночь). Торт можно и замораживать: в кольце без плёнки подморозить 2 часа, снять кольцо, завернуть в плёнку — до 30 суток.
+                <span class="source-badge">⏱ Урок 4: 04:17–04:50</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍯 Пропитка: <strong>каждый корж 2 раза</strong></span>
+              <span class="param-pill">⚖ Ганаш на прослойку: <strong>440 г</strong></span>
+              <span class="param-pill">🧊 Стабилизация: <strong>от 6–8 часов или ночь</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Выравнивание и декор подтёками</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Извлеките торт из кольца. Оставшимся ганашем (200 г), который стабилизировался при комнатной температуре, распределите бока и верх, затем выровняйте скребком.
+                <span class="source-badge">⏱ Урок 4: 04:50–05:45</span>
+              </p>
+              <p>
+                Для подтёков приготовьте жидкий ганаш: нагрейте сливки и вылейте на шоколад, перемешайте до текучего состояния. Можно нагреть сливки с шоколадом вместе, а в конце добавить несколько чайных ложек тёплых сливок для текучести.
+                <span class="source-badge">⏱ Урок 5: 00:10–00:46</span>
+              </p>
+              <p>
+                Вылейте ганаш на торт и аккуратно разровняйте палетой. В некоторых местах позвольте шоколаду красиво стекать по борту — так получаются подтёки разной длины. Когда ганаш немного застынет, слегка пошевелите подложкой, чтобы верх разровнялся.
+                <span class="source-badge">⏱ Урок 5: 00:59–01:58</span>
+              </p>
+              <p>
+                Украсьте торт пирожным «картошка» из обрезков бисквита (технология — как в рецепте «Пирожное Кейк-попсы») и ягодами.
+                <span class="source-badge">⏱ Урок 5: 02:06–02:20</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Ганаш на выравнивание: <strong>200 г</strong></span>
+              <span class="param-pill">⚖ Ганаш на подтёки: <strong>30 г шоколада + 40 г сливок</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Ганаш течёт, подтёки разной длины</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Какао решает всё:</strong> берите только алкализованное какао (автор — Extra Bruto). Оно тёмное, но даёт невероятно шоколадный насыщенный вкус.</li>
+                <li><strong>Правила эмульсии:</strong> масло, яйца и сметана должны быть одной комнатной температуры; яйца добавляются поэтапно при взбивании миксером.</li>
+                <li><strong>Кольца не смазывают:</strong> тесто распределяется прямо в несмазанные кольца — масла в нём достаточно.</li>
+                <li><strong>Ганаш стабилизируется при комнатной температуре:</strong> в холодильник убирать его нельзя до распределения по торту.</li>
+                <li><strong>Инвертный сахар держит воду:</strong> он не даёт ганашу застыть «в камень», не трескается и даёт гладкую текстуру.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Холодная сметана:</strong> добавление холодной сметаны расслоит трудоёмкую эмульсию.</li>
+                <li><strong>Какао не перемешано с мукой:</strong> гидрофобное какао останется крупинками в тесте.</li>
+                <li><strong>Коржи собраны сразу:</strong> рассыпчатые коржи ломаются при сборке.</li>
+                <li><strong>Ганаш отправлен в холодильник:</strong> он встанет раньше времени, и распределять его будет невозможно.</li>
+                <li><strong>Срезать шапочку без подхвата:</strong> струна вырывает кусочки нежного ломкого бисквита.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> сериал «Торт Прага» Надежды Зубовой — расшифровка видео (уроки 1–5) и текстовые комментарии автора с точными граммовками.</li>
+              <li><strong>Время выпечки:</strong> в видео автор печёт 25–30 минут при 170 °C с конвекцией и проверяет на шпажку; в комментариях указано 30–40 минут. На странице по видео оставлено 25–30 минут.</li>
+              <li><strong>Форма:</strong> тесто по 355 г в два кольца Ø16 см (по весам из видео). Разрезы дают 4 коржа на торт Ø16 см.</li>
+              <li><strong>Пропитка:</strong> автор говорит «добавить столовую ложку коньяка»; в комментариях — 1–2 ст. л. На странице указано «1–2 ст. л. по желанию».</li>
+              <li><strong>Название крема:</strong> автор поясняет, что в комментариях ингредиент назван «ганаш-крем внутрь»; рецептура совпадает с показанной в видео техникой.</li>
+              <li><strong>Декор:</strong> упомянуто пирожное «картошка» из обрезков — технология вынесена в отдельный рецепт «Пирожное Кейк-попсы» и здесь отдельно не повторяется.</li>
+              <li><strong>Фото:</strong> в исходной папке есть только видео, готового фото торта нет — на странице стоит кадр-заглушка, его стоит заменить настоящим снимком.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

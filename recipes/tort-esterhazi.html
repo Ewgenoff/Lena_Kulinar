@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Торт «Эстерхази» — пошаговый рецепт и технология</title>
+  <meta name="description" content="Многослойный торт «Эстерхази» на декуазе из обжаренного фундука и миндаля в шелухе, с кремом-муслином и гречневым пралине. Верх — глазурь из белого шоколада с паутиной, бока — миндальные лепестки.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body data-recipe-id="tort-esterhazi">
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-logo">📖</span>
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Торт «Эстерхази» с гречневым пралине</h1>
+      <p class="recipe-lead">
+        Европейский многослойный торт, который автор считает родоначальником киевского торта. В основе — тонкий декуаз на обжаренных в шелухе фундуке и миндале (их автор называет «в шалухе»), переложенный кремом-муслином на заварной основе. Изюминка — гречневое пралине, подчёркивающее молочную составляющую крема. Верх залит глазурью из белого шоколада с характерной «паутинкой» из тёмного, бока — миндальные лепестки.
+      </p>
+
+      <div class="facts-grid">
+        <div class="fact-item">
+          <span class="fact-label">Подготовка</span>
+          <span class="fact-value">~1 ч: обжарить орехи, гречневое пралине</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Активное время</span>
+          <span class="fact-value">~2 ч 30 мин по двум дням</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Пассивное время</span>
+          <span class="fact-value">Обжарка орехов 40–50 мин, остывание декуаза, крем-муслин, стабилизация торта от 5 часов</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Общее время</span>
+          <span class="fact-value">2 дня: орехи и пралине → декуаз → крем → сборка</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Выход</span>
+          <span class="fact-value">1 торт прямоугольный 15×20 см, 4–5 слоёв декуаза, ~1000 г</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-esterhazi.jpg" alt="Торт «Эстерхази» с паутинкой из тёмного шоколада на белой глазури и миндальными лепестками по бокам" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 торт)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">торт</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — один торт прямоугольный 15×20 см по рецептуре автора. Декуаз выпекается на противне 30×40 см, затем разворачивается (даёт 4 слоя) плюс 5-й слой — в рамке 15×20 см.
+          </p>
+        </div>
+
+        <div class="recipe-toolbar">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Показать источники (видео-таймкоды)</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> торт</span>
+        </div>
+        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+      </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Граммовки сведены по всем частям: декуаз, гречневое пралине, крем-муслин и глазурь из белого шоколада.
+      </p>
+
+        <div class="shopping-grid">
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🥛 Яйца, молоко, сливки, масло</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Яйца куриные</strong>:
+                  <span class="shopping-qty" data-base-amount="9" data-unit="шт." data-piece="true">9 шт.</span>
+                  <span class="shopping-hint">~6 шт. на 200 г белка в декуаз + ~3 шт. на 40 г желтков в крем-муслин</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Масло сливочное</strong>:
+                  <span class="shopping-qty" data-base-amount="135" data-unit="г">135 г</span>
+                  <span class="shopping-hint">35 г в крем-муслин + 100 г для взбивания с пралине</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Молоко</strong>:
+                  <span class="shopping-qty" data-base-amount="170" data-unit="г">170 г</span>
+                  <span class="shopping-hint">В заварной крем</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сливки 33 %</strong>:
+                  <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span>
+                  <span class="shopping-hint">В заварной крем</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🌰 Орехи, шоколад, бакалея, декор</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Фундук обжаренный (в шелухе)</strong>:
+                  <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                  <span class="shopping-hint">Измельчить в муку (для декуаза). В шелухе — максимум вкуса</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Миндаль обжаренный (в шелухе)</strong>:
+                  <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                  <span class="shopping-hint">Измельчить в муку (для декуаза), обязательно с шелухой</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Паста из фундука или пралине</strong>:
+                  <span class="shopping-qty" data-base-amount="45" data-unit="г">45 г</span>
+                  <span class="shopping-hint">20 г в декуаз; если нет — исключить. И 25 г (паста обжаренного фундука или пралине) в крем</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Гречневая крупа</strong>:
+                  <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                  <span class="shopping-hint">+ 50 г сахара для гречневого пралине (15 г пралине идёт в крем)</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахар-песок (всего)</strong>:
+                  <span class="shopping-qty" data-base-amount="345" data-unit="г">345 г</span>
+                  <span class="shopping-hint">100 г в декуаз + 100 г сахарной пудры в декуаз + 95 г в крем + 50 г в гречневое пралине</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахарная пудра</strong>:
+                  <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                  <span class="shopping-hint">Для декуаза; можно присыпать и сверху перед выпечкой</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Мука пшеничная</strong>:
+                  <span class="shopping-qty" data-base-amount="40" data-unit="г">40 г</span>
+                  <span class="shopping-hint">Для декуаза, совсем немного</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Крахмал кукурузный</strong>:
+                  <span class="shopping-qty" data-base-amount="23" data-unit="г">23 г</span>
+                  <span class="shopping-hint">В крем-муслин. Только кукурузный, не картофельный!</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Белый шоколад</strong>:
+                  <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                  <span class="shopping-hint">Для глазури</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Тёмный шоколад</strong>:
+                  <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                  <span class="shopping-hint">Для паутинки</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Масло растительное рафинированное</strong>:
+                  <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                  <span class="shopping-hint">В глазурь, чтобы была жиже</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Миндальные лепестки</strong> — для обсыпки боков торта
+                  <span class="shopping-hint">По вкусу, чтобы покрыть бока</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Пряности</strong> — ванильная паста
+                  <span class="shopping-hint">В заварной крем</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Расходники</strong> — противень 30×40, рамка 15×20, пергамент/силиконовый ковёр, кофемолка, кондитерские мешки
+                  <span class="shopping-hint">Для декуаза и гречневого пралине</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Декуаз (ореховый бисквит)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Белок яичный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Мука из обжаренного фундука со шкуркой
+              <span class="ingredient-note">Измельчить в муку почти</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Мука из обжаренного миндаля (в шелухе)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Паста из фундука или пралине
+              <span class="ingredient-note">Можно исключить, если нет</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Гречневое пралине</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Гречневая крупа
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сахар
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Крем-муслин</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="170" data-unit="г">170 г</span> — Молоко
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Сливки 33 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="95" data-unit="г">95 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Желтки яичные
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="23" data-unit="г">23 г</span> — Крахмал кукурузный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="35" data-unit="г">35 г</span> — Масло сливочное
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Паста обжаренного фундука или пралине
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Гречневое пралине
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Масло сливочное (для взбивания)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Ванильная паста
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Глазурь из белого шоколада</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Белый шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Масло растительное рафинированное
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Тёмный шоколад (для паутинки)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Миндальные лепестки
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Ореховая мука для декуаза</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Орехи обязательно берите в шелухе («в шалухе») — в ней содержится максимум вкуса. Перед использованием обжарьте их в духовке при 150 °C примерно 40–50 минут, чтобы получить максимально ореховый вкус.
+                <span class="source-badge">⏱ Урок 1: 01:21–01:47</span>
+              </p>
+              <p>
+                Орехи должны полностью остыть — иначе при измельчении получится ореховая паста. Измельчите их в комбайне практически в муку. Ореховая мука получится тёмной — так и должно быть. В неё добавьте сахар.
+                <span class="source-badge">⏱ Урок 1: 02:33–03:24</span>
+              </p>
+              <p>
+                Отправьте сюда просеянную муку и сахарную пудру, всё перемешайте. Разрыхлителя здесь нет и быть не может.
+                <span class="source-badge">⏱ Урок 1: 03:27–03:45</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Обжарка: <strong>150 °C, 40–50 минут</strong></span>
+              <span class="param-pill">🌰 Орехи: <strong>только в шелухе, измельчить почти в муку</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Меренга для декуаза</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Белок взбивайте: сначала на низкой скорости 1 минуту; когда появится лёгкая пена, увеличьте (ручной миксер — на максимум, планетарный — до средней) и взбивайте, пока на дне не исчезнет жидкость.
+                <span class="source-badge">⏱ Урок 1: 04:40–05:29</span>
+              </p>
+              <p>
+                Сахар в меренгу можно добавить весь сразу, ведь здесь его меньше 50 % от веса белка (исключение из общего правила). Но автор добавляет его после взбивания белка, в один приём. Меренга плотная, не стекает с венчиков, хорошо держит форму — пик подвижный, сахара мало.
+                <span class="source-badge">⏱ Урок 1: 03:54–06:21</span>
+              </p>
+              <div class="tip-box">
+                <strong>Белок — единственный разрыхлитель:</strong> в декуазе нет разрыхлителя, бисквит поднимает только взбитый белок. Уделите меренге максимум внимания — она должна быть стабильной.
+                <span class="source-badge">⏱ Урок 1: 04:48–05:10</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Белок: <strong>200 г, взбить стабильно</strong></span>
+              <span class="param-pill">⚖ Сахар: <strong>меньше 50 % от веса белка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Соединение и выпечка декуаза</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Пралине (ореховую пасту, 20 г) соедините с небольшим количеством меренги — если бухнуть её сразу в меренгу, она свернётся комком. Перемешивайте грубо, не бережно. Затем переложите всё в основную меренгу.
+                <span class="source-badge">⏱ Урок 1: 06:23–07:22</span>
+              </p>
+              <p>
+                Сухие ингредиенты введите в один приём аккуратно и бережно лопаткой — только поднимающие движения со дна, без размешиваний и придавливаний, чтобы сохранить воздух.
+                <span class="source-badge">⏱ Урок 1: 07:47–08:12</span>
+              </p>
+              <p>
+                Автор хочет 5 коржей: выпекает большой пласт на противне 30×40 см и ещё один в рамке 15×20 см. Можно выпекать только 4 коржа на противне — они будут чуть потолще, торт всё равно соберётся. Отберите тесто по весам и разровняйте палеткой (оно само ровным не станет). Толщина коржей ~5 мм.
+                <span class="source-badge">⏱ Урок 1: 08:19–09:53</span>
+              </p>
+              <p>
+                Выпекайте при 170 °C с конвекцией 10–12 минут. Не добивайтесь хруста как у меренги — нужна середина между бисквитом и меренгой: мягкий, но упругий корж (впадинки от пальцев восстанавливаются). Он станет жёстче при остывании.
+                <span class="source-badge">⏱ Урок 1: 10:31–11:22</span>
+              </p>
+              <p>
+                Снимите бумагу и нарежьте после остывания (тёплый корж может раскрошиться). Можно собрать сразу либо, проложив слои бумагой, хранить в холодильнике до 7 дней или заморозить.
+                <span class="source-badge">⏱ Урок 1: 11:27–12:31</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Температура: <strong>170 °C с конвекцией</strong></span>
+              <span class="param-pill">⏱ Время: <strong>10–12 минут</strong></span>
+              <span class="param-pill">📏 Формат: <strong>противень 30×40 + рамка 15×20</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Гречневое пралине</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                На раскалённый сотейник добавьте гречневую крупу и прокалите, обжаривая несколько минут, пока она не начнёт отдавать аромат и похрустывать. Выложите на бумагу, чтобы остыла, но не сильно.
+                <span class="source-badge">⏱ Урок 2: 00:59–01:48</span>
+              </p>
+              <p>
+                В сотейник отправьте сахар, растопите в карамель (перемешивайте не сильно, следите, чтобы не горел — горелый вкус лишний). Всыпьте тёплую гречку, активно перемешайте, чтобы вся крупа покрылась карамелью, и выложите на пергамент остывать.
+                <span class="source-badge">⏱ Урок 2: 01:48–02:53</span>
+              </p>
+              <p>
+                Остывшие кусочки карамели с гречкой измельчите в кофемолке (гречка твёрдая — справится только она, возможно блендер-мельница) в муку. Приготовленное пралине храните в пакете или контейнере, защищая от влаги.
+                <span class="source-badge">⏱ Урок 2: 02:55–03:31</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌰 Состав: <strong>50 г гречки + 50 г сахара</strong></span>
+              <span class="param-pill">🥄 Оборудование: <strong>Кофемолка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Заварной крем-муслин</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В сотейнике нагрейте сливки с молоком, добавьте половину сахара и ваниль, до кипения (но не кипятите). Желтки разотрите со второй половиной сахара и кукурузным крахмалом — обязательно тщательно, чтобы крахмал не пошёл комочками.
+                <span class="source-badge">⏱ Урок 3: 00:08–01:35, 01:28–02:05</span>
+              </p>
+              <p>
+                Вылейте примерно треть горячего молока в желтки, активно перемешайте (желтки не должны быть шокированы). Вводите постепенно, пока сахар не растворится. Верните яично-крахмальную массу в сотейник.
+                <span class="source-badge">⏱ Урок 3: 02:28–03:33</span>
+              </p>
+              <div class="warning-box">
+                <strong>Варить до работы крахмала:</strong> доведите до 82 °C (коагуляция желтка), размешайте, затем довести до кипения и варить ещё минуту — чтобы крахмал полностью раскрылся. Если доварить только до 82 °C, в креме будет ощущаться крупинчатость: крем с крахмалом варят дольше простого крем-англеза.
+                <span class="source-badge">⏱ Урок 3: 03:55–04:58</span>
+              </p>
+              <p>
+                После варки (температура выше 95 °C нежелательна) переложите крем в плоскую посуду и быстро охладите (темперируйте) — так не размножаются бактерии. Чем больше поверхность — тем быстрее остынет.
+                <span class="source-badge">⏱ Урок 3: 05:33–06:53</span>
+              </p>
+              <p>
+                Когда крем остынет до ~45 °C, введите первую порцию сливочного масла (35 г) и ореховую пасту (25 г), просто объедините.
+                <span class="source-badge">⏱ Урок 3: 06:53–07:32</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Крем: <strong>82 °C → кипение → 1 минута</strong></span>
+              <span class="param-pill">🌡 Масло: <strong>вводить при ~45 °C</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Крем-муслин с взбитым маслом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Вторую порцию сливочного масла (100 г) взбейте до бела, добавьте гречневое пралине (15 г) и объедините миксером.
+                <span class="source-badge">⏱ Урок 3: 09:10–09:51</span>
+              </p>
+              <p>
+                Заварной крем вводите в взбитое масло понемногу, по столовой ложке, объединяя миксером, до полного введения. Важно, чтобы компоненты были примерно одинаковой температуры; заварной крем может быть чуть теплее масла — он легче войдёт.
+                <span class="source-badge">⏱ Урок 3: 10:05–10:55</span>
+              </p>
+              <div class="tip-box">
+                <strong>Если появилось расслоение:</strong> продолжайте взбивать дольше либо прогрейте массу в микроволновке пульсами и взбейте ещё раз. Гречневое пралине идёт во взбитое масло, а не в заварной крем, чтобы гречка не сварилась и не стала кашей.
+                <span class="source-badge">⏱ Урок 3: 08:29–09:14</span>
+              </div>
+              <p>
+                Крем готов, когда объединился без признаков расслоения — густой, красивый.
+                <span class="source-badge">⏱ Урок 3: 10:56–11:05</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥄 Ввод заварного: <strong>по столовой ложке</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Без расслоения, густой</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Сборка торта</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Торт прямоугольный. Пропитки нет — коржи нежные и тонкие. На подложку нанесите немного крема, положите первый слой декуаза и распределите крем по весам палетой.
+                <span class="source-badge">⏱ Урок 4: 00:02–00:41</span>
+              </p>
+              <p>
+                Выкладывайте слои ровно; они могут быть липкими — поэтому ранее просили прослоить их бумагой. Поставьте рамку 15×20 и зажмите торт, дальше собирайте уже в рамке.
+                <span class="source-badge">⏱ Урок 4: 00:49–01:16</span>
+              </p>
+              <p>
+                Последний корж кладите ровной стороной вверх — так удобнее декорировать. Сделайте «массаж», заверните сверху пищевой плёнкой и отправьте на стабилизацию в холодильник не менее чем на 5 часов (пропитка и объединение).
+                <span class="source-badge">⏱ Урок 4: 03:23–03:55</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Рамка: <strong>15×20 см</strong></span>
+              <span class="param-pill">🧊 Стабилизация: <strong>не менее 5 часов</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Глазурь с паутинкой и миндальные лепестки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Так как коржи «утоплены» в крем в рамке, бока торта уже в креме — на него прилипнут миндальные лепестки. Если крема на бортах мало, покройте бока глазурью, тогда лепестки приклеятся на неё.
+                <span class="source-badge">⏱ Урок 4: 03:59–04:47</span>
+              </p>
+              <p>
+                Белый шоколад и тёмный (30 г) растопите отдельно. В белый добавьте растительное масло (глазурь станет жиже). Всё должно быть готово заранее, чтобы декор сделать за один раз: торт холодный, шоколад быстро встаёт.
+                <span class="source-badge">⏱ Урок 4: 04:28–05:20</span>
+              </p>
+              <p>
+                Вылейте белую глазурь на торт, разровняйте палетой тонким слоем (иначе будут видны неровности). Тонко отрежьте кончик мешка с тёмным шоколадом и нанесите полосы. Не давайте белому шоколаду застыть. Зубочисткой проведите линии поперёк полос — в одну сторону, потом в другую — получается характерная «паутинка Эстерхази». Так пройдитесь по всему торту.
+                <span class="source-badge">⏱ Урок 4: 05:28–07:06</span>
+              </p>
+              <p>
+                Края обсыпьте миндальными лепестками.
+                <span class="source-badge">⏱ Урок 4: 07:07–07:28</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Глазурь: <strong>100 г белого + 15 г масла</strong></span>
+              <span class="param-pill">🕸 Паутинка: <strong>тёмный шоколад + зубочистка</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Орехи в шелухе:</strong> в ней максимум вкуса. Обжаривайте при 150 °C 40–50 минут и всегда охлаждайте перед измельчением.</li>
+                <li><strong>Гречневое пралине:</strong> необычная «родная» добавка, отлично подчёркивает сливочную, а не ореховую составляющую торта.</li>
+                <li><strong>Крем не хранит воду от гречки:</strong> пралине вводится во взбитое масло, а не в заварной крем, чтобы гречка не сварилась.</li>
+                <li><strong>Глазурь с маслом:</strong> растительное масло делает белый шоколад более жидким и тонко ложится.</li>
+                <li><strong>Подача и символика:</strong> паутинка «паутина» — торт можно подарить и приурочить к случаю; автор шутит, что торт можно дарить кардиологу (из-за «паутинки»-минисосудов).</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Измельчить горячие орехи:</strong> получится ореховая паста, а не мука.</li>
+                <li><strong>Белок недобит:</strong> меренга не стабильна, декуаз не поднимется — в нём нет другого разрыхлителя.</li>
+                <li><strong>Мука в меренгу грубыми движениями:</strong> воздух выйдет, корж будет плоский.</li>
+                <li><strong>Крем с крахмалом сварен только до 82 °C:</strong> крахмал не раскрылся — в креме чувствуется крупинчатость.</li>
+                <li><strong>Не темперировать крем после варки:</strong> риск размножения бактерий.</li>
+                <li><strong>Белый шоколад застыл до паутинки:</strong> ничего не получится — работайте быстро, на холодном торте.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> сериал «Торт Эстерхази» Надежды Зубовой — расшифровка видео (уроки 1–4) и текстовые комментарии автора с точными граммовками.</li>
+              <li><strong>Орехи:</strong> автор называет орехи «в шалухе»; в комментариях — «из обжаренного фундука со шкуркой» и «из обжаренного миндаля». Это указано как альтернатива в DOCX: автор использует 70 г фундука и 70 г миндаля.</li>
+              <li><strong>Пралине в декуаз:</strong> в видео автор использует пасту из фундука или пралине; в DOCX 20 г пасты/пралине. Если пасты нет — её можно исключить (по словам автора).</li>
+              <li><strong>Число слоёв:</strong> автор выпекает 5 коржей (большой пласт 30×40 делится на 4 + 1 из рамки). В DOCX «нарезать на квадраты 15 на 20 см». На странице форма 15×20 см.</li>
+              <li><strong>Выход:</strong> в DOCX указан «выход торта 1000 кг» (опечатка, очевидно 1000 г) — на странице ~1000 г.</li>
+              <li><strong>Фото:</strong> в исходной папке только видео, готового фото торта нет — на странице стоит кадр-заглушка.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>
