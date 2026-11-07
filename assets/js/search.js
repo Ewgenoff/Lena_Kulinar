@@ -792,10 +792,10 @@ window.RECIPES_FALLBACK = [
     "id": "biskvit-klassicheskiy",
     "title": "Классический бисквит",
     "category": "Торты и десерты",
-    "description": "База для тортов на пяти яйцах: только яйца, сахар и мука, без разрыхлителя. Выпечка при 180 °C без конвекции 30–35 минут и созревание в холодильнике 6 часов. Плюс пропитка и два крема.",
-    "time": "~7–8 ч (активное 40 мин)",
-    "timeMinutes": 450,
-    "servings": "8 порций (бисквит Ø18–20 см, ~450 г)",
+    "description": "База для тортов на пяти яйцах: только яйца, сахар и мука, без разрыхлителя. Выпечка при 180 °C без конвекции 30–35 минут и созревание в холодильнике минимум 8 часов. Плюс ягодная начинка, пропитка и два крема.",
+    "time": "~17 ч (активное ~1 ч, две выдержки в холодильнике)",
+    "timeMinutes": 1020,
+    "servings": "8 порций (бисквит Ø18 см, 4 коржа, торт ~2 кг)",
     "difficulty": "Средняя",
     "image": "assets/images/biskvit-klassicheskiy.jpg",
     "url": "recipes/biskvit-klassicheskiy.html",
@@ -806,6 +806,9 @@ window.RECIPES_FALLBACK = [
       "сахар",
       "мука",
       "пропитка",
+      "начинка",
+      "желатин",
+      "малина",
       "крем",
       "творожный сыр",
       "маскарпоне",
@@ -3502,6 +3505,58 @@ let allRecipes = [];
 let activeCategory = 'all';
 let currentSort = 'default';
 
+// Состояние каталога (фильтры + позиция прокрутки) при возврате с рецепта
+const CATALOG_STATE_KEY = 'cookbook:catalogState';
+const CATALOG_STATE_TTL = 6 * 60 * 60 * 1000;
+
+function loadCatalogState() {
+  try {
+    const raw = sessionStorage.getItem(CATALOG_STATE_KEY);
+    if (!raw) return null;
+    sessionStorage.removeItem(CATALOG_STATE_KEY);
+    const state = JSON.parse(raw);
+    if (!state || Date.now() - (state.ts || 0) > CATALOG_STATE_TTL) return null;
+    return state;
+  } catch (err) {
+    return null;
+  }
+}
+
+function saveCatalogState() {
+  const searchInput = document.getElementById('recipeSearchInput');
+  if (!searchInput) return;
+  try {
+    sessionStorage.setItem(CATALOG_STATE_KEY, JSON.stringify({
+      category: activeCategory,
+      sort: currentSort,
+      query: searchInput.value,
+      scrollY: window.scrollY || window.pageYOffset || 0,
+      ts: Date.now()
+    }));
+  } catch (err) {
+    /* sessionStorage недоступен — состояние не сохраняем */
+  }
+}
+
+function restoreCatalogScroll(y) {
+  if (!y) return;
+  let cancelled = false;
+  const cancel = () => { cancelled = true; };
+  const jump = () => { if (!cancelled) window.scrollTo(0, y); };
+
+  window.addEventListener('wheel', cancel, { passive: true, once: true });
+  window.addEventListener('touchstart', cancel, { passive: true, once: true });
+  window.addEventListener('keydown', cancel, { once: true });
+
+  requestAnimationFrame(() => requestAnimationFrame(jump));
+  window.addEventListener('load', jump, { once: true });
+  setTimeout(() => {
+    window.removeEventListener('wheel', cancel);
+    window.removeEventListener('touchstart', cancel);
+    window.removeEventListener('keydown', cancel);
+  }, 4000);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initSearch();
 });
@@ -3522,8 +3577,29 @@ async function initSearch() {
     allRecipes = window.RECIPES_FALLBACK || [];
   }
 
+  // Восстановление фильтров и позиции прокрутки после возврата с рецепта
+  const savedState = loadCatalogState();
+  const canRestore = !!savedState;
+
+  if (canRestore) {
+    if (savedState.category) activeCategory = savedState.category;
+    if (savedState.sort) currentSort = savedState.sort;
+
+    chips.forEach(c => c.classList.toggle('active', c.dataset.category === activeCategory));
+    if (sortSelect) sortSelect.value = currentSort;
+
+    if (searchInput && savedState.query) {
+      searchInput.value = savedState.query;
+      if (clearBtn) clearBtn.style.display = 'block';
+    }
+  }
+
   renderChipCounts();
   renderRecipes();
+
+  if (canRestore && savedState.scrollY) {
+    restoreCatalogScroll(savedState.scrollY);
+  }
 
   // Search input event
   if (searchInput) {
@@ -3531,7 +3607,9 @@ async function initSearch() {
       if (clearBtn) {
         clearBtn.style.display = e.target.value.trim() ? 'block' : 'none';
       }
+      renderChipCounts();
       renderRecipes();
+      saveCatalogState();
     });
   }
 
@@ -3541,7 +3619,9 @@ async function initSearch() {
       searchInput.value = '';
       clearBtn.style.display = 'none';
       searchInput.focus();
+      renderChipCounts();
       renderRecipes();
+      saveCatalogState();
     });
   }
 
@@ -3552,6 +3632,7 @@ async function initSearch() {
       chip.classList.add('active');
       activeCategory = chip.dataset.category;
       renderRecipes();
+      saveCatalogState();
     });
   });
 
@@ -3560,17 +3641,62 @@ async function initSearch() {
     sortSelect.addEventListener('change', (e) => {
       currentSort = e.target.value;
       renderRecipes();
+      saveCatalogState();
     });
+  }
+
+  // Сохраняем позицию перед уходом на страницу рецепта
+  const grid = document.getElementById('recipesGrid');
+  if (grid) {
+    grid.addEventListener('click', (event) => {
+      if (event.target.closest('a[href]')) saveCatalogState();
+    });
+  }
+
+  let scrollSaveTimer = null;
+  window.addEventListener('scroll', () => {
+    clearTimeout(scrollSaveTimer);
+    scrollSaveTimer = setTimeout(saveCatalogState, 150);
+  }, { passive: true });
+
+  window.addEventListener('pagehide', saveCatalogState);
+
+  // Кнопка «Наверх»
+  const backToTop = document.getElementById('backToTop');
+  if (backToTop) {
+    const toggleBackToTop = () => {
+      backToTop.classList.toggle('is-visible', window.scrollY > 500);
+    };
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    toggleBackToTop();
+    window.addEventListener('scroll', toggleBackToTop, { passive: true });
   }
 }
 
 // Счётчики карточек на чипах категорий
 function renderChipCounts() {
-  document.querySelectorAll('.chip[data-category]').forEach(chip => {
+  const chips = Array.from(document.querySelectorAll('.chip[data-category]'));
+  const searchInput = document.getElementById('recipeSearchInput');
+  const query = searchInput ? searchInput.value.trim() : '';
+  const searchTerms = buildSearchTerms(query);
+  const matching = query ? allRecipes.filter(r => matchesSearch(r, searchTerms)) : allRecipes;
+
+  const totalCounts = new Map();
+
+  chips.forEach(chip => {
     const category = chip.dataset.category;
-    const count = category === 'all'
+    const shown = category === 'all'
+      ? matching.length
+      : matching.filter(r => r.category === category).length;
+    const total = category === 'all'
       ? allRecipes.length
       : allRecipes.filter(r => r.category === category).length;
+
+    totalCounts.set(chip, total);
 
     let badge = chip.querySelector('.chip-count');
     if (!badge) {
@@ -3578,8 +3704,22 @@ function renderChipCounts() {
       badge.className = 'chip-count';
       chip.appendChild(badge);
     }
-    badge.textContent = count;
+    badge.textContent = shown;
   });
+
+  // Порядок плашек — по общему количеству рецептов, «Все» всегда первой
+  const container = chips.length ? chips[0].parentNode : null;
+  if (!container) return;
+
+  chips
+    .sort((a, b) => {
+      const aAll = a.dataset.category === 'all';
+      const bAll = b.dataset.category === 'all';
+      if (aAll !== bAll) return aAll ? -1 : 1;
+      return totalCounts.get(b) - totalCounts.get(a) ||
+        a.dataset.category.localeCompare(b.dataset.category, 'ru');
+    })
+    .forEach(chip => container.appendChild(chip));
 }
 
 // Вес сложности для сортировки
@@ -3624,49 +3764,52 @@ function stemWord(word) {
   return w.replace(/(ов|ев|ом|ем|ами|ями|ах|ях|ую|юю|ое|ее|ые|ие|ый|ий|ой|ей|ам|ям|ов|а|я|о|е|ы|и|у|ю)$/i, '');
 }
 
+function buildSearchTerms(query) {
+  return query
+    .split(/\s+/)
+    .filter(t => t.length > 0)
+    .map(t => ({ raw: cleanWord(t), stem: stemWord(t) }));
+}
+
+function matchesSearch(recipe, searchTerms) {
+  if (!searchTerms.length) return true;
+
+  // Prepare corpus of searchable strings for this recipe
+  const titleClean = cleanWord(recipe.title);
+  const descClean = cleanWord(recipe.description || '');
+  const ingList = (recipe.ingredients || []).map(i => cleanWord(i));
+
+  // Each query term must be found in title, description, or ingredients
+  return searchTerms.every(term => {
+    // Direct substring check
+    if (titleClean.includes(term.raw) || descClean.includes(term.raw)) return true;
+    if (ingList.some(i => i.includes(term.raw))) return true;
+
+    // Stemmed check
+    if (term.stem.length >= 3) {
+      if (stemWord(titleClean).includes(term.stem)) return true;
+      if (ingList.some(i => stemWord(i).includes(term.stem))) return true;
+    }
+
+    return false;
+  });
+}
+
 function filterRecipes() {
   const searchInput = document.getElementById('recipeSearchInput');
   const query = searchInput ? searchInput.value.trim() : '';
+  const searchTerms = buildSearchTerms(query);
 
-  let filtered = [...allRecipes];
+  let filtered = query
+    ? allRecipes.filter(recipe => matchesSearch(recipe, searchTerms))
+    : [...allRecipes];
 
   // 1. Category Filter
   if (activeCategory !== 'all') {
     filtered = filtered.filter(r => r.category === activeCategory);
   }
 
-  // 2. Multi-word Search (AND condition)
-  if (query) {
-    const rawTerms = query.split(/\s+/).filter(t => t.length > 0);
-    const searchTerms = rawTerms.map(t => ({
-      raw: cleanWord(t),
-      stem: stemWord(t)
-    }));
-
-    filtered = filtered.filter(recipe => {
-      // Prepare corpus of searchable strings for this recipe
-      const titleClean = cleanWord(recipe.title);
-      const descClean = cleanWord(recipe.description || '');
-      const ingList = (recipe.ingredients || []).map(i => cleanWord(i));
-
-      // Each query term must be found in title, description, or ingredients
-      return searchTerms.every(term => {
-        // Direct substring check
-        if (titleClean.includes(term.raw) || descClean.includes(term.raw)) return true;
-        if (ingList.some(i => i.includes(term.raw))) return true;
-
-        // Stemmed check
-        if (term.stem.length >= 3) {
-          if (stemWord(titleClean).includes(term.stem)) return true;
-          if (ingList.some(i => stemWord(i).includes(term.stem))) return true;
-        }
-
-        return false;
-      });
-    });
-  }
-
-  // 3. Sorting
+  // 2. Sorting
   if (currentSort === 'name-asc') {
     filtered.sort((a, b) => a.title.localeCompare(b.title, 'ru'));
   } else if (currentSort === 'name-desc') {

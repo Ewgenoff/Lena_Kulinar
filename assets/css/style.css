@@ -198,20 +198,14 @@ body:not([data-recipe-id]) .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: nowrap;
-  gap: 12px;
+  flex-wrap: wrap;
+  gap: 10px 12px;
 }
 
 .category-chips {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 8px;
-  overflow-x: auto;
-  scrollbar-width: none;
-  padding-bottom: 2px;
-}
-.category-chips::-webkit-scrollbar {
-  display: none;
 }
 
 .chip {
@@ -260,6 +254,7 @@ body:not([data-recipe-id]) .container {
 }
 
 .sort-select {
+  width: 120px;
   padding: 6px 12px;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border-light);
@@ -268,6 +263,54 @@ body:not([data-recipe-id]) .container {
   color: var(--text-main);
   font-family: inherit;
   outline: none;
+}
+
+/* Кнопка «Наверх» */
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--accent-olive);
+  background: var(--accent-olive);
+  color: #FFF;
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.back-to-top:hover {
+  background: #4A5739;
+  border-color: #4A5739;
+}
+
+@media (max-width: 680px) {
+  .back-to-top {
+    right: 14px;
+    bottom: 14px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
 }
 
 /* Recipes Grid */

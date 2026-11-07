@@ -2,6 +2,11 @@
  * CookBook - Shared Library Scripts
  */
 
+// В каталоге прокрутку восстанавливает search.js вместе с фильтрами
+if (!document.body.hasAttribute('data-recipe-id') && 'scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
 // Print recipe helper
 function printRecipe() {
   window.print();

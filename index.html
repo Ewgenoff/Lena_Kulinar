@@ -41,15 +41,15 @@
         <div class="category-chips">
           <button class="chip active" data-category="all">Все</button>
           <button class="chip" data-category="Торты и десерты">Торты и десерты</button>
-          <button class="chip" data-category="Напитки">Напитки</button>
-          <button class="chip" data-category="Конфеты и сладости">Конфеты и сладости</button>
           <button class="chip" data-category="Выпечка">Выпечка</button>
+          <button class="chip" data-category="Конфеты и сладости">Конфеты и сладости</button>
           <button class="chip" data-category="Основные блюда">Основные блюда</button>
+          <button class="chip" data-category="Напитки">Напитки</button>
         </div>
 
         <div class="sort-select-wrapper">
           <select id="sortSelect" class="sort-select">
-            <option value="default">По умолчанию</option>
+            <option value="default">Фильтр</option>
             <option value="name-asc">По названию (А–Я)</option>
             <option value="name-desc">По названию (Я–А)</option>
             <option value="time-asc">По времени (быстрее)</option>
@@ -76,6 +76,8 @@
   <footer class="site-footer">
     <p>© Кулинарная библиотека Елены.</p>
   </footer>
+
+  <button type="button" id="backToTop" class="back-to-top" title="Наверх" aria-label="Наверх">↑</button>
 
   <script src="assets/js/common.js"></script>
   <script src="assets/js/search.js"></script>
