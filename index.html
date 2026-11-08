@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Кулинарная библиотека</title>
   <meta name="description" content="Автономная кулинарная библиотека проверенных домашних и ресторанных рецептов">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍰</text></svg>">
   <link rel="stylesheet" href="assets/css/style.css">
   <script defer src="https://cloud.umami.is/script.js" data-website-id="3b336dd0-5827-4ef1-99ff-2b037697afd8"></script>
 </head>
 <body>
 
-  <header class="site-header">
+    <header class="site-header">
     <div class="header-container">
       <a href="index.html" class="brand">
-        <span class="brand-logo">📖</span>
+        <img src="assets/images/logo.png" alt="Логотип" aria-hidden="true" class="brand-logo" width="241" height="200">
         <div class="brand-text">
           <h1>Кулинарная библиотека Елены</h1>
         </div>
@@ -33,8 +33,10 @@
           class="search-input" 
           placeholder="Поиск по названию или ингредиентам (например: орехи какао, сгущенка, белки)..."
           autocomplete="off"
+          aria-label="Поиск рецептов по названию, описанию или ингредиентам"
         >
-        <button id="searchClearBtn" class="search-clear" title="Очистить поиск">✕</button>
+        <button id="searchClearBtn" class="search-clear" title="Очистить поиск" aria-label="Очистить поиск">✕</button>
+        <button type="button" id="btnRandom" class="search-random" title="Случайный рецепт из подходящих под фильтры" aria-label="Случайный рецепт">🎲</button>
       </div>
 
       <div class="filter-row">
@@ -45,16 +47,18 @@
           <button class="chip" data-category="Конфеты и сладости">Конфеты и сладости</button>
           <button class="chip" data-category="Основные блюда">Основные блюда</button>
           <button class="chip" data-category="Напитки">Напитки</button>
+          <button class="chip chip-fav" data-category="__fav__">Избранное</button>
         </div>
 
         <div class="sort-select-wrapper">
-          <select id="sortSelect" class="sort-select">
-            <option value="default">Фильтр</option>
-            <option value="name-asc">По названию (А–Я)</option>
-            <option value="name-desc">По названию (Я–А)</option>
-            <option value="time-asc">По времени (быстрее)</option>
-            <option value="difficulty-asc">По сложности: простые</option>
-            <option value="difficulty-desc">По сложности: сложные</option>
+          <select id="sortSelect" class="sort-select" aria-label="Сортировка рецептов">
+            <option value="default">По умолчанию</option>
+            <option value="name-asc">Название А–Я</option>
+            <option value="name-desc">Название Я–А</option>
+            <option value="time-asc">Быстрее сначала</option>
+            <option value="difficulty-asc">Простые сначала</option>
+            <option value="difficulty-desc">Сложные сначала</option>
+            <option value="kcal-asc">Калорийность ↑</option>
           </select>
         </div>
       </div>
@@ -70,6 +74,7 @@
       <div class="empty-state-icon">🥣</div>
       <h3>Ничего не нашлось</h3>
       <p class="text-muted">Попробуйте изменить формулировку запроса или очистить фильтр ингредиентов.</p>
+      <button type="button" id="emptyResetBtn" class="btn-secondary">Сбросить поиск и фильтры</button>
     </div>
   </main>
 

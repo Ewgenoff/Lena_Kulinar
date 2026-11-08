@@ -6,26 +6,28 @@
   <title>Торт «Ёлка» — 3D-торт из крошки с орехами, сухофруктами и велюром | CookBook</title>
   <meta name="description" content="Новогодний 3D-торт «Ёлка»: песочная крошка из сметанного теста, масляный крем на варёной сгущёнке с ромом, 600 г орехов и сухофруктов, самодельная форма-конус радиусом 30 см и шоколадный велюр. Пошаговая технология с граммовками.">
   <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍰</text></svg>">
 </head>
 <body data-recipe-id="tort-elka">
 
-  <header class="site-header">
+    <header class="site-header">
     <div class="header-container">
+      <div class="header-back">
+        <a href="../index.html" class="back-link"><span class="back-arrow">←</span><span class="back-text">Назад</span></a>
+      </div>
       <a href="../index.html" class="brand">
-        <span class="brand-logo">📖</span>
+        <img src="../assets/images/logo.png" alt="Логотип" aria-hidden="true" class="brand-logo" width="241" height="200">
         <div class="brand-text">
           <h1>Кулинарная библиотека Елены</h1>
         </div>
       </a>
       <div class="nav-actions">
-        <button class="btn-secondary" onclick="printRecipe()">🖨 Печать рецепта</button>
+        <button class="btn-secondary" onclick="printRecipe()">🖨 <span class="btn-text">Печать рецепта</span></button>
       </div>
     </div>
   </header>
 
   <main class="container">
-    <a href="../index.html" class="back-link">← Вернуться в каталог рецептов</a>
 
     <!-- Заголовок и карточка общей информации -->
     <article class="recipe-header-card">
@@ -35,31 +37,33 @@
       </div>
 
       <h1 class="recipe-title">Торт «Ёлка»</h1>
-      <p class="recipe-lead">
-        Новогодний 3D-торт в виде ёлки: внутри «богатый муравейник» — песочная крошка на сметане, масляный крем на варёной сгущёнке с ромом и 600 г грецкого ореха, фисташки, чернослива, кураги и вяленой вишни. Собирается он не в кольце, а в самодельном конусе из плёнки радиусом 30 см, который автор сворачивает за пару минут и заклеивает скотчем. Верх отделана шоколадным велюром: белый уходит на кончик и «снег», зелёный — лёгкой дымкой. Украшение — макаронс на тёмном шоколаде.
-      </p>
+      <div class="recipe-intro-split">
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-label">Подготовка</span>
+            <span class="fact-value">20 мин + 1–2 ч охлаждение теста</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Активное время</span>
+            <span class="fact-value">1 ч 30 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Пассивное время</span>
+            <span class="fact-value">2–3 ч (выпечка, охлаждение, застывание)</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Общее время</span>
+            <span class="fact-value">~5 ч</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Выход</span>
+            <span class="fact-value">2 ёлки по ~1,5 кг (у автора вышло 1,25 кг и 1,75 кг, после выравнивания — 2,05 кг)</span>
+          </div>
+        </div>
 
-      <div class="facts-grid">
-        <div class="fact-item">
-          <span class="fact-label">Подготовка</span>
-          <span class="fact-value">20 мин + 1–2 ч охлаждение теста</span>
-        </div>
-        <div class="fact-item">
-          <span class="fact-label">Активное время</span>
-          <span class="fact-value">1 ч 30 мин</span>
-        </div>
-        <div class="fact-item">
-          <span class="fact-label">Пассивное время</span>
-          <span class="fact-value">2–3 ч (выпечка, охлаждение, застывание)</span>
-        </div>
-        <div class="fact-item">
-          <span class="fact-label">Общее время</span>
-          <span class="fact-value">~5 ч</span>
-        </div>
-        <div class="fact-item">
-          <span class="fact-label">Выход</span>
-          <span class="fact-value">2 ёлки по ~1,5 кг (у автора вышло 1,25 кг и 1,75 кг, после выравнивания — 2,05 кг)</span>
-        </div>
+        <p class="recipe-lead">
+          Новогодний 3D-торт в виде ёлки: внутри «богатый муравейник» — песочная крошка на сметане, масляный крем на варёной сгущёнке с ромом и 600 г грецкого ореха, фисташки, чернослива, кураги и вяленой вишни. Собирается он не в кольце, а в самодельном конусе из плёнки радиусом 30 см, который автор сворачивает за пару минут и заклеивает скотчем. Верх отделана шоколадным велюром: белый уходит на кончик и «снег», зелёный — лёгкой дымкой. Украшение — макаронс на тёмном шоколаде.
+        </p>
       </div>
     </article>
 

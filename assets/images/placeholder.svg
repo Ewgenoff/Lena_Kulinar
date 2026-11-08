@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img" aria-label="Фотография рецепта пока недоступна">
+  <rect width="600" height="400" fill="#F6F1EA"/>
+  <circle cx="300" cy="200" r="112" fill="#EFE4D4"/>
+  <ellipse cx="300" cy="256" rx="96" ry="22" fill="#E3D3BE"/>
+  <path d="M232 250h136v-52a18 18 0 0 0-18-18H250a18 18 0 0 0-18 18z" fill="#D9C2A0"/>
+  <path d="M232 214h136v-16a18 18 0 0 0-18-18H250a18 18 0 0 0-18 18z" fill="#C9A87F"/>
+  <path d="M300 176v-26" stroke="#B98C63" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="300" cy="146" r="8" fill="#B98C63"/>
+  <text x="300" y="330" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#A98E6E">фото скоро появится</text>
+</svg>
