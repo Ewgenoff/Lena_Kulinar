@@ -87,15 +87,45 @@
           </p>
         </div>
 
-        <!-- Переключатель источников и таймкодов видео -->
-        <div class="recipe-toolbar">
-          <label class="toggle-switch-wrapper" for="toggleSources">
-            <div class="switch">
-              <input type="checkbox" id="toggleSources">
-              <span class="slider"></span>
-            </div>
-            <span class="toggle-label">Таймкоды</span>
-          </label>
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">158</td>
+                <td>3,2 г</td>
+                <td>5,4 г</td>
+                <td>24 г</td>
+              </tr>
+              <tr>
+                <th>Весь рулет<span class="kbju-sub">≈ 1,4 кг</span></th>
+                <td class="kbju-kcal"><span data-base-amount="2230" data-unit="ккал">2230 ккал</span></td>
+                <td><span data-base-amount="45" data-unit="г">45 г</span></td>
+                <td><span data-base-amount="76" data-unit="г">76 г</span></td>
+                <td><span data-base-amount="340" data-unit="г">340 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+                    <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Считано по средним значениям: мука 342 ккал/100 г, сливочное масло 748, сахар 399, яблоки по 220 г (4 крупных), грецкий орех 654, изюм и цукаты 320, панировочная крошка.</p>
+            <p>Клюква, корица и пудра «по вкусу» не считаны. Масса — сырая; после выпечки рулет станет легче примерно на десятую часть.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -109,10 +139,19 @@
           <h2 class="shopping-title">🛒 Купить в магазине</h2>
           <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">8</span> порций</span>
         </div>
-        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
             <span class="toggle-text">Развернуть</span>
             <span class="toggle-icon">▼</span>
           </button>
+        </div>
         </div>
       <div class="shopping-collapsible-body">
         <p class="shopping-subtitle">

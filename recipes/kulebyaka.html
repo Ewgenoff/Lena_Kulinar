@@ -84,14 +84,45 @@
           </p>
         </div>
 
-        <div class="recipe-toolbar">
-          <label class="toggle-switch-wrapper" for="toggleSources">
-            <div class="switch">
-              <input type="checkbox" id="toggleSources">
-              <span class="slider"></span>
-            </div>
-            <span class="toggle-label">Таймкоды</span>
-          </label>
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">240</td>
+                <td>6,5 г</td>
+                <td>9,4 г</td>
+                <td>29,8 г</td>
+              </tr>
+              <tr>
+                <th>Весь замес<span class="kbju-sub">≈ 2,9 кг</span></th>
+                <td class="kbju-kcal"><span data-base-amount="6930" data-unit="ккал">6930 ккал</span></td>
+                <td><span data-base-amount="188" data-unit="г">188 г</span></td>
+                <td><span data-base-amount="271" data-unit="г">271 г</span></td>
+                <td><span data-base-amount="862" data-unit="г">862 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+                    <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Считано по средним табличным значениям продуктов: мука 342 ккал/100 г, сливочное масло 748, сахар 399, яйцо — 143, молоко 2,5 % — 52, капуста 27, белое полусладкое вино 88. Яйца взяты по 55 г, учтены тесто и вся начинка целиком, как в раскладке; смазка и «соль с перцем по вкусу» дают меньше 1 % и не считаны.</p>
+            <p>Масса — по сырой раскладке: при выпечке часть воды испаряется, поэтому реальный вес изделий будет меньше, а калорийность на 100 г — выше.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -102,10 +133,19 @@
           <h2 class="shopping-title">🛒 Купить в магазине</h2>
           <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> замес</span>
         </div>
-        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
             <span class="toggle-text">Развернуть</span>
             <span class="toggle-icon">▼</span>
           </button>
+        </div>
         </div>
       <div class="shopping-collapsible-body">
         <p class="shopping-subtitle">

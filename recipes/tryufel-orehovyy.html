@@ -84,14 +84,45 @@
           </p>
         </div>
 
-        <div class="recipe-toolbar">
-          <label class="toggle-switch-wrapper" for="toggleSources">
-            <div class="switch">
-              <input type="checkbox" id="toggleSources">
-              <span class="slider"></span>
-            </div>
-            <span class="toggle-label">Таймкоды</span>
-          </label>
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">507</td>
+                <td>5,3 г</td>
+                <td>35,0 г</td>
+                <td>43,2 г</td>
+              </tr>
+              <tr>
+                <th>Вся партия<span class="kbju-sub">≈ 390 г</span></th>
+                <td class="kbju-kcal"><span data-base-amount="1999" data-unit="ккал">1999 ккал</span></td>
+                <td><span data-base-amount="21" data-unit="г">21 г</span></td>
+                <td><span data-base-amount="138" data-unit="г">138 г</span></td>
+                <td><span data-base-amount="170" data-unit="г">170 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+                    <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Считано по средним значениям: молочный шоколад 540 ккал/100 г, тёмный 545, сливки 30 % — 300, фундучное пралине 550, глюкоза 300, какао-масло 899.</p>
+            <p>Золотой кандурин — чистый декор, пищевой ценности не добавляет.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -102,10 +133,19 @@
           <h2 class="shopping-title">🛒 Купить в магазине</h2>
           <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">22</span> конфеты</span>
         </div>
-        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
             <span class="toggle-text">Развернуть</span>
             <span class="toggle-icon">▼</span>
           </button>
+        </div>
         </div>
       <div class="shopping-collapsible-body">
         <p class="shopping-subtitle">

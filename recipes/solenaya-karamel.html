@@ -87,15 +87,45 @@
           </p>
         </div>
 
-        <!-- Переключатель источников -->
-        <div class="recipe-toolbar">
-          <label class="toggle-switch-wrapper" for="toggleSources">
-            <div class="switch">
-              <input type="checkbox" id="toggleSources">
-              <span class="slider"></span>
-            </div>
-            <span class="toggle-label">Таймкоды</span>
-          </label>
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">381</td>
+                <td>1,2 г</td>
+                <td>21,8 г</td>
+                <td>43,9 г</td>
+              </tr>
+              <tr>
+                <th>База, 500 мл<span class="kbju-sub">≈ 700 г</span></th>
+                <td class="kbju-kcal"><span data-base-amount="2688" data-unit="ккал">2688 ккал</span></td>
+                <td><span data-base-amount="8" data-unit="г">8 г</span></td>
+                <td><span data-base-amount="154" data-unit="г">154 г</span></td>
+                <td><span data-base-amount="310" data-unit="г">310 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+                    <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Считана база: сахар, сливки 30 % (в рецепте 20–35 %), сливочное масло и соль. Вода при варке выпаривается и в массе не учтена, поэтому на 100 г выходит ≈380 ккал — как у готовой карамели.</p>
+            <p>Добавки считаются отдельно: шоколадная — примерно +330 ккал на 250 мл, ореховая — +240, ягодная с желатином — +40.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -107,10 +137,19 @@
           <h2 class="shopping-title">🛒 Купить в магазине</h2>
           <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">5</span> порций</span>
         </div>
-        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
             <span class="toggle-text">Развернуть</span>
             <span class="toggle-icon">▼</span>
           </button>
+        </div>
         </div>
       <div class="shopping-collapsible-body">
         <p class="shopping-subtitle">

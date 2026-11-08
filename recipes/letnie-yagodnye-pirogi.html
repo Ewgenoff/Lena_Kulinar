@@ -84,14 +84,45 @@
           </p>
         </div>
 
-        <div class="recipe-toolbar">
-          <label class="toggle-switch-wrapper" for="toggleSources">
-            <div class="switch">
-              <input type="checkbox" id="toggleSources">
-              <span class="slider"></span>
-            </div>
-            <span class="toggle-label">Показать источники (видео-таймкоды)</span>
-          </label>
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">267</td>
+                <td>3,9 г</td>
+                <td>11,8 г</td>
+                <td>35,4 г</td>
+              </tr>
+              <tr>
+                <th>Все 4 пирога<span class="kbju-sub">≈ 3,7 кг</span></th>
+                <td class="kbju-kcal"><span data-base-amount="9775" data-unit="ккал">9775 ккал</span></td>
+                <td><span data-base-amount="144" data-unit="г">144 г</span></td>
+                <td><span data-base-amount="432" data-unit="г">432 г</span></td>
+                <td><span data-base-amount="1295" data-unit="г">1295 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+                    <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Считано по средним значениям: мука 342 ккал/100 г, сливочное масло 748, сахар 399, яйца С1 по 55 г, желтки по 20 г, сметана 20 % — 210, вишня 50, черника 44, крахмал 343.</p>
+            <p>Крупа для груза и соль не считаны. Масса — по сырой раскладке на три пирога Ø16 см и один Ø20–24 см.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -102,10 +133,19 @@
           <h2 class="shopping-title">🛒 Купить в магазине</h2>
           <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">4</span> пирога</span>
         </div>
-        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
             <span class="toggle-text">Развернуть</span>
             <span class="toggle-icon">▼</span>
           </button>
+        </div>
       </div>
       <div class="shopping-collapsible-body">
         <p class="shopping-subtitle">

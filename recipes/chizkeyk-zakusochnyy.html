@@ -84,14 +84,45 @@
           </p>
         </div>
 
-        <div class="recipe-toolbar">
-          <label class="toggle-switch-wrapper" for="toggleSources">
-            <div class="switch">
-              <input type="checkbox" id="toggleSources">
-              <span class="slider"></span>
-            </div>
-            <span class="toggle-label">Таймкоды</span>
-          </label>
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">329</td>
+                <td>6,9 г</td>
+                <td>26,0 г</td>
+                <td>16,0 г</td>
+              </tr>
+              <tr>
+                <th>Весь чизкейк<span class="kbju-sub">≈ 0,8 кг</span></th>
+                <td class="kbju-kcal"><span data-base-amount="2566" data-unit="ккал">2566 ккал</span></td>
+                <td><span data-base-amount="54" data-unit="г">54 г</span></td>
+                <td><span data-base-amount="203" data-unit="г">203 г</span></td>
+                <td><span data-base-amount="125" data-unit="г">125 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+                    <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Крошка бризе посчитана из полной раскладки теста (мука, масло 82,5 %, вода, соль) с поправкой на ужарку примерно 12 % — в чизкейк идёт 210 г готовой крошки. Дальше — масло для восстановления крошки, чёрный кунжут, творожный сыр 254 ккал/100 г, яйца С1 по 55 г, сливки 33 %, вяленые томаты и кинза.</p>
+            <p>На 100 г выходит ≈330 ккал — это сытная закуска, а не десерт; порция в 100 г закрывает примерно шестую часть дневной нормы.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -102,10 +133,19 @@
           <h2 class="shopping-title">🛒 Купить в магазине</h2>
           <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> чизкейк</span>
         </div>
-        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
             <span class="toggle-text">Развернуть</span>
             <span class="toggle-icon">▼</span>
           </button>
+        </div>
         </div>
       <div class="shopping-collapsible-body">
         <p class="shopping-subtitle">

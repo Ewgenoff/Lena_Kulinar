@@ -87,15 +87,45 @@
           </p>
         </div>
 
-        <!-- Переключатель источников и таймкодов видео -->
-        <div class="recipe-toolbar">
-          <label class="toggle-switch-wrapper" for="toggleSources">
-            <div class="switch">
-              <input type="checkbox" id="toggleSources">
-              <span class="slider"></span>
-            </div>
-            <span class="toggle-label">Таймкоды</span>
-          </label>
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">282</td>
+                <td>2,0 г</td>
+                <td>5,9 г</td>
+                <td>55,0 г</td>
+              </tr>
+              <tr>
+                <th>Вся партия<span class="kbju-sub">≈ 920 г</span></th>
+                <td class="kbju-kcal"><span data-base-amount="2606" data-unit="ккал">2606 ккал</span></td>
+                <td><span data-base-amount="18" data-unit="г">18 г</span></td>
+                <td><span data-base-amount="54" data-unit="г">54 г</span></td>
+                <td><span data-base-amount="508" data-unit="г">508 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+                    <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Считано по средним значениям: тёмный шоколад 545 ккал/100 г, сахар 399, глюкоза 300, агар 300, яблочное и смородиновое пюре 45, яичный белок 44. Конфи посчитано по всей закладке (300 г ягод и 60 г сахара), а в массе взят его выход по рецепту — 175 г.</p>
+            <p>Зефирная масса — без воды, которая выкипает при варке сиропа. После подсушки вес станет меньше, поэтому в готовых зефирках калорийность на 100 г будет чуть выше расчётной.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -109,10 +139,19 @@
           <h2 class="shopping-title">🛒 Купить в магазине</h2>
           <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">12</span> порций</span>
         </div>
-        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
             <span class="toggle-text">Развернуть</span>
             <span class="toggle-icon">▼</span>
           </button>
+        </div>
         </div>
       <div class="shopping-collapsible-body">
         <p class="shopping-subtitle">

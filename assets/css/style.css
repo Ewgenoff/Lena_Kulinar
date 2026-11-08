@@ -1606,3 +1606,166 @@ body.show-sources .source-badge {
     display: none !important;
   }
 }
+
+/* ---------- Пищевая ценность (КБЖУ) ---------- */
+.kbju-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 20px 22px 18px;
+  box-shadow: var(--shadow-sm);
+}
+
+.kbju-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.kbju-title {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.kbju-badge {
+  font-size: 10.5px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  white-space: nowrap;
+}
+
+.kbju-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--text-main);
+}
+
+.kbju-table thead th {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-align: right;
+  padding: 0 0 8px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.kbju-table thead th:first-child { text-align: left; }
+
+.kbju-table tbody th {
+  text-align: left;
+  font-weight: 600;
+  padding: 10px 8px 10px 0;
+  white-space: nowrap;
+}
+
+.kbju-table tbody td {
+  text-align: right;
+  padding: 10px 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.kbju-table tbody tr + tr { border-top: 1px solid var(--border-light); }
+
+.kbju-kcal { color: var(--accent-terracotta); font-weight: 700; }
+
+.kbju-sub {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--text-light);
+}
+
+.kbju-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.kbju-info-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 1px solid var(--border-accent);
+  border-radius: 50%;
+  background: var(--bg-card-subtle);
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+.kbju-info-btn:hover,
+.kbju-info-btn:focus-visible,
+.kbju-info-btn[aria-expanded="true"] {
+  background: var(--accent-terracotta);
+  border-color: var(--accent-terracotta);
+  color: #FFF;
+  outline: none;
+}
+
+.kbju-popover {
+  position: absolute;
+  z-index: 30;
+  left: 12px;
+  right: 12px;
+  top: calc(100% - 4px);
+  padding: 14px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lg);
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.kbju-popover[hidden] { display: none; }
+.kbju-popover p { margin: 0 0 8px; }
+.kbju-popover p:last-child { margin-bottom: 0; }
+
+@media (max-width: 480px) {
+  .kbju-card { padding: 16px 14px; }
+  .kbju-table { font-size: 12px; }
+  .kbju-table tbody th { white-space: normal; }
+}
+
+/* ---------- Переключатель тайм-кода на плашке «Купить в магазине» ---------- */
+.shopping-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.shopping-actions .toggle-label { font-size: 13px; }
+
+@media (max-width: 640px) {
+  .shopping-actions {
+    gap: 10px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .shopping-actions .toggle-label { font-size: 12.5px; }
+}
+
+@media print {
+  .kbju-popover { display: none !important; }
+  .shopping-actions .toggle-switch-wrapper { display: none !important; }
+}

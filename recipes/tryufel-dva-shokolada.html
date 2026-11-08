@@ -84,14 +84,45 @@
           </p>
         </div>
 
-        <div class="recipe-toolbar">
-          <label class="toggle-switch-wrapper" for="toggleSources">
-            <div class="switch">
-              <input type="checkbox" id="toggleSources">
-              <span class="slider"></span>
-            </div>
-            <span class="toggle-label">Таймкоды</span>
-          </label>
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">526</td>
+                <td>5,1 г</td>
+                <td>33,5 г</td>
+                <td>48,9 г</td>
+              </tr>
+              <tr>
+                <th>Вся партия<span class="kbju-sub">≈ 410 г</span></th>
+                <td class="kbju-kcal"><span data-base-amount="2179" data-unit="ккал">2179 ккал</span></td>
+                <td><span data-base-amount="21" data-unit="г">21 г</span></td>
+                <td><span data-base-amount="139" data-unit="г">139 г</span></td>
+                <td><span data-base-amount="203" data-unit="г">203 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+                    <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Считано по средним значениям: белый шоколад 550 ккал/100 г, молочный 540, сливки 30 % — 300, какао-масло 899, хрустящие шарики 540, глюкоза и инвертный сахар по 300, декстроза 380.</p>
+            <p>Взрывная карамель, сублимированная малина и драже добавлены «по вкусу» — в расчёт не входят.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -102,10 +133,19 @@
           <h2 class="shopping-title">🛒 Купить в магазине</h2>
           <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">24</span> конфеты</span>
         </div>
-        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
             <span class="toggle-text">Развернуть</span>
             <span class="toggle-icon">▼</span>
           </button>
+        </div>
         </div>
       <div class="shopping-collapsible-body">
         <p class="shopping-subtitle">

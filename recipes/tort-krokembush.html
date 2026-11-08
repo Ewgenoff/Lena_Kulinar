@@ -87,15 +87,46 @@
           </p>
         </div>
 
-        <!-- Переключатель источников и таймкодов видео -->
-        <div class="recipe-toolbar">
-          <label class="toggle-switch-wrapper" for="toggleSources">
-            <div class="switch">
-              <input type="checkbox" id="toggleSources">
-              <span class="slider"></span>
-            </div>
-            <span class="toggle-label">Таймкоды</span>
-          </label>
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">284</td>
+                <td>4,4 г</td>
+                <td>20 г</td>
+                <td>21 г</td>
+              </tr>
+              <tr>
+                <th>Весь торт<span class="kbju-sub">≈ 3 кг</span></th>
+                <td class="kbju-kcal"><span data-base-amount="8469" data-unit="ккал">8469 ккал</span></td>
+                <td><span data-base-amount="131" data-unit="г">131 г</span></td>
+                <td><span data-base-amount="596" data-unit="г">596 г</span></td>
+                <td><span data-base-amount="626" data-unit="г">626 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+                    <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Оценка по средним табличным значениям продуктов: шоколад 540–550 ккал/100 г, сливки 33 % — 322, сливочное масло 748, сахар 399, мука 342, творожный сыр 254, маскарпоне 400, орехи и пралине 550–650, агар и желатин 300–355.</p>
+            <p>Основное по весу: Молоко — 600 г, Сливки 33% — 400 г, Яйца С0.</p>
+            <p>Масса — по сырой раскладке: при выпечке и охлаждении часть воды уходит, поэтому готовый десерт легче, а калорийность на 100 г выше расчётной. Пропитка, декор и «по вкусу» не считаны.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -109,10 +140,19 @@
           <h2 class="shopping-title">🛒 Купить в магазине</h2>
           <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> торт</span>
         </div>
-        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
             <span class="toggle-text">Развернуть</span>
             <span class="toggle-icon">▼</span>
           </button>
+        </div>
         </div>
       <div class="shopping-collapsible-body">
         <p class="shopping-subtitle">

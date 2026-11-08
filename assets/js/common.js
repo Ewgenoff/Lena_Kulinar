@@ -57,3 +57,52 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// Пищевая ценность: кнопка «?» раскрывает пояснение к расчёту
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = Array.from(document.querySelectorAll('.kbju-card'));
+  if (!cards.length) return;
+
+  const closeCard = card => {
+    const pop = card.querySelector('.kbju-popover');
+    const btn = card.querySelector('.kbju-info-btn');
+    if (!pop) return;
+    pop.hidden = true;
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+  };
+
+  cards.forEach(card => {
+    const pop = card.querySelector('.kbju-popover');
+    const btn = card.querySelector('.kbju-info-btn');
+    if (!pop || !btn) return;
+
+    btn.setAttribute('aria-expanded', 'false');
+
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      e.stopPropagation();
+      const willOpen = pop.hidden;
+      cards.forEach(closeCard);
+      if (willOpen) {
+        pop.hidden = false;
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+
+    pop.addEventListener('click', e => e.stopPropagation());
+  });
+
+  document.addEventListener('click', () => cards.forEach(closeCard));
+
+  document.addEventListener('keydown', e => {
+    if (e.key !== 'Escape') return;
+    cards.forEach(card => {
+      const pop = card.querySelector('.kbju-popover');
+      if (pop && !pop.hidden) {
+        closeCard(card);
+        const btn = card.querySelector('.kbju-info-btn');
+        if (btn) btn.focus();
+      }
+    });
+  });
+});

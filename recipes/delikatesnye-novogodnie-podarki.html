@@ -87,15 +87,45 @@
           </p>
         </div>
 
-        <!-- Переключатель источников и таймкодов видео -->
-        <div class="recipe-toolbar">
-          <label class="toggle-switch-wrapper" for="toggleSources">
-            <div class="switch">
-              <input type="checkbox" id="toggleSources">
-              <span class="slider"></span>
-            </div>
-            <span class="toggle-label">Таймкоды</span>
-          </label>
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">426</td>
+                <td>6,5 г</td>
+                <td>31,1 г</td>
+                <td>29,8 г</td>
+              </tr>
+              <tr>
+                <th>Весь набор<span class="kbju-sub">≈ 6,3 кг</span></th>
+                <td class="kbju-kcal"><span data-base-amount="27013" data-unit="ккал">27013 ккал</span></td>
+                <td><span data-base-amount="410" data-unit="г">410 г</span></td>
+                <td><span data-base-amount="1972" data-unit="г">1972 г</span></td>
+                <td><span data-base-amount="1886" data-unit="г">1886 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+                    <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Посчитан весь набор: паштет из печени птицы, три деликатесных масла, бисквит с малиной и миндалём, брауни, две колбаски и солёная карамель с малиной. Средние значения: сливочное масло 748 ккал/100 г, печень индейки 165, тёмный шоколад 545, белый 550, молочный 540, сгущённое молоко 320, миндальная мука 580, грецкий орех 654, фисташка 562, сухофрукты 250, сливки 33 % — 322.</p>
+            <p>Тесто сабле посчитано один раз — из него идут обе колбаски; вино и коньяк частично выпариваются и в массе не учтены. Цифра на 100 г — усреднённая по набору: у паштета и масел она ниже, у брауни и колбасок выше.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -109,10 +139,19 @@
           <h2 class="shopping-title">🛒 Купить в магазине</h2>
           <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> набор</span>
         </div>
-        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
             <span class="toggle-text">Развернуть</span>
             <span class="toggle-icon">▼</span>
           </button>
+        </div>
         </div>
       <div class="shopping-collapsible-body">
         <p class="shopping-subtitle">

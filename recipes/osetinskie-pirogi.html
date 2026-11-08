@@ -84,14 +84,45 @@
           </p>
         </div>
 
-        <div class="recipe-toolbar">
-          <label class="toggle-switch-wrapper" for="toggleSources">
-            <div class="switch">
-              <input type="checkbox" id="toggleSources">
-              <span class="slider"></span>
-            </div>
-            <span class="toggle-label">Таймкоды</span>
-          </label>
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">237</td>
+                <td>6,8 г</td>
+                <td>10,2 г</td>
+                <td>28 г</td>
+              </tr>
+              <tr>
+                <th>Весь замес<span class="kbju-sub">≈ 4,9 кг</span></th>
+                <td class="kbju-kcal"><span data-base-amount="11504" data-unit="ккал">11504 ккал</span></td>
+                <td><span data-base-amount="328" data-unit="г">328 г</span></td>
+                <td><span data-base-amount="497" data-unit="г">497 г</span></td>
+                <td><span data-base-amount="1359" data-unit="г">1359 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+                    <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Считаны обе партии теста (на сыворотке для пирогов и на молоке для хачапури), все пять начинок и масло для смазывания — весь набор сразу. Средние значения: мука 342 ккал/100 г, сахар 399, сливочное масло 748, сметана 15 % — 158, сыворотка 25, молоко 2,5 % — 52, адыгейский сыр 240, сулугуни 285, «Российский» 364, обжаренный фарш 300, отварной картофель 82, капуста 27, шпинат 23, замороженная вишня 50, картофельный крахмал 343.</p>
+            <p>Масса — по сырой раскладке, без учёта испарения при выпечке и жарке.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -102,10 +133,19 @@
           <h2 class="shopping-title">🛒 Купить в магазине</h2>
           <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> замес</span>
         </div>
-        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
             <span class="toggle-text">Развернуть</span>
             <span class="toggle-icon">▼</span>
           </button>
+        </div>
         </div>
       <div class="shopping-collapsible-body">
         <p class="shopping-subtitle">

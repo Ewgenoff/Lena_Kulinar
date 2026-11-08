@@ -151,8 +151,8 @@ function initShoppingCollapse() {
   header.setAttribute('aria-expanded', 'false');
 
   const toggle = (e) => {
-    // Не реагировать, если клик по чекбоксу или инпуту
-    if (e.target.closest('input, button') && !e.target.closest('.shopping-toggle-btn')) return;
+    // Не реагировать на клик по чекбоксу, кнопке и переключателю тайм-кода
+    if (e.target.closest('input, button, .toggle-switch-wrapper') && !e.target.closest('.shopping-toggle-btn')) return;
 
     const isOpen = section.classList.toggle('is-open');
     header.setAttribute('aria-expanded', isOpen ? 'true' : 'false');

@@ -84,14 +84,45 @@
           </p>
         </div>
 
-        <div class="recipe-toolbar">
-          <label class="toggle-switch-wrapper" for="toggleSources">
-            <div class="switch">
-              <input type="checkbox" id="toggleSources">
-              <span class="slider"></span>
-            </div>
-            <span class="toggle-label">Таймкоды</span>
-          </label>
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">247</td>
+                <td>8,4 г</td>
+                <td>9,7 г</td>
+                <td>30,3 г</td>
+              </tr>
+              <tr>
+                <th>Весь замес<span class="kbju-sub">≈ 2,8 кг</span></th>
+                <td class="kbju-kcal"><span data-base-amount="6815" data-unit="ккал">6815 ккал</span></td>
+                <td><span data-base-amount="231" data-unit="г">231 г</span></td>
+                <td><span data-base-amount="266" data-unit="г">266 г</span></td>
+                <td><span data-base-amount="835" data-unit="г">835 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+                    <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Считано по средним табличным значениям продуктов: мука 342 ккал/100 г, сливочное масло 748, сахар 399, молоко 2,5 % — 52, яйцо 143, дрожжи 79, варёное мясо 200, лук 40.</p>
+            <p>Масло для жарки, бульон и смазка «по потребности» не учтены. Если жарите во фритюре, добавьте к калорийности примерно 10 % на впитанное масло. Масса — по сырой раскладке: при выпечке часть воды уйдёт.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -102,10 +133,19 @@
           <h2 class="shopping-title">🛒 Купить в магазине</h2>
           <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> замес</span>
         </div>
-        <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
             <span class="toggle-text">Развернуть</span>
             <span class="toggle-icon">▼</span>
           </button>
+        </div>
         </div>
       <div class="shopping-collapsible-body">
         <p class="shopping-subtitle">
