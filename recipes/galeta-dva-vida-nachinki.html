@@ -1,0 +1,726 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Галета с абрикосами и творожно-клубничная — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Хрустящая французская галета на холодном масле и ледяной воде: абрикосовая начинка с крахмалом и творожно-клубничная версия. Тесто на две галеты, выпечка 30 мин при 170 °C с конвекцией.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥧</text></svg>">
+</head>
+<body data-recipe-id="galeta-dva-vida-nachinki">
+
+    <header class="site-header">
+    <div class="header-container">
+      <div class="header-back">
+        <a href="../index.html" class="back-link"><span class="back-arrow">←</span><span class="back-text">Назад</span></a>
+      </div>
+      <a href="../index.html" class="brand">
+        <img src="../assets/images/logo.png" alt="Логотип" aria-hidden="true" class="brand-logo" width="241" height="200">
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 <span class="btn-text">Печать рецепта</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Простая</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Галета: абрикосовая и творожно-клубничная</h1>
+      <div class="recipe-intro-split">
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-label">Подготовка</span>
+            <span class="fact-value">~20 мин: холодное масло, ледяная вода, комбайн</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Активное время</span>
+            <span class="fact-value">~50 мин на две галеты</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Пассивное время</span>
+            <span class="fact-value">Тесто 30–60 мин в холодильнике, выпечка 30 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Общее время</span>
+            <span class="fact-value">~2 ч</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Выход</span>
+            <span class="fact-value">2 галеты Ø ~20 см (форма «яичко»)</span>
+          </div>
+        </div>
+
+        <p class="recipe-lead">
+          Тонкое песочное тесто на холодном масле и ледяной воде — без сахара, по-французски: сначала масло с мукой, только потом вода, чтобы клейковина почти не развилась. Начинок две: свежие абрикосы с крахмалом и творожно-клубничная «ПП»-версия. Край заворачивается свободно, поэтому галета прощает неровные руки.
+        </p>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/galeta-dva-vida-nachinki.jpg" alt="Сборка галеты: на раскатанное песочное тесто выложена тёмная ягодная начинка, край теста заворачивается руками" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (2 галеты)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="2">2</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">галеты</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — две галеты: одна абрикосовая, одна творожно-клубничная. Тесто в рецептуре автора рассчитано на одну галету (100 г масла + 200 г муки), здесь оно удвоено.
+          </p>
+        </div>
+
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">262</td>
+                <td>4,5 г</td>
+                <td>13,3 г</td>
+                <td>30 г</td>
+              </tr>
+              <tr>
+                <th>Две галеты<span class="kbju-sub">≈ 1,35 кг</span></th>
+                <td class="kbju-kcal"><span data-base-amount="3560" data-unit="ккал">3560 ккал</span></td>
+                <td><span data-base-amount="62" data-unit="г">62 г</span></td>
+                <td><span data-base-amount="180" data-unit="г">180 г</span></td>
+                <td><span data-base-amount="407" data-unit="г">407 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Считаны тесто на две галеты, абрикосовая и творожно-клубничная начинки и желток для смазки. Сахар в тесте учтён по DOCX (2 ст. л.); в видео тесто делают совсем без сахара — тогда вся партия легче примерно на 160 ккал.</p>
+            <p>Абрикосовая галета выходит ≈ 1880 ккал, творожно-клубничная ≈ 1740 ккал; это ≈ 260 и 270 ккал на 100 г соответственно.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">2</span> галеты</span>
+        </div>
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Набор на две галеты. Масло берите строго 82,5 % и держите в холодильнике до последнего момента — от этого зависит хруст. Крахмал в начинке не даёт соку вытечь на противень.
+      </p>
+
+        <div class="shopping-grid">
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🧈 Молочное, яйца, ягоды</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Масло сливочное 82,5 %</strong>:
+                  <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                  <span class="shopping-hint">По 100 г на галету; только холодное</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Творог 0–5 %</strong>:
+                  <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                  <span class="shopping-hint">В творожно-клубничную галету; лучше сухой, не пастообразный</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Клубника</strong>:
+                  <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                  <span class="shopping-hint">Свежая; ягода должна полностью покрыть слой творога</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Яйцо куриное</strong>:
+                  <span class="shopping-qty" data-base-amount="1" data-unit="шт" data-piece="true">1 шт</span>
+                  <span class="shopping-hint">Желток для смазки края; можно целое яйцо или желток с ложкой молока</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🧂 Мука, фрукты, бакалея</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Мука пшеничная в/с</strong>:
+                  <span class="shopping-qty" data-base-amount="400" data-unit="г">400 г</span>
+                  <span class="shopping-hint">По 200 г на галету; плюс символически на подпыл</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Абрикосы свежие</strong>:
+                  <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                  <span class="shopping-hint">Вес с косточками не учитывайте — нужно 300 г очищенных половинок</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахар-песок</strong>:
+                  <span class="shopping-qty" data-base-amount="4" data-unit="ст. л.">4 ст. л.</span>
+                  <span class="shopping-hint">2 ст. л. в абрикосы, 2 ст. л. в тесто — только если хотите сладкое тесто</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Крахмал кукурузный</strong>:
+                  <span class="shopping-qty" data-base-amount="2" data-unit="ч. л.">2 ч. л.</span>
+                  <span class="shopping-hint">По 1 ч. л. под каждую начинку; для очень сочных ягод — 2 ч. л.</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахарозаменитель «Фитпарад»</strong> — по желанию
+                  <span class="shopping-hint">2 мерные ложки в творог; можно заменить сахаром</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Соль</strong> — щепотка
+                  <span class="shopping-hint">В тесто, на каждую галету</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Расходники</strong> — пергамент, пищевая плёнка, комбайн или нож
+                  <span class="shopping-hint">Раскатывать удобнее сразу на пергаменте: тесто не липнет и легче переносится на противень</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">1. Тесто (на две галеты)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="400" data-unit="г">400 г</span> — Мука пшеничная в/с
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Масло сливочное 82,5 %
+              <span class="ingredient-note">Холодное, прямо из холодильника: кубиками или натёртое на тёрке</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Вода ледяная
+              <span class="ingredient-note">По 40 г на галету; держите в холодильнике вместе с маслом</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Соль — щепотка
+              <span class="ingredient-note">На каждую галету</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="ст. л.">2 ст. л.</span> — Сахар (опционально)
+              <span class="ingredient-note">Есть только в DOCX; в видео тесто делают совсем без сахара, сладость даёт начинка</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">2. Абрикосовая начинка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Абрикосы свежие
+              <span class="ingredient-note">Очищенные от косточек, половинками</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="ст. л.">2 ст. л.</span> — Сахар
+              <span class="ingredient-note">По DOCX; в видео не добавляют — только если абрикосы кислые</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Крахмал кукурузный
+              <span class="ingredient-note">Чтобы сок не вытекал; для жидкой ягодной начинки — 2 ч. л.</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">3. Творожно-клубничная начинка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Творог 0–5 %
+              <span class="ingredient-note">Можно заменить творожным сыром, но тогда добавьте сахар</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              2 мерные ложки — Сахарозаменитель «Фитпарад»
+              <span class="ingredient-note">Или сахар по вкусу; количество не пересчитывается</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Клубника
+              <span class="ingredient-note">Крупную лучше порезать; ягода должна покрыть творог целиком</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Крахмал кукурузный
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">4. Для смазки</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="шт" data-piece="true">1 шт</span> — Желток
+              <span class="ingredient-note">С ложкой молока — для яркой румяной корочки; можно целое яйцо</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Мука для подпыла
+              <span class="ingredient-note">Чисто символически: лишняя мука делает тесто жёстким</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка и духовка</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Заранее включите духовку: 170 °C с конвекцией, без конвекции — 180 °C верх-низ. В газовой духовке ставьте противень на самый верхний уровень и ориентируйтесь на румяность: выпечка займёт около 40 минут. Масло, воду и муку держите холодными, тесто начинают собирать в последний момент.
+                <span class="source-badge">⏱ Урок_02: 00:01:34–00:02:01</span>
+              </p>
+              <div class="warning-box">
+                <strong>В холодную духовку не ставить:</strong> галета «полупадет» — тесто не поднимется и не получится слоистым.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Духовка: <strong>170 °C, конвекция</strong></span>
+              <span class="param-pill">🌡 Без конвекции: <strong>180 °C верх-низ</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Холодное масло с мукой — в крошку</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                В чашу комбайна положите 400 г муки, щепотку соли и холодное масло кубиками. Рубите до мелкой сухой крошки: масло не должно размягчиться и налипать на стенки. Без комбайна масло можно подморозить и потереть на тёрке или порубить ножом в миске.
+                <span class="source-badge">⏱ Урок_01: 00:31:14–00:34:08</span>
+              </p>
+              <div class="warning-box">
+                <strong>Порядок важен:</strong> сначала масло с мукой, только потом вода. Так клейковина почти не развивается, и тесто получается хрустящим.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>Комбайн, нож или тёрка</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Мелкая сухая крошка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Ледяная вода</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Влейте 80 г ледяной воды к крошке и пробейте ещё раз коротко. Масса останется крупными комками — именно такой она и должна быть. Воды ровно столько: если тесто не собирается, добавьте несколько капель, но не лейте «на глаз».
+                <span class="source-badge">⏱ Урок_01: 00:34:31–00:35:17</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">💧 Вода: <strong>80 г, ледяная</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Крупные комки крошки</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Собрать комок, не вымешивая</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите крошку на стол или плёнку и просто сожмите в один комок. Не вымешивайте и не разминайте: глютен в галетном тесте не нужен, он сделает его плотным. Заверните в плёнку и уберите в холодильник.
+                <span class="source-badge">⏱ Урок_01: 00:35:51–00:36:50</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> если тесто долго лежало в холодильнике и стало твёрдым, дайте ему согреться 10–15 минут — раскатывать холодный «камень» бессмысленно.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥶 Отдых: <strong>30–60 мин в холодильнике</strong></span>
+              <span class="param-pill">✋ Замес: <strong>Только до комка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Раскатка 2,5–3 мм</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Раскатайте тесто между двумя листами пергамента до толщины 2,5–3 мм. Подпылите мукой «чисто символически». Ровный круг не обязателен — галета должна выглядеть домашней; главное, чтобы толщина была одинаковой, иначе один край сгорит, а другой не пропечётся.
+                <span class="source-badge">⏱ Урок_02: 00:04:03–00:07:10</span>
+              </p>
+              <div class="warning-box">
+                <strong>Лишнюю муку не добавлять:</strong> она уходит в тесто и делает его жёстким. Подпыл — только чтобы пласт не прилипал.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Толщина: <strong>2,5–3 мм</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Скалка, два листа пергамента</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Края и проколы</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Обрежьте совсем «лохматые» края, а обрезки вкатайте обратно в пласт. Рваный край можно и оставить — в галете это выглядит мило. Затем проткните пласт вилкой по всей поверхности, чтобы тесто не вздувалось. Забыли — не страшно: проколоть можно ножом даже в первые минуты в духовке.
+                <span class="source-badge">⏱ Урок_02: 00:06:24–00:08:21</span>
+              </p>
+              <div class="tip-box">
+                <strong>Порядок с крахмалом:</strong> проколы делают до крахмала и начинки, иначе вилка соберёт на себя мокрую массу.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍴 Проколы: <strong>По всей поверхности</strong></span>
+              <span class="param-pill">📏 Бортик: <strong>Оставить 3–4 см на заворот</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Абрикосовая начинка</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Посыпьте середину пласта 1 ч. л. кукурузного крахмала и разровняйте. Выложите 300 г очищенных абрикосов половинками, оставляя по краю свободную полосу для заворота. Сахар в видео не добавляют: если абрикосы очень кислые, присыпьте их 2 ст. л. сахара.
+                <span class="source-badge">⏱ Урок_02: 00:09:11–00:10:42</span>
+              </p>
+              <div class="warning-box">
+                <strong>Крахмал обязателен:</strong> без него абрикосовый сок вытечет на противень и подгорит, а тесто снизу станет сырым.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍑 Начинка: <strong>300 г очищенных абрикосов</strong></span>
+              <span class="param-pill">🥄 Крахмал: <strong>1 ч. л.</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Завернуть край</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Загните свободный край теста на начинку по кругу, делая частые защипы — классическое французское оформление. Не натягивайте тесто: оно должно лежать свободно, иначе при выпечке лопнет. Перенесите галету вместе с пергаментом на противень и поправьте форму.
+                <span class="source-badge">⏱ Урок_02: 00:13:43–00:14:09</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">✋ Заворот: <strong>Свободно, с защипами</strong></span>
+              <span class="param-pill">🍽 Противень: <strong>Вместе с пергаментом</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Творожно-клубничная начинка</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                На второй пласт так же разровняйте 1 ч. л. крахмала. Смешайте 70 г творога с двумя мерными ложками сахарозаменителя и распределите тонким слоем, не доходя до края. Сверху выложите клубнику так, чтобы она полностью закрыла творог.
+                <span class="source-badge">⏱ Урок_02: 00:21:05–00:23:57</span>
+              </p>
+              <div class="warning-box">
+                <strong>Творог тонким слоем:</strong> толстый слой не пропечётся и останется тяжёлым, а клубника отдаст сок.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍓 Клубника: <strong>200 г</strong></span>
+              <span class="param-pill">🥄 Творог: <strong>70 г + подсластитель</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Смазка желтком</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Смазьте край и поверхность теста желтком — можно с ложкой молока, можно целым яйцом, но чистый желток даёт самый яркий цвет. Клубничную галету смазывайте аккуратнее: её тесто менее эластичное и легче рвётся.
+                <span class="source-badge">⏱ Урок_02: 00:24:50–00:25:39</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> если клубника потекла через разрыв, не паникуйте — просто подложите под галету второй лист пергамента.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Смазка: <strong>Желток или желток + молоко</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Румяная корочка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Выпечка</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Пеките 30 минут при 170 °C с конвекцией — обе галеты можно поставить одновременно на два противня. Без конвекции пеките по одной при 180 °C верх-низ. В газовой духовке ориентир — 40 минут и румяный край; под противень можно поставить ёмкость с водой, чтобы низ не пригорал.
+                <span class="source-badge">⏱ Урок_02: 00:25:43–00:26:08</span>
+              </p>
+              <div class="warning-box">
+                <strong>Две галеты сразу — только с конвекцией:</strong> без обдува нижняя не пропечётся, пока верхняя горит.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Выпечка: <strong>170 °C, конвекция</strong></span>
+              <span class="param-pill">⏱ Время: <strong>30 мин</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Румяный край, сухая начинка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Остывание и хранение</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Абрикосовую галету можно есть почти сразу, клубничной дайте полностью остыть — иначе ягоды отдадут воду и тесто размокнет. Храните 48 часов при комнатной температуре не выше 23 °C или 72 часа в холодильнике. Хрустит галета только при комнатной температуре; в холодильнике тесто мягчеет.
+                <span class="source-badge">⏱ Урок_02: 00:57:56–00:58:33</span>
+              </p>
+              <div class="tip-box">
+                <strong>Заготовки:</strong> тесто можно заморозить на 2 месяца, размораживать в холодильнике 4–6 часов. Готовую галету с ягодами не замораживают.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🕐 Комнатная: <strong>48 ч</strong></span>
+              <span class="param-pill">🧊 Холодильник: <strong>72 ч</strong></span>
+              <span class="param-pill">❄️ Тесто: <strong>до 2 месяцев</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Сначала масло, потом вода:</strong> такой порядок почти не развивает клейковину, и тесто получается хрустящим.</li>
+                <li><strong>Не вымешивать:</strong> тесто должно держаться в руках, а не превращаться в гладкий шар.</li>
+                <li><strong>Холодное масло не липнет:</strong> поэтому крошка получается сухой и рассыпчатой.</li>
+                <li><strong>Раскатка на пергаменте:</strong> тесто не липнет к столу и легко переносится на противень.</li>
+                <li><strong>Крахмал под начинку:</strong> спасает от вытекания сока, особенно с клубникой и замороженными ягодами.</li>
+                <li><strong>Край можно оставить рваным:</strong> это домашняя галета, идеальный круг не нужен.</li>
+                <li><strong>Клубнике дать остыть:</strong> горячая ягода отдаёт сок и размягчает тесто.</li>
+                <li><strong>Творог можно заменить творожным сыром:</strong> но тогда обязательно добавить сахар.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Тёплое масло:</strong> вместо крошки — пластичная масса, галета выходит плотной.</li>
+                <li><strong>Долгий замес:</strong> развивается клейковина, тесто садится и становится жёстким.</li>
+                <li><strong>Много муки на подпыл:</strong> лишняя мука уходит в тесто и сушит его.</li>
+                <li><strong>Нет проколов:</strong> тесто вздувается пузырём и выдавливает начинку.</li>
+                <li><strong>Тонкий заворот:</strong> сок вытекает через разрыв и горит на противне.</li>
+                <li><strong>Холодная духовка:</strong> галета не поднимается и не слоится.</li>
+                <li><strong>Две галеты без конвекции:</strong> низ не пропекается.</li>
+                <li><strong>Начинка горячей:</strong> тёплый абрикос ещё допустим, но лучше остудить полностью.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и замены</h4>
+              <ul>
+                <li><strong>Готовая галета:</strong> 48 ч при комнатной температуре, 72 ч в холодильнике.</li>
+                <li><strong>Тесто:</strong> 2 месяца в морозилке, разморозка 4–6 ч в холодильнике.</li>
+                <li><strong>Абрикосы:</strong> можно заменить клубникой или другими ягодами, но галете нужно дать остыть.</li>
+                <li><strong>Крахмал:</strong> для жидкой начинки — 2 ч. л. вместо одной.</li>
+                <li><strong>Сахар в тесте:</strong> автор его не кладёт; если хотите сладкое тесто — 1 ст. л. на галету.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «Галета. Два вида начинки» с раскладкой и два урока (Урок_01 — тесто, Урок_02 — сборка, выпечка, хранение) с расшифровкой. Граммовки и техника — из видео, они совпадают с DOCX.</li>
+              <li><strong>Сахар в тесте:</strong> DOCX — «1 ст. л. сахара, опционально»; в видео сахар не кладут вообще («нет там сахара совсем»). На странице он оставлен как опция.</li>
+              <li><strong>Сахар в абрикосовой начинке:</strong> DOCX — 2 ст. л.; в видео абрикосы кладут без сахара и советуют добавлять его только к кислым плодам.</li>
+              <li><strong>Крахмал:</strong> есть только в видео (1 ч. л. на абрикосы, 1 ч. л. в творожную начинку), в DOCX его нет. Добавлен в рецептуру.</li>
+              <li><strong>Клубника 200 г:</strong> цифра только из DOCX, в видео вес не проговаривается.</li>
+              <li><strong>Подсластитель:</strong> в DOCX без количества, в видео — 2 мерные ложки «Фитпарада».</li>
+              <li><strong>Пробел:</strong> диаметр галеты не назван; форма — «яичко», толщина пласта в видео колеблется между 2,5–3 мм и «5 мм». Готовые галеты в эфире не разрезали.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_02 (00:57:56) со сборкой галеты, край которой заворачивают руками.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

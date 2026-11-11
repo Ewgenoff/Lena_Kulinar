@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Торт «Праздник к нам приходит» — пошаговый рецепт и технология</title>
+  <meta name="description" content="Медовый женуаз из трёх коржей Ø18 см, нежный крем пломбир с маскарпоне, кули из манго с маракуйей и чиа, пропитка, выравнивание крем-чизом и новогодний олень с рогами и венком.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍰</text></svg>">
+</head>
+<body data-recipe-id="tort-prazdnik-k-nam-prikhodit">
+
+    <header class="site-header">
+    <div class="header-container">
+      <div class="header-back">
+        <a href="../index.html" class="back-link"><span class="back-arrow">←</span><span class="back-text">Назад</span></a>
+      </div>
+      <a href="../index.html" class="brand">
+        <img src="../assets/images/logo.png" alt="Логотип" aria-hidden="true" class="brand-logo" width="241" height="200">
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 <span class="btn-text">Печать рецепта</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Торт «Праздник к нам приходит»</h1>
+      <div class="recipe-intro-split">
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-label">Подготовка</span>
+            <span class="fact-value">30 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Активное время</span>
+            <span class="fact-value">2 часа</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Пассивное время</span>
+            <span class="fact-value">4 часа (коржи) + 4–6 часов (сборка) + ночь (декор)</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Общее время</span>
+            <span class="fact-value">~18–20 часов с декором</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Выход</span>
+            <span class="fact-value">1 торт Ø18 см, 3 коржа, 3200 г с декором</span>
+          </div>
+        </div>
+
+        <p class="recipe-lead">
+          Новогодний торт на медовом женуазе: три пористых коржа Ø18 см с золотистым оттенком от мёда, между ними — лёгкий крем пломбир с маскарпоне и ложкой выложенное кули из манго с маракуйей и семенами чиа. Коржи не разрезают, а пропитывают дважды и собирают в кольце, между слоями кладут шоколадные шарики для хруста. Снаружи — выравнивание крем-чизом и рождественский олень: мастичные рога и уши, нос, завитки крема и зелёный веночек по низу.
+        </p>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-prazdnik-k-nam-prikhodit.jpg" alt="Торт Праздник к нам приходит с золотыми мастичными рогами оленя, красным носом и зелёным веночком по низу" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (10 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="10">10</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций (кусков)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Все граммовки автоматически масштабируются. База — один торт Ø18 см из трёх коржей, собранный в кольце и с декором весом 3200 г. Выбрать нужно один вариант кули: манго-маракуйя или персик-апельсин.
+          </p>
+        </div>
+
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">334</td>
+                <td>4,2 г</td>
+                <td>22,1 г</td>
+                <td>29,6 г</td>
+              </tr>
+              <tr>
+                <th>Весь торт<span class="kbju-sub">≈ 3,2 кг</span></th>
+                <td class="kbju-kcal"><span data-base-amount="10694" data-unit="ккал">10694 ккал</span></td>
+                <td><span data-base-amount="133" data-unit="г">133 г</span></td>
+                <td><span data-base-amount="707" data-unit="г">707 г</span></td>
+                <td><span data-base-amount="947" data-unit="г">947 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+                    <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Считано по средним табличным значениям: яйца 143 ккал/100 г, сахар 399, мёд 304, мука 342, масло сливочное 82,5 % — 748, сметана 20 % — 206, крахмал 340, маскарпоне 400, творожный сыр 254, пюре манго 60, семена чиа 486, шоколадные шарики 530. Кули посчитано по манго-варианту (персик-апельсин даёт почти те же числа).</p>
+            <p>Основное по весу: сахар — 550 г, масло сливочное — 430 г, творожный сыр — 450 г, яйца — 440 г, маскарпоне — 300 г, сметана — 300 г.</p>
+            <p>Масса — по сырой раскладке автора, а «на 100 г» пересчитано на заявленные 3200 г готового торта: при заварке крема и выпечке коржей часть воды уходит. Диоксид титана, ваниль и вода в пропитку на расчёт не влияют.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Основной контент: Ингредиенты + Технология -->
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">10</span> порций</span>
+        </div>
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Кули берите только одного вкуса — манго-маракуйя или персик-апельсин; граммовки обоих вариантов даны в отдельных группах и между собой не суммируются. Маскарпоне — только Гальбани или Бонфесто, иначе крем выйдет жидким.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: молочное, яйца, масла -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масла</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="8" data-unit="шт." data-piece="true">8 шт.</span>
+                <span class="shopping-hint">6 в медовый женуаз (330 г) + 2 в заварную часть пломбира (110 г)</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сметана 20% и жирнее</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">В заварную часть пломбира; ниже 20% автор брать не советует</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Маскарпоне</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">Гальбани или Бонфесто. Крем собирают под 700 г: сначала взвешивают заварную часть, потом добивают маскарпоне</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творожный сыр</strong>:
+                <span class="shopping-qty" data-base-amount="450" data-unit="г">450 г</span>
+                <span class="shopping-hint">Крем-чиз для выравнивания: Хохланд Креметто Профессионал, Альметто сливочный, Виолет, Хохланд для выпечки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="430" data-unit="г">430 г</span>
+                <span class="shopping-hint">80 г растапливается в женуаз + 350 г размягчённого комнатной температуры в крем-чиз</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: бакалея, фрукты, декор -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Бакалея, фрукты, декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная</strong>:
+                <span class="shopping-qty" data-base-amount="180" data-unit="г">180 г</span>
+                <span class="shopping-hint">В женуаз, смешать с солью; разрыхлителя и соды в рецепте нет</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мёд</strong>:
+                <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                <span class="shopping-hint">Жидкий, подогреть в микроволновке. Можно заменить инвертным сиропом или сахаром 1:1</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок (всего)</strong>:
+                <span class="shopping-qty" data-base-amount="350" data-unit="г">350 г</span>
+                <span class="shopping-hint">110 г в женуаз + 130 г в пломбир + 50 г в кули + 60 г в пропитку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">В крем-чиз для выравнивания и декора</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Крахмал кукурузный</strong>:
+                <span class="shopping-qty" data-base-amount="25" data-unit="г">25 г</span>
+                <span class="shopping-hint">В заварную часть пломбира</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сироп глюкозы</strong>:
+                <span class="shopping-qty" data-base-amount="40" data-unit="г">40 г</span>
+                <span class="shopping-hint">В кули — не даёт застыть слишком сильно</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пектин NH</strong>:
+                <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+                <span class="shopping-hint">Обязательно смешать с сахаром до ввода — иначе пойдёт комками</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимонная кислота</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="г">2 г</span>
+                <span class="shopping-hint">В кули, около половины чайной ложки без горки — фиксирует консистенцию</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шоколадные шарики (Callebaut)</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Между слоями; в настоящем бельгийском шоколаде, поэтому не размокают</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ваниль</strong> — паста, экстракт, ванильный сахар или ванилин
+                <span class="shopping-hint">В пломбир и в пропитку; в пломбир автор кладёт ощутимо</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Диоксид титана</strong> — белый краситель
+                <span class="shopping-hint">По желанию, чтобы отбелить крем-чиз; сначала развести каплей холодной воды</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 3: варианты кули -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥭 Кули: купите один вариант</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Вариант А — манго-маракуйя</strong>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре манго</strong>:
+                <span class="shopping-qty" data-base-amount="210" data-unit="г">210 г</span>
+                <span class="shopping-hint">Одна половина начинки — пюре</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Манго свежий</strong>:
+                <span class="shopping-qty" data-base-amount="270" data-unit="г">270 г</span>
+                <span class="shopping-hint">Очень спелый и мягкий, режется крупными кусками — ради разреза</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре маракуйи</strong>:
+                <span class="shopping-qty" data-base-amount="55" data-unit="г">55 г</span>
+                <span class="shopping-hint">Если с косточками — семена чиа не нужны</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Семена чиа</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="ст. л.">1 ст. л.</span>
+                <span class="shopping-hint">Замочить кипятком, заменяют косточки маракуйи</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Вариант Б — персик-апельсин (аналог)</strong>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре персика</strong>:
+                <span class="shopping-qty" data-base-amount="155" data-unit="г">155 г</span>
+                <span class="shopping-hint">Вместо пюре манго</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Персик консервированный</strong>:
+                <span class="shopping-qty" data-base-amount="270" data-unit="г">270 г</span>
+                <span class="shopping-hint">Крупными кусками, вместо свежего манго</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пюре апельсина</strong>:
+                <span class="shopping-qty" data-base-amount="110" data-unit="г">110 г</span>
+                <span class="shopping-hint">Вместо пюре маракуйи; чиа в этом варианте не нужны</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🎄 Мастика и отделка</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мастика сахарная</strong> — для рогов, ушей и глаз
+                <span class="shopping-hint">Количество в источниках не названо: рога вырезаются по трафарету, поэтому берите с запасом</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кандурин золотой и водка</strong> — для покраски рогов и ушей
+                <span class="shopping-hint">Кандурин разводят водкой до густоты гуаши — так покрытие плотное</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Красители водорастворимые</strong> — коричневый, красный, зелёный
+                <span class="shopping-hint">Коричневый для ушей и глаз, красный для носа и цветов, зелёный для веночка</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Посыпки и цветы для декора</strong> — по желанию
+                <span class="shopping-hint">Внутри посыпки хрустящий рис, поэтому зубы не пострадают</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧰 Расходники</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Формы и кольцо</strong> — 3 формы Ø18 см, кольцо с клипсами Ø18 см
+                <span class="shopping-hint">Коржи пекутся в трёх формах, собирается торт в кольце</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пергамент и пищевая плёнка</strong>
+                <span class="shopping-hint">Коржи выпекаются на пергаменте и отдыхают в плёнке в холодильнике</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мешки и насадки</strong> — кондитерский мешок, насадки 8 мм и 24 (закрытая звезда), 352 (лепесток)
+                <span class="shopping-hint">Мешок для выравнивания отрезают ровно на 1 см</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Скребок и палета</strong>
+                <span class="shopping-hint">Скребок обязательно с углом 90 градусов</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">1. Медовый женуаз (3 формы Ø18 см)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="330" data-unit="г">330 г</span> — Яйца С1
+              <span class="ingredient-note">6 штук; взбиваются целиком, без разделения на белки и желтки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="110" data-unit="г">110 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Мёд
+              <span class="ingredient-note">Тёплый, чуть подогретый. Замена: инвертный сироп или сахар 1:1 — цвет бисквита изменится</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="180" data-unit="г">180 г</span> — Мука пшеничная
+              <span class="ingredient-note">Перемешанная с солью; вводится за один приём</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Масло сливочное
+              <span class="ingredient-note">Растопленное, тёплое</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Щепотка — Соль
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">2. Заварной крем пломбир</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Сметана жирная
+              <span class="ingredient-note">20% или жирнее</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="110" data-unit="г">110 г</span> — Яйца С1
+              <span class="ingredient-note">2 штуки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Крахмал кукурузный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="130" data-unit="г">130 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Ваниль (паста, экстракт, ванильный сахар или ванилин)
+              <span class="ingredient-note">Кладётся обязательно: автор добавляет ощутимо</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">3. Крем пломбир с маскарпоне</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Маскарпоне
+              <span class="ingredient-note">Гальбани или Бонфесто. Доводите по весу: итог крема — 700 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              — Заварной крем пломбир (из группы 2)
+              <span class="ingredient-note">Вся заварная часть; сколько её выйдет, зависит от испарения влаги</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">4. Кули — манго-маракуйя (на выбор)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="210" data-unit="г">210 г</span> — Пюре манго
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="270" data-unit="г">270 г</span> — Манго крупными кусками
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="55" data-unit="г">55 г</span> — Пюре маракуйи
+              <span class="ingredient-note">Пюре и куски манго берутся примерно пополам ради красивого разреза</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Сироп глюкозы
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Пектин NH
+              <span class="ingredient-note">Смешать с сахаром заранее</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Лимонная кислота
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ст. л.">1 ст. л.</span> — Семена чиа
+              <span class="ingredient-note">Замочить кипятком; не нужны, если маракуйя с косточками</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">5. Кули — персик-апельсин (на выбор)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="155" data-unit="г">155 г</span> — Пюре персика
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="270" data-unit="г">270 г</span> — Персик консервированный, крупными кусками
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="110" data-unit="г">110 г</span> — Пюре апельсина
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Сироп глюкозы
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Пектин NH
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Лимонная кислота
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">6. Пропитка и сборка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="170" data-unit="г">170 г</span> — Вода
+              <span class="ingredient-note">Довести с сахаром до кипения и проварить 3 минуты</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Ванильный сахар (в пропитку)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Шоколадные шарики (Callebaut)
+              <span class="ingredient-note">Можно больше или исключить совсем</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">7. Крем для выравнивания и декора</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="450" data-unit="г">450 г</span> — Творожный сыр
+              <span class="ingredient-note">Хохланд Креметто Профессионал, Альметто сливочный, Виолет или Хохланд для выпечки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="350" data-unit="г">350 г</span> — Масло сливочное размягчённое
+              <span class="ingredient-note">82,5%, комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По желанию — Диоксид титана и холодная вода
+              <span class="ingredient-note">Чтобы отбелить крем; разводится каплей воды</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Мастика, кандурин, красители, посыпки
+              <span class="ingredient-note">Рога, уши, нос, глаза и новогодний веночек</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Медовый женуаз: взбивание на водяной бане</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Поставьте кипеть водяную баню. Мёд подогрейте в микроволновке, чтобы он стал жиже. В миску отправьте 6 яиц, сахар и тёплый мёд и поставьте взбивать на низкой скорости прямо на баню.
+                <span class="source-badge">⏱ Урок_01: 00:00:50–00:01:14</span>
+              </p>
+              <p>
+                Миска не должна доставать до воды: при слишком высокой температуре белок яйца коагулирует раньше времени. Взбивайте до полного растворения сахара — автор дополнительно проверяет градусником: не выше 48 °C, идеально 42–43 °C.
+                <span class="source-badge">⏱ Урок_01: 00:01:21–00:02:06</span>
+              </p>
+              <div class="warning-box">
+                <strong>Разрыхлителя и соды в рецепте нет.</strong> Подъём держится только на воздухе, который нагнан в яичную массу, поэтому взбивать нужно честно 7–10 минут и уже не на бане, а сняв миску.
+                <span class="source-badge">⏱ Урок_01: 00:00:55–00:00:59</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 На бане: <strong>не выше 48 °C (идеально 42–43 °C)</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Водяная баня, миксер</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Сахар растворился</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Взбивание и ввод муки с маслом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Снимите миску с бани и включите максимальную скорость миксера: 7–10 минут до стабильной, пышной пены. Затем отправьте всю муку с солью за один приём и вмешайте лопаткой поднимающими движениями со дна. Не миксером — это важно.
+                <span class="source-badge">⏱ Урок_01: 00:02:07–00:02:58</span>
+              </p>
+              <p>
+                Мешайте минимально по времени: как только вся мука смочена, прекращайте. Широким движением вылейте тёплое растопленное масло — так оно распределится по всему тесту, а не нагреет одну точку, — и так же аккуратно вмешайте. Как только масло вошло, перемешивание прекращаем.
+                <span class="source-badge">⏱ Урок_01: 00:03:05–00:03:41</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> после ввода муки тесто должно остаться пышным. Если масса осела и потяжелела — её перемешали лишнего или муку вводили порциями.
+                <span class="source-badge">⏱ Урок_01: 00:03:09–00:03:16</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Взбивание: <strong>7–10 мин на максимуме</strong></span>
+              <span class="param-pill">🥣 Инструмент: <strong>Силиконовая лопатка</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Стабильная пышная пена</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Выпечка трёх коржей</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разложите тесто по трём формам Ø18 см — по весу или на глаз. Духовку разогрейте до 180 °C заранее, режим без конвекции; если у вас только конвекция, пеките при 170 °C. Формы ставьте в середину духовки и выпекайте 23–25 минут.
+                <span class="source-badge">⏱ Урок_01: 00:03:48–00:04:23</span>
+              </p>
+              <p>
+                Проверьте палочкой: она должна выйти сухой. Оставьте коржи остывать в формах — можно прямо в выключенной духовке — затем вырежьте, заверните в пищевую плёнку и уберите в холодильник минимум на 4 часа (автор держит ночь).
+                <span class="source-badge">⏱ Урок_01: 00:04:26–00:04:49</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем холодильник:</strong> в плёнке влага перераспределяется, коржи стабилизируются и становятся плотнее. Корочка тоже размягчается — её можно не срезать, и на разрезе она не мешает.
+                <span class="source-badge">⏱ Урок_05: 00:00:35–00:01:07</span>
+              </div>
+              <div class="warning-box">
+                <strong>Замена мёда:</strong> инвертный сироп 1:1 сохранит цвет бисквита, но вкус мёда пропадёт. Простой сахар 1:1 сделает коржи заметно светлее — и мёда тоже не будет.
+                <span class="source-badge">⏱ Урок_01: 00:00:26–00:00:35</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Температура: <strong>180 °C без конвекции / 170 °C с конвекцией</strong></span>
+              <span class="param-pill">⏱ Время: <strong>23–25 мин</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>3 формы Ø18 см</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Сухая палочка</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Заварная часть пломбира на водяной бане</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Соедините сметану, сахар, яйца и кукурузный крахмал венчиком, добавьте ваниль — автор кладёт её ощутимо, чтобы крем был ароматным. Сначала просто размешайте массу, а потом поставьте миску на закипевшую водяную баню.
+                <span class="source-badge">⏱ Урок_02: 00:00:43–00:01:25</span>
+              </p>
+              <p>
+                Взбивайте миксером на высокой скорости, нагревая и помешивая, пока масса не превратится в хороший заварной крем. Снимите с бани и дайте остыть — автор держит её ещё и в холодильнике.
+                <span class="source-badge">⏱ Урок_02: 00:01:34–00:02:14</span>
+              </p>
+              <div class="warning-box">
+                <strong>Конечный вес крема каждый раз разный:</strong> он зависит от интенсивности нагрева и от того, сколько влаги испарится. Поэтому маскарпоне добавляют не по граммам, а по весу — см. следующий шаг.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Нагрев: <strong>Водяная баня</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Миксер, венчик, сотейник</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Густой заварной крем</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Крем пломбир с маскарпоне до 700 г</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Остывшую заварную часть соедините с маскарпоне и взбейте миксером до плотности. Порядок такой: взвесьте заварную часть, затем добивайте маскарпоне так, чтобы итоговый вес крема вышел ровно 700 г — это примерно 250–300 г маскарпоне.
+                <span class="source-badge">⏱ Урок_03: 00:00:41–00:01:13</span>
+              </p>
+              <p>
+                Крем должен быть плотным, со вкусом мороженого и не очень сладким — так он балансирует сладкие коржи и манго. Если маскарпоне только других марок, крем выйдет жидким: тогда пустите его внутрь торта, а снаружи выравнивайте обычным крем-чизом.
+                <span class="source-badge">⏱ Урок_03: 00:00:10–00:00:41</span>
+              </p>
+              <div class="tip-box">
+                <strong>Марка решает:</strong> автор настаивает на Гальбани и Бонфесто. С ними крем держит форму и внутри, и при нанесении.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Итоговый вес: <strong>700 г</strong></span>
+              <span class="param-pill">🧀 Маскарпоне: <strong>250–300 г</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Плотный, как мороженое</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Кули из манго с маракуйей и чиа</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Семена чиа залейте кипятком и оставьте набухать. Сахар перемешайте с пектином NH — это обязательное условие, иначе пектин пойдёт комками. Пюре манго и маракуйи соедините с сиропом глюкозы и прогрейте, чтобы растаял лёд, если пюре замороженное.
+                <span class="source-badge">⏱ Урок_04: 00:01:29–00:02:14</span>
+              </p>
+              <p>
+                Смесь должна быть не выше 40 °C — нагрев в этот момент выключите. Введите сахар с пектином дождиком, постоянно помешивая, и только потом включайте нагрев. Доведите до кипения и проварьте 2 минуты — до нестекающей капли.
+                <span class="source-badge">⏱ Урок_04: 00:02:14–00:03:03</span>
+              </p>
+              <p>
+                Снимите с огня и введите лимонную кислоту — она фиксирует ту консистенцию, до которой вы доварили. В горячую массу отправьте крупные куски манго: они частично термически обработаются, но останутся кусками. В конце добавьте набухшие семена чиа и перемешайте, остудите.
+                <span class="source-badge">⏱ Урок_04: 00:03:06–00:04:18</span>
+              </p>
+              <div class="warning-box">
+                <strong>Если маракуйя с косточками</strong> — чиа можно не добавлять: косточки и так дадут нужную текстуру. Манго должно быть очень мягкое, иначе крупные куски испортят разрез.
+                <span class="source-badge">⏱ Урок_04: 00:01:03–00:01:15</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 До ввода пектина: <strong>не выше 40 °C</strong></span>
+              <span class="param-pill">⏱ Проварка: <strong>2 мин после кипения</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Нестекающая капля</strong></span>
+              <span class="param-pill">🥭 Куски: <strong>крупные, ради разреза</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Кули-аналог персик-апельсин</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Технология та же: пюре персика и апельсина соедините с сиропом глюкозы, не выше 40 °C введите сахар с пектином дождиком, доведите до кипения и проварьте 2 минуты до нестекающей капли. Введите лимонную кислоту.
+                <span class="source-badge">⏱ Урок_04: 00:00:47–00:00:56</span>
+              </p>
+              <p>
+                В горячую массу добавьте консервированный персик крупными кусками и остудите. Семена чиа в этом варианте не нужны — в рецептуре их нет.
+              </p>
+              <div class="tip-box">
+                <strong>Это запасной вариант</strong> для тех регионов, где пюре манго, свежий манго и маракуйя — редкость. Заменить можно всё разом, по весу, а не отдельные части.
+                <span class="source-badge">⏱ Урок_04: 00:00:40–00:00:56</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 До ввода пектина: <strong>не выше 40 °C</strong></span>
+              <span class="param-pill">⏱ Проварка: <strong>2 мин после кипения</strong></span>
+              <span class="param-pill">🍑 Куски: <strong>консервированный персик</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Пропитка и сироп</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Соедините 60 г сахара, 170 г воды и ванильный сахар, доведите до кипения, проварьте 3 минуты и остудите. Пропитки не жалейте — коржи высокие и пористые, им её нужно много.
+                <span class="source-badge">⏱ Урок_05: 00:00:47–00:01:07</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> бисквит высокий, поэтому каждый корж автор проходит кисточкой дважды. Двух заходов достаточно, чтобы он был «в меру пропитанный».
+                <span class="source-badge">⏱ Урок_05: 00:01:44–00:02:10</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Проварка: <strong>3 мин</strong></span>
+              <span class="param-pill">🍯 Пропитка: <strong>60 г сахара + 170 г воды</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Сборка: коржи, кули и шарики</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Коржи не разрезайте — их три, и такими они и идут. Они лёгкие и пористые, хорошо принимают пропитку и крем, а крупные куски манго требуют коржа потолще, чтобы разрез был выразительным. На подложку положите каплю крема, чтобы бисквит не «бегал», и придавите.
+                <span class="source-badge">⏱ Урок_05: 00:00:02–00:01:35</span>
+              </p>
+              <p>
+                Переверните корж: сверху та сторона, что лежала на пергаменте, снизу — корочка, которая была сверху при выпечке. Пропитайте дважды кисточкой. Первый слой собирайте без кольца — так удобнее. Сделайте довольно высокий бортик из крема и выложите кули ложкой, вместе с крупными кусками фруктов: из мешка это не сделать.
+                <span class="source-badge">⏱ Урок_05: 00:01:35–00:02:49</span>
+              </p>
+              <p>
+                Разровняйте крем палетой, наденьте кольцо Ø18 см и застегните клипсы. Посыпьте крем шоколадными шариками Калебо — они не размокнут, потому что в шоколаде, и дадут хруст. Положите второй корж, прижмите, повторите пропитку, бортик, кули и шарики. Верхний корж пропитывается только с внутренней стороны дважды: та сторона, которая будет выравниваться и нести декор, должна остаться стабильной. Накройте торт плёнкой и уберите в холодильник минимум на 4 часа, лучше на 6.
+                <span class="source-badge">⏱ Урок_05: 00:04:22–00:06:48</span>
+              </p>
+              <div class="warning-box">
+                <strong>Кули только холодное:</strong> горячую начинку выкладывать нельзя — она размягчит крем и потечёт между коржами.
+                <span class="source-badge">⏱ Урок_05: 00:02:49–00:02:57</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Шарики: <strong>50 г между слоями</strong></span>
+              <span class="param-pill">🧊 Выдержка: <strong>от 4 (лучше 6) часов</strong></span>
+              <span class="param-pill">🥣 Формы: <strong>Кольцо Ø18 см с клипсами</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Крем-чиз для выравнивания</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Масло 82,5% комнатной температуры взбейте с сахарной пудрой — сначала на низкой скорости, чтобы пудра не летела, потом на максимуме до белого цвета. От того, до какой белизны взобьёте, зависит и итоговый цвет: чем белее, тем меньше потом нужно диоксида титана.
+                <span class="source-badge">⏱ Урок_07: 00:00:50–00:01:35</span>
+              </p>
+              <p>
+                Творожный сыр вводите постепенно, порциями. Хороший сыр даёт на поверхности сыворотку — водичку; если же выделяется растительное масло, сыр плохой и даст неприятный вкус. Взбейте до плотного, гладкого крема.
+                <span class="source-badge">⏱ Урок_07: 00:01:45–00:03:13</span>
+              </p>
+              <p>
+                Если крем недостаточно белый, разведите немного диоксида титана каплей холодной воды прямо на ложке, чтобы не было комочков, и пробейте крем ещё раз миксером. Крем хорошо окрашивается водорастворимыми красителями. Общий выход крема — 1000 г: 600 г на выравнивание и 400 г на декор.
+                <span class="source-badge">⏱ Урок_07: 00:03:14–00:04:19</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Масло: <strong>Комнатной температуры</strong></span>
+              <span class="param-pill">⚖ Выход: <strong>600 г на выравнивание + 400 г на декор</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Крем белый и плотный</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 11 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Извлечение из кольца и «чёрный слой»</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                У застывшего торта снимите клипсы и аккуратно помогите палетой, чтобы форма отпустила торт: разведите кольцо и извлеките его целиком.
+                <span class="source-badge">⏱ Урок_08: 00:00:01–00:00:29</span>
+              </p>
+              <p>
+                Смажьте торт тонким слоем крема по всей поверхности — это не выравнивание, а только чтобы спрятать крошки и не дать им попасть во внешнее покрытие. Делать можно ножом, палетой или скребком.
+                <span class="source-badge">⏱ Урок_08: 00:00:39–00:01:37</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧰 Инструмент: <strong>Палета, нож или скребок</strong></span>
+              <span class="param-pill">🔍 Задача: <strong>Спрятать крошки, не выравнивать</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 12 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Выравнивание скребком</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите крем в кондитерский мешок и отрежьте носик ровно на 1 см, не под углом. Наносите крем горизонтальными полосами, не боясь касаться мешком торта: так между кремом и боком не будет воздушных пузырей. Старайтесь сразу задать одинаковую толщину.
+                <span class="source-badge">⏱ Урок_08: 00:01:37–00:02:37</span>
+              </p>
+              <p>
+                Последняя окружность у верха должна быть чуть выше торта — так удобнее выравнивать. Скребком с углом 90 градусов, приложенным под углом примерно 45 градусов, выводите вертикаль, опираясь на подложку. Пустоты заполняйте остатком крема из мешка или палетой. Скребок вытирайте буквально после каждого оборота на 360 градусов.
+                <span class="source-badge">⏱ Урок_08: 00:03:00–00:04:34</span>
+              </p>
+              <p>
+                Верх выравнивайте скребком строго горизонтально, смазывая крем к центру и вытирая скребок о миску после каждого движения. Сверху нужен довольно тонкий слой: там ещё будут завитки, рога и нос.
+                <span class="source-badge">⏱ Урок_08: 00:04:34–00:05:19</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📐 Скребок: <strong>Угол 90°, к торту под 45°</strong></span>
+              <span class="param-pill">🥣 Мешок: <strong>Срез ровно 1 см</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Ровные борт и верх</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 13 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Рога, уши и глаза из мастики</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Мастику разомните и прогрейте в руках. Рога раскатайте потолще — совсем не тонко, чтобы после застывания они были основательными и не ломались при переносе. Приложите трафарет и вырежьте тонким ножом или мастихином. Уши делаются из двух деталей: внешняя — коричневая, внутренняя — золотая; раскатывать нужно тоньше, чем рога. Снизу ушко слепляйте, как пельмешек.
+                <span class="source-badge">⏱ Урок_06: 00:00:24–00:02:59</span>
+              </p>
+              <p>
+                Кандурин разведите водкой до густоты гуаши — такое покрытие плотное. Кисточкой прокрасьте рога с одной стороны, дайте подсохнуть, переверните и прокрасьте с другой. Так же — внутреннюю часть и кромку ушей. Оставьте сохнуть на ночь. Глаза вырежьте из коричневой мастики ножом, без рисования.
+                <span class="source-badge">⏱ Урок_06: 00:03:03–00:05:03</span>
+              </p>
+              <div class="tip-box">
+                <strong>Порядок:</strong> рога и уши делаются заранее — им нужна ночь на просушку, иначе кандурин останется липким и декор помнётся при постановке.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Сушка: <strong>Ночь</strong></span>
+              <span class="param-pill">🎨 Кандурин: <strong>Развести водкой до густоты гуаши</strong></span>
+              <span class="param-pill">🥣 Инструмент: <strong>Мастихин, вырубки или нож, кисть</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 14 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Декор: мордочка, завитки и веночек</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                На выровненном торте поставьте завитки под рога: насадка 8 мм, закрытая звезда с семью лепестками, отсаживайте примерно до середины торта — и такие же под уши. Приложите глаза и красный нос, посадите уши. С этого момента это уже милая белочка с красным носом; рога превратят её в оленя, но уже после декора по низу, чтобы не задеть их.
+                <span class="source-badge">⏱ Урок_08: 00:05:36–00:08:39</span>
+              </p>
+              <p>
+                Окрасьте часть крема зелёным водорастворимым красителем и отсадите венок по низу торта насадкой 24 — маленькой закрытой звездой, теми же круговыми движениями, невысоко. Затем насадкой 352 (лепесток) отсадите зелёные листики и красные цветы пуансеттии. Завершите яркими посыпками — внутри них хрустящий рис, так что зубы не пострадают.
+                <span class="source-badge">⏱ Урок_08: 00:08:39–00:10:16</span>
+              </p>
+              <p>
+                Поставьте рога и дайте торту постоять — минимум 6 часов в холодильнике после сборки. Готовый торт с декором весит 3200 г.
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌟 Завитки: <strong>Насадка 8 мм, 7 лепестков</strong></span>
+              <span class="param-pill">🎄 Венок: <strong>Насадка 24 + 352</strong></span>
+              <span class="param-pill">⚖ Вес с декором: <strong>3200 г</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Миска не в воде:</strong> при слишком высокой температуре белок коагулирует раньше времени — миска не должна доставать до воды в кастрюле.</li>
+                <li><strong>Мёд — это цвет и срок:</strong> он даёт золотистый оттенок и продлевает свежесть; бисквит без мёда будет светлее и храниться меньше.</li>
+                <li><strong>Пропитки не жалеть:</strong> коржи высокие и пористые, каждый автор проходит кисточкой дважды.</li>
+                <li><strong>Верхний корж пропитывают только изнутри:</strong> наружная сторона несёт выравнивание и декор и должна быть стабильной.</li>
+                <li><strong>Шарики в шоколаде:</strong> они не размокают в креме, а дают хрустящую прослойку — можно больше 50 г или вовсе исключить.</li>
+                <li><strong>Белое — белее:</strong> чем белее взбить масло с пудрой, тем меньше диоксида титана и тем ярче потом лягут красители.</li>
+                <li><strong>Маскарпоне решает:</strong> только Гальбани или Бонфесто; с другими марками крем делают внутренним, а снаружи — крем-чиз.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Пектин вводится без сахара:</strong> комками, и кули не схватится ровно. Смешивать с сахаром заранее, вводить в смесь не выше 40 °C.</li>
+                <li><strong>Кули недоварено:</strong> без нестекающей капли начинка вытечет в разрез. И лимонную кислоту забыть нельзя — она фиксирует консистенцию.</li>
+                <li><strong>Тесто перемешано слишком долго:</strong> масса оседает, коржи получаются плотными и низкими.</li>
+                <li><strong>Крем нанесён из мешка на расстоянии:</strong> остаются пузыри между кремом и тортом, и борта потом «дышат».</li>
+                <li><strong>Сыр с растительным маслом в составе:</strong> крем-чиз даст нехороший вкус. Нормально, когда сыр даёт сыворотку-воду.</li>
+                <li><strong>Рога раскатаны тонко:</strong> при переносе и транспортировке ломаются. И красят их без просушки — кандурин липнет и мажется.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и замены</h4>
+              <ul>
+                <li><strong>Готовый торт:</strong> 72 часа с момента сборки, в холодильнике.</li>
+                <li><strong>Бисквит:</strong> 10 дней в холодильнике или 2 месяца в морозилке — в пищевой плёнке.</li>
+                <li><strong>Заварной крем и кули:</strong> по 72 часа в холодильнике.</li>
+                <li><strong>Мёд:</strong> инвертный сироп или сахар 1:1; цвет и вкус изменятся, структура нет.</li>
+                <li><strong>Кули:</strong> манго-маракуйя или аналог персик-апельсин — брать один вариант целиком.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «Торт-Праздник_к_нам_приходит» с точной рецептурой и расшифровка восьми уроков Урок_01–Урок_08. Граммовки — из DOCX, последовательность, температуры, время и советы — из видео.</li>
+              <li><strong>Время выпечки:</strong> DOCX — «23–25 минут до 180 градусов», в видео автор говорит «примерно 25 минут». На странице диапазон 23–25 минут. Режим без конвекции; с конвекцией автор советует 170 °C.</li>
+              <li><strong>Количество маскарпоне:</strong> DOCX даёт 250–300 г, но главное условие — итоговый вес крема ровно 700 г. На странице взяты 300 г с пометкой доводить по весу; сколько заварной части выйдет, зависит от испарения влаги.</li>
+              <li><strong>Проварка кули:</strong> DOCX — 2 минуты, в видео «буквально после кипения минуту». На странице 2 минуты с ориентиром «до нестекающей капли».</li>
+              <li><strong>Лимонная кислота:</strong> DOCX — 2 г, в видео — «где-то пол чайной ложки без горки». Значения совпадают.</li>
+              <li><strong>Шоколадные шарики:</strong> в DOCX «Калебо», в видео — «колебо» (Callebaut). На странице 50 г, по рецептуре автора.</li>
+              <li><strong>Величина кули персик-апельсин:</strong> пюре персика 155 г + консервированный персик 270 г против 210 г пюре + 270 г кусков у манго, апельсинового пюре 110 г против 55 г маракуйи. Это авторская адаптация, количества не пересчитывались и с манго-вариантом не суммируются.</li>
+              <li><strong>Крем для выравнивания:</strong> раскладка даёт 1000 г; автор говорит, что этого достаточно для 600 г на выравнивание и 400 г на декор. Точной границы между частями в источниках нет — на странице указано именно это деление.</li>
+              <li><strong>Время отдыха:</strong> DOCX — сборка минимум 6 часов, коржи минимум 4 часа. В видео автор говорит «минимум на 4 часа, затем будем делать декор» и отдельно держит коржи ночь. На странице: сборка 4–6 часов, коржи от 4 часов.</li>
+              <li><strong>Пробел — количество мастики:</strong> в DOCX и видео нет ни граммов, ни размеров рогов и ушей (только «по трафарету», «потолще»). В списке покупок мастика дана без количества.</li>
+              <li><strong>Пробел — срок хранения выровненного торта:</strong> назван общий срок торта 72 часа с момента сборки; отдельно про торт после выравнивания и декора не сказано.</li>
+              <li><strong>Пробел — вес декора и высота торта:</strong> известно только, что торт с декором весит 3200 г. Веса коржа, веса готового кули и высоты торта в источниках нет.</li>
+              <li><strong>Фото:</strong> снимок торта из папки рецепта.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

@@ -1,0 +1,825 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кулич кружевной — пасхальный венок с глазурью и цветами — пошаговый рецепт | CookBook</title>
+  <meta name="description" content="Кулич кружевной: ленивое дрожжевое тесто на опаре-пулише с топлёным молоком и сметаной, ночь в холодильнике, выпечка в холодной духовке при 160 °C. Глазурь на желатине и белково-заварной крем для цветов.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧁</text></svg>">
+</head>
+<body data-recipe-id="kulich-kruzhevnyy">
+
+    <header class="site-header">
+    <div class="header-container">
+      <div class="header-back">
+        <a href="../index.html" class="back-link"><span class="back-arrow">←</span><span class="back-text">Назад</span></a>
+      </div>
+      <a href="../index.html" class="brand">
+        <img src="../assets/images/logo.png" alt="Логотип" aria-hidden="true" class="brand-logo" width="241" height="200">
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 <span class="btn-text">Печать рецепта</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Кулич кружевной — пасхальный венок</h1>
+      <div class="recipe-intro-split">
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-label">Опара</span>
+            <span class="fact-value">20 мин – 3 часа</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Замес</span>
+            <span class="fact-value">≈20 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Холодильник</span>
+            <span class="fact-value">ночь (тесто)</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Выпечка</span>
+            <span class="fact-value">40–43 мин при 160 °C</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Выход</span>
+            <span class="fact-value">1 венок ≈500 г + 1 кулич ≈630 г</span>
+          </div>
+        </div>
+
+        <p class="recipe-lead">
+          Тесто, которое не вымешивают: всё соединяют, затягивают плёнкой и убирают в холодильник на ночь — за это время глютен развивается сам. Утром тесто формуют в два вида: кольцо-венок в силиконовой форме с дыркой и обычный кулич в бумажной форме Ø13 см. Расстойка идёт прямо в холодной духовке, а выпечка — по-деревенски при 160 °C без предварительного разогрева. Сверху — глазурь на желатине и цветы из белково-заварного крема.
+        </p>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/kulich-kruzhevnyy.jpg" alt="Пасхальный венок с белой глазурью и цветами из белково-заварного крема" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (2 кулича)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="2">2</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">кулича</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — одно тесто на два изделия: венок в форме с дыркой (≈480 г теста) и кулич в бумажной форме 13×10 см (≈540 г теста). Готовый большой кулич весит около 630 г.
+          </p>
+        </div>
+
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">412</td>
+                <td>7,5 г</td>
+                <td>9,6 г</td>
+                <td>72,6 г</td>
+              </tr>
+              <tr>
+                <th>Венок и кулич<span class="kbju-sub">≈ 1,1 кг</span></th>
+                <td class="kbju-kcal"><span data-base-amount="4650" data-unit="ккал">4650 ккал</span></td>
+                <td><span data-base-amount="85" data-unit="г">85 г</span></td>
+                <td><span data-base-amount="108" data-unit="г">108 г</span></td>
+                <td><span data-base-amount="820" data-unit="г">820 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Считаны опара-пулиш, тесто, глазурь на желатине и белково-заварной крем целиком. Выход венка ≈ 500 г и кулича ≈ 630 г — из карточки автора.</p>
+            <p>Крем и глазурь частично остаются на посуде, поэтому у готовых изделий калорийность чуть ниже: венок ≈ 2060 ккал, кулич ≈ 2590 ккал.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">2</span> кулича</span>
+        </div>
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Тесто</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Дрожжи свежие</strong>:
+                <span class="shopping-qty" data-base-amount="17" data-unit="г">17 г</span>
+                <span class="shopping-hint">Инстантные, «Саф-момент». Сухих нужно в 3 раза меньше — 6 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука сильная</strong>:
+                <span class="shopping-qty" data-base-amount="450" data-unit="г">450 г</span>
+                <span class="shopping-hint">У автора «Макфа»; 100 г уходит в опару</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Топлёное молоко</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Подогреть до 25–30 °C — палец должен чувствовать тепло, а не обжигаться</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сметана 20% и выше</strong>:
+                <span class="shopping-qty" data-base-amount="125" data-unit="г">125 г</span>
+                <span class="shopping-hint">Даёт нежность и влажность; можно 30%</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло</strong>:
+                <span class="shopping-qty" data-base-amount="75" data-unit="г">75 г</span>
+                <span class="shopping-hint">Мягкое, но не растопленное — вмешивается последним</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйцо</strong>:
+                <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span>
+                <span class="shopping-hint">Примерно 1,5 яйца С1; белки дополнительно нужны на крем</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍬 Сахар, соль, наполнители, аромат</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="410" data-unit="г">410 г</span>
+                <span class="shopping-hint">100 г в тесто + 150 г в глазурь + 160 г в крем</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="г">5 г</span>
+                <span class="shopping-hint">В рецептуре «по вкусу», в видео — 5 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Изюм, апельсиновые цукаты, вяленая вишня, вяленая клюква</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Всего 150 г на оба изделия; у автора клюква, цукаты и изюм</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ваниль</strong>
+                <span class="shopping-hint">Ванильный сахар, паста, экстракт или ванилин — на выбор</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мускатный орех и куркума</strong>
+                <span class="shopping-hint">Пряности по вкусу — именно этот набор у автора</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="г">5 г</span>
+                <span class="shopping-hint">Только в глазурь, замачивается 30 г воды</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимонная кислота</strong>
+                <span class="shopping-hint">На кончике чайной ложки — в белково-заварной крем</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пищевые красители</strong>
+                <span class="shopping-hint">Зелёный, розовый, сиреневый — для цветов; в глазурь по желанию</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кондитерская посыпка</strong>
+                <span class="shopping-hint">Если не украшаете кремом, посыпать нужно сразу по свежей глазури</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧰 Инвентарь</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Силиконовая форма-кольцо</strong>
+                <span class="shopping-hint">Для венка; без неё понадобятся две бумажные формы 13×10 см или три по 11×10 см</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Бумажная форма 13×10 см</strong>
+                <span class="shopping-hint">Или форма для кекса; смазать маслом</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Насадки 103, 349 и 4</strong>
+                <span class="shopping-hint">103 — лепесток розы, 349 — «галочка», 4 — не обязательна</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кулинарный термометр</strong>
+                <span class="shopping-hint">Готовность кулича — 95 °C внутри</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Опара-пулиш</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="17" data-unit="г">17 г</span> — Дрожжи свежие
+              <span class="ingredient-note">Или 6 г сухих</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Топлёное молоко
+              <span class="ingredient-note">25–30 °C</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Сахар (в опару)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Мука (в опару)
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Тесто</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Яйцо
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Сметана 20% и выше
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="г">5 г</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="90" data-unit="г">90 г</span> — Сахар (в замес)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="350" data-unit="г">350 г</span> — Мука сильная
+              <span class="ingredient-note">Вся мука вводится до масла</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="75" data-unit="г">75 г</span> — Сливочное масло
+              <span class="ingredient-note">Вводится последним</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Ваниль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Мускатный орех и куркума — по вкусу
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Изюм, цукаты, вяленая вишня, вяленая клюква
+              <span class="ingredient-note">Добавляются при формировании, на следующий день</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Глазурь на желатине</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="г">5 г</span> — Желатин
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Вода
+              <span class="ingredient-note">30 г на желатин + 30 г в сахар</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Пищевой краситель — по желанию
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Белково-заварной крем</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Белок
+              <span class="ingredient-note">Два белка С0, только живые</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Сахар
+              <span class="ingredient-note">Соотношение 2:1 к белку</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Лимонная кислота на кончике чайной ложки
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Красители: зелёный, розовый, сиреневый
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Опара-пулиш</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Топлёное молоко подогрейте до 25–30 °C — палец должен чувствовать тепло, но не обжигаться. Залейте им дрожжи, перемешайте лопаточкой, добавьте 10 г сахара и просейте 100 г муки.
+                <span class="source-badge">⏱ Урок_03: 00:12:00–00:16:48</span>
+              </p>
+              <p>
+                Оставьте опару подходить. Она может стоять от 20 минут до 2–3 часов — ориентируйтесь на своё время. Сначала опара поднимается активно, потом начинает оседать: это значит, что у дрожжей закончилась еда.
+                <span class="source-badge">⏱ Урок_03: 01:38:20–01:38:51</span>
+              </p>
+              <div class="tip-box">
+                <strong>Сахar в опаре:</strong> его всего 10 г, остальные 90 г идут в замес. Не перепутайте — иначе дрожжам не хватит еды.
+                <span class="source-badge">⏱ Урок_03: 00:15:34–00:15:44</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Молоко: <strong>25–30 °C</strong></span>
+              <span class="param-pill">⏱ Опара: <strong>20 мин – 3 часа</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Первый этап замеса</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В подошедшую опару добавьте яйцо (80 г), сметану и соль. Затем введите оставшийся сахар — 90 г. Масса заметно разжижится: сахар начинает забирать воду и растворяться.
+                <span class="source-badge">⏱ Урок_03: 01:39:05–01:46:40</span>
+              </p>
+              <p>
+                Просейте остальную муку — 200 г сразу и ещё 150 г. Вся мука должна быть введена до масла, это принципиально.
+                <span class="source-badge">⏱ Урок_03: 01:44:54–01:47:53</span>
+              </p>
+              <div class="warning-box">
+                <strong>Тесто будет страшным:</strong> жидковатое, липкое, лохматое и рваное — так и должно быть. Оно станет великолепным за ночь без вашего участия.
+                <span class="source-badge">⏱ Урок_03: 01:47:54–01:48:28</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌾 Мука: <strong>вся до масла</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Липкое рваное тесто</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Масло в конце</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Вмешайте рукой 75 г мягкого сливочного масла до равномерного распределения. Масло только размягчите — до жидкого состояния не доводите.
+                <span class="source-badge">⏱ Урок_03: 01:48:29–01:48:41</span>
+              </p>
+              <p>
+                Почему масло в конце, а не в жидкости: в жидкости молекулы покрываются масляной плёнкой, и белку муки нечем набухнуть. Когда масло идёт последним, белковые цепи уже образовались, а жидкость «запечатывается» внутри — отсюда текстура и долгая свежесть.
+                <span class="source-badge">⏱ Урок_03: 01:48:57–01:50:22</span>
+              </p>
+              <div class="tip-box">
+                <strong>Если хотите печь сразу:</strong> вымешивайте тесто до гладкого состояния, пока не начнёт отлипать от рук, разложите по формам и дайте подойти.
+                <span class="source-badge">⏱ Урок_03: 01:50:32–01:50:45</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Масло: <strong>мягкое, не жидкое</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Масло распределилось равномерно</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Ночь в холодильнике</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Затяните тесто пищевой плёнкой — плотно, без дырок, — и уберите в холодильник на ночь. За это время оно увеличится примерно вдвое и станет гладким и блестящим.
+                <span class="source-badge">⏱ Урок_03: 01:51:02–01:51:09</span>
+              </p>
+              <p>
+                Тесто может стоять в холодильнике до 24 часов. Утром достаньте его примерно в 7 утра и оставьте при комнатной температуре: из холодильника оно выходит очень холодным.
+                <span class="source-badge">⏱ Урок_03: 01:52:08–01:53:06</span>
+              </p>
+              <div class="warning-box">
+                <strong>Наполнители — завтра:</strong> изюм и цукаты сегодня не добавляйте. Они вводятся при формировании, на следующий день.
+                <span class="source-badge">⏱ Урок_03: 01:51:33–01:51:46</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Холодильник: <strong>ночь, до 24 часов</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Тесто выросло вдвое</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Формирование венка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разделите тесто на две части: примерно 480 г на венок и 540 г на кулич. Гладкая сторона у теста — та, что была под плёнкой; работайте на растительном масле, а не на муке.
+                <span class="source-badge">⏱ Урок_02: 00:03:10–00:03:42</span>
+              </p>
+              <p>
+                Для венка распределите тесто в прямоугольник, разложите часть наполнителей, сверните рулетом и уложите в смазанную форму-кольцо швом вниз. Место стыка оформите так, чтобы кольцо не разрывалось.
+                <span class="source-badge">⏱ Урок_02: 00:04:52–00:06:40</span>
+              </p>
+              <div class="tip-box">
+                <strong>Цукаты не обсыпают мукой:</strong> это нужно только для жидкого теста. Здесь тесто густое и упругое, наполнители и так держатся.
+                <span class="source-badge">⏱ Урок_02: 00:05:02–00:05:20</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Тесто: <strong>≈480 г на венок</strong></span>
+              <span class="param-pill">🥣 Работа: <strong>на растительном масле</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Формирование кулича</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Вторую часть также распределите, добавьте наполнители, сверните рулетом, расплющите, сложите конвертом и скруглите в шар. Без цукатов не советуйте: сахар в рецепте рассчитан с учётом сладких сухофруктов.
+                <span class="source-badge">⏱ Урок_02: 00:07:01–00:08:02</span>
+              </p>
+              <p>
+                Уложите шар в смазанную бумажную форму 13×10 см — тесто займёт примерно треть объёма.
+                <span class="source-badge">⏱ Урок_02: 00:08:02–00:08:17</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Тесто: <strong>≈540 г на кулич</strong></span>
+              <span class="param-pill">📏 Форма: <strong>13×10 см</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Расстойка в холодной духовке</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Поставьте формы в холодную духовку и дайте тесту расстояться там. Венок у автора расстаивается полностью ещё до включения нагрева; если хотите ускорить — прогрейте духовку до 30 °C.
+                <span class="source-badge">⏱ Урок_04: 00:01:25–00:02:15</span>
+              </p>
+              <p>
+                Куличи не ставят в разогретую духовку: они расстаиваются и начинают выпекаться, пока духовка набирает температуру.
+                <span class="source-badge">⏱ Урок_04: 00:02:41–00:02:55</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Духовка: <strong>холодная</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Тесто подошло до краёв формы</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Выпечка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Включите 160 °C с конвекцией (без конвекции — 170 °C). На газовой духовке — минимальный газ, противень максимально вверх, чтобы шапки не касались верха.
+                <span class="source-badge">⏱ Урок_04: 00:04:51–00:05:39</span>
+              </p>
+              <p>
+                Ставьте сразу на 30 минут и добавьте ещё 10. У автора венок выпекался 40 минут, а большой кулич 43 минуты при весе 630 г.
+                <span class="source-badge">⏱ Урок_04: 00:46:23–00:47:39</span>
+              </p>
+              <p>
+                Готовность проверяйте термометром: внутри должно быть 95 °C. Шпажка может казаться сухой, но по технологии ориентир — именно температура.
+                <span class="source-badge">⏱ Урок_04: 00:50:09–00:51:57</span>
+              </p>
+              <div class="warning-box">
+                <strong>В газовой духовке:</strong> время выпечки будет дольше. Термометр для духовки ставьте на противень, а не тот, что приделан к стеклу.
+                <span class="source-badge">⏱ Урок_04: 00:05:39–00:08:16</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>160 °C конвекция / 170 °C верх-низ</strong></span>
+              <span class="param-pill">⏱ Время: <strong>40–43 мин</strong></span>
+              <span class="param-pill">🌡 Внутри: <strong>95 °C</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Глазурь на желатине</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Желатин замочите в 30 г холодной воды. В сотейник отвесьте 150 г сахара и влейте 30 г воды — вода должна смочить весь сахар, так он не засахарится при нагреве.
+                <span class="source-badge">⏱ Урок_04: 00:33:34–00:34:50</span>
+              </p>
+              <p>
+                Варите на небольшом огне, не перемешивая лопаткой: только слегка подрагивайте сотейником. Мешать нельзя — сироп может засахариться в камни. Ждите, пока сахар полностью растворится и сироп станет прозрачным.
+                <span class="source-badge">⏱ Урок_04: 00:37:25–00:39:50</span>
+              </p>
+              <p>
+                Когда кипение уймётся (около 90–100 °C), добавьте набухший желатин, перемешайте и взбейте миксером до густоты и пышности. Готовую глазурь наносите на холодные куличи, сверху — посыпку.
+                <span class="source-badge">⏱ Урок_04: 00:39:51–00:49:35</span>
+              </p>
+              <div class="tip-box">
+                <strong>Перезбили:</strong> глазурь поднимается по венчику и становится слишком густой — прогрейте её в микроволновке. Этого количества хватает на два больших кулича.
+                <span class="source-badge">⏱ Урок_04: 00:45:51–00:48:22</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Желатин: <strong>в сироп после кипения</strong></span>
+              <span class="param-pill">🖌 Куличи: <strong>холодные или тёплые, не горячие</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Белково-заварной крем</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Возьмите два живых белка С0 — на пастеризованном белке из бутылки крем для цветов не получится. Добавьте сахар из расчёта 2:1 к весу белка и сверху насыпьте лимонную кислоту: позже её добавлять нельзя.
+                <span class="source-badge">⏱ Урок_04: 01:02:09–01:09:17</span>
+              </p>
+              <p>
+                Поставьте на водяную баню и взбивайте на минимальной скорости, пока сахар не растворится, — миксер должен задевать стенки, иначе по краям и на дне получится омлет. Затем поднимите скорость до максимальной и взбивайте до плотных пиков. Каждый раз, проверяя крем, снимайте посуду с бани.
+                <span class="source-badge">⏱ Урок_04: 01:07:26–01:13:40</span>
+              </p>
+              <p>
+                Показатель готовности — «норы и дыры»: при взбивании видно дно и стенки, а масса стоит пиками и не течёт. Белок разрушается тремя способами (нагрев, механическое воздействие, кислота), поэтому меренга выходит плотной и рельефной.
+                <span class="source-badge">⏱ Урок_04: 01:09:22–01:14:56</span>
+              </p>
+              <div class="warning-box">
+                <strong>Желатин в крем не добавляют:</strong> он схватится уже при 27 °C, и осаживать цветы станет невозможно. Правильный крем и так держит форму.
+                <span class="source-badge">⏱ Урок_04: 00:44:22–00:45:08</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Белок:сахар: <strong>1:2</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Норы и дыры, стойкие пики</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Водяная баня, миксер</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Цветы и сборка венка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Подкрасьте крем: у автора зелёный, розовый и сиреневый. Насадка 103 — лепесток розы (носик всегда вверху), 349 — «галочка» для листьев, 4 — не обязательна. Мешок обрежьте так, чтобы насадка показывалась примерно на треть.
+                <span class="source-badge">⏱ Урок_04: 01:18:50–01:31:34</span>
+              </p>
+              <p>
+                Цветы отсаживайте прямо на застывшую глазурь венка. Сухие цветы из крема можно крепить и на незастывшую глазурь — так удобно делать декор заранее.
+                <span class="source-badge">⏱ Урок_04: 01:09:51–01:10:07</span>
+              </p>
+              <div class="tip-box">
+                <strong>Перекос венка:</strong> не страшно. Подрежьте низ там, где он выше, — низ всё равно станет дном, а глазурь скроет неровности.
+                <span class="source-badge">⏱ Урок_04: 00:52:08–00:55:08</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🎨 Цвета: <strong>зелёный, розовый, сиреневый</strong></span>
+              <span class="param-pill">🧁 Насадки: <strong>103, 349, 4</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Хранение</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Пока глазурь не схватилась — сразу посыпайте посыпкой, потом она уже не прилипнет. Без декора куличи можно накрыть плотной тканью со всех сторон.
+                <span class="source-badge">⏱ Урок_04: 00:47:46–00:49:35</span>
+              </p>
+              <div class="warning-box">
+                <strong>С кремовым декором:</strong> украшать лучше непосредственно перед праздником и долго не хранить — точные сроки в источниках не названы.
+                <span class="source-badge">⏱ Урок_04: 00:59:40–00:59:47</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧺 Без декора: <strong>под плотной тканью</strong></span>
+              <span class="param-pill">🎉 С кремом: <strong>украшать перед подачей</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Ленивый кулич:</strong> тесто не вымешивают — оно развивается само за ночь в холодильнике, и получается воздушным и влажным внутри.</li>
+                <li><strong>Масло последним:</strong> сначала белку муки нужно набухнуть в воде, и только потом жидкость «запечатывается» маслом. Отсюда текстура и долгая свежесть.</li>
+                <li><strong>Топлёное молоко + сметана:</strong> дают вкус топлёного молока, лёгкую кислинку и влажность.</li>
+                <li><strong>Холодная духовка:</strong> куличи расстаиваются и выпекаются в одной и той же духовке без пересадки.</li>
+                <li><strong>Сироп не мешать:</strong> иначе сахар засахарится камнями; достаточно подрагивать сотейник.</li>
+                <li><strong>Глазурь без белка:</strong> на желатине — не крошится при разрезании и не содержит сырого белка.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Масло ввели в жидкость:</strong> мука не набухает, текстура теряется.</li>
+                <li><strong>Добавили наполнители в первый день:</strong> за ночь в холодильнике они размокнут.</li>
+                <li><strong>Поставили в разогретую духовку:</strong> кулич не дорастёт, шапка треснет.</li>
+                <li><strong>Мешали сироп для глазури:</strong> кристаллы сахара, глазурь «в камнях».</li>
+                <li><strong>Помазали горячий кулич:</strong> глазурь стечёт и не схватится.</li>
+                <li><strong>Крем взбивали, не задевая стенки:</strong> по краям и на дне остаётся омлет.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> серия «Французский пасхальный пирог, кулич кружевной, пасха Сникерс» Надежды Зубовой — DOCX с рецептурой и расшифровки Урок_02 (формирование), Урок_03 (замес) и Урок_04 (выпечка и декор).</li>
+              <li><strong>Соль:</strong> в рецептуре указана «по вкусу», в видео автор добавляет 5 г.</li>
+              <li><strong>Название «кружевной»:</strong> в источниках не объясняется — вероятно, из-за ажурного декора кремом. Форма изделия в видео называется «пасхальный венок» или «бублик».</li>
+              <li><strong>Сроки хранения:</strong> точные не названы, даны только рекомендации по укрытию и декорированию перед праздником.</li>
+              <li><strong>Крем:</strong> пропорции и техника взяты из видео; отдельного DOCX-рецепта крема в папке нет.</li>
+              <li><strong>Фото:</strong> кадр из видео — венок с глазурью, который украшают цветами из крема.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

@@ -1,0 +1,723 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Французский пасхальный пирог с мясом и яйцами (патэ-ан-кроут) — пошаговый рецепт | CookBook</title>
+  <meta name="description" content="Французский пасхальный пирог патэ-ан-кроут: овсяное рубленое тесто, начинка из свиной шейки, фарша, обжаренного лука и яиц вкрутую. Форма-рамка 30×7×5 см, выход 1,7 кг, выпечка 45–55 минут при 170 °C.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧁</text></svg>">
+</head>
+<body data-recipe-id="frantsuzskiy-paskhalnyy-pirog">
+
+    <header class="site-header">
+    <div class="header-container">
+      <div class="header-back">
+        <a href="../index.html" class="back-link"><span class="back-arrow">←</span><span class="back-text">Назад</span></a>
+      </div>
+      <a href="../index.html" class="brand">
+        <img src="../assets/images/logo.png" alt="Логотип" aria-hidden="true" class="brand-logo" width="241" height="200">
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 <span class="btn-text">Печать рецепта</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Основные блюда</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Французский пасхальный пирог с мясом и яйцами (патэ-ан-кроут)</h1>
+      <div class="recipe-intro-split">
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-label">Подготовка</span>
+            <span class="fact-value">≈1,5 часа</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Отдых теста</span>
+            <span class="fact-value">в источнике не указано</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Выпечка</span>
+            <span class="fact-value">45–55 мин при 170 °C</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Общее время</span>
+            <span class="fact-value">≈3 часа (плюс отдых теста)</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Выход</span>
+            <span class="fact-value">1 пирог ≈1,7 кг</span>
+          </div>
+        </div>
+
+        <p class="recipe-lead">
+          Патэ-ан-кроут, который во Франции на Пасху подают вместо сладкой выпечки: мясная начинка с яйцами вкрутую, запечатанная в рубленое тесто с овсяными хлопьями. Тесто не раскатывается в пласт для решётки — крышка из того же теста полностью закрывает форму, а три отверстия с фольговыми «трубами» выпускают пар и не дают соку залить поверхность. Пирог выпекается 45–55 минут при 170 °C, достают его только холодным.
+        </p>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/frantsuzskiy-paskhalnyy-pirog.jpg" alt="Готовый патэ-ан-кроут в рамке 30 см, нарезается на порции" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 пирог)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">пирог</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — один пирог весом 1,7 кг в форме-рамке 30×7×5 см. Можно разделить продукты пополам и выпечь в форме поменьше.
+          </p>
+        </div>
+
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">432</td>
+                <td>13,7 г</td>
+                <td>31,4 г</td>
+                <td>23,4 г</td>
+              </tr>
+              <tr>
+                <th>Весь пирог<span class="kbju-sub">≈ 1,7 кг</span></th>
+                <td class="kbju-kcal"><span data-base-amount="7340" data-unit="ккал">7340 ккал</span></td>
+                <td><span data-base-amount="233" data-unit="г">233 г</span></td>
+                <td><span data-base-amount="534" data-unit="г">534 г</span></td>
+                <td><span data-base-amount="397" data-unit="г">397 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Считаны всё тесто с овсяными хлопьями, вся начинка и яйцо для смазывания. Свинина принята за шейку 430 ккал/100 г, фарш — из лопатки 315 ккал/100 г.</p>
+            <p>Вес после выпечки ≈ 1,7 кг: часть воды испаряется, поэтому у готового пирога калорийность на 100 г выше, чем у сырого набора. Порция 1/8 (≈ 210 г) — ≈ 900 ккал.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> пирог</span>
+        </div>
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥩 Мясо и яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Свиная шейка</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">Нарезать кубиком 8–10 мм; можно заменить курицей, индейкой или говядиной</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Свиной фарш</strong>:
+                <span class="shopping-qty" data-base-amount="400" data-unit="г">400 г</span>
+                <span class="shopping-hint">Из лопатки или нежирной грудинки. Жир в фарше обязателен — он склеивает начинку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца С2 для начинки</strong>:
+                <span class="shopping-qty" data-base-amount="7" data-unit="шт." data-piece="true">7 шт.</span>
+                <span class="shopping-hint">Сварить вкрутую; в рамку 30 см у автора ушло 6 штук</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца С1</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span>
+                <span class="shopping-hint">1 шт. в фарш + 1 шт. для смазывания</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лук репчатый</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Обжарить до полуготовности или натереть сырым очень мелко</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Тесто и приправы</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука</strong>:
+                <span class="shopping-qty" data-base-amount="400" data-unit="г">400 г</span>
+                <span class="shopping-hint">Тесто получается около 1 кг — остатки можно заморозить</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Овсяные хлопья быстрого приготовления</strong>:
+                <span class="shopping-qty" data-base-amount="130" data-unit="г">130 г</span>
+                <span class="shopping-hint">Те, что варятся 3–5 минут</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло холодное</strong>:
+                <span class="shopping-qty" data-base-amount="270" data-unit="г">270 г</span>
+                <span class="shopping-hint">Из холодильника, нарезать кубиком</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="25" data-unit="г">25 г</span>
+                <span class="shopping-hint">10 г в тесто + 15 г в начинку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="20" data-unit="г">20 г</span>
+                <span class="shopping-hint">Только в тесто</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Манная крупа</strong>:
+                <span class="shopping-qty" data-base-amount="12" data-unit="г">12 г</span>
+                <span class="shopping-hint">Столовая ложка — загуститель начинки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Смесь перцев, паприка, сухой чеснок, имбирь, орегано</strong>
+                <span class="shopping-hint">По вкусу; у автора ещё и шалфей. Свежий чеснок не подойдёт — за длительную выпечку выдохнется</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧰 Инвентарь</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Форма-рамка 30×7×5 см</strong>
+                <span class="shopping-hint">Без дна, ставится на противень с пергаментом. Подойдёт и форма для кекса с дном — её выстилают пергаментом с запасом</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пергамент для выпечки</strong>
+                <span class="shopping-hint">Тесто раскатывается между двумя листами; пергамент под рамкой и по бокам формы</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пищевая фольга</strong>
+                <span class="shopping-hint">Из неё скручиваются три «трубы» в отверстия крышки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Вырубки или насадки Ø3–5 см</strong>
+                <span class="shopping-hint">Для трёх отверстий на крышке и декора; по желанию</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кулинарный термометр</strong>
+                <span class="shopping-hint">Не обязателен: без него ориентир — 55 минут для пирога такого размера</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Тесто с овсяными хлопьями</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="400" data-unit="г">400 г</span> — Мука
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="130" data-unit="г">130 г</span> — Овсяные хлопья быстрого приготовления
+              <span class="ingredient-note">3 или 5 минут варки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="270" data-unit="г">270 г</span> — Сливочное масло холодное
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="190" data-unit="г">190 г</span> — Холодная вода
+              <span class="ingredient-note">Из холодильника</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Свиная шейка
+              <span class="ingredient-note">Кубиком 8–10 мм</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="400" data-unit="г">400 г</span> — Свиной фарш из лопатки или нежирной грудинки
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span> — Яйцо С1
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Соль
+              <span class="ingredient-note">Это довольно много, но пирог солёный</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="12" data-unit="г">12 г</span> — Манная крупа
+              <span class="ingredient-note">Столовая ложка</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Лук
+              <span class="ingredient-note">Обжаренный до полуготовности</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="шт." data-piece="true">7 шт.</span> — Яйца С2 вкрутую
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Смесь перцев, паприка, сухой чеснок, имбирь, орегано, шалфей
+              <span class="ingredient-note">По желанию</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Для смазывания и декора</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span> — Яйцо
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Обрезки теста — жгутики по краю и вокруг отверстий
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Тесто в комбайне</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В чашу комбайна высыпьте муку с солью и сахаром, добавьте овсяные хлопья и холодное масло, нарезанное кубиком. Порубите до мелкой крошки — воды пока нет. Без комбайна то же самое делают ножом на доске.
+                <span class="source-badge">⏱ Урок_01: 00:00:33–00:01:36</span>
+              </p>
+              <p>
+                Влейте сразу всю холодную воду и перемешайте до одного комка. Долго не месить: как только тесто собралось — готово.
+                <span class="source-badge">⏱ Урок_01: 00:01:37–00:01:59</span>
+              </p>
+              <div class="tip-box">
+                <strong>Теста получится около килограмма:</strong> лучше больше, чем меньше — из остатков можно выпечь тарт или заморозить их.
+                <span class="source-badge">⏱ Урок_01: 00:00:44–00:01:03</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>Комбайн с ножом или нож</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Один комок, тесто липкое</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Раскатка и отдых</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разделите тесто пополам — так удобнее раскатывать. Каждую часть раскатайте между двумя листами пергамента до толщины 4 мм. Не бойтесь, что тесто липкое: оно прекрасно раскатывается.
+                <span class="source-badge">⏱ Урок_01: 00:02:04–00:03:05</span>
+              </p>
+              <p>
+                Снимите верхний лист и уберите пласт в холодильник. В рецептуре время отдыха не указано; автор готовила тесто заранее, накануне.
+                <span class="source-badge">⏱ Урок_01: 00:02:27–00:03:09</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Толщина: <strong>4 мм (в рецептуре 4–5 мм)</strong></span>
+              <span class="param-pill">🌡 Место: <strong>Холодильник</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Форма</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Рамку 30×7×5 см поставьте на противень, застеленный пергаментом, и хорошо промажьте маслом — и саму рамку, и место под ней.
+                <span class="source-badge">⏱ Урок_03: 00:06:25–00:08:23</span>
+              </p>
+              <p>
+                Если форма с дном (для кекса, для хлеба, тефлоновая или стеклянная) — обязательно выстелите её пергаментом с запасом, чтобы края свисали: только так пирог потом выйдет целым.
+                <span class="source-badge">⏱ Урок_03: 00:05:08–00:06:38</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Рамка: <strong>30×7×5 см</strong></span>
+              <span class="param-pill">⚖ Выход: <strong>≈1,7 кг</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Начинка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Соедините нарезанную кубиком шейку, фарш, обжаренный лук, яйцо, соль, манку и специи. Мясо должно быть кусочками 8–10 мм — не крупнее, иначе пирог плохо режется.
+                <span class="source-badge">⏱ Урок_03: 00:33:21–00:39:24</span>
+              </p>
+              <p>
+                Вымешайте рукой и выбейте лишний воздух: берите кусок фарша и бросайте его об бок миски. Фарш станет плотным и гладким — так же делают котлетную массу. Это самый долгий этап из всех заготовок дня.
+                <span class="source-badge">⏱ Урок_03: 00:39:54–00:42:35</span>
+              </p>
+              <div class="tip-box">
+                <strong>Замена мяса:</strong> в фарше обязательно должна остаться свинина с жиром — она склеивает начинку. Кусочки можно взять из курицы, индейки (бедро) или говядины, но и там нужна жирная часть.
+                <span class="source-badge">⏱ Урок_03: 00:35:05–00:41:05</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧂 Соль: <strong>15 г</strong></span>
+              <span class="param-pill">🥩 Кусочки мяса: <strong>8–10 мм</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Фарш плотный, блестящий</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Тесто в форму</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выложите пласт в рамку, прижмите к бортам, лишнее подрежьте ножницами, оставив по краю примерно по 1 см запаса. Края приклейте друг к другу — сок не должен вытекать ни в одном месте.
+                <span class="source-badge">⏱ Урок_03: 00:42:42–00:44:26</span>
+              </p>
+              <p>
+                Первый слой фарша утрамбуйте вниз — толщиной около 1 см. Плотно, насколько можете: при нарезке кусочки не должны разваливаться.
+                <span class="source-badge">⏱ Урок_03: 00:43:49–00:47:01</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Запас теста: <strong>≈1 см по краю</strong></span>
+              <span class="param-pill">📏 Слой фарша: <strong>≈1 см</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Яйца и второй слой фарша</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Яйца вкрутую уложите в ряд бочком — тогда почти в каждый разрез попадёт яйцо. Без яиц тоже можно, но фарша понадобится больше.
+                <span class="source-badge">⏱ Урок_03: 00:47:02–00:47:33</span>
+              </p>
+              <p>
+                Остатки фарша распределите по сторонам и сверху, утрамбовывая как можно плотнее. Кладите с небольшой горкой: мясо при выпечке уменьшается.
+                <span class="source-badge">⏱ Урок_03: 00:47:40–00:49:38</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Яйца: <strong>6–7 шт., бочком</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Фарш с горкой</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Крышка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Накройте начинку пластом теста, хорошо прижмите по краям и срежьте лишнее. С одной стороны край защипните, с другой — оставьте как декоративную окантовку.
+                <span class="source-badge">⏱ Урок_03: 00:49:39–00:53:41</span>
+              </p>
+              <p>
+                Круглой вырубкой сделайте три отверстия на макушке: одно по центру и два симметрично по бокам.
+                <span class="source-badge">⏱ Урок_03: 00:50:17–00:50:51</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔘 Отверстия: <strong>3 штуки</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Край натянут и прижат</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Трубы из фольги</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Из полоски фольги скрутите трубу по ширине насадки и утопите её в отверстие, прижав к тесту. Повторите трижды. Можно вставить сами металлические насадки, если их хватает.
+                <span class="source-badge">⏱ Урок_03: 00:56:02–00:57:04</span>
+              </p>
+              <div class="warning-box">
+                <strong>Без труб не обойтись:</strong> иначе пар не выйдет, сок потечёт по поверхности пирога, изменит его цвет и вид.
+                <span class="source-badge">⏱ Урок_03: 00:55:37–00:55:57</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔧 Материал: <strong>Фольга или насадки</strong></span>
+              <span class="param-pill">🎯 Задача: <strong>Выпустить пар, удержать сок у теста</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Декор и смазывание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Из обрезков скатайте тонкие жгутики, уложите их по краю и вокруг отверстий, добавьте вырубки. Смажьте пирог яйцом; декор можно не смазывать — тогда он будет чуть светлее основы.
+                <span class="source-badge">⏱ Урок_03: 00:53:53–00:55:40</span>
+              </p>
+              <p>
+                Если не успеваете, отправьте собранный пирог в холодильник и займитесь декором позже.
+                <span class="source-badge">⏱ Урок_03: 00:59:02–00:59:13</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🖌 Смазка: <strong>Яйцо</strong></span>
+              <span class="param-pill">🥚 Декор: <strong>Смазывать по желанию</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Выпечка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Духовку разогрейте до 170 °C — с конвекцией или в режиме «верх-низ», на газовой тоже 170 °C. Выпекайте 45–55 минут.
+                <span class="source-badge">⏱ Урок_03: 00:58:07–00:59:37</span>
+              </p>
+              <p>
+                Готовность: 68–70 °C внутри пирога, максимум 75 °C. Если термометра нет, для пирога такого размера ориентир — 55 минут, проверять через 45.
+                <span class="source-badge">⏱ Урок_03: 01:05:04–01:06:03</span>
+              </p>
+              <div class="tip-box">
+                <strong>Если верх пригорает:</strong> поставьте противень с водой в самый низ духовки, чтобы выровнять температуру.
+                <span class="source-badge">⏱ Урок_03: 01:26:26–01:26:38</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>170 °C</strong></span>
+              <span class="param-pill">⏱ Время: <strong>45–55 мин</strong></span>
+              <span class="param-pill">🌡 Внутри: <strong>68–70 °C (макс. 75 °C)</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Остывание и подача</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Доставать пирог из формы только полностью остывшим — иначе он развалится. Подают и как закуску, и как полноценное второе: в подогретом виде вкус раскрывается лучше.
+                <span class="source-badge">⏱ Урок_03: 00:43:26–00:44:07</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сроки хранения:</strong> в источниках не названы. Ориентир для мясного пирога в тесте — до 3 суток в холодильнике.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Извлекать: <strong>только холодным</strong></span>
+              <span class="param-pill">🍽 Подача: <strong>Закуска или второе, можно подогреть</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Жир — склеивающее звено:</strong> не бойтесь жирного фарша, именно он держит нарезку и не даёт кусочкам разваливаться.</li>
+                <li><strong>Отбить фарш:</strong> бросание об бок миски выбивает воздух, масса уплотняется и становится гладкой. Тот же приём работает с котлетами.</li>
+                <li><strong>Овсяные хлопья:</strong> только быстрые, 3–5 минут варки — они дают тесту характерную текстуру.</li>
+                <li><strong>Смазывать декор или нет:</strong> смазанный яйцом декор темнеет вместе с пирогом, несмазанный остаётся светлее и выделяется.</li>
+                <li><strong>Пирог дорогой по времени, но не по продуктам:</strong> в Париже килограмм готового патэ-ан-кроут стоит в среднем около 50 евро.</li>
+                <li><strong>Тесто на будущее:</strong> остатки можно заморозить или использовать для тарта.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Месили тесто долго:</strong> пласт теряет слоистость и садится при выпечке.</li>
+                <li><strong>Края не приклеены:</strong> сок вытекает на противень, пирог получается сухим.</li>
+                <li><strong>Забыли трубы из фольги:</strong> пар рвёт крышку, поверхность темнеет от сока.</li>
+                <li><strong>Мясо крупными кусками:</strong> пирог плохо режется и разваливается.</li>
+                <li><strong>Слой фарша не утрамбован:</strong> внутри остаются пустоты.</li>
+                <li><strong>Достали горячим:</strong> форма разъезжается, пирог ломается.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> серия «Французский пасхальный пирог, кулич кружевной, пасха Сникерс» Надежды Зубовой — DOCX с рецептурой (тесто и начинка) и расшифровка Урок_01 и Урок_03.</li>
+              <li><strong>Технология:</strong> в DOCX даны только состав и общий порядок, весь процесс сборки, труб и декора взят из видео Урок_03.</li>
+              <li><strong>Отдых теста:</strong> в источниках время не названо — автор готовила тесто накануне, пласт лежал в холодильнике.</li>
+              <li><strong>Яйца в начинке:</strong> в рецептуре 6–7 штук, в видео в рамку 30 см ушло 6.</li>
+              <li><strong>Толщина теста:</strong> в DOCX 4–5 мм, в видео автор называет 4 мм.</li>
+              <li><strong>Специи:</strong> в DOCX перечислены как «по желанию»; в видео дополнительно названы орегано и шалфей.</li>
+              <li><strong>Сроки хранения:</strong> в источниках не названы, дан общий ориентир.</li>
+              <li><strong>Фото:</strong> кадр из видео — готовый пирог в рамке, нарезается на порции.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

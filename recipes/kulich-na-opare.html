@@ -1,0 +1,712 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кулич на опаре с маслом нуазет — пошаговый рецепт | CookBook</title>
+  <meta name="description" content="Сдобный кулич на опаре с маслом нуазет: мука 560 г, дрожжи, желтки, цукаты. Замес в два приёма, час в холоде, расстойка 1,5–2 часа, выпечка при 155 °C, пропитка ромом и глазурь на желатине.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍞</text></svg>">
+</head>
+<body data-recipe-id="kulich-na-opare">
+
+    <header class="site-header">
+    <div class="header-container">
+      <div class="header-back">
+        <a href="../index.html" class="back-link"><span class="back-arrow">←</span><span class="back-text">Назад</span></a>
+      </div>
+      <a href="../index.html" class="brand">
+        <img src="../assets/images/logo.png" alt="Логотип" aria-hidden="true" class="brand-logo" width="241" height="200">
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 <span class="btn-text">Печать рецепта</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Кулич на опаре с маслом нуазет</h1>
+      <div class="recipe-intro-split">
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-label">Подготовка</span>
+            <span class="fact-value">40 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Активное время</span>
+            <span class="fact-value">1 ч 30 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Пассивное время</span>
+            <span class="fact-value">4–5 часов</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Общее время</span>
+            <span class="fact-value">5–7 часов (можно растянуть на ночь)</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Выход</span>
+            <span class="fact-value">1 кулич ≈ 700 г + краффин из того же замеса</span>
+          </div>
+        </div>
+
+        <p class="recipe-lead">
+          Сдобный кулич, в котором половина вкуса делается заранее: сливочное масло перетапливается в масло нуазет с ореховым ароматом, а тесто замешивается в два приёма — сначала опара и мука, потом желтки, масло, сахар и цукаты. Сахар вводится только на столе, после муки, иначе кулич поплывёт маслом и зачерствеет. Из одного замеса получаются кулич традиционной формовки и краффин; на этой странице — кулич.
+        </p>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/kulich-na-opare.jpg" alt="Кулич традиционной формовки в бумажной форме, освобождённый от пергамента" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 замес)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">замес</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — один замес из 560 г муки. Автор делит готовое тесто (1160 г) пополам: 580 г идёт на кулич, 580 г — на краффин. Все граммовки пересчитываются вместе с замесом.
+          </p>
+        </div>
+
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">434</td>
+                <td>7,6 г</td>
+                <td>14,6 г</td>
+                <td>66 г</td>
+              </tr>
+              <tr>
+                <th>Кулич и краффин<span class="kbju-sub">≈ 1,3 кг</span></th>
+                <td class="kbju-kcal"><span data-base-amount="5640" data-unit="ккал">5640 ккал</span></td>
+                <td><span data-base-amount="99" data-unit="г">99 г</span></td>
+                <td><span data-base-amount="190" data-unit="г">190 г</span></td>
+                <td><span data-base-amount="859" data-unit="г">859 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>В расчёт вошла вся партия: опара, тесто, пропитка и глазурь на желатине. Замеса хватает на кулич ≈ 700 г и краффин из той же партии, поэтому «всё блюдо» — это оба изделия (≈ 1,3 кг).</p>
+            <p>Если пропитку тесто впитывает не полностью или глазурь остаётся в кастрюле, готовые изделия будут легче и калорийность на 100 г — ниже.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> замес</span>
+        </div>
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="6" data-unit="шт." data-piece="true">6 шт.</span>
+                <span class="shopping-hint">150 г яиц (≈3 шт.) в тесто + 55 г желтков (≈3 шт.). Белки от желтков остаются — их можно пустить на глазурь или безе</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко</strong>:
+                <span class="shopping-qty" data-base-amount="140" data-unit="г">140 г</span>
+                <span class="shopping-hint">Тёплое, до 30 °C, для опары</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Из 250 г вытапливается около 140 г масла нуазет; остаток — белок и вода, они уходят в осадок</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Мука, сахар, наполнение</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с, сильная</strong>:
+                <span class="shopping-qty" data-base-amount="560" data-unit="г">560 г</span>
+                <span class="shopping-hint">Автор берёт «Макфу»; важна не марка, а способность держать сдобное тесто</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Дрожжи свежие</strong>:
+                <span class="shopping-qty" data-base-amount="35" data-unit="г">35 г</span>
+                <span class="shopping-hint">Или 12 г сухих. Свежие должны быть близки к дате изготовления и приятно пахнуть</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок (всего)</strong>:
+                <span class="shopping-qty" data-base-amount="365" data-unit="г">365 г</span>
+                <span class="shopping-hint">125 г в тесто + 60 г в пропитку + 180 г в глазурь</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Цукаты, изюм, вяленая вишня</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">150–200 г по рецепту; автор берёт 200 г. Мармелад и чернослив не советует</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мёд</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span>
+                <span class="shopping-hint">Можно заменить сахаром или сиропом глюкозы</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="г">4 г</span>
+                <span class="shopping-hint">Не уменьшать: соль помогает клейковине</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ванильный сахар</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">Плюс куркума, мускатный орех или шафран — по желанию</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ром или коньяк</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Для замачивания цукатов и пропитки; можно обойтись без алкоголя</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="г">5 г</span>
+                <span class="shopping-hint">Для глазури на желатине; замочить в 25 г холодной воды</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Бумажная форма для кулича</strong>
+                <span class="shopping-hint">Или металлическая форма, выстланная пергаментом; закладка — примерно треть формы</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Опара</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="140" data-unit="г">140 г</span> — Молоко тёплое
+              <span class="ingredient-note">До 30 °C; в DOCX в пошаговой части 150 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="35" data-unit="г">35 г</span> — Дрожжи свежие
+              <span class="ingredient-note">Или 12 г сухих</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Мёд
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Мука (в опару)
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Тесто</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Яйца
+              <span class="ingredient-note">Около 3 шт. С1, комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="55" data-unit="г">55 г</span> — Желтки
+              <span class="ingredient-note">Около 3 желтков</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="г">4 г</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Ванильный сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="350" data-unit="г">350 г</span> — Мука (в тесто)
+              <span class="ingredient-note">Плюс ещё около 60 г на подсыпку при вымешивании</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="140" data-unit="г">140 г</span> — Масло нуазет
+              <span class="ingredient-note">Из 250 г сливочного; комнатной температуры, не горячее</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Сахар
+              <span class="ingredient-note">Вводится только на столе, после муки</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Цукаты и изюм
+              <span class="ingredient-note">Можно замочить в 30 г рома и обсушить</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Куркума, мускатный орех, шафран
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="г">5 г</span> — Растительное масло
+              <span class="ingredient-note">Для смазывания поверхности теста и формы, если нужно</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Пропитка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="140" data-unit="г">140 г</span> — Вода
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Ром или коньяк
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Глазурь на желатине</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="г">5 г</span> — Желатин
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Вода холодная (для желатина)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="180" data-unit="г">180 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Вода (в сироп)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По желанию — Краситель и посыпка
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Опара</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Раскрошите свежие дрожжи в тёплое молоко (до 30 °C), добавьте мёд и перемешайте. Всыпьте просеянную муку и замешайте ложкой — консистенция как у густой сметаны. Накройте полотенцем и оставьте, пока готовится масло.
+                <span class="source-badge">⏱ Урок_01: 00:12:36–00:20:43</span>
+              </p>
+              <div class="warning-box">
+                <strong>Молоко не горячее:</strong> в кипятке дрожжи погибают. Проверьте пальцем — тепло, но не обжигает.
+                <span class="source-badge">⏱ Урок_01: 00:13:13–00:14:38</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Молоко: <strong>до 30 °C</strong></span>
+              <span class="param-pill">⏱ Время: <strong>20–40 мин</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Выросла минимум вдвое, приятный запах</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Масло нуазет</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Растопите 250 г сливочного масла на максимуме, затем убавьте до среднего и уваривайте 5–7 минут, помешивая. Грейте до 144–146 °C: белок свернётся, на дне появятся коричневые «пылинки», цвет потемнеет, появится ореховый запах.
+                <span class="source-badge">⏱ Урок_01: 00:24:35–00:28:34</span>
+              </p>
+              <p>
+                Процедите через однослойную салфетку или фильтр и остудите. В тесто масло идёт только не горячим — до 30 °C по ощущению пальца.
+                <span class="source-badge">⏱ Урок_01: 00:36:50–00:38:35</span>
+              </p>
+              <div class="tip-box">
+                <strong>Чем нуазет отличается от топлёного:</strong> у нуазета нет ни воды, ни белка — только жир с ореховым ароматом. Именно он «запечатывает» влагу и продлевает свежесть кулича.
+                <span class="source-badge">⏱ Урок_01: 00:35:15–00:35:47</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>144–146 °C</strong></span>
+              <span class="param-pill">⏱ Варка: <strong>5–7 мин</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Коричневый осадок, ореховый запах</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Первый замес: яйца, мука, желтки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В подошедшую опару введите яйца, соль, ванильный сахар и пряности. Перемешивайте рукой или лопаткой — венчик и миксер с обычными венчиками разрушают будущий глютен.
+                <span class="source-badge">⏱ Урок_01: 00:51:47–00:55:30</span>
+              </p>
+              <p>
+                Всыпьте 350 г муки и месите около 3 минут до тугого теста. Затем введите желтки — тесто станет чуть жиже, потому что в желтках есть влага.
+                <span class="source-badge">⏱ Урок_01: 00:57:15–01:03:15</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не торопитесь с сахаром:</strong> сахар в жидкости оттягивает воду у муки, и кулич потом «плавает в луже масла» и черствеет. Сахар вводится позже, на столе.
+                <span class="source-badge">⏱ Урок_01: 00:45:16–00:46:28</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Замес: <strong>3 мин + желтки</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Руки, лопатка, миска</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Тугое тесто, желтки полностью вошли</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Масло и вымешивание с сахаром</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Введите масло нуазет в два приёма — сначала 100 г, дождитесь, пока тесто его «съест», затем 40 г. Выложите тесто на стол, всыпьте сахар и вымешивайте не менее 10–15 минут движениями как при стирке.
+              </p>
+              <p>
+                Сначала тесто разжижается и липнет, потом отходит от стола и рук, становится гладким и блестящим. Остаток муки подсыпайте понемногу — не перегружайте. В конце можно смазать поверхность чайной ложкой растительного масла.
+                <span class="source-badge">⏱ Урок_01: 01:03:19–01:22:35</span>
+              </p>
+              <div class="tip-box">
+                <strong>Признак готовности:</strong> тесто гладкое, блестящее, отлипает от стола и рук. Если оно остаётся жидким, значит глютен не развился.
+                <span class="source-badge">⏱ Урок_03: 00:07:38–00:07:54</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Вымешивание: <strong>10–15 мин</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Гладкое, блестящее, отлипает</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Стол, скребок</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Час в холоде</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите тесто в миску, накройте и уберите в холодильник или другое холодное место на 1 час. В холоде глютен расслабляется, тесто становится сильнее и лучше держит форму. Можно оставить и на ночь — так удобнее.
+                <span class="source-badge">⏱ Урок_01: 01:24:23–01:29:16</span>
+              </p>
+              <div class="warning-box">
+                <strong>Слишком холодно нельзя:</strong> при температуре ниже −4 °C дрожжи впадают в анабиоз. Оптимум — от +4 °C и выше.
+                <span class="source-badge">⏱ Урок_03: 00:03:27–00:03:44</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>1 час (или ночь)</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>+4 °C и выше</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Цукаты и формовка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Готовое тесто весит около 1160 г. Разделите его пополам: 580 г — на кулич, 580 г — на краффин (см. отдельный рецепт). В половину для кулича вмешайте 200 г цукатов «кармашками», запечатывая их внутри, чтобы они не выглядывали.
+                <span class="source-badge">⏱ Урок_03: 00:08:42–00:16:13</span>
+              </p>
+              <p>
+                Сформируйте шар: смажьте руку растительным маслом, соберите все складки вниз, гладкой стороной уложите в форму. Заполняйте форму примерно на треть.
+                <span class="source-badge">⏱ Урок_03: 00:16:33–00:18:36</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> цукаты лучше присыпать мукой — тогда они не разжижают тесто. А мармелад и чернослив в кулич не идут: мармелад плавится и красит тесто, чернослив даёт грязно-синий цвет.
+                <span class="source-badge">⏱ Урок_02: 00:10:41–00:11:24</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Тесто: <strong>580 г на кулич</strong></span>
+              <span class="param-pill">🧁 Форма: <strong>Заполнить на ⅓</strong></span>
+              <span class="param-pill">🍬 Цукаты: <strong>200 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Расстойка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Уберите форму в тёплое место на 1,5–2 часа. Автор ставит в выключенную холодную духовку. Тесто должно вырасти примерно втрое; печь лучше, когда до верха формы остаётся около 5 см.
+                <span class="source-badge">⏱ Урок_03: 00:29:46–00:30:29</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не передержите:</strong> слишком долгая расстойка даёт шапку «как у гриба» и крупные поры. Лучше поставить в духовку чуть раньше.
+                <span class="source-badge">⏱ Урок_04: 00:03:07–00:03:46</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>1,5–2 часа</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Выросло втрое, до верха ~5 см</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Выпечка и остывание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте в холодной (не разогретой) духовке с конвекцией при 155 °C около 45 минут. Без конвекции — 160–165 °C. Готовность проверьте деревянной шпажкой: она должна выйти сухой; по термометру внутри 92–95 °C, мерить по центру.
+                <span class="source-badge">⏱ Урок_04: 00:02:06–00:02:36</span>
+              </p>
+              <p>
+                Через 5 минут после духовки достаньте кулич из жестяной формы и остужайте на боку, периодически переворачивая. Бумажную форму можно просто накрыть полотенцем.
+                <span class="source-badge">⏱ Урок_05: 00:04:00–00:04:32</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не оставляйте горячим в форме:</strong> кулич запотеет и отсыреет. И не ставьте остывать ровно — один бок приплюснется.
+                <span class="source-badge">⏱ Урок_05: 00:07:26–00:08:15</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>155 °C с конвекцией</strong></span>
+              <span class="param-pill">⏱ Время: <strong>~45 мин</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Сухая шпажка, 92–95 °C</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Пропитка и глазурь</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Для пропитки проварите 140 г воды с 60 г сахара 3 минуты после закипания, остудите и добавьте 20 г рома. Холодный кулич прошприцуйте сиропом шприцем — примерно 100 мл на кулич весом 700 г. Пропитывают только кулич классической формы, краффин — нет.
+                <span class="source-badge">⏱ Урок_06: 00:06:19–00:08:19</span>
+              </p>
+              <p>
+                Для глазури замочите 5 г желатина в 25 г холодной воды. Сварите сироп из 180 г сахара и 50 г воды, снимите с огня, растворите желатин и взбейте миксером 3–5 минут до пышной белой массы. Наносите на полностью остывший кулич и сразу посыпайте.
+                <span class="source-badge">⏱ Урок_06: 00:08:35–00:16:40</span>
+              </p>
+              <div class="warning-box">
+                <strong>Глазурь только на холодный кулич:</strong> желатин плывёт при температуре выше 22 °C. Украшения ставьте сразу, пока глазурь не схватилась.
+                <span class="source-badge">⏱ Урок_06: 00:01:38–00:02:07</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">💉 Пропитка: <strong>~100 мл на 700 г</strong></span>
+              <span class="param-pill">⏱ Взбивание: <strong>3–5 мин</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Глазурь держит рисунок, течёт умеренно</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Сахар — последним:</strong> сначала мука должна напиться водой, иначе сахар отнимет её у глютена, и кулич получится сухим.</li>
+                <li><strong>Масло нуазет:</strong> ореховый аромат и «запечатанная» влага. Без плиты замените равным количеством размягчённого сливочного масла — кулич будет проще, но вкусным.</li>
+                <li><strong>Соль не уменьшайте:</strong> она «друг клейковины» и даёт крепкие цепочки.</li>
+                <li><strong>Мёд — консервант:</strong> он удерживает влагу и не даёт сахару кристаллизоваться; можно заменить сахаром или сиропом глюкозы.</li>
+                <li><strong>Цукаты держат влагу:</strong> вместе с мёдом и правильно введённым маслом они отвечают за свежесть кулича.</li>
+                <li><strong>Трещины — норма:</strong> шапку можно срезать и выровнять, а сверху всё закроет глазурь.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Сахар ввели в жидкость:</strong> тесто «поплывёт» маслом и назавтра станет сухарём.</li>
+                <li><strong>Работали миксером с венчиками:</strong> разрушили глютен и текстуру.</li>
+                <li><strong>Плохие дрожжи:</strong> опара не поднялась, вкус горчит — кулич не получится.</li>
+                <li><strong>Перегрели тесто:</strong> глютен развивается при +4…+24 °C, в жаре тесто расползается.</li>
+                <li><strong>Передержали расстойку:</strong> крупные поры и «грибная» шапка.</li>
+                <li><strong>Оставили горячим в форме:</strong> кулич отсырел.</li>
+                <li><strong>Залили глазурью тёплый кулич:</strong> она потекла и впиталась.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> серия «Кулич, краффин и пасха» Надежды Зубовой — DOCX с рецептурой и расшифровка Урок_01–06.</li>
+              <li><strong>Молоко в опаре:</strong> в DOCX пошагово 150 г, в сводной таблице и видео — 140 г. На странице 140 г, расхождение описано здесь.</li>
+              <li><strong>Дрожжи:</strong> DOCX 35 г (сводная) и 34 г (пошагово); видео 34 г живых, 10–12 г сухих. Взято 35 г / 12 г.</li>
+              <li><strong>Масло нуазет:</strong> DOCX 130 г, видео 140 г (100 + 40). На странице 140 г.</li>
+              <li><strong>Сахар:</strong> DOCX 125 г; автор в видео берёт 140 г, потому что не вычла ванильный сахар. Основа — 125 г.</li>
+              <li><strong>Ром:</strong> DOCX 30 г, видео 30–40 г на замачивание цукатов; в пропитке — 20 г по DOCX. Можно полностью без алкоголя.</li>
+              <li><strong>Выход:</strong> тесто 1160 г делится на 580 г кулича и 580 г краффина; готовый кулич автор взвешивает около 700 г.</li>
+              <li><strong>Фото:</strong> кадр из видео — кулич традиционной формовки после выпечки.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

@@ -1,0 +1,896 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Черничный рулет без муки с муссом и соусом — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Рулет на миндальном бисквите без пшеничной муки: черничный соус-сердцевина в замороженном цилиндре, черничный мусс на заварной основе и крем с маскарпоне. Выпечка 12–15 мин при 170 °C.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍰</text></svg>">
+</head>
+<body data-recipe-id="rulet-chernichnyy">
+
+    <header class="site-header">
+    <div class="header-container">
+      <div class="header-back">
+        <a href="../index.html" class="back-link"><span class="back-arrow">←</span><span class="back-text">Назад</span></a>
+      </div>
+      <a href="../index.html" class="brand">
+        <img src="../assets/images/logo.png" alt="Логотип" aria-hidden="true" class="brand-logo" width="241" height="200">
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 <span class="btn-text">Печать рецепта</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Черничный рулет без муки с муссом и соусом</h1>
+      <div class="recipe-intro-split">
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-label">Подготовка</span>
+            <span class="fact-value">~20 мин: два противня 30×40, пергамент, втулка от бумаги</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Активное время</span>
+            <span class="fact-value">~1 ч 30 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Пассивное время</span>
+            <span class="fact-value">Выпечка 12–15 мин, соус в морозилке, ~4 ч стабилизации</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Общее время</span>
+            <span class="fact-value">~5–6 ч</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Выход</span>
+            <span class="fact-value">1 рулет ~40 см, высота 9–10 см</span>
+          </div>
+        </div>
+
+        <p class="recipe-lead">
+          Бисквит без единого грамма пшеничной муки — только миндаль, крахмал и взбитые яйца. Внутрь идёт замороженный цилиндр черничного соуса, вокруг — крепкий черничный мусс на заварной основе, снаружи — крем с маскарпоне. Рулет не закручивается сразу: мусс должен постоять, иначе вытечет.
+        </p>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/rulet-chernichnyy.jpg" alt="Рулет из светлого бисквита с фиолетовым черничным муссом, свёрнутый в рулет, рядом пергамент" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 рулет)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">рулет</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — один рулет из одного противня 30×40 см (три полосы коржа по 40 см). Второй противень в уроке печётся запасом; расчёт дан на один рулет.
+          </p>
+        </div>
+
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">287</td>
+                <td>4,9 г</td>
+                <td>16,6 г</td>
+                <td>28,9 г</td>
+              </tr>
+              <tr>
+                <th>Весь рулет<span class="kbju-sub">≈ 1,6 кг</span></th>
+                <td class="kbju-kcal"><span data-base-amount="4560" data-unit="ккал">4560 ккал</span></td>
+                <td><span data-base-amount="78" data-unit="г">78 г</span></td>
+                <td><span data-base-amount="264" data-unit="г">264 г</span></td>
+                <td><span data-base-amount="460" data-unit="г">460 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Считаны бисквит без муки, черничный соус, мусс и крем с маскарпоне целиком. Водка в креме — 6 г, это ≈ 14 ккал на весь рулет, на расчёт почти не влияет.</p>
+            <p>Вес дан по рецептуре: в источнике рулет не взвешивают. После выпечки бисквита уходит часть влаги, поэтому готовый рулет весит меньше, а калорийность на 100 г выше примерно на 10 %.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> рулет</span>
+        </div>
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Самое важное — качественный маскарпоне и правильная водка. Если «Финляндии» на чёрной смородине нет, алкоголь лучше не добавлять вовсе: другая водка испортит вкус. Миндальную муку можно смолоть из подсушенного миндаля.
+      </p>
+
+        <div class="shopping-grid">
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🥛 Яйца, масло, сливки</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Яйца куриные</strong>:
+                  <span class="shopping-qty" data-base-amount="6" data-unit="шт" data-piece="true">6 шт</span>
+                  <span class="shopping-hint">135 г яиц (≈2,5 шт), 40 г желтков, 67 г белков — проще взять 6 яиц и взвесить</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Масло сливочное 82,5 %</strong>:
+                  <span class="shopping-qty" data-base-amount="67" data-unit="г">67 г</span>
+                  <span class="shopping-hint">Растопить, вводить горячим</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сливки 30 % и выше</strong>:
+                  <span class="shopping-qty" data-base-amount="230" data-unit="г">230 г</span>
+                  <span class="shopping-hint">170 г в мусс, 60 г в крем с маскарпоне; только холодные</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Маскарпоне</strong>:
+                  <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                  <span class="shopping-hint">Гальбани или Бонфесто; на внешнее оформление нужно 200 г крема</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🫐 Миндаль, черника, бакалея</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Миндальная мука</strong>:
+                  <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                  <span class="shopping-hint">Можно смолоть подсушенный миндаль; кожурка допустима</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахарная пудра</strong>:
+                  <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                  <span class="shopping-hint">100 г в бисквит, 50 г в крем</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахар-песок</strong>:
+                  <span class="shopping-qty" data-base-amount="202" data-unit="г">202 г</span>
+                  <span class="shopping-hint">34 г в меренгу, 58 г в соус, 110 г в мусс</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Крахмал кукурузный</strong>:
+                  <span class="shopping-qty" data-base-amount="65" data-unit="г">65 г</span>
+                  <span class="shopping-hint">40 г в бисквит, 13 г в соус, 12 г в мусс</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Пюре черники</strong>:
+                  <span class="shopping-qty" data-base-amount="325" data-unit="г">325 г</span>
+                  <span class="shopping-hint">185 г в соус, 140 г в мусс; можно перебить ягоды</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Разрыхлитель</strong>:
+                  <span class="shopping-qty" data-base-amount="2" data-unit="г">2 г</span>
+                  <span class="shopping-hint">В бисквит</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Желатин</strong>:
+                  <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+                  <span class="shopping-hint">4 г в соус, 6 г в мусс; 220 Блюм</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Водка «Финляндия» на чёрной смородине</strong>:
+                  <span class="shopping-qty" data-base-amount="0.4" data-unit="ст. л.">0,4 ст. л.</span>
+                  <span class="shopping-hint">В крем; на двойную порцию крема — 2 ст. л.</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Ягоды для декора</strong> — по желанию
+                  <span class="shopping-hint">Свежая или замороженная черника, ежевика</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Расходники</strong> — два противня 30×40, втулка от пергамента, пищевая плёнка, мешок
+                  <span class="shopping-hint">Втулка, разрезанная пополам и обтянутая плёнкой, служит формой для соуса</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">1. Бисквит без муки</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Миндальная мука
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Желтки
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="135" data-unit="г">135 г</span> — Яйца
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Крахмал кукурузный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="67" data-unit="г">67 г</span> — Масло сливочное
+              <span class="ingredient-note">Растопленное, горячее</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="67" data-unit="г">67 г</span> — Белок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="34" data-unit="г">34 г</span> — Сахар для меренги
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">2. Черничный соус</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="185" data-unit="г">185 г</span> — Пюре черники или ягоды
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="58" data-unit="г">58 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="13" data-unit="г">13 г</span> — Крахмал кукурузный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="г">4 г</span> — Желатин
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20.5" data-unit="г">20,5 г</span> — Вода холодная
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">3. Черничный мусс</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="140" data-unit="г">140 г</span> — Пюре черники
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="110" data-unit="г">110 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="12" data-unit="г">12 г</span> — Крахмал кукурузный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Желтки (2 шт С1)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="6" data-unit="г">6 г</span> — Желатин
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Вода для желатина
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="170" data-unit="г">170 г</span> — Сливки 30 % и выше
+              <span class="ingredient-note">Холодные, взбиваются отдельно</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">4. Крем с маскарпоне</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Маскарпоне
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сливки 30 % и выше
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="0.4" data-unit="ст. л.">0,4 ст. л.</span> — Водка «Финляндия» на чёрной смородине
+              <span class="ingredient-note">Без неё алкоголь не добавлять вообще</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка и порядок</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Начните с соуса: ему нужно застыть в морозилке. Затем бисквит — его надо печь и резать тёплым. Мусс и крем делают, пока корж остывает. Яйца и желтки достаньте из холодильника заранее и дайте постоять 15–20 минут: пастеризованные взбиваются дольше.
+                <span class="source-badge">⏱ 01_Бисквит без муки: 00:00:49–00:01:27</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> всё делать быстро и мало перемешивать — воздуха в бисквите держится только то, что навзбивали: муки нет, разрыхлителя почти нет.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📋 Порядок: <strong>Соус → бисквит → мусс → крем</strong></span>
+              <span class="param-pill">🌡 Яйца: <strong>Комнатной температуры</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Сухие смеси</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Миндальную муку перемешайте с просеянной сахарной пудрой; миндаль не просеивайте, а пудру обязательно — в ней бывают комки. Отдельно просейте 40 г крахмала с 2 г разрыхлителя. Белок 67 г и сахар 34 г отвесьте в отдельную миску, но сахар в белок сразу не добавляйте.
+                <span class="source-badge">⏱ 01_Бисквит без муки: 00:01:28–00:03:23</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Смесь 1: <strong>Миндаль + пудра</strong></span>
+              <span class="param-pill">🥣 Смесь 2: <strong>Крахмал + разрыхлитель</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Взбить яйца с желтками</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                135 г яиц и 40 г желтков взбивайте на максимальной скорости ручного миксера 15–20 минут. Первые секунды — на низкой, чтобы альбумин «отпустил» воздух, затем до максимума. С планетарным миксером быстрее. Масса готова, когда держит форму и на дне нет жидкости.
+                <span class="source-badge">⏱ 01_Бисквит без муки: 00:03:25–00:05:37</span>
+              </p>
+              <div class="warning-box">
+                <strong>Долго и на максимуме:</strong> именно объём яичной массы держит бисквит — муки в нём нет.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Взбивание: <strong>15–20 мин</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Держит форму, без жидкости</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Меренга</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Венчики вымойте от желтка — жир убивает пену. Взбейте 67 г белка, всыпав 34 г сахара сразу, до «птичьего клюва»: кончик не стекает с венчика. Меренга нужна средней мягкости, не каменная.
+                <span class="source-badge">⏱ 01_Бисквит без муки: 00:04:26–00:06:34</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍋 Признак: <strong>«Птичий клюв»</strong></span>
+              <span class="param-pill">🧼 Венчики: <strong>Вымыть от жира</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Ввести сухие и белок</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Лопаткой, поднимающими движениями, вмешайте миндаль с пудрой за один раз — только до смачивания сухих. Так же введите крахмал с разрыхлителем. Затем белок: сначала треть («правило жертвы»), потом остальной, врезая лопатку в середину и по дну, массу выкладывая наверх. Круговых размешиваний не делают.
+                <span class="source-badge">⏱ 01_Бисквит без муки: 00:06:36–00:08:58</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не размешивать кругами:</strong> лопатка должна поднимать массу снизу вверх, иначе воздух осядет и бисквит не поднимется.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥄 Движения: <strong>Снизу вверх</strong></span>
+              <span class="param-pill">🥚 Белок: <strong>1/3, затем остаток</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Горячее масло</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Растопите 67 г масла в микроволновке до примерно 60 °C и быстро введите в тесто лопаткой. Горячее масло не так сильно садит массу, как холодное. После этого тесто нужно немедленно распределять по противню.
+                <span class="source-badge">⏱ 01_Бисквит без муки: 00:09:10–00:10:03</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Масло: <strong>~60 °C</strong></span>
+              <span class="param-pill">⚡ Дальше: <strong>Сразу на противень</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Распределить по противням</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Разделите массу визуально пополам, а лучше по весу, и разложите на два противня с пергаментом. Разровняйте палеткой до одинаковой толщины — это важно для равномерной выпечки. Автор печёт сразу два противня.
+                <span class="source-badge">⏱ 01_Бисквит без муки: 00:10:05–00:11:15</span>
+              </p>
+              <div class="tip-box">
+                <strong>Толщина:</strong> разная толщина даёт разное время выпечки и рваные полосы при нарезке.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Противень: <strong>30×40 см</strong></span>
+              <span class="param-pill">⚖️ Деление: <strong>По весу, поровну</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Выпечка</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Пеките 12–15 минут при 170 °C с конвекцией; автор ставит 12 минут и проверяет. Готовность — лёгкий загар, палец не проваливается, а пружинит и ямка восстанавливается; нож входит без сопротивления даже сбоку. Без конвекции два противня сразу печь нельзя.
+                <span class="source-badge">⏱ 01_Бисквит без муки: 00:11:31–00:14:07</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не пересушить:</strong> тонкий бисквит без муки сохнет мгновенно и при сворачивании ломается.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Выпечка: <strong>170 °C, конвекция</strong></span>
+              <span class="param-pill">⏱ Время: <strong>12–15 мин</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Пружинит под пальцем</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Нарезка тёплого коржа</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Пока корж тёплый, наметьте и разрежьте его на три полосы по 10 см, не снимая с бумаги. Накройте силиконом или пергаментом, чтобы не сох. Бумагу снимают, перевернув корж и подгибая лист, а не тяня вверх.
+                <span class="source-badge">⏱ 01_Бисквит без муки: 00:12:43–00:15:26</span>
+              </p>
+              <div class="tip-box">
+                <strong>Высота рулета:</strong> полоса шириной 10 см даёт высоту 9–10 см — фактически из-за загибов выходит 9 см.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Полоса: <strong>10 см</strong></span>
+              <span class="param-pill">🌡 Корж: <strong>Тёплый</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Черничный соус</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                4 г желатина замочите в 20,5 г ледяной воды — просто чтобы не осталось сухих крупинок. 13 г крахмала смешайте с 58 г сахара. Пюре нагрейте, введите сахар с крахмалом и доведите до кипения, но не кипятите: масса загустеет. Снимите, введите набухший желатин и мешайте до полного растворения.
+                <span class="source-badge">⏱ 02_Черничный соус: 00:01:00–00:05:03</span>
+              </p>
+              <div class="warning-box">
+                <strong>Довести до кипения обязательно:</strong> иначе крахмал не сработает и соус останется жидким.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Нагрев: <strong>До кипения, не кипятить</strong></span>
+              <span class="param-pill">🥣 Готовность: <strong>Загустел</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Форма для соуса</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Втулку от пергаментной бумаги разрежьте пополам, обтяните пищевой плёнкой с одного торца и поставьте вертикально. Залейте горячий соус, не доходя до края, затяните плёнкой сверху и уберите в морозилку. На сердцевину нужно 220–250 г готового соуса — остальное можно оставить на подачу.
+                <span class="source-badge">⏱ 02_Черничный соус: 00:05:11–00:06:53</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не переливать до края:</strong> при заморозке соус расширяется и выдавит плёнку.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Заморозка: <strong>До твёрдого состояния</strong></span>
+              <span class="param-pill">⚖️ Нужно: <strong>220–250 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Заварная основа мусса</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                140 г пюре с 110 г сахара нагрейте. 30 г желтков разотрите с 12 г крахмала. В почти закипевшее пюре добавьте две ложки в желтки — температурная закалка, — верните всё в кастрюлю и грейте при постоянном помешивании до первого булька, ориентир 82 °C. Снимите и в горячее введите 6 г желатина, замоченного в 40 г воды. Перелейте в миску для быстрого остывания.
+                <span class="source-badge">⏱ 03_Черничный мусс: 00:00:23–00:05:41</span>
+              </p>
+              <div class="warning-box">
+                <strong>Постоянно мешать:</strong> на дне мгновенно образуются комки, а переваренная основа даёт «манную» текстуру.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Готовность: <strong>82 °C или первый бульк</strong></span>
+              <span class="param-pill">🥚 Желтки: <strong>Закалка 2 ложками</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Сливки в мусс</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Остудите заварную основу до комнатной температуры или примерно 35 °C. Отдельно взбейте 170 г холодных сливок до твёрдых пиков и введите их лопаткой поднимающими движениями до однородности. Мусс для рулета должен быть крепким — он держит форму на весу.
+                <span class="source-badge">⏱ 03_Черничный мусс: 00:05:47–00:07:48</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сливки только в остывшую массу:</strong> в горячую они свернутся и мусс расслоится.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Основа: <strong>~35 °C</strong></span>
+              <span class="param-pill">🥛 Сливки: <strong>До твёрдых пиков</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">14</span>
+                <h3 class="step-title">Крем с маскарпоне</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                100 г маскарпоне соедините с 50 г просеянной пудры и пробейте на второй скорости — недолго. Отдельно взбейте 60 г холодных сливок до пиков и соедините с маскарпоне миксером на несколько секунд. В конце добавьте 0,4 ст. л. водки на чёрной смородине.
+                <span class="source-badge">⏱ 04_Крем с маскарпоне: 00:01:21–00:04:41</span>
+              </p>
+              <div class="warning-box">
+                <strong>Маскарпоне расслаивается:</strong> от высокой скорости и долгого взбивания он превращается в масло с сывороткой. Только вторая скорость и минимум времени.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Скорость: <strong>2-я, недолго</strong></span>
+              <span class="param-pill">🍸 Водка: <strong>0,4 ст. л.</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">15</span>
+                <h3 class="step-title">Сборка рулета</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Соедините половины замороженного соуса в один цилиндр и положите на край коржа. Пропитывать бисквит ничем не нужно. Нанесите весь мусс, дайте постоять 10 минут, затем сворачивайте, помогая пергаментом, плотно. Трещины на корже — нормально, их закроет крем.
+                <span class="source-badge">⏱ 05_Сборка и декор рулета: 00:00:00–00:04:41</span>
+              </p>
+              <div class="tip-box">
+                <strong>Пауза 10 минут:</strong> мусс слегка схватится и не вытечет при сворачивании.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Пауза: <strong>10 мин</strong></span>
+              <span class="param-pill">🌀 Сворачивать: <strong>С пергаментом</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">16</span>
+                <h3 class="step-title">Стабилизация и декор</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Уберите рулет в холодильник примерно на 4 часа. Затем срежьте неровные края и покройте кремом: из мешка — полосами по всей поверхности, длинным шпателем разровнять. Украсьте ягодами. Крем закрывает рулет полностью именно потому, что бисквит без муки склонен к трещинам.
+                <span class="source-badge">⏱ 05_Сборка и декор рулета: 00:04:56–00:06:07</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Стабилизация: <strong>~4 ч</strong></span>
+              <span class="param-pill">🧁 Крем: <strong>200 г на оформление</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Венчики мыть:</strong> жир от желтка не даёт белку взбиться.</li>
+                <li><strong>Яйца на максимуме 15–20 мин:</strong> объём — единственный «разрыхлитель» этого бисквита.</li>
+                <li><strong>Горячее масло:</strong> меньше садит взбитую массу.</li>
+                <li><strong>Резать тёплым:</strong> остывший корж крошится и рвётся.</li>
+                <li><strong>Соус замораживают в цилиндр:</strong> так сердцевина получается идеально ровной.</li>
+                <li><strong>Мусс крепкий:</strong> уменьшать количество нельзя — иначе рулет не свернуть.</li>
+                <li><strong>Маскарпоне только качественный:</strong> Гальбани или Бонфесто.</li>
+                <li><strong>Водка — только «Финляндия» на чёрной смородине:</strong> другая не подходит, тогда без алкоголя.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Жирные венчики:</strong> белок не взбивается.</li>
+                <li><strong>Круговое перемешивание:</strong> масса оседает, бисквит не поднимается.</li>
+                <li><strong>Пересушенный корж:</strong> ломается при сворачивании.</li>
+                <li><strong>Холодная бумага и горячий корж:</strong> рвётся при съёме; снимать нужно переворачивая.</li>
+                <li><strong>Соус не доведён до кипения:</strong> остаётся жидким.</li>
+                <li><strong>Сливки в горячую основу:</strong> мусс расслаивается.</li>
+                <li><strong>Сворачивать сразу:</strong> мусс вытекает.</li>
+                <li><strong>Долго взбивать маскарпоне:</strong> крем «сворачивается» в масло.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и замены</h4>
+              <ul>
+                <li><strong>Готовый рулет:</strong> держать в холодильнике; точный срок автор не называет.</li>
+                <li><strong>Миндальная мука:</strong> можно смолоть подсушенный миндаль; кожурка не мешает.</li>
+                <li><strong>Пюре черники:</strong> перебить свежие или замороженные ягоды.</li>
+                <li><strong>Водка:</strong> без нужной — исключить алкоголь полностью.</li>
+                <li><strong>Маскарпоне:</strong> не заменять на дешёвый аналог — расслоится.</li>
+                <li><strong>Мусс:</strong> не уменьшать, иначе рулет не держит форму.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «Рулет_Черничный» с точной рецептурой и пять видео (01_Бисквит, 02_Соус, 03_Мусс, 04_Крем, 05_Сборка) с расшифровкой. Граммовки — из DOCX, техника и таймкоды — из видео.</li>
+              <li><strong>Взбивание яиц:</strong> DOCX — 15 минут, видео — 15–20 минут на максимальной скорости. На странице 15–20.</li>
+              <li><strong>Выпечка:</strong> DOCX — 11–15 минут при 170 °C, видео — 12–15, автор печёт ровно 12. На странице 12–15.</li>
+              <li><strong>Высота полосы:</strong> расчёт даёт 10 см, фактически получилось 9 см из-за загибов у бортов.</li>
+              <li><strong>Водка:</strong> DOCX — 0,4 ст. л., в видео звучит «2 столовые ложки», потому что крем делали в двойной порции. Норма — 1 ст. л. на 450–500 г крема (0,4 ст. л. на 210 г).</li>
+              <li><strong>Количество соуса:</strong> на сердцевину нужно 220–250 г готового — зависит от диаметра самодельной формы.</li>
+              <li><strong>Пробел:</strong> вес и длина рулета не названы, диаметр не указан. Сколько рулетов выходит из двух противней — в видео не сказано; расчёт дан на один. Срок хранения готового рулета автор не называет.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из «05_Сборка и декор рулета» (00:04:55) со свёрнутым рулетом.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

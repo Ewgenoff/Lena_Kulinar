@@ -1,0 +1,693 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сырные трюфели с пармезаном и горгонзолой — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Трюфели на тёмном шоколаде 54 % с двумя сырами: пармезан и горгонзола. Ганаш на сливках с инвертным сахаром и глюкозой, оливковое масло, стабилизация 6–8 ч, калибр 12 г, покрытие темперированным шоколадом.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍫</text></svg>">
+</head>
+<body data-recipe-id="syrnyy-tryufel-dor-ble">
+
+    <header class="site-header">
+    <div class="header-container">
+      <div class="header-back">
+        <a href="../index.html" class="back-link"><span class="back-arrow">←</span><span class="back-text">Назад</span></a>
+      </div>
+      <a href="../index.html" class="brand">
+        <img src="../assets/images/logo.png" alt="Логотип" aria-hidden="true" class="brand-logo" width="241" height="200">
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 <span class="btn-text">Печать рецепта</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Конфеты и сладости</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Сырные трюфели с пармезаном и горгонзолой</h1>
+      <div class="recipe-intro-split">
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-label">Подготовка</span>
+            <span class="fact-value">~20 мин: натереть сыры, взвесить, сухая посуда</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Активное время</span>
+            <span class="fact-value">~40 мин + формовка ~30 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Пассивное время</span>
+            <span class="fact-value">6–8 ч стабилизации ганаша (можно до 24 ч)</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Общее время</span>
+            <span class="fact-value">~9–10 ч с учётом стабилизации</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Выход</span>
+            <span class="fact-value">18–19 конфет по 10–13 г</span>
+          </div>
+        </div>
+
+        <p class="recipe-lead">
+          Тёмный шоколад 54 %, сливки, оливковое масло первого отжима и два сыра — пармезан и горгонзола. Ганаш делят пополам, чтобы каждый сыр звучал отдельно, стабилизируют и скатывают шарики по 10–13 г. Дальше — темперированный шоколад, какао или кокосовая стружка. Конфеты не липнут и «гремят» на столе, если всё сделано правильно.
+        </p>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/syrnyy-tryufel-dor-ble.jpg" alt="Готовые сырные трюфели: тёмные шарики на белой тарелке, рядом упаковка кокосовой стружки и миска с обсыпкой" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (18 конфет)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="18">18</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">конфет</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — 18 конфет по 12 г из одной партии ганаша (238 г, делится на две части по 115 г — с пармезаном и с горгонзолой).
+          </p>
+        </div>
+
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">470</td>
+                <td>5,7 г</td>
+                <td>31,4 г</td>
+                <td>39 г</td>
+              </tr>
+              <tr>
+                <th>Все конфеты<span class="kbju-sub">≈ 370 г</span></th>
+                <td class="kbju-kcal"><span data-base-amount="1730" data-unit="ккал">1730 ккал</span></td>
+                <td><span data-base-amount="21" data-unit="г">21 г</span></td>
+                <td><span data-base-amount="116" data-unit="г">116 г</span></td>
+                <td><span data-base-amount="144" data-unit="г">144 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Считан весь ганаш (тёмный шоколад 54 %, сливки 33 %, пармезан и дор-блю, тримолин и глюкоза) и шоколад для покрытия. Орех внутрь и кандурин — по желанию, в расчёт не вошли.</p>
+            <p>Конфета весом ≈ 19–20 г с покрытием даёт ≈ 90–95 ккал. Если часть шоколада для покрытия остаётся в миске, конфеты будут легче.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">18</span> конфет</span>
+        </div>
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Шоколад нужен хороший, с какао-маслом: на дешёвом плитка не темперируется и покрытие остаётся липким. Пармезан и горгонзолу берите куском, а не тёртыми — тёртые часто с антислёживателем и не дают нужного вкуса. Оливковое масло должно быть первого холодного отжима.
+      </p>
+
+        <div class="shopping-grid">
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🍫 Шоколад и сливки</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Тёмный шоколад 54 %</strong>:
+                  <span class="shopping-qty" data-base-amount="225" data-unit="г">225 г</span>
+                  <span class="shopping-hint">125 г в ганаш, 100 г на покрытие; нужен с какао-маслом в составе</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сливки 33 %</strong>:
+                  <span class="shopping-qty" data-base-amount="75" data-unit="г">75 г</span>
+                  <span class="shopping-hint">В ганаш; жирность ниже 33 % сделает ганаш мягче</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Оливковое масло первого холодного отжима</strong>:
+                  <span class="shopping-qty" data-base-amount="8" data-unit="г">8 г</span>
+                  <span class="shopping-hint">В ганаш; не заменять рафинированным — нужен вкус</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Инвертный сахар (тримолин)</strong>:
+                  <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                  <span class="shopping-hint">Держит влагу и не даёт конфетам липнуть; замена — мёд 1:1</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сироп глюкозы</strong>:
+                  <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                  <span class="shopping-hint">В ганаш; нет глюкозы — можно исключить</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🧀 Сыры и обсыпка</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Пармезан</strong>:
+                  <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                  <span class="shopping-hint">Куском, тёртый на самой мелкой тёрке</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Дор-блю или горгонзола</strong>:
+                  <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                  <span class="shopping-hint">Куском, мелкая тёрка; в видео — горгонзола</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Какао алкализованное</strong> — для обсыпки
+                  <span class="shopping-hint">Альтернатива шоколадному покрытию; лишнее снимают ситечком</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Кокосовая стружка или мука</strong> — для обсыпки
+                  <span class="shopping-hint">Можно перемолоть стружку в муку</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Орехи для начинки</strong> — по желанию
+                  <span class="shopping-hint">Целый кешью; к пармезану автор советует грецкий орех</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Кандурин</strong> — по желанию
+                  <span class="shopping-hint">Наносится на трещинки готовых трюфелей</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Расходники</strong> — перчатки, микроволновка, термометр, пергамент
+                  <span class="shopping-hint">Руки охлаждают перед формовкой; посуда должна быть сухой</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">1. Ганаш</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Тёмный шоколад 54 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="75" data-unit="г">75 г</span> — Сливки 33 %
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="8" data-unit="г">8 г</span> — Оливковое масло первого холодного отжима
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Инвертный сахар (тримолин)
+              <span class="ingredient-note">Замена — мёд 1:1</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Сироп глюкозы
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Пармезан, тёртый на мелкой тёрке
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Сыр дор-блю или горгонзола
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">2. Покрытие</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Тёмный шоколад для покрытия
+              <span class="ingredient-note">Или какао, кокосовая стружка, вафли</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По желанию — Орех внутрь конфеты
+              <span class="ingredient-note">Целый кешью; к пармезану — грецкий орех</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По желанию — Кандурин
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка сыров</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Отвесьте по 15 г пармезана и горгонзолы и натрите на самой мелкой тёрке. Кусочки, которые не затёрлись, в ганаш не идут — они не растворятся и останутся твёрдыми вкраплениями. Посуда и инструменты должны быть сухими.
+                <span class="source-badge">⏱ Урок_01: 01:23:37–01:24:59</span>
+              </p>
+              <div class="warning-box">
+                <strong>Вода в посуде:</strong> даже капля воды в шоколаде или ганаше мешает эмульсии и ганаш не застывает как надо.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧀 Сыры: <strong>По 15 г</strong></span>
+              <span class="param-pill">🧽 Тёрка: <strong>Самая мелкая</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Прогреть шоколад</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                125 г тёмного шоколада поставьте в микроволновку на 30 секунд — не растопить, а именно нагреть. Шоколад должен стать тёплым и мягким, но не горячим: дальше его зальют горячими сливками, и он расплавится сам.
+                <span class="source-badge">⏱ Урок_01: 01:36:00–01:36:20</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не топить:</strong> перегретый шоколад густеет и «сворачивается», спасти его можно только какао-маслом.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Микроволновка: <strong>30 с</strong></span>
+              <span class="param-pill">🌡 Состояние: <strong>Тёплый, не горячий</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Сливки с сиропами</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                75 г сливок соедините с 15 г тримолина и 15 г глюкозы и доведите до кипения, обязательно помешивая, чтобы сиропы полностью растворились. Сиропы не должны остаться на дне: иначе в одном месте ганаш будет жиже, в другом — плотнее.
+                <span class="source-badge">⏱ Урок_01: 01:37:41–01:38:41</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем сиропы:</strong> тримолин и глюкоза держат влагу — конфеты не липнут, лучше катаются и дольше хранятся.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Нагрев: <strong>До кипения</strong></span>
+              <span class="param-pill">🥄 Мешать: <strong>До растворения сиропов</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Эмульсия</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Вылейте горячие сливки на тёплый шоколад и дайте постоять минуту. Затем мешайте венчиком от центра к краям, пока масса не станет блестящей и гладкой. Если остались крупинки, прогрейте коротким пульсом и снова перемешайте.
+                <span class="source-badge">⏱ Урок_01: 01:38:48–01:39:38</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Движения: <strong>От центра к краям</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Блестящая гладкая масса</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Оливковое масло</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Введите 8 г оливкового масла комнатной температуры и перемешайте. Если масло плавает на поверхности и не входит в массу, пробейте ганаш погружным блендером — он соберёт эмульсию за пару секунд.
+                <span class="source-badge">⏱ Урок_01: 01:39:56–01:41:34</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не заменять рафинированным:</strong> нужен вкус и маслянистость; из нейтральных масел автор допускает только сливочное 82,5 % комнатной температуры.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🫒 Масло: <strong>8 г, комнатное</strong></span>
+              <span class="param-pill">🥤 Блендер: <strong>Если масло не входит</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Разделить и добавить сыры</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Разложите ганаш в две чистые сухие миски по 115 г. В одну вмешайте горгонзолу, в другую — пармезан. Сыр можно вмешать венчиком, а если не нравится его текстура в готовой конфете — пробить блендером.
+                <span class="source-badge">⏱ Урок_01: 01:41:35–01:43:16</span>
+              </p>
+              <div class="tip-box">
+                <strong>Без сыра тоже можно:</strong> получатся классические трюфели; сыр — это акцент, а не обязательная основа.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ Деление: <strong>По 115 г</strong></span>
+              <span class="param-pill">🧀 Сыры: <strong>Раздельно, по 15 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Стабилизация</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Накройте ганаш плёнкой в контакт и оставьте на 6–8 часов при 16–20 °C, можно до 24 часов. В холодильнике он тоже встанет, но тогда достаньте его за 3 часа до формовки, чтобы масса согрелась. Слишком холодный ганаш крошится, слишком тёплый — липнет.
+                <span class="source-badge">⏱ Урок_01: 01:46:11–01:49:22</span>
+              </p>
+              <div class="warning-box">
+                <strong>Плёнка в контакт:</strong> без неё на поверхности ганаша образуется корочка, которая потом пойдёт комками в конфеты.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Стабилизация: <strong>6–8 ч, до 24 ч</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>16–20 °C</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Подготовка к формовке</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Достаньте ганаш за 2 часа до работы. Охладите руки — подержите над холодной водой или приложите замороженную пачку масла. В помещении должно быть прохладно: в жаре конфеты начинают таять прямо в ладонях.
+                <span class="source-badge">⏱ Урок_02: 00:28:26–00:33:24</span>
+              </p>
+              <div class="tip-box">
+                <strong>Перчатки:</strong> в них ганаш меньше нагревается, а руки остаются чистыми.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Согревание: <strong>2 ч</strong></span>
+              <span class="param-pill">🌡 Помещение: <strong>Прохладное</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Скатать шарики</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Отвешивайте по 10–13 г и скатывайте шарик между ладонями. По желанию внутрь можно вложить целый орех: к пармезану автор советует грецкий, к горгонзоле — кешью. Готовые шарики выкладывайте на пергамент.
+                <span class="source-badge">⏱ Урок_02: 00:30:46–00:37:22</span>
+              </p>
+              <div class="warning-box">
+                <strong>Калибр:</strong> без покрытия конфета тяжелее, с шоколадом — 10–11 г. Разнокалиберные трюфели некрасиво смотрятся в коробке.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ Вес: <strong>10–13 г</strong></span>
+              <span class="param-pill">🥜 Орех: <strong>По желанию, целый</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Темперирование шоколада</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                100 г тёмного шоколада темперируйте методом посева: пульсы в микроволновке по 30, затем 15 и 15 секунд на мощности 800, введите треть шоколада калетами и постоянно перемешивайте. Если масса остыла — греть короткими пульсами по 7 секунд.
+                <span class="source-badge">⏱ Урок_02: 00:39:40–00:46:26</span>
+              </p>
+              <div class="warning-box">
+                <strong>Только пульсами:</strong> непрерывный нагрев перегревает шоколад, и он теряет темперировку — покрытие останется липким.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Пульсы: <strong>30, 15, 15 с</strong></span>
+              <span class="param-pill">🌡 Посев: <strong>Треть калетами</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Покрытие</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Нанесите шоколад на ладонь и накатайте конфету — слой получается очень тонким, но застывает капсулой. Готовые трюфели выкладывайте на пергамент. Матовая поверхность означает, что шоколад темперирован правильно; блестящая и липкая — что нет.
+                <span class="source-badge">⏱ Урок_02: 00:48:38–00:50:22</span>
+              </p>
+              <div class="tip-box">
+                <strong>Без шоколада:</strong> обваляйте в кокосовой муке или стружке и подкатайте — получится «снежный» вариант.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🤲 Способ: <strong>Накатать на ладони</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Матовая капсула</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Обсыпка и хранение</h3>
+              </div>
+              <label class="complete-toggle step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Для «состаренных» трюфелей обваляйте конфеты в алкализованном какао и снимите лишнее ситечком. Кандурин наносите на трещинки. Готовые конфеты стабилизируются на столе: правильно сделанные «гремят». Храните при 16–20 °C около 7 дней, в холодильнике — до месяца, в морозилке — до 3 месяцев.
+                <span class="source-badge">⏱ Урок_02: 00:59:47–01:01:29</span>
+              </p>
+              <div class="warning-box">
+                <strong>Есть только тёплыми:</strong> из холодильника конфеты достают заранее и доводят до комнатной температуры — иначе вкус не раскроется.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🕐 16–20 °C: <strong>~7 дней</strong></span>
+              <span class="param-pill">🧊 Холодильник: <strong>до месяца</strong></span>
+              <span class="param-pill">❄️ Морозилка: <strong>до 3 месяцев</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Тримолин и глюкоза:</strong> держат влагу, конфеты не липнут и дольше живут.</li>
+                <li><strong>Оливковое масло:</strong> даёт вкус и маслянистость; рафинированное не подходит.</li>
+                <li><strong>Шоколад греть, а не топить:</strong> 30 секунд, дальше он расплавится от сливок.</li>
+                <li><strong>Сиропы — в сливках:</strong> не в шоколаде, иначе не растворятся.</li>
+                <li><strong>Сухая посуда:</strong> вода мешает эмульсии.</li>
+                <li><strong>Сыра немного:</strong> он акцент; не любите текстуру — пробейте блендером.</li>
+                <li><strong>Прохладные руки и помещение:</strong> иначе конфеты тают при формовке.</li>
+                <li><strong>Матовая поверхность:</strong> признак правильно темперированного шоколада.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Перегреть шоколад:</strong> густеет, покрытие липнет.</li>
+                <li><strong>Вода в посуде:</strong> ганаш не застывает.</li>
+                <li><strong>Не растворить сиропы:</strong> неравномерная текстура.</li>
+                <li><strong>Холодный ганаш:</strong> крошится при скатывании.</li>
+                <li><strong>Тёплый ганаш:</strong> липнет и не держит шарик.</li>
+                <li><strong>Крупные куски сыра:</strong> твёрдые вкрапления в конфете.</li>
+                <li><strong>Темперировать непрерывным нагревом:</strong> шоколад теряет темперировку.</li>
+                <li><strong>Хранить в тепле:</strong> конфеты «седеют» и текут.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и замены</h4>
+              <ul>
+                <li><strong>16–20 °C:</strong> ~7 дней; в видео второго урока — 21 день при 16–18 °C.</li>
+                <li><strong>Холодильник:</strong> до месяца (в видео — месяц-полтора).</li>
+                <li><strong>Морозилка:</strong> до 3 месяцев, но шоколад её не любит.</li>
+                <li><strong>Без тримолина и глюкозы:</strong> катать сложнее, хранить только в холодильнике до 7 дней.</li>
+                <li><strong>Тримолин:</strong> заменяется мёдом 1:1.</li>
+                <li><strong>Оливковое масло:</strong> заменяется сливочным 82,5 % комнатной температуры.</li>
+                <li><strong>Сыр:</strong> можно исключить полностью — получатся классические трюфели.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «Сырный трюфель» с раскладкой и два урока с расшифровкой. Сырные трюфели готовят в обоих уроках; в тех же записях есть маршмеллоу-десерты — они на страницу не вошли.</li>
+              <li><strong>Сиропы:</strong> в видео звучит «тримолина 13 грамм… 15 грамм», в DOCX ровно 15 г тримолина и 15 г глюкозы. На странице — DOCX.</li>
+              <li><strong>Калибр:</strong> в первом уроке — 12 г, во втором — 10–13 г, с шоколадным покрытием 10–11 г. На странице диапазон 10–13 г.</li>
+              <li><strong>Сыр:</strong> DOCX — «дор-блю или горгонзола», в видео используется горгонзола.</li>
+              <li><strong>Сроки:</strong> первый урок — 7 дней при 16–20 °C и до месяца в холодильнике; второй — 21 день при 16–18 °C и месяц-полтора в холодильнике. На странице указаны оба варианта.</li>
+              <li><strong>Темперирование:</strong> температурных значений автор не называет — только приёмы (пульсы, посев, «ниже 33–35 °C» в момент посева).</li>
+              <li><strong>Пробел:</strong> точной граммовки обсыпки нет; вес порции с покрытием зависит от калибра. Сколько конфет с сыром и сколько без — не разделено, ганаш просто делят пополам.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_02 (00:48:40) с готовыми трюфелями.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

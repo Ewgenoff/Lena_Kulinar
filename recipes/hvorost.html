@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Хворост на сметане — пошаговый рецепт и технология</title>
+  <meta name="description" content="Тонкий хворост на сметане и желтках: крутое тесто на уксусе, отдых 1–2 часа, тонкая раскатка и жарка во фритюре при 180–190 °C. Хрустящее печенье, которое не впитывает масло.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍪</text></svg>">
+</head>
+<body data-recipe-id="hvorost">
+
+    <header class="site-header">
+    <div class="header-container">
+      <div class="header-back">
+        <a href="../index.html" class="back-link"><span class="back-arrow">←</span><span class="back-text">Назад</span></a>
+      </div>
+      <a href="../index.html" class="brand">
+        <img src="../assets/images/logo.png" alt="Логотип" aria-hidden="true" class="brand-logo" width="241" height="200">
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 <span class="btn-text">Печать рецепта</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Простая</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Хворост на сметане (тонкое печенье во фритюре)</h1>
+      <div class="recipe-intro-split">
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-label">Подготовка</span>
+            <span class="fact-value">10–15 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Активное время</span>
+            <span class="fact-value">1–1,5 часа</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Пассивное время</span>
+            <span class="fact-value">1–2 часа</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Общее время</span>
+            <span class="fact-value">~2,5–4 часа</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Выход</span>
+            <span class="fact-value">1 замес (≈ 6 порций)</span>
+          </div>
+        </div>
+
+        <p class="recipe-lead">
+          Классический хворост из самого простого набора: сметана, желтки, соль, мука и ложка уксуса. Тесто замешивается крутым, отдыхает 1–2 часа, раскатывается почти в лист и режется на тонкие полоски, которые жарятся во фритюре при 180–190 °C. На выходе — лёгкое хрустящее печенье, которое почти не впитывает масло: секрет именно в тонкой раскатке и хорошо прогретом жире.
+        </p>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/hvorost.jpg" alt="Тонкий хворост на сметане — хрустящее золотистое печенье из полосок теста, обжаренное во фритюре" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 замес)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">замес (≈ 6 порций)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — один замес из 180 г муки, примерно 6 порций: автор порций не указывает, цифра взята из выхода теста. Пересчёт пропорциональный, но штучный продуктов (желтков) понадобится в два раза больше при двух замесах: два — это 4 желтка, не 3,8.
+          </p>
+        </div>
+
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">438</td>
+                <td>6,7 г</td>
+                <td>23,3 г</td>
+                <td>50,0 г</td>
+              </tr>
+              <tr>
+                <th>Весь замес<span class="kbju-sub">≈ 356 г</span></th>
+                <td class="kbju-kcal"><span data-base-amount="1560" data-unit="ккал">1560 ккал</span></td>
+                <td><span data-base-amount="24" data-unit="г">24 г</span></td>
+                <td><span data-base-amount="83" data-unit="г">83 г</span></td>
+                <td><span data-base-amount="178" data-unit="г">178 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+                    <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Считаны мука (180 г), сметана 20–30 % (120 г), желтки С0 (38 г) и соль (2 г): пшеничная мука 342 ккал/100 г, сметана 25 % — 250, желток — 354. Уксус и соль на калорийность не влияют.</p>
+            <p>Добавлено усвоение масла при жарке — около 10 % от массы теста: во фритюре тонкое печенье набирает немного жира, но совсем без него не обходится. Это оценочная величина, не взвешивание.</p>
+            <p>Масса — по сырой раскладке (≈ 340 г). Готовый хворост легче за счёт испарившейся влаги и при этом тяжелее за счёт масла; итог ≈ 356 г. Калорийность на 100 г дана для готового печенья.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Основной контент: Ингредиенты + Технология -->
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> замес</span>
+        </div>
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Самое дорогое в списке — масло для фритюра, и здесь лучше не экономить: рафинированное без запаха, с высокой температурой дымления. Два желтка означают два белка, которые останутся лишними — им есть применение в постной выпечке, белковой глазури или омлете.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: молочное, яйца -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное и яйца</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сметана 20–30%</strong>:
+                <span class="shopping-qty" data-base-amount="120" data-unit="г">120 г</span>
+                <span class="shopping-hint">Небольшая баночка. Чем жирнее сметана, тем мягче тесто, но 20 % — уже нижняя граница</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С0</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span>
+                <span class="shopping-hint">Нужны только желтки — 38 г. Белки остаются: их можно заморозить или пустить на глазурь</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: бакалея, уксус, масло -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍚 Бакалея и масло для фритюра</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная</strong>:
+                <span class="shopping-qty" data-base-amount="180" data-unit="г">180 г</span>
+                <span class="shopping-hint">Обычная, высшего сорта; просеять перед замесом</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="г">2 г</span>
+                <span class="shopping-hint">Это примерно половина чайной ложки без горки — почти наверняка уже есть на кухне</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Уксус столовый (9 %)</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="мл">15 мл</span>
+                <span class="shopping-hint">1 ст. л. — в тесто. Сода и разрыхлитель в рецепте не нужны</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло растительное рафинированное для жарки</strong>
+                <span class="shopping-hint">Сколько уйдёт: примерно 0,5 л на кастрюлю Ø20–22 см при слое 3–4 см. После жарки его не используют повторно для хвороста</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — бумажные полотенца или салфетки, пергамент, скалка
+                <span class="shopping-hint">Салфетки нужны в количестве: партии жарятся одна за другой</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Тесто</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Сметана 20–30%
+              <span class="ingredient-note">Жирная сметана даёт более нежное тесто; 20 % — минимум</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span> — Желтки яиц С0
+              <span class="ingredient-note">38 г желтков. Белки в тесто не идут</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Соль
+              <span class="ingredient-note">Около 0,5 ч. л. без горки. Нужна не для солёности, а для клейковины</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="мл">15 мл</span> — Уксус столовый 9 %
+              <span class="ingredient-note">1 ст. л. Сода и разрыхлитель не нужны: разрыхляет именно уксус</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="180" data-unit="г">180 г</span> — Мука пшеничная
+              <span class="ingredient-note">Плюс немного на подпыл при раскатке. Просеять</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Для жарки</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Сколько уйдёт — Масло растительное рафинированное
+              <span class="ingredient-note">Для фритюра: слой 3–4 см, температура 180–190 °C</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Жидкая основа: сметана, желтки, уксус</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отделите желтки от белков. В миске смешайте сметану, желтки и столовый уксус — просто венчиком или вилкой до однородности, без пышности. Взбивать не нужно: в тесте важна не воздушность, а пластичная структура.
+              </p>
+              <div class="tip-box">
+                <strong>Зачем здесь уксус:</strong> в этой технологической карте он — единственный разрыхлитель. Кислота работает вместе с желтком и сметаной: тесто становится гладким, чуть податливее при раскатке, а готовое печенье получается более хрустящим. Сода и разрыхлитель в рецепт не входят, и добавлять их не надо — на крутом тесте им негде сработать, а лишний газ сделает пузыри и неровности.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>Миска, венчик или вилка</strong></span>
+              <span class="param-pill">🍋 Уксус: <strong>1 ст. л. (15 мл), 9 %</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Однородная жёлтая масса</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Крутое тесто на муке с солью</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Муку просейте и смешайте с солью. Добавьте сухую смесь к жидкой основе и замесите тесто — сначала ложкой, потом руками на столе. Муку вводите всю сразу: карта даёт точные 180 г, от них и танцуйте.
+              </p>
+              <p>
+                Мешайте до тех пор, пока тесто не перестанет липнуть к рукам и не станет гладким, плотным и упругим. По описанию карты это «крутое» тесто — почти как на лапшу или пельмени: оно держит форму, а не расплывается.
+              </p>
+              <div class="warning-box">
+                <strong>Не досыпайте муку «на глаз»:</strong> если тесто липнет, дело чаще в слишком жидкой сметане, а не в нехватке муки. Немного подпыла на стол допустимо, но увлечётесь — и раскатанный пласт начнёт ломаться и крошиться, а хворост в масле развалится.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Мука: <strong>180 г + на подпыл</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Тесто гладкое, не липнет к рукам</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Стол, скребок или нож</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Отдых теста 1–2 часа</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Скатайте тесто в шар, заверните в плёнку или накройте миской и оставьте полежать 1–2 часа при комнатной температуре — так в карте, в холодильник его не убирают.
+              </p>
+              <div class="tip-box">
+                <strong>Почему без отдыха не получится:</strong> за это время мука набухает и «дотягивается» клейковина — тесто из тугого и упругого становится мягким и послушным. Такое раскатывается в тонкий ровный пласт без разрывов и не садится обратно, как пружина. Отдохнувшее тесто при жарке не стягивается и не коробится: полоски остаются плоскими и жарятся равномерно.
+              </div>
+              <p>
+                Если в комнате жарко и больше 25 °C, тесто можно подержать в самом прохладном месте — главное, не в холоде надолго: охлаждённое раскатывается хуже и снова начинает упираться.
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>1–2 часа</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>Комнатная</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Плёнка или миска</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Тонкая раскатка и нарезка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Раскатайте тесто тонко — почти в лист, чтобы пласт просвечивал и не рвался. Толщину карта не называет, но именно от неё зависит хруст: толстый пласт просто не пропечётся за то время, что нужно для румяной корочки.
+              </p>
+              <p>
+                Затем вырежьте хворост — фигурно или полосками, как привычно в вашей семье. Форма и количество штук в карте не описаны, поэтому здесь полная свобода: нарезка никак не влияет на рецептуру и жарку, только на вид готового печенья.
+              </p>
+              <div class="warning-box">
+                <strong>Не оставляйте нарезанные заготовки лежать:</strong> тонкое тесто быстро подсыхает и начинает крошиться на краях. Режьте партиями — нарезали, обжарили, нарезали следующую.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Толщина: <strong>Тонко, почти в лист</strong></span>
+              <span class="param-pill">🔪 Форма: <strong>На ваш вкус</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Скалка, нож или выемки</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Фритюр 180–190 °C</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В широкую кастрюлю или глубокую сковороду налейте масло слоем 3–4 см и разогрейте до 180–190 °C. Карта даёт именно этот диапазон, и он не случаен: ниже — печенье впитывает масло и становится тяжёлым, выше — корочка схватывается, а внутри тесто остаётся сырым.
+              </p>
+              <p>
+                Жарьте заготовки небольшими партиями, не загружая кастрюлю больше чем наполовину: от наплыва холодных полосок масло резко остывает, и дальше всё идёт не по технологии.
+              </p>
+              <div class="tip-box">
+                <strong>Как проверить температуру без термометра:</strong> бросьте в масло маленький кусочек теста. Правильное масло сразу обволакивает его мелкими пузырьками, и кусочек всплывает и зарумянивается за 15–20 секунд. Если пузырьков почти нет и тесто лежит на дне — масло холодное, грейте дальше. Если масло вокруг кусочка чадит и дымок идёт заметно — жарко, снимайте с огня и дайте остыть пару минут.
+              </div>
+              <div class="warning-box">
+                <strong>Безопасность:</strong> во фритюре не должно быть ни капли воды — ни на заготовках, ни на руках, ни на шумовке. Кладите тесто в масло на шумовке и от себя, а крышкой не накрывайте: пар из влажного теста конденсируется и капает обратно в масло.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Температура: <strong>180–190 °C</strong></span>
+              <span class="param-pill">🍳 Слой масла: <strong>3–4 см</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Пузырьки и всплытие за 15–20 с</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Кастрюля, шумовка</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Готовность и выкладка на салфетку</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Хворост готов, когда он равномерно зарумянился до золотистого цвета, а края чуть темнее середины. Признак недожаренного — бледные, светлые места по центру полоски: такое печенье вернуть в масло уже не получится, оно станет только жёстче.
+              </p>
+              <p>
+                Переворачивайте заготовки шумовкой, как только они всплывут, — так обе стороны зарумянятся одинаково. Точное время одной партии карта не приводит: следите за цветом, а не за часами.
+              </p>
+              <p>
+                Готовый хворост сразу выкладывайте на салфетку или бумажное полотенце в один слой, а не горкой. Салфетка забирает лишнее масло с поверхности: без неё печенье остывает в лужице жира и становится не хрустящим, а сальным.
+              </p>
+              <div class="tip-box">
+                <strong>Как хранить:</strong> полностью остывший хворост складывайте в бумажный пакет или жестяную коробку и закрывайте плотно — так он остаётся хрустящим несколько дней. В полиэтилене и в холодильнике хворост быстро отсыревает и теряет хруст; в холодильник его убирать не нужно вовсе.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак: <strong>Золотистый цвет, румяные края</strong></span>
+              <span class="param-pill">🧻 Выкладка: <strong>На салфетку в один слой</strong></span>
+              <span class="param-pill">🗄 Хранение: <strong>Плотно закрытым, в сухом месте</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Уксус вместо разрыхлителя:</strong> в карте нет ни соды, ни разрыхлителя. Уксус — сознательная часть технологии, и заменять его на соду «для объёма» не стоит: на крутом тесте нужен не подъём, а пластичность.</li>
+                <li><strong>Крутое, а не мягкое:</strong> тесто должно быть плотным, почти как на лапшу, — только такое тонко раскатывается и держит форму.</li>
+                <li><strong>Отдых в 1–2 часа не сокращать:</strong> это не формальность, а время на набухание муки. Поспешите — тесто будет упираться и стягиваться при раскатке.</li>
+                <li><strong>Тонко — значит хрустяще:</strong> толщина пласта влияет на хворост сильнее, чем любые добавки. Тонкий пласт успевает приготовиться до того, как наберёт масло.</li>
+                <li><strong>Температурное окно 180–190 °C:</strong> это середина между «сыро и жирно» и «сгорело снаружи, сыро внутри». Проверка кусочком теста надёжнее любого термометра на глаз.</li>
+                <li><strong>Салфетка — последний шаг к хрусту:</strong> она снимает поверхностное масло, которого всегда больше, чем кажется.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Тесто раскатали толсто:</strong> края уже румяные, середина ещё сырая, а печенье тяжёлое от масла.</li>
+                <li><strong>Масло холоднее 180 °C:</strong> тесто долго всплывает, пропитывается жиром, хворост получается масляным и мягким.</li>
+                <li><strong>Масло перегрето:</strong> корочка схватывается мгновенно, внутри остаётся сырое тесто, а послевкусие горчит.</li>
+                <li><strong>Загрузили всю партию сразу:</strong> масло остывает, печенье слипается и жарится неравномерно.</li>
+                <li><strong>Пропущен отдых теста:</strong> пласт рвётся при раскатке, полоски стягиваются и коробятся.</li>
+                <li><strong>Складывают горячим в пакет:</strong> пар оседает и превращает хрустящее печенье в мягкое и влажное.</li>
+                <li><strong>Мука «на глаз»:</strong> пересыпанное мукой тесто крошится, хворост ломается уже в масле.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источник единственный:</strong> технологическая карта «Технологическая карта приготовления Хвороста» (DOCX). Видео, расшифровки и таймкодов нет вовсе, поэтому плашек <code>.source-badge</code> на странице ни одной — переключатель «Тайм-код» в карточке покупок оставлен для совместимости, показывать ему нечего.</li>
+              <li><strong>Порции:</strong> автор количество порций не указывает. За базу калькулятора взят <strong>1 замес</strong> из точной раскладки карты (180 г муки), а ≈ 6 порций — это прикидка по выходу теста (около 340 г сырого, примерно 55 г на порцию). Пересчёт от замесов, а не от порций, выбран потому, что граммовки карты точные, а число порций — наша оценка.</li>
+              <li><strong>Время нарезания и жарки:</strong> карта не даёт ни толщины пласта, ни формы нарезки, ни количества штук, ни времени жарки одной партии. Готовность описана только через цвет (золотистый) и проверку кусочком теста. В блоке «Подготовка / Активное / Пассивное / Общее» время — экспертная оценка, а не данные источника.</li>
+              <li><strong>Уксус:</strong> в карте «уксус соловый» — опечатка, по смыслу «столовый». Концентрация не указана; на странице принят стандартный 9 % и 1 ст. л. = 15 мл. Ни соды, ни разрыхлителя в карте нет — и на странице их нет.</li>
+              <li><strong>Яйца:</strong> 2 желтка С0 = 38 г. Два белка остаются неиспользованными; в тесто они не идут.</li>
+              <li><strong>Сметана:</strong> в карте 20–30 %, конкретная жирность для расчёта КБЖУ взята 25 %.</li>
+              <li><strong>Масло для жарки:</strong> количество не нормировано («для жарки»), в списке покупок дана ориентировка на кастрюлю Ø20–22 см.</li>
+              <li><strong>КБЖУ:</strong> расчёт по средним табличным значениям продуктов с оговоркой на усвоение масла при фритюре (≈ 10 % от массы теста; это оценочная величина, взвешивания в источнике нет).</li>
+              <li><strong>Фото:</strong> сгенерированная иллюстрация, настоящего снимка в источниках нет. Путь — <code>../assets/images/hvorost.jpg</code>.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

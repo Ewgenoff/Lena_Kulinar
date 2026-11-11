@@ -1,0 +1,925 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Три творожные пасхи с начинкой — пошаговый рецепт | CookBook</title>
+  <meta name="description" content="Три творожные пасхи на одной творожной базе: ванильная с лаймовым курдом, шоколадная с банановой намилакой и карамельная с варёной сгущёнкой. Заварная часть из желтков, начинки замораживаются в цилиндрах Ø5 см.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧁</text></svg>">
+</head>
+<body data-recipe-id="tri-tvorozhnye-pashi">
+
+    <header class="site-header">
+    <div class="header-container">
+      <div class="header-back">
+        <a href="../index.html" class="back-link"><span class="back-arrow">←</span><span class="back-text">Назад</span></a>
+      </div>
+      <a href="../index.html" class="brand">
+        <img src="../assets/images/logo.png" alt="Логотип" aria-hidden="true" class="brand-logo" width="241" height="200">
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 <span class="btn-text">Печать рецепта</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Три творожные пасхи с начинкой</h1>
+      <div class="recipe-intro-split">
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-label">Подготовка начинок</span>
+            <span class="fact-value">≈1 час</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Активное время</span>
+            <span class="fact-value">≈1,5 часа</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Пассивное время</span>
+            <span class="fact-value">от 12 часов + заморозка начинок</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Общее время</span>
+            <span class="fact-value">от 14 часов (плюс время на заморозку)</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Выход</span>
+            <span class="fact-value">3 пасхи по ≈850 г</span>
+          </div>
+        </div>
+
+        <p class="recipe-lead">
+          Одна творожная база — три разных пасхи. Внутри каждой спрятан замороженный цилиндр начинки: лаймовый курд в ванильной, банановая намилака в шоколадной, варёная сгущёнка в карамельной. Когда пасха стоит в холодильнике, начинка оттаивает и остаётся отдельным слоем — по консистенции она та же, что и творожная масса, поэтому разрез получается ровным, а вкусы не смешиваются. Все три пасхи собираются на заварной части из желтков с маслом 82,5 %.
+        </p>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tri-tvorozhnye-pashi.jpg" alt="Ванильная пасха с шоколадными подтёками и карамельная пасха с карамельными подтёками" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (3 пасхи)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="3">3</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">пасхи</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — три пасхи примерно по 850 г. Масса делится заранее: 690 г на ванильную и по 590 г на карамельную и шоколадную.
+          </p>
+        </div>
+
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">354</td>
+                <td>8,1 г</td>
+                <td>24,5 г</td>
+                <td>24,9 г</td>
+              </tr>
+              <tr>
+                <th>Три пасхи<span class="kbju-sub">≈ 2,5 кг</span></th>
+                <td class="kbju-kcal"><span data-base-amount="9040" data-unit="ккал">9040 ккал</span></td>
+                <td><span data-base-amount="205" data-unit="г">205 г</span></td>
+                <td><span data-base-amount="625" data-unit="г">625 г</span></td>
+                <td><span data-base-amount="634" data-unit="г">634 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Считана вся творожная база (800 г творога, сахар, масло, желтки, сливки) и три начинки: банановая намилака, лаймовый курд и варёная сгущёнка с желатином.</p>
+            <p>«690 г» и «590 г» творожной массы в сборке — это порции общей базы, а не отдельные продукты, поэтому они не складывались. Одна пасха ≈ 850 г — ≈ 3000 ккал.</p>
+            <p>Шоколад, карамель и орехи для двух пасок в источнике без граммовок: с ними эти пасхи будут калорийнее.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">3</span> пасхи</span>
+        </div>
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Творог, сливки, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творог 5–18%</strong>:
+                <span class="shopping-qty" data-base-amount="800" data-unit="г">800 г</span>
+                <span class="shopping-hint">Самый свежий в вашем регионе. Сухой — иначе пасха не встанет</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="400" data-unit="г">400 г</span>
+                <span class="shopping-hint">360 г в творожную базу + 40 г в курд. Масло размягчённое, без лишней влаги</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 30% (или сметана 30%)</strong>:
+                <span class="shopping-qty" data-base-amount="435" data-unit="г">435 г</span>
+                <span class="shopping-hint">300 г в базу + 65 г в намилаку + 70 г в сгущённую начинку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Варёная сгущёнка</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Для карамельной начинки; можно заменить сваренной карамелью</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥚 Яйца, сахар, цитрус</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="11" data-unit="шт." data-piece="true">11 шт.</span>
+                <span class="shopping-hint">Нужно 200 г желтков — это 10–11 яиц; белки остаются</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="420" data-unit="г">420 г</span>
+                <span class="shopping-hint">360 г в базу + 60 г в курд; в курд можно 35 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин</strong>:
+                <span class="shopping-qty" data-base-amount="11" data-unit="г">11 г</span>
+                <span class="shopping-hint">2 г намилака + 2 г курд + 3 г сгущёнка + 4 г ванильная пасха. На шоколадную и карамельную пасху количество в источниках не названо</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лаймы</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span>
+                <span class="shopping-hint">Небольшие — нужно 60 г сока и цедра</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимон</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">Цедра в базу и 10 г сока в намилаку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ваниль</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="г">5 г</span>
+                <span class="shopping-hint">Паста, экстракт или ванильный сахар — количество в источнике не указано</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Наполнители и инвентарь</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Банан</strong>:
+                <span class="shopping-qty" data-base-amount="120" data-unit="г">120 г</span>
+                <span class="shopping-hint">Очищенный вес — один средний банан для намилаки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Белый шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="65" data-unit="г">65 г</span>
+                <span class="shopping-hint">Для банановой намилаки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Изюм и апельсиновые цукаты</strong>:
+                <span class="shopping-qty" data-base-amount="110" data-unit="г">110 г</span>
+                <span class="shopping-hint">60 г изюма + 50 г цукатов в ванильную; в карамельную — изюм, клюква, миндаль (количество не названо)</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Тёмный шоколад, кешью, банановые чипсы</strong>
+                <span class="shopping-hint">Для шоколадной пасхи; количество в источниках не названо</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Краситель жёлтый</strong>
+                <span class="shopping-hint">Одна капля в карамельную пасху — бета-каротин, по желанию</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пасочницы и марля</strong>
+                <span class="shopping-hint">Три пасочницы; марля влажная, в один слой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ацетатная плёнка, малярный скотч, кондитерский мешок</strong>
+                <span class="shopping-hint">Из плёнки делаются формы-цилиндры Ø5 см для заморозки начинок</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Творожная база (на 3 пасхи)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="800" data-unit="г">800 г</span> — Творог 5–18%
+              <span class="ingredient-note">Протереть через сито дважды, блендер не использовать</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="360" data-unit="г">360 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="360" data-unit="г">360 г</span> — Сливочное масло 82,5%
+              <span class="ingredient-note">Размягчённое</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="170" data-unit="г">170 г</span> — Желтки
+              <span class="ingredient-note">Около 9 штук</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Сливки 30% или сметана 30%
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Цедра одного лимона
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Ваниль — паста, экстракт или ванильный сахар
+              <span class="ingredient-note">Количество в источнике не указано</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Банановая намилака (на шоколадную пасху)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Банан очищенный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Лимонный сок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="65" data-unit="г">65 г</span> — Сливки 30%
+              <span class="ingredient-note">Холодные</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="65" data-unit="г">65 г</span> — Белый шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Желатин
+              <span class="ingredient-note">Плюс 10 г холодной воды</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Лаймовый курд (на ванильную пасху)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сок лайма
+              <span class="ingredient-note">Примерно с двух небольших лаймов</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Цедра лайма — по вкусу
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Желток
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сахар
+              <span class="ingredient-note">Можно уменьшить до 35 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Сливочное масло
+              <span class="ingredient-note">Комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Желатин
+              <span class="ingredient-note">Плюс 10 г холодной воды</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка из варёной сгущёнки (на карамельную пасху)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Варёная сгущёнка
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Сливки 30%
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Желатин
+              <span class="ingredient-note">Плюс 15 г холодной воды</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Ванильная пасха — сборка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="690" data-unit="г">690 г</span> — Творожная масса
+              <span class="ingredient-note">Из общей базы</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="г">4 г</span> — Желатин
+              <span class="ingredient-note">Плюс 20 г холодной воды</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Изюм
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Апельсиновые цукаты
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Замороженный лаймовый курд — середина
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Шоколадная и карамельная — сборка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="590" data-unit="г">590 г</span> — Творожная масса (шоколадная)
+              <span class="ingredient-note">Из общей базы</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="590" data-unit="г">590 г</span> — Творожная масса (карамельная)
+              <span class="ingredient-note">Из общей базы</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Растопленный тёмный шоколад — в шоколадную
+              <span class="ingredient-note">Количество в источнике не названо</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Банановые чипсы и обжаренный кешью — в шоколадную
+              <span class="ingredient-note">Количество в источнике не названо</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Карамель, немного шоколада и желатин — в карамельную
+              <span class="ingredient-note">Количество в источнике не названо</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Изюм, сушёная клюква, рубленый миндаль — в карамельную
+              <span class="ingredient-note">Количество в источнике не названо</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Шоколад и сливки — для шоколадного ганаша
+              <span class="ingredient-note">Количество в источнике не названо</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Карамель, молочный шоколад и набухший желатин — для карамельных подтёков
+              <span class="ingredient-note">Количество в источнике не названо</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Рубленый орех и свежие ягоды — по желанию
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Банановая намилака</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Желатин залейте холодной водой и оставьте набухать. Банан пюрируйте, сразу сбрызните лимонным соком — так пюре не потемнеет при нагреве.
+                <span class="source-badge">⏱ Этап1_1: 00:01:46–00:02:05</span>
+              </p>
+              <p>
+                Пюре прогрейте при постоянном помешивании — бананы пригорают. Кипятить не нужно: как только пошли первые пузыри, снимайте с огня. Введите набухший желатин и размешайте до полного растворения.
+                <span class="source-badge">⏱ Этап1_1: 00:02:33–00:03:22</span>
+              </p>
+              <p>
+                Залейте тёплым банановым пюре белый шоколад и дайте постоять. Если шоколад не разошёлся, прогрейте массу в микроволновке. Влейте холодные сливки и пробейте погружным блендером.
+                <span class="source-badge">⏱ Этап1_1: 00:03:29–00:04:32</span>
+              </p>
+              <div class="tip-box">
+                <strong>Что это за крем:</strong> намилака — французский крем на шоколаде и желатине, который после стабилизации уже имеет нужную консистенцию. Его можно замораживать и размораживать без потери качества.
+                <span class="source-badge">⏱ Этап1_1: 00:00:55–00:01:33</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Нагрев: <strong>до первых пузырей</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Гладкий блестящий крем</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Формы-цилиндры Ø5 см</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Начинку нужно заморозить в цилиндр, чтобы потом вставить её внутрь пасхи. Готовых форм может не быть — автор склеивает их из ацетатной плёнки малярным скотчем, снизу подкладывает пищевую плёнку и деревянную доску.
+                <span class="source-badge">⏱ Этап1_2: 00:00:02–00:00:50</span>
+              </p>
+              <p>
+                Диаметр цилиндра — 5 см, высота — по высоте пасочницы. Наполните форму намилакой доверху (удобно из кондитерского мешка) и уберите в морозилку до полного застывания.
+                <span class="source-badge">⏱ Этап1_2: 00:00:59–00:01:46</span>
+              </p>
+              <div class="tip-box">
+                <strong>Если делаете крем не для пасхи:</strong> замораживать не обязательно — накройте плёнкой в контакт и оставьте на ночь в холодильнике, получится густой крем.
+                <span class="source-badge">⏱ Этап1_2: 00:01:16–00:01:33</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Цилиндр: <strong>Ø5 см</strong></span>
+              <span class="param-pill">🌡 Место: <strong>Морозилка до застывания</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Лаймовый курд</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Желатин замочите в холодной воде. Чтобы из лайма вышло максимум сока, прогрейте плод в микроволновке 10–15 секунд.
+                <span class="source-badge">⏱ Этап1_3: 00:00:28–00:00:35</span>
+              </p>
+              <p>
+                В сотейник положите цедру, сок лайма, желток и сахар и уваривайте на минимальном огне при активном помешивании до первого «булька». Можно на водяной бане — дольше, но безопаснее. Снимите, не прекращая мешать.
+                <span class="source-badge">⏱ Этап1_3: 00:01:10–00:02:14</span>
+              </p>
+              <p>
+                Введите горячий растопленный желатин, затем масло комнатной температуры — когда масса уже ниже 40 °C. Если смущает цедра, протрите курд через сито, наполните форму и заморозьте.
+                <span class="source-badge">⏱ Этап1_3: 00:02:35–00:03:27</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не переварите:</strong> у курда маленький объём, температуру термометром не померить — ориентир именно первый бульк и кремовая текстура.
+                <span class="source-badge">⏱ Этап1_3: 00:01:36–00:02:08</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Масло: <strong>ниже 40 °C</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Первый бульк, кремовая текстура</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Начинка из варёной сгущёнки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Желатин залейте холодной водой. Варёную сгущёнку немного пробейте миксером, введите растопленный желатин, затем сливки и взбейте.
+                <span class="source-badge">⏱ Этап1_4: 00:00:39–00:01:14</span>
+              </p>
+              <p>
+                Разложите по формам и заморозьте. Вместо сгущёнки можно взять варёную карамель — с желатином и сливками получится та же логика.
+                <span class="source-badge">⏱ Этап1_4: 00:00:23–00:00:39</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍮 Альтернатива: <strong>варёная карамель</strong></span>
+              <span class="param-pill">🌡 Место: <strong>Морозилка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Заварная часть</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В желтки сначала влейте сливки (или положите сметану), перемешайте и только потом добавьте сахар и ваниль. Сотейник поставьте на маленький огонь и заваривайте при постоянном помешивании до состояния жидкой сгущёнки.
+                <span class="source-badge">⏱ Этап2_1: 00:02:34–00:03:43</span>
+              </p>
+              <p>
+                Готовую массу сразу вылейте на противень или в контейнер — так она быстрее остынет. Дальше она должна дойти до комнатной температуры.
+                <span class="source-badge">⏱ Этап2_1: 00:03:43–00:04:04</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Остывание: <strong>до комнатной</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Жидкая сгущёнка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Творог и сборка базы</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Творог протрите через мелкое сито — лучше дважды. Погружным блендером нельзя: он сделает творог жидким, и пасха может не застыть. Творог тоже лучше держать комнатной температуры.
+                <span class="source-badge">⏱ Этап2_1: 00:01:46–00:02:34</span>
+              </p>
+              <p>
+                Размягчённое масло 82,5 % слегка взбейте — цель не пышность, а разбить комки. Заварную часть вводите в масло примерно в три приёма, иначе масса расслоится.
+                <span class="source-badge">⏱ Этап2_1: 00:04:04–00:05:46</span>
+              </p>
+              <p>
+                Теперь введите весь протёртый творог — можно в один приём — и объедините миксером. Взбивать не нужно, массу дальше уплотнят в форме.
+                <span class="source-badge">⏱ Этап2_1: 00:05:46–00:06:33</span>
+              </p>
+              <div class="warning-box">
+                <strong>Масло 82,5 %:</strong> лишняя влага из более мягкого масла помешает пасхе держать форму.
+                <span class="source-badge">⏱ Этап2_1: 00:00:48–00:01:07</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Заварная и творог: <strong>комнатной температуры</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Миксер, сито</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Формы с марлей</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Пасочницы — деревянные или пластиковые. Марлю намочите и выложите наискосок, чтобы длинные концы оказались с четырёх сторон. Кулаком продавите её в центр до дна — марля ляжет ровно, без складок.
+                <span class="source-badge">⏱ Этап2_1: 00:06:33–00:07:18</span>
+              </p>
+              <p>
+                Разделите массу на три части: 690 г на ванильную и по 590 г на шоколадную и карамельную — веса даны в рецептуре автора.
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Части: <strong>690 / 590 / 590 г</strong></span>
+              <span class="param-pill">🧺 Марля: <strong>влажная, без складок</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Ванильная пасха с курдом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Желатин залейте водой, дайте набухнуть 10 минут и растопите в микроволновке. В 690 г творожной массы вмешайте изюм и апельсиновые цукаты, затем растопленный желатин.
+                <span class="source-badge">⏱ Этап2_2: 00:00:01–00:00:22</span>
+              </p>
+              <p>
+                Масса должна быть комнатной температуры, иначе желатин схватится мгновенно. Выложите часть массы в пасочницу, утрамбовывая, поставьте в центр замороженный цилиндр лаймового курда и закройте остатками массы.
+                <span class="source-badge">⏱ Этап2_2: 00:00:24–00:01:28</span>
+              </p>
+              <p>
+                Закройте марлей в натяг с четырёх сторон и уберите в холодильник на ночь.
+                <span class="source-badge">⏱ Этап2_2: 00:01:32–00:01:49</span>
+              </p>
+              <div class="tip-box">
+                <strong>Если не замораживаете пасху:</strong> желатин можно не добавлять. Для самого цилиндра-начинки желатин обязателен.
+                <span class="source-badge">⏱ Этап2_2: 00:00:29–00:00:35</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Желатин: <strong>набухать 10 мин</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Начинка по центру, марля в натяг</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Шоколадная пасха</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Тёмный шоколад растопите. Возьмите примерно столовую ложку с горкой творожной массы и быстро соедините её с тёплым шоколадом, и только потом введите эту смесь в общую массу — иначе шоколад застынет крошкой и цвет ляжет неровно.
+                <span class="source-badge">⏱ Этап2_3: 00:00:02–00:00:51</span>
+              </p>
+              <p>
+                Вмешайте лопаткой банановые чипсы и обжаренный кешью — он должен быть холодным, но не горячим. Утрамбуйте массу в пасочницу, в центр утопите замороженный цилиндр банановой намилаки и закройте оставшейся массой.
+                <span class="source-badge">⏱ Этап2_3: 00:00:58–00:02:51</span>
+              </p>
+              <div class="tip-box">
+                <strong>Сверху с горочкой:</strong> масса будет уплотняться, поэтому кладите чуть больше. Форму при постукивании придерживайте рукой, иначе разъедется.
+                <span class="source-badge">⏱ Этап2_3: 00:02:12–00:02:51</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Шоколад: <strong>тёмный, растопленный</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Равномерный цвет без крошки</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Карамельная пасха</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Карамель, немного шоколада и растопленный желатин должны быть тёплыми — соедините их. Введите в эту смесь небольшую часть творожной массы, затем перенесите всё в общую массу: так вкус и цвет распределятся равномерно.
+                <span class="source-badge">⏱ Этап2_4: 00:00:02–00:01:27</span>
+              </p>
+              <p>
+                Сюда же — изюм, сушёную клюкву и рубленый миндаль. Автор добавляет каплю жёлтого красителя (бета-каротин), чтобы три пасхи отличались по цвету. Выложите в форму, утопите цилиндр из варёной сгущёнки и закройте массой.
+                <span class="source-badge">⏱ Этап2_4: 00:01:27–00:03:13</span>
+              </p>
+              <div class="warning-box">
+                <strong>Желатин здесь нужен:</strong> карамели в массе мало, и без желатина она не встанет в жёсткую сердцевину, которую можно вставить внутрь. Если пасху не замораживаете, в саму массу желатин можно не добавлять.
+                <span class="source-badge">⏱ Этап2_4: 00:00:33–00:01:05</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Смеси: <strong>тёплые</strong></span>
+              <span class="param-pill">🎨 Краситель: <strong>1 капля, по желанию</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Холодильник</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Пасхи под марлей уберите в холодильник не менее чем на 12 часов — за это время начинка оттает и займёт своё место в центре, а масса уплотнится и отдаст сыворотку. В видео этап не показан, время взято из рецептуры автора.
+              </p>
+              <div class="tip-box">
+                <strong>Срок годности:</strong> 72 часа в холодильнике, до 1 месяца в морозилке — данные автора.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Охлаждение: <strong>не менее 12 часов</strong></span>
+              <span class="param-pill">❄ Хранение: <strong>72 ч / 1 мес. в морозилке</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Подтёки и декор</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Для шоколадного ганаша доведите сливки до кипения (но не кипятите) и вылейте на шоколад, дайте постоять и перемешайте. Ганаш должен быть блестящим и хорошо течь; если густоват — добавьте ещё тёплых сливок.
+                <span class="source-badge">⏱ Этап2_6: 00:00:53–00:01:40</span>
+              </p>
+              <p>
+                Для карамельных подтёков нагрейте карамель, растворите в ней набухший желатин и вылейте на молочный шоколад — чистая карамель на пасхе выглядит прозрачно и некрасиво.
+                <span class="source-badge">⏱ Этап2_6: 00:01:41–00:02:47</span>
+              </p>
+              <p>
+                Пасха должна быть хорошо охлаждена, иначе подтёки потекут бесконтрольно. Наносите на макушку и постепенно пускайте по сторонам — акцент на те бока, где нет рисунка от формы. Низ можно обвалять в рубленом орехе, сверху добавить свежие ягоды.
+                <span class="source-badge">⏱ Этап2_6: 00:02:53–00:06:22</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Пасха: <strong>хорошо охлаждена</strong></span>
+              <span class="param-pill">🍫 Ганаш: <strong>блестящий, текучий</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Зачем начинка внутри пасхи, а не кулича:</strong> выпеченная сдоба и кремовая начинка не совпадают по текстуре, а творожная масса и начинка — совпадают, поэтому разрез получается гармоничным.</li>
+                <li><strong>Творог только через сито:</strong> блендер разжижает творог, и пасха может не застыть.</li>
+                <li><strong>Желатин — в тёплую массу:</strong> в холодной он мгновенно схватывается комками.</li>
+                <li><strong>Шоколад сначала развести:</strong> ложка массы в шоколад, потом всё в общую массу — иначе крошка и неровный цвет.</li>
+                <li><strong>Начинки можно менять:</strong> ориентир автора — с чем вы любите есть творог.</li>
+                <li><strong>Украшать сразу после формы:</strong> пасхи можно декорировать, как только достали их из пасочницы.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Творог пробили блендером:</strong> масса жидкая, пасха не держит форму.</li>
+                <li><strong>Масло жирностью ниже 82,5 %:</strong> лишняя влага.</li>
+                <li><strong>Заварную часть ввели сразу всю:</strong> масса расслаивается.</li>
+                <li><strong>Ввели желатин в холодную массу:</strong> комки, желатин не распределился.</li>
+                <li><strong>Не заморозили начинку:</strong> цилиндр не вставится, слоя не получится.</li>
+                <li><strong>Украшали тёплую пасху:</strong> подтёки текут, рисунок не контролируется.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> серия «Три творожные пасхи» Надежды Зубовой — DOCX с рецептурой и расшифровка Этап1_1–2_6.</li>
+              <li><strong>Шоколадная и карамельная пасхи:</strong> в DOCX стоит пометка «дополни рецепт по видео», но количества шоколада, карамели, желатина и наполнителей в видео тоже не названы. В списке ингредиентов они даны без граммовок.</li>
+              <li><strong>Банановая намилака:</strong> автор говорит, что делала двойную порцию и этого количества хватит на две пасхи, а указанные граммовки — для двойной порции. Цилиндр нужен один (для шоколадной пасхи), остаток можно использовать как крем.</li>
+              <li><strong>Этап2_5:</strong> видео есть, но расшифровки для него нет — этот участок процесса на странице не описан.</li>
+              <li><strong>Сахар в курде:</strong> в рецептуре 60 г, автор отмечает, что ей так вкусно, но можно уменьшить до 35 г.</li>
+              <li><strong>Сливки:</strong> для базы указаны 30 %, для намилаки в видео — «33 % и выше»; в рецептуре начинок 30 %.</li>
+              <li><strong>Сроки:</strong> время заморозки начинок в источниках не названо; ориентир — до полного застывания.</li>
+              <li><strong>Фото:</strong> кадр из видео с двумя из трёх пасок — ванильной с шоколадными подтёками и карамельной.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

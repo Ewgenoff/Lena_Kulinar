@@ -1,0 +1,892 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пасхальный кулич на заварном тесте с зефирным декором — рецепт | CookBook</title>
+  <meta name="description" content="Кулич на заварном тесте: опара, заварка из муки, молока и масла, 5 яиц, цукаты. Выпечка при 150 °C 45–60 минут, две глазури, зефир ручным и планетарным миксером, цветы из зефира и меренги.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌷</text></svg>">
+</head>
+<body data-recipe-id="paskhalnyy-kulich-zavarnoy">
+
+    <header class="site-header">
+    <div class="header-container">
+      <div class="header-back">
+        <a href="../index.html" class="back-link"><span class="back-arrow">←</span><span class="back-text">Назад</span></a>
+      </div>
+      <a href="../index.html" class="brand">
+        <img src="../assets/images/logo.png" alt="Логотип" aria-hidden="true" class="brand-logo" width="241" height="200">
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 <span class="btn-text">Печать рецепта</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Пасхальный кулич на заварном тесте с зефирным декором</h1>
+      <div class="recipe-intro-split">
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-label">Подготовка</span>
+            <span class="fact-value">40 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Активное время</span>
+            <span class="fact-value">3 часа</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Пассивное время</span>
+            <span class="fact-value">5–12 часов</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Общее время</span>
+            <span class="fact-value">8–15 часов</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Выход</span>
+            <span class="fact-value">≈2,9 кг теста: 650 г в банку 0,5 л, 1 кг в форму 3,8 л</span>
+          </div>
+        </div>
+
+        <p class="recipe-lead">
+          Классический кулич, в котором часть муки заваривается кипящим молоком с маслом — отсюда волокнистый мякиш и долгая свежесть. Тесто сдобное, с пятью яйцами и 300 г цукатов, поэтому жиры идут в самом конце, а сахар — только после муки. Дальше — две глазури на выбор (белковая и на желатине) и пасхальный декор: зефирные тюльпаны, пионы, гортензии, розы и большие цветы из меренги.
+        </p>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/paskhalnyy-kulich-zavarnoy.jpg" alt="Пасхальный кулич с глазурью и объёмными цветами из зефира" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 замес)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">замес</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — один замес на 1 кг муки. Автор раскладывает тесто по 650 г в банку из-под детского питания и по 1 кг в форму 3,8 л, заполняя формы примерно на треть. Глазури и зефир считаются отдельно от теста.
+          </p>
+        </div>
+
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">297</td>
+                <td>5,8 г</td>
+                <td>8,5 г</td>
+                <td>47,7 г</td>
+              </tr>
+              <tr>
+                <th>Кулич с глазурью<span class="kbju-sub">≈ 3 кг</span></th>
+                <td class="kbju-kcal"><span data-base-amount="9040" data-unit="ккал">9040 ккал</span></td>
+                <td><span data-base-amount="178" data-unit="г">178 г</span></td>
+                <td><span data-base-amount="259" data-unit="г">259 г</span></td>
+                <td><span data-base-amount="1451" data-unit="г">1451 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Считаны опара, заварное тесто, тесто с цукатами и обе глазури. Зефирный декор, меренга для цветов и посыпки «по желанию» не входят: это отдельный декор, и его расход не связан с тестом.</p>
+            <p>Выход теста ≈ 2,9 кг — банка 0,5 л на 650 г и форма 3,8 л на 1 кг. Кусок 100 г — ≈ 300 ккал.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> замес</span>
+        </div>
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="шт." data-piece="true">5 шт.</span>
+                <span class="shopping-hint">5 целых яиц в тесто. Отдельно на глазурь и декор — 2 белка (белковая глазурь и зефир), их можно взять из этой же партии, но лучше купить ещё 3 яйца</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко</strong>:
+                <span class="shopping-qty" data-base-amount="500" data-unit="г">500 г</span>
+                <span class="shopping-hint">160 г в опару комнатной температуры + 340 г в заварку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="240" data-unit="г">240 г</span>
+                <span class="shopping-hint">100 г в заварку + 140 г холодного в замес</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Мука, сахар, наполнение и декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука «Макфа»</strong>:
+                <span class="shopping-qty" data-base-amount="1000" data-unit="г">1000 г</span>
+                <span class="shopping-hint">100 г в опару + 120 г в заварку + 780 г в замес</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Дрожжи свежие</strong>:
+                <span class="shopping-qty" data-base-amount="35" data-unit="г">35 г</span>
+                <span class="shopping-hint">Обязательно близкие к дате изготовления</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок (в тесто)</strong>:
+                <span class="shopping-qty" data-base-amount="260" data-unit="г">260 г</span>
+                <span class="shopping-hint">20 г в опару + 240 г в замес</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Цукаты, изюм, курага, вяленая вишня и клюква</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">Промыть и обсушить; можно замочить в роме</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра (для белковой глазури)</strong>:
+                <span class="shopping-qty" data-base-amount="180" data-unit="г">180 г</span>
+                <span class="shopping-hint">Хватает на 2 больших кулича</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок (для глазури на желатине и зефира)</strong>:
+                <span class="shopping-qty" data-base-amount="700" data-unit="г">700 г</span>
+                <span class="shopping-hint">150 г в глазурь, 190 г в зефир ручным миксером, 290 г — планетарным, 240 г — в меренгу. Считайте по выбранному декору</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="г">5 г</span>
+                <span class="shopping-hint">Для глазури на желатине</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Агар сила 900</strong>:
+                <span class="shopping-qty" data-base-amount="8" data-unit="г">8 г</span>
+                <span class="shopping-hint">3 г на зефир ручным миксером или 5 г — планетарным</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яблочное пюре</strong>:
+                <span class="shopping-qty" data-base-amount="340" data-unit="г">340 г</span>
+                <span class="shopping-hint">130 г для ручного зефира или 210 г для планетарного; лучше запечь кислые яблоки самим</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимон</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">Сок для глазурей</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пряности и ваниль</strong>
+                <span class="shopping-hint">Шафран, ваниль, мускатный орех; в видео — куркума для цвета</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Пищевые красители и насадки для цветов</strong>
+                <span class="shopping-hint">Водорастворимые для зефира и меренги; насадки 4, 24, 104, 122, 124К, 244, 352</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Опара</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="35" data-unit="г">35 г</span> — Дрожжи свежие
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Молоко комнатной температуры
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Мука
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Заварное тесто</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="340" data-unit="г">340 г</span> — Молоко
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сливочное масло
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Мука
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Тесто</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="шт." data-piece="true">5 шт.</span> — Яйца С1
+              <span class="ingredient-note">Комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="240" data-unit="г">240 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="780" data-unit="г">780 г</span> — Мука
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="140" data-unit="г">140 г</span> — Сливочное масло холодное
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Цукаты, изюм, курага
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Шафран, ваниль, мускатный орех
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Белковая глазурь</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Белок (1 шт. С0)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="180" data-unit="г">180 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="ч. л.">2 ч. л.</span> — Лимонный сок
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Глазурь на желатине</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="г">5 г</span> — Желатин
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Вода (30 г на замачивание + 30 г в сироп)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Лимонный сок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По желанию — Ванилин и краситель
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Зефир ручным миксером</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сахар (в сироп)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="130" data-unit="г">130 г</span> — Яблочное пюре
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Агар сила 900
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Вода
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Сахар (в белок)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Белок (1 шт. С0)
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Зефир в планетарном миксере</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="230" data-unit="г">230 г</span> — Сахар (в сироп)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="210" data-unit="г">210 г</span> — Яблочное пюре
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="г">5 г</span> — Агар сила 900
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Вода
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Сахар (в белок)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Белок (2 шт. С2)
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Меренга для больших цветов</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Белок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="240" data-unit="г">240 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Лимонная кислота (1/3 ч. л.)
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Опара</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Раскрошите дрожжи, добавьте 20 г сахара и 160 г молока комнатной температуры — не горячего. Перемешайте, чтобы дрожжи размягчились; комочки допустимы. Всыпьте 100 г муки, размешайте лопаткой до консистенции блинного теста и оставьте на 20 минут.
+                <span class="source-badge">⏱ Этап1_2: 00:00:02–00:03:27</span>
+              </p>
+              <div class="warning-box">
+                <strong>Венчиком не размешивайте:</strong> опара должна остаться густой и «живой». Признак готовности — она поднялась и будто дышит.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>20 мин</strong></span>
+              <span class="param-pill">🌡 Молоко: <strong>комнатное</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Подошла, «дышит»</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Заварная часть</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Доведите до активного кипения 340 г молока с 100 г масла. Выключите нагрев, сразу всыпьте 120 г муки и энергично перемешайте до гладкого комка. Выложите массу на противень остывать примерно до 30 °C.
+                <span class="source-badge">⏱ Этап1_3: 00:00:01–00:01:49</span>
+              </p>
+              <div class="warning-box">
+                <strong>Заваривать можно не больше 10–15% муки:</strong> иначе в куличе будут большие полости и сырой центр.
+                <span class="source-badge">⏱ Этап1_3: 00:00:13–00:00:32</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Остывание: <strong>до 30 °C</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Сотейник, лопатка, противень</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Гладкая густая масса без комков</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Яйца, пряности, соль</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Остывшую заварку отправьте в опару и перемешайте, затем переложите в дежу миксера. Введите яйца комнатной температуры в три приёма. Добавьте пряности — ваниль, куркуму для цвета, мускатный орех — и сразу соль: она помогает клейковине раскрыться.
+                <span class="source-badge">⏱ Этап1_4: 00:00:02–00:03:35</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥚 Яйца: <strong>в 3 приёма</strong></span>
+              <span class="param-pill">🌡 Тесто: <strong>прохладное</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Мука, затем сахар</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Введите муку — сначала примерно две трети, затем остаток, на низкой скорости около 5 минут до комка. И только после этого сахар, в три приёма: тесто будет немного разжижаться, это нормально. Вымешивайте ещё 10–15 минут.
+                <span class="source-badge">⏱ Этап1_4: 00:03:37–00:06:57</span>
+              </p>
+              <div class="tip-box">
+                <strong>Почему сахар после муки:</strong> сахар и глютен конкурируют за жидкость. Если сахар попадёт раньше, мука не наберёт воду, и мякиш будет сухим.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Замес: <strong>5 + 10–15 мин</strong></span>
+              <span class="param-pill">⚙ Скорость: <strong>низкая</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Масло и цукаты</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Холодное масло вводите в три приёма пластиками — от него тесто собирается в комок. Затем на низкой скорости вмешайте цукаты, после чего сделайте несколько складок руками, чтобы они распределились равномерно.
+                <span class="source-badge">⏱ Этап1_4: 00:07:06–00:14:10</span>
+              </p>
+              <div class="warning-box">
+                <strong>Жиры — в самом конце:</strong> если добавить их раньше, они плёнкой закроют муку и не дадут развиться глютену.
+                <span class="source-badge">⏱ Этап1_1: 00:04:07–00:04:53</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Масло: <strong>в 3 приёма, холодное</strong></span>
+              <span class="param-pill">🍬 Цукаты: <strong>300 г</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Видна тонкая плёнка на цукатах</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Расстойка и формовка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Смажьте ёмкость растительным маслом, выложите тесто и дайте подойти 1,5–2 часа — оно увеличится в два раза. Дальше можно убрать в холодильник (не ниже +4 °C) до утра или формовать сразу.
+                <span class="source-badge">⏱ Этап1_4: 00:09:19–00:14:38</span>
+              </p>
+              <p>
+                Осадите тесто, соберите складки внутрь и подкатайте: чем плотнее натянута поверхность, тем лучше пористость. Уложите гладкой стороной вниз в форму, заполняя примерно на треть: 650 г в банку из-под детского питания, 1 кг в форму 3,8 л.
+                <span class="source-badge">⏱ Этап1_5: 00:00:17–00:05:04</span>
+              </p>
+              <div class="tip-box">
+                <strong>Три варианта расстойки:</strong> сразу после замеса в холодильник; после формовки в формы и в холодильник до утра; или подойти, сформовать и печь в тот же день. Холод на 6–10 часов улучшает мякиш.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Тесто: <strong>1,5–2 часа</strong></span>
+              <span class="param-pill">⏱ Формы: <strong>2 часа, до верха ~2 см</strong></span>
+              <span class="param-pill">🧁 Закладка: <strong>⅓ формы</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Выпечка и остывание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Духовку не разогревайте — куличи уже стоят в ней на расстойке. Выставьте 150 °C: без конвекции, если противень один, с конвекцией — если в два слоя. Выпекайте 45–60 минут.
+                <span class="source-badge">⏱ Этап1_5: 00:05:11–00:05:33</span>
+              </p>
+              <p>
+                Шпажку втыкайте под углом, до самого дна. Чистая — готово. Через 10 минут достаньте куличи из форм и остужайте на полотенце, поворачивая каждые 5–7 минут.
+                <span class="source-badge">⏱ Этап1_5: 00:05:34–00:07:39</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не оставляйте горячими в металле:</strong> кулич запотеет. И не остужайте ровно — один бок приплюснется.
+                <span class="source-badge">⏱ Этап1_5: 00:05:51–00:06:02</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>150 °C</strong></span>
+              <span class="param-pill">⏱ Время: <strong>45–60 мин</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Сухая шпажка под углом</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Белковая глазурь</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Взбейте белок сначала около 30 секунд на маленькой скорости, затем на максимальной до пышной плотной массы. Пудру вводите в два приёма, продолжая взбивать до густоты: масса стекает, но не льётся, рисунок от венчика держится.
+                <span class="source-badge">⏱ Этап2_1: 00:01:51–00:04:32</span>
+              </p>
+              <p>
+                В конце добавьте лимонный сок — глазурь побелеет и начнёт быстро сохнуть. Наносите щедро ложкой, ровняйте, постукивая по ладоням под куличом. Этого количества хватает на 2 больших кулича.
+                <span class="source-badge">⏱ Этап2_1: 00:05:29–00:08:11</span>
+              </p>
+              <div class="warning-box">
+                <strong>Порядок важен:</strong> если всыпать пудру до того, как взбит белок, останется несвязанная жидкость — глазурь не высохнет и будет липнуть.
+                <span class="source-badge">⏱ Этап2_1: 00:00:16–00:01:51</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Взбивание: <strong>до устойчивого рисунка</strong></span>
+              <span class="param-pill">🍋 Сок: <strong>2 ч. л. в конце</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Стекает, но не льётся</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Глазурь на желатине</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Желатин залейте 30 г холодной воды. Сахар со второй половиной воды доведите до кипения и варите 1–2 минуты до полного растворения. Введите лимонный сок и ванилин, снимите с огня и растворите набухший желатин.
+                <span class="source-badge">⏱ Этап2_2: 00:00:29–00:01:42</span>
+              </p>
+              <p>
+                Взбейте горячую массу до густоты с рисунком от венчика и сразу распределите по куличам. Застывает быстрее белковой, поэтому посыпку и декор ставьте сразу. Застывшую глазурь можно чуть прогреть в микроволновке.
+                <span class="source-badge">⏱ Этап2_2: 00:01:47–00:03:00</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Сироп: <strong>1–2 мин кипения</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Рисунок от венчика</strong></span>
+              <span class="param-pill">🧊 Застывает: <strong>быстро</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Зефир ручным миксером</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Запеките кислые зелёные яблоки при 160–170 °C около 20 минут, выберите мякоть без кожуры и пробейте блендером до шелковистости. Смешайте воду с агаром, добавьте пюре и 150 г сахара.
+                <span class="source-badge">⏱ Этап3_1: 00:00:02–00:03:32</span>
+              </p>
+              <p>
+                Уваривайте на очень маленьком огне при постоянном помешивании до 104–106 °C или до «нестекающей капли». Параллельно взбейте белок с 40 г сахара до плотной меренги, затем тонкой струёй введите сироп и взбивайте ещё 1,5 минуты. Сразу окрасьте и переложите в мешок.
+                <span class="source-badge">⏱ Этап3_1: 00:03:40–00:11:01</span>
+              </p>
+              <div class="tip-box">
+                <strong>Агара здесь меньше обычного:</strong> зефир менее плотный и стабилизируется медленнее — это специально, чтобы успеть отсадить цветы.
+                <span class="source-badge">⏱ Этап3_1: 00:02:44–00:04:51</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сироп: <strong>104–106 °C</strong></span>
+              <span class="param-pill">⏱ Взбивание: <strong>1,5 мин после сиропа</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Нестекающая капля</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Зефир в планетарном миксере</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Смешайте воду с агаром, добавьте 210 г пюре и 230 г сахара, доведите до кипения и варите ровно 2 минуты при помешивании — до 104 °C или тянущейся «сопельки». В этот момент планетарный миксер уже взбивает белок с 60 г сахара.
+                <span class="source-badge">⏱ Этап3_2: 00:00:15–00:01:15</span>
+              </p>
+              <p>
+                Горячий сироп влейте тонкой струйкой по стенке и взбивайте около минуты — масса должна держаться на венчике, но оставаться пластичной. Сразу окрасьте и разложите по мешкам.
+                <span class="source-badge">⏱ Этап3_2: 00:01:19–00:02:37</span>
+              </p>
+              <div class="tip-box">
+                <strong>Чем отличается:</strong> порция в 1,5 раза больше, миксер сам взбивает меренгу, пока вы варите сироп, а пюре по объёму больше — термометр показывает точнее.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сироп: <strong>104 °C</strong></span>
+              <span class="param-pill">⏱ Варка: <strong>2 мин</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Держится на венчике</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Цветы из зефира и меренги</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Тюльпаны отсаживайте насадкой 244 (или 242), листья — 352. Зефир перед тюльпанами должен постоять 1–2 минуты, иначе цветы получатся закрытыми. Насадку вынимайте только после остановки давления.
+                <span class="source-badge">⏱ Этап4: 00:00:28–00:02:45</span>
+              </p>
+              <p>
+                Пионы: тычинки — насадка 4, пестик — 24, лепестки — 122 (121 или 123), листья — 104. Лепестки ставьте арочками без нахлёста, каждый ряд выше предыдущего. Гортензии — 104 и серединка 4; роза — 124К (125К, 126К), сирень — 104, бутоны — 4.
+                <span class="source-badge">⏱ Этап5: 00:01:13–00:03:45</span>
+              </p>
+              <p>
+                Большие цветы из меренги: 120 г белка, 240 г сахара и 1/3 ч. л. лимонной кислоты взбивайте на водяной бане — сначала на минимальной скорости до растворения сахара, затем на максимальной до стоячих пиков. Насадки: хризантема 143, роза 127, ранункулюс 123, скабиоза 127.
+                <span class="source-badge">⏱ Этап8: 00:03:27–00:15:17</span>
+              </p>
+              <div class="warning-box">
+                <strong>Готовый зефир не держите на столе:</strong> он стабилизируется, и цветы перестанут держать форму. Пакеты с массой держите в тепле, пока работаете.
+                <span class="source-badge">⏱ Этап7: 00:03:03–00:03:14</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌷 Тюльпаны: <strong>244 / 242, листья 352</strong></span>
+              <span class="param-pill">🌸 Пионы: <strong>4, 24, 122</strong></span>
+              <span class="param-pill">🌹 Роза: <strong>124К</strong></span>
+              <span class="param-pill">🌼 Меренга: <strong>143, 127, 123</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Сдоба — это техника, а не дорогие продукты:</strong> волокнистость даёт правильный порядок ввода муки, сахара и масла.</li>
+                <li><strong>Заварка до 15% муки:</strong> больше — и в куличе будут полости и сырой центр.</li>
+                <li><strong>Дрожжи — живой организм:</strong> не давайте им много сахара и экстремального тепла.</li>
+                <li><strong>Холодная расстойка:</strong> 6–10 часов в холодильнике улучшают мякиш и сохраняют влагу.</li>
+                <li><strong>Шпажка под углом:</strong> прямой прокол до дна оставляет дыру, и середина оседает.</li>
+                <li><strong>Глазурь на желатине:</strong> не крошится при нарезке и хранится под плёнкой; белковая — сохнет быстрее и крошится.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Сахар ввели раньше муки:</strong> мякиш сухой, кулич черствеет.</li>
+                <li><strong>Заварили слишком много муки:</strong> сырой центр и крупные пустоты.</li>
+                <li><strong>Горячая заварка в опару:</strong> дрожжи погибают, тесто не поднимается.</li>
+                <li><strong>Перегрели тесто:</strong> глютен разрушается, тесто расползается.</li>
+                <li><strong>Долгая расстойка:</strong> шапка «грибом» и крупные поры.</li>
+                <li><strong>Шпажку воткнули прямо:</strong> в середине остаётся вмятина.</li>
+                <li><strong>Декор на тёплый кулич:</strong> глазурь течёт, цветы сползают.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> урок «Пасхальные куличи» Надежды Зубовой — DOCX с этапами 1–8 и расшифровки Этап1_1 … Этап8.</li>
+              <li><strong>Время выпечки:</strong> DOCX 45–60 минут при 150 °C; в видео конкретное время не названо, только температура.</li>
+              <li><strong>Извлечение из форм:</strong> DOCX «через 10 минут», видео — сразу достать горячими, не оставлять надолго.</li>
+              <li><strong>Срок годности:</strong> DOCX 5–7 дней при комнатной температуре, 12 дней в холодильнике, 1 месяц в морозилке; видео — до 10 дней в холодильнике.</li>
+              <li><strong>Пряности:</strong> DOCX — шафран, ваниль, мускатный орех; в видео вместо шафрана куркума для цвета.</li>
+              <li><strong>Зефир:</strong> проверка сиропа — 104–106 °C по DOCX; в видео ручным миксером термометр выше 100 °C не поднимался, ориентир — «нестекающая капля».</li>
+              <li><strong>Меренга:</strong> в DOCX 120 г белка на 240 г сахара, в видео 136 г на 272 г — та же пропорция 1:2.</li>
+              <li><strong>Насадки гортензии:</strong> DOCX 104, в видео отсадка описана 103 (104 — чашелистники). На странице указаны оба варианта.</li>
+              <li><strong>Фото:</strong> кадр из видео — готовый кулич с цветами из зефира.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

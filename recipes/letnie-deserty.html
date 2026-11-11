@@ -1,0 +1,736 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Летние десерты: бланманже и битое стекло — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Сметанное бланманже без выпечки: геометрические десерты слоями под наклоном и «битое стекло» с цветным желе и какао. Желатин 220 Блюм, застывание от 4 часов, универсальное желе на ягодном пюре.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍧</text></svg>">
+</head>
+<body data-recipe-id="letnie-deserty">
+
+    <header class="site-header">
+    <div class="header-container">
+      <div class="header-back">
+        <a href="../index.html" class="back-link"><span class="back-arrow">←</span><span class="back-text">Назад</span></a>
+      </div>
+      <a href="../index.html" class="brand">
+        <img src="../assets/images/logo.png" alt="Логотип" aria-hidden="true" class="brand-logo" width="241" height="200">
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 <span class="btn-text">Печать рецепта</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Летние десерты: бланманже и битое стекло</h1>
+      <div class="recipe-intro-split">
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-label">Подготовка</span>
+            <span class="fact-value">~15 мин: сметана комнатной температуры, стаканы, формы</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Активное время</span>
+            <span class="fact-value">~40 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Пассивное время</span>
+            <span class="fact-value">Не менее 4 ч на застывание, слои — с паузами</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Общее время</span>
+            <span class="fact-value">~5 ч</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Выход</span>
+            <span class="fact-value">6 стаканов по ~110 г; стекло — по форме</span>
+          </div>
+        </div>
+
+        <p class="recipe-lead">
+          Один сметанный бланманже — два десерта. Первый: геометрические стаканы, где слои заливают под наклоном и получают цветные грани. Второй: «битое стекло» — кубики покупного желе и какао-желе в белой сметанной массе. Плюс универсальный рецепт желе на ягодном пюре, если хочется цвета без красителей.
+        </p>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/letnie-deserty.jpg" alt="Порционный десерт в стакане: белое сметанное бланманже с ягодами малины, черники и клубники, стакан на весах" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (6 порций)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="6">6</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">порций</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — 6 порционных стаканов по ~110 г из 700 г сметаны. Для «битого стекла» количество порций зависит от формы: ориентируйтесь на объём, а не на число стаканов.
+          </p>
+        </div>
+
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">191</td>
+                <td>3,1 г</td>
+                <td>11,4 г</td>
+                <td>18,5 г</td>
+              </tr>
+              <tr>
+                <th>Бланманже<span class="kbju-sub">≈ 920 г</span></th>
+                <td class="kbju-kcal"><span data-base-amount="1760" data-unit="ккал">1760 ккал</span></td>
+                <td><span data-base-amount="29" data-unit="г">29 г</span></td>
+                <td><span data-base-amount="105" data-unit="г">105 г</span></td>
+                <td><span data-base-amount="171" data-unit="г">171 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Посчитана база — бланманже из 700 г сметаны 15 %, без «битого стекла», желе на ягодном пюре, ягод и посыпки: это отдельные десерты на той же базе, и добавки дают свою калорийность.</p>
+            <p>Порция базы (примерно 1/6, ≈ 150 г) — ≈ 290 ккал. Если уменьшить сахар до 100 г, выйдет ≈ 170 ккал на 100 г; со сметаной 20 % — ≈ 225 ккал на 100 г.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">6</span> порций</span>
+        </div>
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Основа у обоих десертов одна — сметана и желатин. Для «битого стекла» нужны ещё три пачки покупного желе разных цветов и какао. Желатин берите быстрорастворимый, сильный (220 Блюм): от него зависит, встанет ли масса.
+      </p>
+
+        <div class="shopping-grid">
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🥛 Сметана, молоко, желатин</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сметана 15 % и выше</strong>:
+                  <span class="shopping-qty" data-base-amount="700" data-unit="г">700 г</span>
+                  <span class="shopping-hint">На оба десерта; в видео — 20 %</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Желатин быстрорастворимый</strong>:
+                  <span class="shopping-qty" data-base-amount="29" data-unit="г">29 г</span>
+                  <span class="shopping-hint">12 г в бланманже, 12 г в желе на пюре, 5 г в какао-желе</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Молоко</strong>:
+                  <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span>
+                  <span class="shopping-hint">В какао-желе</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сахар-песок</strong>:
+                  <span class="shopping-qty" data-base-amount="230" data-unit="г">230 г</span>
+                  <span class="shopping-hint">150 г в бланманже, 30 г в какао, 50 г в желе на пюре</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🍫 Желе, какао, ягоды</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Покупное желе</strong>:
+                  <span class="shopping-qty" data-base-amount="3" data-unit="упак." data-piece="true">3 упак.</span>
+                  <span class="shopping-hint">Три разных цвета для «битого стекла»; жёлтого берите больше — он перекрашивается</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Какао-порошок</strong>:
+                  <span class="shopping-qty" data-base-amount="2" data-unit="ч. л.">2 ч. л.</span>
+                  <span class="shopping-hint">В какао-желе</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Ягодное пюре</strong>:
+                  <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                  <span class="shopping-hint">В универсальное желе; можно перебить свежие или замороженные ягоды</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Ванилин или ваниль</strong> — по вкусу
+                  <span class="shopping-hint">Обязательно: перебивает запах желатина</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Красители водорастворимые</strong> — по желанию
+                  <span class="shopping-hint">Жидкие, гелевые или сухие; для геометрических десертов</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Ягоды и хрустящая посыпка</strong> — для декора
+                  <span class="shopping-hint">Малина, земляника, клубника, смородина, голубика; белые бусины</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Расходники</strong> — 6 стаканов, силиконовая или металлическая форма, пищевая плёнка, прищепки
+                  <span class="shopping-hint">Стаканы фиксируют под наклоном прищепками, чтобы слои не вытекали</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">1. Бланманже (база обоих десертов)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="700" data-unit="г">700 г</span> — Сметана 15 % и выше
+              <span class="ingredient-note">Комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="12" data-unit="г">12 г</span> — Желатин быстрорастворимый
+              <span class="ingredient-note">220 Блюм, порошковый</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Вода холодная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сахар
+              <span class="ingredient-note">Можно 100 г; полностью заменяется сахарозаменителем</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Ванилин или ваниль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По желанию — Красители водорастворимые
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">2. «Битое стекло» — дополнение</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="упак." data-piece="true">3 упак.</span> — Покупное желе разных цветов
+              <span class="ingredient-note">По 45 г; вода — вдвое меньше, чем на упаковке</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="г">5 г</span> — Желатин для какао-желе
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Вода для какао-желе
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Молоко
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="ч. л.">2 ч. л.</span> — Какао
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Сахар для какао
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">3. Желе на ягодном пюре</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Ягодное пюре
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сахар
+              <span class="ingredient-note">Можно меньше или больше</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="12" data-unit="г">12 г</span> — Желатин быстрорастворимый
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Вода
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">4. Для декора</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Сезонные ягоды
+              <span class="ingredient-note">Малина, земляника, клубника, смородина, голубика</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Белые бусины и хрустящая посыпка
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Достаньте сметану из холодильника заранее: холодная сметана мгновенно схватит желатин, и масса пойдёт комками. Приготовьте стаканы или форму, прищепки для наклона, пищевую плёнку. Если делаете «битое стекло», сначала займитесь покупным желе — ему нужно время застыть.
+                <span class="source-badge">⏱ Урок_01: 00:13:52–00:17:20</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сметана комнатной температуры:</strong> иначе желатин схватится хлопьями. Исправить можно, прогрев всю массу, но лучше не доводить.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сметана: <strong>Комнатной температуры</strong></span>
+              <span class="param-pill">🥣 Инвентарь: <strong>Стаканы, прищепки, плёнка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Цветное желе для «стекла»</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Три пачки желе разных цветов растворите кипятком, но воды берите вдвое меньше, чем указано на упаковке: у автора это 100 мл на пачку 45 г вместо 200. Размешайте до полного растворения сахара, остудите и уберите в холодильник застывать. Жёлтое желе можно перекрасить в зелёный, оранжевый или красный, поэтому его берут больше.
+                <span class="source-badge">⏱ Урок_01: 00:08:29–00:10:43</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем меньше воды:</strong> желе получается вдвое плотнее и режется ровным кубиком, а не расползается в сметане.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">💧 Вода: <strong>Вдвое меньше нормы</strong></span>
+              <span class="param-pill">🧊 Застывание: <strong>В холодильнике</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Какао-желе</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                5 г желатина залейте 25 г холодной воды и оставьте набухать. Из 80 г молока, 2 ч. л. какао и 30 г сахара сварите какао, растворите в горячем набухший желатин и отправьте в холодильник. Застывшее желе нарежьте кубиками вместе с цветным.
+                <span class="source-badge">⏱ Урок_01: 00:15:29–00:15:52</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥛 Молоко: <strong>80 г</strong></span>
+              <span class="param-pill">🍫 Какао: <strong>2 ч. л.</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Замочить желатин для бланманже</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                12 г желатина 220 Блюм залейте 60 г холодной воды и оставьте набухать до упругой массы. Не размешивайте и не грейте: просто дождитесь, пока вся вода впитается. Пока желатин набухает, займитесь сметаной.
+                <span class="source-badge">⏱ Урок_01: 00:13:06–00:13:52</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">💧 Вода: <strong>60 г, холодная</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Упругая масса</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Сметана с сахаром</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                700 г сметаны комнатной температуры положите в миску, добавьте 150 г сахара и ванилин. Перемешивайте лопаткой, без миксера, пока сахар не растворится полностью — около 10 минут. Масса должна стать гладкой, без крупинок.
+                <span class="source-badge">⏱ Урок_01: 00:18:43–00:18:54</span>
+              </p>
+              <div class="warning-box">
+                <strong>Без миксера:</strong> он взбивает воздух и делает массу пористой; для плотного бланманже нужна гладкая эмульсия.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Растворение сахара: <strong>~10 мин</strong></span>
+              <span class="param-pill">🥄 Инструмент: <strong>Лопатка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Расплавить желатин и ввести</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Набухший желатин нагрейте в микроволновке или на водяной бане до горячего жидкого состояния — без кипения. Сразу влейте в сметанную массу и быстро перемешайте лопаткой. Если масса начала густеть, прогрейте её целиком в микроволновке или на бане и перемешайте снова.
+                <span class="source-badge">⏱ Урок_01: 00:35:30–00:37:29</span>
+              </p>
+              <div class="tip-box">
+                <strong>Кипятить можно:</strong> автор говорит, что страшилки про кипяток устарели — смотрите инструкцию на упаковке своего желатина.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Желатин: <strong>Горячий, жидкий</strong></span>
+              <span class="param-pill">🥄 Смешивание: <strong>Быстро, лопаткой</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">«Битое стекло»: форма</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Силиконовую форму ничем не выстилайте. Жёсткую металлическую выстелите пищевой плёнкой, чтобы десерт потом вышел целиком. Выложите кубики цветного и какао-желе, при желании добавьте замороженные ягоды, залейте сметанной массой и при необходимости аккуратно перемешайте.
+                <span class="source-badge">⏱ Урок_01: 00:38:11–00:39:26</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Форма: <strong>Силикон или плёнка</strong></span>
+              <span class="param-pill">🍒 Наполнение: <strong>Кубики желе, ягоды</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Застывание «стекла»</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Уберите форму в холодильник не меньше чем на 4 часа. Десерт готов, когда масса полностью схватилась и не прилипает к пальцу. Затем переверните форму на доску, снимите плёнку и нарежьте кусками или порциями.
+                <span class="source-badge">⏱ Урок_01: 00:39:44–00:39:48</span>
+              </p>
+              <div class="warning-box">
+                <strong>Морозилка только для сахара:</strong> если заменили сахар сахарозаменителем, десерт нельзя замораживать — он не держит структуру.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Холодильник: <strong>≥ 4 ч</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Не липнет, держит форму</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Геометрические десерты: наклон</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Поставьте стаканы в контейнер под углом и зафиксируйте прищепками, чтобы они не падали и не вытекали. Наливайте массу кондитерским мешком с разрезом 5 мм — так точнее, чем ложкой. Первый слой — 50–60 г; уберите в холодильник или морозилку до застывания.
+                <span class="source-badge">⏱ Урок_01: 00:40:31–00:43:12</span>
+              </p>
+              <div class="tip-box">
+                <strong>Наклон:</strong> каждый следующий слой заливают, перевернув стакан другим боком, — получаются цветные грани.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ Слой 1: <strong>50–60 г</strong></span>
+              <span class="param-pill">🥣 Мешок: <strong>Разрез 5 мм</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Слои и окрашивание</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Разделите массу на части и окрасьте водорастворимым красителем — жидким, гелевым или сухим. Второй слой — 25–30 г, третий — около 20 г; между слоями стакан переворачивают и дают массе застыть. Застывшую массу перед заливкой разжижайте в микроволновке, иначе она не ляжет ровно.
+                <span class="source-badge">⏱ Урок_01: 00:46:26–00:52:35</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не перегреть:</strong> разжижайте короткими пульсами, чтобы желатин не потерял силу.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ Слой 2: <strong>25–30 г</strong></span>
+              <span class="param-pill">⚖️ Слой 3: <strong>~20 г</strong></span>
+              <span class="param-pill">🎨 Краситель: <strong>Водорастворимый</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Желе на ягодном пюре</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                12 г желатина залейте 60 г холодной воды. 200 г ягодного пюре с 50 г сахара нагрейте до кипения, снимите и введите набухший желатин, перемешивая до полного растворения. Перелейте в форму и остудите. Это универсальная база: цвет плотнее, чем у покупного желе, но прозрачности «витража» не будет.
+              </p>
+              <div class="tip-box">
+                <strong>Вкус:</strong> сахар регулируйте по ягоде; для кислой смородины можно добавить больше, для сладкой малины — меньше.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍓 Пюре: <strong>200 г</strong></span>
+              <span class="param-pill">🌡 Нагрев: <strong>До кипения</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Декор и подача</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Геометрические десерты подавайте в стаканах или разрежьте и выложите на тарелку. Украсьте сезонными ягодами, белыми бусинами и хрустящей посыпкой — она должна хрустеть, но не быть жёсткой. «Битое стекло» нарезают кусками и подают так же.
+                <span class="source-badge">⏱ Урок_01: 00:53:51–01:03:26</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍓 Декор: <strong>Сезонные ягоды</strong></span>
+              <span class="param-pill">🕐 Хранение: <strong>72 ч</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Сметана заранее:</strong> холодная мгновенно схватывает желатин.</li>
+                <li><strong>Ванилин обязателен:</strong> перебивает запах желатина.</li>
+                <li><strong>Сахар можно снизить до 100 г:</strong> часть заменить ванильным сахаром.</li>
+                <li><strong>Сахарозаменитель:</strong> работает, но тогда только холодильник, без морозилки.</li>
+                <li><strong>Фруктоза — это сахар:</strong> её можно пересчитывать и замораживать.</li>
+                <li><strong>Покупное желе — ради прозрачности:</strong> «эффект витража»; на пюре цвет плотнее.</li>
+                <li><strong>Посыпка:</strong> хрустящая, но не жёсткая — иначе неудобно есть.</li>
+                <li><strong>Ягоды — самая дорогая часть:</strong> количество декора регулируйте по сезону.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Холодная сметана:</strong> желатин схватывается хлопьями.</li>
+                <li><strong>Миксер:</strong> масса становится пористой, как мусс.</li>
+                <li><strong>Кипятить желатин долго:</strong> теряет силу, десерт не встанет.</li>
+                <li><strong>Обычная норма воды для покупного желе:</strong> кубики расползаются.</li>
+                <li><strong>Незафиксированные стаканы:</strong> слои вытекают и наклоняется посуда.</li>
+                <li><strong>Заморозка с сахарозаменителем:</strong> структура разрушается.</li>
+                <li><strong>Жёсткая посыпка:</strong> портит текстуру десерта.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и замены</h4>
+              <ul>
+                <li><strong>Готовые десерты:</strong> 72 часа в холодильнике.</li>
+                <li><strong>Сметана:</strong> 10, 15, 20, 30 % — подойдёт любая от 15 %; в видео 20 %.</li>
+                <li><strong>Сахар:</strong> полностью заменяется сахарозаменителем (стевия, «Фитпарад»).</li>
+                <li><strong>Мёд вместо сахара:</strong> можно, но автор не советует — портит вкус сметаны.</li>
+                <li><strong>Рикотта вместо сметаны:</strong> автор сомневается — другая текстура.</li>
+                <li><strong>Козье молоко:</strong> допустимо 1:1.</li>
+                <li><strong>Покупное желе:</strong> заменяется желе на ягодном пюре.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «Летние десерты» с раскладкой и один урок (Урок_01) с расшифровкой. Граммовки — из DOCX, техника и таймкоды — из видео.</li>
+              <li><strong>Сметана и сахар:</strong> DOCX — «15 % и выше» и «100–150 г»; в видео — 20 % и 150 г. Расхождения по сути нет.</li>
+              <li><strong>Миксер:</strong> DOCX допускает «лопаткой или миксером», в видео миксером не пользуются вовсе. На странице — лопатка.</li>
+              <li><strong>Желе на ягодном пюре и какао-желе:</strong> в видео упомянуты без полной техники, граммовки — только из DOCX.</li>
+              <li><strong>Объём порции 110 г и 6 стаканов:</strong> цифры из DOCX; в видео говорят «6 стаканов», объём не назывался.</li>
+              <li><strong>Покупное желе:</strong> 45 г на упаковку и 100 мл кипятка — только из видео; по упаковке обычно 200 мл, то есть воды вдвое меньше.</li>
+              <li><strong>Пробел:</strong> температура растворения желатина нигде не названа — только «горячее жидкое состояние». Размеры стаканов, формы и кубиков не указаны.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_01 (01:02:00) с порционным десертом и ягодами.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

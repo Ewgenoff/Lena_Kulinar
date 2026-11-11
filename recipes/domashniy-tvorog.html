@@ -1,0 +1,425 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Домашний творог из молока и простокваши — пошаговый рецепт | CookBook</title>
+  <meta name="description" content="Домашний творог из 3–3,5 л молока и 100 г простокваши: сквашивание 6–12 часов, нагрев до первых пузырей, откидывание на ткань. Некислый творог и сыворотка для блинов и пирогов.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥛</text></svg>">
+</head>
+<body data-recipe-id="domashniy-tvorog">
+
+    <header class="site-header">
+    <div class="header-container">
+      <div class="header-back">
+        <a href="../index.html" class="back-link"><span class="back-arrow">←</span><span class="back-text">Назад</span></a>
+      </div>
+      <a href="../index.html" class="brand">
+        <img src="../assets/images/logo.png" alt="Логотип" aria-hidden="true" class="brand-logo" width="241" height="200">
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 <span class="btn-text">Печать рецепта</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Основные блюда</span>
+        <span class="recipe-difficulty">Сложность: <strong>Простая</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Домашний творог из молока и простокваши</h1>
+      <div class="recipe-intro-split">
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-label">Подготовка</span>
+            <span class="fact-value">5 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Активное время</span>
+            <span class="fact-value">20–25 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Пассивное время</span>
+            <span class="fact-value">7–13 часов</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Общее время</span>
+            <span class="fact-value">8–14 часов</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Выход</span>
+            <span class="fact-value">Зависит от молока (в источнике не взвешивали)</span>
+          </div>
+        </div>
+
+        <p class="recipe-lead">
+          Самый простой способ получить свой творог перед Пасхой, когда в магазинах бывают перебои: молоко сквашивается простоквашей за ночь, затем прогревается до первых пузырей, остывает и откидывается на ткань. Творог получается нексилым — автор специально подбирает закваску, которая не даёт кислого вкуса, а сыворотка остаётся для блинов и пирогов.
+        </p>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/domashniy-tvorog.jpg" alt="Творог откинут на ткань над кастрюлей, стекает сыворотка" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 замес)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">замес</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — один замес на 3–3,5 л молока. Количество молока можно брать любое: автор говорит, что важен не объём, а время сквашивания. Пересчёт увеличивает молоко и закваску пропорционально.
+          </p>
+        </div>
+
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">130</td>
+                <td>17 г</td>
+                <td>5,8 г</td>
+                <td>2,5 г</td>
+              </tr>
+              <tr>
+                <th>Весь выход<span class="kbju-sub">≈ 600 г</span></th>
+                <td class="kbju-kcal"><span data-base-amount="780" data-unit="ккал">780 ккал</span></td>
+                <td><span data-base-amount="102" data-unit="г">102 г</span></td>
+                <td><span data-base-amount="35" data-unit="г">35 г</span></td>
+                <td><span data-base-amount="15" data-unit="г">15 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Выход творога автор не взвешивает, поэтому расчёт дан для типичного выхода ≈ 600 г из 3,5 л молока 3,2 % — это примерно 17 % по массе.</p>
+            <p>Считано по балансу: в творог переходит почти весь белок молока, около трети жира и небольшая часть лактозы, остальное уходит с сывороткой. Из молока 2,5 % творог будет менее жирным, из 6 % — заметно жирнее.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> замес</span>
+        </div>
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко любой жирности</strong>:
+                <span class="shopping-qty" data-base-amount="3.5" data-unit="л">3,5 л</span>
+                <span class="shopping-hint">Автор берёт 3–3,5 л; можно и 5 л — важно время, а не объём. Молоко должно постоять пару часов при комнатной температуре</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Простокваша (или кефир, бифидок)</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">У автора — простокваша-коктейль с сахаром и ванилью: она не кислая и даёт некислый творог. Кефир и бифидок створоживают иначе — консистенция будет другой</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧺 Инвентарь и расходники</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Марля или тонкая ткань</strong>
+                <span class="shopping-hint">Для откидывания творога; сложить в 2–3 слоя, чтобы творог не ушёл в сыворотку</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кастрюля, сито, контейнер для сыворотки</strong>
+                <span class="shopping-hint">Сыворотку автор не выливает — на ней пекут пироги и блины</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Творог</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3.5" data-unit="л">3,5 л</span> — Молоко любой жирности
+              <span class="ingredient-note">Автор берёт 3–3,5 л и советует дать молоку постоять пару часов при комнатной температуре</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Простокваша
+              <span class="ingredient-note">Можно заменить кефиром или бифидоком, но консистенция творога будет другой</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Для откидывания</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Марля или тонкая ткань
+              <span class="ingredient-note">Без точного количества — по размеру сита</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Молоко и закваска</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Молоко перелейте в кастрюлю. Автор берёт молоко, которое уже постояло пару часов при комнатной температуре, — так оно быстрее сквасится. Объём не принципиален: можно 3 литра, можно 5, значение имеет время.
+                <span class="source-badge">⏱ Урок_01: 00:17–00:33</span>
+              </p>
+              <p>
+                Добавьте простоквашу, кефир или бифидок — что найдётся. Автор использует простоквашу в виде коктейля: это та же простокваша, только с сахаром и ванильной отдушкой, она не кислая и не даёт кислого вкуса. Перемешайте венчиком.
+                <span class="source-badge">⏱ Урок_01: 00:46–01:11</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> именно простокваша даёт мягкий, некислый творог. Кефир и бифидок створаживают иначе — консистенция получается совсем другой.
+                <span class="source-badge">⏱ Урок_01: 01:25–01:30</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>2–3 мин</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Кастрюля, венчик</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Сквашивание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Оставьте массу при комнатной температуре минимум на 6 часов, а лучше на ночь — до 12 часов. За это время молоко свернётся и станет густым и слоистым.
+                <span class="source-badge">⏱ Урок_01: 01:11–01:24</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не ускоряйте нагревом:</strong> сквашивание идёт при комнатной температуре. Греть молоко с закваской нельзя — вместо творога получится хлопьевидная масса.
+                <span class="source-badge">⏱ Урок_01: 01:11–01:18</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>6–12 часов</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>комнатная</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Густая слоистая масса</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Нагрев до первых пузырей</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Поставьте кастрюлю на средний огонь, затем убавьте до минимума. Смотрите внимательно: как только пошли первые пузыри, нагрев сразу выключайте. Если потрогать массу пальцем в этот момент, она будет горячей.
+                <span class="source-badge">⏱ Урок_01: 01:30–01:51</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не доводите до кипения:</strong> при кипячении творог становится жёстким и крупинчатым. Ориентир — первые пузыри и горячая масса, а не бурное кипение.
+                <span class="source-badge">⏱ Урок_01: 01:38–01:47</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Нагрев: <strong>средний, затем минимальный</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Первые пузыри</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Кастрюля с толстым дном</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Остывание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выключите нагрев и оставьте массу остывать до комнатной температуры. Творог к этому моменту уже отделился от сыворотки.
+                <span class="source-badge">⏱ Урок_01: 01:51–01:58</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>до полного остывания</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>комнатная</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Откидывание на ткань</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Застелите сито тканью и поставьте его над контейнером. Сначала слейте свободную сыворотку, затем выложите творог на ткань, чтобы стекла лишняя влага. Сыворотку обязательно сохраните: на ней автор печёт пироги и делает блины.
+                <span class="source-badge">⏱ Урок_01: 02:02–02:29</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> сыворотка очень полезна — не выливайте её. В контейнере она спокойно стоит в холодильнике и идёт в тесто.
+                <span class="source-badge">⏱ Урок_01: 02:09–02:15</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>Сито, марля, контейнер</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Творог собрался, сыворотка стекла</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Хранение</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите творог в контейнер и уберите в холодильник. Дальше — в дело: на пасху, сырники, запеканку или просто с ложкой сметаны.
+                <span class="source-badge">⏱ Урок_01: 02:29–02:32</span>
+              </p>
+              <div class="warning-box">
+                <strong>Срок хранения:</strong> в источнике он не назван. Ориентируйтесь на обычные сроки для домашнего творога — 2–3 суток в холодильнике, дольше не держите.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Хранение: <strong>холодильник</strong></span>
+              <span class="param-pill">🥣 Тара: <strong>Контейнер с крышкой</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Время важнее объёма:</strong> можно взять 3, 3,5 или 5 литров молока — меняется только количество творога, а не время сквашивания.</li>
+                <li><strong>Некислый вкус:</strong> автор не любит кислый творог и добивается мягкого вкуса простоквашей-коктейлем, а не кефиром.</li>
+                <li><strong>Сыворотка — не отход:</strong> на ней получаются блины и пироги, поэтому её сливают в отдельный контейнер.</li>
+                <li><strong>Запас перед Пасхой:</strong> творог готовят заранее, потому что перед праздником в магазинах бывают перебои.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Довели до кипения:</strong> творог станет жёстким и сухим, вместо нежной массы получатся резиновые крупинки.</li>
+                <li><strong>Грели сразу на сильном огне:</strong> масса пригорает ко дну — начинайте со среднего и убавляйте до минимума.</li>
+                <li><strong>Не дождались сквашивания:</strong> при недостаточной выдержке молоко не свернётся слоями, и творога выйдет мало.</li>
+                <li><strong>Вылили сыворотку:</strong> потеряли основу для блинов и теста; её нужно сохранять.</li>
+                <li><strong>Сразу убрали в холод:</strong> сначала масса должна остыть до комнатной температуры, иначе творог будет дольше отдавать влагу.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> урок «Домашний творог» Надежды Зубовой — расшифровка Урок_01 и текстовый рецепт в DOCX.</li>
+              <li><strong>Количество молока:</strong> в DOCX 3–3,5 л, в видео автор говорит, что объём не важен и можно взять 5 л. На странице оставлены 3,5 л как верхняя граница базовой записи, калькулятор пересчитывает пропорционально.</li>
+              <li><strong>Время сквашивания:</strong> DOCX — 6–12 часов, видео — «ночь, минимум 6 часов». На странице 6–12 часов.</li>
+              <li><strong>Выход:</strong> в источниках творог не взвешивают, поэтому в фактах стоит «зависит от молока», а не выдуманные граммы.</li>
+              <li><strong>Срок хранения:</strong> не указан; в блоке шага дана общая рекомендация, а не цифра автора.</li>
+              <li><strong>Фото:</strong> готового творога в кадре нет — на странице кадр из видео, где творог откинут на ткань.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

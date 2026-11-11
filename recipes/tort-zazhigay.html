@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Торт «Зажигай» — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Новогодний шоу-торт «Зажигай» из шоколадных труб-свечей: темперирование тёмного шоколада с какао-маслом Mycryo 1 %, мусс на белом шоколаде с лаймом, шоколадный, ванильный и красный шифоновые бисквиты, универсальное ягодное конфи, велюр, подтёки-воск и расчёт количества через объём свечи.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍰</text></svg>">
+</head>
+<body data-recipe-id="tort-zazhigay">
+
+    <header class="site-header">
+    <div class="header-container">
+      <div class="header-back">
+        <a href="../index.html" class="back-link"><span class="back-arrow">←</span><span class="back-text">Назад</span></a>
+      </div>
+      <a href="../index.html" class="brand">
+        <img src="../assets/images/logo.png" alt="Логотип" aria-hidden="true" class="brand-logo" width="241" height="200">
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 <span class="btn-text">Печать рецепта</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Торт «Зажигай» (новогодний шоу-торт со свечами)</h1>
+      <div class="recipe-intro-split">
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-label">Подготовка</span>
+            <span class="fact-value">1–2 дня до сборки: отливка труб и велюр</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Активное время</span>
+            <span class="fact-value">~4 ч (сборка торта)</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Пассивное время</span>
+            <span class="fact-value">Стабилизация от 6 ч, сборка без конфи</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Общее время</span>
+            <span class="fact-value">~1–2 дня, удобно готовить заранее</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Выход</span>
+            <span class="fact-value">1 композиция: 3 свечи Ø7, 6 и 5 см высотой 27 см</span>
+          </div>
+        </div>
+
+        <p class="recipe-lead">
+          Шоу-торт, который выглядит как композиция из горящих свечей: каркас отлит из темперированного шоколада в трубах из гитарной плёнки, внутри каждой свечи — мусс на белом шоколаде с цедрой лайма, кусочки шифонового бисквита, ягодное конфи и слой хрустящих шариков в шоколаде. Снаружи — шоколадный велюр и подтёки, имитирующие стекающий воск. Торт собирается заранее и спокойно переносит заморозку.
+        </p>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tort-zazhigay.jpg" alt="Шоу-торт «Зажигай»: три красные шоколадные свечи разной высоты с подтёками-воском стоят на подложке среди еловых веток и новогодних игрушек" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 композиция)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">композиция (3 свечи)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — авторская композиция из трёх труб Ø7, 6 и 5 см высотой 27 см: 500 г темперированного шоколада на каркас и 1040–1050 г мусса на белом шоколаде. Торт собирается конструктором, поэтому точный объём зависит от ваших труб: в источнике есть расчёт через объём (V = π·r²·h), где 1/3 объёма свечи — мусс, 1/3 — бисквит, 1/3 — конфи. Пересчёт по кнопкам умножает всю раскладку выбранное число раз.
+          </p>
+        </div>
+
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">345</td>
+                <td>5,0 г</td>
+                <td>19,7 г</td>
+                <td>35,9 г</td>
+              </tr>
+              <tr>
+                <th>Вся композиция<span class="kbju-sub">≈ 3,3 кг</span></th>
+                <td class="kbju-kcal"><span data-base-amount="11378" data-unit="ккал">11378 ккал</span></td>
+                <td><span data-base-amount="163" data-unit="г">163 г</span></td>
+                <td><span data-base-amount="649" data-unit="г">649 г</span></td>
+                <td><span data-base-amount="1183" data-unit="г">1183 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Считано по авторской базе: 500 г темперированного тёмного шоколада (включая 1 % Mycryo), 1040 г мусса на белом шоколаде, по полной рецептуре трёх шифоновых бисквитов (сама свеча берёт немного, остаток — на другие торты), полная порция конфи, велюр и подтёки. Средние табличные значения: шоколад 540–550 ккал/100 г, сливки 33–35 % — 322, желтки — 360, сахар — 399, мука — 342, растительное масло — 884, сметана 20 % — 206, кефир 2,5 % — 50, какао — 300, желатин и агар — около 300–355.</p>
+            <p>Основное по весу: Сливки 33–35% — 720 г, Белый шоколад — 1025 г, Тёмный шоколад — 500 г.</p>
+            <p>Вес — по сырой раскладке. При выпечке бисквитов и застывании шоколада уходит влага, а мусс на полувзбитых сливках содержит воздух, поэтому готовый десерт легче расчётного и калорийность на 100 г выше. Шарики, еловые ветки и «по вкусу» в расчёт не входят.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Основной контент: Ингредиенты + Технология -->
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> композицию</span>
+        </div>
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Сводный список по компонентам: каркас из шоколада, мусс, три бисквита, конфи, велюр и подтёки, расходники. Бисквиты считаны полными рецептурами на противень 30×40 см — на свечи уходит лишь часть, остаток идёт на бисквитный торт или в морозилку.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: молочное, яйца, масла -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масла</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="6" data-unit="шт." data-piece="true">6 шт.</span>
+                <span class="shopping-hint">По 2 целых яйца в каждый шифоновый бисквит; желтки из мусса входят в этот же расчёт (50 г желтков ≈ 2,5 желтка), белки от мусса остаются неиспользованными</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 33–35%</strong>:
+                <span class="shopping-qty" data-base-amount="720" data-unit="г">720 г</span>
+                <span class="shopping-hint">260 г — в англез для мусса, 460 г — на полувзбитые сливки. Жирность ниже 30 % не подойдёт: без поблажек</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сметана 15–20%</strong>:
+                <span class="shopping-qty" data-base-amount="125" data-unit="г">125 г</span>
+                <span class="shopping-hint">Только в шоколадный шифоновый бисквит</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кефир</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">125 г в ванильный, 125 г в красный бисквит</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло растительное рафинированное</strong>:
+                <span class="shopping-qty" data-base-amount="264" data-unit="г">264 г</span>
+                <span class="shopping-hint">По 88 г в каждый из трёх шифоновых бисквитов</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: шоколад, бакалея, декор -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Шоколад, бакалея, декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Тёмный шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="500" data-unit="г">500 г</span>
+                <span class="shopping-hint">На три трубы Ø7, 6 и 5 см высотой 27 см. Автор темперирует Callebaut 54,5 %: чем больше какао-масла, тем проще темперировать</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Белый шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="1025" data-unit="г">1025 г</span>
+                <span class="shopping-hint">250 г в мусс + 75 г в велюр + 80 г в подтёки. На мусс берите без заменителей какао-масла</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао-масло Mycryo</strong>:
+                <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+                <span class="shopping-hint">1 % от веса темперируемого шоколада — около 5 г на 500 г тёмного и ещё 5 г про запас (на молочный или белый каркас). Другое какао-масло для посева не подойдёт</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао-масло обычное</strong>:
+                <span class="shopping-qty" data-base-amount="60" data-unit="г">60 г</span>
+                <span class="shopping-hint">50 г в велюр + 10 г в подтёки. Здесь годится любое</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная</strong>:
+                <span class="shopping-qty" data-base-amount="720" data-unit="г">720 г</span>
+                <span class="shopping-hint">200 г — шоколадный, по 260 г — ванильный и красный бисквит</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок (всего)</strong>:
+                <span class="shopping-qty" data-base-amount="890" data-unit="г">890 г</span>
+                <span class="shopping-hint">840 г в три бисквита (по 280 г) + 50 г в конфи</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Какао-порошок</strong>:
+                <span class="shopping-qty" data-base-amount="75" data-unit="г">75 г</span>
+                <span class="shopping-hint">60 г тёмного в шоколадный бисквит, 15 г самого дешёвого (типа «Золотой ярлык») в красный — чтобы не перекрыть цвет</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сода и разрыхлитель</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="ч. л.">3 ч. л.</span> соды (неполные) и <span class="shopping-qty" data-base-amount="4.5" data-unit="ч. л.">4,5 ч. л.</span> разрыхлителя
+                <span class="shopping-hint">По 1 ч. л. соды и 1,5 ч. л. разрыхлителя на каждый бисквит; соль — щепотка, есть на любой кухне</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин Dr. Oetker</strong>:
+                <span class="shopping-qty" data-base-amount="18" data-unit="г">18 г</span>
+                <span class="shopping-hint">10 г в мусс (сила 220 блюм) + 8 г в конфи</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ягодное пюре (малиновое)</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Готовое пюре или замороженная малина. Можно взять клубничное, манго, чернику, смородину, вишню, абрикос, персик — но не киви и не ананас</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лайм</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span>
+                <span class="shopping-hint">Цедра в мусс; цедру одного лайма можно не брать — по вкусу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ваниль</strong> — ванильная паста, ванильный сахар или ванилин
+                <span class="shopping-hint">В мусс (автор — 2 ч. л. пасты) и в ванильный бисквит</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Жирорастворимые красители</strong> — красный для велюра
+                <span class="shopping-hint">Нужен, если свечи красные, как у автора. Без краскопульта свечи делают из белого или цветного шоколада — тогда краситель не нужен</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Водорастворимый краситель</strong> — сухой или гелевый, красный
+                <span class="shopping-hint">Только в «красный» бисквит: кефир окрашивают до яркого красного</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шарики хрустящего наполнителя в бельгийском шоколаде</strong>
+                <span class="shopping-hint">По вкусу, для хрустинки в свечах; автор берёт шарики Callebaut, годятся и Maltesers</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — гитарная плёнка, скотч или изолента, пищевая плёнка
+                <span class="shopping-hint">Плёнка шириной 27 см на три трубы (по высоте свечи). Заменители: гладкий силиконовый или тефлоновый ковёр, пергамент для невысокой свечи. Для бисквита на одну свечу — три кольца Ø18 см с дном из фольги</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Украшение композиции</strong> — живые еловые ветки, ёлочные игрушки, подложка
+                <span class="shopping-hint">По вкусу. Торт застывший, поэтому ветки не проникают внутрь — но ель должна быть необработанной</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Шоколадные трубы-свечи (3 шт.)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="500" data-unit="г">500 г</span> — Тёмный шоколад 54,5%
+              <span class="ingredient-note">Можно молочный, белый или цветной — температурный режим ниже; расход — на три трубы Ø7, 6 и 5 см высотой 27 см</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="5" data-unit="г">5 г</span> — Какао-масло Mycryo
+              <span class="ingredient-note">1 % от веса темперируемого шоколада. Только Mycryo — другое какао-масло для посева не подойдёт</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Мусс на белом шоколаде (выход 1040–1050 г)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="260" data-unit="г">260 г</span> — Сливки 33–35% (первая порция, в англез)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Желтки
+              <span class="ingredient-note">Примерно 2,5 желтка</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Белый шоколад
+              <span class="ingredient-note">Хороший, без заменителей какао-масла — от него держится форма мусса</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Желатин
+              <span class="ingredient-note">Dr. Oetker, сила 220 блюм</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Вода (для желатина)
+              <span class="ingredient-note">Холодная, или ледяная</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="460" data-unit="г">460 г</span> — Сливки 33–35% (вторая порция, полувзбитые)
+              <span class="ingredient-note">Холодные, прямо из холодильника</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Цедра 1–2 шт. — Лайм
+              <span class="ingredient-note">По желанию, но именно она даёт муссу свежесть</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Ваниль (паста, сахар или ванилин)
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Шоколадный шифоновый бисквит (противень 30×40, выход 800–850 г)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Мука пшеничная
+              <span class="ingredient-note">Просеять с какао, содой и разрыхлителем</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="280" data-unit="г">280 г</span> — Сахар
+              <span class="ingredient-note">В сухую смесь</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Какао-порошок
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Сода (неполная)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1.5" data-unit="ч. л.">1,5 ч. л.</span> — Разрыхлитель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Щепотка — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span> — Яйца С1
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="88" data-unit="г">88 г</span> — Масло растительное
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Сметана
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="мл">125 мл</span> — Вода горячая
+              <span class="ingredient-note">Вводится тонкой струйкой при работающем миксере</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Ванильный шифоновый бисквит (противень 30×40, выход 800–850 г)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="260" data-unit="г">260 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="280" data-unit="г">280 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Сода (неполная) и <span class="ingredient-qty" data-base-amount="1.5" data-unit="ч. л.">1,5 ч. л.</span> разрыхлителя
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Щепотка — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Ванильный сахар или ванилин
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span> — Яйца С1
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="88" data-unit="г">88 г</span> — Масло растительное
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Кефир
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="мл">125 мл</span> — Вода горячая
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Красный шифоновый бисквит (противень 30×40, выход 800–850 г)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="260" data-unit="г">260 г</span> — Мука пшеничная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Какао-порошок
+              <span class="ingredient-note">Типа «Золотой ярлык» — самый дешёвый, чтобы не перекрывать цвет</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="280" data-unit="г">280 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Сода (неполная) и <span class="ingredient-qty" data-base-amount="1.5" data-unit="ч. л.">1,5 ч. л.</span> разрыхлителя
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Щепотка — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span> — Яйца С1
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="88" data-unit="г">88 г</span> — Масло растительное
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Кефир
+              <span class="ingredient-note">Краситель вводится именно в кефир — до яркого красного</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Краситель красный сухой или гелевый
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="мл">125 мл</span> — Вода горячая
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Универсальное ягодное конфи</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Пюре малиновое
+              <span class="ingredient-note">Или клубничное, манго, черника, смородина, вишня, абрикос, персик. Нельзя: киви и ананас</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сахар
+              <span class="ingredient-note">Автор даёт вилку 40–60 г — по сладости ягоды</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="8" data-unit="г">8 г</span> — Желатин Dr. Oetker
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Вода холодная
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Шоколадный велюр</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Какао-масло
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="75" data-unit="г">75 г</span> — Белый шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Краситель жирорастворимый
+              <span class="ingredient-note">Щедро: велюр ложится тончайшим слоем. Для белого цвета — диоксид титана в порошке</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Подтёки-воск</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Белый шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Какао-масло (любое)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Краситель жирорастворимый
+              <span class="ingredient-note">Можно добавить остатки велюра — цвет уже раскрыт</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Сборка и декор</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Шарики хрустящего наполнителя в шоколаде
+              <span class="ingredient-note">Шарики Callebaut или Maltesers — слой хрустинки между бисквитом и конфи</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Еловые ветки, ёлочные игрушки, плотная подложка
+              <span class="ingredient-note">Торт снаружи жёсткий — ветки внутрь не проникают</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Формы для свечей из гитарной плёнки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Специальная форма не нужна: трубы сворачиваются из листов гитарной плёнки. Автор нарезает три листа шириной 27 см и скручивает три трубы высотой 27 см — диаметром 7, 6 и 5 см. Стык плёнки заклеивается снаружи и внутри, сверху и снизу: в видео это скотч или изолента, а в четырёх-пяти местах — на всякий случай.
+                <span class="source-badge">⏱ Урок_02: 00:00:21–00:02:41</span>
+              </p>
+              <p>
+                Вместо гитарной плёнки подойдёт гладкий силиконовый ковёр или гладкий тефлоновый ковёр — работать с ними даже проще, потому что форма устойчивее. Минус силиконового ковра — заметный шов на свече. Пергамент годится, если свеча невысокая. Форма многоразовая: шоколад застыл, плёнку раскрыли, свернули заново.
+                <span class="source-badge">⏱ Урок_02: 00:00:41–00:01:28</span>
+              </p>
+              <div class="tip-box">
+                <strong>Не делайте узкие свечи:</strong> труба Ø6–7 см — оптимум, в узкую почти невозможно залить мусс. Чем короче труба, тем легче в ней работать. Свечей может быть сколько угодно — хоть одна; автор советует новичкам сразу взять силиконовый ковёр вместо плёнки.
+                <span class="source-badge">⏱ Урок_02: 00:01:29–00:01:38</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Высота труб: <strong>27 см</strong></span>
+              <span class="param-pill">🔄 Диаметры: <strong>7, 6 и 5 см</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Гитарная плёнка, скотч, линейка</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Труба держит форму, стык проклеен</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Темперирование шоколада с какао-маслом Mycryo</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Растопите шоколад пульсами в микроволновке (первые 30 секунд, дальше по 15 секунд, каждый раз перемешивая — иначе шоколад начнёт гореть) или на водяной бане, следя, чтобы вода не касалась шоколада. Тёмный — до 40–45 °C, молочный, белый и цветной — не выше 40 °C.
+                <span class="source-badge">⏱ Урок_03: 00:00:00–00:01:20</span>
+              </p>
+              <p>
+                Дальше шоколад не трогайте и не перемешивайте: он сам остынет при комнатной температуре до 35 °C для тёмного и до 34 °C для молочного, белого и цветного.
+                <span class="source-badge">⏱ Урок_03: 00:01:20–00:01:55</span>
+              </p>
+              <p>
+                Сделайте посев: насыпьте 1 % Mycryo от веса шоколада — на 500 г это 5 г. Руками порошок лучше не трогать: от температуры рук он течёт и липнет. Тщательно перемешайте до рабочей температуры — 31–32 °C для тёмного, 29–30 °C для молочного, белого и цветного.
+                <span class="source-badge">⏱ Урок_03: 00:01:56–00:03:07</span>
+              </p>
+              <div class="warning-box">
+                <strong>Только Mycryo:</strong> другое какао-масло для посева не подойдёт, и такое же дома не сделать. Купить можно в любом кондитерском магазине, в том числе на развес. Если шоколад остыл сильнее нужного — короткими импульсами в микроволновке верните рабочую температуру.
+                <span class="source-badge">⏱ Урок_03: 00:03:07–00:03:36</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Растопить: <strong>тёмный 40–45 °C, остальные ≤ 40 °C</strong></span>
+              <span class="param-pill">🌡 Остыть: <strong>тёмный 35 °C, остальные 34 °C</strong></span>
+              <span class="param-pill">🌡 Рабочая: <strong>тёмный 31–32 °C, остальные 29–30 °C</strong></span>
+              <span class="param-pill">⚖ Mycryo: <strong>1 % от веса шоколада</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Отливка шоколадных труб</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Перелейте темперированный шоколад в кондитерский мешок — так удобнее. Низ трубы затяните пищевой плёнкой, залейте шоколад и по всем краям покройте стенки. Слой нужен тонкий: если остались просветы, процедуру можно повторить. Затем переверните тубус, чтобы шоколад стёк по стенкам во вторую сторону, и поставьте застывать.
+                <span class="source-badge">⏱ Урок_04: 00:00:01–00:01:21</span>
+              </p>
+              <p>
+                Для более жидкого течения автор советует держать рабочую температуру ближе к верхней границе. Как шоколад стабилизировался, трубы можно переложить в холодильник или морозилку; когда они затвердели — снимите скотч и раскройте плёнку.
+                <span class="source-badge">⏱ Урок_04: 00:01:25–00:02:30</span>
+              </p>
+              <p>
+                Трубы сразу распилите под свою композицию: нагрейте нож в чайнике с горячей водой, обязательно вытрите насухо — вода и шоколад не дружат — и режьте не торопясь, подровняв край.
+                <span class="source-badge">⏱ Урок_04: 00:02:41–00:03:29</span>
+              </p>
+              <div class="tip-box">
+                <strong>Монтаж на подложку:</strong> один край свечи оплавляется в сотейнике и сразу приклеивается к подложке — поднос должен быть плотным, почти не гнуться, иначе подложите доску. Свеча должна стоять неподвижно, иначе мусс вытечет. Можно и наоборот: залить мусс в трубы на доске, а на подложку перенести застывшими.
+                <span class="source-badge">⏱ Урок_04: 00:03:49–00:04:21</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Расход: <strong>500 г на 3 трубы 27 см</strong></span>
+              <span class="param-pill">🧊 Застывание: <strong>До твёрдости, можно в холодильнике или морозилке</strong></span>
+              <span class="param-pill">🔪 Подрезка: <strong>Нож, нагретый и вытертый насухо</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Труба твёрдая, стенки ровные, без наплывов</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Шоколадный велюр для покраски</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Велюр не обязателен: если трубы из белого шоколада, сразу переходите к наполнению. Для ярко-красных свечей, как у автора, смешайте 50 г какао-масла и 75 г белого шоколада и расплавьте пульсами, каждый раз перемешивая. Введите жирорастворимый краситель — щедро, потому что велюр ложится тончайшим слоем — перемешайте лопаткой и пробейте погружным блендером.
+                <span class="source-badge">⏱ Урок_05: 00:00:01–00:02:27</span>
+              </p>
+              <p>
+                Массу оставьте застыть до следующего дня: при повторном растапливании цвет раскроется ярче. Потом процедите через сито, перелейте в одноразовый стаканчик и работайте краскопультом. Готовый велюр хранится 6 месяцев при комнатной температуре; если нужен белый цвет — белый шоколад подкрашивают порошком диоксида титана.
+                <span class="source-badge">⏱ Урок_05: 00:02:37–00:02:49</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не близко к изделию:</strong> велюр наносится на хорошо охлаждённый или замороженный торт, держа краскопульт примерно в 25 см и проходя несколько раз тонким слоем. Лучше пройтись по одному месту несколько раз, чем один раз залить так, что велюр потечёт.
+                <span class="source-badge">⏱ Урок_10: 00:03:54–00:04:18</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Состав: <strong>50 г какао-масла + 75 г белого шоколада</strong></span>
+              <span class="param-pill">📏 Дистанция: <strong>~25 см до торта</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Погружной блендер, краскопульт</strong></span>
+              <span class="param-pill">⚙️ Краскопульт: <strong>Колесико дисперсности на «минус»</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Мусс на белом шоколаде с лаймом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Желатин залейте холодной или ледяной водой — 10 г на 50 г. В сотейник отправьте 260 г сливок, ваниль (автор кладёт 2 ч. л. пасты — мусса много) и 50 г желтков. Перемешайте до включения нагрева, затем грейте на минимальном огне, постоянно прорабатывая дно, чтобы не получился омлет.
+                <span class="source-badge">⏱ Урок_07: 00:00:48–00:02:26</span>
+              </p>
+              <p>
+                Доведите массу до 80 °C — оставшиеся градусы наберёт горячий сотейник, итоговые 82–84 °C — или до первого «булька». Сразу перелейте на 250 г белого шоколада, дайте ему минуточку и перемешайте, затем пробейте блендером. Пока масса горячая, введите набухший желатин и размешивайте, пока он полностью не разойдётся; если масса остыла — подогрейте желатин в микроволновке и добавьте жидким.
+                <span class="source-badge">⏱ Урок_07: 00:02:28–00:03:56</span>
+              </p>
+              <p>
+                Натрите цедру одного-двух лаймов и перемешайте с эмульсией. Оставьте остывать до 25–28 °C, а тем временем взбейте 460 г холодных сливок 33 % и выше до полувзбитого состояния.
+                <span class="source-badge">⏱ Урок_07: 00:07:35–00:07:44</span>
+              </p>
+              <div class="warning-box">
+                <strong>Полувзбитые — значит полувзбитые:</strong> венчик оставляет рисунок, и он исчезает. Жидкие сливки не держат, плотные сделают мусс густым — его нельзя будет залить в свечу. Соединяйте лопаткой поднимающими движениями, вращая миску, никаких венчиков.
+                <span class="source-badge">⏱ Урок_07: 00:05:26–00:08:26</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Англез: <strong>80 °C на плите (82–84 °C) или первый бульк</strong></span>
+              <span class="param-pill">🌡 Эмульсия: <strong>25–28 °C перед сливками</strong></span>
+              <span class="param-pill">🥣 Инструмент: <strong>Блендер, венчик, лопатка</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Рисунок от венчика исчезает</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Три шифоновых бисквита — одна технология</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Духовку разогрейте до 180 °C с конвекцией. Муку просейте с какао (если есть), содой и разрыхлителем, добавьте сахар и соль и перемешайте. Сметану или кефир соедините с яйцами и растительным маслом и перемешайте миксером. Влейте горячую воду тонкой струйкой, не выключая миксер, и смешайте с сухими ингредиентами до однородности.
+                <span class="source-badge">⏱ Урок_09: 00:04:17–00:04:23</span>
+              </p>
+              <p>
+                Разница только в жидкой части: шоколадный бисквит — на 125 г сметаны и 60 г какао; ванильный — на 125 г кефира с ванильным сахаром; красный — на кефире, в который сначала вводят краситель до яркого красного, плюс 15 г самого дешёвого какао, чтобы не перебить цвет. В красном бисквите порядок тот же, что в ванильном.
+                <span class="source-badge">⏱ Урок_08: 00:00:01–00:00:06</span>
+              </p>
+              <p>
+                Выпекайте одним коржом на противне 30×40 см 10–12 минут. Готовый корж остудите и нарежьте кусочками для свечей.
+                <span class="source-badge">⏱ Урок_08: 00:00:07–00:00:21</span>
+              </p>
+              <div class="tip-box">
+                <strong>Только для «Зажигай»:</strong> полная рецептура — это целый противень, на свечи столько не нужно. На одну свечу высотой 20 см и Ø7 см идёт 200 г бисквита: все ингредиенты делят на 4 и выпекают в кольцах Ø18 см, у которых дно сформировано из фольги, а на дно положен круг пергамента. Время выпечки то же. Остатки полной рецептуры идут на бисквитный торт или в морозилку.
+                <span class="source-badge">⏱ Урок_09: 00:04:17–00:05:00</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>180 °C с конвекцией</strong></span>
+              <span class="param-pill">⏱ Время: <strong>10–12 мин на противне 30×40</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Миксер, противень или кольца Ø18 см</strong></span>
+              <span class="param-pill">📏 На свечу: <strong>200 г бисквита (Ø7 см, высота 20 см)</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Универсальное ягодное конфи</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Рецепт общий для большинства ягод и плодов: малина, клубника, вишня, черешня, чёрная смородина, черника, абрикос, персик, манго. Меняется только пюре — технология та же. Начинаем с желатина: 8 г залейте 40 г холодной воды и перемешайте — задача не растворить его, а «взъерошить», чтобы на дне не осталось сухих частиц, и оставьте на 5–10 минут.
+                <span class="source-badge">⏱ Урок_08: 00:01:26–00:02:54</span>
+              </p>
+              <p>
+                Пюре с сахаром (40–60 г по сладости ягоды) доведите до кипения, но не кипятите и не ждите смены цвета — сразу выключите. Когда кипение уляжется, введите набухший желатин и перемешайте до полного растворения. Горячую начинку разлейте по формам и уберите в морозилку.
+                <span class="source-badge">⏱ Урок_08: 00:02:55–00:04:36</span>
+              </p>
+              <div class="warning-box">
+                <strong>Киви и ананас — нельзя:</strong> в них ферменты разрушают желатин, конфи не застынет. Разливать можно в кольца, затянутые плёнкой, в силиконовые формы или в кондитерский мешок — но из мешка отсаживают незамороженную начинку. Хранится месяц в морозилке или 72 часа в холодильнике.
+                <span class="source-badge">⏱ Урок_08: 00:04:14–00:04:20</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍓 Пюре: <strong>200 г малинового (или другого)</strong></span>
+              <span class="param-pill">⚖ Желатин: <strong>8 г + 40 г воды</strong></span>
+              <span class="param-pill">🧊 Хранение: <strong>Месяц в морозилке, 72 ч в холодильнике</strong></span>
+              <span class="param-pill">🚫 Запрет: <strong>Киви и ананас</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Расчёт количества через объём свечи</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                У всех будут разные трубы, поэтому количество считается геометрией. Измерьте внутренний диаметр и высоту и посчитайте объём цилиндра: V = π·r²·h. Автор считает пример на свечу высотой 20 см и Ø7 см: 3,14 × 3,5² × 20 = 769,3 см³ ≈ 769 мл ≈ 0,77 л.
+                <span class="source-badge">⏱ Урок_09: 00:00:05–00:00:14</span>
+              </p>
+              <p>
+                Из этого объёма 1/3 — мусс, 1/3 — бисквит, 1/3 — конфи. Ориентир «1 литр мусса ≈ 650 г»: на 1 литр мусса требуется 250 г бисквита и 250 г конфи. Дальше — коэффициент 0,77 / 1 = 0,77, и получаем 500 г мусса (1/2 рецептуры), 195 г бисквита (1/4) и 195 г конфи (2/3).
+                <span class="source-badge">⏱ Урок_09: 00:00:14–00:00:25</span>
+              </p>
+              <div class="tip-box">
+                <strong>Сделайте мусса с запасом:</strong> если бисквит вышел плотнее или конфи оказалось меньше, всё недостающее можно долить муссом. Вес мусса в литре зависит от того, сколько воздуха в полувзбитых сливках, поэтому пропорция ориентировочная.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📐 Формула: <strong>V = π·r²·h (внутренний диаметр)</strong></span>
+              <span class="param-pill">⚖ 1 л мусса: <strong>≈ 650 г</strong></span>
+              <span class="param-pill">🔢 Пропорция: <strong>1/3 мусс, 1/3 бисквит, 1/3 конфи</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Сборка свечей</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Мусс перелейте в ковшик — так удобнее. На дно свечи — небольшое количество мусса, затем бисквит, несколько кусочков конфи, снова мусс. Середину можно «оживить» горстью шариков в бельгийском шоколаде — это слой хрустинки, годится и Maltesers. Слои чередуйте до верха, а хрупкую стройную свечу собирайте понемногу.
+                <span class="source-badge">⏱ Урок_09: 00:00:45–00:03:20</span>
+              </p>
+              <p>
+                В одну свечу идёт один вид бисквита и один вид конфи — поэтому у автора три разные свечи: манговая с ванильным бисквитом, «красный бархат» и белый бисквит со смородиновым конфи. Заливайте по всей поверхности равномерно, чтобы давление распределялось ровно.
+                <span class="source-badge">⏱ Урок_09: 00:03:00–00:05:36</span>
+              </p>
+              <p>
+                Когда все свечи залиты, капли и крошки уберите уже после застывания. Конструкцию отправьте стабилизироваться не менее чем на 6 часов — в холодильник, в морозилку или на балкон, где минус 20: в морозилке велюр ляжет мельче и качественнее.
+                <span class="source-badge">⏱ Урок_09: 00:06:06–00:06:34</span>
+              </p>
+              <div class="warning-box">
+                <strong>Мусс должен течь:</strong> если в процессе работы он начал застывать, прогрейте его в микроволновке короткими пульсами — его нужно заливать, а не накладывать ложкой. Конфи, которое не до конца застыло, выкладывают ложкой кусочками.
+                <span class="source-badge">⏱ Урок_09: 00:04:17–00:04:23</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Стабилизация: <strong>Не менее 6 часов</strong></span>
+              <span class="param-pill">🍫 Слои: <strong>Мусс → бисквит → конфи → шарики → мусс</strong></span>
+              <span class="param-pill">📏 На свечу: <strong>1 вид бисквита + 1 вид конфи</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Велюр краскопультом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Автор работает краскопультом Wagner W100: в колбу ставится одноразовый стаканчик с горячим велюром — так посуда не пачкается и легко моется горячей водой с Fairy. Колечко дисперсности крутят в сторону «минус» — частички должны быть мелкими, а не как при покраске забора.
+                <span class="source-badge">⏱ Урок_10: 00:00:44–00:03:17</span>
+              </p>
+              <p>
+                Торт достают только когда всё готово. Сначала проверьте распыл на коробке, подкрутите колесико, затем покрывайте свечи тонким слоем, несколько раз проходя одно место. Если краскопульта нет — делайте свечи сразу из белого или цветного шоколада и пропустите этот этап.
+                <span class="source-badge">⏱ Урок_10: 00:03:43–00:04:18</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Состояние торта: <strong>Охлаждённый или замороженный</strong></span>
+              <span class="param-pill">📏 Дистанция: <strong>~25 см</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Wagner W100, погружной блендер</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Ровный тонкий бархат без потёков</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 11 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Подтёки-воск и новогодняя композиция</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Это не классические шоколадные подтёки, а «воск», который стекает с горящей свечи. 80 г белого шоколада растопите с 10 г какао-масла — любого; сюда же уйдут остатки велюра, цвет у него уже раскрыт, плюс немного жирорастворимого красителя, если не хватает яркости. Если краситель не расходится — пробейте блендером.
+                <span class="source-badge">⏱ Урок_11: 00:00:01–00:01:37</span>
+              </p>
+              <p>
+                Масса жидкая и текучая — почти чистый шоколад, поэтому она хорошо застынет на шоколадном каркасе. Делайте подтёки не по всему периметру: на настоящих свечах воск течёт не везде, иногда с одной стороны. Когда схватится, пройдитесь ещё раз, чтобы получить наслоение и «махровый» воск.
+                <span class="source-badge">⏱ Урок_11: 00:01:46–00:02:57</span>
+              </p>
+              <p>
+                Как подтёки застыли, в тортики вставляют фитили для шоу и собирают новогоднюю композицию на ваш вкус. Автор не побоялась взять живую ель: торт снаружи жёсткий, ветки внутрь не проникают.
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Состав: <strong>80 г белого шоколада + 10 г какао-масла</strong></span>
+              <span class="param-pill">🖌 Нанесение: <strong>Ложкой или из мешка, слоями</strong></span>
+              <span class="param-pill">🎄 Декор: <strong>Живая ель, ёлочные игрушки, подложка</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Подтёки застыли и держат форму</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Торт делается заранее:</strong> его можно заморозить и достать 31 декабря — в этом и есть задумка. Мусс живёт 72 часа в холодильнике, 30 дней в морозилке.</li>
+                <li><strong>Чем больше какао-масла, тем легче:</strong> шоколад 54,5 % темперируется проще. Но трубы можно сделать из молочного, белого и цветного — режимы отличаются только температурами.</li>
+                <li><strong>Новичкам — силиконовый ковёр:</strong> форма из ковра держится лучше, хотя оставляет заметный шов. Гитарная плёнка даёт гладкую свечу, но требует аккуратности.</li>
+                <li><strong>Ультрафиолет и цвет:</strong> велюр делают накануне и переплавляют на следующий день — так цвет раскрывается ярче, а красителя можно класть больше, потому что слой тонкий.</li>
+                <li><strong>Одна свеча — тоже торт:</strong> столько свечей, сколько вам нужно, не обязательно три. И можно сделать одну трубу и распилить её на три средние свечи.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Шоколад не перемешивают между пульсами:</strong> он начинает гореть. После каждой 15-секундной микроволновки — лопатка.</li>
+                <li><strong>Остывший шоколад тревожат:</strong> запускают планетарный миксер и мешают, пока тот остывает, — этого делать не нужно, он должен спокойно опуститься до 35 или 34 °C.</li>
+                <li><strong>Слишком узкая или короткая свеча:</strong> в узкую почти невозможно залить мусс, а в короткой трубе неудобно работать.</li>
+                <li><strong>Мокрый нож при подрезке:</strong> вода и шоколад не дружат — клинки греют и вытирают насухо, режут без спешки.</li>
+                <li><strong>Плотные вместо полувзбитых сливок:</strong> мусс не заливается, а накладывается ложкой, слои получаются рваными.</li>
+                <li><strong>Киви или ананас в конфи:</strong> ферменты разрушают желатин, начинка не застынет.</li>
+                <li><strong>Свеча плохо приклеена к подложке:</strong> мусс вытечет через щель между трубой и подставкой.</li>
+                <li><strong>Велюр льётся одним движением:</strong> появляются потёки — нужно несколько тонких проходов с расстояния.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> вебинар «Торт «Зажигай»» Надежды Зубовой — DOCX с точными граммовками (главный по количествам) и расшифровка видео из 11 уроков (последовательность, температуры, время, советы). Урок_01–05 — каркас, Урок_07 — мусс, Урок_08 — бисквиты и конфи, Урок_09 — расчёт и сборка, Урок_10 — велюр, Урок_11 — подтёки.</li>
+              <li><strong>Урок_06.mp4 битый:</strong> файл весит 167 КБ и в расшифровке от него осталась одна фраза — «Что нам для этого понадобится?». Содержание урока восстановить нельзя; по логике вебинара это конец этапа с велюром, но на странице он не отражён.</li>
+              <li><strong>Температура англеза:</strong> в DOCX указано 82–84 °C, в видео автор греет до 80 °C с расчётом, что горячий сотейник добавит два градуса. На странице даны оба ориентира.</li>
+              <li><strong>Сахар в конфи:</strong> в DOCX 40–60 г, в видео сахар добавляют «по весу». На странице стоит среднее — 50 г.</li>
+              <li><strong>Подтёки:</strong> в DOCX 80 г белого шоколада + 10 г какао-масла; в видео автор дополнительно вводит остатки велюра и краситель. Оба варианта описаны в шаге 11.</li>
+              <li><strong>Краситель в красный бисквит:</strong> количество в DOCX не указано («до яркого красного цвета»), поэтому на странице он «по вкусу» без веса.</li>
+              <li><strong>Шарики из шоколада:</strong> в видео в сборку идут шарики Callebaut и упоминаются Maltesers; в DOCX этого ингредиента нет. На странице — «по вкусу», в расчёт пищевой ценности не входят.</li>
+              <li><strong>Ягоды свечей:</strong> в DOCX одно универсальное конфи, а в видео свечи собирают с манговым и смородиновым конфи и с малиной. На странице — малиновое, как в DOCX, с оговоркой о замене.</li>
+              <li><strong>Желатин (18 г в покупках):</strong> 10 г на мусс и 8 г на конфи. DOCX говорит хранить мусс 72 часа в холодильнике и 30 дней в морозилке, держать при этом можно и «на балконе, где минус 20» — на странице это отражено в шаге 9.</li>
+              <li><strong>Срок годности велюра:</strong> DOCX — 6 месяцев при комнатной температуре.</li>
+              <li><strong>КБЖУ:</strong> расчёт авторского, не общеизвестного рецепта — по рецептуре DOCX с средними табличными значениями; часть мусса и бисквита в итоге остаётся вне труб, поэтому вес готового торта меньше.</li>
+              <li><strong>Фото:</strong> снимок торта из папки рецепта (Торт_Зажигай.jpg), композиция из трёх красных свечей с еловыми ветками — именно она послужила основой для описания декора.</li>
+              <li><strong>Сборка с Matcha и другие этикеты:</strong> в видео и DOCX из марок названы Wagner W100, шоколад Callebaut 54,5 %, какао-масло Mycryo и желатин Dr. Oetker. Они указаны как справочные: подойдут любые аналоги без заменителей какао-масла, а для посева — только Mycryo.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

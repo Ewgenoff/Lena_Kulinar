@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пасха «Сникерс» с солёной карамелью и арахисом — пошаговый рецепт | CookBook</title>
+  <meta name="description" content="Творожная пасха «Сникерс»: творог 9% с маслом и заварной частью, мраморная сборка из ганаша и солёной карамели с жареным арахисом. Форма 800 мл или три бумажных стакана, холодильник 8–10 часов.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧁</text></svg>">
+</head>
+<body data-recipe-id="pasha-snikers">
+
+    <header class="site-header">
+    <div class="header-container">
+      <div class="header-back">
+        <a href="../index.html" class="back-link"><span class="back-arrow">←</span><span class="back-text">Назад</span></a>
+      </div>
+      <a href="../index.html" class="brand">
+        <img src="../assets/images/logo.png" alt="Логотип" aria-hidden="true" class="brand-logo" width="241" height="200">
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 <span class="btn-text">Печать рецепта</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Пасха «Сникерс» с солёной карамелью и арахисом</h1>
+      <div class="recipe-intro-split">
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-label">Активное время</span>
+            <span class="fact-value">≈1 час</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Пассивное время</span>
+            <span class="fact-value">8–10 часов</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Общее время</span>
+            <span class="fact-value">≈10–11 часов</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Выход</span>
+            <span class="fact-value">1 пасха ≈800 мл</span>
+          </div>
+        </div>
+
+        <p class="recipe-lead">
+          Творожная пасха, которая на вкус и правда напоминает батончик: внутри жареный арахис в солёной карамели и шоколадный ганаш, и всё это перемешано с творожной массой всего несколькими движениями — чтобы вышло мраморно, а не однотонно. Творог здесь пробивается блендером до гладкости, а заварная часть из сливок и яиц пастеризуется до первого булька. Пасха стоит в холодильнике 8–10 часов — её можно делать в разъёмной форме на 800 мл или в трёх обычных бумажных стаканах с дырочками.
+        </p>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/pasha-snikers.jpg" alt="Пасха «Сникерс» с карамельной шапкой, арахисом и ягодами" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 пасха)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">пасха</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — одна пасха объёмом около 800 мл. Вместо формы можно взять три бумажных стакана по 250 мл; марли тогда нужно около 1 м.
+          </p>
+        </div>
+
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">332</td>
+                <td>10,6 г</td>
+                <td>23,8 г</td>
+                <td>18,2 г</td>
+              </tr>
+              <tr>
+                <th>Пасха<span class="kbju-sub">≈ 1,2 кг</span></th>
+                <td class="kbju-kcal"><span data-base-amount="4120" data-unit="ккал">4120 ккал</span></td>
+                <td><span data-base-amount="131" data-unit="г">131 г</span></td>
+                <td><span data-base-amount="295" data-unit="г">295 г</span></td>
+                <td><span data-base-amount="225" data-unit="г">225 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Карамель по рецепту варят с запасом, поэтому в расчёт вошли только 150 г готовой карамели, которые идут в пасху, а не весь сироп с сахаром и сливками.</p>
+            <p>Объём пасхи ≈ 800 мл, масса чуть больше за счёт плотного ганаша. Порция 1/8 — ≈ 515 ккал.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> пасху</span>
+        </div>
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Творог, масло, сливки</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творог 9%</strong>:
+                <span class="shopping-qty" data-base-amount="500" data-unit="г">500 г</span>
+                <span class="shopping-hint">Максимально сухой: сыворотку слить. Из творога ниже 9% масса разжижается</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="175" data-unit="г">175 г</span>
+                <span class="shopping-hint">140 г размягчённого в пасху + 35 г в солёную карамель</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливки 30% и выше</strong>:
+                <span class="shopping-qty" data-base-amount="270" data-unit="г">270 г</span>
+                <span class="shopping-hint">70 г в заварную часть + 40 г в ганаш + 160 г в карамель</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥚 Яйца, сахар, карамель</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца С1</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="шт." data-piece="true">2 шт.</span>
+                <span class="shopping-hint">Нужно 100 г яйца без скорлупы</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="220" data-unit="г">220 г</span>
+                <span class="shopping-hint">70 г в пасху + 150 г в солёную карамель</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="г">3 г</span>
+                <span class="shopping-hint">Половина чайной ложки в карамель</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Желатин</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="г">2 г</span>
+                <span class="shopping-hint">В карамель; плюс 10 г холодной воды</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                <span class="shopping-hint">Для ганаша; у автора — тёмный</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Арахис</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Жареный и рубленый, не солёный. Кешью и фундук тоже подойдут, грецкие — нет: окрасят творог</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧰 Инвентарь и декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Марля</strong>:
+                <span class="shopping-hint">Около 50 см на одну форму; для трёх стаканов — 1 м. Продаётся в аптеке</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Форма на 800 мл</strong>
+                <span class="shopping-hint">Или три бумажных стакана по 250 мл — их прокалывают ножницами</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Орехи и свежие ягоды для верха</strong>
+                <span class="shopping-hint">Ягоды прилипают к карамели с желатином и не сползают</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Заварная часть</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Сливки 33%
+              <span class="ingredient-note">Только жирные</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Яйцо
+              <span class="ingredient-note">Два яйца С1</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Сахар
+              <span class="ingredient-note">Рассчитан с учётом карамели и шоколада</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Творожная основа</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="500" data-unit="г">500 г</span> — Творог 9%
+              <span class="ingredient-note">Сыворотку слить; пробить блендером или протереть</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="140" data-unit="г">140 г</span> — Сливочное масло 82,5% размягчённое
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Ганаш и начинка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Шоколад
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Сливки 30% и выше (в ганаш)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Готовая солёная карамель
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Арахис жареный рубленый
+              <span class="ingredient-note">Крупная крошка, не в муку</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Солёная карамель (получится больше, чем нужно)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Вода
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="35" data-unit="г">35 г</span> — Сливочное масло 82,5% размягчённое
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Сливки 33% горячие
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Половина чайной ложки соли
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Желатин
+              <span class="ingredient-note">Плюс 10 г холодной воды</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Заварная часть</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В сотейник влейте жирные сливки, добавьте яйцо и сахар. Поставьте на небольшой огонь и варите при интенсивном постоянном помешивании — иначе пригорит — до первого булька. Температура не выше 84 °C.
+                <span class="source-badge">⏱ Урок_03: 01:10:07–01:14:52</span>
+              </p>
+              <p>
+                Сразу переложите массу в миску, чтобы она быстрее остыла, пройдитесь венчиком от комочков и уберите в холодильник. По консистенции это жидкая сгущёнка, при остывании она загустеет.
+                <span class="source-badge">⏱ Урок_03: 01:14:57–01:15:54</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не перегрейте:</strong> выше 84 °C масса начнёт сильно пахнуть яйцом. Проще всего ориентироваться на первый бульк.
+                <span class="source-badge">⏱ Урок_03: 01:13:43–01:13:49</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>не выше 84 °C</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Первый бульк</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Ганаш</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Нагрейте 40 г сливок и залейте ими 70 г шоколада. Перемешайте до гладкости и дайте остыть — к моменту сборки ганаш должен быть холодным, но текучим.
+                <span class="source-badge">⏱ Урок_03: 01:09:52–01:10:02</span>
+              </p>
+              <div class="tip-box">
+                <strong>Если ганаш застыл за ночь:</strong> просто прогрейте его в микроволновке, он снова станет рабочим.
+                <span class="source-badge">⏱ Урок_03: 01:32:48–01:32:58</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Шоколад: <strong>70 г</strong></span>
+              <span class="param-pill">🥛 Сливки: <strong>40 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Творожная масса</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                С творога слейте отделившуюся сыворотку — влага в пасхе не нужна. Пробейте творог погружным блендером: если блендера нет, протрите через сито, тоже получится. Доведите массу до гладкости, без крупинок, но и не взбивайте полчаса — станет слишком жидкой и пасха будет долго стабилизироваться.
+                <span class="source-badge">⏱ Урок_03: 01:16:13–01:21:47</span>
+              </p>
+              <p>
+                Добавьте размягчённое масло и пробейте ещё раз. Если масло «дубовое», слегка подтопите его в микроволновке.
+                <span class="source-badge">⏱ Урок_03: 01:19:07–01:20:04</span>
+              </p>
+              <div class="warning-box">
+                <strong>Творог ниже 9%:</strong> масса разжижается, и пасха может не встать. Из слишком жидкого творога пасха не стабилизируется даже с маслом и карамелью.
+                <span class="source-badge">⏱ Урок_03: 01:17:59–01:18:06</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак: <strong>Гладкая пластичная масса</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Погружной блендер или сито</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Соединение с заварной частью</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В остывшую заварную часть введите творог с маслом и перемешайте лопаткой принимающими движениями. Масса немного разжижится, но не станет жидкой.
+                <span class="source-badge">⏱ Урок_03: 01:31:06–01:32:31</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Обе части: <strong>комнатной температуры</strong></span>
+              <span class="param-pill">🥣 Инструмент: <strong>Лопатка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Карамель с арахисом</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отвесьте 150 г готовой солёной карамели и слегка подогрейте её, чтобы ушли кристаллы сахара. Арахис тоже прогрейте — тёплым он лучше соединяется с карамелью.
+                <span class="source-badge">⏱ Урок_03: 01:24:54–01:26:22</span>
+              </p>
+              <p>
+                Смешайте карамель с орехами и перемешайте. Орехов по объёму получается даже больше, чем карамели — так и должно быть, чтобы начинка хрустела.
+                <span class="source-badge">⏱ Урок_03: 01:27:19–01:28:26</span>
+              </p>
+              <div class="tip-box">
+                <strong>Засахарилась карамель:</strong> причин две — слишком долго уваривали или качество сахара. Достаточно чуть-чуть прогреть: во влажной среде масса кристаллов не образуется.
+                <span class="source-badge">⏱ Урок_03: 01:25:29–01:26:18</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥜 Арахис: <strong>тёплый, крупная крошка</strong></span>
+              <span class="param-pill">🍯 Карамель: <strong>солёная, тёплая</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Форма и марля</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Можно взять разъёмную форму на 800 мл или три обычных бумажных стакана по 250 мл. Стаканчики поставьте на доску и проколите ножницами — часто по дну и дополнительно по бокам. Это отходные пути для сыворотки.
+                <span class="source-badge">⏱ Урок_03: 00:10:26–00:11:00</span>
+              </p>
+              <p>
+                Марлю намочите, накройте ею стакан и одним движением вдавите внутрь. Без марли пасху не вытащить: она деформируется. Стаканы поставьте в контейнер, чтобы удобно было убрать в холодильник.
+                <span class="source-badge">⏱ Урок_03: 01:28:50–01:30:27</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥤 Форма: <strong>800 мл или 3×250 мл</strong></span>
+              <span class="param-pill">🧺 Марля: <strong>50 см (1 м на стаканы)</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Мраморная сборка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выложите творожную массу так, чтобы с одной стороны была полоса ганаша, а с другой — карамель с арахисом. Перемешайте поднимающими движениями совсем немного раз: задача — не однородный микс, а мраморность, где видно и шоколад, и карамель.
+                <span class="source-badge">⏱ Урок_03: 01:32:32–01:34:19</span>
+              </p>
+              <p>
+                Разложите массу по формам. Оставьте примерно две столовые ложки — их будете подкладывать сверху, когда пасха начнёт оседать и отдавать сыворотку.
+                <span class="source-badge">⏱ Урок_03: 01:33:27–01:35:44</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍥 Рисунок: <strong>мраморный, не однородный</strong></span>
+              <span class="param-pill">🥄 Запас: <strong>≈2 ст. ложки массы</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Холодильник</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Накройте марлей и уберите в холодильник. Доставать не раньше чем через 8–10 часов. По ходу можно постучать формами, чтобы масса уплотнилась внутрь, и подложить остатки.
+                <span class="source-badge">⏱ Урок_03: 01:35:47–01:36:57</span>
+              </p>
+              <div class="tip-box">
+                <strong>Сроки хранения:</strong> в источниках не названы. Для творожной пасхи с заварной частью ориентир — до 72 часов в холодильнике.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Охлаждение: <strong>8–10 часов</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Пасха держит форму, сыворотка отошла</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Декор</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Пасха должна быть холодной — тогда карамель с желатином схватывается и стекает густыми каплями, а не растекается. Наносите карамель на макушку и пускайте подтёки по бокам.
+                <span class="source-badge">⏱ Урок_04: 00:52:04–00:53:37</span>
+              </p>
+              <p>
+                Сверху посыпьте орехами или выложите свежие ягоды — к карамели они прилипнут и никуда не денутся.
+                <span class="source-badge">⏱ Урок_04: 00:53:41–00:53:54</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Пасха: <strong>холодная</strong></span>
+              <span class="param-pill">🍯 Карамель: <strong>стекает густо</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Дети в восторге:</strong> орехи хрустят, и уже непонятно, что ешь — творог совсем не читается.</li>
+                <li><strong>Сахар рассчитан заранее:</strong> 70 г — с учётом того, что в пасху идут карамель и шоколад. Если убрать их, сахара будет мало.</li>
+                <li><strong>Орехи любые, кроме грецких:</strong> они окрашивают творог в грязноватый цвет. Кешью, фундук, миндаль — отлично.</li>
+                <li><strong>Солёная карамель:</strong> именно она воссоздаёт вкус батончика — в самом «Сникерсе» карамель тоже солёная.</li>
+                <li><strong>Можно без орехов:</strong> тогда пасха будет другой и не «Сникерс», но получится.</li>
+                <li><strong>Карамели получится больше:</strong> лишняя пригодится на декор и на подтёки.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Перегрели заварную часть:</strong> запах яйца и крупинки.</li>
+                <li><strong>Взяли творог ниже 9%:</strong> масса слишком жидкая, пасха не стабилизируется.</li>
+                <li><strong>Взбивали творог слишком долго:</strong> пасха будет вставать очень медленно.</li>
+                <li><strong>Перемешали ганаш с карамелью до однородности:</strong> вместо мрамора серый микс.</li>
+                <li><strong>Не продырявили стаканчики:</strong> сыворотке некуда уходить.</li>
+                <li><strong>Наносили карамель на тёплую пасху:</strong> потечёт сок, а не густые капли.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> серия «Французский пасхальный пирог, кулич кружевной, пасха Сникерс» Надежды Зубовой — DOCX с рецептурой и расшифровки Урок_03 (приготовление) и Урок_04 (декор).</li>
+              <li><strong>Солёная карамель:</strong> в DOCX дан состав, но пошаговая варка в этой расшифровке не показана — карамель к занятию уже была готова.</li>
+              <li><strong>Сливки:</strong> в рецептуре «30% и выше», в видео для заварной части названы 33%.</li>
+              <li><strong>Молочный шоколад:</strong> в видео упоминается, но в рецептуре указан просто шоколад — на странице он дан без уточнения.</li>
+              <li><strong>Сроки хранения:</strong> в источниках не названы, дан общий ориентир.</li>
+              <li><strong>Фото:</strong> кадр из видео — пасха с карамельной шапкой, рядом орехи и ягоды для декора.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

@@ -1,0 +1,710 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Трюфель «Кокос» (экстра) — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Кокосовый трюфель на смеси тёмного и молочного шоколада: 50 + 50 г, кокосовое молоко и кокосовое масло, инвертный сахар и глюкоза. Ганаш без сливок, стабилизация 6–8 ч, калибр 11–13 г, обвалка в кокосовой муке и стружке.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍬</text></svg>">
+</head>
+<body data-recipe-id="ekstra-tryufel-kokos">
+
+    <header class="site-header">
+    <div class="header-container">
+      <div class="header-back">
+        <a href="../index.html" class="back-link"><span class="back-arrow">←</span><span class="back-text">Назад</span></a>
+      </div>
+      <a href="../index.html" class="brand">
+        <img src="../assets/images/logo.png" alt="Логотип" aria-hidden="true" class="brand-logo" width="241" height="200">
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 <span class="btn-text">Печать рецепта</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Конфеты и сладости</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Трюфель «Кокос» (экстра)</h1>
+      <div class="recipe-intro-split">
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-label">Подготовка</span>
+            <span class="fact-value">~10 мин: отвесить шоколад и масло, дать им согреться до комнатной температуры</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Активное время</span>
+            <span class="fact-value">~25 мин + формовка ~20 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Пассивное время</span>
+            <span class="fact-value">6–8 ч стабилизации ганаша (можно до 24 ч)</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Общее время</span>
+            <span class="fact-value">~7–10 ч с учётом стабилизации</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Выход</span>
+            <span class="fact-value">≈ 12–16 конфет по 11–13 г</span>
+          </div>
+        </div>
+
+        <p class="recipe-lead">
+          Трюфель без сливок: жидкую часть даёт кокосовое молоко, жир — кокосовое масло, а шоколад берут пополам тёмный и молочный. Из-за молочной половины ганаш пластичнее и легче скатывается, чем сырный, и в нём отчётливо слышен кокос. Дальше — стабилизация, скатывание шариков 11–13 г и обвалка в кокосовой муке или стружке; по желанию конфету окунают в темперированный тёмный шоколад.
+        </p>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/ekstra-tryufel-kokos.jpg" alt="Кокосовые трюфели: круглые конфеты в кокосовой муке и стружке рядом с конфетами в тёмном шоколаде, на пергаменте" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 партия)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">партия (≈ 20 конфет)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — одна партия ганаша по DOCX: 164 г субстанции до покрытия, это ≈ 12–16 конфет. Автор называет ориентир «≈ 20 конфет», но число для кокосового ганаша в уроке не уточняет — смотрите блок «Источники, расхождения и пробелы».
+          </p>
+        </div>
+
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">535</td>
+                <td>5,2 г</td>
+                <td>40,4 г</td>
+                <td>38,9 г</td>
+              </tr>
+              <tr>
+                <th>Вся партия<span class="kbju-sub">≈ 229 г</span></th>
+                <td class="kbju-kcal"><span data-base-amount="1225" data-unit="ккал">1225 ккал</span></td>
+                <td><span data-base-amount="11.9" data-unit="г">11,9 г</span></td>
+                <td><span data-base-amount="92.4" data-unit="г">92,4 г</span></td>
+                <td><span data-base-amount="89.2" data-unit="г">89,2 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Считан ганаш целиком — тёмный шоколад ≈ 70 % какао, молочный шоколад, кокосовое молоко 17 % жирности, кокосовое масло, инвертный сахар и глюкозный сироп, — плюс темперированный тёмный шоколад на покрытие и кокосовая стружка для обвалки.</p>
+            <p>Взяты средние табличные значения: тёмный шоколад 550 ккал / 100 г, молочный 545, кокосовое молоко 152, кокосовое масло 892, сиропы по 300, кокосовая стружка 660. Если покрытие не делать, конфета весит ≈ 12 г и даёт ≈ 62 ккал.</p>
+            <p>Ганаш не варится, влага не выпаривается, поэтому вес почти равен сумме ингредиентов. Небольшой разброс будет только за счёт того, сколько шоколада останется на ладони и в миске.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> партию</span>
+        </div>
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+          Шоколад берите с какао-маслом в составе: на кондитерской глазури ганаш не соберётся, а покрытие из неё никогда не застынет. Кокосовое молоко годится консервированное, банки 200–400 мл, — из банки уходит всего 25 г, остальное пойдёт на другие блюда. Кокосовое масло покупайте небольшой баночкой: его тоже нужно 25 г. Инвертный сахар (тримолин) и глюкозный сироп продаются в кондитерских отделах, замена — мёд.
+        </p>
+
+        <div class="shopping-grid">
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🍫 Шоколад, кокос, сиропы</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Тёмный шоколад ≈ 70 %</strong>:
+                  <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                  <span class="shopping-hint">50 г в ганаш, 50 г на покрытие; нужен шоколад с какао-маслом</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Молочный шоколад</strong>:
+                  <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                  <span class="shopping-hint">В ганаш; вместе с тёмным даёт пластичность при скатывании</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Кокосовое молоко</strong>:
+                  <span class="shopping-qty" data-base-amount="25" data-unit="г">25 г</span>
+                  <span class="shopping-hint">Консервированное, жирное; банки 200 мл хватит на несколько партий</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Кокосовое масло</strong>:
+                  <span class="shopping-qty" data-base-amount="25" data-unit="г">25 г</span>
+                  <span class="shopping-hint">Комнатной температуры; замена — сливочное 82,5 %</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Инвертный сахар (тримолин)</strong>:
+                  <span class="shopping-qty" data-base-amount="7" data-unit="г">7 г</span>
+                  <span class="shopping-hint">Держит влагу и продлевает срок; замена — мёд 1:1</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сироп глюкозы</strong>:
+                  <span class="shopping-qty" data-base-amount="7" data-unit="г">7 г</span>
+                  <span class="shopping-hint">Нет глюкозы — просто исключить, по тримолину замена только мёдом</span>
+                </div>
+              </li>
+            </ul>
+            <h3 class="shopping-col-title" style="margin-top: 16px;">🥥 Обвалка</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Кокосовая стружка</strong>:
+                  <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                  <span class="shopping-hint">Можно смолоть в блендере в муку мелкого помола — так липнет ровнее</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Какао алкализованное</strong> — (опционально)
+                  <span class="shopping-hint">Второй вариант обвалки, «состаренный» эффект; лишнее снимают ситечком</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Кандурин</strong> — (опционально)
+                  <span class="shopping-hint">Серебряный или золотой, наносят кистью на трещинки готовых трюфелей</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🧰 Расходники и инвентарь</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Перчатки</strong> — не меньше двух пар
+                  <span class="shopping-hint">В перчатках ганаш меньше нагревается от рук, чем в ладонях</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Кухонные весы</strong> — с шагом 1 г
+                  <span class="shopping-hint">Бытовые весы плохо чувствуют малые веса — взвешивайте с ложкой-тарированием</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Пищевая плёнка</strong>
+                  <span class="shopping-hint">Накрывать ганаш в контакт, чтобы не образовалась корочка</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Пергамент</strong>
+                  <span class="shopping-hint">Под шарики, под покрытые конфеты и для растекания остатка шоколада</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Ситечко</strong>
+                  <span class="shopping-hint">Снять лишнее какао, если обваливаете в нём</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Микроволновка и лопатка</strong>
+                  <span class="shopping-hint">Греть пульсами; подойдёт и водяная баня</span>
+                </div>
+              </li>
+            </ul>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Коробка или контейнер для хранения</strong>
+                  <span class="shopping-hint">Правильно сделанные конфеты «гремят» в коробке и не липнут</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">1. Ганаш</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Тёмный шоколад
+              <span class="ingredient-note">Комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Молочный шоколад
+              <span class="ingredient-note">Комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Кокосовое молоко
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Кокосовое масло
+              <span class="ingredient-note">Комнатной температуры; замена — сливочное 82,5 %</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Инвертный сахар (тримолин)
+              <span class="ingredient-note">Замена — мёд 1:1</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Сироп глюкозы
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">2. Обвалка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Кокосовая стружка или кокосовая мука
+              <span class="ingredient-note">Сколько уйдёт; стружку можно смолоть тоньше</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По желанию — Какао алкализованное
+              <span class="ingredient-note">Альтернатива кокосу, «состаренный» вид</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По желанию — Кандурин
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">3. Покрытие (по желанию)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Тёмный шоколад для темперирования
+              <span class="ingredient-note">В уроке темперируют 100 г (70 г + 30 г) и делят на несколько видов трюфелей</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка: шоколад и масло комнатной температуры</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Отвесьте 50 г тёмного и 50 г молочного шоколада, 25 г кокосового молока, 25 г кокосового масла, по 7 г инвертного сахара и глюкозного сиропа. Шоколад и кокосовое масло должны быть комнатной температуры — так на них написано и в DOCX, и об этом говорится в уроке перед добавлением масла. Посуда и лопатки — сухие.
+                <span class="source-badge">⏱ Урок_01: 01:51:24–01:53:06</span>
+              </p>
+              <div class="tip-box">
+                <strong>Почему комнатная температура:</strong> холодное кокосовое масло застывает комками и не даст эмульсии, а холодный шоколад забирает тепло у горячего молока — часть плитки останется крупинками.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Шоколад и масло: <strong>Комнатная</strong></span>
+              <span class="param-pill">⚖️ Шоколад: <strong>50 + 50 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Молоко с сиропами — до кипения</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Соедините 25 г кокосового молока, 7 г инвертного сахара и 7 г сиропа глюкозы и доведите до кипения, помешивая лопаткой, чтобы сиропы полностью разошлись. В шоколаде они не растворятся — это автор подчёркивает отдельно.
+                <span class="source-badge">⏱ Урок_01: 01:54:33–01:55:08</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем оба сиропа:</strong> тримолин и глюкоза держат влагу внутри конфеты в связанном виде — трюфели не липнут к рукам при скатывании, в них не размножаются бактерии, и они дольше хранятся. Именно поэтому такие конфеты можно держать при 16–20 °C, а не только в холодильнике.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Нагрев: <strong>До кипения</strong></span>
+              <span class="param-pill">🥄 Мешать: <strong>До растворения сиропов</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Залить шоколад и собрать эмульсию</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Вылейте горячее молоко с сиропами на смесь тёмного и молочного шоколада и дайте массе «подумать» — постоять минуту. Затем мешайте от центра к краям. Эта пара шоколадов объединяется сложнее, чем чистый тёмный: если плитка не расходится, подтопить её можно в микроволновке пульсами по 10 секунд или на водяной бане.
+                <span class="source-badge">⏱ Урок_01: 01:54:19–01:55:33</span>
+              </p>
+              <div class="warning-box">
+                <strong>Только пульсами:</strong> не ставьте сразу на 20–30 секунд. Так автор и делает в уроке — «два раза по 10 секунд», и шоколад весь разошёлся.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Пульс: <strong>10 с</strong></span>
+              <span class="param-pill">🔍 Готовность: <strong>Блестящая гладкая масса</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Кокосовое масло в конце</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Когда шоколад полностью разошёлся, добавьте 25 г кокосового масла комнатной температуры и перемешайте. Хороший ганаш объединяется без плавающего жира на поверхности и остаётся текучим. Для успокоения души можно пробить погружным блендером, но автор этого не требует.
+                <span class="source-badge">⏱ Урок_01: 01:55:57–01:58:51</span>
+              </p>
+              <div class="tip-box">
+                <strong>Замена:</strong> кокосового масла нет — берите сливочное 82,5 % комнатной температуры, автор это разрешает. Про другой процент она говорит прямо: «в другую сторону не смотрим».
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥥 Масло: <strong>25 г, комнатное</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Нет масла на поверхности</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Стабилизация ганаша</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Накройте ганаш плёнкой в контакт и оставьте на 6–8 часов при 16–20 °C, можно и до 24 часов. Подойдёт прохладный подоконник; если дома тепло — в холодильник, но тогда достаньте его за 3 часа до формовки. Ганаш должен созреть: в нём начинает работать какао-масло.
+                <span class="source-badge">⏱ Урок_01: 01:49:06–01:49:22</span>
+              </p>
+              <div class="warning-box">
+                <strong>Плёнка в контакт:</strong> она должна прикасаться к поверхности, иначе ганаш подсыхает коркой, и эта корка пойдёт комками в конфеты.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Стабилизация: <strong>6–8 ч, до 24 ч</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>16–20 °C</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Прохладные руки и прохладное помещение</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Наденьте свежие перчатки, остудите руки под холодной водой и приложите замороженную пачку масла, чтобы трюфели не таяли в ладонях. В помещении должно быть прохладно — автор для этого приоткрывает окно. Бытовые весы плохо чувствуют малые веса, поэтому взвешивайте ганаш на ложке.
+                <span class="source-badge">⏱ Урок_02: 00:30:40–00:33:24</span>
+              </p>
+              <div class="tip-box">
+                <strong>Про кокосовый ганаш:</strong> он чуть плотнее сырного, и автор отдельно отмечает, что с ним «тоже будет всё хорошо» — молочная половина шоколада делает массу легче и пластичнее.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Руки: <strong>Охладить</strong></span>
+              <span class="param-pill">🌡 Помещение: <strong>Прохладное</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Калибр и скатывание</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Отвешивайте конфеты по 10–13 г: если планируете покрывать темперированным шоколадом — 10–11 г, если только обваливать в кокосе — 12–13 г. Отрывайте кусок, подворачивайте края внутрь и катайте шарик между ладонями, пока поверхность не станет ровной. По желанию внутрь можно спрятать целый орех.
+                <span class="source-badge">⏱ Урок_02: 00:30:46–00:33:24</span>
+              </p>
+              <div class="warning-box">
+                <strong>Именно благодаря сиропам</strong> шарик получается катать по ганашу, а не «весь ганаш оказывается на руках». Если сиропы исключили, катать будет заметно труднее.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖️ С покрытием: <strong>10–11 г</strong></span>
+              <span class="param-pill">🥥 Без покрытия: <strong>12–13 г</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Темперирование шоколада для покрытия</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Пока катаете, уберите готовые шарики в холодильник. Затем темперируйте тёмный шоколад методом посева: 70 г грейте пульсами — 30, потом 15 и ещё 15 секунд на мощности 800, постоянно перемешивая; плавления добивайтесь перемешиванием, а не нагревом. Дальше внесите 30 г ненагретых калет и мешайте, пока кристаллическая решётка не выстроится. Сумма — ровно те 100 г, что в уроке. Температуру посева автор определяет на глаз — «ниже 35–33 °C».
+                <span class="source-badge">⏱ Урок_02: 00:39:40–00:46:26</span>
+              </p>
+              <div class="warning-box">
+                <strong>Метод посева — для тёмного:</strong> с молочным, по словам автора, будут ошибки. И не пытайтесь пробить эту массу блендером — на нём останется слишком много шоколада, а его всего 100 г.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Пульсы: <strong>30, 15, 15 с</strong></span>
+              <span class="param-pill">⚡ Мощность: <strong>800</strong></span>
+              <span class="param-pill">🧩 Посев: <strong>Треть калетами</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Покрытие в шоколаде</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Возьмите на ладонь немного темперированного шоколада, положите в него конфету и покатайте в руке, а потом отправьте на пергамент. Слой получается очень тонким, но застывает капсулой. Признак правильно оттемперированного шоколада — конфеты почти сразу становятся матовыми, а через пару минут палец к ним не липнет.
+                <span class="source-badge">⏱ Урок_02: 00:47:22–00:53:32</span>
+              </p>
+              <div class="tip-box">
+                <strong>Работать надо при 16–19 °C:</strong> это «комнатная температура» для шоколада по словам автора. В обычной квартире процессы идут дольше, это нормально.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🤲 Способ: <strong>Накатать на ладони</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Матовая капсула</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Обвалка в кокосовой муке и стружке</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Часть трюфелей оставьте в шоколаде, а для кокосовых просто обкатайте конфету в кокосовой муке или стружке и подкатайте ладонями, чтобы обсыпка прилипла и не сыпалась. Стружку можно предварительно смолоть в блендере — мелкий помол ложится ровнее. Пока конфеты подзастывают, остаток темперированного шоколада вылейте на пергамент, размажьте и, когда застынет, наломайте — это запас для следующих конфет.
+                <span class="source-badge">⏱ Урок_02: 00:50:55–00:52:36</span>
+              </p>
+              <div class="tip-box">
+                <strong>Ещё варианты:</strong> обвалять в алкализованном какао и снять лишнее ситечком — получится «состаренный» вид; кандурин наносят кистью на трещинки.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥥 Обсыпка: <strong>Кокос, какао или кандурин</strong></span>
+              <span class="param-pill">🤲 Финиш: <strong>Подкатать ладонями</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Стабилизация и хранение</h3>
+              </div>
+              <label class="complete-toggle step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Дайте конфетам окончательно стабилизироваться на столе. Правильно сделанные трюфели «гремят» в коробке и остаются круглыми со всех сторон. Храните при 16–18 °C — идеально в винном шкафу — до 21 дня; в холодильнике до месяца-полутора, в морозилке до 3 месяцев, но шоколад морозилку не любит. Есть нужно только доведя до комнатной температуры, иначе вкус не раскроется.
+                <span class="source-badge">⏱ Урок_02: 01:17:20–01:18:25</span>
+              </p>
+              <div class="warning-box">
+                <strong>Без сиропов правила другие:</strong> первый урок — 7 дней при 16–20 °C и до месяца в холодильнике, а если убрать и сиропы, трюфели хранят только в холодильнике и не дольше 7 дней.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🕐 16–18 °C: <strong>до 21 дня</strong></span>
+              <span class="param-pill">🧊 Холодильник: <strong>1–1,5 месяца</strong></span>
+              <span class="param-pill">❄️ Морозилка: <strong>до 3 месяцев</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Тёмный плюс молочный:</strong> такая пара даёт пластичность — катать кокосовый ганаш легче, чем чисто тёмный сырный.</li>
+                <li><strong>Жидкость — кокосовое молоко:</strong> сливок в рецептуре нет, кокос играет и вкусом, и влагой.</li>
+                <li><strong>Масло в конце:</strong> сначала собирают эмульсию шоколада с молоком, потом уже вводят кокосовое масло.</li>
+                <li><strong>Сиропы в молоке:</strong> растворять только в горячей жидкости — в шоколаде они не разойдутся.</li>
+                <li><strong>Калибр от покрытия:</strong> 10–11 г с шоколадом, 12–13 г без него.</li>
+                <li><strong>Кокосовая мука:</strong> молотая стружка ложится тоньше и ровнее обычной стружки.</li>
+                <li><strong>Плёнка в контакт:</strong> на ганаше не должно быть корочки.</li>
+                <li><strong>Гремят — значит готово:</strong> звук в коробке и круглая форма со всех сторон.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Холодное кокосовое масло:</strong> застывает комками, эмульсии нет.</li>
+                <li><strong>Сиропы сразу в шоколад:</strong> остаются на дне и дают неравномерную текстуру.</li>
+                <li><strong>Греть шоколад 20–30 секунд подряд:</strong> шоколад «уходит», перегревается.</li>
+                <li><strong>Работать тёплыми руками:</strong> конфета тает прямо в ладони.</li>
+                <li><strong>Катать холодный ганаш:</strong> крошится и не держит шарик.</li>
+                <li><strong>Темперировать молочный шоколад посевом:</strong> автор предупреждает — будут ошибки.</li>
+                <li><strong>Лишняя обсыпка:</strong> кокос без подкатки сыпется в коробке.</li>
+                <li><strong>Хранить в тепле:</strong> конфеты «седеют» и текут.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и замены</h4>
+              <ul>
+                <li><strong>16–18 °C:</strong> до 21 дня, по первому уроку — 7 дней при 16–20 °C.</li>
+                <li><strong>Холодильник:</strong> месяц-полтора; первый урок — до месяца.</li>
+                <li><strong>Морозилка:</strong> до 3 месяцев, но шоколаду там плохо.</li>
+                <li><strong>Кокосовое масло:</strong> заменяется сливочным 82,5 % комнатной температуры.</li>
+                <li><strong>Тримолин:</strong> мёд 1:1, даст лёгкий медовый вкус.</li>
+                <li><strong>Глюкоза:</strong> просто исключается.</li>
+                <li><strong>Без обоих сиропов:</strong> катать сложнее, хранить только в холодильнике до 7 дней.</li>
+                <li><strong>Подача:</strong> конфеты можно ставить и как украшение на торт.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «Экстра трюфель Кокос» (раскладка и пометка брать из уроков только кокосовый трюфель) и расшифровка двух уроков. В тех же записях делают сырные трюфели с пармезаном и горгонзолой, цветной кекс, кубические десерты с маршмеллоу и сублимированными ягодами, говорят про себестоимость наборов — ничего из этого на страницу не вошло, кроме общих приёмов (стабилизация, калибр, темперирование, те же сиропы).</li>
+              <li><strong>Сиропы:</strong> в DOCX ровно 7 г инвертного сахара и 7 г глюкозы. В уроке автор дважды называет «7 грамм сиропа глюкозы и 7 грамм инвертного сахара», но дважды же перечисляет набор как «15 грамм инвертного сиропа… 7 грамм сиропа глюкозы» и добавляет «ещё 5 граммов сиропа». На странице — DOCX: по 7 г.</li>
+              <li><strong>Сливки:</strong> в уроке пару раз проскакивает «выливаем горячие сливки с сиропом», но в самой раскладке кокосового ганаша сливок нет — их роль играет 25 г кокосового молока. На странице сливок нет.</li>
+              <li><strong>Глюкоза:</strong> в DOCX «7 г глюкозного сиропа», в уроке — «7 грамм сиропа блюкозы», то есть восковая опечатка распознавания того же сиропа. На странице — сироп глюкозы.</li>
+              <li><strong>Покрытие:</strong> в DOCX шоколада на покрытие нет. В уроке темперируют 100 г тёмного (70 г + 30 г) сразу на все виды трюфелей; на странице и в расчёте — 50 г на кокосовую партию, это оценка, а не цифра из источника. Покрытие вообще не обязательно: кокосовые трюфели можно только обвалять.</li>
+              <li><strong>Обвалка:</strong> в DOCX и в уроке — «кокосовая стружка», хотя в видео автор чаще берёт кокосовую муку и говорит, что стружку можно смолоть в блендере. На странице оба варианта, граммовки обсыпки в источниках нет (15 г в списке — «сколько уйдёт»).</li>
+              <li><strong>Число конфет:</strong> в уроке посчитаны только сырные трюфели — «18–19 конфет», и автор прямо говорит, что для кокосового ганаша «не успела, забыла посчитать». По весу партии (≈ 164 г до покрытия) выходит 12–16 конфет калибром 11–13 г, поэтому в бейдже указано «≈ 20 конфет» как ориентир автора, а в фактах — 12–16.</li>
+              <li><strong>Темперирование:</strong> точных температур автор не называет, только приёмы — 30/15/15 секунд на мощности 800, посев третью массы, «ниже 35–33 °C» в момент посева и рабочая температура шоколада 16–19 °C. Метод посева годится для тёмного шоколада, для молочного не рекомендуется.</li>
+              <li><strong>Сроки:</strong> первый урок — 7 дней при 16–20 °C и до месяца в холодильнике; второй — 21 день при 16–18 °C, месяц-полтора в холодильнике, до 3 месяцев в морозилке. На странице — второй урок как основной, оба варианта описаны.</li>
+              <li><strong>Пробел:</strong> веса готовой конфеты с покрытием источники не дают; калибр даден диапазоном, поэтому точный выход зависит от того, сколько шоколада останется на ладони.</li>
+              <li><strong>Фото:</strong> сгенерированная иллюстрация — в папке рецепта готовых снимков нет, а кадры урока показывают трюфели только общим планом на столе. Реальный кадр стоит заменить фотографией готовых конфет.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

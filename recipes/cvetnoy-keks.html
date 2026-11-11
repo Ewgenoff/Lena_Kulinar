@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Цветной кекс с разноцветными лепестками теста — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Малайзийский цветной кекс: кексовое тесто на сливочном масле, сгущёнке и 7 желтках, физическое разрыхление взбитыми белками, четыре красителя, слои по 150 г теста и выпечка каждого слоя 7 минут при 170 °C.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍰</text></svg>">
+</head>
+<body data-recipe-id="cvetnoy-keks">
+
+    <header class="site-header">
+    <div class="header-container">
+      <div class="header-back">
+        <a href="../index.html" class="back-link"><span class="back-arrow">←</span><span class="back-text">Назад</span></a>
+      </div>
+      <a href="../index.html" class="brand">
+        <img src="../assets/images/logo.png" alt="Логотип" aria-hidden="true" class="brand-logo" width="241" height="200">
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 <span class="btn-text">Печать рецепта</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Цветной кекс с разноцветными лепестками теста</h1>
+      <div class="recipe-intro-split">
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-label">Подготовка</span>
+            <span class="fact-value">~30 мин: отвесы, форма, пергамент, 3 мешка</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Активное время</span>
+            <span class="fact-value">~1 ч 15 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Пассивное время</span>
+            <span class="fact-value">Выпечка слоёв по 7 мин, остывание полностью</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Общее время</span>
+            <span class="fact-value">~2 ч 30 мин + остывание</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Выход</span>
+            <span class="fact-value">1 кекс в форме 23×5×5 см (пример автора)</span>
+          </div>
+        </div>
+
+        <p class="recipe-lead">
+          Малайзийский цветной кекс — по сути кексовый бисквит без единого грамма химического разрыхлителя: воздух дают только взбитые белки. Щедрая сдоба — масло 82,5 %, сгущёнка, растительное масло и семь желтков — делает тесто плотным и влажным, а кукурузный крахмал вместо части муки — нежным. Тесто делят на порции по 150 г, каждую окрашивают и отсаживают кондитерским мешком на ещё горячий слой. Слои длиной 23 см склеивают и ставят лепестками — в разрезе получается разноцветный узор.
+        </p>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/cvetnoy-keks.jpg" alt="Цветной кекс на разрезе: разноцветные лепестки кексового теста, обёрнутые белым коржом" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 кекс)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">кекс (форма по вашей)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Базовая раскладка — один замес, из которого у автора получается кекс в форме 23×5×5 см. Форма по вашей: размер формы в DOCX не указан, подбирайте её под свой объём теста.
+          </p>
+        </div>
+
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">415</td>
+                <td>5,1 г</td>
+                <td>23,6 г</td>
+                <td>45,3 г</td>
+              </tr>
+              <tr>
+                <th>Весь кекс<span class="kbju-sub">≈ 1,5 кг</span></th>
+                <td class="kbju-kcal"><span data-base-amount="6264" data-unit="ккал">6264 ккал</span></td>
+                <td><span data-base-amount="77" data-unit="г">77 г</span></td>
+                <td><span data-base-amount="356" data-unit="г">356 г</span></td>
+                <td><span data-base-amount="685" data-unit="г">685 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+                    <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Считано тесто целиком и жидкая масса для склейки брусочков (45 г масла + 40 г сгущёнки). Красители — по вкусу, их доля в весе меньше процента, на расчёт не влияют.</p>
+            <p>Значения продуктов средние табличные: сливочное масло 82,5 % — 748 ккал/100 г, сахар 399, мука 342, кукурузный крахмал 343, сгущённое молоко 328, растительное масло 899; яйца С1 — белок ≈ 30 г/52 ккал, желток ≈ 20 г/352 ккал на 100 г.</p>
+            <p>Масса — по сырой раскладке: при выпечке слоёв уходит влага, поэтому готовый кекс легче, а калорийность на 100 г выше расчётной.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Основной контент: Ингредиенты + Технология -->
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> кекс</span>
+        </div>
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Отступать от граммовок здесь дорого: тесто держится на балансе жиров и жидкости, и лишняя влага из яиц другой категории или масла другой жирности ломает эмульсию. Берите ровно то, что в списке.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: молочное, яйца, масла -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масла</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="7" data-unit="шт." data-piece="true">7 шт.</span>
+                <span class="shopping-hint">Из них 7 желтков и 7 белков — по 30 и 20 г; яйца берите одной категории С1, в С0 и С2 влаги больше</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5 %</strong>:
+                <span class="shopping-qty" data-base-amount="275" data-unit="г">275 г</span>
+                <span class="shopping-hint">230 г в тесто + 45 г в жидкую массу для склейки. Комнатной температуры</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сгущённое молоко</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">110 г в тесто + 40 г на склейку. Можно клеить и на одну сгущёнку, без масла</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло растительное рафинированное</strong>:
+                <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                <span class="shopping-hint">Без запаха — подсолнечное или кукурузное, комнатной температуры</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: мука, сахар, красители, расходники -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Мука, сахар, красители, инвентарь</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная</strong>:
+                <span class="shopping-qty" data-base-amount="170" data-unit="г">170 г</span>
+                <span class="shopping-hint">Просеять вместе с крахмалом</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Крахмал кукурузный</strong>:
+                <span class="shopping-qty" data-base-amount="130" data-unit="г">130 г</span>
+                <span class="shopping-hint">Только кукурузный, не картофельный: картофельный встаёт при более низкой температуре и даёт другую текстуру</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок (всего)</strong>:
+                <span class="shopping-qty" data-base-amount="350" data-unit="г">350 г</span>
+                <span class="shopping-hint">200 г в масло с сахаром + 150 г в белки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ваниль</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">Сахар с семенами ванили, ванильный сахар, ванилин, паста или экстракт — на выбор</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Краситель пищевой водорастворимый</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span>
+                <span class="shopping-hint">2–4 ярких цвета, у автора — гелевые: зелёный, розовый, белый, фиолетовый. Обязательно водорастворимые</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — пергамент, пищевая плёнка, 3 кондитерских мешка
+                <span class="shopping-hint">Мешки для окрашенных слоёв — с простой насадкой или без неё; для белого обёрточного теста мешок понадобится, если раскатывать не на противне</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Кексовое тесто</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="230" data-unit="г">230 г</span> — Масло сливочное 82,5 %
+              <span class="ingredient-note">Размягчённое, комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сахар (в масло)
+              <span class="ingredient-note">Взбивать с маслом до пышности</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="110" data-unit="г">110 г</span> — Сгущённое молоко
+              <span class="ingredient-note">Комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Ваниль (сахар с семенами ванили)
+              <span class="ingredient-note">Или ванильный сахар, ванилин, паста, экстракт</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Масло растительное рафинированное
+              <span class="ingredient-note">Без запаха, комнатной температуры</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="шт." data-piece="true">7 шт.</span> — Желтки яичные С1
+              <span class="ingredient-note">≈ 140 г; добавлять по одному</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="170" data-unit="г">170 г</span> — Мука пшеничная
+              <span class="ingredient-note">Просеять и перемешать с крахмалом</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="130" data-unit="г">130 г</span> — Крахмал кукурузный
+              <span class="ingredient-note">Облегчает муку: меньше белка, более воздушная структура</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Меренга (физическое разрыхление)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="шт." data-piece="true">7 шт.</span> — Белки яичные С1
+              <span class="ingredient-note">≈ 210 г; посуда и венчики обезжирены</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сахар (в белки)
+              <span class="ingredient-note">Добавлять только когда белок уже держит форму</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Окрашивание и слои</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span> — Краситель пищевой водорастворимый
+              <span class="ingredient-note">2–4 цвета; могут быть гелевые, жидкие или сухие (сухие сначала развести в воде)</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Тесто на каждый окрашенный слой
+              <span class="ingredient-note">Отвешивается от общего теста, цвет — по вкусу</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Остаток теста — Белое обёрточное тесто
+              <span class="ingredient-note">Не окрашивать: из него делается внешний корж-обёртка</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Склейка брусочков</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="45" data-unit="г">45 г</span> — Масло сливочное, размягчённое
+              <span class="ingredient-note">Жидкая, не взбитая масса — как сгущёнка по консистенции</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Сгущённое молоко (для склейки)
+              <span class="ingredient-note">Слегка подогреть, чтобы легче смешалось с маслом</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка и отвесы</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Достаньте заранее масло, яйца, сгущёнку и растительное масло: все ингредиенты должны быть одной комнатной температуры. Это не формальность — именно на разнице температур эмульсия и расслаивается.
+                <span class="source-badge">⏱ Урок_01: 00:12:52–00:13:18</span>
+              </p>
+              <p>
+                Разделите яйца на 7 желтков и 7 белков категории С1. Если дома только С0 или С2, лучше найти таблицы пересчёта и пересчитать рецепт — в более крупных яйцах больше влаги.
+                <span class="source-badge">⏱ Урок_01: 00:19:24–00:19:36</span>
+              </p>
+              <p>
+                Всё отвесьте заранее и поставьте рядом: 230 г масла, 200 г сахара, 110 г сгущёнки, 70 г растительного масла, 170 г муки, 130 г крахмала, 150 г сахара для белков, ваниль.
+                <span class="source-badge">⏱ Урок_01: 00:08:26–00:08:39</span>
+              </p>
+              <p>
+                Духовку включите на 170 °C с конвекцией — пока делается тесто, она успеет разогреться.
+                <span class="source-badge">⏱ Урок_01: 00:27:30–00:27:48</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>все ингредиенты комнатной</strong></span>
+              <span class="param-pill">🔥 Духовка: <strong>170 °C с конвекцией</strong></span>
+              <span class="param-pill">🥚 Яйца: <strong>7 желтков + 7 белков, С1</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Масло, сахар, сгущёнка и желтки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сахар (200 г) соедините с размягчённым маслом. Взбивайте сначала на небольшой скорости, чтобы сахар не разлетался, потом перейдите на максимальную и бейте до пышности — у автора это заняло 3–4 минуты, масса посветлела и стала воздушной.
+                <span class="source-badge">⏱ Урок_01: 00:13:16–00:15:32</span>
+              </p>
+              <p>
+                Добавьте сгущённое молоко (110 г) и ваниль, перемешайте. Затем влейте растительное масло (70 г) — без запаха, подойдёт подсолнечное, кукурузное или из виноградной косточки.
+                <span class="source-badge">⏱ Урок_01: 00:15:33–00:17:12</span>
+              </p>
+              <p>
+                Вводите 7 желтков по одному: следующий — только когда предыдущий полностью вошёл в тесто. Масса всё это время остаётся густой и пышной.
+                <span class="source-badge">⏱ Урок_01: 00:18:02–00:18:23</span>
+              </p>
+              <div class="warning-box">
+                <strong>Эмульсия расслоилась:</strong> в массе видны кусочки плавающего масла — эмульсия не получилась. Подогрейте массу в микроволновке и продолжите взбивать. Причина почти всегда в ингредиентах разной температуры.
+                <span class="source-badge">⏱ Урок_01: 00:20:43–00:21:06</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Взбивание масла: <strong>3–4 мин</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Миксер с лопаткой или венчиком</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Масса густая, светлая, без комков масла</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Мука с крахмалом в два приёма</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Муку (170 г) и кукурузный крахмал (130 г) перемешайте между собой и добавляйте к массе в два приёма, каждый раз перемешивая венчиком на небольшой скорости. Просеянную смесь удобнее вводить именно так, чтобы не выйти комочками.
+                <span class="source-badge">⏱ Урок_01: 00:22:13–00:24:04</span>
+              </p>
+              <p>
+                Тесто на этом этапе густое — это правильная консистенция. Дальше его будет разжижать меренга, и только после неё тесто станет удобным для окрашивания.
+                <span class="source-badge">⏱ Урок_01: 00:39:04–00:39:16</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Пропорция: <strong>170 г муки + 130 г крахмала</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Миксер на низкой скорости или венчик</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Меренга вместо разрыхлителя</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Химического разрыхлителя в рецепте нет совсем: подъём дают только взбитые белки, и это единственная «дрожжевая» сила кекса. Вымойте и вытрите венчики от масла — жир мешает белку удерживать воздух.
+                <span class="source-badge">⏱ Урок_01: 00:09:04–00:09:37</span>
+              </p>
+              <p>
+                Белки начинайте взбивать на низкой скорости без сахара. Сахар (150 г) добавляйте только когда масса уже держит форму, а не стекает. Затем добавьте кукурузный крахмал — он стабилизирует меренгу.
+                <span class="source-badge">⏱ Урок_01: 00:29:13–00:32:23</span>
+              </p>
+              <p>
+                Взбивайте до плотной, блестящей меренги: «клювик» держится и почти не двигается, а не свисает.
+                <span class="source-badge">⏱ Урок_01: 00:32:32–00:34:40</span>
+              </p>
+              <div class="tip-box">
+                <strong>Метод жертвы:</strong> сначала вмешайте в тесто треть меренги обычной лопаткой — она разжижит густую масляную массу. Остальные две трети войдут уже с минимальными потерями воздуха. Миксером, крюком или насадкой-лопата планетарного миксера меренгу не вмешивайте.
+                <span class="source-badge">⏱ Урок_01: 00:34:48–00:35:58</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍬 Сахар в белки: <strong>150 г</strong></span>
+              <span class="param-pill">⏱ Этапы взбивания: <strong>без сахара → с сахаром → до стойких пиков</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Плотная блестящая меренга, пик держится</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Миксер, силиконовая лопатка</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Вмешивание меренги лопаткой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Вмешайте треть меренги лопаткой, поворачивая миску. Затем добавьте оставшиеся две трети сразу и перемешайте тем же движением: лопатка врезается в центр, проходит по низу и накрывает сверху, без залипающих резких движений.
+                <span class="source-badge">⏱ Урок_01: 00:35:26–00:38:11</span>
+              </p>
+              <p>
+                Мешайте ровно до тех пор, пока меренга не войдёт вся — дальше не надо. В тесте не должно остаться комочков меренги.
+                <span class="source-badge">⏱ Урок_01: 00:38:11–00:39:07</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не перестарайтесь:</strong> тот воздух, который удерживает меренга, — единственное, что разрыхляет кекс. Долгое перемешивание разбивает пузыри, кекс садится и становится плотным.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак: <strong>Однородное тесто без комочков меренги</strong></span>
+              <span class="param-pill">🥣 Инструмент: <strong>Силиконовая лопатка</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Подготовка формы и первый окрашенный слой</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Форму застелите пергаментом, а по краям смажьте сливочным маслом — так корж потом выйдет без зацепов. Подойдут разборная форма, кольцо с фольгой на дне или противень с бортиком.
+                <span class="source-badge">⏱ Урок_01: 00:40:09–00:40:48</span>
+              </p>
+              <p>
+                Отделите 150 г теста и окрасьте его в первый цвет. Краситель должен быть водорастворимым: гелевый, жидкий или сухой, но сухой — сначала разведите в капле воды. Натуральные красители автор пробовала и отказалась: дают привкус и серый оттенок.
+                <span class="source-badge">⏱ Урок_01: 00:43:25–00:45:03</span>
+              </p>
+              <p>
+                Выложите окрашенное тесто в форму и разровняйте лопаткой или палеткой. Постучите формой о стол и отправьте на 7 минут при 170 °C с конвекцией. Если духовка жарит сильно, хватит 5 минут.
+                <span class="source-badge">⏱ Урок_01: 00:45:32–00:47:54</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Порция слоя: <strong>150 г теста</strong></span>
+              <span class="param-pill">🔥 Температура: <strong>170 °C с конвекцией</strong></span>
+              <span class="param-pill">⏱ Время: <strong>7 мин (5 мин при сильной духовке)</strong></span>
+              <span class="param-pill">🎨 Красители: <strong>водорастворимые, 2–4 цвета</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Укладка цветов лепестками</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Пока слой горячий, окрасьте следующую порцию по 150 г и переложите в кондитерский мешок. Отсаживайте тесто на предыдущий слой — сначала ровной сеткой, затем разровняйте лопаткой. Отсаживать удобнее, чем наливать: тесто густое.
+                <span class="source-badge">⏱ Урок_01: 00:55:18–00:56:45</span>
+              </p>
+              <p>
+                Края предыдущего слоя поджимайте вниз, чтобы высота была одинаковой по всей форме. Середину не трогайте — она осядет сама.
+                <span class="source-badge">⏱ Урок_01: 00:56:02–00:56:13</span>
+              </p>
+              <p>
+                Каждый следующий слой — тоже 7 минут. Нижние слои от повторного нагрева цвет не теряют. Всего у автора четыре цвета по 150 г, остаток теста остаётся белым — из него потом делается обёртка.
+                <span class="source-badge">⏱ Урок_01: 00:57:00–00:59:15</span>
+              </p>
+              <div class="tip-box">
+                <strong>Тёмная полоска между цветами:</strong> если слой сверху поджарился и дал корочку, это не ошибка. Через режим гриль её получают специально — при разрезе она даёт тонкую тёмно-коричневую линию, которая красиво разделяет цвета.
+                <span class="source-badge">⏱ Урок_01: 00:56:13–00:56:37</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Каждый слой: <strong>7 мин</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Кондитерский мешок, лопатка</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Поверхность схватилась, края подровнены</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Белая обёртка: чем затягивают кекс</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Остаток неокрашенного теста распределите ровным слоем около 5 мм. Тесто без красителя выпекается почти белым, и в разрезе цветные слои получаются яркими — цвет почти не уходит.
+                <span class="source-badge">⏱ Урок_01: 00:39:54–00:40:04</span>
+              </p>
+              <p>
+                Обёртку можно печь двумя способами. Второй — на противне: в форме 23×5×5 см это около 400 г теста при толщине 5 мм, для противня побольше — около 600 г. Этот пласт печётся 10–14 минут, пока сверху не появится приятная корочка.
+                <span class="source-badge">⏱ Урок_01: 01:02:54–01:03:16</span>
+              </p>
+              <p>
+                Готовый пласт сразу, пока тёплый, плотно накройте пищевой плёнкой в контакт, в несколько слоёв при необходимости. Без плёнки он высохнет и не согнётся.
+                <span class="source-badge">⏱ Урок_01: 01:10:30–01:11:12</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Толщина пласта: <strong>≈ 5 мм</strong></span>
+              <span class="param-pill">⚖ Вес на противень: <strong>400–600 г</strong></span>
+              <span class="param-pill">⏱ Пласт целиком: <strong>10–14 мин</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Проверка готовности и остывание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Готовность проверьте нажатием пальца: вмятинки должны вернуться обратно. У автора верхний слой стоял 7 минут — ничего не липнет и не остаётся на пальце.
+                <span class="source-badge">⏱ Урок_01: 02:20:10–02:20:24</span>
+              </p>
+              <p>
+                Если верх подрагивает и кажется жидковатым, допеките ещё 2 минуты — ничего страшного. Но и семи минут, по словам автора, более чем достаточно: кекс доготовится за счёт теплоты нижних слоёв.
+                <span class="source-badge">⏱ Урок_01: 02:09:42–02:09:52</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не режьте горячим:</strong> прежде чем снимать корочки и нарезать на брусочки, кекс должен полностью остыть до комнатной температуры. Иначе срез поплывёт и брусочки сломаются. Остывать — на балконе или в холодильнике, в морозилку горячий не ставьте.
+                <span class="source-badge">⏱ Урок_01: 02:12:24–02:13:00</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔍 Признак: <strong>Вмятины от пальца возвращаются</strong></span>
+              <span class="param-pill">⏱ Допекание: <strong>+2 мин, если подрагивает</strong></span>
+              <span class="param-pill">🌡 Остывание: <strong>до комнатной температуры полностью</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Нарезка на брусочки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Срежьте боковые корочки — ровно по линейке, не переусердствуйте. Длина брусочка должна быть равна высоте кекса: у автора высота формы 5 см, поэтому нарезает по 3 см от полосы в 23 см и получает четыре брусочка.
+                <span class="source-badge">⏱ Урок_01: 02:12:32–02:13:21</span>
+              </p>
+              <p>
+                Нож берите тонкий и длинный: толстый нож «утолщает» срез. Недорезанные брусочки оставьте подсохнуть, а с хорошими работайте аккуратно — они жирные и хрупкие.
+                <span class="source-badge">⏱ Урок_01: 01:40:48–01:40:59</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Брусок: <strong>3 см (по высоте кекса)</strong></span>
+              <span class="param-pill">🔪 Инструмент: <strong>Тонкий длинный нож, линейка</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 11 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Сборка: склейка и лепестки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Кисточкой соедините размягчённое масло (45 г) и слегка подогретую сгущёнку (40 г) до однородности. Это не взбитый крем, а жидкая масса — клеить можно и на одну сгущёнку, эффект тот же.
+                <span class="source-badge">⏱ Урок_01: 02:20:26–02:21:04</span>
+              </p>
+              <p>
+                Брусочки ставьте торцом и смазывайте соприкасающиеся грани: часть вертикально, один — горизонтально. Клеить на плёнке, чтобы потом удобно было перевернуть и поднять конструкцию.
+                <span class="source-badge">⏱ Урок_01: 02:25:20–02:26:13</span>
+              </p>
+              <p>
+                После склейки дайте постоять в холодильнике 1–2 часа — склейка должна схватиться. Не собирайте обёртку сразу, как в прямом эфире: автор сама говорит, что в спешке так делать не надо.
+                <span class="source-badge">⏱ Урок_01: 02:38:08–02:38:13</span>
+              </p>
+              <div class="tip-box">
+                <strong>Геометрия — по вашему вкусу:</strong> порядок и поворот брусочков задаёт рисунок в разрезе. Автор собирает узор «как на фотографии», но подчёркивает, что это необязательный порядок.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥄 Клей: <strong>45 г масла + 40 г сгущёнки</strong></span>
+              <span class="param-pill">⏱ Стабилизация склейки: <strong>1–2 ч в холодильнике</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 12 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Обёртка и стабилизация</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Белый пласт снимите с бумаги через плёнку, перевернув конструкцию. Обрежьте по нужной высоте с запасом сверху и снизу — потом лишнее срежете.
+                <span class="source-badge">⏱ Урок_01: 02:28:21–02:29:27</span>
+              </p>
+              <p>
+                Смажьте заготовку остатками массы со сгущёнкой и оберните пластом, подталкивая его бумагой или плёнкой. Затем затяните кекс пищевой плёнкой как можно плотнее — вдоль и поперёк, чтобы он скатался ровным роллом.
+                <span class="source-badge">⏱ Урок_01: 02:31:05–02:32:13</span>
+              </p>
+              <p>
+                Уберите в холодильник на 5–6 часов, лучше на ночь. Хранится такой кекс в холодильнике до 20 дней, в морозилке — до 2 месяцев.
+                <span class="source-badge">⏱ Урок_01: 02:32:13–02:33:00</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧊 Стабилизация: <strong>5–6 ч в холодильнике (лучше ночь)</strong></span>
+              <span class="param-pill">📦 Хранение: <strong>до 20 дней в холодильнике, 2 мес в морозилке</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 13 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">13</span>
+                <h3 class="step-title">Нарезка на порции и подача</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                После стабилизации кекс очень стабильный: после ночи в плёнке он режется тонкими кусочками по 5 мм, и любой нож справится. Корку допустимо подровнять, чтобы срез был чистым.
+                <span class="source-badge">⏱ Урок_01: 02:26:07–02:27:52</span>
+              </p>
+              <p>
+                Внутри кекс почти белый, даже на довольно жёлтых желтках: чем бледнее яйца, тем больше контраст с лепестками цвета. Подавайте после того, как он прогреется — вкус ярче.
+                <span class="source-badge">⏱ Урок_01: 02:19:12–02:19:30</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔪 Толщина срезов: <strong>5 мм</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Чёткий рисунок из цветных лепестков</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Одна температура:</strong> масло, сахар, яйца, сгущёнка и растительное масло должны быть комнатной температуры, иначе эмульсия не собирается и кекс не получится.</li>
+                <li><strong>Без разрыхлителя:</strong> тесто специально даёт небольшой подъём — подъём даёт только взбитый белок. Поэтому взбивание меренги — ключевой этап, а не формальность.</li>
+                <li><strong>Крахмал вместо части муки:</strong> кукурузный крахмал делает тесто более воздушным и менее насыщенным белком. Картофельный не годится — он встаёт раньше и даёт другую, более вязкую текстуру.</li>
+                <li><strong>Водорастворимые красители:</strong> гелевые, жидкие или сухие. Натуральные дают привкус исходного сырья и серый оттенок — автор отказалась от них в этом кексе.</li>
+                <li><strong>Один краситель — тоже вариант:</strong> можно сделать градиент от яркого к бледному, будет так же эффектно.</li>
+                <li><strong>Четыре цвета по 150 г:</strong> все слои выпекаются по 7 минут, нижние от повторного нагрева не бледнеют.</li>
+                <li><strong>Белый снаружи:</strong> неокрашенное тесто выпекается почти белым и служит контрастной обёрткой для цветных лепестков.</li>
+                <li><strong>Если газовая духовка:</strong> форму ставьте максимально вверх, а если пригорает — противень с водой под форму. Хорошо бы обзавестись градусником для духовки.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Ингредиенты разной температуры:</strong> масло плавает в тесте кусочками — эмульсия не собралась. Подогрейте массу и продолжите взбивать.</li>
+                <li><strong>Яйца другой категории:</strong> вместо С1 взяли С0 или С2 — добавилось влаги, система вышла из баланса. Пересчитайте рецепт по таблицам пересчёта.</li>
+                <li><strong>Жирные венчики на белках:</strong> масло на венчике мешает белку удерживать воздух — меренга не взбивается.</li>
+                <li><strong>Сахар в белок слишком рано:</strong> сначала белок должен держать форму — потом сахар.</li>
+                <li><strong>Меренга перемешана миксером:</strong> воздух разбивается, кекс садится и становится плотным. Только лопатка.</li>
+                <li><strong>Кекс порезан горячим:</strong> срез мнётся, брусочки ломаются. Ждите полного остывания.</li>
+                <li><strong>Обёртка высохла:</strong> пласт без пищевой плёнки после выпечки не согнуть — он треснет при заворачивании.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «Цветной кекс» с граммовками и указанием брать из видео только рекомендации по приготовлению кекса; расшифровка вебинара (Урок_01, 2856 реплик). Граммовки — из DOCX, техника, температурные режимы, признаки готовности и таймкоды — из видео.</li>
+              <li><strong>Что взято из вебинара и что нет:</strong> в этом же уроке автор делает ещё трюфели с сырами (пармезан, дорблю), десерты с сублимированными ягодами и ведёт разговоры с подписчиками. В страницу не вошло ничего из этого — только замес, окрашивание, слои, выпечка, остывание, нарезка и сборка кекса.</li>
+              <li><strong>Сахар 200 г и 150 г:</strong> в DOCX два сахара без пояснений. По видео 200 г идут в масло с сахаром (00:11:30), а 150 г — в белки (00:12:08). Так и разнесено.</li>
+              <li><strong>Размер формы:</strong> в DOCX размеры не указаны, в видео автор называет свою форму 23×5×5 см и отдельно квадратную 20×20 см с бортом 5 см. На странице форма не задана жёстко — стоит «форма по вашей», а 23×5×5 приведён как пример автора: из другого размера получится другое число слоёв и брусочков.</li>
+              <li><strong>Красители:</strong> в DOCX «4 ярких красителя или хотя бы 2», в видео четыре цвета по 150 г. На странице — «4 шт.» с оговоркой 2–4.</li>
+              <li><strong>Крахмал в меренге:</strong> в ролике звучит «добавляем кукурузный крахмал» при взбивании белков, но в DOCX крахмал 130 г стоит только в сухой смеси с мукой. На странице кладётся в тесто, как в DOCX, а про меренгу упомянуто как про слова автора — без второго отвешивания.</li>
+              <li><strong>Масса для склейки:</strong> 45 г масла и 40 г сгущёнки в исходный список не попали; автор добавляет их в ролике и извиняется за это (02:30:40) — на странице они есть.</li>
+              <li><strong>Время выпечки:</strong> в DOCX нет. В видео 7 минут на каждый слой при 170 °C с конвекцией; при сильной духовке 5 минут; пласт на противне — 10–14 минут.</li>
+              <li><strong>Вес:</strong> автор считает 150 г теста на слой, а остаток описывает словами. Общий вес теста и готового кекса в источнике не взвешивают; расчёт КБЖУ дан по сырой раскладке.</li>
+              <li><strong>Хранение:</strong> слова автора — до 20 дней в холодильнике и до 2 месяцев в морозилке. В DOCX срока нет.</li>
+              <li><strong>Фото:</strong> в папке только видео, готовых фото нет. На странице будет кадр из видеоурока.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

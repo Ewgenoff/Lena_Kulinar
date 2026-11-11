@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Цветной хлеб с натуральным красителем — пошаговый рецепт и технология</title>
+  <meta name="description" content="Домашний дрожжевой хлеб на молоке с натуральным сухим красителем: два пласта теста скручиваются в спираль, на срезе — цветной узор. Холодные молоко и масло, масло в конце замеса, расстойка до 2,5–3 раз, выпечка 25–30 минут при 170 °C.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍞</text></svg>">
+</head>
+<body data-recipe-id="cvetnoy-hleb">
+
+    <header class="site-header">
+    <div class="header-container">
+      <div class="header-back">
+        <a href="../index.html" class="back-link"><span class="back-arrow">←</span><span class="back-text">Назад</span></a>
+      </div>
+      <a href="../index.html" class="brand">
+        <img src="../assets/images/logo.png" alt="Логотип" aria-hidden="true" class="brand-logo" width="241" height="200">
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 <span class="btn-text">Печать рецепта</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Цветной хлеб с натуральным красителем</h1>
+      <div class="recipe-intro-split">
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-label">Подготовка</span>
+            <span class="fact-value">10 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Активное время</span>
+            <span class="fact-value">~40 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Пассивное время</span>
+            <span class="fact-value">Расстойка 1,5 ч + 40–60 мин, выпечка 25–30 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Общее время</span>
+            <span class="fact-value">~3–3,5 часа</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Выход</span>
+            <span class="fact-value">1 буханка (≈ 500 г)</span>
+          </div>
+        </div>
+
+        <p class="recipe-lead">
+          Обычный сдобный хлеб на молоке, в котором вторая половина теста окрашена сухим натуральным красителем, а потом две ленты складываются одна на другую и скручиваются в тугую спираль. Вкус остаётся хлебным — это не сладкий батон, а плотный батончик с «радужным» срезом. Главное — держать тесто холодным и не торопить расстойку.
+        </p>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/cvetnoy-hleb.jpg" alt="Двухцветное тесто для хлеба: фиолетовые и белые полоски скатаны в рулет перед расстойкой" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 буханка)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">буханка (≈ 500 г)</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — один замес по рецептуре автора: 250 г муки, из него выходит одна буханка. Увеличение в два раза — это два замеса и две буханки, тесто делится пополам внутри каждого замеса.
+          </p>
+        </div>
+
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">253</td>
+                <td>6,7 г</td>
+                <td>5,8 г</td>
+                <td>41,8 г</td>
+              </tr>
+              <tr>
+                <th>Вся буханка<span class="kbju-sub">≈ 500 г</span></th>
+                <td class="kbju-kcal"><span data-base-amount="1237" data-unit="ккал">1237 ккал</span></td>
+                <td><span data-base-amount="32.7" data-unit="г">32,7 г</span></td>
+                <td><span data-base-amount="28.4" data-unit="г">28,4 г</span></td>
+                <td><span data-base-amount="204.6" data-unit="г">204,6 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Считано по сырой рецептуре DOCX: мука 250 г (355 ккал, 10,3 г белка, 70,5 г углеводов на 100 г), молоко 175 г (60 ккал), сахар 20 г, сливочное масло 82,5 % — 25 г, прессованные дрожжи 10 г, соль 3 г. Краситель сухой — в пересчёте на калорийность почти ничего не даёт.</p>
+            <p>Сумма продуктов — 490 г. После выпечки часть воды уходит и румяная корочка теряет вес, поэтому готовая буханка немного легче, а калорийность на 100 г чуть выше расчётной (автор ориентируется на ≈ 500 г готового хлеба).</p>
+            <p>Показатели даны для натурального красителя (пудра чёрной моркови, ягод). Синтетического красителя нужно в разы меньше, на расчёт он не влияет.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Основной контент: Ингредиенты + Технология -->
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> буханку (≈ 500 г)</span>
+        </div>
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Продуктов на этот хлеб немного, но два из них решают всё: сильная мука с высоким белком и натуральный сухой краситель. Молоко и масло берите прямо из холодильника — тесто не должно нагреться.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: молочное, дрожжи, масло -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, дрожжи, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко</strong>:
+                <span class="shopping-qty" data-base-amount="175" data-unit="г">175 г</span>
+                <span class="shopping-hint">Любой жирности от 0,5 до 6 %, но строго холодное — прямо из холодильника</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Дрожжи прессованные живые</strong>:
+                <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span>
+                <span class="shopping-hint">Можно заменить сухими: прессованных берётся в 3 раза больше, то есть 3 г сухих</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5 %</strong>:
+                <span class="shopping-qty" data-base-amount="25" data-unit="г">25 г</span>
+                <span class="shopping-hint">Холодное. Небольшой кусок от пачки — остальное уйдёт на смазывание формы</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: мука, бакалея, краситель -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Мука, бакалея, краситель</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная сильная, в/с</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Автор берёт «Макфа» в жёлтой пачке — 12 г белка на 100 г. В «Экстре» того же бренда белка 10,3 г, для хлеба это мало</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="20" data-unit="г">20 г</span>
+                <span class="shopping-hint">Меньше 1 ст. л. — хлеб получается почти несладким, как батон</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="3" data-unit="г">3 г</span>
+                <span class="shopping-hint">Примерно половина чайной ложки без горки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Краситель сухой натуральный</strong>:
+                <span class="shopping-qty" data-base-amount="7" data-unit="г">7 г</span>
+                <span class="shopping-hint">Пудра чёрной моркови, свёклы, черники, спирулины — по DOCX 6–8 г. Синтетического сухого красителя нужно в разы меньше, около четверти чайной ложки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — пищевая плёнка, пергамент или форма для кекса
+                <span class="shopping-hint">Форма должна быть по размеру буханки; смазать маслом или выложить пергаментом</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">На один замес (одна буханка)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Мука пшеничная сильная (12 % белка)
+              <span class="ingredient-note">«Макфа» в жёлтой пачке; просеять не обязательно, но комки разбить надо</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="175" data-unit="г">175 г</span> — Молоко холодное
+              <span class="ingredient-note">0,5–6 % жирности; строго из холодильника</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="3" data-unit="г">3 г</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="10" data-unit="г">10 г</span> — Дрожжи прессованные (или 3 г сухих)
+              <span class="ingredient-note">Раскрошить в муку — так они распределятся по тесту равномерно</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Масло сливочное 82,5 %, холодное
+              <span class="ingredient-note">Вводится в самом конце замеса, в два приёма</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7" data-unit="г">7 г</span> — Краситель сухой натуральный
+              <span class="ingredient-note">По DOCX 6–8 г; идёт только в одну из двух половин теста</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Для формы и посыпки</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По требованию — Масло сливочное или пергамент для формы
+              <span class="ingredient-note">Форму смазать маслом либо выложить пергаментом; автор выкладывает края бумагой</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Мука для подпыла стола
+              <span class="ingredient-note">Совсем немного, только чтобы тесто не прилипало к скалке</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По желанию — Молоко или яйцо для смазки верха
+              <span class="ingredient-note">Автор не советует: смазка меняет цвет корочки и «съедает» двухцветный рисунок</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка продуктов</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отвесьте муку, сахар и соль. Дрожжи заранее раскрошите прямо в муку — так они разойдутся по тесту равномерно, без «дрожжевых пятен».
+                <span class="source-badge">⏱ Урок_01: 02:17–02:33</span>
+              </p>
+              <p>
+                Молоко возьмите из холодильника: жирность любая, от 0,5 до 6 %, важно только, чтобы оно было холодным. Сливочное масло тоже держите в холодильнике до самого момента введения.
+                <span class="source-badge">⏱ Урок_01: 02:34–03:32</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем холод:</strong> во время замеса тесто греется от механического воздействия. К концу замеса его температура не должна быть выше 24 °C — холодные молоко и масло как раз этому помогают. Если в комнате жарко, откройте окно.
+                <span class="source-badge">⏱ Урок_01: 11:02–11:19</span>
+              </div>
+              <p>
+                Мука должна быть сильной: автор настаивает на «Макфе» в жёлтой пачке, где 12 г белка на 100 г. У «Макфа Экстра» белка 10,3 г, а у большинства марок в/с — 10–10,5 г, и хлеб с ними получается менее упругим.
+                <span class="source-badge">⏱ Урок_01: 00:21–01:07</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📦 Раскладка: <strong>250 г муки + 175 г молока</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>молоко и масло холодные</strong></span>
+              <span class="param-pill">🔍 Признак муки: <strong>12 г белка на 100 г</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Замес без масла</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сложите в дежу миксера муку с дрожжами, соль, сахар и влейте холодное молоко. Всё, кроме масла и красителя. Включите миксер на минимальной скорости, чтобы мука не разлеталась, затем добавьте скорость и вымешивайте 5–7 минут.
+                <span class="source-badge">⏱ Урок_01: 09:55–15:02</span>
+              </p>
+              <p>
+                Сначала тесто довольно крутое — это нормально. Ждите, когда оно соберётся в один комок и начнёт становиться гладким. Миксер с крюками от обычного бытового миксера не подойдёт: он рвёт тесто. Руками — немного дольше, но вполне реально.
+                <span class="source-badge">⏱ Урок_01: 15:22–16:41</span>
+              </p>
+              <p>
+                Тесто, готовое к введению масла, уже не липкое, упругое, но слегка рваное — так и должно быть. Оно не отваливается кусками и остаётся холодным на ощупь.
+                <span class="source-badge">⏱ Урок_01: 17:53–18:09</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>5–7 мин</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Планетарный миксер с крюком или руки</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Единый комок, не липнет, слегка рвётся</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Масло в два приёма</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разрежьте холодное масло на четыре кусочка и отправьте в тесто половину — два кусочка. Мешайте, пока масло полностью не уйдёт в тесто: поначалу оно «гуляет» по чаше, и это нормально, при необходимости помогайте скребком.
+                <span class="source-badge">⏱ Урок_01: 19:04–19:42</span>
+              </p>
+              <p>
+                Вводите вторую пару кусочков только после того, как первая вошла в тесто. Тесто начнёт становиться ещё глаже, а стенки дежи останутся чистыми — это и есть признак, что оно вымесилось. Итого до гладкости ещё 2–4 минуты.
+                <span class="source-badge">⏱ Урок_01: 21:53–24:55</span>
+              </p>
+              <div class="warning-box">
+                <strong>Почему масло в конце, а не растопленным в молоке:</strong> сначала глютен должен напитаться водой — тогда цепи белка набухают и крепнут. Масло, введённое в начале, обволакивает муку и не даёт ей взять влагу: тесто получается слабым, а хлеб быстрее черствеет. Тонкая масляная плёнка поверх уже набухшего глютена, наоборот, запечатывает влагу внутри.
+                <span class="source-badge">⏱ Урок_01: 38:17–39:58</span>
+              </div>
+              <p>
+                Если месите руками, достаньте масло из холодильника за 3–5 минут до введения — чтобы чуть отошло, но осталось холодным.
+                <span class="source-badge">⏱ Урок_01: 16:59–17:11</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>2–4 мин после масла</strong></span>
+              <span class="param-pill">🧈 Масло: <strong>25 г, в 2 приёма по ~12 г</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Тесто гладкое, дежа чистая</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Деление пополам и окрашивание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Тесто выложите на стол — мукой не припыляйте, оно и так не липнет. Разделите на две одинаковые по весу части: у автора вышло 476 г всего, по 238 г каждая.
+                <span class="source-badge">⏱ Урок_01: 25:05–27:04</span>
+              </p>
+              <p>
+                В одну половину добавьте сухой натуральный краситель и вымешайте до однородного цвета. Поначалу масса будет в прожилках — домешайте руками, пока окраска не станет ровной.
+                <span class="source-badge">⏱ Урок_01: 28:43–42:13</span>
+              </p>
+              <p>
+                Уложите оба колобка в миски и затяните пищевой плёнкой. Перед этим подберите тесто: все складочки спрячьте на одну сторону, затем переверните и натяните клейковину сверху — получится ровный гладкий шар, внутри которого дрожжи будут работать, не выходя наружу.
+                <span class="source-badge">⏱ Урок_01: 27:07–28:40</span>
+              </p>
+              <div class="tip-box">
+                <strong>Сколько красителя:</strong> натуральной пудры уходит много — 6–8 г, у автора 6 г поверх уже насыпанного. Порошок очень лёгкий, поэтому весы лучше не сбрасывать: иначе они врут на таких малых дозах. Сухого синтетического красителя нужно в разы меньше — примерно четверть чайной ложки.
+                <span class="source-badge">⏱ Урок_01: 34:35–35:34</span>
+              </div>
+              <div class="warning-box">
+                <strong>Цвет порошка ≠ цвет хлеба:</strong> бордовая пудра чёрной моркови даёт фиолетовый оттенок, свёкла — оранжевый, пудра черники — светлый розовый. Так ведут себя все натуральные красители. На вкус они не влияют; тесто по-прежнему холодное.
+                <span class="source-badge">⏱ Урок_01: 35:37–36:17</span>
+              </div>
+              <p>
+                Сок отжатой свёклы или блендированный шпинат для этого не годятся — в них слишком много влаги, и тесто поплывёт.
+                <span class="source-badge">⏱ Урок_01: 30:37–31:03</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Деление: <strong>2 части по ~238 г</strong></span>
+              <span class="param-pill">🎨 Краситель: <strong>6–8 г сухой натуральной пудры</strong></span>
+              <span class="param-pill">🧊 Холодильник (опция): <strong>до 24 ч при +4 °C и выше</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Первая расстойка до 2,5–3 раз</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Оставьте обе заготовки при комнатной температуре под плёнкой, пока объём не увеличится в 2,5–3 раза. У автора на это уходит около полутора часов.
+                <span class="source-badge">⏱ Урок_01: 44:29–45:48</span>
+              </p>
+              <p>
+                Готовность видно по куполу и по волокнам внутри теста — при растяжении они хорошо видны. Ориентируйтесь не на часы, а на объём: в прохладной комнате тесто идёт медленнее.
+                <span class="source-badge">⏱ Урок_01: 44:56–45:21</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не ускоряйте:</strong> не ставьте миску на батарею, в таз с горячей водой или в духовку на 50 °C. Дрожжи в перегреве дают «рваный», неровный подъём и кислый привкус. Лучшее, что можно сделать, — плёнка или полотенце и обычная комнатная температура.
+                <span class="source-badge">⏱ Урок_01: 08:05–08:31</span>
+              </div>
+              <div class="tip-box">
+                <strong>Холодный способ:</strong> замес можно разделить на два дня — вечером смешать всё, убрать в холодильник (+4 °C и выше, не дольше 24 часов), а утром печь. Холод тормозит брожение, но укрепляет глютен, и текстура получается даже лучше. Подъём в этом случае идёт в холодильнике.
+                <span class="source-badge">⏱ Урок_01: 08:31–09:36</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>~1,5 ч (до объёма)</strong></span>
+              <span class="param-pill">🌡 Условия: <strong>Комнатная температура, под плёнкой</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Рост в 2,5–3 раза</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Раскатка двух пластов</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Тесто слегка обомните, выложите на подпылённый мукой стол и сформируйте шар, подворачивая складочки внутрь. После расстойки тесто мягче и податливее.
+                <span class="source-badge">⏱ Урок_01: 48:19–49:22</span>
+              </p>
+              <p>
+                Раскатайте каждый цвет в прямоугольник примерно 35 × 15 см, стараясь держать стороны ровными: чем одинаковее пласты, тем аккуратнее выйдет спираль на срезе.
+                <span class="source-badge">⏱ Урок_01: 52:53–53:12</span>
+              </p>
+              <p>
+                Сложите белый пласт на цветной и выровняйте их по размеру. Гладкой стороной вверх, а складки, которые автор прятал во время формовки шара, — сверху на этом пласте: их потом закроет спираль.
+                <span class="source-badge">⏱ Урок_01: 56:37–59:15</span>
+              </p>
+              <div class="tip-box">
+                <strong>Тесто возвращается под скалкой:</strong> это не брак, а признак трёх вещей — правильной муки, набухшего глютена и хорошего замеса. Много муки подпылом не сыпьте, иначе хлеб станет сухим.
+                <span class="source-badge">⏱ Урок_01: 50:24–50:39</span>
+              </div>
+              <p>
+                Дайте пластам «отдохнуть» 5–10 минут. Не пропускайте этот шаг: усталый глютен сжимается при нарезке, и полоски получаются неровными.
+                <span class="source-badge">⏱ Урок_01: 59:29–1:00:13</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Размер пласта: <strong>≈ 35 × 15 см</strong></span>
+              <span class="param-pill">⏱ Отдых теста: <strong>5–10 мин</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Скалка, скребок, весы</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Нарезка и скрутка спирали</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Нарежьте сложенные пласты полосками шириной 1 см — скребком или ножом, без разницы. Автор режет только до высоты скребка и оставляет крайний участок нетронутым: из него получится аккуратный разрез и стабильная буханка.
+                <span class="source-badge">⏱ Урок_01: 1:00:30–1:05:02</span>
+              </p>
+              <p>
+                Белое с фиолетовым не разделяйте — полоски уже двухцветные. Скручивайте в одну сторону, туго подтягивая в противоположную сторону: «скруточка, раскруточка». Скручивайте до тех пор, пока по борту не пойдут завитушки.
+                <span class="source-badge">⏱ Урок_01: 1:04:20–1:12:15</span>
+              </p>
+              <div class="tip-box">
+                <strong>Ровный срез:</strong> все завитушки заворачивайте на дно заготовки — они останутся только на внешнем слое. Тогда на срезе получится ровная спираль, а не «мясорубка».
+                <span class="source-badge">⏱ Урок_01: 1:12:15–1:12:45</span>
+              </div>
+              <p>
+                Заготовку уложите в смазанную маслом форму — подойдёт форма для кекса, по форме напоминающая буханку, — или выложите форму пергаментом. Размер формы должен совпадать с размером будущего хлеба, а края лучше поднять бумагой.
+                <span class="source-badge">⏱ Урок_01: 1:12:17–1:13:22</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📐 Полоски: <strong>1 см шириной</strong></span>
+              <span class="param-pill">🌀 Скрутка: <strong>Тугая, в одну сторону</strong></span>
+              <span class="param-pill">🥣 Форма: <strong>Для кекса, по размеру буханки</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Вторая расстойка и смазка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Оставьте заготовку в форме подниматься до увеличения в объёме в 2 раза: тесто должно дойти почти до верха формы, не хватает буквально сантиметра.
+                <span class="source-badge">⏱ Урок_01: 1:13:30–1:13:51</span>
+              </p>
+              <p>
+                Верх ничем не смазывайте, если хотите сохранить чистый двухцветный рисунок. Если румяная корочка важнее цвета — можно пройтись молоком или яйцом.
+                <span class="source-badge">⏱ Урок_01: 1:13:54–1:14:10</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не ускоряйте и вторую расстойку:</strong> батарея и тёплая духовка — те же риски, что и в первый раз. Хлеб поднимается сам, при комнатной температуре.
+                <span class="source-badge">⏱ Урок_01: 1:15:08–1:15:13</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Условия: <strong>Комнатная температура</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Объём в 2 раза, почти до края формы</strong></span>
+              <span class="param-pill">🖌 Смазка: <strong>Не нужна — ради цвета</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Выпечка при 170 °C</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Пеките в заранее разогретой до 170 °C духовке 25–30 минут (по DOCX). Автор даёт три равнозначных режима: 160 °C без конвекции 30 минут, 170 °C без конвекции 30 минут или 160 °C с конвекцией около 25 минут.
+                <span class="source-badge">⏱ Урок_01: 1:14:41–1:14:58</span>
+              </p>
+              <p>
+                Температура кажется низкой для хлеба — так и задумано: на сильном жаре натуральный краситель выгорает и темнеет, и рисунок на срезе теряется.
+                <span class="source-badge">⏱ Урок_01: 1:14:58–1:15:04</span>
+              </p>
+              <div class="tip-box">
+                <strong>Как понять, что пропёкся:</strong> корочка равномерно золотистая, бока отходят от формы, а если достать хлеб и постучать по нижней корке пальцем — звук гулкий. Пока хлеб в форме, потеря веса на первых минутах печи — нормальный признак того, что тесто «встало».
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Режим: <strong>170 °C без конвекции</strong></span>
+              <span class="param-pill">⏱ Время: <strong>25–30 мин</strong></span>
+              <span class="param-pill">🔥 Альтернатива: <strong>160 °C с конвекцией ~25 мин</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Золотистая корка, гулкий звук</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 10 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Остывание и хранение</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Горячий хлеб сразу выложите из формы и остудите на решётке. Держать его в форме до остывания нельзя: низ отсыреет, а корка размокнет.
+              </p>
+              <p>
+                Хранится до 5 дней в шкафу под плёнкой или до 10 дней в холодильнике. Можно замораживать — сроком до месяца.
+                <span class="source-badge">⏱ Урок_01: 1:14:16–1:14:29</span>
+              </p>
+              <div class="tip-box">
+                <strong>Нарезка:</strong> режьте остывшим, тонким ножом под острым углом — спираль двухцветного рисунка видна лучше всего в косом срезе.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏳ Шкаф: <strong>до 5 дней под плёнкой</strong></span>
+              <span class="param-pill">🧊 Холодильник: <strong>до 10 дней</strong></span>
+              <span class="param-pill">❄ Морозилка: <strong>до 1 месяца</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Сильная мука — половина успеха:</strong> ищите на упаковке 12 г белка на 100 г («Макфа» в жёлтой пачке). Её же нужно выбирать для любой дрожжевой выпечки. Импортные Менитоба и Нордик с 13,8 г тоже подходят, но не заменяйте цельнозерновой более чем на 10–15 % — упругости она не даст.</li>
+                <li><strong>Не перегревать тесто:</strong> к концу замеса не выше 24 °C. Холодное молоко, холодное масло, прохладная кухня — всё это инструменты, а не случайность.</li>
+                <li><strong>Масло — в конце:</strong> сначала глютен «пьёт» молоко, потом покрывается масляной плёнкой и запечатывает воду. Отсюда долгий срок свежести: масло держит влагу внутри.</li>
+                <li><strong>Краситель в два раза меньше:</strong> сухой синтетический краситель ярче натурального, поэтому его кладут не 6–8 г, а примерно четверть чайной ложки. Натуральный в такой дозировке в хлебе не чувствуется.</li>
+                <li><strong>Натуральный краситель можно сушить самому:</strong> выдавите сок в тонкий слой на стекло, дайте влаге испариться и соскребите сухой остаток. Автор считает, что проще купить готовую пудру, но способ рабочий.</li>
+                <li><strong>Дайте пластам отдохнуть:</strong> 5–10 минут на столе перед нарезкой — иначе глютен сжимает тесто и полоски выходят неровными.</li>
+                <li><strong>Из этого же теста получается кулич:</strong> сахар до 45 г, масла вдвое больше (50 г), добавить ваниль. Начинку из изюма или цукатов лучше заворачивать внутрь при скрутке, а не мешать в тесто, — тогда цвет и вид разреза сохраняются.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Молоко и масло тёплые:</strong> тесто перегревается, дрожжи работают непредсказуемо, а сдобное тесто становится липким.</li>
+                <li><strong>Всё масло сразу:</strong> тесто «запечатало» муку жиром, глютен не напитался водой и буханка получилась низкой и крошащейся.</li>
+                <li><strong>Замена жидким красителем:</strong> сок свёклы или блендерный шпинат добавляют лишнюю влагу — тесто плывёт и не держит форму.</li>
+                <li><strong>Расстойка ради часов, а не объёма:</strong> в прохладной комнате 1,5 часа может не хватить; ждите роста в 2,5–3 раза.</li>
+                <li><strong>Ускорение на батарее:</strong> неровный подъём и кислый привкус.</li>
+                <li><strong>Нарезка сразу после раскатки:</strong> глютен ещё напряжён, полоски сжимаются и рвутся.</li>
+                <li><strong>Смазка яйцом «для блеска»:</strong> верх жарко зарумянивается и цветной рисунок теряет контраст.</li>
+                <li><strong>Высокая температура печи:</strong> краситель выгорает, а корочка горит раньше, чем пропекается мякиш.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «Цветной хлеб» с точной рецептурой и расшифровка вебинара «Урок_01» (692 строки) с живым разбором технологии. Граммовки — из DOCX, техника, признаки готовности и таймкоды — из видео.</li>
+              <li><strong>Время выпечки:</strong> DOCX — 25–30 минут при 170 °C; видео — три режима: 160 °C без конвекции 30 минут, 170 °C без конвекции 30 минут, 160 °C с конвекцией около 25 минут. На странице основной режим взят из DOCX, альтернатива описана в шаге 9.</li>
+              <li><strong>Замес:</strong> DOCX — 5–7 минут без масла и ещё 2–4 минуты с маслом; в видео автор вымешивает около 5 минут, затем ещё примерно 3 минуты до введения масла (15:02–16:35). На странице диапазон из DOCX.</li>
+              <li><strong>Краситель:</strong> DOCX — 6–8 г сухого натурального красителя; в видео автор насыпает 6 г поверх уже взятого и говорит, что натурального красителя уходит много. На странице и в калькуляторе — 7 г (в калькуляторе гибче для дробных порций).</li>
+              <li><strong>Вес заготовки:</strong> по DOCX сумма продуктов 490 г, автор получила 476 г теста и разделила его на две части по 238 г. Выход указан как ≈ 500 г — в видео готовый хлеб не взвешивают.</li>
+              <li><strong>Мука в подпыле:</strong> в DOCX не указана вовсе; в видео автор присыпает стол «чуть-чуть». На странице — «по вкусу», в калькулятор не заложена.</li>
+              <li><strong>Смазка верха:</strong> в DOCX нет инструкции смазывать; в видео автор советует ничего не мазать, чтобы не менялся цвет, и допускает молоко или яйцо, если румяна важнее.</li>
+              <li><strong>Пробел — форма:</strong> ни в DOCX, ни в видео нет точных размеров формы; автор говорит только, что размер формы должен совпадать с размером хлеба и что для её формы теста было мало (примерно в 1,5 раза больше хватило бы).</li>
+              <li><strong>Пробел — время второй расстойки:</strong> автор называет признак (объём в 2 раза, до верха формы), но не часы; вебинар обсуждение после выпечки не содержит.</li>
+              <li><strong>Пробел — признак пропечённости в видео:</strong> автор отсылает к посту в своей группе и показывает готовый хлеб уже вне записи; в документе и расшифровке прямого ориентира нет. На странице он дан как общий профессиональный критерий (золотистая корка, гулкий звук при постукивании), а не как цитата автора.</li>
+              <li><strong>Цвет красителя в видео:</strong> на вебинаре используют пудру чёрной моркови — тесто получается фиолетовым. В DOCX марка не названа, поэтому в рецепте краситель обозначен обобщённо.</li>
+              <li><strong>Расшифровка:</strong> автоматическое распознавание речи, часть фраз искажена («громовки» вместо «граммовки», «дежурная» вместо «дежа», обрыв в конце на 01:15:13). Смысл восстановлен по смыслу, но цитаты из этих мест не используются.</li>
+              <li><strong>Фото:</strong> кадр из видеоурока; отдельного фотоснимка в папке нет.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

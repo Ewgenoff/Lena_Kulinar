@@ -1,0 +1,580 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Творожная пасха с маскарпоне (заварная) — пошаговый рецепт | CookBook</title>
+  <meta name="description" content="Заварная творожная пасха с маскарпоне: творог 600 г, маскарпоне 250 г, сливочное масло 82%, желтки и цукаты. Желтки пастеризуются до 82–84 °C, пасха стоит в холодильнике 12–24 часа.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧁</text></svg>">
+</head>
+<body data-recipe-id="pasha-s-maskarpone">
+
+    <header class="site-header">
+    <div class="header-container">
+      <div class="header-back">
+        <a href="../index.html" class="back-link"><span class="back-arrow">←</span><span class="back-text">Назад</span></a>
+      </div>
+      <a href="../index.html" class="brand">
+        <img src="../assets/images/logo.png" alt="Логотип" aria-hidden="true" class="brand-logo" width="241" height="200">
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 <span class="btn-text">Печать рецепта</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Торты и десерты</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Творожная пасха с маскарпоне (заварная)</h1>
+      <div class="recipe-intro-split">
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-label">Подготовка</span>
+            <span class="fact-value">20 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Активное время</span>
+            <span class="fact-value">50 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Пассивное время</span>
+            <span class="fact-value">12–24 часа</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Общее время</span>
+            <span class="fact-value">13–25 часов</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Выход</span>
+            <span class="fact-value">2 небольшие пасхи по ≈700 г</span>
+          </div>
+        </div>
+
+        <p class="recipe-lead">
+          Пасха, в которой заварная часть делается только из желтков, маскарпоне и сахара, а творог остаётся сырым — так вкус свежее, а яйца при этом пастеризованы. Творог дважды протирается через сито, соединяется с маслом, маскарпоне и цедрой, а готовую массу держит в форме 200 г сливочного масла. Из этого количества получаются две небольшие пасочницы; в шоколадном варианте — одна пасха с цукатами и одна шоколадная.
+        </p>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/pasha-s-maskarpone.jpg" alt="Шоколадная творожная пасха в форме, перед отправкой в холодильник" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (2 пасхи)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="2">2</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">пасхи</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — две небольшие пасочницы (около 710 г массы в каждой). Рецепт можно уложить в одну большую пасочницу — тогда изменится только высота пасхи.
+          </p>
+        </div>
+
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">323</td>
+                <td>9,5 г</td>
+                <td>23,1 г</td>
+                <td>18,7 г</td>
+              </tr>
+              <tr>
+                <th>Две пасхи<span class="kbju-sub">≈ 1,4 кг</span></th>
+                <td class="kbju-kcal"><span data-base-amount="4520" data-unit="ккал">4520 ккал</span></td>
+                <td><span data-base-amount="133" data-unit="г">133 г</span></td>
+                <td><span data-base-amount="323" data-unit="г">323 г</span></td>
+                <td><span data-base-amount="262" data-unit="г">262 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Считан основной вариант, без шоколада и без замены маскарпоне: заварная часть, творожная масса с маслом и цукаты с изюмом.</p>
+            <p>Одна пасха ≈ 700 г — ≈ 2260 ккал. Со 140 г молочного шоколада партия прибавит ≈ 750 ккал (около +45 ккал на 100 г); замена маскарпоне на сметану с творогом почти не меняет калорийность.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">2</span> пасхи</span>
+        </div>
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Творог, сыр, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творог 5% и выше</strong>:
+                <span class="shopping-qty" data-base-amount="600" data-unit="г">600 г</span>
+                <span class="shopping-hint">Сухой, лучше 9%. Если творог влажный — отвесить; из 5% пасха тоже получится</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Маскарпоне</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">150 г в заварную часть + 100 г в творог. Творожным сыром не заменять — он солёный</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82%</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Размягчённое; именно оно держит пасху в форме</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥚 Яйца, сахар, наполнение</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="4" data-unit="шт." data-piece="true">4 шт.</span>
+                <span class="shopping-hint">Нужно 80 г желтков — примерно 4–5 желтков; белки останутся</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Весь в желтки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Цукаты и изюм</strong>:
+                <span class="shopping-qty" data-base-amount="150" data-unit="г">150 г</span>
+                <span class="shopping-hint">Промыть, при желании замочить в роме и отжать</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ванильный сахар</strong>:
+                <span class="shopping-qty" data-base-amount="15" data-unit="г">15 г</span>
+                <span class="shopping-hint">Или ванильная паста, экстракт</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лимон или лайм</strong>:
+                <span class="shopping-qty" data-base-amount="0.5" data-unit="шт." data-piece="true">0,5 шт.</span>
+                <span class="shopping-hint">Нужна цедра с половины плода</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шоколад (для шоколадной пасхи, опционально)</strong>:
+                <span class="shopping-qty" data-base-amount="140" data-unit="г">140 г</span>
+                <span class="shopping-hint">Молочный 140 г или тёмный 70% — 80 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ром или коньяк (опционально)</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Для замачивания цукатов; можно без него</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Марля и пасочница</strong>
+                <span class="shopping-hint">Марля в один слой, сырая; пасочница не больше чем на 1 кг творога</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Заварная часть</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Желтки
+              <span class="ingredient-note">Около 4–5 штук</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Маскарпоне (в заварную часть)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сахар
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Творожная масса</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="600" data-unit="г">600 г</span> — Творог 5% и выше
+              <span class="ingredient-note">Протереть через сито дважды</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Маскарпоне (в творог)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сливочное масло 82%
+              <span class="ingredient-note">Размягчённое</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Ванильный сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Цедра половины лимона или лайма
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Наполнение и варианты</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Цукаты, изюм
+              <span class="ingredient-note">Отжать от жидкости</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="140" data-unit="г">140 г</span> — Молочный шоколад (по желанию)
+              <span class="ingredient-note">Или 80 г тёмного 70% для шоколадной пасхи</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По желанию — Ром или коньяк для цукатов
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Замена маскарпоне</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Сметана жирная
+              <span class="ingredient-note">Вместо маскарпоне</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Творог
+              <span class="ingredient-note">Плюс к основным 600 г, тогда творога всего 700 г</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Цукаты</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Изюм и цукаты залейте кипятком, дайте постоять и промойте — так сходит воск и жир с поверхности. Если хотите, залейте ромом на 30–40 г, закройте плёнкой. Перед закладкой жидкость обязательно отожмите: лишняя влага в пасхе не нужна.
+                <span class="source-badge">⏱ Урок_02: 00:07:49–00:10:41</span>
+              </p>
+              <div class="warning-box">
+                <strong>Цукаты из банки:</strong> если они «мокренькие» в сиропе, ромом не заливайте — только промойте и обсушите.
+                <span class="source-badge">⏱ Урок_02: 00:27:16–00:28:04</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Промывка: <strong>10–15 мин</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Цукаты сухие, без сиропа</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Заварная часть</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В сухой сотейник положите желтки и 150 г маскарпоне, перемешайте, затем добавьте сахар и сразу поставьте на минимальный огонь. Сахар на желтках не держите — от него желтки сворачиваются комочками.
+                <span class="source-badge">⏱ Урок_02: 00:12:11–00:17:44</span>
+              </p>
+              <p>
+                Нагревайте при постоянном помешивании до первого «булька» — это 82–84 °C. Сразу снимите и перелейте в другую миску, чтобы масса не грелась от дна.
+                <span class="source-badge">⏱ Урок_02: 00:18:01–00:25:03</span>
+              </p>
+              <div class="tip-box">
+                <strong>Без плиты:</strong> в микроволновке грейте пульсами 30 → 20 → 15 секунд, перемешивая, до первых пузырьков и 82–84 °C.
+                <span class="source-badge">⏱ Урок_02: 00:14:39–00:15:18</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>82–84 °C</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Первый бульк</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Сотейник, венчик, термометр</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Творог</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Творог протрите через мелкое сито — лучше дважды. Погружным блендером можно, но он разжижает творог, а пасха должна держать форму. Лишнюю сыворотку слейте.
+                <span class="source-badge">⏱ Урок_02: 00:30:31–00:31:39</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не разжижайте:</strong> если творог превратить в жидкость, пасха не встанет даже с маслом и маскарпоне. Густота здесь — принципиальный момент.
+                <span class="source-badge">⏱ Урок_02: 00:34:18–00:34:41</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>Сито, лопатка</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Гладкая густая масса</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Сборка массы</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                В протёртый творог добавьте 100 г маскарпоне, 200 г размягчённого масла, цедру и ванильный сахар. Перемешайте миксером — без фанатизма, чтобы не разжижить.
+                <span class="source-badge">⏱ Урок_02: 00:41:56–00:45:06</span>
+              </p>
+              <p>
+                Введите заварные желтки, остывшие примерно до 45 °C — ладонью тепло, но не обжигает. Размешайте до однородности; масса должна держать форму. Цукаты вмешайте в самом конце, когда масса уже не горячая.
+                <span class="source-badge">⏱ Урок_02: 00:46:20–00:50:38</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> орехи в пасху не советую — они отсыревают и портят вид. Лучше цукаты и цедра.
+                <span class="source-badge">⏱ Урок_02: 00:07:55–00:08:10</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Заварная часть: <strong>≈45 °C</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Миксер</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Масса держит форму</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Форма и марля</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Марлю намочите, выстелите пасочницу наискосок и продавите кулаком до дна одним движением — так не будет складок. Свисающие концы должны быть с четырёх сторон.
+                <span class="source-badge">⏱ Урок_02: 00:51:07–00:53:25</span>
+              </p>
+              <p>
+                Выложите массу: в обычную пасочницу около 800 г, остальное оставьте на шоколадную. Удобно через кондитерский мешок. Сверху накройте марлей в натяг.
+                <span class="source-badge">⏱ Урок_02: 01:00:27–01:02:45</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Масса: <strong>≈800 г на пасочницу</strong></span>
+              <span class="param-pill">🧺 Марля: <strong>один слой, влажная</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Шоколадный вариант</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Для шоколадной пасхи растопите 140 г молочного или 80 г тёмного шоколада. Возьмите примерно столовую ложку творожной массы и быстро соедините её с тёплым шоколадом, и только потом введите эту смесь в общую массу — иначе шоколад застынет крошкой.
+                <span class="source-badge">⏱ Урок_02: 00:56:51–00:58:13</span>
+              </p>
+              <p>
+                Перемешайте миксером до равномерного цвета, добавьте цукаты и выложите в форму. Гнёт в бумажном стакане не нужен — шоколад сам стабилизирует массу.
+                <span class="source-badge">⏱ Урок_02: 01:05:24–01:06:04</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Шоколад: <strong>140 г молочного / 80 г тёмного</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Равномерный цвет без крошки</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Холодильник и извлечение</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Поставьте небольшой гнёт — дощечку или брусок, без фанатизма. Уберите в холодильник: в идеале на 24 часа, но автору хватает 12–14 часов, чтобы пасха держала форму.
+                <span class="source-badge">⏱ Урок_02: 01:02:45–01:02:59</span>
+              </p>
+              <p>
+                Перед подачей развяжите нитки, снимите дощечки и переверните пасху на тарелку.
+                <span class="source-badge">⏱ Урок_02: 01:04:43–01:04:48</span>
+              </p>
+              <div class="warning-box">
+                <strong>Срок годности:</strong> в источнике не назван. Ориентир для заварной творожной пасхи — до 72 часов в холодильнике.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Охлаждение: <strong>12–24 часа</strong></span>
+              <span class="param-pill">🌡 Место: <strong>Холодильник</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Пасха держит форму, марля легко отходит</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Зачем заварная:</strong> автор не хочет сырых яиц, поэтому пастеризует только желток; творог остаётся сырым и вкусным.</li>
+                <li><strong>До первого булька:</strong> переваренные желтки дают запах яйца, а масса до 82–84 °C — гладкая и нейтральная.</li>
+                <li><strong>Маскарпоне не протирают:</strong> он уже однородный. Творожным сыром не заменять — он солёный, придётся пересчитывать сахар.</li>
+                <li><strong>Замена маскарпоне:</strong> 150 г жирной сметаны + 100 г творога, тогда основного творога берут 700 г.</li>
+                <li><strong>Три шоколада:</strong> массу можно разделить на три части и сделать тёмную, молочную и белую пасхи.</li>
+                <li><strong>Уход за пасочницей:</strong> мыть и сушить, но не под гнётом — потрескается.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Сахар лежит на желтках:</strong> желтки сворачиваются белесыми комочками.</li>
+                <li><strong>Перегрели заварную часть:</strong> запах яйца и крупинки.</li>
+                <li><strong>Творог пробили блендером до жидкости:</strong> пасха не держит форму.</li>
+                <li><strong>Заварную часть ввели горячей:</strong> масса расслаивается.</li>
+                <li><strong>Цукаты не отжали:</strong> лишняя влага мешает пасхе застыть.</li>
+                <li><strong>Не накрыли марлей в натяг:</strong> на поверхности остаются складки.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> серия «Кулич, краффин и пасха» Надежды Зубовой — DOCX с рецептурой и расшифровка Урок_02 (пасха).</li>
+              <li><strong>Творог:</strong> в рецептуре 600 г, в сводном списке закупки — 800 г. Автор объясняет, что список подстроен под магазинные упаковки; на странице 600 г.</li>
+              <li><strong>Маскарпоне:</strong> в DOCX 250 г одной строкой, в видео — 150 г в заварную часть и 100 г в творог.</li>
+              <li><strong>Холодильник:</strong> DOCX не указывает время; видео — 24 часа в идеале, 12–14 часов достаточно.</li>
+              <li><strong>Шоколадный вариант:</strong> в DOCX его нет; количества 140 г молочного / 80 г тёмного — из видео.</li>
+              <li><strong>Срок годности:</strong> в источниках не назван, дана общая рекомендация.</li>
+              <li><strong>Фото:</strong> кадр из видео — шоколадная пасха в форме перед охлаждением.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

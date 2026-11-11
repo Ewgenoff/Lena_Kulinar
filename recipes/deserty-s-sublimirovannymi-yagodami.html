@@ -1,0 +1,720 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Порционные десерты с сублимированными ягодами — пошаговый рецепт и технология | CookBook</title>
+  <meta name="description" content="Два бруска на сковороде: клубничный и фисташка-малина. Маршмеллоу, сухое молоко, печенье «Мария», сублимированные ягоды и орехи. Нарезка кубиками 2×2 см — 20 штук, без духовки.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍬</text></svg>">
+</head>
+<body data-recipe-id="deserty-s-sublimirovannymi-yagodami">
+
+    <header class="site-header">
+    <div class="header-container">
+      <div class="header-back">
+        <a href="../index.html" class="back-link"><span class="back-arrow">←</span><span class="back-text">Назад</span></a>
+      </div>
+      <a href="../index.html" class="brand">
+        <img src="../assets/images/logo.png" alt="Логотип" aria-hidden="true" class="brand-logo" width="241" height="200">
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 <span class="btn-text">Печать рецепта</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Конфеты и сладости</span>
+        <span class="recipe-difficulty">Сложность: <strong>Простая</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Порционные десерты с сублимированными ягодами</h1>
+      <div class="recipe-intro-split">
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-label">Подготовка</span>
+            <span class="fact-value">~10 мин: сковорода 28 см, форма 20×20 см, продукты взвешены</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Активное время</span>
+            <span class="fact-value">~40 мин (два замеса)</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Пассивное время</span>
+            <span class="fact-value">~30–60 мин до комнатной температуры</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Общее время</span>
+            <span class="fact-value">~1,5 ч</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Выход</span>
+            <span class="fact-value">20 кубиков 2×2 см (по 10 с бруска)</span>
+          </div>
+        </div>
+
+        <p class="recipe-lead">
+          Два бруска в одной квадратной форме: клубничный и фисташка-малина. Маршмеллоу плавится на сковороде с маслом, в него уходят печенье «Мария», сухое молоко, орехи, сухофрукты и сублимированные ягоды. Без духовки и без желатина в чистом виде — только тот, что уже есть в маршмеллоу. Нарезается кубиками 2×2 см, как конфеты.
+        </p>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/deserty-s-sublimirovannymi-yagodami.jpg" alt="Два бруска десерта в квадратной форме: розовый клубничный и зелёный фисташково-малиновый, с вкраплениями печенья и орехов" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (20 кубиков)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="20">20</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">кубиков</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — два бруска по 10 кубиков 2×2 см. В рецептуре два самостоятельных замеса: клубничный и фисташка-малина, оба в одной форме 20×20 см.
+          </p>
+        </div>
+
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">418</td>
+                <td>7,7 г</td>
+                <td>18,2 г</td>
+                <td>56,9 г</td>
+              </tr>
+              <tr>
+                <th>Два бруска<span class="kbju-sub">≈ 1 кг</span></th>
+                <td class="kbju-kcal"><span data-base-amount="4300" data-unit="ккал">4300 ккал</span></td>
+                <td><span data-base-amount="79" data-unit="г">79 г</span></td>
+                <td><span data-base-amount="187" data-unit="г">187 г</span></td>
+                <td><span data-base-amount="586" data-unit="г">586 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Оценка по средним табличным значениям продуктов: маршмеллоу 318 ккал/100 г, сухое молоко 469, сливочное масло 82,5 % — 748, печенье «Мария» 400, сублимированная ягода 340, орехи 550–650, сухофрукты 230. Считан весь состав обоих брусков, красители на расчёт не влияют.</p>
+            <p>Один кубик 2×2 см весит ≈ 51 г и даёт ≈ 215 ккал. Если брусок подсохнет на воздухе, вес уменьшится, а калорийность на 100 г немного вырастет.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">20</span> кубиков</span>
+        </div>
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+      </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Главное — маршмеллоу строго на желатине: зефир и пастила на агаре не расплавятся в тягучую массу. Сухое молоко нужно натуральное, не растительные сливки. Сублимированные ягоды — самая дорогая позиция; их можно заменить цветными цукатами.
+      </p>
+
+        <div class="shopping-grid">
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🍬 Маршмеллоу, молоко, масло</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Маршмеллоу</strong>:
+                  <span class="shopping-qty" data-base-amount="360" data-unit="г">360 г</span>
+                  <span class="shopping-hint">По 180 г на брусок: розовый или белый и зелёный или белый; только желатиновый</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сухое молоко</strong>:
+                  <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span>
+                  <span class="shopping-hint">По 40 г в каждый замес; натуральное, без растительных жиров</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Масло сливочное 82,5 %</strong>:
+                  <span class="shopping-qty" data-base-amount="80" data-unit="г">80 г</span>
+                  <span class="shopping-hint">По 40 г на сковороду для каждого вкуса</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="shopping-col">
+            <h3 class="shopping-col-title">🍪 Печенье, ягоды, орехи</h3>
+            <ul class="shopping-list">
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Печенье затяжное типа «Мария»</strong>:
+                  <span class="shopping-qty" data-base-amount="280" data-unit="г">280 г</span>
+                  <span class="shopping-hint">По 140 г на брусок; ломать крупно, не в крошку</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сублимированная клубника</strong>:
+                  <span class="shopping-qty" data-base-amount="25" data-unit="г">25 г</span>
+                  <span class="shopping-hint">20–30 г по рецептуре; банка обычно 25 г</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сублимированная малина</strong>:
+                  <span class="shopping-qty" data-base-amount="25" data-unit="г">25 г</span>
+                  <span class="shopping-hint">Целыми ягодками, не порошком</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Фундук и кешью</strong>:
+                  <span class="shopping-qty" data-base-amount="45" data-unit="г">45 г</span>
+                  <span class="shopping-hint">В клубничный брусок, обжаренные</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Фисташки очищенные</strong>:
+                  <span class="shopping-qty" data-base-amount="45" data-unit="г">45 г</span>
+                  <span class="shopping-hint">В фисташковый брусок; подойдут и солёные — сладкое оттенит вкус</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Миндаль</strong>:
+                  <span class="shopping-qty" data-base-amount="45" data-unit="г">45 г</span>
+                  <span class="shopping-hint">В фисташковый брусок</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Сухофрукты (цукаты, изюм, курага)</strong>:
+                  <span class="shopping-qty" data-base-amount="45" data-unit="г">45 г</span>
+                  <span class="shopping-hint">В клубничный брусок; не свежие и не сырые</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Красители розовый и зелёный</strong> — по желанию
+                  <span class="shopping-hint">Только если маршмеллоу белый; «Кэнди пинг» или гелевый, капля</span>
+                </div>
+              </li>
+              <li class="shopping-item"><div class="shopping-item-content">
+                  <strong>Расходники</strong> — форма 20×20 см, перчатки, пищевая плёнка
+                  <span class="shopping-hint">Форма разъёмная, рамка или раздвижная — что-то одно; смазать маслом</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">1. Клубничный брусок (10 кубиков)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="180" data-unit="г">180 г</span> — Маршмеллоу
+              <span class="ingredient-note">Клубничный розовый или белый</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Сухое молоко
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Масло сливочное
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="140" data-unit="г">140 г</span> — Печенье затяжное типа «Мария»
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Сублимированная клубника
+              <span class="ingredient-note">По рецептуре 20–30 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="45" data-unit="г">45 г</span> — Орехи: фундук, кешью
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="45" data-unit="г">45 г</span> — Сухофрукты: цукаты, изюм, курага
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По желанию — Краситель розовый
+              <span class="ingredient-note">Если маршмеллоу белый</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">2. Брусок «Фисташка-малина» (10 кубиков)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="180" data-unit="г">180 г</span> — Маршмеллоу
+              <span class="ingredient-note">Зелёный или белый</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Сухое молоко
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Масло сливочное
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="140" data-unit="г">140 г</span> — Печенье затяжное типа «Мария»
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Сублимированная малина
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="45" data-unit="г">45 г</span> — Фисташки
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="45" data-unit="г">45 г</span> — Миндаль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По желанию — Краситель зелёный
+              <span class="ingredient-note">Если маршмеллоу белый</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка формы</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Возьмите квадратную форму 20×20 см — разъёмную с дном, рамку или раздвижную. Одну форму смажьте сливочным маслом. Если форм две, работа идёт вдвое быстрее: каждый вкус замешивается и укладывается отдельно.
+                <span class="source-badge">⏱ Урок_02: 00:06:01–00:06:04</span>
+              </p>
+              <div class="warning-box">
+                <strong>Форма только одна из перечисленных:</strong> рамка без дна не удержит массу, поэтому под низ всё равно нужен пергамент или доска.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Форма: <strong>20×20 см</strong></span>
+              <span class="param-pill">🧈 Смазка: <strong>Сливочное масло</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Растопить масло</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                На сковороде диаметром 28 см на среднем огне растопите 40 г сливочного масла. Оно должно стать жидким, но не начать гореть и темнеть. Сковорода шире формы — масса потом распределяется по ней тонким слоем и не выплёскивается.
+                <span class="source-badge">⏱ Урок_02: 00:05:51–00:06:39</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Огонь: <strong>Средний</strong></span>
+              <span class="param-pill">🥣 Сковорода: <strong>28 см</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Маршмеллоу и краситель</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Всыпьте в масло 180 г маршмеллоу и добавьте каплю розового красителя, если маршмеллоу белый. Перемешивайте лопаткой, не отходя: масса плавится быстро, а на дне легко пригорает.
+                <span class="source-badge">⏱ Урок_02: 00:07:05–00:07:27</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> маршмеллоу годится любой фирмы, но только на желатине. Зефир и пастила на агаре в тягучую массу не превратятся.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍬 Маршмеллоу: <strong>180 г</strong></span>
+              <span class="param-pill">🎨 Краситель: <strong>Капля, по желанию</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Плавить медленно</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Плавьте на среднем огне, постоянно помешивая. Как только масса начнёт менять цвет с белого на кремовый или коричневатый, сразу убавьте огонь: в маршмеллоу много сахара, глюкозного сиропа и инвертного сахара, поэтому оно легко карамелизуется. Нужна белая тягучая масса, а не карамель.
+                <span class="source-badge">⏱ Урок_02: 00:08:18–00:10:41</span>
+              </p>
+              <div class="warning-box">
+                <strong>Пригорит — станет коричневым:</strong> вернуть белый цвет уже нельзя, а вкус будет горьковатым.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Огонь: <strong>Средний, затем меньше</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Тягучая однородная масса</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Печенье, ягоды и орехи</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Снимите сковороду с огня или убавьте его до минимума. Вмешайте 140 г печенья, сломанного крупно — пополам или на 3–4 части, не в крошку. Следом отправьте сублимированные ягоды, орехи и сухофрукты; их не замачивают, кладут сухими.
+                <span class="source-badge">⏱ Урок_02: 00:11:22–00:11:56</span>
+              </p>
+              <div class="tip-box">
+                <strong>Крупные куски — это текстура:</strong> если поломать печенье мелко, десерт превратится в однородную массу и потеряет характер.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍪 Печенье: <strong>140 г, крупно</strong></span>
+              <span class="param-pill">🍓 Ягоды: <strong>25 г, сухими</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Сухое молоко</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Всыпьте 40 г сухого молока и перемешайте — на минимальном огне или уже на выключенной сковороде. Молоко даёт сливочный вкус и убирает прозрачность массы, поэтому без него десерт выглядит как обычный маршмеллоу.
+                <span class="source-badge">⏱ Урок_02: 00:12:12–00:12:31</span>
+              </p>
+              <div class="warning-box">
+                <strong>Только натуральное сухое молоко:</strong> растительные сливки и «молочные» заменители дадут другой вкус и зернистость. Детская смесь подойдёт.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥛 Молоко: <strong>40 г</strong></span>
+              <span class="param-pill">🔥 Огонь: <strong>Минимум или выключен</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Домешать руками</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Наденьте перчатки и домешайте массу руками — аккуратно, «в лайтовом режиме», не давя на печенье и ягоды. Руками проще собрать всё со дна сковороды и понять, достаточно ли массы для формы.
+                <span class="source-badge">⏱ Урок_02: 00:12:33–00:13:18</span>
+              </p>
+              <div class="tip-box">
+                <strong>Горячо:</strong> если масса слишком горячая, подержите руки над холодной водой или работайте в двух перчатках.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧤 Перчатки: <strong>Обязательно</strong></span>
+              <span class="param-pill">✋ Движения: <strong>Без нажима</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Уложить в половину формы</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите массу в смазанную форму и слепите руками прямоугольный брусок, занимающий примерно половину площади. Утрамбуйте так, чтобы не осталось пустот, и выровняйте поверхность.
+                <span class="source-badge">⏱ Урок_02: 00:13:35–00:14:31</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Площадь: <strong>Половина формы</strong></span>
+              <span class="param-pill">✋ Утрамбовка: <strong>Без пустот</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Второй вкус рядом</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Повторите шаги 2–7 для фисташки-малины: масло, зелёный маршмеллоу, печенье, кешью, фисташки, малина, сухое молоко. Уложите второй брусок в ту же форму рядом с первым и утрамбуйте, чтобы между ними не было щели.
+                <span class="source-badge">⏱ Урок_02: 00:15:06–00:16:03</span>
+              </p>
+              <div class="warning-box">
+                <strong>Двойную порцию сразу не делать:</strong> на сковороде 28 см двойная масса пригорит, пока прогреется до нужной консистенции.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥜 Орехи: <strong>Кешью, фисташки, миндаль</strong></span>
+              <span class="param-pill">📏 Форма: <strong>Оба бруска в одной</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">10</span>
+                <h3 class="step-title">Остудить</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Оставьте форму при комнатной температуре до полного остывания — накрывать не нужно. Под плёнкой десерт отсыреет и покроется коркой. Остывшая масса становится плотной и легко режется.
+                <span class="source-badge">⏱ Урок_02: 00:28:48–00:28:56</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Остывание: <strong>До комнатной</strong></span>
+              <span class="param-pill">🚫 Накрывать: <strong>Не нужно</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">11</span>
+                <h3 class="step-title">Нарезка кубиками</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Сначала разрежьте брусок вдоль, затем на кубики 2×2 см — с каждого бруска выходит около 10 штук. Режьте острым ножом; автор пользовалась обычным, но длинное лезвие удобнее: разрез идёт одним движением.
+                <span class="source-badge">⏱ Урок_02: 00:24:25–00:24:44</span>
+              </p>
+              <div class="tip-box">
+                <strong>Крупнее — меньше:</strong> из бруска можно сделать меньше крупных кусков; ориентир — 2×2 см.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Кубик: <strong>2×2 см</strong></span>
+              <span class="param-pill">🔪 Нож: <strong>Острый, длинный</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">12</span>
+                <h3 class="step-title">Хранение</h3>
+              </div>
+              <label class="step-complete-toggle">
+                <input type="checkbox" class="step-checkbox"> выполнено
+              </label>
+            </div>
+            <div class="step-body">
+              <p>
+                Заворачивайте десерт в пищевую плёнку и храните при комнатной температуре — около 10 дней, а если брусок не разрезан, автор говорит и о 20 днях. В холодильнике масса твердеет и теряет тягучесть, поэтому лучше держать её в прохладной кладовке.
+                <span class="source-badge">⏱ Урок_02: 00:14:44–00:14:52</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🕐 Хранение: <strong>~10 дней при комнатной</strong></span>
+              <span class="param-pill">🎁 Подача: <strong>Кенди-бар, декор торта</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Только желатиновый маршмеллоу:</strong> зефир и пастила на агаре не плавятся в тягучую массу.</li>
+                <li><strong>Греть медленно:</strong> много сахара и сиропов — масса легко карамелизуется.</li>
+                <li><strong>Сухое молоко обязательно:</strong> даёт сливочный вкус и убирает прозрачность.</li>
+                <li><strong>Орехи и сухофрукты — сухими:</strong> замоченные размягчат десерт.</li>
+                <li><strong>Крупное печенье:</strong> создаёт текстуру и не даёт массе «слипнуться».</li>
+                <li><strong>Сублимированные ягоды можно заменить цукатами:</strong> результат останется ярким и заметно дешевле.</li>
+                <li><strong>Два бруска в одной форме:</strong> так удобнее резать и подавать ассорти.</li>
+                <li><strong>Отличное наполнение кенди-бара:</strong> и декор для торта.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Сильный огонь:</strong> маршмеллоу темнеет и горчит.</li>
+                <li><strong>Растительные сливки вместо сухого молока:</strong> зернистая текстура и другой вкус.</li>
+                <li><strong>Мелко поломанное печенье:</strong> десерт становится однородным.</li>
+                <li><strong>Двойная порция в одной сковороде:</strong> пригорает и не промешивается.</li>
+                <li><strong>Накрыть плёнкой горячим:</strong> конденсат, корка и отсыревание.</li>
+                <li><strong>Резать тёплым:</strong> кубики деформируются и липнут.</li>
+                <li><strong>Хранить в холодильнике:</strong> масса твердеет и крошится при нарезке.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Хранение и замены</h4>
+              <ul>
+                <li><strong>Готовый десерт:</strong> ~10 дней при комнатной температуре в плёнке, неразрезанный — до 20 дней.</li>
+                <li><strong>Маршмеллоу:</strong> любая фирма, лишь бы на желатине; домашний подойдёт, если внутри мягкий.</li>
+                <li><strong>Ягоды:</strong> сублимированная клубника и малина; замена — цветные цукаты или вяленая вишня.</li>
+                <li><strong>Орехи:</strong> любые, можно солёные фисташки; допустим арахис.</li>
+                <li><strong>Краситель:</strong> нужен, только если маршмеллоу белый.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> DOCX «Порционные десерты с сублимированными ягодами» с раскладкой и два урока. Десерты готовят во втором уроке (Урок_02, примерно 00:02–00:30), в первом — цветной кекс и заготовки сырных трюфелей.</li>
+              <li><strong>Маршмеллоу 180 г:</strong> цифра только из DOCX, в видео вес нигде не назван.</li>
+              <li><strong>Орехи:</strong> DOCX для клубничного даёт фундук и кешью, в видео называет миндаль и курагу; в нарезке фисташкового мелькнул фундук — состав, судя по всему, перемешивался. На странице оставлена раскладка DOCX.</li>
+              <li><strong>Количество ягод:</strong> DOCX — 20–30 г, в видео уточнено «банка 25 грамм».</li>
+              <li><strong>Сроки хранения:</strong> в уроке звучат 10 дней, 20 дней и «месяц точно», статус после месяца автор сама ставит под вопрос. На странице — 10 дней для разрезанного.</li>
+              <li><strong>Пробел:</strong> температура плавления не названа вообще — только «средний огонь, потом меньше» и сковорода 28 см. Вес порции не указан.</li>
+              <li><strong>Фото:</strong> готовых снимков в папке нет. На странице — кадр из Урок_02 (00:24:40) с двумя брусками в форме.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

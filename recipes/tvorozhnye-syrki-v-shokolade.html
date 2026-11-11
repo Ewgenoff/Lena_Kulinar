@@ -1,0 +1,549 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Творожные сырки в шоколаде, как эскимо — пошаговый рецепт | CookBook</title>
+  <meta name="description" content="Творожные сырки в шоколадной глазури: творог 9%, сливочное масло 82,5% и сахарная пудра, форма эскимо на палочке. Глазурь из шоколада с растительным маслом, 12 сырков по 40 г.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍫</text></svg>">
+</head>
+<body data-recipe-id="tvorozhnye-syrki-v-shokolade">
+
+    <header class="site-header">
+    <div class="header-container">
+      <div class="header-back">
+        <a href="../index.html" class="back-link"><span class="back-arrow">←</span><span class="back-text">Назад</span></a>
+      </div>
+      <a href="../index.html" class="brand">
+        <img src="../assets/images/logo.png" alt="Логотип" aria-hidden="true" class="brand-logo" width="241" height="200">
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 <span class="btn-text">Печать рецепта</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Конфеты и сладости</span>
+        <span class="recipe-difficulty">Сложность: <strong>Простая</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Творожные сырки в шоколаде, как эскимо</h1>
+      <div class="recipe-intro-split">
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-label">Подготовка</span>
+            <span class="fact-value">15 мин (+ отвешивание творога 6–8 ч, если влажный)</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Активное время</span>
+            <span class="fact-value">40 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Пассивное время</span>
+            <span class="fact-value">4–5 часов</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Общее время</span>
+            <span class="fact-value">5–6 часов</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Выход</span>
+            <span class="fact-value">12 сырков по 40 г</span>
+          </div>
+        </div>
+
+        <p class="recipe-lead">
+          Домашние творожные сырки в шоколадной глазури, надетые на палочку, как эскимо. Никаких специальных форм: масса стабилизируется сливочным маслом, формуется руками на доске и подмораживается, а глазурь из настоящего шоколада с каплей растительного масла застывает за секунды. Глазурь подходит не только для сырков — ею можно покрывать чизкейки, птичье молоко и мороженое.
+        </p>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/tvorozhnye-syrki-v-shokolade.jpg" alt="Готовые творожные сырки на палочках в тёмном и молочном шоколаде на подносе" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (12 сырков)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="12">12</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">сырков по 40 г</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — 12 сырков по 40 г из 360 г творога. Глазури в рецепте 100 г шоколада: этого хватает примерно на 10–12 сырков, при большем количестве увеличьте глазурь пропорционально.
+          </p>
+        </div>
+
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">344</td>
+                <td>11,3 г</td>
+                <td>24,2 г</td>
+                <td>19 г</td>
+              </tr>
+              <tr>
+                <th>12 сырков<span class="kbju-sub">≈ 630 г состава</span></th>
+                <td class="kbju-kcal"><span data-base-amount="2160" data-unit="ккал">2160 ккал</span></td>
+                <td><span data-base-amount="71" data-unit="г">71 г</span></td>
+                <td><span data-base-amount="152" data-unit="г">152 г</span></td>
+                <td><span data-base-amount="119" data-unit="г">119 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Считаны творожная масса и шоколадная глазурь с растительным маслом и орехами. Варианты вкуса — карамель, шоколад, ягодное пюре — даны «по желанию» и в расчёт не вошли.</p>
+            <p>Один сырок (40 г массы плюс глазурь) — ≈ 180 ккал. Часть глазури остаётся в миске, так что на деле сырок легче.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">12</span> сырков</span>
+        </div>
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Творог, масло, пудра</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Творог 9% и выше</strong>:
+                <span class="shopping-qty" data-base-amount="360" data-unit="г">360 г</span>
+                <span class="shopping-hint">Сухой и не крупинчатый. Влажный отвесить на марле 6–8 часов; 5% тоже подойдёт, но только после отвешивания</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                <span class="shopping-hint">Комнатной температуры, размягчённое. Масло с меньшей жирностью содержит лишнюю воду и разжижает массу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахарная пудра</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Не сахар: крупинки не растворятся в холодной массе</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ванильный сахар или ваниль</strong>
+                <span class="shopping-hint">В видео — половина пачки ванильного сахара с натуральной ванилью, около 7,5 г; можно экстракт или ванилин по вкусу</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍫 Шоколад, орехи, палочки</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Шоколад</strong>:
+                <span class="shopping-qty" data-base-amount="100" data-unit="г">100 г</span>
+                <span class="shopping-hint">Тёмный, молочный или белый — рецепт глазури одинаковый. Настоящий шоколад, не глазурь на заменителях</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Растительное масло без запаха</strong>:
+                <span class="shopping-qty" data-base-amount="20" data-unit="г">20 г</span>
+                <span class="shopping-hint">Лучше виноградной косточки, подойдёт рафинированное подсолнечное. Минимальная бутылка — 0,5 л</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Орехи жареные рубленые</strong>:
+                <span class="shopping-qty" data-base-amount="20" data-unit="г">20 г</span>
+                <span class="shopping-hint">15–30 г по вкусу: арахис, миндаль, кешью, грецкий. Обязательно жареные и сухие</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Палочки для эскимо, стаканчики, пергамент</strong>
+                <span class="shopping-hint">Палочки или длинные шпажки; в одноразовый стаканчик наливают глазурь, чтобы обмакивать сырок одним движением</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Сырки</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="360" data-unit="г">360 г</span> — Творог 9% и выше
+              <span class="ingredient-note">Сухой, не крупинчатый; влажный отвесить 6–8 часов</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сахарная пудра
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Сливочное масло 82,5%
+              <span class="ingredient-note">Размягчённое, но не растопленное</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="7.5" data-unit="г">7,5 г</span> — Ванильный сахар с натуральной ванилью
+              <span class="ingredient-note">Половина пачки; или экстракт, или ванилин по вкусу</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Шоколадная глазурь</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Шоколад
+              <span class="ingredient-note">Любой: тёмный, молочный, белый</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Растительное масло без запаха
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Орехи жареные рубленые
+              <span class="ingredient-note">15–30 г по вкусу</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Варианты вкуса (по желанию)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="60" data-unit="г">60 г</span> — Карамель
+              <span class="ingredient-note">Для карамельных сырков</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Растопленный шоколад
+              <span class="ingredient-note">Для шоколадных сырков</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Ягодное пюре или варенье
+              <span class="ingredient-note">40–60 г для ягодных сырков</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Начинка
+              <span class="ingredient-note">Начинку нужно заморозить перед сборкой</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Подготовка творога</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Творог должен быть сухим и не крупинчатым. Если он очень влажный, откиньте его на марлю на 6–8 часов — только после этого делайте сырки. Творог 5% тоже подойдёт, но его обязательно нужно отвесить: часть влаги уйдёт, и процент жирности внутри массы даже немного вырастет.
+                <span class="source-badge">⏱ Урок_01: 02:48–03:09</span>
+              </p>
+              <div class="warning-box">
+                <strong>Почему это критично:</strong> чем суше творог, тем меньше в нём влаги и тем стабильнее получится сырок. Из влажного творога масса плывёт и не держит форму эскимо.
+                <span class="source-badge">⏱ Урок_01: 03:03–03:09</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Отвешивание: <strong>6–8 часов</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Творог сухой, не мажет</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Однородная масса</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сложите в чашу творог, размягчённое масло, сахарную пудру и ванильный сахар. Пробейте погружным блендером до гладкости. Если блендера нет, протрите творог через мелкое сито и перемешайте с маслом и пудрой лопаткой или венчиком.
+                <span class="source-badge">⏱ Урок_01: 05:47–06:20</span>
+              </p>
+              <p>
+                Не взбивайте дольше нужного: масса должна стать гладкой, но если её перебить, она начнёт разжижаться и дольше стабилизироваться.
+                <span class="source-badge">⏱ Урок_01: 12:11–12:26</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> масло нужно именно 82,5% — в нём около 17% жидкости, а в масле с меньшей жирностью воды больше, и она только разжижает массу.
+                <span class="source-badge">⏱ Урок_01: 03:40–04:06</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥣 Оборудование: <strong>Погружной блендер или сито</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Гладкая кремовая масса</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Стабилизация в холодильнике</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Затяните массу пищевой плёнкой в контакт и уберите в холодильник минимум на 30–40 минут. Масса стабилизируется за счёт сливочного масла и станет достаточно плотной, чтобы лепить сырки.
+                <span class="source-badge">⏱ Урок_01: 12:27–12:38</span>
+              </p>
+              <div class="warning-box">
+                <strong>Именно в холодильник, не в морозилку:</strong> автор это подчёркивает отдельно. В морозилке масса замёрзнет и потеряет пластичность.
+                <span class="source-badge">⏱ Урок_01: 13:06–13:10</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>30–40 мин</strong></span>
+              <span class="param-pill">🌡 Место: <strong>Холодильник</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Формовка эскимо</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отвесьте по 40 г массы — из 360 г творога получается ровно 12 сырков. Скатайте гладкий шарик, затем на доске, застеленной плёнкой, придайте ему форму эскимо: сверху и снизу плоско, по бокам овал. Работайте быстро и держите массу в руках минимальное время, чтобы она не согрелась.
+                <span class="source-badge">⏱ Урок_01: 14:56–17:03</span>
+              </p>
+              <p>
+                Вставьте палочку посередине почти до конца, чтобы она крепко держалась. Это не мороженое, поэтому палочка должна сидеть глубоко.
+                <span class="source-badge">⏱ Урок_01: 17:35–17:53</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> можно не стараться с формой — сырки исчезают за секунды. Но аккуратная форма эскимо делает их похожими на магазинные.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Порция: <strong>40 г на сырок</strong></span>
+              <span class="param-pill">🍦 Выход: <strong>12 сырков</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Подмораживание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Отправьте сырки в морозилку на 1,5–2 часа. Полностью замораживать нельзя: после разморозки творог начнёт отсекать влагу. Нужно только, чтобы сырки стали крепкими и холодными — тогда глазурь схватится моментально.
+                <span class="source-badge">⏱ Урок_01: 18:12–18:35</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сколько держать:</strong> при хорошей морозилке −18 °C достаточно 1–1,5 часа. Если морозилка слабая, лучше 1,5–2 часа.
+                <span class="source-badge">⏱ Урок_01: 18:22–18:35</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>1,5–2 часа</strong></span>
+              <span class="param-pill">🌡 Температура: <strong>−18 °C</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Сырок крепкий, но не каменный</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Шоколадная глазурь</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Шоколад и растительное масло сложите в стакан или миску и грейте в микроволновке пульсами по 30 секунд, перемешивая между включениями. Без микроволновки — на водяной бане. В готовую глазурь вмешайте рубленые жареные орехи.
+                <span class="source-badge">⏱ Урок_01: 22:11–26:11</span>
+              </p>
+              <p>
+                Перелейте глазурь в одноразовый стаканчик: так сырок можно опустить целиком одним движением, и глазурь закроет его вместе с основанием палочки.
+                <span class="source-badge">⏱ Урок_01: 27:12–27:24</span>
+              </p>
+              <div class="tip-box">
+                <strong>Зачем масло:</strong> глазурь становится жиже и текучее, а при откусывании не ломается, а откусывается кусочком. Шоколад при этом не темперируют — сырки всё равно хранятся только в холодильнике.
+                <span class="source-badge">⏱ Урок_01: 28:01–28:28</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🍫 Пропорция: <strong>100 г шоколада + 20 г масла</strong></span>
+              <span class="param-pill">🌡 Глазурь: <strong>тёплая, текучая</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Микроволновка или водяная баня</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Покрытие и хранение</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Опустите холодный сырок в тёплую глазурь, дайте стечь лишнему и выложите на пергамент или плёнку. Из-за перепада температур глазурь схватывается практически моментально. Подождите пару секунд, прежде чем класть сырок, чтобы на глазури не осталось следов.
+                <span class="source-badge">⏱ Урок_01: 33:41–35:31</span>
+              </p>
+              <p>
+                Готовые сырки храните в холодильнике. Срок годности — 72 часа. Остатки глазури можно держать в холодильнике или морозилке до следующего раза.
+                <span class="source-badge">⏱ Урок_01: 34:21–34:28</span>
+              </p>
+              <div class="warning-box">
+                <strong>Не при комнатной температуре:</strong> шоколадную глазурь не темперируют, поэтому сырки хранятся только в холоде — 72 часа.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Срок: <strong>72 часа</strong></span>
+              <span class="param-pill">🌡 Хранение: <strong>Холодильник</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Глазурь блестящая и сухая</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Творог 9% — оптимум:</strong> он даёт хорошую консистенцию, масса не плывёт. Можно и жирнее, и 5% — но 5% обязательно отвесить.</li>
+                <li><strong>Пудра, а не сахар:</strong> сахар не растворится в холодной массе и будет хрустеть на зубах.</li>
+                <li><strong>Глазурь универсальна:</strong> 100 г шоколада + 20 г масла подходит для чизкейков, птичьего молока, мороженого и нарезных пирожных.</li>
+                <li><strong>Жирорастворимый краситель:</strong> для цветной глазури из белого шоколада нужен именно жирорастворимый краситель, воды в глазури нет.</li>
+                <li><strong>Орехи только жареные:</strong> у них раскрываются эфирные масла, и они сухие — влагу шоколад не любит.</li>
+                <li><strong>Стаканчик решает:</strong> в узкой таре глазурь закрывает сырок с головой одним движением.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Влажный творог:</strong> масса не держит форму, сырки плывут ещё до глазури.</li>
+                <li><strong>Масло не 82,5%:</strong> лишняя вода разжижает массу, и она хуже стабилизируется.</li>
+                <li><strong>Сахар вместо пудры:</strong> крупинки остаются в массе.</li>
+                <li><strong>Заморозили сырки «насовсем»:</strong> после разморозки творог отсекает влагу.</li>
+                <li><strong>Тёплые сырки в глазури:</strong> глазурь стекает и не схватывается ровным слоем.</li>
+                <li><strong>Не добавили масло в глазурь:</strong> покрытие получается толстым и ломким.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> урок «Творожные сырки в шоколаде» Надежды Зубовой — расшифровка Урок_01 и текстовый рецепт в DOCX.</li>
+              <li><strong>Охлаждение массы:</strong> DOCX — 30 минут, видео — минимум 40 минут. На странице 30–40 минут.</li>
+              <li><strong>Ваниль:</strong> в DOCX «по вкусу», в видео — половина пачки ванильного сахара с натуральной ванилью, около 7,5 г.</li>
+              <li><strong>Количество глазури:</strong> 100 г шоколада автор называет минимумом примерно на 10–12 сырков; при полной партии из 12 штук может понадобиться чуть больше.</li>
+              <li><strong>Варианты вкуса:</strong> карамель, шоколад, ягодное пюре и начинка указаны в DOCX без привязки к базовой партии — на странице они вынесены отдельным блоком «по желанию».</li>
+              <li><strong>Фото:</strong> в кадре готовые сырки на подносе во время глазирования.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

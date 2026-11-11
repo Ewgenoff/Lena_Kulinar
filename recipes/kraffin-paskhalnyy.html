@@ -1,0 +1,564 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Краффин пасхальный с фисташкой и цукатами — пошаговый рецепт | CookBook</title>
+  <meta name="description" content="Пасхальный краффин из сдобного теста на опаре и масле нуазет: тонкий пласт, фисташковая мука, цукаты и миндальные лепестки, скрутка слоями, выпечка при 155 °C.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥐</text></svg>">
+</head>
+<body data-recipe-id="kraffin-paskhalnyy">
+
+    <header class="site-header">
+    <div class="header-container">
+      <div class="header-back">
+        <a href="../index.html" class="back-link"><span class="back-arrow">←</span><span class="back-text">Назад</span></a>
+      </div>
+      <a href="../index.html" class="brand">
+        <img src="../assets/images/logo.png" alt="Логотип" aria-hidden="true" class="brand-logo" width="241" height="200">
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 <span class="btn-text">Печать рецепта</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Краффин пасхальный с фисташкой и цукатами</h1>
+      <div class="recipe-intro-split">
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-label">Подготовка</span>
+            <span class="fact-value">40 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Активное время</span>
+            <span class="fact-value">1 ч 20 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Пассивное время</span>
+            <span class="fact-value">4–5 часов</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Общее время</span>
+            <span class="fact-value">5–7 часов (можно растянуть на ночь)</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Выход</span>
+            <span class="fact-value">1 краффин ≈ 700 г (вторая половина замеса)</span>
+          </div>
+        </div>
+
+        <p class="recipe-lead">
+          Краффин — гибрид кулича и круассана: то же сдобное тесто на опаре и масле нуазет раскатывается в тонкий пласт, смазывается маслом, посыпается фисташковой мукой, цукатами и миндальными лепестками, скручивается рулетом, разрезается вдоль и укладывается в форму слоями наружу. Глазурью и пропиткой его не портят — вся красота в раскрытых слоях.
+        </p>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/kraffin-paskhalnyy.jpg" alt="Готовый пасхальный краффин с раскрытыми слоями и цукатами" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 замес)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">замес</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — один замес из 560 г муки: 580 г теста идёт на кулич, 580 г — на краффин. Наполнители (фисташковая мука, миндальные лепестки, жемчужный сахар) в источнике без граммовок.
+          </p>
+        </div>
+
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">379</td>
+                <td>8,1 г</td>
+                <td>15 г</td>
+                <td>51,3 г</td>
+              </tr>
+              <tr>
+                <th>Один краффин<span class="kbju-sub">≈ 700 г</span></th>
+                <td class="kbju-kcal"><span data-base-amount="2710" data-unit="ккал">2710 ккал</span></td>
+                <td><span data-base-amount="58" data-unit="г">58 г</span></td>
+                <td><span data-base-amount="107" data-unit="г">107 г</span></td>
+                <td><span data-base-amount="367" data-unit="г">367 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Замес общий с куличом, поэтому в расчёт взята половина теста — та, что идёт в краффин (≈ 700 г), с половиной цукатов и изюма. Нуазет считан как топлёное масло 892 ккал/100 г.</p>
+            <p>Не учтены масло для смазки пласта, фисташковая мука, миндальные лепестки и жемчужный сахар: в источнике они без граммовки. С ними калорийность на 100 г будет немного выше — в основном за счёт масла.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> замес</span>
+        </div>
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="6" data-unit="шт." data-piece="true">6 шт.</span>
+                <span class="shopping-hint">150 г яиц в тесто + 55 г желтков</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Молоко</strong>:
+                <span class="shopping-qty" data-base-amount="140" data-unit="г">140 г</span>
+                <span class="shopping-hint">Тёплое, для опары</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло 82,5%</strong>:
+                <span class="shopping-qty" data-base-amount="260" data-unit="г">260 г</span>
+                <span class="shopping-hint">250 г на масло нуазет для теста + немного размягчённого на смазку пласта</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Мука, наполнители, декор</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с, сильная</strong>:
+                <span class="shopping-qty" data-base-amount="560" data-unit="г">560 г</span>
+                <span class="shopping-hint">Для опары, теста и подсыпки</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Дрожжи свежие</strong>:
+                <span class="shopping-qty" data-base-amount="35" data-unit="г">35 г</span>
+                <span class="shopping-hint">Или 12 г сухих</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="125" data-unit="г">125 г</span>
+                <span class="shopping-hint">Только в тесто; глазурь для краффина не нужна</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Цукаты и изюм</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Вторая половина замеса — в краффин; лучше мелко нарезать</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Фисташковая мука (рубленые фисташки)</strong>
+                <span class="shopping-hint">Количество в источнике не указано — «не жалея»; хватит 50–70 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Миндальные лепестки</strong>
+                <span class="shopping-hint">Количество не указано — «немножечко»</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Жемчужный сахар</strong>
+                <span class="shopping-hint">Для посыпки верха; не тает при выпечке. Можно заменить обычной посыпкой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мёд, соль, ванильный сахар, пряности</strong>
+                <span class="shopping-hint">1 ч. л. мёда, 4 г соли, 15 г ванильного сахара, куркума и мускатный орех</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Бумажная форма для краффина</strong>
+                <span class="shopping-hint">На 9×11 см идёт 250–300 г теста; смазывать бумажную форму не нужно</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Тесто (общий замес с куличом)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="140" data-unit="г">140 г</span> — Молоко тёплое
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="35" data-unit="г">35 г</span> — Дрожжи свежие
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Мёд
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="560" data-unit="г">560 г</span> — Мука
+              <span class="ingredient-note">150 г в опару + 350 г в тесто + около 60 г на подсыпку</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="150" data-unit="г">150 г</span> — Яйца
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="55" data-unit="г">55 г</span> — Желтки
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="4" data-unit="г">4 г</span> — Соль
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="15" data-unit="г">15 г</span> — Ванильный сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="140" data-unit="г">140 г</span> — Масло нуазет
+              <span class="ingredient-note">Из 250 г сливочного масла</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="125" data-unit="г">125 г</span> — Сахар
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка и смазка пласта</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Цукаты и изюм
+              <span class="ingredient-note">Мелко нарезать, размером с изюм</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Размягчённое сливочное масло для смазки пласта
+              <span class="ingredient-note">Количество в источнике не взвешивали — «всё масло, приготовленное для рецепта»</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Фисташковая мука или рубленые фисташки
+              <span class="ingredient-note">Без граммовки: «не жалея»</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Миндальные лепестки
+              <span class="ingredient-note">Без граммовки: «немножечко»</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              Жемчужный сахар для посыпки
+              <span class="ingredient-note">Не тает при выпечке</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Тесто на опаре</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Замесите опару из 140 г тёплого молока, 35 г дрожжей, чайной ложки мёда и 150 г муки. Пока она подходит, вытопите масло нуазет из 250 г сливочного масла и остудите до тёплого.
+                <span class="source-badge">⏱ Урок_01: 00:12:36–00:40:33</span>
+              </p>
+              <p>
+                В опару введите яйца, соль, ванильный сахар и пряности, затем 350 г муки. После 3 минут замеса добавьте желтки, потом масло нуазет в два приёма (100 г и 40 г). Выложите на стол, всыпьте 125 г сахара и вымешивайте 10–15 минут до гладкости.
+                <span class="source-badge">⏱ Урок_01: 00:51:47–01:22:35</span>
+              </p>
+              <p>
+                Уберите тесто в холод на 1 час (можно на ночь), затем разделите: 580 г — на краффин.
+                <span class="source-badge">⏱ Урок_01: 01:24:23–01:29:16</span>
+              </p>
+              <div class="warning-box">
+                <strong>Сахар — только после муки:</strong> иначе он отнимет воду у глютена, и тесто поплывёт маслом.
+                <span class="source-badge">⏱ Урок_01: 00:45:16–00:46:28</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Опара: <strong>20–40 мин</strong></span>
+              <span class="param-pill">🌡 Холод: <strong>+4 °C и выше</strong></span>
+              <span class="param-pill">⚖ Тесто: <strong>580 г на краффин</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Тонкий пласт</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Раскатайте тесто с подсыпкой муки как можно тоньше — 2–3 мм, примерно 50×40 см. Мелкие дырочки в пласте — норма, а вот толстый пласт даст некрасивые, слипшиеся слои.
+                <span class="source-badge">⏱ Урок_03: 00:19:01–00:24:40</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> если делаете два краффина, раскатывайте каждый пласт отдельно. Можно скатать одну длинную «колбасу» и разрезать пополам.
+                <span class="source-badge">⏱ Урок_03: 00:22:39–00:22:55</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Толщина: <strong>2–3 мм</strong></span>
+              <span class="param-pill">📐 Размер: <strong>≈50×40 см</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Смазка и наполнители</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Смажьте всю поверхность размягчённым маслом — пройдитесь по каждому участку, иначе слои слипнутся. Посыпьте фисташковой мукой, затем второй половиной цукатов и миндальными лепестками.
+                <span class="source-badge">⏱ Урок_03: 00:21:24–00:24:11</span>
+              </p>
+              <div class="warning-box">
+                <strong>Масло по всей площади:</strong> именно оно разделяет слои. Пропущенный участок останется плотным комком теста.
+                <span class="source-badge">⏱ Урок_03: 00:21:24–00:22:11</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🧈 Смазка: <strong>размягчённое масло</strong></span>
+              <span class="param-pill">🌰 Наполнители: <strong>фисташка, цукаты, миндаль</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Рулет, разрез и скрутка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Скрутите пласт рулетом по короткой стороне — пусть краффин будет «полостеньким». Затем разрежьте рулет вдоль по всей длине так, чтобы начинка и слои оказались снаружи.
+                <span class="source-badge">⏱ Урок_03: 00:25:36–00:27:44</span>
+              </p>
+              <p>
+                Скручивайте «наружу»: срезом-слоями кверху, перекладывая части одну на другую и поднимаясь к верху. Получится жгут-колбаска с открытыми слоями.
+                <span class="source-badge">⏱ Урок_03: 00:27:44–00:28:21</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> закручивайте плотнее. Плохо закрученный краффин даёт полость внутри, и при выемке шапка отваливается.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥐 Скрутка: <strong>слоями наружу</strong></span>
+              <span class="param-pill">🔪 Разрез: <strong>вдоль всей длины</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Форма и расстойка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Переложите жгут в бумажную форму одним движением на руке, верхушкой вверх. Форму не расправляйте и не поправляйте — слои раскроются сами. Посыпьте жемчужным сахаром.
+                <span class="source-badge">⏱ Урок_03: 00:28:22–00:29:46</span>
+              </p>
+              <p>
+                Оставьте на расстойку 1,5–2 часа в выключенной холодной духовке — вместе с куличем, если делаете оба.
+                <span class="source-badge">⏱ Урок_03: 00:29:46–00:30:47</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Расстойка: <strong>1,5–2 часа</strong></span>
+              <span class="param-pill">🧁 Форма: <strong>Бумажная, 9×11 см</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Тесто поднялось, слои раскрылись</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Выпечка и остывание</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Выпекайте в холодной духовке с конвекцией при 155 °C около 45 минут; без конвекции — 160–165 °C. Готовность — сухая шпажка или 92–95 °C внутри.
+                <span class="source-badge">⏱ Урок_04: 00:02:06–00:02:36</span>
+              </p>
+              <p>
+                Готовый краффин достаньте из формы и остужайте на боку, переворачивая, чтобы не приплюснулся. Глазурью и пропиткой не покрывайте.
+                <span class="source-badge">⏱ Урок_05: 00:04:00–00:04:32</span>
+              </p>
+              <div class="warning-box">
+                <strong>Без глазури:</strong> краффин красив своей формовкой и слоями — заливать его глазурью и пропитывать сиропом автор не советует.
+                <span class="source-badge">⏱ Урок_03: 00:06:57–00:07:15</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Температура: <strong>155 °C с конвекцией</strong></span>
+              <span class="param-pill">⏱ Время: <strong>~45 мин</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Сухая шпажка</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Тоньше пласт — лучше слои:</strong> 2–3 мм; толстый пласт даёт плотный мякиш без раскрытости.</li>
+                <li><strong>Орехи краффин любит:</strong> фисташка и миндаль дают яркий вкус и красивый разрез.</li>
+                <li><strong>Масло закончилось:</strong> смазывайте пласт размягчённым сливочным — результат будет чуть проще, но рабочий.</li>
+                <li><strong>Жемчужный сахар:</strong> не тает при выпечке и держит «крупу» на верху.</li>
+                <li><strong>Форму не поправлять:</strong> слои раскрываются сами, вмешательство их только приминает.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Плохо смазали пласт:</strong> слои слипаются, раскрытости нет.</li>
+                <li><strong>Толстый пласт:</strong> краффин получается плотным, как обычный кулич.</li>
+                <li><strong>Слабо закрутили:</strong> внутри остаётся полость, верхушка отваливается при выемке.</li>
+                <li><strong>Переложили цукатов:</strong> тесто не держит форму, слои расходятся.</li>
+                <li><strong>Залили глазурью:</strong> потеряли главное — рисунок слоёв.</li>
+                <li><strong>Достали горячим и поставили ровно:</strong> один бок приплюснулся.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> серия «Кулич, краффин и пасха» Надежды Зубовой — DOCX с рецептурой и расшифровка Урок_01–06.</li>
+              <li><strong>Отдельного рецепта краффина в DOCX нет:</strong> сказано «из данного рецепта я буду делать 2 кулича: традиционной формовки и краффин». Формовка полностью восстановлена по видео.</li>
+              <li><strong>Наполнители без граммовок:</strong> фисташковая мука, миндальные лепестки и жемчужный сахар в источниках не взвешиваются — на странице они без data-base-amount.</li>
+              <li><strong>Масло для смазки:</strong> точное количество не названо; автор использует остаток масла, приготовленного для рецепта.</li>
+              <li><strong>Фото:</strong> кадр из видео, где краффин лежит рядом с куличем.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

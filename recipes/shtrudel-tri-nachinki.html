@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Штрудель на вытяжном тесте: три начинки — пошаговый рецепт и технология</title>
+  <meta name="description" content="Вытяжное тесто для штруделя: мука, яйцо, растопленное масло, уксус и соль, отдых теста и растягивание руками до просвечивания. Три начинки на выбор — вишнёвая с крахмалом и миндалём, мясная с грецким орехом и сырная с адыгейским сыром и зеленью. Выпечка 30 минут при 170 °C с конвекцией.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍰</text></svg>">
+</head>
+<body data-recipe-id="shtrudel-tri-nachinki">
+
+    <header class="site-header">
+    <div class="header-container">
+      <div class="header-back">
+        <a href="../index.html" class="back-link"><span class="back-arrow">←</span><span class="back-text">Назад</span></a>
+      </div>
+      <a href="../index.html" class="brand">
+        <img src="../assets/images/logo.png" alt="Логотип" aria-hidden="true" class="brand-logo" width="241" height="200">
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 <span class="btn-text">Печать рецепта</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Заголовок и карточка общей информации -->
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Средняя</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Штрудель на вытяжном тесте: три начинки</h1>
+      <div class="recipe-intro-split">
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-label">Подготовка</span>
+            <span class="fact-value">10 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Активное время</span>
+            <span class="fact-value">~1 ч на штрудель</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Пассивное время</span>
+            <span class="fact-value">30–40 мин отдых теста</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Общее время</span>
+            <span class="fact-value">~1 ч 10 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Выход</span>
+            <span class="fact-value">1 штрудель (из одного замеса — три)</span>
+          </div>
+        </div>
+
+        <p class="recipe-lead">
+          Один замес теста — три разных штруделя: сладкий вишнёвый, сытный мясной и сырный. Тесто здесь не раскатывают по-обычному, а замешивают по строгому порядку (сначала яйца, потом масло), дают отдохнуть и растягивают руками до полупрозрачности. Крахмал, обжаренный миндаль и орехи в начинках — не украшение, а страховка: они забирают сок, чтобы штрудель не потёк.
+        </p>
+      </div>
+    </article>
+
+    <!-- Фотография, интерактивный пересчет порций и панель инструментов -->
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/shtrudel-tri-nachinki.jpg" alt="Сформованный штрудель из вытяжного теста на пергаменте: рулет смазывают яйцом перед выпечкой" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <!-- Блок пересчета порций -->
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 штрудель)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">штрудель</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            Раскладка теста по техкарте автора дана на 1 штрудель; каждая начинка указана на 1 штрудель — вишнёвая, мясная и сырная отдельно. То есть из одного замеса теста получается три разных штруделя, по одному с каждой начинкой. Кнопки «+» и «−» масштабируют тесто и одну выбранную начинку.
+          </p>
+        </div>
+
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">251</td>
+                <td>7,7 г</td>
+                <td>12,2 г</td>
+                <td>25,6 г</td>
+              </tr>
+              <tr>
+                <th>Все три штруделя<span class="kbju-sub">≈ 2,5 кг</span></th>
+                <td class="kbju-kcal"><span data-base-amount="6260" data-unit="ккал">6260 ккал</span></td>
+                <td><span data-base-amount="192" data-unit="г">192 г</span></td>
+                <td><span data-base-amount="305" data-unit="г">305 г</span></td>
+                <td><span data-base-amount="640" data-unit="г">640 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Считана вся раскладка техкарты: 393 г теста и три начинки — вишнёвая (400 г вишни, 130 г сахара, 25 г кукурузного крахмала, 70 г миндаля), мясная (200 г отварной говядины, обжаренный лук, 70 г грецкого ореха) и сырная (200 г адыгейского сыра, 50 г зелени, чеснок, оливковое масло). Яйцо для смазывания взято как 25 г — часть одного яйца.</p>
+            <p>Средние табличные значения: мука 342 ккал/100 г, сливочное масло 748, сахар 399, кукурузный крахмал 313, миндаль 579, грецкий орех 654, отварная говядина 195, адыгейский сыр 264, вишня 52.</p>
+            <p>Вес — по сырой раскладке, руки автора штрудели не взвешивают. Отдельно: вишнёвый штрудель ≈ 228 ккал на 100 г, мясной ≈ 268, сырный ≈ 265. При выпечке уходит часть влаги, поэтому готовый штрудель легче, а калорийность на 100 г выше расчётной.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Основной контент: Ингредиенты + Технология -->
+
+    <!-- Раздел: Купить в магазине (Суммарный список покупок) -->
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> штрудель</span>
+        </div>
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Замес теста — на три штруделя сразу, начинки берите по одной. Начинки на выбор: количества в трёх группах ниже не суммируются, это три альтернативных варианта. Яйцо для смазывания нужно любое из них — одного хватит на все рулеты.
+      </p>
+
+      <div class="shopping-grid">
+        <!-- Колонка 1: тесто -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Тесто, яйца, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука пшеничная в/с</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Плюс немного на подпыливание при раскатке. Сильная мука с высоким белком здесь даже помогает тесту тянуться</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйцо куриное С0</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">С0 весит больше С1; с С1 в тесто нужно добавить её по весу белка и желтка</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло сливочное 82,5 %</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Растопить в микроволновке, но не кипятить: к моменту ввода — температура тела. Растительное масло 40 г заменяет его без запаха</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Уксус столовый 9 %</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span>
+                <span class="shopping-hint">Именно 9 %, не эссенция. Можно заменить яблочным уксусом или спиртом в том же количестве</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль</strong>:
+                <span class="shopping-qty" data-base-amount="2" data-unit="г">2 г</span> (щепотка)
+                <span class="shopping-hint">В тесто, вместе с яйцами</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйцо для смазывания</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">Целое яйцо, желток или желток с ложкой молока — на верх штруделя перед выпечкой. Хватит и одного на все три рулета</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Колонка 2: бакалея -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍒 Бакалея и расходники</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Крахмал кукурузный</strong>:
+                <span class="shopping-qty" data-base-amount="25" data-unit="г">25 г</span>
+                <span class="shopping-hint">3 ст. л. для вишнёвой начинки. Картофельного нужно в полтора раза меньше</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="130" data-unit="г">130 г</span>
+                <span class="shopping-hint">Только в вишнёвую начинку; если вишня очень кислая — до 150 г</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Миндаль обжаренный</strong>:
+                <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                <span class="shopping-hint">Миндальная мука, рубленый орех или лепестки — любой вариант. Забирает часть сока вишни</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Расходники</strong> — пергамент, пищевая плёнка или пакет
+                <span class="shopping-hint">Каждый штрудель печётся на своём листе пергамента; тесто накрывают плёнкой во время отдыха</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="shopping-grid">
+        <!-- Вариант 1: вишнёвая начинка -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🍒 Начинка на выбор 1: вишнёвая</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Вишня без косточки</strong>:
+                <span class="shopping-qty" data-base-amount="400" data-unit="г">400 г</span>
+                <span class="shopping-hint">Замороженная или свежая; размораживать заранее не нужно — вишня прогревается на плите</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар</strong>:
+                <span class="shopping-qty" data-base-amount="130" data-unit="г">130 г</span>
+                <span class="shopping-hint">Смешивается с крахмалом, а не высыпается в вишню сразу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Крахмал кукурузный</strong>:
+                <span class="shopping-qty" data-base-amount="25" data-unit="г">25 г</span>
+                <span class="shopping-hint">3 ст. л. Вводится вместе с сахаром в закипевшую вишню</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Миндаль обжаренный</strong>:
+                <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                <span class="shopping-hint">Измельчённый; добавляется в самом конце, после крахмала</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Вариант 2: мясная начинка -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥩 Начинка на выбор 2: мясная</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Говядина отварная</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Можно телятину; мясо сварить и порубить. Автор солит его при варке</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Лук репчатый</strong>:
+                <span class="shopping-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span>
+                <span class="shopping-hint">Порезать кубиками и обжарить; в вебинаре автор заменил его 70 г чернослива</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Грецкий орех обжаренный</strong>:
+                <span class="shopping-qty" data-base-amount="70" data-unit="г">70 г</span>
+                <span class="shopping-hint">Измельчённый; орехи дают жир, поэтому маслом пласт не смазывают</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль, чеснок</strong> — по вкусу
+                <span class="shopping-hint">Если мясо варилось в солёной воде, хватит щепотки; чеснок в мясную начинку автор не добавляет, но это допустимо</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="shopping-grid">
+        <!-- Вариант 3: сырная начинка -->
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🧀 Начинка на выбор 3: сырная</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сыр адыгейский или брынза</strong>:
+                <span class="shopping-qty" data-base-amount="200" data-unit="г">200 г</span>
+                <span class="shopping-hint">Адыгейский почти не солёный — солить нужно обязательно. Можно добавить сулугуни, пармезан или творожный сыр</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Зелень</strong> — лук, укроп, шпинат:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">Кинза сюда не идёт: автор говорит, что вкус получается неудачным</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Чеснок</strong>:
+                <span class="shopping-qty" data-base-amount="10" data-unit="г">10 г</span> (2 зубчика, по вкусу)
+                <span class="shopping-hint">Выдавить и разложить по краю начинки, не обязательно на всю</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Масло оливковое</strong> — по вкусу
+                <span class="shopping-hint">Сбрызнуть начинку. Если добавляли плавящиеся сыры, масло не нужно</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль, черный перец</strong> — по вкусу
+                <span class="shopping-hint">Солить и перчить — обязательный шаг для адыгейского сыра</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <!-- Колонка ингредиентов -->
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Тесто (раскладка на 1 штрудель)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Мука пшеничная в/с
+              <span class="ingredient-note">Просеять; немного оставить на подпыл при раскатке</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span> — Яйцо С0
+              <span class="ingredient-note">Сначала яйца идут в муку — влага должна напитать муку до масла</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Масло сливочное
+              <span class="ingredient-note">Растопленное, но не горячее. Замена — 40 г растительного масла без запаха</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="45" data-unit="г">45 г</span> — Вода
+              <span class="ingredient-note">Комнатной температуры; по ходу замеса автор доливает ещё 2–4 ст. л.</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="ч. л.">1 ч. л.</span> — Уксус столовый 9 %
+              <span class="ingredient-note">Для хруста и слоистости; вводится после замеса с яйцами</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="2" data-unit="г">2 г</span> — Соль
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка вишнёвая (на выбор, на 1 штрудель)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="400" data-unit="г">400 г</span> — Вишня без косточки, замороженная или свежая
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="130" data-unit="г">130 г</span> — Сахар
+              <span class="ingredient-note">Для кислой вишни — до 150 г</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="25" data-unit="г">25 г</span> — Крахмал кукурузный (3 ст. л.)
+              <span class="ingredient-note">Впитывает влагу; картофельного нужно в полтора раза меньше</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Миндаль обжаренный, измельчённый
+              <span class="ingredient-note">Подойдут и миндальные лепестки, и миндальная мука</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка мясная (на выбор, на 1 штрудель)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Говядина (или телятина) отварная
+              <span class="ingredient-note">Порубленная</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span> — Лук, порезанный кубиками и обжаренный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="70" data-unit="г">70 г</span> — Орех грецкий обжаренный
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Соль, чеснок
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка сырная (на выбор, на 1 штрудель)</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="200" data-unit="г">200 г</span> — Сыр типа адыгейского, брынза
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Зелень (лук, укроп, шпинат)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Чеснок, соль, перец, оливковое масло
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Для смазывания</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="1" data-unit="шт." data-piece="true">1 шт.</span> — Яйцо
+              <span class="ingredient-note">Целое, или желток, или желток с ложкой молока — верх будет ярче</span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Колонка пошаговой технологии -->
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <!-- Этап 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Замес вытяжного теста</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сливочное масло растопите в микроволновке и оставьте остывать — оно не должно кипеть или быть горячим. Муку просейте горкой и разбейте в неё яйцо, посолите. Сейчас в тесто идут только мука, яйцо и соль: никакого масла и никакой воды.
+                <span class="source-badge">⏱ Урок_01: 11:12–13:39</span>
+              </p>
+              <p>
+                Начинайте замешивать лопаткой, потом переходите на руку. Тесто будет крутым, сухим и рваным — так и должно быть. Ваша задача, чтобы мука максимально напиталась влагой: это и есть глютеновые цепи, из которых потом получится тянущееся тесто.
+                <span class="source-badge">⏱ Урок_01: 14:58–16:49</span>
+              </p>
+              <p>
+                Когда сухой муки не осталось, влейте уксус и перемешайте, а только затем добавляйте растопленное масло — сразу всё. Масло запечатывает уже готовые глютеновые цепи снаружи, и влага при выпечке остаётся внутри.
+                <span class="source-badge">⏱ Урок_01: 17:00–18:06</span>
+              </p>
+              <div class="warning-box">
+                <strong>Порядок важнее пропорций:</strong> если сначала влить масло, мука запечатается жиром и глютен не разовьётся — тесто перестанет тянуться. Это главная причина, почему штрудель рвётся, а не растягивается.
+                <span class="source-badge">⏱ Урок_01: 07:05–08:33</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Масло: <strong>тёплое, не горячее</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Миска, лопатка, руки</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Мука вся напитана влагой</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Вымешивание до гладкости</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Добавьте немного воды комнатной температуры — понемногу, по столовой ложке. Тесто сначала будет рваться и липнуть к рукам, и ваша цель — превратить его в гладкий, упругий комок.
+                <span class="source-badge">⏱ Урок_01: 19:11–19:18</span>
+              </p>
+              <p>
+                Вымешивайте около 5 минут, можно дольше. Это физический труд: комок должен стать однородным, когда соберёте все неровности внутрь. Всего автор затратила на три штруделя 970 г теста — на один выходит примерно 323 г.
+                <span class="source-badge">⏱ Урок_01: 24:24–25:44</span>
+              </p>
+              <div class="tip-box">
+                <strong>Не бойтесь воды:</strong> если тесто получилось густым, добавляйте воду смело — по 2, иногда 3–4 столовые ложки. Сухое тесто потом невозможно раскатать, а чуть мягкое мука заберёт себе, и это нормально.
+                <span class="source-badge">⏱ Урок_01: 32:21–32:54</span>
+              </div>
+              <p>
+                Если работаете планетарным миксером, берите насадку «крюк» и соблюдайте тот же порядок: сначала мука с яйцами, затем уксус, и только потом масло.
+                <span class="source-badge">⏱ Урок_01: 14:08–14:17</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Вымешивание: <strong>от 5 минут</strong></span>
+              <span class="param-pill">⚖ Вес комка: <strong>≈ 323 г (на 3 штруделя — 970 г)</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Планетарный миксер с крюком или руки</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Отдых теста</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разделите тесто на равные части по весу — так все штрудели получатся одинаковыми. Каждую часть подкатайте в гладкий шарик и накройте плёнкой или пакетом, чтобы не заветрилось: заветрившееся тесто потом почти невозможно раскатать.
+                <span class="source-badge">⏱ Урок_01: 23:47–26:34</span>
+              </p>
+              <p>
+                Оставьте тесто при комнатной температуре — в холодильник его убирать не нужно. Клейковина должна отдохнуть и расслабиться, тогда тесто спокойно тянется.
+                <span class="source-badge">⏱ Урок_01: 26:24–29:32</span>
+              </p>
+              <div class="tip-box">
+                <strong>Сколько ждать:</strong> достаточно 30–40 минут, можно и 20. Лучше всего делать тесто прямо перед штруделем: сильно заранее замешанное и охлаждённое тесто «задубеет» и тянуться не будет. Если всё же убрали в холодильник — дайте согреться до комнатной температуры.
+                <span class="source-badge">⏱ Урок_01: 30:31–31:13</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Отдых: <strong>20–40 минут</strong></span>
+              <span class="param-pill">🌡 Где: <strong>При комнатной температуре, под плёнкой</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Тесто мягкое и податливое</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Растягивание пласта до просвечивания</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Присыпьте стол символической щепоткой муки — не больше, чем в рецепте. Начните раскатывать скалкой, а затем подходите пальцами к середине и растягивайте от центра к краям. Тянуть нужно именно с середины, а не за края.
+                <span class="source-badge">⏱ Урок_02: 30:21–30:48</span>
+              </p>
+              <p>
+                Ориентир — ширина противня: пласт не должен быть шире, иначе штрудель не перенести. Толщина получается примерно 1 мм, у краёв чуть толще. Когда через пласт читается текст, значит тесто готово.
+                <span class="source-badge">⏱ Урок_02: 32:00–33:14</span>
+              </p>
+              <div class="warning-box">
+                <strong>Дырочки — не ошибка:</strong> при растяжке рвётся тесто часто, но это нормально — при скручивании дыры уходят внутрь. Если порвать боитесь, просто раскатайте тесто тонко скалкой: результат будет тот же, только меньше слоёв.
+                <span class="source-badge">⏱ Урок_02: 28:50–29:15</span>
+              </div>
+              <div class="tip-box">
+                <strong>Если не тянется:</strong> причин две — мало влаги или слишком сильная мука. В следующий раз добавьте воды и смотрите, как тесто реагирует.
+                <span class="source-badge">⏱ Урок_02: 30:58–31:05</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Толщина: <strong>≈ 1 мм</strong></span>
+              <span class="param-pill">📐 Ширина: <strong>По ширине противня</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Через тесто видно текст</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Вишнёвая начинка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Вишню, даже замороженную, выложите в сотейник и нагрейте — она разморозится и начнёт кипеть. Отдельно смешайте сахар с крахмалом и держите готовой: растворять крахмал в воде не нужно.
+                <span class="source-badge">⏱ Урок_01: 47:47–49:59</span>
+              </p>
+              <p>
+                Как только вишня закипит, всыпьте сахар с крахмалом и мешайте непрерывно. Долго кипятить не надо: как только масса из матовой станет прозрачной и глянцевой, крахмал заработал — снимайте с огня.
+                <span class="source-badge">⏱ Урок_01: 55:15–57:31</span>
+              </p>
+              <p>
+                Вмешайте обжаренный измельчённый миндаль, переложите в миску и дайте полностью остыть. Горячей начинкой штрудель не начинить — тесто расползётся, и рулет не перенести.
+                <span class="source-badge">⏱ Урок_01: 57:36–1:00:01</span>
+              </p>
+              <div class="warning-box">
+                <strong>Крахмал — это «замок» для сока:</strong> без него вишнёвый штрудель потечёт. Огонь после закипания убавьте, иначе крахмальная масса будет плеваться и пригорать.
+                <span class="source-badge">⏱ Урок_01: 56:55–57:11</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Остывание: <strong>До полного остывания</strong></span>
+              <span class="param-pill">🥣 Оборудование: <strong>Сотейник, лопатка</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Масса прозрачная и густая</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Мясная и сырная начинки</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Для мясной начинки отварную говядину порубите, лук порежьте кубиками и обжарьте. Грецкий орех обжарьте и измельчите — он хорошо идёт с говядиной. Если мясо варилось в солёной воде, хватит щепотки соли; чеснок можно добавить по вкусу.
+                <span class="source-badge">⏱ Урок_02: 34:12–37:36</span>
+              </p>
+              <p>
+                Для сырной начинки адыгейский сыр или брынзу натрите. Порубите зелень — лук, укроп, шпинат, но не кинзу: автор говорит, что вкус с ней портится. Добавьте чеснок, соль, перец и сбрызните оливковым маслом.
+                <span class="source-badge">⏱ Урок_02: 44:46–47:29</span>
+              </p>
+              <div class="tip-box">
+                <strong>Плавящиеся сыры:</strong> если добавите сулугуни, пармезан или творожный сыр, маслом сбрызгивать не нужно — они сами дадут жир. Адыгейский и брынза в оливковом масле нуждаются.
+                <span class="source-badge">⏱ Урок_02: 47:29–47:38</span>
+              </div>
+              <div class="warning-box">
+                <strong>Начинка должна быть «сухой»:</strong> брокколи, сырые грибы и ягоды без крахмала дадут слишком много сока — штрудель лопнет. И не кладите начинку толстым слоем: из воды в ней образуется пар, который разрывает тесто изнутри.
+                <span class="source-badge">⏱ Урок_01: 09:42–10:44</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🥩 Мясо: <strong>200 г отварной говядины</strong></span>
+              <span class="param-pill">🧀 Сыр: <strong>200 г адыгейского + 50 г зелени</strong></span>
+              <span class="param-pill">🌿 Зелень: <strong>Лук, укроп, шпинат; без кинзы</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Начинка на пласт и формовка рулета</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Начинку выкладывайте на две трети пласта, оставив одну треть свободной, и отступите по 5 см от каждого края — это место нужно для скрутки. Ложкой распределяйте, не накладывая горкой.
+                <span class="source-badge">⏱ Урок_02: 34:19–34:39</span>
+              </p>
+              <p>
+                Сворачивайте начинку в трубочку, подгибая в середине верхушки и запахивая на себя, на сторону дыр. Вы получите рулет с плотной спиралью внутри — она препятствует разрывам. Для мясной начинки можно смазывать пласт тонким слоем растопленного масла, но с орехами это не обязательно.
+                <span class="source-badge">⏱ Урок_02: 37:43–39:17</span>
+              </p>
+              <p>
+                Переложите рулет на пергамент и загните кончики внутрь. Каждый штрудель — на своём листе пергамента, чтобы его легко было перенести на противень.
+                <span class="source-badge">⏱ Урок_02: 36:47–37:21</span>
+              </p>
+              <div class="warning-box">
+                <strong>Начинка должна остыть:</strong> тёплой начинкой рулет не скатать и не перенести, тесто поплывёт. Пюре для такой начинки использовать нельзя — в нём влага открыта, связать её нечем.
+                <span class="source-badge">⏱ Урок_02: 59:52–1:00:36</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">📏 Отступ от краёв: <strong>5 см</strong></span>
+              <span class="param-pill">🥄 Начинка: <strong>На 2/3 пласта</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Плотный, ровный рулет</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 8 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Смазывание и выпечка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Разогрейте духовку заранее — ставить в холодную нельзя, иначе штрудель «полупадет». Смажьте верх яйцом: целым, желтком или желтком с ложкой молока. Яйцо даёт хрустящую корочку, которая держится и на следующий день, если хранить при комнатной температуре.
+                <span class="source-badge">⏱ Урок_02: 1:04:49–1:06:09</span>
+              </p>
+              <p>
+                Выпекайте 30 минут при 170 °C с конвекцией, если печёте на двух уровнях сразу. Без конвекции — 180 °C, 30 минут, но только один противень.
+                <span class="source-badge">⏱ Урок_02: 1:03:15–1:04:23</span>
+              </p>
+              <p>
+                Вишнёвый штрудель пеките отдельно от мясного и сырного: если он лопнет и потечёт, ягода не должна смешаться с чесноком. Готовность — румяная корочка.
+                <span class="source-badge">⏱ Урок_02: 1:01:20–1:01:43</span>
+              </p>
+              <div class="tip-box">
+                <strong>Почему без конвекции иногда лучше:</strong> конвекция активно образует пар внутри — он может разорвать рулет. Это хороший вариант, когда печёте один штрудель, а не три сразу.
+                <span class="source-badge">⏱ Урок_02: 1:03:22–1:03:36</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🔥 Температура: <strong>170 °C с конвекцией / 180 °C без</strong></span>
+              <span class="param-pill">⏱ Время: <strong>30 минут</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Румяная хрустящая корочка</strong></span>
+            </div>
+          </div>
+
+          <!-- Этап 9 -->
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">9</span>
+                <h3 class="step-title">Подача и хранение</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Штрудель едят и горячим, и остывшим. Вишнёвый лучше подавать тёплым, но не обжигающим — отлично с шариком мороженого. Мясной и сырный автор советует к супу или как хлеб к праздничному столу.
+                <span class="source-badge">⏱ Урок_02: 1:08:11–1:08:37</span>
+              </p>
+              <p>
+                При комнатной температуре (19–23 °C, а не +30) штрудели хранятся 48 часов, в холодильнике — 72 часа, но корочка станет мягкой. Тесто лучше не замораживать: заморозить можно, разморозить — уже нет.
+                <span class="source-badge">⏱ Урок_02: 1:08:38–1:09:53</span>
+              </p>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Хранение: <strong>48 ч при 19–23 °C / 72 ч в холодильнике</strong></span>
+              <span class="param-pill">🍨 Подача: <strong>С мороженым (вишнёвый)</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экспертный блок: Секреты, нюансы и ошибки -->
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Порядок добавления:</strong> сначала яйца в муку, потом уксус, и только затем масло. Это условие, при котором тесто вообще становится вытяжным.</li>
+                <li><strong>Муку берите обычную, высшего сорта:</strong> для вытяжного теста нужны глютеновые цепи и «клейкое окно», поэтому белок в муке скорее помогает, чем мешает.</li>
+                <li><strong>Вода вместо «сушняка»:</strong> тесто должно быть чуть мягче, чем кажется правильным. 2–4 столовые ложки воды не испортят рецепт, а сухое тесто не растянуть.</li>
+                <li><strong>Уксус для хруста:</strong> он делает тесто слоистым и хрустящим, как в тесте для «Наполеона». Замена — яблочный уксус или спирт.</li>
+                <li><strong>Масло в тесте и в начинке:</strong> жир запечатывает тесто снаружи и не даёт влаге испаряться при выпечке. Поэтому с орехами и жирным мясом пласт дополнительно не смазывают.</li>
+                <li><strong>Без скатерти:</strong> автор не тянет тесто на ткани — только пальцами от середины. Так проще и дыры почти не мешают.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Сначала масло, потом влага:</strong> мука запечатана жиром, глютен не развился — тесто рвётся и не тянется.</li>
+                <li><strong>Тесто замешано заранее и охлаждено:</strong> задубевшее тесто не рвётся при растяжке и ломается — дайте ему согреться.</li>
+                <li><strong>Вишня без крахмала:</strong> начинка течёт и разрывает рулет изнутри паром.</li>
+                <li><strong>Начинка толстым слоем:</strong> внутри копится пар, штрудель лопается по шву.</li>
+                <li><strong>Горячая начинка:</strong> рулет не скатать и не перенести, тесто расползётся.</li>
+                <li><strong>Холодная духовка:</strong> штрудель садится, не поднимается и не хрустит.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Служебный блок: закрыт по умолчанию -->
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> вебинар «Штрудель. Три вида начинки» Надежды Зубовой — расшифровка видео (Урок_01 и Урок_02, 2,5 часа) и техкарта DOCX «Штрудель_с_вишней» с точными граммовками теста и трёх начинок.</li>
+              <li><strong>Раскладка:</strong> по DOCX все количества даны «на 1 штрудель», включая каждую из трёх начинок по отдельности. Поэтому калькулятор считает на один штрудель, а начинки в «Купить в магазине» стоят тремя отдельными группами и не суммируются.</li>
+              <li><strong>Масло:</strong> в DOCX указано «сливочное масло 50 г (или растительное масло 40 г)»; в видео автор повторяет замену и говорит, что тесто получится жёстче, но вытяжным останется. На странице взят вариант со сливочным маслом.</li>
+              <li><strong>Крахмал:</strong> DOCX даёт 3 столовые ложки, в видео это уточняется как около 25 г. На странице 25 г; картофельного нужно в полтора раза меньше.</li>
+              <li><strong>Вода:</strong> в DOCX 45 г, но в видео автор по ходу замеса доливает ещё 2 столовые ложки на каждый штрудель (а бывает и 3–4) и говорит, что густое тесто — не беда. В калькуляторе стоит базовое значение 45 г.</li>
+              <li><strong>Мясная начинка:</strong> по DOCX лук порезанный и обжаренный. В вебинаре автор заменила его 70 г чернослива, чтобы проверить сочетание с грецким орехом; чеснок в мясную начинку она не добавляет. На странице оставлен вариант из техкарты с пометкой про замену.</li>
+              <li><strong>Соль в тесте:</strong> в DOCX граммовки нет, в видео — щепотка. На странице взято усреднённое «щепотка, ≈ 2 г».</li>
+              <li><strong>Легенда тайм-кодов:</strong> в некоторых подписях стоит «1:00:01» — это 1 час 00 минут 01 секунда в формате ленты. Плашка источника при этом автоматически скрывается переключателем «Тайм-код» и не печатается.</li>
+              <li><strong>Галеты:</strong> в этих же уроках автор печёт две галеты (классическую с абрикосами и ПП с творогом и клубникой). В страницу они не включены.</li>
+              <li><strong>Прогрев духовки:</strong> в видео это делается до закладывания галет, а штрудели в итоге идут на той же разогретой духовке. Общая рекомендация автору — включать заранее.</li>
+              <li><strong>Фото:</strong> кадр из видеоурока. Готовые штрудели в записи показываются только в отдельном видео, которое автор обещает выложить через полчаса после эфира; в папке его нет.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>

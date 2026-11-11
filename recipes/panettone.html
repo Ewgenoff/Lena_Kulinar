@@ -1,0 +1,685 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Панеттоне на опаре с изюмом и цукатами — пошаговый рецепт | CookBook</title>
+  <meta name="description" content="Панеттоне на сильной муке: опара 2 часа при комнатной и 6–12 часов в холоде, два замеса, изюм с апельсиновыми цукатами, миндальная глазурь. Выпечка 5 минут при 180 °C и 35 минут при 150 °C, остывание вверх ногами.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍰</text></svg>">
+</head>
+<body data-recipe-id="panettone">
+
+    <header class="site-header">
+    <div class="header-container">
+      <div class="header-back">
+        <a href="../index.html" class="back-link"><span class="back-arrow">←</span><span class="back-text">Назад</span></a>
+      </div>
+      <a href="../index.html" class="brand">
+        <img src="../assets/images/logo.png" alt="Логотип" aria-hidden="true" class="brand-logo" width="241" height="200">
+        <div class="brand-text">
+          <h1>Кулинарная библиотека Елены</h1>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="printRecipe()">🖨 <span class="btn-text">Печать рецепта</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <article class="recipe-header-card">
+      <div class="recipe-badge-row">
+        <span class="recipe-cat-badge">Выпечка</span>
+        <span class="recipe-difficulty">Сложность: <strong>Сложная</strong></span>
+      </div>
+
+      <h1 class="recipe-title">Панеттоне на опаре с изюмом и апельсиновыми цукатами</h1>
+      <div class="recipe-intro-split">
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-label">Подготовка</span>
+            <span class="fact-value">30 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Активное время</span>
+            <span class="fact-value">1 ч 30 мин</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Пассивное время</span>
+            <span class="fact-value">13–22 часа</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Общее время</span>
+            <span class="fact-value">15–24 часа (с ночью)</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Выход</span>
+            <span class="fact-value">≈2,3 кг теста: по 420–450 г в форму 12×9,5 см</span>
+          </div>
+        </div>
+
+        <p class="recipe-lead">
+          Итальянский пасхальный хлеб, который начинается за сутки: сначала опара, потом два замеса с холодными желтками и маслом, затем изюм и апельсиновые цукаты. Тесто получается настолько сильным, что его проверяют на «глютеновое окно». Пекут панеттоне только в бумажных формах, проткнутых шпажками, а после выпечки сразу переворачивают вверх ногами — иначе нежная шапка опадёт.
+        </p>
+      </div>
+    </article>
+
+    <div class="recipe-hero-split">
+      <div class="recipe-main-image-box">
+        <img src="../assets/images/panettone.jpg" alt="Панеттоне в бумажных формах с миндальной глазурью и лепестками миндаля, на шпажках" class="recipe-main-image">
+      </div>
+
+      <div class="recipe-actions-panel">
+        <div class="portion-box">
+          <div class="portion-title">
+            <span>Калькулятор порций</span>
+            <button id="btnPortionReset" class="portion-reset-btn" title="Вернуть к базовой рецептуре автора">Сбросить (1 замес)</button>
+          </div>
+          <div class="portion-controls">
+            <button id="btnPortionMinus" class="portion-btn" aria-label="Уменьшить">−</button>
+            <span id="portionValue" class="portion-input-val" data-base-servings="1">1</span>
+            <button id="btnPortionPlus" class="portion-btn" aria-label="Увеличить">+</button>
+            <span class="portion-unit">замес</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+            База — один замес по рецептуре автора. В форму 12×9,5 см кладут 420–450 г теста, заполняя её не больше чем на треть. Все граммовки масштабируются.
+          </p>
+        </div>
+
+        <div class="kbju-card">
+          <div class="kbju-head">
+            <span class="kbju-title">Пищевая ценность</span>
+            <span class="kbju-meta">
+              <span class="kbju-badge">расчёт по рецептуре</span>
+              <button type="button" class="kbju-info-btn" aria-expanded="false" aria-controls="kbjuPopover" aria-label="Как считалась пищевая ценность" title="Как считалась пищевая ценность">?</button>
+            </span>
+          </div>
+          <table class="kbju-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ккал</th>
+                <th>Белки</th>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>На 100 г</th>
+                <td class="kbju-kcal">345</td>
+                <td>6,5 г</td>
+                <td>11,1 г</td>
+                <td>52,9 г</td>
+              </tr>
+              <tr>
+                <th>Всё тесто<span class="kbju-sub">≈ 2,3 кг</span></th>
+                <td class="kbju-kcal"><span data-base-amount="7930" data-unit="ккал">7930 ккал</span></td>
+                <td><span data-base-amount="149" data-unit="г">149 г</span></td>
+                <td><span data-base-amount="254" data-unit="г">254 г</span></td>
+                <td><span data-base-amount="1216" data-unit="г">1216 г</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="kbju-popover" id="kbjuPopover" role="note" hidden>
+            <p>Считано всё: опара (без 90 г остатка, который уходит в следующий замес), два теста, начинка с ромом и миндальная глазурь.</p>
+            <p>Выход ≈ 2,3 кг теста — это 5–6 форм 12×9,5 см по 420–450 г, в порции 420 г ≈ 1450 ккал. Крупные формы пекутся дольше и теряют больше влаги, поэтому у готового панеттоне на 100 г калорий обычно чуть больше.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="shopping-list-card" id="shoppingSection">
+      <div class="shopping-header">
+        <div class="shopping-title-wrap">
+          <h2 class="shopping-title">🛒 Купить в магазине</h2>
+          <span class="shopping-badge">Сводный расчет на <span class="shopping-portion-val">1</span> замес</span>
+        </div>
+        <div class="shopping-actions">
+          <label class="toggle-switch-wrapper" for="toggleSources">
+            <div class="switch">
+              <input type="checkbox" id="toggleSources">
+              <span class="slider"></span>
+            </div>
+            <span class="toggle-label">Тайм-код</span>
+          </label>
+          <button type="button" class="shopping-toggle-btn" aria-label="Развернуть или свернуть список покупок">
+            <span class="toggle-text">Развернуть</span>
+            <span class="toggle-icon">▼</span>
+          </button>
+        </div>
+        </div>
+      <div class="shopping-collapsible-body">
+        <p class="shopping-subtitle">
+        Суммарный список всех необходимых продуктов с учетом выбранного масштаба. Рассчитано под выбранное количество порций для удобной закупки.
+      </p>
+
+      <div class="shopping-grid">
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🥛 Молочное, яйца, масло</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Яйца куриные С1</strong>:
+                <span class="shopping-qty" data-base-amount="5" data-unit="шт." data-piece="true">5 шт.</span>
+                <span class="shopping-hint">160 г желтков (≈9 желтков) + 1 белок (40 г) на глазурь. Белки от желтков останутся — на безе или омлет</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сливочное масло</strong>:
+                <span class="shopping-qty" data-base-amount="190" data-unit="г">190 г</span>
+                <span class="shopping-hint">140 г в тесто №1 + 50 г в тесто №2, холодное из холодильника</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-col">
+          <h3 class="shopping-col-title">🌾 Мука, сахар, наполнение</h3>
+          <ul class="shopping-list">
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мука сильная, 12 г белка и больше</strong>:
+                <span class="shopping-qty" data-base-amount="800" data-unit="г">800 г</span>
+                <span class="shopping-hint">160 г в опару + 520 г в тесто №1 + 120 г в тесто №2. Автор советует «Макфу» — по рецепту только она</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Дрожжи свежие</strong>:
+                <span class="shopping-qty" data-base-amount="30" data-unit="г">30 г</span>
+                <span class="shopping-hint">Растворить в холодной воде комнатной температуры</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Сахар-песок</strong>:
+                <span class="shopping-qty" data-base-amount="280" data-unit="г">280 г</span>
+                <span class="shopping-hint">140 г в тесто №1 + 40 г в тесто №2 + 100 г в глазурь</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Изюм</strong>:
+                <span class="shopping-qty" data-base-amount="300" data-unit="г">300 г</span>
+                <span class="shopping-hint">Промыть и обсушить; при желании замочить в роме</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Апельсиновые цукаты</strong>:
+                <span class="shopping-qty" data-base-amount="250" data-unit="г">250 г</span>
+                <span class="shopping-hint">Можно заменить вяленой вишней, клюквой, курагой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Ром, бренди или амаретто</strong>:
+                <span class="shopping-qty" data-base-amount="40" data-unit="г">40 г</span>
+                <span class="shopping-hint">Для настаивания сухофруктов; можно просто промыть их водой</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Мёд</strong>:
+                <span class="shopping-qty" data-base-amount="20" data-unit="г">20 г</span>
+                <span class="shopping-hint">Можно заменить инвертным сахаром</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Миндальная мука</strong>:
+                <span class="shopping-qty" data-base-amount="65" data-unit="г">65 г</span>
+                <span class="shopping-hint">Для глазури</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Кукурузный крахмал</strong>:
+                <span class="shopping-qty" data-base-amount="50" data-unit="г">50 г</span>
+                <span class="shopping-hint">В глазурь</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Миндальные лепестки и жемчужный сахар</strong>
+                <span class="shopping-hint">Для посыпки; количество не указано</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Соль, ваниль</strong>
+                <span class="shopping-hint">6 г соли в тесто №2, ваниль по вкусу</span>
+              </div>
+            </li>
+            <li class="shopping-item"><div class="shopping-item-content">
+                <strong>Бумажные формы 12×9,5 см и шпажки</strong>
+                <span class="shopping-hint">Только бумажные формы: в металлических панеттоне не перевернуть</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="recipe-content-grid">
+      <aside class="ingredients-card">
+        <h2 class="section-heading">Ингредиенты</h2>
+
+        <div class="ingredient-group-title">Опара</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="160" data-unit="г">160 г</span> — Мука
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="30" data-unit="г">30 г</span> — Дрожжи свежие
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Вода
+              <span class="ingredient-note">Комнатной температуры, не подогревать</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Тесто №1</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="180" data-unit="г">180 г</span> — Опара
+              <span class="ingredient-note">Остальную опару использовать в следующем замесе</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="340" data-unit="г">340 г</span> — Вода холодная
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="520" data-unit="г">520 г</span> — Мука
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Желтки
+              <span class="ingredient-note">Из холодильника</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="140" data-unit="г">140 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="140" data-unit="г">140 г</span> — Сливочное масло
+              <span class="ingredient-note">Холодное, из холодильника</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Тесто №2</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="120" data-unit="г">120 г</span> — Мука
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Сливочное масло холодное
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="20" data-unit="г">20 г</span> — Мёд
+              <span class="ingredient-note">Или инвертный сахар</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="80" data-unit="г">80 г</span> — Желтки
+              <span class="ingredient-note">Из холодильника</span>
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="6" data-unit="г">6 г</span> — Соль
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Начинка</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="300" data-unit="г">300 г</span> — Изюм
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="250" data-unit="г">250 г</span> — Апельсиновые цукаты
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Ром, бренди или амаретто
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              По вкусу — Ваниль
+            </span>
+          </li>
+        </ul>
+
+        <div class="ingredient-group-title">Миндальная глазурь</div>
+        <ul class="ingredients-list">
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="40" data-unit="г">40 г</span> — Белок (1 шт.)
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="65" data-unit="г">65 г</span> — Миндальная мука
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="100" data-unit="г">100 г</span> — Сахар
+            </span>
+          </li>
+          <li class="ingredient-item">
+            <input type="checkbox" class="ingredient-checkbox">
+            <span class="ingredient-label">
+              <span class="ingredient-qty" data-base-amount="50" data-unit="г">50 г</span> — Кукурузный крахмал
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="instructions-column">
+        <div class="instructions-card">
+          <h2 class="section-heading">Технологическая карта приготовления</h2>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">1</span>
+                <h3 class="step-title">Опара</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Растворите дрожжи в воде комнатной температуры до однородности, влейте в муку и замесите гладкое крутое тесто — не дольше 10 минут. Тесто будет очень плотным, как для декора каравая, — так и должно быть. Накройте миску плёнкой и оставьте на 2 часа при комнатной температуре.
+                <span class="source-badge">⏱ Урок_01: 00:00:25–00:03:22</span>
+              </p>
+              <p>
+                Затем уберите в холодильник при +4 °C и выше на 6–12 часов, максимум на 24. Оптимально — 8 часов: 2 часа при комнатной плюс ночь в холоде.
+                <span class="source-badge">⏱ Урок_01: 00:03:23–00:03:44</span>
+              </p>
+              <div class="warning-box">
+                <strong>Воду не подогревайте:</strong> автор специально берёт холодную, комнатной температуры, и не стимулирует брожение.
+                <span class="source-badge">⏱ Урок_01: 00:01:55–00:02:02</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Комната: <strong>2 часа</strong></span>
+              <span class="param-pill">⏱ Холод: <strong>6–12 часов</strong></span>
+              <span class="param-pill">🌡 Холодильник: <strong>+4 °C и выше</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">2</span>
+                <h3 class="step-title">Начинка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Промойте и обсушите изюм и цукаты, сложите в контейнер и залейте ромом. Оставьте настаиваться при комнатной температуре. Можно обойтись просто промытыми сухофруктами — тогда начинку добавляйте сухой.
+                <span class="source-badge">⏱ Урок_03: 00:06:27–00:07:05</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> если замачивали в роме, перед вмешиванием обязательно отожмите — лишняя влага испортит тесто.
+                <span class="source-badge">⏱ Урок_03: 00:09:42–00:09:56</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Настаивание: <strong>пока подходит опара</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Сухофрукты сухие, без лужи</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">3</span>
+                <h3 class="step-title">Тесто №1</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Возьмите 180 г опары, разомните её в холодной воде, всыпьте 520 г муки и замесите крутое тесто — 5–7 минут. Желтки вмешайте в два приёма, затем введите сахар, тоже в два приёма, и холодное масло в два приёма.
+                <span class="source-badge">⏱ Урок_02: 00:00:02–00:03:33</span>
+              </p>
+              <p>
+                Тесто должно стать гладким и отлипать от чаши. Накройте плёнкой и оставьте на 2–3 часа при комнатной температуре — оно вырастет более чем втрое.
+                <span class="source-badge">⏱ Урок_02: 00:04:26–00:05:05</span>
+              </p>
+              <div class="warning-box">
+                <strong>Если тесто разжижается при вводе масла:</strong> уберите его в холодильник на 10 минут и продолжайте. Холодное масло не даёт тесту перегреваться.
+                <span class="source-badge">⏱ Урок_02: 00:02:55–00:03:11</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Замес: <strong>до 25 мин</strong></span>
+              <span class="param-pill">⏱ Расстойка: <strong>2–3 часа</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Гладкое, отлипает от чаши</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">4</span>
+                <h3 class="step-title">Тесто №2</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Подошедшее тесто выложите в дежу, добавьте 120 г муки и мёд, замесите до впитывания муки. Введите сахар с солью, затем желтки в два приёма, затем холодное масло в два приёма. Вымешивайте ещё 7–10 минут.
+                <span class="source-badge">⏱ Урок_03: 00:02:18–00:05:59</span>
+              </p>
+              <p>
+                Добавьте сухофрукты и ваниль, отжав от жидкости, и вмешайте за 30–60 секунд. Тесто оставьте на 30 минут, затем обомните и приступайте к формовке.
+                <span class="source-badge">⏱ Урок_03: 00:06:22–00:10:34</span>
+              </p>
+              <div class="tip-box">
+                <strong>Проверка на глютеновое окно:</strong> растяните кусочек теста — оно должно просвечивать и рваться дырочками с ровными краями. Значит клейковина созрела.
+                <span class="source-badge">⏱ Урок_03: 00:08:21–00:09:18</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Вымешивание: <strong>7–10 мин</strong></span>
+              <span class="param-pill">⏱ Отдых: <strong>30 мин</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Прозрачное «окно» с ровными краями</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">5</span>
+                <h3 class="step-title">Формовка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Бумажные формы проткните двумя шпажками по самому низу — за них панеттоне будет висеть после выпечки. Разделите тесто по 420–450 г, скатайте в шар, спрятав все складки вниз, и уложите в форму. Форма должна быть заполнена не больше чем на треть: тесто поднимается очень хорошо.
+                <span class="source-badge">⏱ Урок_04: 00:00:02–00:03:02</span>
+              </p>
+              <div class="warning-box">
+                <strong>Только бумажные формы:</strong> из металлической панеттоне не перевернуть, а без переворота шапка опадёт.
+                <span class="source-badge">⏱ Урок_04: 00:00:16–00:00:21</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⚖ Тесто: <strong>420–450 г на форму</strong></span>
+              <span class="param-pill">🧁 Форма: <strong>12×9,5 см, на ⅓</strong></span>
+              <span class="param-pill">🥢 Шпажки: <strong>2 на форму</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">6</span>
+                <h3 class="step-title">Расстойка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Накройте формы неплотно плёнкой и оставьте на 2–4 часа. Автор ставит их в выключенную холодную духовку — там же они и будут печься.
+                <span class="source-badge">⏱ Урок_04: 00:03:07–00:03:53</span>
+              </p>
+              <div class="warning-box">
+                <strong>Когда печь:</strong> когда до верха формы остаётся около 2 см. Если передержать, шапка получится неровной.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Время: <strong>2–4 часа</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>До верха ~2 см</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">7</span>
+                <h3 class="step-title">Глазурь и выпечка</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Смешайте миксером белок, миндальную муку, сахар и крахмал, переложите в мешок и выложите по спирали на подошедшее тесто. Посыпьте миндальными лепестками и жемчужным сахаром — он не тает при выпечке.
+                <span class="source-badge">⏱ Урок_04: 00:04:00–00:04:54</span>
+              </p>
+              <p>
+                Выпекайте при 180 °C с конвекцией 5 минут, затем снизьте до 150 °C и пеките ещё 35 минут в режиме верх-низ. Автор в видео печёт при 150 °C около 30 минут. Готовность — сухая палочка.
+                <span class="source-badge">⏱ Урок_04: 00:05:06–00:05:25</span>
+              </p>
+              <div class="tip-box">
+                <strong>Совет автора:</strong> время зависит от размера формы — маленькие панеттоне могут быть готовы раньше, большие позже. Ориентируйтесь на сухую шпажку.
+                <span class="source-badge">⏱ Урок_04: 00:05:26–00:05:36</span>
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">🌡 Сначала: <strong>180 °C, 5 мин</strong></span>
+              <span class="param-pill">🌡 Потом: <strong>150 °C, 35 мин</strong></span>
+              <span class="param-pill">🔍 Признак: <strong>Сухая палочка</strong></span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-header">
+              <div class="step-number-title">
+                <span class="step-badge">8</span>
+                <h3 class="step-title">Остывание вверх ногами</h3>
+              </div>
+            </div>
+            <div class="step-body">
+              <p>
+                Сразу после выпечки, пока панеттоне горячие, переверните их и подвесьте на шпажках — над коробкой, кастрюлей или между двумя опорами. Так они остывают до комнатной температуры. Если просто положить, нежная шапка сомнётся и опадет.
+                <span class="source-badge">⏱ Урок_04: 00:05:43–00:06:47</span>
+              </p>
+              <div class="warning-box">
+                <strong>Срок годности:</strong> 5 суток при комнатной температуре, 10 суток в холодильнике, 1 месяц в морозилке — морозилку автор не рекомендует.
+              </div>
+            </div>
+            <div class="step-parameters">
+              <span class="param-pill">⏱ Остывание: <strong>до комнатной температуры</strong></span>
+              <span class="param-pill">🥢 Положение: <strong>вверх ногами на шпажках</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card">
+          <h3 class="section-heading" style="font-size: 20px;">Секреты автора и технологический анализ</h3>
+          <div class="info-grid">
+            <div class="info-block">
+              <h4>Советы и секреты автора</h4>
+              <ul>
+                <li><strong>Сильная мука обязательна:</strong> 12 г белка на 100 г и больше — иначе тесто не выдержит сдобу и сахар.</li>
+                <li><strong>Холодные желтки и масло:</strong> тесто не перегревается, глютен успевает развиться.</li>
+                <li><strong>Шпажки в бумажной форме:</strong> без них панеттоне не подвесить, а значит не сохранить шапку.</li>
+                <li><strong>Форму заполняют на треть:</strong> тесто поднимается очень активно, иначе вылезет через край.</li>
+                <li><strong>Глазурь по спирали:</strong> так она распределяется ровно и красиво трескается при выпечке.</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h4>Типичные ошибки</h4>
+              <ul>
+                <li><strong>Слабая мука:</strong> тесто расползается, панеттоне не держит форму.</li>
+                <li><strong>Дрожжи в тёплой воде:</strong> быстрый подъём, но грубый мякиш и скорое черствение.</li>
+                <li><strong>Мокрая начинка:</strong> сухофрукты не отжали — тесто поплыло.</li>
+                <li><strong>Форма заполнена наполовину:</strong> тесто вылезает и опадает.</li>
+                <li><strong>Остужали лёжа:</strong> шапка сминается, панеттоне теряет вид.</li>
+                <li><strong>Металлическая форма:</strong> перевернуть не получится.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-card collapsible-card">
+          <h3 class="section-heading" style="font-size: 20px;">Источники, расхождения и пробелы</h3>
+          <div class="collapsible-body">
+            <ul style="font-size: 14px; color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+              <li><strong>Источники:</strong> урок «Панеттоне» Надежды Зубовой — DOCX с рецептурой и расшифровка Урок_01–04.</li>
+              <li><strong>Мука:</strong> в видео автор печёт два вида — на муке для пиццы и на «Макфе»; в DOCX указано «учитывать только на муке макфа». На странице — «Макфа» и требование к белку.</li>
+              <li><strong>Время второй выпечки:</strong> DOCX — 35 минут при 150 °C, видео — около 30 минут. На странице 35 минут с пометкой о видео.</li>
+              <li><strong>Количество панеттоне:</strong> автор не называет точное число, только вес теста на форму. Выход дан в граммах теста.</li>
+              <li><strong>Глазурь:</strong> количество миндальных лепестков и жемчужного сахара не указано.</li>
+              <li><strong>Фото:</strong> кадр из видео — панеттоне в формах с глазурью перед выпечкой.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Кулинарная библиотека Елены.</p>
+  </footer>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/recipe.js"></script>
+</body>
+</html>
